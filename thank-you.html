@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-1068497497');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <title>Meeting Confirmed | Pro Link Systems</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #06141d;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    :root {
+      --navy:    #06141d;
+      --navy-mid:#082638;
+      --navy-btn:#0b3d6b;
+      --orange:  #f97316;
+      --orange-h:#ea6c0b;
+      --gold:    #f5a623;
+      --border:  #dde2e8;
+      --muted:   #5a6a80;
+      --r:       10px;
+      --r-lg:    16px;
+    }
+
+    /* ── TOP BAR ───────────────────────────────────────── */
+    .top-bar {
+      background: #040f17;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.78);
+      letter-spacing: .01em;
+      flex-shrink: 0;
+    }
+    .top-bar a { color: var(--gold); font-weight: 700; }
+    .top-bar .sep { margin: 0 12px; opacity: .35; }
+
+    /* ── MAIN ──────────────────────────────────────────── */
+    .page-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px 64px;
+      background: linear-gradient(150deg, #06141d 0%, #082638 55%, #0a3f5c 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-wrap::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.018'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--r-lg, 16px);
+      padding: 48px 44px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 32px 80px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.18);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── ORBIT ICON ────────────────────────────────────── */
+    .orbit {
+      width: 84px; height: 84px; border-radius: 50%;
+      background: linear-gradient(135deg, #0b3d6b 0%, #1762a8 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 0 10px rgba(11,61,107,.08), 0 0 0 22px rgba(11,61,107,.04);
+      animation: pop .55s cubic-bezier(.34,1.56,.64,1);
+    }
+    @keyframes pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .checkmark {
+      stroke-dasharray: 44; stroke-dashoffset: 44;
+      animation: draw .45s .4s ease forwards;
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    /* ── STATUS PILL ───────────────────────────────────── */
+    .pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(34,197,94,.09); border: 1px solid rgba(34,197,94,.25);
+      border-radius: 999px; padding: 5px 18px;
+      font-size: .72rem; font-weight: 700; color: #16a34a;
+      letter-spacing: .07em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .pill-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; }
+
+    /* ── HEADING ───────────────────────────────────────── */
+    .card h1 {
+      font-size: 1.75rem; font-weight: 900; color: #0f1e2e;
+      letter-spacing: -.035em; line-height: 1.15; margin-bottom: 12px;
+    }
+    .card .sub {
+      font-size: .92rem; color: var(--muted); line-height: 1.7;
+      max-width: 400px; margin: 0 auto 32px;
+    }
+
+    /* ── STEPS ─────────────────────────────────────────── */
+    .steps {
+      text-align: left;
+      display: flex; flex-direction: column; gap: 16px;
+      margin-bottom: 32px;
+      background: #f4f6f8;
+      border-radius: var(--r);
+      padding: 22px 24px;
+    }
+    .step { display: flex; align-items: flex-start; gap: 14px; }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--navy-btn); color: #fff;
+      font-size: .72rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step-body { font-size: .875rem; color: #3a4a5c; line-height: 1.55; }
+    .step-body strong { color: #0f1e2e; display: block; margin-bottom: 2px; }
+
+    /* ── ACTIONS ───────────────────────────────────────── */
+    .actions {
+      display: flex; flex-direction: column; gap: 12px;
+      margin-bottom: 24px;
+    }
+    .btn-primary {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 15px 24px;
+      background: var(--orange); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 800;
+      border-radius: var(--r); border: none; cursor: pointer;
+      box-shadow: 0 4px 14px rgba(249,115,22,.35);
+      transition: background .2s, transform .15s;
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: var(--orange-h); transform: translateY(-1px); }
+    .btn-secondary {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 24px;
+      background: #fff; color: var(--navy-btn);
+      font-family: 'Inter', sans-serif; font-size: .92rem; font-weight: 700;
+      border-radius: var(--r);
+      border: 1.5px solid #dde2e8;
+      transition: border-color .2s, background .2s;
+      text-decoration: none;
+    }
+    .btn-secondary:hover { border-color: var(--navy-btn); background: #f4f6f8; }
+
+    /* ── DIVIDER ───────────────────────────────────────── */
+    .divider { height: 1px; background: #e8ecf0; margin: 0 0 20px; }
+
+    .card .note {
+      font-size: .78rem; color: var(--muted); line-height: 1.6;
+    }
+    .card .note a { color: var(--navy-btn); font-weight: 600; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: #040f17;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    footer img { height: 28px; width: auto; opacity: .85; }
+    .footer-mid {
+      font-size: .78rem; color: rgba(255,255,255,.45);
+      text-align: center;
+    }
+    .footer-mid a { color: rgba(255,255,255,.6); font-weight: 600; }
+    .footer-right {
+      font-size: .72rem; color: rgba(255,255,255,.3);
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 36px 24px; }
+      .card h1 { font-size: 1.45rem; }
+      footer { flex-direction: column; align-items: center; text-align: center; }
+      .footer-right { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:-2px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  Questions? Call us:&nbsp;<a href="tel:18008906133">1-800-890-6133</a>
+  <span class="sep">|</span>
+  Serving Los Angeles Businesses Since 1999
+</div>
+
+<!-- MAIN CARD -->
+<div class="page-wrap">
+  <div class="card">
+
+    <!-- Check icon -->
+    <div class="orbit" aria-hidden="true">
+      <svg width="34" height="34" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline class="checkmark" points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <!-- Status -->
+    <div class="pill">
+      <div class="pill-dot" aria-hidden="true"></div>
+      Meeting Confirmed
+    </div>
+
+    <!-- Heading -->
+    <h1>You&rsquo;re on the calendar!</h1>
+    <p class="sub">
+      A calendar invite has been sent to your email. Here&rsquo;s what to expect before your call with a Pro Link engineer.
+    </p>
+
+    <!-- Steps -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Check your inbox</strong>
+          You&rsquo;ll receive a calendar invitation with the meeting link and all the details.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Jot down a few notes</strong>
+          Think about your current IT setup, your biggest frustrations, and how many users need support &mdash; it helps us make the most of our 30 minutes together.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>We&rsquo;ll come prepared</strong>
+          A Pro Link engineer &mdash; not a salesperson &mdash; will join the call ready to answer your questions and walk you through how we work.
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <a href="https://prolinksystems.com/" class="btn-primary">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Visit Our Website
+      </a>
+      <a href="tel:18008906133" class="btn-secondary">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Us: 1-800-890-6133
+      </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="note">
+      Need to reschedule? Use the link in your calendar invite.<br>
+      Questions before the call? Email us at <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+    </p>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="https://prolinksystems.com/">
+    <img src="logo.png" alt="Pro Link Systems">
+  </a>
+  <div class="footer-mid">
+    <a href="tel:18008906133">1-800-890-6133</a>
+    &nbsp;&middot;&nbsp;
+    21241 Ventura Blvd, Woodland Hills, CA 91364
+  </div>
+  <div class="footer-right">
+    &copy; 2026 Pro Link Systems. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
