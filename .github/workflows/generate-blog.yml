@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 9 1 * *'
   workflow_dispatch:
+    inputs:
+      topic_index:
+        description: 'Topic index (0-11). Leave empty for monthly auto-select.'
+        required: false
+        default: ''
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -29,6 +34,7 @@ jobs:
       - name: Generate and publish blog post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC_INDEX: ${{ github.event.inputs.topic_index }}
         run: python generate_blog.py
 
       - name: Commit and push
