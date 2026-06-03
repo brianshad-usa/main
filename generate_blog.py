@@ -50,6 +50,7 @@ else:
 
 topic = topics[topic_index]
 date_str = datetime.now().strftime("%B %d, %Y")
+date_iso = datetime.now().strftime("%Y-%m-%d")
 # Use topic index in slug to avoid duplicates when running multiple times
 slug_date = datetime.now().strftime("%Y-%m")
 slug = re.sub(r'[^a-z0-9]+', '-', topic.lower()).strip('-')
@@ -225,8 +226,8 @@ html = f"""<!DOCTYPE html>
   "@type": "Article",
   "headline": "{title}",
   "description": "{meta}",
-  "datePublished": "{datetime.now().strftime('%Y-%m-%d')}",
-  "dateModified": "{datetime.now().strftime('%Y-%m-%d')}",
+  "datePublished": "{date_iso}",
+  "dateModified": "{date_iso}",
   "author": {{
     "@type": "Organization",
     "name": "Pro Link Systems",
