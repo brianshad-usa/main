@@ -19,12 +19,20 @@ topics = [
     "IT support for healthcare clinics in Los Angeles",
 ]
 
-month_index = datetime.now().month - 1
-topic = topics[month_index % len(topics)]
+# Allow topic override via environment variable (0-11)
+# Set TOPIC_INDEX in GitHub Actions workflow_dispatch inputs
+topic_override = os.environ.get("TOPIC_INDEX", "")
+if topic_override.isdigit():
+    topic_index = int(topic_override) % len(topics)
+else:
+    topic_index = datetime.now().month - 1
+
+topic = topics[topic_index]
 date_str = datetime.now().strftime("%B %d, %Y")
+# Use topic index in slug to avoid duplicates when running multiple times
 slug_date = datetime.now().strftime("%Y-%m")
 slug = re.sub(r'[^a-z0-9]+', '-', topic.lower()).strip('-')
-slug = f"{slug_date}-{slug[:60]}"
+slug = f"{slug_date}-t{topic_index}-{slug[:55]}"
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
