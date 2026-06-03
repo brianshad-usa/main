@@ -5,6 +5,7 @@ import glob
 from datetime import datetime
 
 topics = [
+    # Core managed IT topics
     "Why Los Angeles businesses are switching from break-fix IT to managed services in 2026",
     "HIPAA compliance checklist for Los Angeles medical practices",
     "How much does managed IT support cost for small businesses in Los Angeles",
@@ -17,6 +18,26 @@ topics = [
     "What is a virtual CIO and does your LA business need one",
     "Ransomware protection for Los Angeles law firms",
     "IT support for healthcare clinics in Los Angeles",
+    # City-specific topics
+    "Managed IT services for Beverly Hills law firms and entertainment companies",
+    "IT support for Century City high-rise offices and financial services firms",
+    "Cybersecurity best practices for Pasadena technology and healthcare companies",
+    "Managed IT services for Irvine biotech and technology companies",
+    "IT support for El Segundo aerospace and defense contractors",
+    "Managed IT services for Torrance manufacturing and automotive companies",
+    "IT support for Orange County businesses expanding into Los Angeles",
+    "How Burbank entertainment and media companies manage their IT infrastructure",
+    "Cybersecurity for Santa Monica startups and creative agencies",
+    "IT services for Glendale healthcare and professional services firms",
+    # Industry-specific topics
+    "IT compliance checklist for Los Angeles financial advisors and wealth managers",
+    "How Los Angeles manufacturers are using cloud technology to modernize operations",
+    "IT infrastructure planning for growing Los Angeles professional services firms",
+    "Zero trust security for remote and hybrid teams in Los Angeles",
+    "Why Los Angeles businesses are moving to co-managed IT in 2026",
+    "Endpoint security best practices for Los Angeles businesses in 2026",
+    "Business email compromise how to protect your Los Angeles company",
+    "IT budgeting guide for Los Angeles small and mid-size businesses",
 ]
 
 # Allow topic override via environment variable (0-11)
@@ -157,13 +178,20 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
     <h4>Areas We Serve</h4>
     <div class="footer-areas-links">
       <a href="/managed-it-services-woodland-hills.html">Woodland Hills</a>
+      <a href="/managed-it-services-beverly-hills.html">Beverly Hills</a>
+      <a href="/managed-it-services-century-city.html">Century City</a>
+      <a href="/managed-it-services-pasadena.html">Pasadena</a>
       <a href="/it-support-burbank.html">Burbank</a>
       <a href="/managed-it-services-santa-monica.html">Santa Monica</a>
-      <a href="/managed-it-services-calabasas.html">Calabasas</a>
       <a href="/managed-it-services-glendale.html">Glendale</a>
+      <a href="/managed-it-services-calabasas.html">Calabasas</a>
       <a href="/managed-it-services-thousand-oaks.html">Thousand Oaks</a>
       <a href="/managed-it-services-sherman-oaks.html">Sherman Oaks</a>
       <a href="/managed-it-services-encino.html">Encino</a>
+      <a href="/managed-it-services-torrance.html">Torrance</a>
+      <a href="/managed-it-services-el-segundo.html">El Segundo</a>
+      <a href="/managed-it-services-irvine.html">Irvine</a>
+      <a href="/managed-it-services-orange-county.html">Orange County</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -189,6 +217,35 @@ html = f"""<!DOCTYPE html>
 <meta property="og:title" content="{title} | Pro Link Systems">
 <meta property="og:description" content="{meta}">
 <meta property="og:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prolinksystems.com/logo.png">
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{title}",
+  "description": "{meta}",
+  "datePublished": "{datetime.now().strftime('%Y-%m-%d')}",
+  "dateModified": "{datetime.now().strftime('%Y-%m-%d')}",
+  "author": {{
+    "@type": "Organization",
+    "name": "Pro Link Systems",
+    "url": "https://prolinksystems.com"
+  }},
+  "publisher": {{
+    "@type": "Organization",
+    "name": "Pro Link Systems",
+    "logo": {{
+      "@type": "ImageObject",
+      "url": "https://prolinksystems.com/logo.png"
+    }}
+  }},
+  "mainEntityOfPage": {{
+    "@type": "WebPage",
+    "@id": "https://prolinksystems.com/blog/{slug}.html"
+  }}
+}}
+</script>
 <link rel="stylesheet" href="/_shared.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
