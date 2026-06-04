@@ -73,7 +73,7 @@ Requirements:
 - No markdown, just clean HTML
 
 Also provide:
-- A compelling H1 title on its own line prefixed with TITLE:
+- A compelling H1 title on its own line prefixed with TITLE: (keep it UNDER 42 characters so the full SEO title stays under 60 once " | Pro Link Systems" is appended)
 - A meta description of 150-160 characters prefixed with META:
 
 Format exactly like this:
