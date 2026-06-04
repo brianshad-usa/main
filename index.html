@@ -1255,6 +1255,74 @@
   </div>
 </section>
 
+<!-- FROM THE BLOG -->
+<style>
+  .home-blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; }
+  .home-blog-card { display: flex; flex-direction: column; gap: 10px; background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px 22px 20px; text-decoration: none; transition: transform .2s, box-shadow .2s, border-color .2s; }
+  .home-blog-card:hover { transform: translateY(-3px); box-shadow: var(--sh-md); border-color: var(--navy-light); }
+  .home-blog-card .hb-meta { font-size: .75rem; font-weight: 600; color: var(--text-muted); letter-spacing: .02em; }
+  .home-blog-card h3 { font-size: .98rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin: 0; flex: 1; }
+  .home-blog-card .hb-read { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; color: var(--navy-light); margin-top: 2px; }
+  .home-blog-head { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 34px; }
+  .home-blog-viewall { display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; font-weight: 700; color: var(--navy-light); text-decoration: none; white-space: nowrap; }
+</style>
+<section class="section section-off" aria-labelledby="home-blog-heading">
+  <div class="container">
+    <div class="home-blog-head">
+      <div>
+        <span class="section-label">IT Insights</span>
+        <h2 class="section-heading" id="home-blog-heading" style="margin-bottom:8px;">From the Pro Link blog</h2>
+        <p class="section-sub" style="margin-bottom:0;">Practical IT, cybersecurity, and technology guidance for Los Angeles businesses.</p>
+      </div>
+      <a href="/blog/" class="home-blog-viewall">View all articles
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="home-blog-grid">
+      <a class="home-blog-card" href="/blog/2026-06-t9-what-is-a-virtual-cio-and-does-your-la-business-need-on.html">
+        <div class="hb-meta">June 2026 &middot; IT Strategy</div>
+        <h3>What Is a Virtual CIO &mdash; and Does Your LA Business Need One?</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t6-how-to-choose-a-managed-it-provider-in-los-angeles.html">
+        <div class="hb-meta">June 2026 &middot; Managed IT</div>
+        <h3>How to Choose the Right Managed IT Provider in Los Angeles</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html">
+        <div class="hb-meta">June 2026 &middot; Managed IT</div>
+        <h3>5 Signs Your Business Has Outgrown Your Current IT Provider</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t4-microsoft-365-vs-google-workspace-which-is-better-for-l.html">
+        <div class="hb-meta">June 2026 &middot; Cloud</div>
+        <h3>Microsoft 365 vs. Google Workspace for LA Businesses</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus.html">
+        <div class="hb-meta">June 2026 &middot; Cybersecurity</div>
+        <h3>Top Cybersecurity Threats for Southern California Businesses in 2026</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t2-how-much-does-managed-it-support-cost-for-small-busines.html">
+        <div class="hb-meta">June 2026 &middot; Pricing</div>
+        <h3>How Much Does Managed IT Support Cost in Los Angeles?</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t1-hipaa-compliance-checklist-for-los-angeles-medical-prac.html">
+        <div class="hb-meta">June 2026 &middot; Healthcare</div>
+        <h3>HIPAA Compliance Checklist for LA Medical Practices</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="home-blog-card" href="/blog/2026-06-t0-why-los-angeles-businesses-are-switching-from-break-fix.html">
+        <div class="hb-meta">June 2026 &middot; Managed IT</div>
+        <h3>Why LA Businesses Are Switching from Break-Fix to Managed IT</h3>
+        <span class="hb-read">Read article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <section class="cta-band" aria-labelledby="cta-heading">
   <div class="container">
