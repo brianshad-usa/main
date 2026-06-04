@@ -1,4 +1,4 @@
-import anthropic
+﻿import anthropic
 import os
 import re
 import glob
@@ -109,15 +109,15 @@ content = '\n'.join(content_lines).strip()
 year = datetime.now().year
 
 NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <a href="/index.html" class="nav-logo" aria-label="Pro Link Systems home">
+  <a href="/" class="nav-logo" aria-label="Pro Link Systems home">
     <img src="/logo.png" alt="Pro Link Systems" width="160" height="44">
   </a>
   <div class="nav-links">
-    <a href="/index.html">Home</a>
-    <a href="/services.html">Services</a>
-    <a href="/about.html">About</a>
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
     <a href="/blog/" class="active">Blog</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/contact">Contact</a>
     <a href="tel:18008906133" class="nav-cta">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       1-800-890-6133
@@ -128,11 +128,11 @@ NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
   </button>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="/index.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
-  <a href="/services.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
-  <a href="/about.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+  <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
   <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
-  <a href="/contact.html" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
   <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
 </div>'''
 
@@ -144,20 +144,20 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
     </div>
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="/services.html#helpdesk">24/7 Help Desk</a>
-      <a href="/services.html#cybersecurity">Cybersecurity</a>
-      <a href="/services.html#cloud">Cloud &amp; Infrastructure</a>
-      <a href="/services.html#dr">Disaster Recovery</a>
-      <a href="/services.html#consulting">IT Consulting</a>
-      <a href="/services.html#remote">Remote Workplace</a>
+      <a href="/services#helpdesk">24/7 Help Desk</a>
+      <a href="/services#cybersecurity">Cybersecurity</a>
+      <a href="/services#cloud">Cloud &amp; Infrastructure</a>
+      <a href="/services#dr">Disaster Recovery</a>
+      <a href="/services#consulting">IT Consulting</a>
+      <a href="/services#remote">Remote Workplace</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About Us</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
       <a href="/blog/">Blog</a>
-      <a href="/legal.html">Legal / Terms</a>
+      <a href="/legal">Legal / Terms</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
@@ -178,21 +178,21 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
   <div class="footer-areas">
     <h4>Areas We Serve</h4>
     <div class="footer-areas-links">
-      <a href="/managed-it-services-woodland-hills.html">Woodland Hills</a>
-      <a href="/managed-it-services-beverly-hills.html">Beverly Hills</a>
-      <a href="/managed-it-services-century-city.html">Century City</a>
-      <a href="/managed-it-services-pasadena.html">Pasadena</a>
-      <a href="/it-support-burbank.html">Burbank</a>
-      <a href="/managed-it-services-santa-monica.html">Santa Monica</a>
-      <a href="/managed-it-services-glendale.html">Glendale</a>
-      <a href="/managed-it-services-calabasas.html">Calabasas</a>
-      <a href="/managed-it-services-thousand-oaks.html">Thousand Oaks</a>
-      <a href="/managed-it-services-sherman-oaks.html">Sherman Oaks</a>
-      <a href="/managed-it-services-encino.html">Encino</a>
-      <a href="/managed-it-services-torrance.html">Torrance</a>
-      <a href="/managed-it-services-el-segundo.html">El Segundo</a>
-      <a href="/managed-it-services-irvine.html">Irvine</a>
-      <a href="/managed-it-services-orange-county.html">Orange County</a>
+      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
+      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
+      <a href="/managed-it-services-century-city">Century City</a>
+      <a href="/managed-it-services-pasadena">Pasadena</a>
+      <a href="/it-support-burbank">Burbank</a>
+      <a href="/managed-it-services-santa-monica">Santa Monica</a>
+      <a href="/managed-it-services-glendale">Glendale</a>
+      <a href="/managed-it-services-calabasas">Calabasas</a>
+      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
+      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
+      <a href="/managed-it-services-encino">Encino</a>
+      <a href="/managed-it-services-torrance">Torrance</a>
+      <a href="/managed-it-services-el-segundo">El Segundo</a>
+      <a href="/managed-it-services-irvine">Irvine</a>
+      <a href="/managed-it-services-orange-county">Orange County</a>
     </div>
   </div>
   <div class="footer-bottom">
