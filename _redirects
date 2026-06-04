@@ -1,0 +1,62 @@
+# ===========================================================================
+# 301 redirects — collapse legacy ".html" URLs into the clean canonical URLs.
+# Format: Cloudflare Pages / Netlify  (place this file in the deploy root).
+#
+# NETLIFY USERS: append "!" to each "301" (e.g. "301!") to force the redirect
+# over the existing .html file. Cloudflare Pages does not need the "!".
+#
+# NOTE: blog POST URLs are intentionally NOT redirected — they canonicalize
+# WITH ".html". Only main pages + the one duplicate post are redirected.
+# ===========================================================================
+
+# ---- Core pages ----
+/index.html                                /                                    301
+/services.html                             /services                            301
+/about.html                                /about                               301
+/contact.html                              /contact                             301
+/legal.html                                /legal                               301
+/thank-you.html                            /thank-you                           301
+
+# ---- Managed IT — city pages ----
+/managed-it-services.html                  /managed-it-services                 301
+/managed-it-services-los-angeles.html      /managed-it-services-los-angeles     301
+/managed-it-services-woodland-hills.html   /managed-it-services-woodland-hills  301
+/managed-it-services-beverly-hills.html    /managed-it-services-beverly-hills   301
+/managed-it-services-century-city.html     /managed-it-services-century-city    301
+/managed-it-services-pasadena.html         /managed-it-services-pasadena        301
+/managed-it-services-glendale.html         /managed-it-services-glendale        301
+/managed-it-services-calabasas.html        /managed-it-services-calabasas       301
+/managed-it-services-thousand-oaks.html    /managed-it-services-thousand-oaks   301
+/managed-it-services-sherman-oaks.html     /managed-it-services-sherman-oaks    301
+/managed-it-services-encino.html           /managed-it-services-encino          301
+/managed-it-services-torrance.html         /managed-it-services-torrance        301
+/managed-it-services-el-segundo.html       /managed-it-services-el-segundo      301
+/managed-it-services-santa-monica.html     /managed-it-services-santa-monica    301
+/managed-it-services-irvine.html           /managed-it-services-irvine          301
+/managed-it-services-orange-county.html    /managed-it-services-orange-county   301
+/it-support-burbank.html                   /it-support-burbank                  301
+
+# ---- Service pages ----
+/cybersecurity-services.html               /cybersecurity-services              301
+/cloud-services.html                       /cloud-services                      301
+/backup-disaster-recovery.html             /backup-disaster-recovery            301
+/ai-automation-services.html               /ai-automation-services              301
+/it-help-desk.html                         /it-help-desk                        301
+
+# ---- Industry / vertical pages ----
+/law-firm-it-services-los-angeles.html     /law-firm-it-services-los-angeles    301
+/healthcare-it-services.html               /healthcare-it-services              301
+/financial-services-it.html                /financial-services-it               301
+/real-estate-it-services.html              /real-estate-it-services             301
+/manufacturing-it-services.html            /manufacturing-it-services           301
+/professional-services-it.html             /professional-services-it            301
+/technology-it-services.html               /technology-it-services              301
+/logistics-it-services.html                /logistics-it-services               301
+/aerospace-defense-it-services.html        /aerospace-defense-it-services       301
+/entertainment-it-services.html            /entertainment-it-services           301
+/education-it-services.html                /education-it-services               301
+/nonprofit-it-services.html                /nonprofit-it-services               301
+/waste-management-it-services.html         /waste-management-it-services        301
+
+# ---- Duplicate blog post -> canonical (t5) version ----
+/blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html   301
