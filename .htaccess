@@ -1,0 +1,24 @@
+# ===========================================================================
+# 301 redirects — collapse legacy ".html" URLs into the clean canonical URLs.
+# Format: Apache / LiteSpeed  (place this file in the site root).
+#
+# Use THIS file only if your host runs Apache/LiteSpeed. If you are on
+# Cloudflare Pages or Netlify, use the "_redirects" file instead and delete this.
+#
+# Blog POST URLs are intentionally NOT redirected — they canonicalize WITH
+# ".html". Only main pages + the one duplicate post are redirected.
+# ===========================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) Duplicate blog post -> canonical (t5) version (handled before the blog exclusion)
+  RewriteRule ^blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it\.html$ /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html [R=301,L]
+
+  # 2) /index.html -> /
+  RewriteRule ^index\.html$ / [R=301,L]
+
+  # 3) Any /<page>.html -> /<page>   (EXCEPT anything under /blog/, whose posts keep .html)
+  RewriteCond %{REQUEST_URI} !^/blog/
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+</IfModule>
