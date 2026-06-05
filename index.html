@@ -504,10 +504,29 @@
     .gb-stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; margin: 4px 0; }
     .gb-count { font-size: .72rem; color: rgba(255,255,255,.5); font-weight: 600; }
 
-    .reviews-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    .reviews-controls { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 18px; }
+    .rev-arrow {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18);
+      color: #fff; font-size: 1.25rem; line-height: 1; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s, transform .15s, color .2s;
     }
+    .rev-arrow:hover { background: rgba(245,166,35,.18); border-color: var(--gold); color: var(--gold); }
+    .rev-arrow:active { transform: scale(.94); }
+
+    .reviews-grid {
+      display: flex; gap: 20px; overflow-x: auto;
+      scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      padding: 4px 4px 18px; margin: 0 -4px;
+      scrollbar-width: thin; scrollbar-color: rgba(245,166,35,.5) rgba(255,255,255,.08);
+    }
+    .reviews-grid::-webkit-scrollbar { height: 8px; }
+    .reviews-grid::-webkit-scrollbar-track { background: rgba(255,255,255,.07); border-radius: 100px; }
+    .reviews-grid::-webkit-scrollbar-thumb { background: rgba(245,166,35,.45); border-radius: 100px; }
+    .reviews-grid::-webkit-scrollbar-thumb:hover { background: rgba(245,166,35,.7); }
     .review-card {
+      flex: 0 0 clamp(280px, 80vw, 340px); scroll-snap-align: start;
       background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
       border-radius: var(--r-lg); padding: 24px;
       display: flex; flex-direction: column; gap: 14px;
