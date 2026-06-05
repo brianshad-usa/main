@@ -568,13 +568,11 @@
       .hero-right { position: static; max-height: none; overflow-y: visible; }
       .why-grid { grid-template-columns: 1fr; gap: 40px; }
       .results-grid { grid-template-columns: 1fr; }
-      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
       .reviews-header { flex-direction: column; gap: 20px; }
       .google-badge { flex-direction: row; align-items: center; gap: 16px; width: 100%; padding: 16px 20px; }
       .gb-score { font-size: 2rem; }
     }
     @media (max-width: 768px) {
-      .reviews-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .hero-checks { grid-template-columns: 1fr; }
       .hint-desktop { display: none !important; }
@@ -1051,7 +1049,7 @@
       <div>
         <span class="section-label">Client Reviews</span>
         <h2 class="section-heading" id="reviews-heading">25 years of trust &mdash; in their own words</h2>
-        <p class="section-sub">Every review below is posted directly on Google. Click any card to verify.</p>
+        <p class="section-sub">Every review is posted directly on Google &mdash; scroll to read all of them, and click any card to verify.</p>
       </div>
       <a href="https://share.google/ab8YpK16DxCYbt1Hd" target="_blank" rel="noopener" class="google-badge" aria-label="View all reviews on Google">
         <div class="gb-logo">
@@ -1065,7 +1063,12 @@
       </a>
     </div>
 
-    <div class="reviews-grid">
+    <div class="reviews-controls">
+      <button class="rev-arrow" type="button" aria-label="Previous reviews" onclick="document.getElementById('reviewsScroller').scrollBy({left:-360,behavior:'smooth'})">&#8249;</button>
+      <button class="rev-arrow" type="button" aria-label="Next reviews" onclick="document.getElementById('reviewsScroller').scrollBy({left:360,behavior:'smooth'})">&#8250;</button>
+    </div>
+
+    <div class="reviews-grid" id="reviewsScroller">
 
       <!-- 1 -->
       <a href="https://share.google/ab8YpK16DxCYbt1Hd" target="_blank" rel="noopener" class="review-card" aria-label="Review by Tony Zamos">
