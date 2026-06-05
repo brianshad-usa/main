@@ -518,6 +518,11 @@ gtag('config', 'AW-1068497497');
   </div>
 </div>
 
+<div class="blog-intro" style="max-width:820px;margin:0 auto;padding:44px 24px 4px;">
+  <p style="font-size:1rem;color:var(--text-muted);line-height:1.8;margin-bottom:16px;">Welcome to the Pro Link Systems blog &mdash; straightforward technology guidance for Los Angeles businesses. For more than 25 years we've helped LA-area organizations across healthcare, legal, finance, manufacturing, and dozens of other industries get more from their technology while staying secure and compliant. These articles share what we've learned along the way.</p>
+  <p style="font-size:1rem;color:var(--text-muted);line-height:1.8;margin:0;">Here you'll find practical answers to the questions business owners actually ask: how to choose a managed IT provider, what managed IT really costs, how to defend against the cybersecurity threats targeting Southern California, when it makes sense to move to the cloud, and how to tell when you've outgrown your current IT support. Browse the latest articles below, or call us at <a href="tel:18008906133" style="color:var(--navy);font-weight:600;">1-800-890-6133</a> to talk through your situation with a real engineer.</p>
+</div>
+
 <div class="blog-grid">
 {post_cards}
 </div>
