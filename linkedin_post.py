@@ -148,9 +148,9 @@ def _build_post_body(org_urn, commentary, url, title, description):
 def post_article(title, url, summary, caption):
     """Publish an article share to the company page. Returns the post URN on
     success. Raises on failure (caller decides how to handle)."""
-    org_id = os.environ.get("LINKEDIN_ORG_ID", "").strip()
-    if not org_id:
-        raise RuntimeError("LINKEDIN_ORG_ID is not set.")
+    # Defaults to the Pro Link Systems Company Page id (3574099). Override with
+    # the LINKEDIN_ORG_ID secret only if the page ever changes.
+    org_id = os.environ.get("LINKEDIN_ORG_ID", "").strip() or "3574099"
     # Accept either a bare numeric id or a full URN.
     org_urn = org_id if org_id.startswith("urn:") else f"urn:li:organization:{org_id}"
 
