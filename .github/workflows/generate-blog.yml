@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       topic_index:
-        description: 'Topic index (0-29). Leave empty for auto-rotation.'
+        description: 'Topic index (0-94). Leave empty for auto-rotation.'
         required: false
         default: ''
 

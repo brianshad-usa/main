@@ -101,8 +101,38 @@ other_topics = [
     "Managed IT for Los Angeles veterinary clinics",
 ]
 
+# AI & Automation topics, aligned to our service lines: AI knowledge assistants,
+# workflow automation, custom AI solutions, AI security & governance, AI strategy
+# consulting, and Microsoft Copilot deployment. Kept in their own list so we can
+# interleave them evenly through the rotation (see below).
+ai_topics = [
+    "AI tools every Los Angeles small business should consider",
+    "Is your Los Angeles business ready for AI? An AI readiness checklist",
+    "How AI knowledge assistants help Los Angeles teams find answers instantly",
+    "Custom AI solutions vs off-the-shelf tools for Los Angeles businesses",
+    "AI security and governance: setting safe AI policies for Los Angeles businesses",
+    "Is Microsoft Copilot worth it for Los Angeles businesses",
+    "Deploying Microsoft Copilot safely at your Los Angeles business",
+    "AI data security: using ChatGPT safely at your Los Angeles business",
+    "How Los Angeles businesses are using AI to automate workflows",
+    "Business process automation for Los Angeles companies",
+]
+
+# Build the rotation by interleaving AI topics evenly through the rest, so AI
+# content -- one of our core service lines -- appears regularly (about one post
+# in every 9-10, i.e. roughly every three weeks) instead of clustering together.
+topics = []
+_ai_i = 0
+_grand_total = len(other_topics) + len(ai_topics)
+for _pos in range(_grand_total):
+    if _ai_i < len(ai_topics) and _pos >= round(_ai_i * _grand_total / len(ai_topics)):
+        topics.append(ai_topics[_ai_i])
+        _ai_i += 1
+    else:
+        topics.append(other_topics[_pos - _ai_i])
+
 # Topic selection.
-#   * Manual runs can force a topic via the TOPIC_INDEX workflow input (0-29).
+#   * Manual runs can force a topic via the TOPIC_INDEX workflow input (0-94).
 #   * Scheduled runs auto-rotate. The job runs every other day, so advancing by
 #     (day_of_year // 2) moves exactly one topic forward each run and cycles
 #     through the whole list before any topic repeats.
