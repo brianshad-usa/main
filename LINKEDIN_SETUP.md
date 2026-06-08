@@ -73,16 +73,12 @@ A browser opens → approve the permissions → the terminal prints your
 **LINKEDIN_ACCESS_TOKEN** and **LINKEDIN_REFRESH_TOKEN**. Keep that window open
 for the next step.
 
-## Step 5 — Find your Company Page (Organization) ID
+## Step 5 — Company Page (Organization) ID — ALREADY DONE
 
-You need the **numeric** id of the page.
-
-- **Easiest:** go to your Company Page, click **Admin tools / view as admin**.
-  The browser URL becomes something like
-  `https://www.linkedin.com/company/`**`12345678`**`/admin/` — that number is your
-  Organization ID.
-- **Backup:** open your public page, View Source (Ctrl+U), and search for
-  `organization:` — you'll find `urn:li:organization:12345678`.
+Your Organization ID is **`3574099`** (from your admin URL
+`linkedin.com/company/3574099/admin/`). It's already baked into `linkedin_post.py`
+as the default, so **you don't need to add a secret for it.** (If the page ever
+changes, set a `LINKEDIN_ORG_ID` secret to override.)
 
 ## Step 6 — Add the GitHub secrets
 

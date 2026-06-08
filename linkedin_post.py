@@ -190,8 +190,12 @@ def post_article(title, url, summary, caption):
 def maybe_post(title, url, summary, caption):
     """Safe wrapper for the blog pipeline. Never raises -- logs and returns
     None on any problem so the blog publish is never blocked."""
-    if not os.environ.get("LINKEDIN_ORG_ID", "").strip():
-        _log("Skipping LinkedIn post (LINKEDIN_ORG_ID not configured).")
+    has_creds = (
+        os.environ.get("LINKEDIN_REFRESH_TOKEN", "").strip()
+        or os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip()
+    )
+    if not has_creds:
+        _log("Skipping LinkedIn post (no LINKEDIN_REFRESH_TOKEN/ACCESS_TOKEN configured).")
         return None
     try:
         return post_article(title, url, summary, caption)
