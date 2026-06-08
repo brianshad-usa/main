@@ -91,9 +91,11 @@ repository secret**. Add each of these:
 | `LINKEDIN_CLIENT_SECRET` | from Step 3 |
 | `LINKEDIN_REFRESH_TOKEN` | from Step 4 |
 | `LINKEDIN_ACCESS_TOKEN` | from Step 4 (fallback; optional but recommended) |
-| `LINKEDIN_ORG_ID` | the number from Step 5 |
 
-*(`ANTHROPIC_API_KEY` is already set from the blog automation.)*
+*(`LINKEDIN_ORG_ID` is NOT needed — `3574099` is already the default in the code.
+`ANTHROPIC_API_KEY` is already set from the blog automation.)*
+
+So you only add **4 secrets**: client id, client secret, refresh token, access token.
 
 That's it — you're live.
 
@@ -130,7 +132,7 @@ early.
 
 | Symptom in the Action log | Fix |
 |---|---|
-| `Skipping LinkedIn post (LINKEDIN_ORG_ID not configured)` | Add the `LINKEDIN_ORG_ID` secret (Step 5–6). |
+| `Skipping LinkedIn post (no ...TOKEN configured)` | Tokens aren't set yet — finish Steps 4 + 6. |
 | `LinkedIn API 401` / `Refresh failed` | Token expired or revoked — re-run Step 4, update the secrets. |
 | `LinkedIn API 403` `ACCESS_DENIED` | App isn't approved for Community Management API yet, or you're not a Page admin (Steps 1–2). |
 | `LinkedIn API 426` / version error | Bump the LinkedIn version: add a `LINKEDIN_API_VERSION` secret like `202507`. |
