@@ -5,7 +5,7 @@ import glob
 import calendar
 from datetime import datetime
 
-topics = [
+other_topics = [
     # Core managed IT topics
     "Why Los Angeles businesses are switching from break-fix IT to managed services in 2026",
     "HIPAA compliance checklist for Los Angeles medical practices",
@@ -88,12 +88,6 @@ topics = [
     "Scaling IT as your Los Angeles startup grows",
     "A technology checklist for relocating your Los Angeles business",
     "Vendor and technology management for Los Angeles businesses",
-    # --- AI & automation ---
-    "AI tools every Los Angeles small business should consider",
-    "Is Microsoft Copilot worth it for Los Angeles businesses",
-    "How Los Angeles businesses are using AI to automate workflows",
-    "AI data security: using ChatGPT safely at your Los Angeles business",
-    "Business process automation for Los Angeles companies",
     # --- Industry verticals ---
     "IT support for Los Angeles dental practices",
     "Managed IT for Los Angeles accounting and CPA firms",
