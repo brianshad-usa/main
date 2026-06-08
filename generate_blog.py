@@ -40,19 +40,23 @@ topics = [
     "IT budgeting guide for Los Angeles small and mid-size businesses",
 ]
 
-# Allow topic override via environment variable (0-11)
-# Set TOPIC_INDEX in GitHub Actions workflow_dispatch inputs
+# Topic selection.
+#   * Manual runs can force a topic via the TOPIC_INDEX workflow input (0-29).
+#   * Scheduled runs auto-rotate. The job runs every other day, so advancing by
+#     (day_of_year // 2) moves exactly one topic forward each run and cycles
+#     through the whole list before any topic repeats.
 topic_override = os.environ.get("TOPIC_INDEX", "")
 if topic_override.isdigit():
     topic_index = int(topic_override) % len(topics)
 else:
-    topic_index = datetime.now().month - 1
+    day_of_year = datetime.now().timetuple().tm_yday
+    topic_index = (day_of_year // 2) % len(topics)
 
 topic = topics[topic_index]
 date_str = datetime.now().strftime("%B %d, %Y")
 date_iso = datetime.now().strftime("%Y-%m-%d")
-# Use topic index in slug to avoid duplicates when running multiple times
-slug_date = datetime.now().strftime("%Y-%m")
+# Full date + topic index in the slug keeps every run's URL unique.
+slug_date = datetime.now().strftime("%Y-%m-%d")
 slug = re.sub(r'[^a-z0-9]+', '-', topic.lower()).strip('-')
 slug = f"{slug_date}-t{topic_index}-{slug[:55]}"
 

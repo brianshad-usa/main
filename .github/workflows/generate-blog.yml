@@ -2,11 +2,13 @@ name: Generate Blog Post
 
 on:
   schedule:
-    - cron: '0 9 1 * *'
+    # Every other day at 09:00 UTC (temporary high-frequency cadence).
+    # Revert to '0 9 1 * *' for once-a-month.
+    - cron: '0 9 */2 * *'
   workflow_dispatch:
     inputs:
       topic_index:
-        description: 'Topic index (0-27). Leave empty for monthly auto-select.'
+        description: 'Topic index (0-29). Leave empty for auto-rotation.'
         required: false
         default: ''
 
@@ -50,5 +52,5 @@ jobs:
           git config --global user.name "ProLink Blog Bot"
           git config --global user.email "blog-bot@prolinksystems.com"
           git add blog/
-          git diff --staged --quiet || git commit -m "Auto-generate blog post $(date +'%B %Y')"
+          git diff --staged --quiet || git commit -m "Auto-generate blog post $(date +'%Y-%m-%d')"
           git push
