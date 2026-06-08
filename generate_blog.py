@@ -428,7 +428,7 @@ for fp in sorted(glob.glob("blog/*.html"), reverse=True):
     posts.append((s, t, d))
 
 post_cards = ""
-for s, t, d in posts[:12]:
+for s, t, d in posts:
     post_cards += f"""
 <article class="blog-card">
   <div class="blog-card-meta">{d}</div>
