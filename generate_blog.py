@@ -2,6 +2,7 @@
 import os
 import re
 import glob
+import calendar
 from datetime import datetime
 
 topics = [
@@ -49,8 +50,18 @@ topic_override = os.environ.get("TOPIC_INDEX", "")
 if topic_override.isdigit():
     topic_index = int(topic_override) % len(topics)
 else:
-    day_of_year = datetime.now().timetuple().tm_yday
-    topic_index = (day_of_year // 2) % len(topics)
+    # Auto-rotation for scheduled runs. The cron fires on odd days of the month,
+    # so we count how many of those "post days" have occurred this year and
+    # advance exactly one topic per post. This guarantees a different topic every
+    # run -- even across month boundaries (where two posts can land on back-to-back
+    # calendar days) -- and full coverage before any topic repeats.
+    _now = datetime.now()
+    _posts_before_month = sum(
+        (calendar.monthrange(_now.year, _m)[1] + 1) // 2 for _m in range(1, _now.month)
+    )
+    _posts_this_month = (_now.day + 1) // 2
+    _run_number = _posts_before_month + _posts_this_month  # 1-based
+    topic_index = (_run_number - 1) % len(topics)
 
 topic = topics[topic_index]
 date_str = datetime.now().strftime("%B %d, %Y")
