@@ -637,6 +637,36 @@ with open("blog/index.html", 'w') as f:
 
 print(f"Blog index updated with {len(posts)} posts")
 
+# --- Add this post to sitemap.xml ------------------------------------------
+# Idempotent: if the URL is already present (e.g. a re-run), do nothing.
+try:
+    sitemap_path = "sitemap.xml"
+    post_loc = f"https://prolinksystems.com/blog/{slug}.html"
+    if not os.path.exists(sitemap_path):
+        print("[sitemap] sitemap.xml not found; skipped.")
+    else:
+        with open(sitemap_path, "r", encoding="utf-8") as f:
+            sm = f.read()
+        if post_loc in sm:
+            print("[sitemap] Post already in sitemap; skipped.")
+        elif "</urlset>" not in sm:
+            print("[sitemap] No </urlset> close tag found; skipped.")
+        else:
+            entry = (
+                "  <url>\n"
+                f"    <loc>{post_loc}</loc>\n"
+                f"    <lastmod>{date_iso}</lastmod>\n"
+                "    <changefreq>monthly</changefreq>\n"
+                "    <priority>0.5</priority>\n"
+                "  </url>\n"
+            )
+            sm = sm.replace("</urlset>", entry + "</urlset>")
+            with open(sitemap_path, "w", encoding="utf-8") as f:
+                f.write(sm)
+            print(f"[sitemap] Added {post_loc}")
+except Exception as e:
+    print(f"[sitemap] WARNING: sitemap update skipped: {e}")
+
 # --- Cross-post to the company LinkedIn page -------------------------------
 # Safe by design: maybe_post() never raises, so a LinkedIn problem (expired
 # token, outage, missing secrets) can never block the blog from publishing.
