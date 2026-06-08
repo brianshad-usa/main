@@ -75,10 +75,19 @@ Requirements:
 Also provide:
 - A compelling H1 title on its own line prefixed with TITLE: (keep it UNDER 42 characters so the full SEO title stays under 60 once " | Pro Link Systems" is appended)
 - A meta description of 150-160 characters prefixed with META:
+- A LinkedIn caption prefixed with LINKEDIN: for posting this article on the company page. Make it:
+  * 3-5 short lines; the first line a strong hook that makes people want to read.
+  * Professional but human. Plain text only - NO parentheses, brackets, markdown, or emojis.
+  * Do NOT include the article URL (LinkedIn adds a link preview card automatically).
+  * End with 3-5 relevant hashtags, for example: #ManagedIT #Cybersecurity #LosAngeles #ITSupport
+  * Under 1200 characters total.
 
 Format exactly like this:
 TITLE: Your title here
 META: Your meta description here
+LINKEDIN:
+Your LinkedIn caption here
+(may span multiple lines, ending with hashtags)
 CONTENT:
 [HTML content here]"""
 
@@ -92,19 +101,30 @@ response = message.content[0].text
 lines = response.strip().split('\n')
 title = ""
 meta = ""
+caption_lines = []
 content_lines = []
-in_content = False
+state = None  # None | "linkedin" | "content"
 
 for line in lines:
-    if line.startswith("TITLE: "):
-        title = line.replace("TITLE: ", "").strip()
-    elif line.startswith("META: "):
-        meta = line.replace("META: ", "").strip()
+    if line.startswith("TITLE:"):
+        title = line.split("TITLE:", 1)[1].strip()
+        state = None
+    elif line.startswith("META:"):
+        meta = line.split("META:", 1)[1].strip()
+        state = None
+    elif line.startswith("LINKEDIN:"):
+        first = line.split("LINKEDIN:", 1)[1].strip()
+        if first:
+            caption_lines.append(first)
+        state = "linkedin"
     elif line.startswith("CONTENT:"):
-        in_content = True
-    elif in_content:
+        state = "content"
+    elif state == "content":
         content_lines.append(line)
+    elif state == "linkedin":
+        caption_lines.append(line)
 
+caption = '\n'.join(caption_lines).strip()
 content = '\n'.join(content_lines).strip()
 year = datetime.now().year
 
@@ -535,3 +555,22 @@ with open("blog/index.html", 'w') as f:
     f.write(index_html)
 
 print(f"Blog index updated with {len(posts)} posts")
+
+# --- Cross-post to the company LinkedIn page -------------------------------
+# Safe by design: maybe_post() never raises, so a LinkedIn problem (expired
+# token, outage, missing secrets) can never block the blog from publishing.
+try:
+    import linkedin_post
+
+    post_url = f"https://prolinksystems.com/blog/{slug}.html"
+    if not caption:
+        caption = (
+            f"{title}\n\n"
+            f"New on the Pro Link Systems blog: {meta}\n\n"
+            "#ManagedIT #Cybersecurity #LosAngeles #ITSupport"
+        )
+    linkedin_post.maybe_post(
+        title=title, url=post_url, summary=meta, caption=caption
+    )
+except Exception as e:
+    print(f"[linkedin] WARNING: cross-post step skipped: {e}")
