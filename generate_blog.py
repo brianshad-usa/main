@@ -681,6 +681,44 @@ try:
 except Exception as e:
     print(f"[sitemap] WARNING: sitemap update skipped: {e}")
 
+# --- Update the home page "From the Pro Link blog" section -----------------
+# Replaces the cards between the HOME_BLOG markers with the latest posts so the
+# home page never goes stale. Safe: never blocks publishing.
+try:
+    home_path = "index.html"
+    if not os.path.exists(home_path):
+        print("[home] index.html not found; skipped.")
+    else:
+        with open(home_path, "r", encoding="utf-8") as f:
+            home = f.read()
+        if "<!-- HOME_BLOG_START -->" not in home or "<!-- HOME_BLOG_END -->" not in home:
+            print("[home] Markers not found; skipped home page update.")
+        else:
+            _arrow = ('<svg width="13" height="13" viewBox="0 0 24 24" fill="none" '
+                      'stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" '
+                      'x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>')
+            home_cards = ""
+            for s, t, d in posts[:8]:
+                home_cards += (
+                    f'      <a class="home-blog-card" href="/blog/{s}.html">\n'
+                    f'        <div class="hb-meta">{d}</div>\n'
+                    f'        <h3>{t}</h3>\n'
+                    f'        <span class="hb-read">Read article {_arrow}</span>\n'
+                    f'      </a>\n'
+                )
+            new_block = "<!-- HOME_BLOG_START -->\n" + home_cards + "      <!-- HOME_BLOG_END -->"
+            home = re.sub(
+                r"<!-- HOME_BLOG_START -->.*?<!-- HOME_BLOG_END -->",
+                lambda _m: new_block,
+                home,
+                flags=re.DOTALL,
+            )
+            with open(home_path, "w", encoding="utf-8") as f:
+                f.write(home)
+            print(f"[home] Updated home page with latest {min(8, len(posts))} posts")
+except Exception as e:
+    print(f"[home] WARNING: home page update skipped: {e}")
+
 # --- Cross-post to the company LinkedIn page -------------------------------
 # Safe by design: maybe_post() never raises, so a LinkedIn problem (expired
 # token, outage, missing secrets) can never block the blog from publishing.

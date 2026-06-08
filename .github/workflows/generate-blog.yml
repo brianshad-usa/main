@@ -52,6 +52,6 @@ jobs:
         run: |
           git config --global user.name "ProLink Blog Bot"
           git config --global user.email "blog-bot@prolinksystems.com"
-          git add blog/ sitemap.xml
+          git add blog/ sitemap.xml index.html
           git diff --staged --quiet || git commit -m "Auto-generate blog post $(date +'%Y-%m-%d')"
           git push
