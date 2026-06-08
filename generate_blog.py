@@ -490,8 +490,22 @@ print(f"Generated: {filepath}")
 print(f"Title: {title}")
 
 # Update blog index
+def _post_date_key(path):
+    """Sort key from the slug so the newest posts come first. Handles the new
+    YYYY-MM-DD-... slugs and older YYYY-MM-... slugs (day defaults to 0 so older
+    undated posts fall below same-month dated ones)."""
+    fn = os.path.basename(path)
+    m = re.match(r'(\d{4})-(\d{2})-(\d{2})-', fn)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)), fn)
+    m = re.match(r'(\d{4})-(\d{2})-', fn)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), 0, fn)
+    return (0, 0, 0, fn)
+
+
 posts = []
-for fp in sorted(glob.glob("blog/*.html"), reverse=True):
+for fp in sorted(glob.glob("blog/*.html"), key=_post_date_key, reverse=True):
     fname = os.path.basename(fp)
     if fname == "index.html":
         continue
