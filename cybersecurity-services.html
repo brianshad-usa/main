@@ -135,8 +135,14 @@
     .faq-a { display: none; padding: 0 24px 20px; font-size: .9rem; color: var(--text-muted); line-height: 1.75; }
     .faq-item.open .faq-a { display: block; }
 
+    .umbrella-grid { grid-template-columns: repeat(4, 1fr); }
+    .feature-card-link { text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+    .card-link-arrow { margin-top: auto; padding-top: 14px; font-size: .82rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 5px; }
+    .feature-card-link:hover .card-link-arrow { color: var(--gold); }
+    @media (max-width: 1200px) { .umbrella-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 1024px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .page-hero { padding: 56px 20px 52px; } .intro-section, .features-section, .layers-section, .faq-section { padding: 56px 20px; } .features-grid { grid-template-columns: 1fr; } .hero-cta-group { flex-direction: column; align-items: center; } }
+    @media (max-width: 768px) { .page-hero { padding: 56px 20px 52px; } .intro-section, .features-section, .layers-section, .faq-section { padding: 56px 20px; } .features-grid { grid-template-columns: 1fr; } .umbrella-grid { grid-template-columns: 1fr 1fr; } .hero-cta-group { flex-direction: column; align-items: center; } }
+    @media (max-width: 480px) { .umbrella-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
