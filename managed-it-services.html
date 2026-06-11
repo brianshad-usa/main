@@ -1550,7 +1550,7 @@
   }
 
   /* Clear error state on input */
-  var fgMap = { 'fi-first':'fg-first', 'fi-last':'fg-last', 'fi-email':'fg-email', 'fi-phone':'fg-phone', 'fi-company':'fg-company' };
+  var fgMap = { 'fi-first':'fg-first', 'fi-last':'fg-last', 'fi-email':'fg-email', 'fi-phone':'fg-phone', 'fi-company':'fg-company', 'fi-message':'fg-message' };
   Object.keys(fgMap).forEach(function(id) {
     document.getElementById(id).addEventListener('input', function() {
       document.getElementById(fgMap[id]).classList.remove('has-error');
@@ -1572,6 +1572,8 @@
     var email     = document.getElementById('fi-email').value.trim();
     var phone     = document.getElementById('fi-phone').value.trim();
     var company   = document.getElementById('fi-company').value.trim();
+    var interest  = document.getElementById('fi-interest').value || 'Managed IT Services';
+    var message   = document.getElementById('fi-message').value.trim();
     var refNum    = 'PLS-' + Date.now().toString(36).toUpperCase().slice(-6);
 
     /* 1. Send visitor confirmation immediately via EmailJS (fire-and-forget) */
@@ -1581,8 +1583,8 @@
       lastName:  lastName,
       company:   company,
       phone:     phone,
-      interest:  'Managed IT Services',
-      message:   'Source: Managed IT Services landing page (Google Ads)',
+      interest:  interest,
+      message:   message,
       refNumber: refNum
     }).then(function() {
       console.log('EmailJS confirmation sent to', email);
@@ -1601,6 +1603,8 @@
         email:      email,
         replyto:    email,
         message:    'Phone: ' + phone + '\nCompany: ' + company +
+                    '\nInterest: ' + interest +
+                    '\nMessage: ' + message +
                     '\nSource: managed-it-services landing page (Google Ads)'
       })
     })
