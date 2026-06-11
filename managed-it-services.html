@@ -1528,24 +1528,24 @@
   var success = document.getElementById('formSuccess');
 
   function validate() {
+    /* Clear all error states first so valid fields are never toggled (prevents transition flash) */
+    document.querySelectorAll('#lpForm .form-group').forEach(function(fg) {
+      fg.classList.remove('has-error');
+    });
     var ok = true;
     function req(fgId, inputId, checkEmail) {
-      var fg   = document.getElementById(fgId);
       var val  = document.getElementById(inputId).value.trim();
       var fail = !val || (checkEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val));
-      fg.classList.toggle('has-error', fail);
-      if (fail) ok = false;
+      if (fail) { document.getElementById(fgId).classList.add('has-error'); ok = false; }
     }
     req('fg-first',   'fi-first');
     req('fg-last',    'fi-last');
     req('fg-email',   'fi-email', true);
     req('fg-phone',   'fi-phone');
     req('fg-company', 'fi-company');
-    var msgFg = document.getElementById('fg-message');
-    var msgVal = document.getElementById('fi-message').value.trim();
-    var msgFail = msgVal.length < 5;
-    msgFg.classList.toggle('has-error', msgFail);
-    if (msgFail) ok = false;
+    if (document.getElementById('fi-message').value.trim().length < 5) {
+      document.getElementById('fg-message').classList.add('has-error'); ok = false;
+    }
     return ok;
   }
 
