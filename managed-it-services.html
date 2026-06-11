@@ -227,6 +227,10 @@
     }
     .form-group input::placeholder,
     .form-group textarea::placeholder { color: #a0aab6; }
+    .form-group textarea { resize: vertical; min-height: 90px; line-height: 1.55; }
+    .form-group select { cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23667788' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 32px; }
     .form-error { font-size: .72rem; color: #dc2626; margin-top: 2px; display: none; }
     .form-group.has-error input,
     .form-group.has-error select,
@@ -800,6 +804,25 @@
               <label for="fi-company">Company Name <span class="req">*</span></label>
               <input type="text" id="fi-company" name="company" placeholder="Acme Corporation" autocomplete="organization">
               <span class="form-error">Required</span>
+            </div>
+            <div class="form-group">
+              <label for="fi-interest">How can we help?</label>
+              <select id="fi-interest" name="interest">
+                <option value="" disabled selected>Select a service area&hellip;</option>
+                <option>Managed IT / Help Desk</option>
+                <option>Cybersecurity</option>
+                <option>Cloud &amp; Infrastructure</option>
+                <option>Disaster Recovery</option>
+                <option>IT Consulting / vCIO</option>
+                <option>Remote Workplace</option>
+                <option>AI &amp; Automation</option>
+                <option>Not sure &mdash; I need an assessment</option>
+              </select>
+            </div>
+            <div class="form-group" id="fg-message">
+              <label for="fi-message">Message <span class="req">*</span></label>
+              <textarea id="fi-message" name="message" rows="3" placeholder="Briefly describe your IT challenge or what you&rsquo;re looking for&hellip;"></textarea>
+              <span class="form-error">Please include a message</span>
             </div>
             <button type="submit" class="submit-btn" id="lpBtn">
               <span class="btn-label">Have Us Call You</span>
@@ -1518,6 +1541,11 @@
     req('fg-email',   'fi-email', true);
     req('fg-phone',   'fi-phone');
     req('fg-company', 'fi-company');
+    var msgFg = document.getElementById('fg-message');
+    var msgVal = document.getElementById('fi-message').value.trim();
+    var msgFail = msgVal.length < 5;
+    msgFg.classList.toggle('has-error', msgFail);
+    if (msgFail) ok = false;
     return ok;
   }
 
