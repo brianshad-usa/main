@@ -561,7 +561,7 @@ index_html = f"""<!DOCTYPE html>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>IT Blog &amp; Insights for Los Angeles Businesses | Pro Link Systems</title>
+<title>IT Blog for Los Angeles Businesses | Pro Link Systems</title>
 <meta name="description" content="Expert IT advice, cybersecurity tips, and managed IT insights for Los Angeles businesses from Pro Link Systems &mdash; proudly serving LA companies since 1999.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://prolinksystems.com/blog/">
