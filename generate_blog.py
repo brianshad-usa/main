@@ -265,7 +265,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
       <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
-      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by hundreds of organizations across California.</p>
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
