@@ -345,6 +345,8 @@ html = f"""<!DOCTYPE html>
 <meta property="og:image" content="https://prolinksystems.com/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:title" content="{title} | Pro Link Systems">
+<meta name="twitter:description" content="{meta}">
 <script type="application/ld+json">
 {{
   "@context": "https://schema.org",
