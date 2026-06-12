@@ -173,7 +173,14 @@ Requirements:
 - Include naturally: managed IT services Los Angeles, IT support Los Angeles, Pro Link Systems
 - Structure: Introduction, 3-4 main sections with H2 headings, conclusion with CTA
 - CTA at end should direct readers to prolinksystems.com/managed-it-services
-- Write in HTML using only these tags: p, h2, ul, li, strong
+- Write in HTML using only these tags: p, h2, ul, li, strong, a
+- Include 3-5 natural internal links within the content using these anchor text and URL pairs:
+  - "managed IT services" or "managed IT" -> /managed-it-services
+  - "cybersecurity" or "IT security" -> /cybersecurity-services
+  - "cloud services" or "Microsoft 365" -> /cloud-services
+  - "help desk" or "IT support" -> /it-help-desk
+  - "disaster recovery" or "data backup" -> /backup-disaster-recovery
+  - "HIPAA compliance" or "healthcare IT" -> /healthcare-it-services
 - Do not include DOCTYPE html head body tags
 - No markdown, just clean HTML
 
