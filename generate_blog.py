@@ -348,15 +348,17 @@ html = f"""<!DOCTYPE html>
 <script type="application/ld+json">
 {{
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "{title}",
   "description": "{meta}",
-  "datePublished": "{date_iso}",
-  "dateModified": "{date_iso}",
   "author": {{
-    "@type": "Organization",
-    "name": "Pro Link Systems",
-    "url": "https://prolinksystems.com"
+    "@type": "Person",
+    "name": "Brian Shad",
+    "jobTitle": "President",
+    "worksFor": {{
+      "@type": "Organization",
+      "name": "Pro Link Systems"
+    }}
   }},
   "publisher": {{
     "@type": "Organization",
@@ -366,10 +368,13 @@ html = f"""<!DOCTYPE html>
       "url": "https://prolinksystems.com/logo.png"
     }}
   }},
+  "datePublished": "{date_iso}",
+  "dateModified": "{date_iso}",
   "mainEntityOfPage": {{
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/{slug}.html"
-  }}
+  }},
+  "url": "https://prolinksystems.com/blog/{slug}.html"
 }}
 </script>
 <link rel="stylesheet" href="/_shared.css">
@@ -481,7 +486,7 @@ gtag('config', 'AW-1068497497');
   </div>
   <h1>{title}</h1>
   <div class="post-meta">
-    <strong>Pro Link Systems</strong> &nbsp;&middot;&nbsp; {date_str}
+    By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; {date_str}
   </div>
 </div>
 
