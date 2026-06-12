@@ -1,0 +1,76 @@
+# Pro Link Systems
+
+> Managed IT services, cybersecurity, and cloud solutions for Los Angeles businesses since 1999. Based in Woodland Hills, CA and trusted by 500+ California organizations across healthcare, legal, finance, manufacturing, aerospace, and more.
+
+Pro Link Systems is a managed IT services provider (MSP) serving the greater Los Angeles area. Founded in 1999 by Brian Shad and headquartered in Woodland Hills, the company delivers flat-rate managed IT, cybersecurity, cloud infrastructure, backup and disaster recovery, AI automation, and a 24/7 help desk staffed by real engineers - with no long-term contracts.
+
+- Address: 21241 Ventura Boulevard, Woodland Hills, CA 91364
+- Phone: 1-800-890-6133
+- Email: info@prolinksystems.com
+- Hours: Monday-Friday, 9 AM - 6 PM PST (24/7 help desk for managed clients)
+- Founded: 1999 (family-owned, 25+ years in business)
+- Service area: Greater Los Angeles - San Fernando Valley, West LA, South Bay, and Orange County
+
+## Services
+
+- [Managed IT Services](https://prolinksystems.com/managed-it-services): Flat-rate managed IT for LA businesses - proactive monitoring, 24/7 help desk, no long-term contracts.
+- [Cybersecurity Services](https://prolinksystems.com/cybersecurity-services): EDR, email security, 24/7 SOC monitoring, and ransomware and phishing defense.
+- [Cloud Services](https://prolinksystems.com/cloud-services): Microsoft 365, Azure, cloud migration, virtual desktops, and managed cloud infrastructure.
+- [Backup & Disaster Recovery](https://prolinksystems.com/backup-disaster-recovery): Automated backups, ransomware recovery, tested failover, and business continuity planning.
+- [24/7 IT Help Desk](https://prolinksystems.com/it-help-desk): Round-the-clock support answered by real engineers, with under-15-minute average response.
+- [AI & Automation Services](https://prolinksystems.com/ai-automation-services): AI knowledge assistants, workflow automation, Microsoft Copilot deployment, and custom AI solutions.
+- [All Services Overview](https://prolinksystems.com/services): Full summary of Pro Link Systems' IT service offerings.
+
+## Cybersecurity
+
+- [Email Security](https://prolinksystems.com/email-security-services): Advanced email threat protection beyond standard spam filtering.
+- [Endpoint Security](https://prolinksystems.com/endpoint-security-services): EDR/MDR and managed protection for laptops, desktops, and servers.
+- [Network Security](https://prolinksystems.com/network-security-services): Firewalls, segmentation, and managed network defense.
+- [Identity & Access Management](https://prolinksystems.com/identity-access-management): MFA, single sign-on, and least-privilege access control.
+- [Security Awareness Training](https://prolinksystems.com/security-awareness-training): Phishing simulation and employee security training.
+- [Governance, Risk & Compliance](https://prolinksystems.com/governance-risk-compliance): HIPAA, CMMC, SOC 2, PCI, and FTC Safeguards compliance support.
+
+## Industries Served
+
+- [Healthcare IT](https://prolinksystems.com/healthcare-it-services): HIPAA-compliant IT for clinics, medical practices, and healthcare organizations.
+- [Law Firm IT](https://prolinksystems.com/law-firm-it-services-los-angeles): Secure document management and compliance-ready IT for law firms.
+- [Financial Services IT](https://prolinksystems.com/financial-services-it): SEC/FINRA and GLBA-aligned IT for advisors, wealth managers, and finance firms.
+- [Manufacturing IT](https://prolinksystems.com/manufacturing-it-services): CMMC-ready, OT/IT-integrated IT for manufacturers and defense contractors.
+- [Aerospace & Defense IT](https://prolinksystems.com/aerospace-defense-it-services): CMMC and ITAR/CUI infrastructure for defense contractors.
+- [Real Estate IT](https://prolinksystems.com/real-estate-it-services): Wire-fraud defense and IT for brokerages and property management.
+- [Professional Services IT](https://prolinksystems.com/professional-services-it): Scalable IT for consulting, accounting, and professional firms.
+- [Nonprofit IT](https://prolinksystems.com/nonprofit-it-services): Discounted, grant-compliant IT for nonprofits and foundations.
+- [Technology & SaaS IT](https://prolinksystems.com/technology-it-services): SOC 2-ready cloud, identity, and endpoint management for tech companies.
+- [Entertainment & Media IT](https://prolinksystems.com/entertainment-it-services): Content security (TPN) and post/VFX workstation support for media companies.
+- [Education IT](https://prolinksystems.com/education-it-services): CIPA filtering, FERPA student-data security, and E-Rate support for schools.
+- [Logistics IT](https://prolinksystems.com/logistics-it-services): WMS/TMS, warehouse Wi-Fi, and EDI support for logistics and warehousing.
+- [Waste Management IT](https://prolinksystems.com/waste-management-it-services): Fleet, scale-house, and critical-infrastructure IT for waste companies.
+
+## Locations Served
+
+- [Los Angeles (flagship)](https://prolinksystems.com/managed-it-services-los-angeles)
+- [Woodland Hills](https://prolinksystems.com/managed-it-services-woodland-hills)
+- [Burbank](https://prolinksystems.com/it-support-burbank)
+- [Santa Monica](https://prolinksystems.com/managed-it-services-santa-monica)
+- [Beverly Hills](https://prolinksystems.com/managed-it-services-beverly-hills)
+- [Century City](https://prolinksystems.com/managed-it-services-century-city)
+- [Pasadena](https://prolinksystems.com/managed-it-services-pasadena)
+- [Glendale](https://prolinksystems.com/managed-it-services-glendale)
+- [Encino](https://prolinksystems.com/managed-it-services-encino)
+- [Sherman Oaks](https://prolinksystems.com/managed-it-services-sherman-oaks)
+- [Calabasas](https://prolinksystems.com/managed-it-services-calabasas)
+- [Thousand Oaks](https://prolinksystems.com/managed-it-services-thousand-oaks)
+- [El Segundo](https://prolinksystems.com/managed-it-services-el-segundo)
+- [Torrance](https://prolinksystems.com/managed-it-services-torrance)
+- [Irvine](https://prolinksystems.com/managed-it-services-irvine)
+- [Orange County](https://prolinksystems.com/managed-it-services-orange-county)
+
+## Company
+
+- [About Pro Link Systems](https://prolinksystems.com/about): Company history, founder Brian Shad, and core values.
+- [Contact](https://prolinksystems.com/contact): Phone, email, address, and contact form.
+- [Blog](https://prolinksystems.com/blog/): Practical IT, cybersecurity, and managed IT guidance for Los Angeles businesses.
+
+## Optional
+
+- [Legal / Terms](https://prolinksystems.com/legal): Managed services agreement and terms of service.
