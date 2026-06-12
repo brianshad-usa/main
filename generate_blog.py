@@ -337,9 +337,9 @@ html = f"""<!DOCTYPE html>
 <title>{title} | Pro Link Systems</title>
 <meta name="description" content="{meta}">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://prolinksystems.com/blog/{slug}.html">
+<link rel="canonical" href="https://prolinksystems.com/blog/{slug}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://prolinksystems.com/blog/{slug}.html">
+<meta property="og:url" content="https://prolinksystems.com/blog/{slug}">
 <meta property="og:title" content="{title} | Pro Link Systems">
 <meta property="og:description" content="{meta}">
 <meta property="og:image" content="https://prolinksystems.com/logo.png">
@@ -372,9 +372,9 @@ html = f"""<!DOCTYPE html>
   "dateModified": "{date_iso}",
   "mainEntityOfPage": {{
     "@type": "WebPage",
-    "@id": "https://prolinksystems.com/blog/{slug}.html"
+    "@id": "https://prolinksystems.com/blog/{slug}"
   }},
-  "url": "https://prolinksystems.com/blog/{slug}.html"
+  "url": "https://prolinksystems.com/blog/{slug}"
 }}
 </script>
 <link rel="stylesheet" href="/_shared.css">
@@ -552,8 +552,8 @@ for s, t, d in posts:
     post_cards += f"""
 <article class="blog-card">
   <div class="blog-card-meta">{d}</div>
-  <h2 class="blog-card-title"><a href="/blog/{s}.html">{t}</a></h2>
-  <a href="/blog/{s}.html" class="blog-card-link">Read article
+  <h2 class="blog-card-title"><a href="/blog/{s}">{t}</a></h2>
+  <a href="/blog/{s}" class="blog-card-link">Read article
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
   </a>
 </article>"""
@@ -684,7 +684,7 @@ print(f"Blog index updated with {len(posts)} posts")
 # Idempotent: if the URL is already present (e.g. a re-run), do nothing.
 try:
     sitemap_path = "sitemap.xml"
-    post_loc = f"https://prolinksystems.com/blog/{slug}.html"
+    post_loc = f"https://prolinksystems.com/blog/{slug}"
     if not os.path.exists(sitemap_path):
         print("[sitemap] sitemap.xml not found; skipped.")
     else:
@@ -729,7 +729,7 @@ try:
             home_cards = ""
             for s, t, d in posts[:8]:
                 home_cards += (
-                    f'      <a class="home-blog-card" href="/blog/{s}.html">\n'
+                    f'      <a class="home-blog-card" href="/blog/{s}">\n'
                     f'        <div class="hb-meta">{d}</div>\n'
                     f'        <h3>{t}</h3>\n'
                     f'        <span class="hb-read">Read article {_arrow}</span>\n'
@@ -754,7 +754,7 @@ except Exception as e:
 try:
     import linkedin_post
 
-    post_url = f"https://prolinksystems.com/blog/{slug}.html"
+    post_url = f"https://prolinksystems.com/blog/{slug}"
     if not caption:
         caption = (
             f"{title}\n\n"
