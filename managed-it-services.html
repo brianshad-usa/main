@@ -205,6 +205,7 @@
       font-size: .76rem; font-weight: 600; color: #0f1e2e; letter-spacing: .02em;
     }
     .form-group label .req { color: var(--orange); margin-left: 2px; }
+    .form-group label .opt { color: var(--muted); font-weight: 400; font-size: .72rem; margin-left: 2px; }
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -845,17 +846,10 @@
 
         <div class="form-body" id="formBody">
           <form id="lpForm" novalidate>
-            <div class="form-row">
-              <div class="form-group" id="fg-first">
-                <label for="fi-first">First Name <span class="req">*</span></label>
-                <input type="text" id="fi-first" name="first_name" placeholder="Jane" autocomplete="given-name">
-                <span class="form-error">Required</span>
-              </div>
-              <div class="form-group" id="fg-last">
-                <label for="fi-last">Last Name <span class="req">*</span></label>
-                <input type="text" id="fi-last" name="last_name" placeholder="Smith" autocomplete="family-name">
-                <span class="form-error">Required</span>
-              </div>
+            <div class="form-group" id="fg-name">
+              <label for="fi-name">Full Name <span class="req">*</span></label>
+              <input type="text" id="fi-name" name="name" placeholder="Jane Smith" autocomplete="name">
+              <span class="form-error">Required</span>
             </div>
             <div class="form-row">
               <div class="form-group" id="fg-email">
@@ -870,28 +864,12 @@
               </div>
             </div>
             <div class="form-group" id="fg-company">
-              <label for="fi-company">Company Name <span class="req">*</span></label>
+              <label for="fi-company">Company Name <span class="opt">(optional)</span></label>
               <input type="text" id="fi-company" name="company" placeholder="Acme Corporation" autocomplete="organization">
-              <span class="form-error">Required</span>
-            </div>
-            <div class="form-group">
-              <label for="fi-interest">How can we help?</label>
-              <select id="fi-interest" name="interest">
-                <option value="" disabled selected>Select a service area&hellip;</option>
-                <option>Managed IT / Help Desk</option>
-                <option>Cybersecurity</option>
-                <option>Cloud &amp; Infrastructure</option>
-                <option>Disaster Recovery</option>
-                <option>IT Consulting / vCIO</option>
-                <option>Remote Workplace</option>
-                <option>AI &amp; Automation</option>
-                <option>Not sure &mdash; I need an assessment</option>
-              </select>
             </div>
             <div class="form-group" id="fg-message">
-              <label for="fi-message">Message <span class="req">*</span></label>
-              <textarea id="fi-message" name="message" rows="3" placeholder="Briefly describe your IT challenge or what you&rsquo;re looking for&hellip;"></textarea>
-              <span class="form-error">Please include a message</span>
+              <label for="fi-message">How can we help? <span class="opt">(optional)</span></label>
+              <textarea id="fi-message" name="message" rows="2" placeholder="Briefly describe your IT challenge&hellip;"></textarea>
             </div>
             <button type="submit" class="submit-btn" id="lpBtn">
               <span class="btn-label">Get My Free IT Assessment</span>
@@ -1648,19 +1626,14 @@
       var fail = !val || (checkEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val));
       if (fail) { document.getElementById(fgId).classList.add('has-error'); ok = false; }
     }
-    req('fg-first',   'fi-first');
-    req('fg-last',    'fi-last');
-    req('fg-email',   'fi-email', true);
-    req('fg-phone',   'fi-phone');
-    req('fg-company', 'fi-company');
-    if (document.getElementById('fi-message').value.trim().length < 5) {
-      document.getElementById('fg-message').classList.add('has-error'); ok = false;
-    }
+    req('fg-name',  'fi-name');
+    req('fg-email', 'fi-email', true);
+    req('fg-phone', 'fi-phone');
     return ok;
   }
 
   /* Clear error state on input */
-  var fgMap = { 'fi-first':'fg-first', 'fi-last':'fg-last', 'fi-email':'fg-email', 'fi-phone':'fg-phone', 'fi-company':'fg-company', 'fi-message':'fg-message' };
+  var fgMap = { 'fi-name':'fg-name', 'fi-email':'fg-email', 'fi-phone':'fg-phone' };
   Object.keys(fgMap).forEach(function(id) {
     document.getElementById(id).addEventListener('input', function() {
       document.getElementById(fgMap[id]).classList.remove('has-error');
@@ -1677,12 +1650,13 @@
     /* Fire Google Ads conversion */
     if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
 
-    var firstName = document.getElementById('fi-first').value.trim();
-    var lastName  = document.getElementById('fi-last').value.trim();
+    var fullName  = document.getElementById('fi-name').value.trim();
+    var firstName = fullName.split(/\s+/)[0] || fullName;
+    var lastName  = fullName.split(/\s+/).slice(1).join(' ');
     var email     = document.getElementById('fi-email').value.trim();
     var phone     = document.getElementById('fi-phone').value.trim();
     var company   = document.getElementById('fi-company').value.trim();
-    var interest  = document.getElementById('fi-interest').value || 'Managed IT Services';
+    var interest  = 'Managed IT Services';
     var message   = document.getElementById('fi-message').value.trim();
     var refNum    = 'PLS-' + Date.now().toString(36).toUpperCase().slice(-6);
 
@@ -1708,7 +1682,7 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         access_key: 'd5f91908-e49d-4720-a853-65d7c0a77fde',
-        subject:    'Managed IT Lead (Google Ads): ' + firstName + ' ' + lastName + ' — ' + company,
+        subject:    'Managed IT Lead (Google Ads): ' + fullName + (company ? ' — ' + company : ''),
         from_name:  'Pro Link Systems - Landing Page',
         email:      email,
         replyto:    email,
