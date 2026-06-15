@@ -241,15 +241,15 @@
     .form-group.has-error .form-error { display: block; }
 
     .submit-btn {
-      width: 100%; padding: 15px 24px;
-      background: var(--orange); color: #fff;
-      font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 800;
+      width: 100%; padding: 18px 24px;
+      background: linear-gradient(135deg, #ffb02e 0%, var(--orange) 100%); color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 800;
       letter-spacing: .01em; border: none; border-radius: var(--r);
       cursor: pointer;
       display: flex; align-items: center; justify-content: center; gap: 10px;
       transition: background .2s, transform .15s, box-shadow .2s;
-      box-shadow: 0 4px 14px rgba(245,166,35,.4);
-      margin-top: 4px;
+      box-shadow: 0 6px 22px rgba(245,166,35,.6);
+      margin-top: 6px;
     }
     .submit-btn:hover:not(:disabled) {
       background: var(--orange-h); transform: translateY(-1px);
@@ -269,6 +269,21 @@
     .form-privacy {
       font-size: .7rem; color: var(--muted); text-align: center;
       margin-top: 10px; line-height: 1.5;
+    }
+    .form-urgency {
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(245,166,35,.12); border: 1px solid rgba(245,166,35,.45);
+      color: #9a5300; font-size: .8rem; font-weight: 700;
+      padding: 9px 12px; border-radius: var(--r); margin-bottom: 14px; line-height: 1.35;
+    }
+    .form-urgency svg { flex-shrink: 0; color: var(--orange); }
+    .form-trust {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px;
+      margin-top: 12px;
+    }
+    .form-trust span {
+      font-size: .74rem; font-weight: 600; color: #1f7a44;
+      display: inline-flex; align-items: center; gap: 4px;
     }
     .form-body.hide { display: none; }
 
@@ -733,7 +748,7 @@
       .hero { padding: 20px 16px 36px; }
       .form-row { grid-template-columns: 1fr; }
       .form-group input, .form-group select, .form-group textarea { padding: 14px 16px; font-size: 16px; }
-      .submit-btn { padding: 18px 24px; font-size: 1.05rem; }
+      .submit-btn { padding: 19px 24px; font-size: 1.18rem; }
       .services-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr 1fr; }
       .stat-row { flex-direction: column; }
@@ -820,8 +835,12 @@
       <div class="form-card">
 
         <div class="form-card-head">
+          <div class="form-urgency">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-6z"/></svg>
+            Free 15-minute discovery call &mdash; we respond the same day
+          </div>
           <h2>Get a Free IT Assessment</h2>
-          <p>Leave your details and a Pro Link engineer will call you within 1 business day.</p>
+          <p>Leave your details and a Pro Link engineer will reach out the same business day.</p>
         </div>
 
         <div class="form-body" id="formBody">
@@ -875,12 +894,17 @@
               <span class="form-error">Please include a message</span>
             </div>
             <button type="submit" class="submit-btn" id="lpBtn">
-              <span class="btn-label">Have Us Call You</span>
+              <span class="btn-label">Get My Free IT Assessment</span>
               <svg class="btn-arrow" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
             </button>
           </form>
-          <p class="form-privacy">&#128274; We never share your info &middot; No spam, ever &middot; Response within 1 business day</p>
+          <div class="form-trust">
+            <span>&#10003; No obligation</span>
+            <span>&#10003; No contracts</span>
+            <span>&#10003; Local LA engineers since 1999</span>
+          </div>
+          <p class="form-privacy">&#128274; We never share your info &middot; No spam, ever</p>
         </div>
 
         <div class="form-success" id="formSuccess">
