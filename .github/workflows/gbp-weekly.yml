@@ -1,0 +1,50 @@
+name: Weekly GBP Post
+
+on:
+  schedule:
+    # Every Tuesday at 17:00 UTC = 10 AM Los Angeles (PDT) / 9 AM (PST)
+    # Tuesday morning is the highest-engagement window for GBP posts.
+    - cron: '0 17 * * 2'
+  workflow_dispatch:
+    inputs:
+      theme_index:
+        description: 'Theme index 0-7 (leave empty for auto-rotation by week)'
+        required: false
+        default: ''
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  post-gbp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate and publish GBP post
+        env:
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          GBP_CLIENT_ID:      ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:  ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN:  ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_ACCESS_TOKEN:   ${{ secrets.GBP_ACCESS_TOKEN }}
+          GBP_ACCOUNT_ID:     ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID:    ${{ secrets.GBP_LOCATION_ID }}
+          THEME_INDEX:        ${{ github.event.inputs.theme_index }}
+        run: |
+          INDEX_ARG="${THEME_INDEX:-}"
+          if [ -n "$INDEX_ARG" ]; then
+            python generate_gbp_post.py "$INDEX_ARG"
+          else
+            python generate_gbp_post.py
+          fi
