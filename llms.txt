@@ -79,6 +79,7 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - [Why Choose Pro Link Systems](https://prolinksystems.com/why-pro-link-systems): How Pro Link compares to national MSPs and break-fix IT - flat-rate pricing, 24/7 local engineers, no long-term contracts, serving LA since 1999. Includes a side-by-side comparison table and client testimonials.
 - [How to Choose a Managed IT Provider in Los Angeles](https://prolinksystems.com/how-to-choose-managed-it-provider-los-angeles): Buyer's guide - what to look for, red flags to avoid, and the questions to ask before hiring a managed IT company in LA.
 - [Managed IT Services Pricing in Los Angeles (2026)](https://prolinksystems.com/managed-it-services-pricing-los-angeles): What managed IT costs in Los Angeles - pricing models, typical $75-200 per user per month, and what should be included at each service tier.
+- [Los Angeles Business Cybersecurity Report 2026](https://prolinksystems.com/la-business-cybersecurity-report-2026): The state of cybersecurity for LA businesses in 2026 - top threats (ransomware, BEC, phishing), industry-specific risk by sector, compliance frameworks (HIPAA, PCI DSS, CMMC, SOC 2, CCPA), an industry-benchmark data table, and an 8-point security checklist. Benchmark figures are sourced and attributed to IBM, the Verizon DBIR, and the FBI IC3.
 
 ## Company
 
