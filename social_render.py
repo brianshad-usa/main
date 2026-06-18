@@ -20,6 +20,7 @@ import datetime
 
 import anthropic
 import social_graphic
+from PIL import Image
 from generate_gbp_post import THEMES
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -86,6 +87,11 @@ def main():
     image_path = os.path.join(SOCIAL_DIR, image_file)
     social_graphic.make_card(headline, theme["label"], cta_label, image_path)
 
+    # Instagram's publishing API requires JPEG, so emit a JPEG companion.
+    jpg_file = image_file[:-4] + ".jpg"
+    Image.open(image_path).convert("RGB").save(
+        os.path.join(SOCIAL_DIR, jpg_file), "JPEG", quality=90)
+
     manifest = {
         "post": post,
         "headline": headline,
@@ -93,6 +99,7 @@ def main():
         "cta_type": theme["cta_type"],
         "cta_url": theme.get("cta_url"),
         "image_file": image_file,
+        "image_file_jpg": jpg_file,
         "theme": theme["key"],
     }
     with open(MANIFEST, "w", encoding="utf-8") as f:

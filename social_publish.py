@@ -52,8 +52,9 @@ def main():
     # LinkedIn company page (binary upload)
     linkedin_post.maybe_post_image(post, local_image, alt_text=headline)
 
-    # Instagram business account (public image URL)
-    instagram_post.maybe_post(post, image_url)
+    # Instagram business account (public image URL; IG's API requires JPEG)
+    ig_image_url = RAW_BASE + m.get("image_file_jpg", m["image_file"])
+    instagram_post.maybe_post(post, ig_image_url)
 
 
 if __name__ == "__main__":
