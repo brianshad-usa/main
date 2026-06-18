@@ -1,0 +1,69 @@
+name: Social Posts (3x/week)
+
+on:
+  schedule:
+    # Mon, Wed, Fri at 17:00 UTC = 10 AM Los Angeles (PDT) / 9 AM (PST)
+    - cron: '0 17 * * 1,3,5'
+  workflow_dispatch:
+    inputs:
+      theme_index:
+        description: 'Theme index 0-7 (leave blank to auto-rotate by day)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  syndicate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic pillow
+
+      - name: Render post text + branded card
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python social_render.py "${{ github.event.inputs.theme_index }}"
+
+      - name: Commit + push the card image
+        run: |
+          git config user.name "ProLink Social Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add social/*.png
+          if git diff --cached --quiet; then
+            echo "No new image to commit."
+          else
+            git commit -m "Social card $(date -u +%F)"
+            git pull --rebase --autostash origin main || true
+            git push
+            echo "Pushed; waiting for raw URL to propagate..."
+            sleep 15
+          fi
+
+      - name: Publish to channels (GBP, LinkedIn, Instagram)
+        env:
+          GBP_CLIENT_ID:          ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET:      ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN:      ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_ACCOUNT_ID:         ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID:        ${{ secrets.GBP_LOCATION_ID }}
+          LINKEDIN_CLIENT_ID:     ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_ACCESS_TOKEN:  ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID:        ${{ secrets.LINKEDIN_ORG_ID }}
+          IG_USER_ID:             ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN:        ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python social_publish.py
