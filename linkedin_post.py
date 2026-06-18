@@ -204,6 +204,106 @@ def maybe_post(title, url, summary, caption):
         return None
 
 
+# ---------------------------------------------------------------------------
+# Image posts (used by the social syndication pipeline — social_publish.py)
+# ---------------------------------------------------------------------------
+IMAGES_URL = "https://api.linkedin.com/rest/images"
+
+
+def _upload_image(token, org_urn, image_path, api_version):
+    """Register + upload an image to LinkedIn; return its 'urn:li:image:...' id."""
+    init_req = urllib.request.Request(
+        IMAGES_URL + "?action=initializeUpload",
+        data=json.dumps({"initializeUploadRequest": {"owner": org_urn}}).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": api_version,
+        },
+    )
+    with urllib.request.urlopen(init_req, timeout=30) as resp:
+        value = json.loads(resp.read().decode("utf-8"))["value"]
+    upload_url = value["uploadUrl"]
+    image_urn = value["image"]
+
+    with open(image_path, "rb") as fh:
+        img_bytes = fh.read()
+    put_req = urllib.request.Request(
+        upload_url, data=img_bytes, method="PUT",
+        headers={"Authorization": f"Bearer {token}", "Content-Type": "image/png"},
+    )
+    with urllib.request.urlopen(put_req, timeout=60) as resp:
+        resp.read()
+    return image_urn
+
+
+def post_image(commentary, image_path, alt_text="Pro Link Systems"):
+    """Publish an image post to the company page. Returns the post URN. Raises on failure."""
+    org_id = os.environ.get("LINKEDIN_ORG_ID", "").strip() or "3574099"
+    org_urn = org_id if org_id.startswith("urn:") else f"urn:li:organization:{org_id}"
+
+    token = _resolve_access_token()
+    if not token:
+        raise RuntimeError("No LinkedIn credentials found.")
+
+    api_version = os.environ.get("LINKEDIN_API_VERSION", DEFAULT_API_VERSION).strip()
+    image_urn = _upload_image(token, org_urn, image_path, api_version)
+
+    body = {
+        "author": org_urn,
+        "commentary": _escape_commentary((commentary or "").strip())[:2900],
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": [],
+        },
+        "content": {"media": {"id": image_urn, "altText": (alt_text or "")[:300]}},
+        "lifecycleState": "PUBLISHED",
+        "isReshareDisabledByAuthor": False,
+    }
+    req = urllib.request.Request(
+        POSTS_URL,
+        data=json.dumps(body).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": api_version,
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            post_id = resp.headers.get("x-restli-id") or resp.headers.get("x-linkedin-id")
+            _log(f"Published image post to LinkedIn. Post id: {post_id}")
+            return post_id
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        raise RuntimeError(f"LinkedIn API {e.code}: {detail}") from None
+
+
+def maybe_post_image(commentary, image_path, alt_text="Pro Link Systems"):
+    """Safe wrapper for the social pipeline. Never raises; returns None on any problem."""
+    has_creds = (
+        os.environ.get("LINKEDIN_REFRESH_TOKEN", "").strip()
+        or os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip()
+    )
+    if not has_creds:
+        _log("Skipping LinkedIn image post (no LINKEDIN_REFRESH_TOKEN/ACCESS_TOKEN configured).")
+        return None
+    if not os.path.exists(image_path):
+        _log(f"Skipping LinkedIn image post (image not found: {image_path}).")
+        return None
+    try:
+        return post_image(commentary, image_path, alt_text)
+    except Exception as e:
+        _log(f"WARNING: LinkedIn image post failed. Reason: {e}")
+        return None
+
+
 if __name__ == "__main__":
     # Manual smoke test:
     #   python linkedin_post.py "Test Title" "https://prolinksystems.com/blog/x.html" "Summary" "Caption #ManagedIT"
