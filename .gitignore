@@ -1,0 +1,7 @@
+# Social pipeline transient files (not committed)
+pending.json
+_card_preview.png
+
+# Python
+__pycache__/
+*.pyc
