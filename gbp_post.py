@@ -83,7 +83,7 @@ def _resolve_access_token():
     )
 
 
-def post_update(summary, cta_type="LEARN_MORE", cta_url=None):
+def post_update(summary, cta_type="LEARN_MORE", cta_url=None, image_url=None):
     """
     Publish a STANDARD (What's New) post to the GBP location.
     Returns the post resource name on success. Raises on failure.
@@ -91,6 +91,7 @@ def post_update(summary, cta_type="LEARN_MORE", cta_url=None):
     summary   : post text, max 1500 chars (we trim automatically)
     cta_type  : one of BOOK_APPOINTMENT, CALL, LEARN_MORE, ORDER, SHOP, SIGN_UP
     cta_url   : required when cta_type is not CALL
+    image_url : optional PUBLIC url of a photo to attach to the post
     """
     account_id  = os.environ.get("GBP_ACCOUNT_ID",  "").strip()
     location_id = os.environ.get("GBP_LOCATION_ID", "").strip()
@@ -110,6 +111,9 @@ def post_update(summary, cta_type="LEARN_MORE", cta_url=None):
         body["callToAction"] = {"actionType": cta_type}
         if cta_url:
             body["callToAction"]["url"] = cta_url
+
+    if image_url:
+        body["media"] = [{"mediaFormat": "PHOTO", "sourceUrl": image_url}]
 
     endpoint = (
         f"{GBP_API_BASE}/accounts/{account_id}"
@@ -135,7 +139,7 @@ def post_update(summary, cta_type="LEARN_MORE", cta_url=None):
         raise RuntimeError(f"GBP API {e.code}: {detail}") from None
 
 
-def maybe_post(summary, cta_type="LEARN_MORE", cta_url=None):
+def maybe_post(summary, cta_type="LEARN_MORE", cta_url=None, image_url=None):
     """
     Safe wrapper for the automation pipeline. Never raises.
     Returns the post name on success or None on any failure.
@@ -145,7 +149,7 @@ def maybe_post(summary, cta_type="LEARN_MORE", cta_url=None):
             _log("Skipping GBP post (no GBP_REFRESH_TOKEN/ACCESS_TOKEN configured).")
             return None
     try:
-        return post_update(summary, cta_type, cta_url)
+        return post_update(summary, cta_type, cta_url, image_url)
     except Exception as e:
         _log(f"WARNING: GBP post failed, pipeline unaffected. Reason: {e}")
         return None
