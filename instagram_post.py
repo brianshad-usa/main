@@ -10,17 +10,21 @@ skips cleanly if credentials aren't configured yet (so it stays dormant until yo
 finish the Meta setup).
 
 Requirements (Meta side, one-time):
-  * The IG account must be a BUSINESS (or Creator) account linked to a Facebook Page.
-  * A Meta app with the instagram_content_publish + pages_show_list permissions
-    (this requires Meta app review / business verification for production use).
+  * The IG account must be a Professional (Business or Creator) account.
+  * Default path = "Instagram API setup with Instagram login": generate the token
+    by logging into the Instagram account directly in the app dashboard - no Graph
+    API Explorer and no Facebook Page / developer-role wrangling.
 
 Required GitHub secrets (set when ready):
-  IG_USER_ID       - the Instagram Business account id (numeric, from the Graph API)
-  IG_ACCESS_TOKEN  - long-lived access token with instagram_content_publish
+  IG_USER_ID       - the Instagram account id (shown by the dashboard token
+                     generator, or from GET graph.instagram.com/me?fields=user_id)
+  IG_ACCESS_TOKEN  - the Instagram access token from the dashboard generator
+  IG_GRAPH_BASE    - optional; defaults to https://graph.instagram.com/v21.0.
+                     Set to https://graph.facebook.com/v21.0 only if you instead
+                     use the older Facebook-login / Page-linked flow.
 
-Note: Instagram fetches the image itself, so image_url MUST be publicly reachable.
-Long-lived tokens last ~60 days; refresh before expiry, or use a never-expiring
-Page token derived from a long-lived user token.
+Note: Instagram fetches the image itself, so image_url MUST be publicly reachable
+and a JPEG. Tokens last ~60 days; refresh before expiry.
 """
 
 import os
@@ -30,7 +34,7 @@ import urllib.parse
 import urllib.request
 import urllib.error
 
-GRAPH = "https://graph.facebook.com/v21.0"
+GRAPH = os.environ.get("IG_GRAPH_BASE", "https://graph.instagram.com/v21.0")
 
 
 def _log(msg):
