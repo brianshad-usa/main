@@ -9,6 +9,18 @@
     gtag('js', new Date());
     gtag('config', 'AW-1068497497');
   </script>
+  <!-- Google Ads call-conversion tracking (click-to-call) -->
+  <!-- TODO: replace CALL_LABEL_PLACEHOLDER with the real call conversion label from Google Ads -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+      if (!link) return;
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'AW-1068497497/CALL_LABEL_PLACEHOLDER' });
+      }
+    });
+  </script>
+
 
   <!-- Event snippet for Submit lead form conversion -->
   <script>
@@ -1675,9 +1687,6 @@
     btn.classList.add('loading');
     btn.disabled = true;
 
-    /* Fire Google Ads conversion */
-    if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
-
     var fullName  = document.getElementById('fi-name').value.trim();
     var firstName = fullName.split(/\s+/)[0] || fullName;
     var lastName  = fullName.split(/\s+/).slice(1).join(' ');
@@ -1723,6 +1732,9 @@
     .then(function(res) { return res.json(); })
     .then(function(json) {
       if (json.success) {
+        /* Fire Google Ads conversion only on confirmed success */
+        if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
+
         document.getElementById('successName').textContent = firstName;
         document.getElementById('successRef').textContent = refNum;
         body.classList.add('hide');

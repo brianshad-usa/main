@@ -1,6 +1,27 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-1068497497');
+  </script>
+  <!-- Google Ads call-conversion tracking (click-to-call) -->
+  <!-- TODO: replace CALL_LABEL_PLACEHOLDER with the real call conversion label from Google Ads -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+      if (!link) return;
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'AW-1068497497/CALL_LABEL_PLACEHOLDER' });
+      }
+    });
+  </script>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -886,6 +907,15 @@
     .then(function(res) { return res.json(); })
     .then(function(json) {
       if (json.success) {
+        /* Fire Google Ads "Submit lead form" conversion on confirmed success */
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-1068497497/yYS5CNKQkbccENn0v_0D',
+            'value': 50.0,
+            'currency': 'USD'
+          });
+        }
+
         var nameEl = document.getElementById('success-name');
         if (nameEl && firstName.trim()) nameEl.textContent = firstName.trim().split(' ')[0];
         var refEl = document.getElementById('success-ref');
