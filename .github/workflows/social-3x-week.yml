@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -41,15 +43,18 @@ jobs:
         run: |
           git config user.name "ProLink Social Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add social/*.png social/*.jpg
+          git add social/
           if git diff --cached --quiet; then
             echo "No new image to commit."
           else
             git commit -m "Social card $(date -u +%F)"
-            git pull --rebase --autostash origin main || true
-            git push
-            echo "Pushed; waiting for raw URL to propagate..."
-            sleep 15
+            for attempt in 1 2 3; do
+              if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+                echo "Pushed on attempt $attempt."; break
+              fi
+              echo "Push attempt $attempt failed; retrying..."; sleep 5
+            done
+            echo "Waiting for raw URL to propagate..."; sleep 15
           fi
 
       - name: Publish to channels (GBP, LinkedIn, Instagram)
