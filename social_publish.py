@@ -22,6 +22,7 @@ import json
 import gbp_post
 import linkedin_post
 import instagram_post
+import facebook_post
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MANIFEST = os.path.join(HERE, "pending.json")
@@ -67,6 +68,11 @@ def main():
             "Instagram",
             _has("IG_USER_ID", "IG_ACCESS_TOKEN"),
             lambda: instagram_post.maybe_post(post, ig_image_url),
+        ),
+        (
+            "Facebook",
+            _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
+            lambda: facebook_post.maybe_post(post, image_url),
         ),
     ]
 
