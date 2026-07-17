@@ -2,6 +2,8 @@
 import os
 import re
 import glob
+import json
+import sys
 import calendar
 from datetime import datetime
 
@@ -136,6 +138,18 @@ for _pos in range(_grand_total):
 #   * Scheduled runs auto-rotate. The job runs every other day, so advancing by
 #     (day_of_year // 2) moves exactly one topic forward each run and cycles
 #     through the whole list before any topic repeats.
+# Persistent topic tracking: never publish the same topic twice. used_topics.json
+# is committed to the repo and lists every topic already published. Each run loads
+# it below, skips any topic already used, and -- after publishing -- appends the
+# new one. The workflow's "git add" includes used_topics.json so it persists.
+USED_TOPICS_FILE = "used_topics.json"
+def _load_used_topics():
+    if os.path.exists(USED_TOPICS_FILE):
+        with open(USED_TOPICS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+used_topics = _load_used_topics()
+
 topic_override = os.environ.get("TOPIC_INDEX", "")
 if topic_override.isdigit():
     topic_index = int(topic_override) % len(topics)
@@ -153,7 +167,24 @@ else:
     _run_number = _posts_before_month + _posts_this_month  # 1-based
     topic_index = (_run_number - 1) % len(topics)
 
-topic = topics[topic_index]
+# Skip any topic we have already published. Starting at the rotation index, pick
+# the first unused topic. If every topic has been used, fail loudly rather than
+# wrap around and re-publish an old one (which is what created the duplicates).
+if len(used_topics) >= len(topics):
+    print("ERROR: topic queue exhausted -- all %d topics have already been "
+          "published. Add new topics before the next run." % len(topics))
+    sys.exit(1)
+topic = None
+for _off in range(len(topics)):
+    _cand = topics[(topic_index + _off) % len(topics)]
+    if _cand not in used_topics:
+        topic = _cand
+        topic_index = (topic_index + _off) % len(topics)
+        break
+if topic is None:
+    print("ERROR: topic queue exhausted -- no unused topics remain. "
+          "Add new topics before the next run.")
+    sys.exit(1)
 date_str = datetime.now().strftime("%B %d, %Y")
 date_iso = datetime.now().strftime("%Y-%m-%d")
 # Full date + topic index in the slug keeps every run's URL unique.
@@ -528,6 +559,13 @@ with open(filepath, 'w') as f:
 print(f"Generated: {filepath}")
 print(f"Title: {title}")
 
+# Record this topic so it is never selected again. The workflow commits
+# used_topics.json, so the record persists across runs.
+used_topics.append(topic)
+with open(USED_TOPICS_FILE, "w", encoding="utf-8") as f:
+    json.dump(used_topics, f, indent=2, ensure_ascii=False)
+print(f"[topics] Recorded topic; {len(used_topics)}/{len(topics)} topics now used")
+
 # Update blog index
 def _post_date_key(path):
     """Sort key from the slug so the newest posts come first. Handles the new
@@ -551,6 +589,8 @@ for fp in sorted(glob.glob("blog/*.html"), key=_post_date_key, reverse=True):
     s = fname.replace(".html", "")
     with open(fp, 'r') as f:
         c = f.read()
+    if re.search(r'<meta name="robots" content="noindex', c):
+        continue  # keep noindexed / de-duplicated posts out of the listing
     t_match = re.search(r'<h1[^>]*>(.*?)</h1>', c, re.DOTALL)
     d_match = re.search(r'class="post-meta"[^>]*>.*?<\/strong>\s*&nbsp;&middot;&nbsp;\s*([^<]+)', c, re.DOTALL)
     t = t_match.group(1).strip() if t_match else s
