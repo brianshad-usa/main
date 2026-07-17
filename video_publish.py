@@ -188,32 +188,39 @@ def publish_one(video_file, posts):
             failures.append(name)
 
     # YouTube + LinkedIn upload the local file directly.
-    attempt("YouTube", lambda: (
-        (lambda r: {"status": "posted", "id": r["id"], "url": r["url"], "privacy": r.get("privacy")})(_r)
-        if (_r := youtube_post.maybe_post(path, title, youtube_description(caption, tags), tags)) else None
-    ))
-    attempt("LinkedIn", lambda: (
-        (lambda pid: {"status": "posted", "id": pid, "url": linkedin_url(pid)})(_p)
-        if (_p := linkedin_post.maybe_post_video(caption, path, title)) else None
-    ))
+    def do_youtube():
+        r = youtube_post.maybe_post(path, title, youtube_description(caption, tags), tags)
+        if not r:
+            return None
+        return {"status": "posted", "id": r["id"], "url": r["url"], "privacy": r.get("privacy")}
+
+    def do_linkedin():
+        pid = linkedin_post.maybe_post_video(caption, path, title)
+        if not pid:
+            return None
+        return {"status": "posted", "id": pid, "url": linkedin_url(pid)}
 
     # Instagram + Facebook fetch the public URL (only if it deployed).
-    def ig():
+    def do_instagram():
         if not url_ready:
             _log("Instagram: public URL not ready; skipping this run.")
             return None
         mid = instagram_post.maybe_post_reel(caption, public_url)
         return {"status": "posted", "id": mid} if mid else None
 
-    def fb():
+    def do_facebook():
         if not url_ready:
             _log("Facebook: public URL not ready; skipping this run.")
             return None
         vid = facebook_post.maybe_post_video(caption, public_url)
-        return {"status": "posted", "id": vid, "url": f"https://www.facebook.com/{vid}" if vid else None} if vid else None
+        if not vid:
+            return None
+        return {"status": "posted", "id": vid, "url": f"https://www.facebook.com/{vid}"}
 
-    attempt("Instagram", ig)
-    attempt("Facebook", fb)
+    attempt("YouTube", do_youtube)
+    attempt("LinkedIn", do_linkedin)
+    attempt("Instagram", do_instagram)
+    attempt("Facebook", do_facebook)
 
     record["updated"] = _now()
     print(f"\n----- {video_file}  ({title}) -----")

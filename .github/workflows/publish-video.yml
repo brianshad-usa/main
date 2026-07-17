@@ -1,0 +1,80 @@
+name: Publish Video
+
+on:
+  # Auto-publish when a new video is pushed into videos/.
+  push:
+    paths:
+      - 'videos/*.mp4'
+      - 'videos/*.mov'
+  # Manual "Publish / Retry" button (from the dashboard or the Actions tab).
+  workflow_dispatch:
+    inputs:
+      video:
+        description: 'Video filename in videos/ (blank = all pending)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+# Never let two runs post the same video at once (a push + a manual retry).
+concurrency:
+  group: publish-video
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Publish video to channels
+        env:
+          # YouTube
+          YT_CLIENT_ID:           ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET:       ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN:       ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_ACCESS_TOKEN:        ${{ secrets.YT_ACCESS_TOKEN }}
+          YT_PRIVACY:             ${{ secrets.YT_PRIVACY }}
+          # LinkedIn
+          LINKEDIN_CLIENT_ID:     ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_ACCESS_TOKEN:  ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID:        ${{ secrets.LINKEDIN_ORG_ID }}
+          # Instagram
+          IG_USER_ID:             ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN:        ${{ secrets.IG_ACCESS_TOKEN }}
+          # Facebook
+          FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: python video_publish.py "${{ github.event.inputs.video }}"
+
+      - name: Commit video_posts.json
+        if: always()
+        run: |
+          git config user.name "ProLink Video Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add video_posts.json
+          if git diff --cached --quiet; then
+            echo "No status change to commit."
+          else
+            git commit -m "Video publish status $(date -u +%F)"
+            for attempt in 1 2 3; do
+              if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+                echo "Pushed on attempt $attempt."; break
+              fi
+              echo "Push attempt $attempt failed; retrying..."; sleep 5
+            done
+          fi
