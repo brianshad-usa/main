@@ -86,9 +86,77 @@ def maybe_post(caption, image_url):
         return None
 
 
+# ---------------------------------------------------------------------------
+# Reels (video) — used by the video syndication pipeline (video_publish.py)
+# ---------------------------------------------------------------------------
+def _get(url):
+    with urllib.request.urlopen(url, timeout=60) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def post_reel(caption, video_url):
+    """Publish a Reel from a public video URL. Instagram fetches + transcodes it
+    asynchronously, so we poll the container until it's FINISHED before publishing."""
+    ig_id = os.environ["IG_USER_ID"].strip()
+    token = os.environ["IG_ACCESS_TOKEN"].strip()
+
+    container = _post(f"{GRAPH}/{ig_id}/media", {
+        "media_type": "REELS",
+        "video_url": video_url,
+        "caption": caption[:2200],
+        "share_to_feed": "true",
+        "access_token": token,
+    })
+    creation_id = container["id"]
+
+    # Poll processing status: up to ~6 minutes (Reels transcode can be slow).
+    finished = False
+    for _ in range(45):
+        time.sleep(8)
+        status = _get(
+            f"{GRAPH}/{creation_id}?fields=status_code,status&"
+            + urllib.parse.urlencode({"access_token": token})
+        )
+        code = status.get("status_code")
+        if code == "FINISHED":
+            finished = True
+            break
+        if code == "ERROR":
+            raise RuntimeError(f"Instagram failed to process the reel: {status.get('status', status)}")
+        _log(f"reel processing... ({code})")
+    if not finished:
+        raise RuntimeError("Instagram reel processing timed out (still not FINISHED).")
+
+    published = _post(f"{GRAPH}/{ig_id}/media_publish", {
+        "creation_id": creation_id,
+        "access_token": token,
+    })
+    _log(f"Published reel to Instagram: {published.get('id')}")
+    return published.get("id")
+
+
+def maybe_post_reel(caption, video_url):
+    if not (os.environ.get("IG_USER_ID", "").strip()
+            and os.environ.get("IG_ACCESS_TOKEN", "").strip()):
+        _log("Skipping Instagram reel (no IG_USER_ID/IG_ACCESS_TOKEN configured).")
+        return None
+    try:
+        return post_reel(caption, video_url)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        _log(f"WARNING: Instagram reel failed: {e.code} {detail}")
+        return None
+    except Exception as e:
+        _log(f"WARNING: Instagram reel failed: {e}")
+        return None
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
-        print("usage: python instagram_post.py CAPTION IMAGE_URL")
+        print("usage: python instagram_post.py CAPTION IMAGE_OR_VIDEO_URL [--reel]")
         sys.exit(1)
-    print("Result:", maybe_post(sys.argv[1], sys.argv[2]))
+    if "--reel" in sys.argv:
+        print("Result:", maybe_post_reel(sys.argv[1], sys.argv[2]))
+    else:
+        print("Result:", maybe_post(sys.argv[1], sys.argv[2]))
