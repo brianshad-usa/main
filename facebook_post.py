@@ -69,9 +69,45 @@ def maybe_post(caption, image_url):
         return None
 
 
+# ---------------------------------------------------------------------------
+# Video — used by the video syndication pipeline (video_publish.py)
+# ---------------------------------------------------------------------------
+def post_video(caption, video_url):
+    """Publish a video to the Page from a public URL (Facebook fetches it)."""
+    page_id = os.environ["FB_PAGE_ID"].strip()
+    token = os.environ["FB_PAGE_ACCESS_TOKEN"].strip()
+    res = _post(f"{GRAPH}/{page_id}/videos", {
+        "file_url": video_url,
+        "description": caption[:5000],
+        "access_token": token,
+    })
+    vid = res.get("id")
+    _log(f"Published video to Facebook: {vid}")
+    return vid
+
+
+def maybe_post_video(caption, video_url):
+    if not (os.environ.get("FB_PAGE_ID", "").strip()
+            and os.environ.get("FB_PAGE_ACCESS_TOKEN", "").strip()):
+        _log("Skipping Facebook video (no FB_PAGE_ID/FB_PAGE_ACCESS_TOKEN configured).")
+        return None
+    try:
+        return post_video(caption, video_url)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        _log(f"WARNING: Facebook video failed: {e.code} {detail}")
+        return None
+    except Exception as e:
+        _log(f"WARNING: Facebook video failed: {e}")
+        return None
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
-        print("usage: python facebook_post.py CAPTION IMAGE_URL")
+        print("usage: python facebook_post.py CAPTION IMAGE_OR_VIDEO_URL [--video]")
         sys.exit(1)
-    print("Result:", maybe_post(sys.argv[1], sys.argv[2]))
+    if "--video" in sys.argv:
+        print("Result:", maybe_post_video(sys.argv[1], sys.argv[2]))
+    else:
+        print("Result:", maybe_post(sys.argv[1], sys.argv[2]))
