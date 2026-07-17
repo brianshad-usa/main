@@ -304,6 +304,144 @@ def maybe_post_image(commentary, image_path, alt_text="Pro Link Systems"):
         return None
 
 
+# ---------------------------------------------------------------------------
+# Video posts (used by the video syndication pipeline — video_publish.py)
+# ---------------------------------------------------------------------------
+VIDEOS_URL = "https://api.linkedin.com/rest/videos"
+
+
+def _upload_video(token, org_urn, video_path, api_version):
+    """Register + upload a video to LinkedIn; return its 'urn:li:video:...' id.
+    Handles the multi-part uploadInstructions LinkedIn returns for larger files."""
+    size = os.path.getsize(video_path)
+    init_body = {
+        "initializeUploadRequest": {
+            "owner": org_urn,
+            "fileSizeBytes": size,
+            "uploadCaptions": False,
+            "uploadThumbnail": False,
+        }
+    }
+    init_req = urllib.request.Request(
+        VIDEOS_URL + "?action=initializeUpload",
+        data=json.dumps(init_body).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": api_version,
+        },
+    )
+    with urllib.request.urlopen(init_req, timeout=60) as resp:
+        value = json.loads(resp.read().decode("utf-8"))["value"]
+    video_urn = value["video"]
+    instructions = value.get("uploadInstructions", [])
+    upload_token = value.get("uploadToken", "")
+
+    with open(video_path, "rb") as fh:
+        data = fh.read()
+
+    etags = []
+    for ins in instructions:
+        first, last = ins["firstByte"], ins["lastByte"]
+        chunk = data[first:last + 1]
+        put_req = urllib.request.Request(
+            ins["uploadUrl"], data=chunk, method="PUT",
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        with urllib.request.urlopen(put_req, timeout=600) as resp:
+            etag = resp.headers.get("ETag") or resp.headers.get("etag")
+        etags.append(etag)
+
+    fin_body = {
+        "finalizeUploadRequest": {
+            "video": video_urn,
+            "uploadToken": upload_token,
+            "uploadedPartIds": etags,
+        }
+    }
+    fin_req = urllib.request.Request(
+        VIDEOS_URL + "?action=finalizeUpload",
+        data=json.dumps(fin_body).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": api_version,
+        },
+    )
+    with urllib.request.urlopen(fin_req, timeout=60) as resp:
+        resp.read()
+    return video_urn
+
+
+def post_video(commentary, video_path, title="Pro Link Systems"):
+    """Publish a native video post to the company page. Returns the post URN. Raises on failure."""
+    org_id = os.environ.get("LINKEDIN_ORG_ID", "").strip() or "3574099"
+    org_urn = org_id if org_id.startswith("urn:") else f"urn:li:organization:{org_id}"
+
+    token = _resolve_access_token()
+    if not token:
+        raise RuntimeError("No LinkedIn credentials found.")
+
+    api_version = os.environ.get("LINKEDIN_API_VERSION", DEFAULT_API_VERSION).strip()
+    video_urn = _upload_video(token, org_urn, video_path, api_version)
+
+    body = {
+        "author": org_urn,
+        "commentary": _escape_commentary((commentary or "").strip())[:2900],
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": [],
+        },
+        "content": {"media": {"id": video_urn, "title": (title or "Pro Link Systems")[:400]}},
+        "lifecycleState": "PUBLISHED",
+        "isReshareDisabledByAuthor": False,
+    }
+    req = urllib.request.Request(
+        POSTS_URL,
+        data=json.dumps(body).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": api_version,
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            post_id = resp.headers.get("x-restli-id") or resp.headers.get("x-linkedin-id")
+            _log(f"Published video post to LinkedIn. Post id: {post_id}")
+            return post_id
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        raise RuntimeError(f"LinkedIn API {e.code}: {detail}") from None
+
+
+def maybe_post_video(commentary, video_path, title="Pro Link Systems"):
+    """Safe wrapper for the video pipeline. Never raises; returns None on any problem."""
+    has_creds = (
+        os.environ.get("LINKEDIN_REFRESH_TOKEN", "").strip()
+        or os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip()
+    )
+    if not has_creds:
+        _log("Skipping LinkedIn video post (no LINKEDIN_REFRESH_TOKEN/ACCESS_TOKEN configured).")
+        return None
+    if not os.path.exists(video_path):
+        _log(f"Skipping LinkedIn video post (video not found: {video_path}).")
+        return None
+    try:
+        return post_video(commentary, video_path, title)
+    except Exception as e:
+        _log(f"WARNING: LinkedIn video post failed. Reason: {e}")
+        return None
+
+
 if __name__ == "__main__":
     # Manual smoke test:
     #   python linkedin_post.py "Test Title" "https://prolinksystems.com/blog/x.html" "Summary" "Caption #ManagedIT"
