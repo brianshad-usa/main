@@ -1,3 +1,4 @@
+# TEMP: auto-commit watcher restart verification 2026-08-04 (reverted immediately)
 import os, json, urllib.request, sys
 sys.path.insert(0, '.')
 import gbp_post
