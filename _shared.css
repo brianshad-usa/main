@@ -11,6 +11,11 @@
   --navy-light: #1762a8;
   --gold:       #f5a623;
   --gold-dark:  #d4881a;
+  /* Accessible gold for small text on light backgrounds.
+     #f5a623 is only 1.92:1 on --off-white; this is 4.96:1 (WCAG AA). */
+  --gold-text:  #9a5f0b;
+  /* For gradients that fade to #0d4d85, where --gold is only 4.29:1. */
+  --gold-hero:  #f9b74a;
   --green:      #22c55e;
   --white:      #ffffff;
   --off-white:  #f7f9fc;
@@ -83,7 +88,9 @@ a { color: inherit; text-decoration: none; }
 }
 .footer-brand img { height: 38px; width: auto; margin-bottom: 16px; }
 .footer-brand p { font-size: .875rem; line-height: 1.7; max-width: 280px; }
-.footer-col h4 { color: #fff; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
+/* Heading level varies per page so the document outline never skips a level;
+   the styling is deliberately tag-agnostic. */
+.footer-col h2, .footer-col h3, .footer-col h4 { color: #fff; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
 .footer-col a { display: block; font-size: .875rem; color: rgba(255,255,255,.65); margin-bottom: 10px; transition: color .2s; }
 .footer-col a:hover { color: var(--gold); }
 .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: .875rem; }
@@ -103,7 +110,7 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid rgba(255,255,255,.08);
   text-align: center;
 }
-.footer-areas h4 {
+.footer-areas h2, .footer-areas h3, .footer-areas h4 {
   color: #fff; font-size: .75rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .08em; margin: 0 0 14px;
 }
@@ -122,9 +129,20 @@ a { color: inherit; text-decoration: none; }
 .container { max-width: 1200px; margin: 0 auto; }
 .section-label {
   display: inline-block; font-size: .75rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase; color: var(--gold);
+  letter-spacing: .1em; text-transform: uppercase; color: var(--gold-text);
   margin-bottom: 12px;
 }
+/* On dark backgrounds the original gold already clears AA (8.03:1 on
+   --navy-dark, 5.47:1 on --navy), so keep it there. */
+.section-dark .section-label,
+.section-navy .section-label,
+.cta-band .section-label,
+.ai-trust .section-label,
+.site-footer .section-label { color: var(--gold); }
+/* .page-hero / .promise-section fade out to #0d4d85, where plain --gold is only
+   4.29:1. Slightly lighter gold clears AA (4.92:1) across the whole gradient. */
+.page-hero .section-label,
+.promise-section .section-label { color: var(--gold-hero); }
 .section-heading {
   font-size: clamp(1.75rem, 3vw, 2.6rem);
   font-weight: 800; line-height: 1.2; letter-spacing: -.02em;

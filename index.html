@@ -293,8 +293,10 @@
     }
 
     /* Unmute button */
+    /* Top-right (opposite the counter badge): keeps this button clear of the
+       bottom-centre dot row, whose 24px hit areas would otherwise overlap it. */
     .unmute-btn {
-      position: absolute; bottom: 10px; right: 10px;
+      position: absolute; top: 10px; right: 10px;
       display: flex; align-items: center; gap: 6px;
       background: rgba(0,0,0,.6); backdrop-filter: blur(6px);
       border: 1.5px solid rgba(255,255,255,.25); border-radius: 100px;
@@ -306,16 +308,26 @@
 
     /* Dot indicators */
     .vid-dots {
-      position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 6px; align-items: center; z-index: 10;
+      position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 2px; align-items: center; z-index: 10;
     }
+    /* The button is the tap target (>=24x24, WCAG 2.5.8); the visible 7px dot is
+       drawn by ::before. Hit areas sit edge-to-edge with a 2px gap, so no two
+       overlap and none reaches the unmute button. */
     .vid-dot {
+      width: 24px; height: 24px; min-width: 24px; min-height: 24px;
+      display: flex; align-items: center; justify-content: center;
+      background: none; border: none; padding: 0; cursor: pointer;
+      -webkit-appearance: none; appearance: none;
+    }
+    .vid-dot::before {
+      content: ''; display: block;
       width: 7px; height: 7px; border-radius: 50%;
       background: rgba(255,255,255,.35);
-      cursor: pointer; transition: background .2s, transform .2s;
-      border: none; padding: 0;
+      transition: background .2s, transform .2s;
     }
-    .vid-dot.active { background: var(--gold); transform: scale(1.3); }
+    .vid-dot.active::before { background: var(--gold); transform: scale(1.3); }
+    .vid-dot:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; border-radius: 50%; }
 
     /* Video label strip below the video */
     .vid-label-strip {
@@ -506,7 +518,7 @@
     }
     .result-metric { font-size: 3rem; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 8px; display: block; }
     .result-label { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: 12px; }
-    .result-card h4 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .result-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .result-card p { font-size: .875rem; color: var(--text-muted); line-height: 1.65; }
 
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -518,7 +530,7 @@
       font-size: .8rem; font-weight: 800;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .why-item h4 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .why-item h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .why-item p { font-size: .875rem; color: var(--text-muted); line-height: 1.65; }
     .why-visual {
       background: linear-gradient(135deg, var(--navy-dark), var(--navy));
@@ -1032,25 +1044,25 @@
       <div class="result-card">
         <span class="result-metric">13+ Yrs</span>
         <div class="result-label">Long-Term Partnership</div>
-        <h4>Cunico Corp / BWX Technologies &mdash; Defense Manufacturing</h4>
+        <h3>Cunico Corp / BWX Technologies &mdash; Defense Manufacturing</h3>
         <p>When Cunico came under the ProLink umbrella, they needed rock-solid IT governance across multiple sites. Over 13+ years, ProLink architected cloud-native environments, hardened cybersecurity, and built enterprise-grade disaster recovery. When Cunico was acquired by Fortune 1000 nuclear innovator BWX Technologies, their infrastructure integrated seamlessly into a global defense operation.</p>
       </div>
       <div class="result-card">
         <span class="result-metric">90 Days</span>
         <div class="result-label">Multinational Stabilization</div>
-        <h4>LISI Aerospace &mdash; Aerospace Manufacturing</h4>
+        <h3>LISI Aerospace &mdash; Aerospace Manufacturing</h3>
         <p>LISI Aerospace's IT environment spanned California, Mexico, and Canada &mdash; and needed order fast. ProLink took ownership of the entire IT infrastructure, modernized network topology, deployed security agents, and stabilized multinational operations in 90 days. When the pandemic hit, they transitioned to remote solutions without disruption, ensuring continuity across every location.</p>
       </div>
       <div class="result-card">
         <span class="result-metric">3 Cos.</span>
         <div class="result-label">Enterprise Transformation</div>
-        <h4>CR&amp;R Incorporated &mdash; Waste Management &amp; Recycling</h4>
+        <h3>CR&amp;R Incorporated &mdash; Waste Management &amp; Recycling</h3>
         <p>Brought in as CR&amp;R's de facto CIO, ProLink modernized IT across CR&amp;R, Haulaway, and Recycle America &mdash; deploying SentinelOne SOC and SIEM monitoring, migrating thousands of users to Microsoft 365 and Azure, and delivering enterprise-grade disaster recovery. One of ProLink's most comprehensive technology transformations, driving efficiency, visibility, and resilience company-wide.</p>
       </div>
       <div class="result-card">
         <span class="result-metric">12 Yrs</span>
         <div class="result-label">Hospitality Partnership</div>
-        <h4>Beverly Hills Plaza Hotel &amp; Spa &mdash; Iconic LA Landmark</h4>
+        <h3>Beverly Hills Plaza Hotel &amp; Spa &mdash; Iconic LA Landmark</h3>
         <p>Over a 12-year engagement, ProLink transformed the hotel's IT from outdated dial-up data ports to a full infrastructure overhaul &mdash; upgrading wiring, combining T1 lines, and deploying rooftop antennas for seamless high-speed coverage. ProLink also built a custom application enabling hotel charges to post directly to guest folios, streamlining revenue management and front-desk operations.</p>
       </div>
     </div>
@@ -1069,28 +1081,28 @@
           <div class="why-item">
             <div class="why-num">1</div>
             <div>
-              <h4>Deep Operational Experience</h4>
+              <h3>Deep Operational Experience</h3>
               <p>25 years of building and maintaining real-world IT environments gives us pattern recognition that shortcuts and consultants simply don't have.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-num">2</div>
             <div>
-              <h4>Transparent, Predictable Pricing</h4>
+              <h3>Transparent, Predictable Pricing</h3>
               <p>Flat-rate managed services with no surprise invoices. You know exactly what you're paying and what it covers &mdash; every month.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-num">3</div>
             <div>
-              <h4>Security-First by Default</h4>
+              <h3>Security-First by Default</h3>
               <p>Every engagement starts with a security posture review. We don't bolt security on at the end &mdash; it's built into every recommendation we make.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-num">4</div>
             <div>
-              <h4>You Own the Relationship</h4>
+              <h3>You Own the Relationship</h3>
               <p>No vendor lock-in, no proprietary tools that hold you hostage. We use open, industry-standard platforms so you're never dependent on us to leave.</p>
             </div>
           </div>
@@ -1500,7 +1512,7 @@
       <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <a href="it-help-desk">24/7 Help Desk</a>
       <a href="cybersecurity-services">Cybersecurity</a>
       <a href="cloud-services">Cloud & Infrastructure</a>
@@ -1509,7 +1521,7 @@
       <a href="services#remote">Remote Workplace</a>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h3>Company</h3>
       <a href="/">Home</a>
       <a href="about">About Us</a>
       <a href="blog/">Blog</a>
@@ -1517,7 +1529,7 @@
       <a href="legal">Legal / Terms</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h3>Contact</h3>
       <div class="footer-contact-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
@@ -1533,7 +1545,7 @@
     </div>
   </div>
   <div class="footer-areas">
-    <h4>Other Areas We Serve</h4>
+    <h3>Other Areas We Serve</h3>
     <div class="footer-areas-links">
       <a href="managed-it-services-los-angeles">Los Angeles</a>
       <a href="managed-it-services-woodland-hills">Woodland Hills</a>
