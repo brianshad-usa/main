@@ -9,11 +9,6 @@
 # WITH ".html". Only main pages + the one duplicate post are redirected.
 # ===========================================================================
 
-# ---- Host canonicalization: www -> apex ----
-# Must stay FIRST: the path-only rules below would otherwise match a www request
-# and redirect it to another www URL, costing an extra hop before reaching apex.
-https://www.prolinksystems.com/*           https://prolinksystems.com/:splat    301
-
 # ---- Core pages ----
 /index.html                                /                                    301
 /services.html                             /services                            301

@@ -7,6 +7,109 @@ import sys
 import calendar
 from datetime import datetime
 
+from bs4 import BeautifulSoup
+
+
+# ---------------------------------------------------------------------------
+# Model-output hardening
+#
+# The article body is written by the model (see the prompt below), not by a
+# template in this file, so a stray keystroke in its HTML lands straight on the
+# live site. That is exactly how "</hh2>" shipped in the 2026-07-29 Century City
+# post. Two layers guard against it now:
+#
+#   1. normalize_heading_tags()  repairs the known doubled-letter/doubled-digit
+#      typo class so the writer can only ever emit well-formed h1-h6 tags.
+#   2. validate_post_html()      is the hard gate: it re-parses the finished
+#      document and refuses to write the file if anything is still wrong.
+# ---------------------------------------------------------------------------
+
+# <hh2>, </hh2>, <hhh3>, <h22>, </h33> ... -> <h2>, </h2>, <h3>, <h2>, </h3>
+_MALFORMED_HEADING = re.compile(r'<(/?)h{2,}([1-6])\b([^>]*)>|<(/?)h([1-6])\5+\b([^>]*)>',
+                                re.IGNORECASE)
+
+
+def normalize_heading_tags(html: str) -> str:
+    """Repair malformed heading tags in model-generated HTML.
+
+    Collapses repeated 'h' characters (<hh2>) and repeated level digits (<h22>)
+    down to a single well-formed tag. Anything repaired is reported on stderr so
+    the fix is visible in the Actions log rather than silently swallowed.
+    """
+    def _fix(m):
+        if m.group(2):                                   # <hh2> form
+            slash, level, attrs = m.group(1), m.group(2), m.group(3)
+        else:                                            # <h22> form
+            slash, level, attrs = m.group(4), m.group(5), m.group(6)
+        return f'<{slash}h{level}{attrs}>'
+
+    repaired, count = _MALFORMED_HEADING.subn(_fix, html)
+    if count:
+        print(f"[validate] WARNING: repaired {count} malformed heading tag(s) "
+              f"in model output", file=sys.stderr)
+    return repaired
+
+
+def validate_post_html(html: str, filepath: str) -> None:
+    """Validate a finished post before it is written to disk.
+
+    Checks, in order:
+      * no tag whose name still looks like hh<digit> survived normalization
+      * every heading level has matching open/close counts
+      * exactly one H1
+      * the document parses and the parser agrees with the raw tag counts
+        (a mismatch means tags were dropped/auto-closed, i.e. malformed nesting)
+
+    On any failure this prints a clear error and exits non-zero WITHOUT writing,
+    so the GitHub Actions run fails visibly and nothing is committed.
+    """
+    errors = []
+
+    # 1. malformed heading tag names, e.g. <hh2> / </hh2> / <h22>
+    for m in re.finditer(r'</?\s*(h{2,}\d|h\d\d+)\b[^>]*>', html, re.IGNORECASE):
+        errors.append(f"malformed heading tag {m.group(0)!r}")
+
+    # 2. balanced heading tags
+    for level in range(1, 7):
+        opened = len(re.findall(r'<h%d[\s>]' % level, html, re.IGNORECASE))
+        closed = len(re.findall(r'</h%d>' % level, html, re.IGNORECASE))
+        if opened != closed:
+            errors.append(f"unbalanced <h{level}>: {opened} open / {closed} close")
+
+    # 3. document parses, and exactly one H1
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+    except Exception as exc:                                  # pragma: no cover
+        errors.append(f"HTML failed to parse: {exc}")
+        soup = None
+
+    if soup is not None:
+        h1s = soup.find_all("h1")
+        if len(h1s) != 1:
+            errors.append(f"expected exactly 1 <h1>, found {len(h1s)}")
+
+        # 4. parser-vs-source agreement: if the parser sees fewer headings than
+        #    the source contains, something is malformed enough to be dropped.
+        for level in range(1, 7):
+            in_source = len(re.findall(r'<h%d[\s>]' % level, html, re.IGNORECASE))
+            in_parsed = len(soup.find_all(f"h{level}"))
+            if in_source != in_parsed:
+                errors.append(
+                    f"<h{level}> count mismatch: {in_source} in source but "
+                    f"{in_parsed} after parsing (malformed nesting?)")
+
+    if errors:
+        print("\n" + "=" * 70, file=sys.stderr)
+        print(f"[validate] REFUSING TO WRITE {filepath}", file=sys.stderr)
+        print(f"[validate] {len(errors)} problem(s) found in generated HTML:",
+              file=sys.stderr)
+        for e in errors:
+            print(f"  - {e}", file=sys.stderr)
+        print("=" * 70 + "\n", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"[validate] OK - {filepath} passed HTML validation")
+
 other_topics = [
     # Core managed IT topics
     "Why Los Angeles businesses are switching from break-fix IT to managed services in 2026",
@@ -269,6 +372,9 @@ for line in lines:
 
 caption = '\n'.join(caption_lines).strip()
 content = '\n'.join(content_lines).strip()
+# The body is model-written HTML; repair malformed heading tags before it is
+# embedded in the page template. validate_post_html() re-checks afterwards.
+content = normalize_heading_tags(content)
 year = datetime.now().year
 
 NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -306,7 +412,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
       <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <a href="/services#helpdesk">24/7 Help Desk</a>
       <a href="/services#cybersecurity">Cybersecurity</a>
       <a href="/services#cloud">Cloud &amp; Infrastructure</a>
@@ -315,7 +421,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
       <a href="/services#remote">Remote Workplace</a>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h3>Company</h3>
       <a href="/">Home</a>
       <a href="/about">About Us</a>
       <a href="/contact">Contact</a>
@@ -323,7 +429,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
       <a href="/legal">Legal / Terms</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h3>Contact</h3>
       <div class="footer-contact-item">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
@@ -339,7 +445,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
     </div>
   </div>
   <div class="footer-areas">
-    <h4>Areas We Serve</h4>
+    <h3>Areas We Serve</h3>
     <div class="footer-areas-links">
       <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
       <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
@@ -553,6 +659,11 @@ gtag('config', 'AW-1068497497');
 
 os.makedirs("blog", exist_ok=True)
 filepath = f"blog/{slug}.html"
+
+# Hard gate: never write (and therefore never commit) invalid HTML. Exits
+# non-zero on failure so the Actions run goes red instead of publishing.
+validate_post_html(html, filepath)
+
 with open(filepath, 'w') as f:
     f.write(html)
 
