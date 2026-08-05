@@ -40,9 +40,32 @@ def _post(url, fields):
         return json.loads(resp.read().decode("utf-8"))
 
 
+def _get(url):
+    with urllib.request.urlopen(url, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def _page_token():
+    """FB_PAGE_ACCESS_TOKEN may be a User or System-User token, which cannot
+    publish to a Page ('(#100) No permission to publish'). Exchange it for the
+    Page-scoped token. If it's already a Page token, the same value comes back."""
+    page_id = os.environ["FB_PAGE_ID"].strip()
+    token = _page_token()
+    try:
+        res = _get(f"{GRAPH}/{page_id}?fields=access_token&"
+                   f"access_token={urllib.parse.quote(token)}")
+        pt = res.get("access_token")
+        if pt and pt != token:
+            _log("Exchanged the provided token for the Page-scoped access token.")
+        return pt or token
+    except Exception as e:
+        _log(f"Could not derive Page token ({e}); using the provided token as-is.")
+        return token
+
+
 def post_image(caption, image_url):
     page_id = os.environ["FB_PAGE_ID"].strip()
-    token = os.environ["FB_PAGE_ACCESS_TOKEN"].strip()
+    token = _page_token()
     res = _post(f"{GRAPH}/{page_id}/photos", {
         "url": image_url,
         "caption": caption[:5000],
@@ -75,7 +98,7 @@ def maybe_post(caption, image_url):
 def post_video(caption, video_url):
     """Publish a video to the Page from a public URL (Facebook fetches it)."""
     page_id = os.environ["FB_PAGE_ID"].strip()
-    token = os.environ["FB_PAGE_ACCESS_TOKEN"].strip()
+    token = _page_token()
     res = _post(f"{GRAPH}/{page_id}/videos", {
         "file_url": video_url,
         "description": caption[:5000],
