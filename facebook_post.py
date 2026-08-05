@@ -50,7 +50,7 @@ def _page_token():
     publish to a Page ('(#100) No permission to publish'). Exchange it for the
     Page-scoped token. If it's already a Page token, the same value comes back."""
     page_id = os.environ["FB_PAGE_ID"].strip()
-    token = _page_token()
+    token = os.environ["FB_PAGE_ACCESS_TOKEN"].strip()
     try:
         res = _get(f"{GRAPH}/{page_id}?fields=access_token&"
                    f"access_token={urllib.parse.quote(token)}")
