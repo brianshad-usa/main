@@ -1,2 +1,16 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Binary assets must never get line-ending conversion. Git's auto-detection
+# keys on NUL bytes, and a PDF can legitimately contain none -- reportlab
+# output does not -- so `text=auto` misclassified the checklist PDF as text and
+# rewrote its LF bytes to CRLF on checkout, shifting every xref byte offset.
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.mp4  binary
