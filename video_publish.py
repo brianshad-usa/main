@@ -108,7 +108,13 @@ def wait_for_url(url, tries=60, delay=10):
     minutes to deploy a just-pushed video before Instagram/Facebook can fetch it."""
     for i in range(tries):
         try:
-            req = urllib.request.Request(url, method="GET", headers={"Range": "bytes=0-0"})
+            req = urllib.request.Request(url, method="GET", headers={
+                "Range": "bytes=0-0",
+                # Cloudflare 403s the default Python-urllib UA; use a browser UA.
+                "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                               "AppleWebKit/537.36 (KHTML, like Gecko) "
+                               "Chrome/124.0 Safari/537.36"),
+            })
             with urllib.request.urlopen(req, timeout=20) as resp:
                 if resp.status in (200, 206):
                     _log(f"Public URL is live: {url}")
