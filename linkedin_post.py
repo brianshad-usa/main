@@ -58,6 +58,16 @@ def _api_version():
     return DEFAULT_API_VERSION
 
 
+def _send(req, timeout, what):
+    """urlopen that surfaces the response body in the error message. LinkedIn puts
+    the real failure reason in the body, not the status line."""
+    try:
+        return urllib.request.urlopen(req, timeout=timeout)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        raise RuntimeError(f"{what} {e.code} {e.reason}: {body[:500]}") from None
+
+
 def _escape_commentary(text):
     """Escape LinkedIn-reserved characters so prose renders literally.
     Hashtags ('#word') are preserved on purpose."""
@@ -346,29 +356,32 @@ def _upload_video(token, org_urn, video_path, api_version):
             "LinkedIn-Version": api_version,
         },
     )
-    try:
-        with urllib.request.urlopen(init_req, timeout=60) as resp:
-            value = json.loads(resp.read().decode("utf-8"))["value"]
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", "replace")
-        raise RuntimeError(f"videos initializeUpload {e.code} {e.reason}: {body[:400]}") from None
+    resp = _send(init_req, 60, "videos initializeUpload")
+    value = json.loads(resp.read().decode("utf-8"))["value"]
+    resp.close()
     video_urn = value["video"]
     instructions = value.get("uploadInstructions", [])
     upload_token = value.get("uploadToken", "")
+    _log(f"video {video_urn}; {len(instructions)} upload part(s)")
 
     with open(video_path, "rb") as fh:
         data = fh.read()
 
     etags = []
-    for ins in instructions:
+    for idx, ins in enumerate(instructions):
         first, last = ins["firstByte"], ins["lastByte"]
         chunk = data[first:last + 1]
         put_req = urllib.request.Request(
             ins["uploadUrl"], data=chunk, method="PUT",
-            headers={"Authorization": f"Bearer {token}"},
+            headers={"Authorization": f"Bearer {token}",
+                     "Content-Type": "application/octet-stream"},
         )
-        with urllib.request.urlopen(put_req, timeout=600) as resp:
-            etag = resp.headers.get("ETag") or resp.headers.get("etag")
+        resp = _send(put_req, 600, f"videos upload part {idx}")
+        etag = resp.headers.get("ETag") or resp.headers.get("etag")
+        resp.read()
+        resp.close()
+        if not etag:
+            raise RuntimeError(f"videos upload part {idx}: no ETag in response headers")
         etags.append(etag)
 
     fin_body = {
@@ -389,8 +402,9 @@ def _upload_video(token, org_urn, video_path, api_version):
             "LinkedIn-Version": api_version,
         },
     )
-    with urllib.request.urlopen(fin_req, timeout=60) as resp:
-        resp.read()
+    resp = _send(fin_req, 60, "videos finalizeUpload")
+    resp.read()
+    resp.close()
     return video_urn
 
 
