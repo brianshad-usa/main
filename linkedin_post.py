@@ -33,7 +33,8 @@ import urllib.error
 
 TOKEN_URL = "https://www.linkedin.com/oauth/v2/accessToken"
 POSTS_URL = "https://api.linkedin.com/rest/posts"
-DEFAULT_API_VERSION = "202506"
+DEFAULT_API_VERSION = "202601"
+MIN_API_VERSION = 202504  # older versions are sunset -> ignore stale overrides
 
 # Characters the LinkedIn Posts API treats as reserved in the "commentary"
 # (post text) field. They must be backslash-escaped to render literally.
@@ -43,6 +44,18 @@ _RESERVED = set("\\<>~_*[]()|{}@")
 
 def _log(msg):
     print(f"[linkedin] {msg}", flush=True)
+
+
+def _api_version():
+    """Return a supported LinkedIn-Version (YYYYMM). Ignores a stale
+    LINKEDIN_API_VERSION override that's older than MIN_API_VERSION, so a
+    forgotten secret pinned to a sunset version can't 426 the whole pipeline."""
+    v = os.environ.get("LINKEDIN_API_VERSION", "").strip()
+    if v[:6].isdigit() and int(v[:6]) >= MIN_API_VERSION:
+        return v
+    if v:
+        _log(f"Ignoring stale LINKEDIN_API_VERSION '{v}'; using {DEFAULT_API_VERSION}.")
+    return DEFAULT_API_VERSION
 
 
 def _escape_commentary(text):
@@ -161,7 +174,7 @@ def post_article(title, url, summary, caption):
             "(need LINKEDIN_REFRESH_TOKEN or LINKEDIN_ACCESS_TOKEN)."
         )
 
-    api_version = os.environ.get("LINKEDIN_API_VERSION", DEFAULT_API_VERSION).strip()
+    api_version = _api_version()
 
     commentary = _escape_commentary((caption or title).strip())[:2900]
     body = _build_post_body(org_urn, commentary, url, title, summary)
@@ -248,7 +261,7 @@ def post_image(commentary, image_path, alt_text="Pro Link Systems"):
     if not token:
         raise RuntimeError("No LinkedIn credentials found.")
 
-    api_version = os.environ.get("LINKEDIN_API_VERSION", DEFAULT_API_VERSION).strip()
+    api_version = _api_version()
     image_urn = _upload_image(token, org_urn, image_path, api_version)
 
     body = {
@@ -333,8 +346,12 @@ def _upload_video(token, org_urn, video_path, api_version):
             "LinkedIn-Version": api_version,
         },
     )
-    with urllib.request.urlopen(init_req, timeout=60) as resp:
-        value = json.loads(resp.read().decode("utf-8"))["value"]
+    try:
+        with urllib.request.urlopen(init_req, timeout=60) as resp:
+            value = json.loads(resp.read().decode("utf-8"))["value"]
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        raise RuntimeError(f"videos initializeUpload {e.code} {e.reason}: {body[:400]}") from None
     video_urn = value["video"]
     instructions = value.get("uploadInstructions", [])
     upload_token = value.get("uploadToken", "")
@@ -386,7 +403,7 @@ def post_video(commentary, video_path, title="Pro Link Systems"):
     if not token:
         raise RuntimeError("No LinkedIn credentials found.")
 
-    api_version = os.environ.get("LINKEDIN_API_VERSION", DEFAULT_API_VERSION).strip()
+    api_version = _api_version()
     video_urn = _upload_video(token, org_urn, video_path, api_version)
 
     body = {
