@@ -103,9 +103,9 @@ def youtube_description(caption, tags):
     return body
 
 
-def wait_for_url(url, tries=30, delay=8):
-    """Poll a public URL until it serves (200). Cloudflare needs a moment to
-    deploy a just-pushed video before Instagram/Facebook can fetch it."""
+def wait_for_url(url, tries=60, delay=10):
+    """Poll a public URL until it serves (200). Cloudflare Pages can take several
+    minutes to deploy a just-pushed video before Instagram/Facebook can fetch it."""
     for i in range(tries):
         try:
             req = urllib.request.Request(url, method="GET", headers={"Range": "bytes=0-0"})
