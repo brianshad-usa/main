@@ -94,89 +94,63 @@
 
 
 
+
+
 # ---- Legacy WordPress URLs (pre-restructure) -> closest current page ----
 # From the Wayback archive of the old site; compact prefix families (splats)
-# collapse whole old sections. Junk/obscure probe URLs are left to 404.
+# collapse whole old sections. Obscure/probe URLs are left to 404.
 
 /managed-it-services-2/cloud-services/*        /cloud-services                      301
 /managed-it-services-2/cyber-security-services/* /cybersecurity-services              301
 /managed-it-services-2/it-support/*            /it-help-desk                        301
 /managed-it-services-2/*                       /managed-it-services                 301
 /solutions/*                                   /managed-it-services                 301
-/2020/*                                        /blog                                301
 /2023/*                                        /blog                                301
 /2024/*                                        /blog                                301
 /author/*                                      /blog                                301
 /category/*                                    /blog                                301
-/insights/*                                    /blog                                301
-/blog/page/*                                   /blog                                301
 /helpdesk*                                     /it-help-desk                        301
 /24*                                           /it-help-desk                        301
 /desktop-support*                              /it-help-desk                        301
-/emergency-response*                           /it-help-desk                        301
+/remote-*                                      /it-help-desk                        301
 /network-security                              /network-security-services           301
 /network-security/                             /network-security-services           301
-/network-security-management                   /network-security-services           301
-/network-security-management/                  /network-security-services           301
-/network-security-protection                   /network-security-services           301
-/network-security-protection/                  /network-security-services           301
 /network-monitoring                            /cybersecurity-services              301
 /network-monitoring/                           /cybersecurity-services              301
-/network-monitoring-service                    /cybersecurity-services              301
-/network-monitoring-service/                   /cybersecurity-services              301
 /cybersecurity                                 /cybersecurity-services              301
 /cybersecurity/                                /cybersecurity-services              301
 /business-cloud*                               /cloud-services                      301
 /cloud-migration*                              /cloud-services                      301
 /migration-to-cloud*                           /cloud-services                      301
-/migrate-to-the-business*                      /cloud-services                      301
 /virtualiz*                                    /cloud-services                      301
-/colocation*                                   /cloud-services                      301
-/amazon-web-services*                          /cloud-services                      301
+/server-*                                      /cloud-services                      301
 /disaster-recovery*                            /backup-disaster-recovery            301
 /data-recovery*                                /backup-disaster-recovery            301
-/disk-*                                        /backup-disaster-recovery            301
 /office-365*                                   /microsoft-365-support-los-angeles   301
 /microsoft-exchange*                           /microsoft-365-support-los-angeles   301
 /email-messaging                               /microsoft-365-support-los-angeles   301
 /email-messaging/                              /microsoft-365-support-los-angeles   301
 /email-office-365-management                   /microsoft-365-support-los-angeles   301
 /email-office-365-management/                  /microsoft-365-support-los-angeles   301
-/hosted-application*                           /microsoft-365-support-los-angeles   301
 /artificial-intelligence*                      /ai-automation-services              301
 /about-us*                                     /about                               301
-/about-prolink*                                /about                               301
 /contact-us*                                   /contact                             301
-/contact-prolink*                              /contact                             301
-/request-call-back*                            /contact                             301
 /free-managed-it-consultation*                 /contact                             301
 /privacy-policy*                               /legal                               301
-/legal-2*                                      /legal                               301
 /legal-services*                               /law-firm-it-services-los-angeles    301
 /educational-institution*                      /education-it-services               301
 /manufacturing                                 /manufacturing-it-services           301
 /manufacturing/                                /manufacturing-it-services           301
-/manufacturing-copy*                           /manufacturing-it-services           301
 /entertainment                                 /entertainment-it-services           301
 /entertainment/                                /entertainment-it-services           301
-/restaurants-bars*                             /managed-it-services                 301
-/food-and-drink*                               /managed-it-services                 301
-/startup*                                      /managed-it-services                 301
-/socal-startup*                                /managed-it-services                 301
 /it-services*                                  /managed-it-services                 301
 /it-consulting*                                /managed-it-services                 301
 /complete-managed*                             /managed-it-services                 301
-/remote-*                                      /managed-it-services                 301
-/server-*                                      /managed-it-services                 301
 /application-*                                 /managed-it-services                 301
 /hardware-*                                    /managed-it-services                 301
 /hosted-*                                      /managed-it-services                 301
-/networking*                                   /managed-it-services                 301
-/network-cabling*                              /managed-it-services                 301
 /user-profile*                                 /managed-it-services                 301
 /domain-controller*                            /managed-it-services                 301
-/active-directory*                             /managed-it-services                 301
-/internet-access*                              /managed-it-services                 301
 /os-install*                                   /managed-it-services                 301
 /troubleshooting*                              /managed-it-services                 301
 
