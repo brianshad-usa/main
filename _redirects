@@ -7,6 +7,9 @@
 #
 # NOTE: blog POST URLs are intentionally NOT redirected — they canonicalize
 # WITH ".html". Only main pages + the one duplicate post are redirected.
+#
+# POLICY: never rename/delete a published URL without a same-deploy 301 — see the
+# policy block at the bottom of this file. (www -> apex is a Cloudflare rule.)
 # ===========================================================================
 
 # ---- Core pages ----
@@ -63,3 +66,37 @@
 
 # ---- Duplicate blog post -> canonical (t5) version ----
 /blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html   301
+
+# ---- Restructure fixes (2026-08-06): renamed / removed pages -> current URLs ----
+# URGENT: /helpdesk-it-support-los-angeles was renamed to /it-help-desk with no
+# redirect; it 404'd for ~2 weeks while paid ads pointed at it (asset disapproved).
+/helpdesk-it-support-los-angeles     /it-help-desk                        301
+/helpdesk-it-support-los-angeles/*   /it-help-desk                        301
+
+# ---- Legacy vertical / lead-gen paths from the old site (old backlinks/GBP) ----
+# No dedicated hospitality page exists, so /hospitality-companies/ -> general MSP page.
+/it-consultation                     /contact                             301
+/it-consultation/*                   /contact                             301
+/sign-up-now                         /contact                             301
+/sign-up-now/*                       /contact                             301
+/office-365-migration-service        /microsoft-365-support-los-angeles   301
+/office-365-migration-service/*      /microsoft-365-support-los-angeles   301
+/entertainment-companies             /entertainment-it-services           301
+/entertainment-companies/*           /entertainment-it-services           301
+/hospitality-companies               /managed-it-services                 301
+/hospitality-companies/*             /managed-it-services                 301
+/manufacturing-companies             /manufacturing-it-services           301
+/manufacturing-companies/*           /manufacturing-it-services           301
+/healthcare-institutions             /healthcare-it-services              301
+/healthcare-institutions/*           /healthcare-it-services              301
+
+# ===========================================================================
+# POLICY — never rename or delete a published URL without shipping a 301 to its
+# successor in the SAME deploy. Paid ads, Google Business Profile, and backlinks
+# point at these URLs; a silent rename 404s them within hours and burns ad spend
+# (Google disapproves assets on "Destination not working, HTTP 404"). Put the
+# redirect in this file in the same commit that renames or removes the page.
+#
+# www -> apex is handled by a Cloudflare Redirect Rule (zone level), NOT here:
+# _redirects matches path only, so a catch-all would also loop on the apex domain.
+# ===========================================================================
