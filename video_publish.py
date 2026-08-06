@@ -224,8 +224,13 @@ def linkedin_url(post_id):
 def publish_one(video_file, posts):
     """Publish/refresh one video across channels; mutate + return its record."""
     path = os.path.join(VIDEOS_DIR, video_file)
-    title, caption, tags = load_meta(video_file)
+    title, caption, tags, meta = load_meta(video_file)
     public_url = VIDEO_URL_BASE + video_file
+    selected, source = selected_channels(meta)
+    _log(f"{video_file}: channels selected via {source}: {', '.join(selected) or '(none)'}")
+    skipped_by_selection = [c for c in CHANNEL_ORDER if c not in selected]
+    if skipped_by_selection:
+        _log(f"{video_file}: NOT posting to {', '.join(skipped_by_selection)} (not selected)")
 
     record = next((r for r in posts if r.get("file") == video_file), None)
     if record is None:
@@ -248,23 +253,26 @@ def publish_one(video_file, posts):
     def done(name):
         return ch.get(name, {}).get("status") == "posted"
 
-    configured = {
-        "YouTube": _has("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN") or _has("YT_ACCESS_TOKEN"),
-        "LinkedIn": _has("LINKEDIN_REFRESH_TOKEN") or _has("LINKEDIN_ACCESS_TOKEN"),
-        "Instagram": _has("IG_USER_ID", "IG_ACCESS_TOKEN"),
-        "Facebook": _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
-    }
+    configured = configured_channels()
+
+    def live(name):
+        """Postable on this run: selected AND configured AND not already done."""
+        return name in selected and configured[name] and not done(name)
 
     # If a URL-based channel needs posting, make sure the public URL is live first.
-    need_url = (configured["Instagram"] and not done("Instagram")) or (
-        configured["Facebook"] and not done("Facebook")
-    )
+    need_url = live("Instagram") or live("Facebook")
     url_ready = wait_for_url(public_url) if need_url else True
 
     failures = []
     summary = []
 
     def attempt(name, do_it):
+        if name not in selected:
+            # Don't overwrite a real outcome from an earlier run with a skip.
+            if not ch.get(name, {}).get("status") == "posted":
+                ch[name] = {"status": "skipped", "reason": "not selected for this run"}
+            summary.append(f"  [skipped]  {name} (not selected for this run)")
+            return
         if done(name):
             summary.append(f"  [already]  {name}")
             return
@@ -283,30 +291,49 @@ def publish_one(video_file, posts):
 
     # YouTube + LinkedIn upload the local file directly.
     def do_youtube():
-        r = youtube_post.maybe_post(path, title, youtube_description(caption, tags), tags)
+        # A hand-authored YouTube caption is already a finished description;
+        # appending boilerplate + hashtags to it would corrupt it.
+        yt_caption = channel_caption(meta, "YouTube", caption)
+        description = yt_caption if yt_caption != caption else youtube_description(caption, tags)
+        r = youtube_post.maybe_post(path, title, description, tags)
         if not r:
             return None
         return {"status": "posted", "id": r["id"], "url": r["url"], "privacy": r.get("privacy")}
 
     def do_linkedin():
-        pid = linkedin_post.maybe_post_video(caption, path, title)
+        pid = linkedin_post.maybe_post_video(channel_caption(meta, "LinkedIn", caption), path, title)
         if not pid:
             return None
-        return {"status": "posted", "id": pid, "url": linkedin_url(pid)}
+        result = {"status": "posted", "id": pid, "url": linkedin_url(pid)}
+        # First comment carries the link (the post body deliberately has none).
+        # Best-effort: the post itself already landed, so a comment failure must
+        # not mark the channel failed -- it just needs pasting by hand.
+        first_comment = (meta.get("linkedin_comment") or "").strip()
+        if first_comment:
+            commenter = getattr(linkedin_post, "maybe_comment", None)
+            if commenter is None:
+                _log("LinkedIn: no maybe_comment() available; post the first comment by hand.")
+                result["first_comment"] = "unsupported"
+            elif commenter(pid, first_comment):
+                result["first_comment"] = "posted"
+            else:
+                _log("LinkedIn: first comment did NOT post; paste it by hand.")
+                result["first_comment"] = "failed"
+        return result
 
     # Instagram + Facebook fetch the public URL (only if it deployed).
     def do_instagram():
         if not url_ready:
             _log("Instagram: public URL not ready; skipping this run.")
             return None
-        mid = instagram_post.maybe_post_reel(caption, public_url)
+        mid = instagram_post.maybe_post_reel(channel_caption(meta, "Instagram", caption), public_url)
         return {"status": "posted", "id": mid} if mid else None
 
     def do_facebook():
         if not url_ready:
             _log("Facebook: public URL not ready; skipping this run.")
             return None
-        vid = facebook_post.maybe_post_video(caption, public_url)
+        vid = facebook_post.maybe_post_video(channel_caption(meta, "Facebook", caption), public_url)
         if not vid:
             return None
         return {"status": "posted", "id": vid, "url": f"https://www.facebook.com/{vid}"}
