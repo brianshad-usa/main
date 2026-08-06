@@ -141,8 +141,21 @@ def post_video(video_path, title, description, tags=None):
             "Unverified API projects can force uploads to private -- verify the "
             "Google Cloud project (or use YT_PRIVACY=unlisted) for public posts."
         )
+    # Which channel the token actually resolved to. Worth recording: the upload
+    # goes wherever the OAuth grant points, and if the authorizing account has a
+    # Brand Account the video can silently land on a personal channel instead.
+    snip = result.get("snippet") or {}
+    channel_id = snip.get("channelId")
+    channel_title = snip.get("channelTitle")
     _log(f"Uploaded to YouTube: https://youtu.be/{vid} (privacy: {got_privacy})")
-    return {"id": vid, "url": f"https://youtu.be/{vid}", "privacy": got_privacy}
+    _log(f"Landed on channel: {channel_title!r} ({channel_id})")
+    return {
+        "id": vid,
+        "url": f"https://youtu.be/{vid}",
+        "privacy": got_privacy,
+        "channel_id": channel_id,
+        "channel_title": channel_title,
+    }
 
 
 def maybe_post(video_path, title, description, tags=None):
