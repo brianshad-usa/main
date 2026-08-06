@@ -472,6 +472,66 @@ def maybe_post_video(commentary, video_path, title="Pro Link Systems"):
         _log(f"WARNING: LinkedIn video post failed. Reason: {e}")
         return None
 
+# ---------------------------------------------------------------------------
+# Comments -- used for the "link in the first comment" pattern
+# ---------------------------------------------------------------------------
+def post_comment(post_urn, text):
+    """Comment on a post as the company page. Returns the comment URN. Raises.
+
+    Note: unlike the Posts API "commentary" field, socialActions message text is
+    NOT escaped for reserved characters -- backslashes would render literally,
+    so the text goes through verbatim."""
+    org_id = os.environ.get("LINKEDIN_ORG_ID", "").strip() or "3574099"
+    org_urn = org_id if org_id.startswith("urn:") else f"urn:li:organization:{org_id}"
+
+    token = _resolve_access_token()
+    if not token:
+        raise RuntimeError("No LinkedIn credentials found.")
+
+    body = {"actor": org_urn, "object": post_urn, "message": {"text": (text or "").strip()}}
+    url = f"https://api.linkedin.com/rest/socialActions/{urllib.parse.quote(post_urn, safe='')}/comments"
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(body).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": _api_version(),
+        },
+    )
+    resp = _send(req, 60, "socialActions comment")
+    payload = resp.read().decode("utf-8", "replace")
+    resp.close()
+    comment_urn = None
+    try:
+        comment_urn = (json.loads(payload) or {}).get("$URN") or (json.loads(payload) or {}).get("id")
+    except Exception:
+        pass
+    _log(f"Posted first comment on {post_urn} ({comment_urn or 'no urn returned'})")
+    return comment_urn or True
+
+
+def maybe_comment(post_urn, text):
+    """Safe wrapper. Never raises; returns None on any problem. The post it
+    comments on has already published by this point, so a failure here is a
+    paste-it-by-hand nuisance, not a publish failure."""
+    if not post_urn or not (text or "").strip():
+        return None
+    has_creds = (
+        os.environ.get("LINKEDIN_REFRESH_TOKEN", "").strip()
+        or os.environ.get("LINKEDIN_ACCESS_TOKEN", "").strip()
+    )
+    if not has_creds:
+        _log("Skipping LinkedIn comment (no credentials configured).")
+        return None
+    try:
+        return post_comment(post_urn, text)
+    except Exception as e:
+        _log(f"WARNING: LinkedIn comment failed. Reason: {e}")
+        return None
+
 
 if __name__ == "__main__":
     # Manual smoke test:

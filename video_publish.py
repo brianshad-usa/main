@@ -351,18 +351,21 @@ def publish_one(video_file, posts):
 
 
 def pending(video_file, posts):
-    """A video needs work if it has no record, or any configured channel isn't posted."""
+    """A video needs work if it has no record, or a channel that is both selected
+    and configured isn't posted yet. Selection has to be honoured here too --
+    otherwise an unselected channel keeps the video permanently 'pending' and
+    every unrelated push re-runs it."""
+    _t, _c, _tg, meta = load_meta(video_file)
+    selected, _src = selected_channels(meta)
     record = next((r for r in posts if r.get("file") == video_file), None)
     if record is None:
         return True
-    configured = {
-        "YouTube": _has("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN") or _has("YT_ACCESS_TOKEN"),
-        "LinkedIn": _has("LINKEDIN_REFRESH_TOKEN") or _has("LINKEDIN_ACCESS_TOKEN"),
-        "Instagram": _has("IG_USER_ID", "IG_ACCESS_TOKEN"),
-        "Facebook": _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
-    }
+    configured = configured_channels()
     ch = record.get("channels", {})
-    return any(c and ch.get(n, {}).get("status") != "posted" for n, c in configured.items())
+    return any(
+        configured[n] and ch.get(n, {}).get("status") != "posted"
+        for n in selected
+    )
 
 
 def main():
