@@ -72,6 +72,12 @@ VIDEO_EXTS = (".mp4", ".mov")
 # Public, site-served base for the just-pushed video (Instagram/Facebook fetch by URL).
 VIDEO_URL_BASE = os.environ.get("VIDEO_URL_BASE", "https://prolinksystems.com/videos/")
 
+CHANNEL_ORDER = ("YouTube", "LinkedIn", "Instagram", "Facebook")
+
+# Narrow on purpose -- see CHANNEL SELECTION in the module docstring. Widen per
+# video via the sidecar's "channels", or per run via VIDEO_CHANNELS.
+DEFAULT_CHANNELS = ("LinkedIn", "Facebook")
+
 
 def _log(msg):
     print(f"[video] {msg}", flush=True)
@@ -104,8 +110,9 @@ def _prettify(filename):
 
 
 def load_meta(video_file):
-    """Read the sidecar videos/<name>.json (title, caption, tags). Falls back to
-    a title derived from the filename."""
+    """Read the sidecar videos/<name>.json (title, caption, tags, channels,
+    captions, linkedin_comment). Falls back to a title derived from the
+    filename. Returns (title, caption, tags, meta)."""
     stem = os.path.splitext(video_file)[0]
     sidecar = os.path.join(VIDEOS_DIR, stem + ".json")
     meta = {}
@@ -118,7 +125,59 @@ def load_meta(video_file):
     title = (meta.get("title") or _prettify(video_file)).strip()
     caption = (meta.get("caption") or title).strip()
     tags = meta.get("tags") or ["Managed IT", "Cybersecurity", "Los Angeles", "MSP"]
-    return title, caption, tags
+    return title, caption, tags, meta
+
+
+def _parse_channel_list(raw, source):
+    """Normalise a channel list from a sidecar/env value against CHANNEL_ORDER.
+    Unknown names are dropped loudly rather than silently ignored -- a typo that
+    quietly widened or narrowed the channel set would be the worst failure here."""
+    if isinstance(raw, str):
+        names = [p.strip() for p in raw.split(",")]
+    else:
+        names = [str(p).strip() for p in raw]
+    names = [n for n in names if n]
+    if len(names) == 1 and names[0].lower() == "all":
+        return list(CHANNEL_ORDER)
+    canon = {c.lower(): c for c in CHANNEL_ORDER}
+    selected, unknown = [], []
+    for n in names:
+        c = canon.get(n.lower())
+        if c is None:
+            unknown.append(n)
+        elif c not in selected:
+            selected.append(c)
+    if unknown:
+        _log(f"WARNING: ignoring unknown channel name(s) in {source}: {', '.join(unknown)}")
+    return selected
+
+
+def selected_channels(meta):
+    """Which channels this run is allowed to post to, and where that came from."""
+    if meta.get("channels"):
+        return _parse_channel_list(meta["channels"], "the sidecar"), "sidecar"
+    env = os.environ.get("VIDEO_CHANNELS", "").strip()
+    if env:
+        return _parse_channel_list(env, "VIDEO_CHANNELS"), "VIDEO_CHANNELS"
+    return list(DEFAULT_CHANNELS), "DEFAULT_CHANNELS"
+
+
+def configured_channels():
+    return {
+        "YouTube": _has("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN") or _has("YT_ACCESS_TOKEN"),
+        "LinkedIn": _has("LINKEDIN_REFRESH_TOKEN") or _has("LINKEDIN_ACCESS_TOKEN"),
+        "Instagram": _has("IG_USER_ID", "IG_ACCESS_TOKEN"),
+        "Facebook": _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
+    }
+
+
+def channel_caption(meta, channel, caption):
+    """Per-channel caption, falling back to the shared one."""
+    per = meta.get("captions") or {}
+    for key in (channel, channel.lower()):
+        if isinstance(per, dict) and per.get(key):
+            return str(per[key]).strip()
+    return caption
 
 
 def youtube_description(caption, tags):
