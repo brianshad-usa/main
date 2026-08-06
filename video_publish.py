@@ -13,6 +13,35 @@ Channels:
   - Instagram : Reel from the public video URL    (IG_USER_ID + IG_ACCESS_TOKEN)
   - Facebook  : video from the public video URL   (FB_PAGE_ID + FB_PAGE_ACCESS_TOKEN)
 
+CHANNEL SELECTION (a credential check is not consent to post)
+------------------------------------------------------------
+Having a channel's secrets present used to be enough to publish to it. That
+makes the blast radius of `git push` the full channel set, which is wrong when
+an asset only exists in one aspect ratio, or when a channel is being posted by
+hand with hand-written copy. A channel now has to be BOTH configured AND
+selected. Resolution order, first match wins:
+
+  1. the video's sidecar  "channels": ["LinkedIn", "Facebook"]   <- per-video
+  2. the VIDEO_CHANNELS env var (comma-separated, or "all")
+  3. DEFAULT_CHANNELS below
+
+DEFAULT_CHANNELS is deliberately NOT "all". The auto-commit watcher in this repo
+runs `git add -A` every 30s, so a video file dropped into videos/ is pushed
+without review and fires publish-video.yml on its `push` trigger. A conservative
+committed default is the only thing standing between that and an unintended
+post, so the default must stay narrow and widen only per-video or per-run.
+
+PER-CHANNEL COPY
+----------------
+Channels do not share a voice, so the sidecar may carry a caption per channel:
+
+  "captions": {"LinkedIn": "...", "Facebook": "...", "YouTube": "..."}
+
+falling back to the single "caption" for any channel not listed. A YouTube entry
+is used as the description VERBATIM -- no boilerplate or hashtags appended --
+because a hand-authored description is already final. "linkedin_comment" is
+posted as the first comment on the LinkedIn post when present.
+
 Idempotent: a channel already marked "posted" for a given video is never posted
 again, so re-runs / retries only attempt the channels that haven't succeeded yet.
 
