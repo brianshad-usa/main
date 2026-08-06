@@ -364,6 +364,12 @@ def pending(video_file, posts):
     every unrelated push re-runs it."""
     _t, _c, _tg, meta = load_meta(video_file)
     selected, _src = selected_channels(meta)
+    if not selected:
+        # Archive-only ("channels": []). Nothing to publish, so it is never
+        # pending -- checked BEFORE the no-record case, otherwise a newly added
+        # master would be picked up by every no-target run just to skip every
+        # channel one at a time.
+        return False
     record = next((r for r in posts if r.get("file") == video_file), None)
     if record is None:
         return True
