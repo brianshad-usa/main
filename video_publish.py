@@ -153,8 +153,15 @@ def _parse_channel_list(raw, source):
 
 
 def selected_channels(meta):
-    """Which channels this run is allowed to post to, and where that came from."""
-    if meta.get("channels"):
+    """Which channels this run is allowed to post to, and where that came from.
+
+    Key PRESENCE decides, not truthiness: `"channels": []` must mean "publish
+    nowhere", which is how an archive-only video (a master kept in videos/ for
+    findability, or a cut destined for another surface entirely) declares that
+    it has no social destination. Testing truthiness instead would make an empty
+    list fall through to DEFAULT_CHANNELS and publish it -- the exact opposite
+    of what it says."""
+    if "channels" in meta:
         return _parse_channel_list(meta["channels"], "the sidecar"), "sidecar"
     env = os.environ.get("VIDEO_CHANNELS", "").strip()
     if env:
