@@ -48,6 +48,11 @@ jobs:
           LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
         run: python generate_blog.py
 
+      - name: Site guard (block publish on any site-wide violation)
+        # beautifulsoup4 is already installed in "Install dependencies" above.
+        # A non-zero exit here fails the job, so a bad post is never committed.
+        run: python site_guard.py
+
       - name: Commit and push
         run: |
           git config --global user.name "ProLink Blog Bot"

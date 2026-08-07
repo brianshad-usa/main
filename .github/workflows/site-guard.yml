@@ -1,0 +1,33 @@
+name: Site Guard
+
+# Enforces CONVENTIONS.md on every push: per-page SEO/schema invariants,
+# cross-file sitemap/redirects/headers rules, and a secrets scan. Fails the
+# build (non-zero exit) on any violation. Do not weaken or bypass the guard;
+# fix the content instead.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: Run site guard
+        run: python site_guard.py
