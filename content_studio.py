@@ -167,7 +167,8 @@ def call_model(client, system, user, max_tokens=9000):
         system=system,
         messages=[{"role": "user", "content": user}],
     )
-    raw = msg.content[0].text.strip()
+    # Models may emit thinking blocks before the text block - take text only.
+    raw = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text").strip()
     start, end = raw.find("{"), raw.rfind("}")
     if start == -1 or end == -1:
         raise ValueError(f"No JSON in model output:\n{raw[:800]}")
