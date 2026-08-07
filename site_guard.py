@@ -78,7 +78,9 @@ def url_to_file(u):
     path = path.split("?")[0].split("#")[0]
     if path in ("", "/"):
         return "index.html"
-    path = path.lstrip("/").rstrip("/")
+    if path.endswith("/"):                    # directory-index: /blog/ -> blog/index.html
+        return path.strip("/") + "/index.html"
+    path = path.lstrip("/")
     return path if path.endswith(".html") else path + ".html"
 
 
@@ -86,8 +88,10 @@ def page_url(name):
     """The canonical URL a repo file is expected to appear as in the sitemap."""
     if name == "index.html":
         return APEX + "/"
+    if name.endswith("/index.html"):     # directory-index: blog/index.html -> /blog/
+        return f"{APEX}/{name[:-len('index.html')]}"
     if name.startswith("blog/"):
-        return f"{APEX}/{name}"          # blog canonicalizes WITH .html
+        return f"{APEX}/{name}"          # blog posts canonicalize WITH .html
     return f"{APEX}/{name[:-5]}"          # root pages use clean URLs
 
 
@@ -124,15 +128,17 @@ for name, pg in pages.items():
     if pg["desc"]:
         desc_index.setdefault(_html.unescape(pg["desc"]), []).append(name)
 
-    # 2: title present + <=60 rendered chars
-    t = soup.find("title")
-    ttext = t.get_text() if t else ""
-    if not ttext.strip():
-        V(2, name, "title missing")
-    else:
-        tlen = len(_html.unescape(ttext))
-        if tlen > 60:
-            V(2, name, f"title {tlen} chars (>60): {ttext.strip()[:70]!r}")
+    # 2: title present + <=60 rendered chars (skips noindexed, same exemption as check 1 --
+    #    canonicaled duplicate/tombstone pages never appear in search, so title length is moot)
+    if not noindex:
+        t = soup.find("title")
+        ttext = t.get_text() if t else ""
+        if not ttext.strip():
+            V(2, name, "title missing")
+        else:
+            tlen = len(_html.unescape(ttext))
+            if tlen > 60:
+                V(2, name, f"title {tlen} chars (>60): {ttext.strip()[:70]!r}")
 
     # 3: exactly one <h1>
     h1s = soup.find_all("h1")
