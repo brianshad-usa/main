@@ -51,6 +51,47 @@ def normalize_heading_tags(html: str) -> str:
     return repaired
 
 
+def normalize_apex_links(text: str) -> str:
+    """Rewrite any www.prolinksystems.com reference to the apex domain.
+
+    CONVENTIONS.md: apex only, no www anywhere in source. The model
+    occasionally emits www URLs in body links, titles, or descriptions;
+    rewrite them before the HTML is embedded, mirroring normalize_heading_tags.
+    Anything rewritten is reported on stderr so the fix shows in the Actions log.
+    """
+    fixed, count = re.subn(r'www\.prolinksystems\.com', 'prolinksystems.com',
+                           text, flags=re.IGNORECASE)
+    if count:
+        print(f"[validate] WARNING: rewrote {count} www.prolinksystems.com "
+              f"reference(s) to apex", file=sys.stderr)
+    return fixed
+
+
+def fit_meta_description(meta: str, limit: int = 155) -> str:
+    """Trim an over-long meta description to <= limit rendered chars.
+
+    CONVENTIONS.md: descriptions target 120-155 (hard cap 160). If the model
+    runs long, keep the longest whole-sentence prefix that fits. If no sentence
+    boundary yields a usable (>= 80 char) description, return it unchanged so
+    validate_post_html rejects it loudly rather than shipping a stub fragment.
+    """
+    if len(html_lib.unescape(meta)) <= limit:
+        return meta
+    best = ""
+    for m in re.finditer(r'[.!?](?:\s|$)', meta):
+        candidate = meta[:m.end()].strip()
+        if len(html_lib.unescape(candidate)) <= limit:
+            best = candidate            # matches run left->right, keep longest fit
+        else:
+            break
+    if len(html_lib.unescape(best)) >= 80:
+        print(f"[validate] WARNING: trimmed meta description from "
+              f"{len(html_lib.unescape(meta))} to {len(html_lib.unescape(best))} "
+              f"chars at a sentence boundary", file=sys.stderr)
+        return best
+    return meta  # unfixable at a sentence boundary -> let the gate reject it
+
+
 def validate_post_html(html: str, filepath: str) -> None:
     """Validate a finished post before it is written to disk.
 
@@ -98,6 +139,29 @@ def validate_post_html(html: str, filepath: str) -> None:
                 errors.append(
                     f"<h{level}> count mismatch: {in_source} in source but "
                     f"{in_parsed} after parsing (malformed nesting?)")
+
+        # 5. SEO title present and <= 60 rendered chars (CONVENTIONS.md)
+        title_tag = soup.find("title")
+        if title_tag is None or not title_tag.get_text(strip=True):
+            errors.append("missing <title>")
+        else:
+            tlen = len(html_lib.unescape(title_tag.get_text()))
+            if tlen > 60:
+                errors.append(f"<title> is {tlen} chars, exceeds 60")
+
+        # 6. meta description present and <= 160 rendered chars (CONVENTIONS.md)
+        desc_tag = soup.find("meta", attrs={"name": "description"})
+        desc_val = desc_tag.get("content", "").strip() if desc_tag else ""
+        if not desc_val:
+            errors.append("missing meta description")
+        elif len(html_lib.unescape(desc_val)) > 160:
+            errors.append(
+                f"meta description is {len(html_lib.unescape(desc_val))} "
+                f"chars, exceeds 160")
+
+    # 7. apex-only: no www.prolinksystems.com anywhere in the page (CONVENTIONS.md)
+    if re.search(r'www\.prolinksystems\.com', html, re.IGNORECASE):
+        errors.append("contains www.prolinksystems.com reference (apex-only)")
 
     if errors:
         print("\n" + "=" * 70, file=sys.stderr)
@@ -373,9 +437,22 @@ for line in lines:
 
 caption = '\n'.join(caption_lines).strip()
 content = '\n'.join(content_lines).strip()
-# The body is model-written HTML; repair malformed heading tags before it is
-# embedded in the page template. validate_post_html() re-checks afterwards.
+# The body is model-written HTML; repair malformed heading tags and rewrite any
+# www URLs to apex before it is embedded. validate_post_html() re-checks after.
 content = normalize_heading_tags(content)
+content = normalize_apex_links(content)
+
+# Title: append the " | Pro Link Systems" brand suffix only while the full SEO
+# title still fits <=60 rendered chars; otherwise ship the bare title
+# (CONVENTIONS.md: titles <=60, keyword-first). The gate re-checks the result.
+title = normalize_apex_links(title.strip())
+_full_title = f"{title} | Pro Link Systems"
+seo_title = _full_title if len(html_lib.unescape(_full_title)) <= 60 else title
+
+# Meta: trim an over-long description at a sentence boundary (<=155) or leave it
+# for validate_post_html to reject (CONVENTIONS.md: <=160, target 120-155).
+meta = fit_meta_description(normalize_apex_links(meta.strip()))
+
 year = datetime.now().year
 
 NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
