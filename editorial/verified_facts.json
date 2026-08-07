@@ -1,0 +1,40 @@
+{
+  "_comment": "Runtime mirror of the owner-confirmed facts in C:\\googleads\\cmo\\verified-facts.json. GitHub Actions cannot see that repo, so the publishable subset is mirrored here. THIS IS THE ONLY SOURCE OF NUMBERS the automated social pipeline may cite about Pro Link Systems. If a claim is not in this file and has no named external primary source in the brief, the post must make its argument without a number. Sync direction is one-way: cmo/verified-facts.json -> here, by hand, after Brian confirms.",
+  "version": 1,
+  "synced_from": "cmo/verified-facts.json v-2026-08-05",
+  "last_synced": "2026-08-06",
+
+  "citable": [
+    { "id": "F001", "claim": "The Pro Link Systems help desk operates 24/7." },
+    { "id": "F002", "claim": "The help desk is in-house, not outsourced.",
+      "note": "Pairs with F008. In-house and US-based together is the differentiator; neither alone carries it." },
+    { "id": "F003", "claim": "Average ticket first-response time: 15 minutes.",
+      "publishing_rule": "ALWAYS name the metric in full — 'average ticket first-response time'. Never write a bare '15-minute response', which overclaims resolution." },
+    { "id": "F004", "claim": "First-contact resolution is 90%." },
+    { "id": "F005", "claim": "Average resolution time is under one hour.",
+      "publishing_rule": "Phrase as 'under an hour'. It is a confirmed bound, not a measured mean — never state it as a precise figure." },
+    { "id": "F007", "claim": "Phone calls are answered live by the in-house team — no phone tree, no hold queue." },
+    { "id": "F008", "claim": "The help desk is US-based." },
+    { "id": "F012", "claim": "Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+      "note": "Founding and location. Safe in any asset." }
+  ],
+
+  "blocked_from_automation": [
+    { "id": "F006", "claim": "Customer satisfaction is 5 out of 5.",
+      "reason": "Confirmed, but the sample size and measurement window are still unsupplied (open item NC006). A bare perfect score reads as unaudited. Blocked until Brian supplies the sample." },
+    { "id": "F009", "claim": "An anonymized client incident in which a cheap backup failed and recovery cost approximately $450,000.",
+      "reason": "Publishable only anonymized, and reserved for campaign C082 where the flagship is built to hold it responsibly. Too easy to mishandle in a short automated post." },
+    { "id": "F010", "claim": "The Waverly School — 23-year client.",
+      "reason": "Named-client mention is permitted by the CMO permission model but is deliberately withheld from UNREVIEWED automated posting. Use only in human-reviewed assets." },
+    { "id": "F011", "claim": "Law Offices of Alan B. Snitzer — 18-year client.",
+      "reason": "Same as F010. Permission covers mention, not automated syndication." }
+  ],
+
+  "hard_rules": [
+    "Never state a statistic about the industry, threat landscape, breach costs, downtime, or attacker behaviour unless the brief supplies a named, dated primary source. Absent that, argue without the number.",
+    "Never name, imply, or describe a Pro Link Systems client in automated social content.",
+    "Never claim a certification, partnership, compliance status, or capability that does not appear in this file.",
+    "Never invent an incident, vulnerability, regulation, deadline, or research finding.",
+    "Do not describe competitors by name."
+  ]
+}
