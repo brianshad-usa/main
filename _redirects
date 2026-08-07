@@ -90,6 +90,19 @@
 /healthcare-institutions             /healthcare-it-services              301
 /healthcare-institutions/*           /healthcare-it-services              301
 
+# ---- Legacy vertical pages, second wave (2026-08-07) — found via Google Ads
+# asset sweep: these pages died in the restructure while ad-group sitelinks and
+# possibly old backlinks still referenced them. Bare + splat variants both
+# needed (Pages splats do not match the bare path).
+/restaurants-bars-and-clubs          /entertainment-it-services           301
+/restaurants-bars-and-clubs/*        /entertainment-it-services           301
+/socal-startups                      /technology-it-services              301
+/socal-startups/*                    /technology-it-services              301
+/cloud-and-infrastructure            /cloud-services                      301
+/cloud-and-infrastructure/*          /cloud-services                      301
+/cloud-management-services           /cloud-services                      301
+/cloud-management-services/*         /cloud-services                      301
+
 
 
 
