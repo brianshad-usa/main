@@ -43,36 +43,59 @@ def main():
     with open(MANIFEST, encoding="utf-8") as f:
         m = json.load(f)
 
+    # Manifests produced by `content_studio.py --offline` are structure tests
+    # and must never reach a channel, no matter how the workflow was invoked.
+    if m.get("offline_test"):
+        print("::error::pending.json is an offline test manifest - refusing to publish.")
+        sys.exit(1)
+
+    # Per-channel copy from the editorial pipeline; the legacy single-text
+    # manifest (m["post"] only) still works unchanged as the fallback.
+    per = m.get("channels", {})
     post = m["post"]
+    li_text = per.get("linkedin") or post
+    fb_text = per.get("facebook") or post
+    gbp_text = per.get("gbp") or post
+    ig_caption = per.get("instagram_caption") or post
+
     headline = m.get("headline", "Pro Link Systems")
     image_url = RAW_BASE + m["image_file"]
     ig_image_url = RAW_BASE + m.get("image_file_jpg", m["image_file"])
     local_image = os.path.join(HERE, "social", m["image_file"])
+
+    # Instagram: carousel when the manifest carries slides, single image otherwise.
+    carousel_jpgs = (m.get("carousel") or {}).get("jpg") or []
+    carousel_urls = [RAW_BASE + name for name in carousel_jpgs]
+
+    def do_instagram():
+        if len(carousel_urls) >= 2:
+            return instagram_post.maybe_post_carousel(ig_caption, carousel_urls)
+        return instagram_post.maybe_post(ig_caption, ig_image_url)
 
     # (name, is_configured, attempt) -- attempt() returns a truthy id on success, None on failure.
     channels = [
         (
             "LinkedIn",
             _has("LINKEDIN_REFRESH_TOKEN") or _has("LINKEDIN_ACCESS_TOKEN"),
-            lambda: linkedin_post.maybe_post_image(post, local_image, alt_text=headline),
+            lambda: linkedin_post.maybe_post_image(li_text, local_image, alt_text=headline),
         ),
         (
             "GBP",
             (_has("GBP_REFRESH_TOKEN") or _has("GBP_ACCESS_TOKEN"))
             and _has("GBP_ACCOUNT_ID", "GBP_LOCATION_ID"),
             lambda: gbp_post.maybe_post(
-                post, m.get("cta_type", "LEARN_MORE"), m.get("cta_url"), image_url=image_url
+                gbp_text, m.get("cta_type", "LEARN_MORE"), m.get("cta_url"), image_url=image_url
             ),
         ),
         (
             "Instagram",
             _has("IG_USER_ID", "IG_ACCESS_TOKEN"),
-            lambda: instagram_post.maybe_post(post, ig_image_url),
+            do_instagram,
         ),
         (
             "Facebook",
             _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
-            lambda: facebook_post.maybe_post(post, image_url),
+            lambda: facebook_post.maybe_post(fb_text, image_url),
         ),
     ]
 
