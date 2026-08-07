@@ -160,19 +160,38 @@ Return JSON:
 }}"""
 
 
-def call_model(client, system, user, max_tokens=9000):
+def _extract_json(raw):
+    start, end = raw.find("{"), raw.rfind("}")
+    if start == -1 or end == -1:
+        raise ValueError(f"No JSON in model output:\n{raw[:800]}")
+    return json.loads(raw[start:end + 1])
+
+
+def call_model(client, system, user, max_tokens=16000):
     msg = client.messages.create(
         model=MODEL,
         max_tokens=max_tokens,
         system=system,
         messages=[{"role": "user", "content": user}],
     )
+    if msg.stop_reason == "max_tokens":
+        raise RuntimeError(f"Model output truncated at {max_tokens} tokens - raise the budget.")
     # Models may emit thinking blocks before the text block - take text only.
     raw = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text").strip()
-    start, end = raw.find("{"), raw.rfind("}")
-    if start == -1 or end == -1:
-        raise ValueError(f"No JSON in model output:\n{raw[:800]}")
-    return json.loads(raw[start:end + 1])
+    try:
+        return _extract_json(raw)
+    except (json.JSONDecodeError, ValueError) as e:
+        # One repair round: hand the malformed output back for correction.
+        _log(f"JSON parse failed ({e}); asking the model to repair its output")
+        fix = client.messages.create(
+            model=MODEL,
+            max_tokens=max_tokens,
+            system="You repair malformed JSON. Return ONLY the corrected JSON object - "
+                   "no commentary, no fences. Preserve the content exactly; fix only syntax.",
+            messages=[{"role": "user", "content": raw}],
+        )
+        fixed = "".join(b.text for b in fix.content if getattr(b, "type", "") == "text").strip()
+        return _extract_json(fixed)
 
 
 def lint(package):
