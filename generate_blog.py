@@ -556,19 +556,19 @@ html = f"""<!DOCTYPE html>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>{title} | Pro Link Systems</title>
+<title>{seo_title}</title>
 <meta name="description" content="{meta}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://prolinksystems.com/blog/{slug}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://prolinksystems.com/blog/{slug}">
-<meta property="og:title" content="{title} | Pro Link Systems">
+<meta property="og:title" content="{seo_title}">
 <meta property="og:description" content="{meta}">
 <meta property="og:image" content="https://prolinksystems.com/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ProLink_Systems">
 <meta name="twitter:image" content="https://prolinksystems.com/logo.png">
-<meta name="twitter:title" content="{title} | Pro Link Systems">
+<meta name="twitter:title" content="{seo_title}">
 <meta name="twitter:description" content="{meta}">
 <script type="application/ld+json">
 {{
