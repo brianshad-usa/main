@@ -151,6 +151,59 @@ def maybe_post_reel(caption, video_url):
         return None
 
 
+# ---------------------------------------------------------------------------
+# Carousels — used by the editorial pipeline (content_studio.py). Same three-
+# step Graph flow as images: child containers -> CAROUSEL container -> publish.
+# ---------------------------------------------------------------------------
+def post_carousel(caption, image_urls):
+    """Publish a carousel (2-10 images) from public JPEG URLs."""
+    if not (2 <= len(image_urls) <= 10):
+        raise ValueError(f"Instagram carousels take 2-10 images, got {len(image_urls)}")
+    ig_id = os.environ["IG_USER_ID"].strip()
+    token = os.environ["IG_ACCESS_TOKEN"].strip()
+
+    children = []
+    for url in image_urls:
+        child = _post(f"{GRAPH}/{ig_id}/media", {
+            "image_url": url,
+            "is_carousel_item": "true",
+            "access_token": token,
+        })
+        children.append(child["id"])
+        time.sleep(2)  # let each child finish fetching before the next
+
+    container = _post(f"{GRAPH}/{ig_id}/media", {
+        "media_type": "CAROUSEL",
+        "children": ",".join(children),
+        "caption": caption[:2200],
+        "access_token": token,
+    })
+    time.sleep(5)
+
+    published = _post(f"{GRAPH}/{ig_id}/media_publish", {
+        "creation_id": container["id"],
+        "access_token": token,
+    })
+    _log(f"Published carousel ({len(children)} slides) to Instagram: {published.get('id')}")
+    return published.get("id")
+
+
+def maybe_post_carousel(caption, image_urls):
+    if not (os.environ.get("IG_USER_ID", "").strip()
+            and os.environ.get("IG_ACCESS_TOKEN", "").strip()):
+        _log("Skipping Instagram carousel (no IG_USER_ID/IG_ACCESS_TOKEN configured).")
+        return None
+    try:
+        return post_carousel(caption, image_urls)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        _log(f"WARNING: Instagram carousel failed: {e.code} {detail}")
+        return None
+    except Exception as e:
+        _log(f"WARNING: Instagram carousel failed: {e}")
+        return None
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
