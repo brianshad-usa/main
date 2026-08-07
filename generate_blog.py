@@ -5,6 +5,7 @@ import glob
 import json
 import sys
 import calendar
+import html as html_lib
 from datetime import datetime
 
 from bs4 import BeautifulSoup
