@@ -18,6 +18,9 @@ Interpretations (documented so they can be calibrated, not silently changed):
     covered by check 14; both are exempt from the sitemap presence check (11).
   * Meta-description and title length are measured on the RENDERED text
     (HTML entities decoded) -- i.e. what Google counts -- not the raw attribute.
+  * Checks 1 (meta description) and 2 (title) BOTH skip noindexed pages:
+    canonicaled duplicates never surface in search, so their lengths are moot.
+  * Directory-index URLs resolve the standard way: /blog/ <-> blog/index.html.
 """
 import sys
 import os
