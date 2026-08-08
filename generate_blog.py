@@ -403,53 +403,131 @@ slug = f"{slug_date}-t{topic_index}-{slug[:55]}"
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-prompt = f"""Write a professional SEO-optimized blog post for Pro Link Systems, a managed IT services company based in Woodland Hills, Los Angeles, CA since 1999.
+# ── 2026 Editorial Excellence upgrade ────────────────────────────────────────
+# The blog now runs under the same editorial standards, verified-facts
+# discipline, review board, and quality gate as the social pipeline
+# (editorial/standards.md, editorial/verified_facts.json, content_studio.py).
+EDITORIAL_MODEL = os.environ.get("EDITORIAL_MODEL", "claude-opus-5")
+_HERE = os.path.dirname(os.path.abspath(__file__))
 
-Topic: {topic}
 
-Requirements:
-- Length: 800-1000 words
-- Tone: Professional but approachable
-- Include naturally: managed IT services Los Angeles, IT support Los Angeles, Pro Link Systems
-- Structure: Introduction, 3-4 main sections with H2 headings, conclusion with CTA
-- CTA at end should direct readers to prolinksystems.com/managed-it-services
+def _read_editorial(name):
+    with open(os.path.join(_HERE, "editorial", name), encoding="utf-8") as f:
+        return f.read()
+
+
+EDITORIAL_SYSTEM = (
+    "You are the editorial engine of Pro Link Systems' marketing organization: "
+    "a premium technology publication that happens to be produced by a Los Angeles "
+    "managed IT and cybersecurity firm. The standards document below is your "
+    "operating contract. Follow it exactly. You are writing the BLOG - long-form, "
+    "so the standards' channel doctrine applies as follows: the essay carries a "
+    "perspective, not a summary; the reader is an intelligent executive; every "
+    "claim survives the truth discipline.\n\n"
+    "=== EDITORIAL STANDARDS ===\n" + _read_editorial("standards.md") +
+    "\n\n=== VERIFIED FACTS (the ONLY ProLink claims you may make) ===\n" +
+    _read_editorial("verified_facts.json")
+)
+
+
+def _call_editorial(user_prompt, max_tokens=30000):
+    """Streaming call; returns the text blocks only (models may emit thinking
+    blocks first). Truncation is an error, not a silent bad post."""
+    with client.messages.stream(
+        model=EDITORIAL_MODEL,
+        max_tokens=max_tokens,
+        system=EDITORIAL_SYSTEM,
+        messages=[{"role": "user", "content": user_prompt}],
+    ) as s:
+        msg = s.get_final_message()
+    if msg.stop_reason == "max_tokens":
+        raise SystemExit("generate_blog: model output truncated - raise the budget.")
+    return "".join(b.text for b in msg.content if getattr(b, "type", "") == "text").strip()
+
+
+FORMAT_SPEC = """Structural requirements (the publishing pipeline depends on these exactly):
+- Length: 1000-1400 words
+- Structure: an opening that earns attention (per the standards - no banned openings),
+  3-5 sections with H2 headings whose wording is specific rather than generic,
+  a closing section that lands the executive takeaway before any CTA
+- One restrained CTA at the end directing readers to prolinksystems.com/managed-it-services
+  (or a more specific service page if the subject clearly belongs to one)
 - Write in HTML using only these tags: p, h2, ul, li, strong, a
-- Include 3-5 natural internal links within the content using these anchor text and URL pairs:
+- Include 3-5 natural internal links using these anchor/URL pairs:
   - "managed IT services" or "managed IT" -> /managed-it-services
   - "cybersecurity" or "IT security" -> /cybersecurity-services
   - "cloud services" or "Microsoft 365" -> /cloud-services
   - "help desk" or "IT support" -> /it-help-desk
   - "disaster recovery" or "data backup" -> /backup-disaster-recovery
   - "HIPAA compliance" or "healthcare IT" -> /healthcare-it-services
-- Do not include DOCTYPE html head body tags
-- No markdown, just clean HTML
+- Do not include DOCTYPE, html, head or body tags. No markdown - clean HTML only.
+- Mention "Pro Link Systems" and Los Angeles naturally; never keyword-stuff.
 
 Also provide:
-- A compelling H1 title on its own line prefixed with TITLE: (keep it UNDER 42 characters so the full SEO title stays under 60 once " | Pro Link Systems" is appended)
-- A meta description of 150-160 characters prefixed with META:
-- A LinkedIn caption prefixed with LINKEDIN: for posting this article on the company page. Make it:
-  * 3-5 short lines; the first line a strong hook that makes people want to read.
-  * Professional but human. Plain text only - NO parentheses, brackets, markdown, or emojis.
-  * Do NOT include the article URL (LinkedIn adds a link preview card automatically).
-  * End with 3-5 relevant hashtags, for example: #ManagedIT #Cybersecurity #LosAngeles #ITSupport
-  * Under 1200 characters total.
+- TITLE: an H1 title UNDER 42 characters (so the SEO title stays under 60 with
+  " | Pro Link Systems" appended). Specific beats clever; no colon-cliches.
+- META: a meta description of 150-160 characters that states the article's
+  actual argument, not a generic promise.
+- LINKEDIN: the company-page caption for this article. 3-5 short lines; first
+  line is a real hook per the standards. Plain text only - no parentheses,
+  brackets, markdown, emojis, and NO hashtags (LinkedIn doctrine). Do not
+  include the URL. Under 1200 characters.
 
-Format exactly like this:
-TITLE: Your title here
-META: Your meta description here
+Return EXACTLY this format:
+TITLE: ...
+META: ...
 LINKEDIN:
-Your LinkedIn caption here
-(may span multiple lines, ending with hashtags)
+...(may span lines)
 CONTENT:
-[HTML content here]"""
+[HTML]"""
 
-message = client.messages.create(
-    model="claude-sonnet-4-5",
-    max_tokens=2000,
-    messages=[{"role": "user", "content": prompt}]
-)
+draft_response = _call_editorial(
+    f"""Write today's blog essay for the Pro Link Systems technology publication.
 
-response = message.content[0].text
+Topic assignment: {topic}
+
+Find the 2026 angle on this subject - what changed, what executives misunderstand,
+what decision this should inform - rather than the generic treatment the title
+might invite. If the topic sounds like a listicle, the essay must not be one.
+
+{FORMAT_SPEC}""")
+
+# Review board pass: critique from the 11 perspectives, revise, score honestly.
+review_response = _call_editorial(
+    f"""Review this draft blog package before publication.
+
+DRAFT:
+{draft_response}
+
+Act as the internal review board (CMO, Creative Director, Art Director, Senior
+Technology Editor, CIO, Cybersecurity Expert, AI Strategist, Executive Audience
+Representative, Social Growth Strategist, Brand Director, Copy Editor). Identify
+concrete weaknesses, then REVISE the package to address every finding that
+matters. Apply the truth discipline strictly: strip or reframe any claim that is
+not in the verified facts and has no named primary source - argue without the
+number instead. Then score the revised package 0-100 (holistic Content
+Excellence judgment - do not inflate; a serious weakness caps the score).
+
+Return EXACTLY:
+SCORE: <number>
+FINDINGS: <one line summarizing the two most material board findings>
+{FORMAT_SPEC}""")
+
+_m = re.search(r"^SCORE:\s*(\d+)", review_response, re.MULTILINE)
+_score = int(_m.group(1)) if _m else 0
+_f = re.search(r"^FINDINGS:\s*(.+)$", review_response, re.MULTILINE)
+print(f"[editorial] excellence score: {_score}"
+      + (f" - findings: {_f.group(1)}" if _f else ""))
+if _score < 90:
+    print(f"::error::Blog quality gate failed (score {_score} < 90). "
+          "Publishing nothing beats publishing filler.")
+    sys.exit(1)
+
+# Feed the parser everything from TITLE: onward in the revised package.
+_t = review_response.find("TITLE:")
+if _t == -1:
+    raise SystemExit("generate_blog: review response missing TITLE: block")
+response = review_response[_t:]
 lines = response.strip().split('\n')
 title = ""
 meta = ""
