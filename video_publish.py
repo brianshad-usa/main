@@ -347,6 +347,23 @@ def publish_one(video_file, posts):
 
     attempt("YouTube", do_youtube)
     attempt("LinkedIn", do_linkedin)
+    # Repair pass: the LinkedIn post exists but its promised first comment
+    # previously failed. attempt() short-circuits on done("LinkedIn"), so an
+    # explicit retry run would otherwise never get another chance at the
+    # comment. Comment failure stays a nuisance, not a run failure.
+    li = ch.get("LinkedIn", {})
+    li_comment = (meta.get("linkedin_comment") or "").strip()
+    if (
+        "LinkedIn" in selected and configured["LinkedIn"] and li_comment
+        and li.get("status") == "posted" and li.get("first_comment") != "posted"
+    ):
+        commenter = getattr(linkedin_post, "maybe_comment", None)
+        if commenter and commenter(li.get("id"), li_comment):
+            li["first_comment"] = "posted"
+            summary.append("  [repaired]  LinkedIn first comment")
+        else:
+            _log("LinkedIn: first-comment retry did NOT post; paste it by hand.")
+            summary.append("  [FAILED]   LinkedIn first-comment retry (see log above)")
     attempt("Instagram", do_instagram)
     attempt("Facebook", do_facebook)
 
