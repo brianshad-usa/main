@@ -6,8 +6,8 @@ on:
     - cron: '0 17 * * 1,3,5'
   workflow_dispatch:
     inputs:
-      theme_index:
-        description: 'Theme index 0-7 (leave blank to auto-rotate by day)'
+      idea:
+        description: 'Backlog idea id (e.g. S031) to force; blank = engine selects'
         required: false
         default: ''
 
@@ -34,20 +34,28 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic pillow
 
-      - name: Render post text + branded card
+      # content_studio: backlog selection -> draft -> internal review board ->
+      # excellence gate (<90 fails the run: publishing nothing beats filler) ->
+      # carousel + card render -> pending.json manifest + ledger entry.
+      - name: Editorial engine (select, write, review, render)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python social_render.py "${{ github.event.inputs.theme_index }}"
+        run: |
+          if [ -n "${{ github.event.inputs.idea }}" ]; then
+            python content_studio.py --idea "${{ github.event.inputs.idea }}"
+          else
+            python content_studio.py
+          fi
 
-      - name: Commit + push the card image
+      - name: Commit + push images and ledger
         run: |
           git config user.name "ProLink Social Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add social/
+          git add social/ editorial/ledger.json
           if git diff --cached --quiet; then
-            echo "No new image to commit."
+            echo "No new content to commit."
           else
-            git commit -m "Social card $(date -u +%F)"
+            git commit -m "Editorial content $(date -u +%F)"
             for attempt in 1 2 3; do
               if git pull --rebase --autostash origin main && git push origin HEAD:main; then
                 echo "Pushed on attempt $attempt."; break
@@ -57,7 +65,7 @@ jobs:
             echo "Waiting for raw URL to propagate..."; sleep 15
           fi
 
-      - name: Publish to channels (GBP, LinkedIn, Instagram)
+      - name: Publish to channels (LinkedIn, GBP, Instagram, Facebook)
         env:
           GBP_CLIENT_ID:          ${{ secrets.GBP_CLIENT_ID }}
           GBP_CLIENT_SECRET:      ${{ secrets.GBP_CLIENT_SECRET }}
