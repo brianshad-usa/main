@@ -167,8 +167,15 @@ def _extract_json(raw):
     return json.loads(raw[start:end + 1])
 
 
+def _create(client, **kwargs):
+    """Streaming create - required by the SDK for large max_tokens budgets."""
+    with client.messages.stream(**kwargs) as s:
+        return s.get_final_message()
+
+
 def call_model(client, system, user, max_tokens=30000):
-    msg = client.messages.create(
+    msg = _create(
+        client,
         model=MODEL,
         max_tokens=max_tokens,
         system=system,
@@ -183,7 +190,8 @@ def call_model(client, system, user, max_tokens=30000):
     except (json.JSONDecodeError, ValueError) as e:
         # One repair round: hand the malformed output back for correction.
         _log(f"JSON parse failed ({e}); asking the model to repair its output")
-        fix = client.messages.create(
+        fix = _create(
+            client,
             model=MODEL,
             max_tokens=max_tokens,
             system="You repair malformed JSON. Return ONLY the corrected JSON object - "
