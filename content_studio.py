@@ -167,7 +167,7 @@ def _extract_json(raw):
     return json.loads(raw[start:end + 1])
 
 
-def call_model(client, system, user, max_tokens=16000):
+def call_model(client, system, user, max_tokens=30000):
     msg = client.messages.create(
         model=MODEL,
         max_tokens=max_tokens,
@@ -296,10 +296,15 @@ def main():
 
         if overall < TARGET:
             _log(f"below target {TARGET}; running a second revision round")
-            review = call_model(client, system, review_prompt(idea, package))
-            package = review["revised"]
-            overall = int(review["overall"])
-            scores = review["scores"]
+            round2 = call_model(client, system, review_prompt(idea, package) +
+                                "\n\nThis is the second review round. Focus the revision on the "
+                                "previously named weakest dimensions. Keep board_findings to the "
+                                "three findings that still matter - do not restate resolved ones.")
+            package = round2["revised"]
+            overall = int(round2["overall"])
+            scores = round2["scores"]
+            review["board_findings"] = (review.get("board_findings", []) +
+                                        round2.get("board_findings", []))
             _log(f"review round 2: overall {overall}")
 
         problems = lint(package)
