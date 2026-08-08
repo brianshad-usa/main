@@ -281,6 +281,41 @@ ai_topics = [
     "Business process automation for Los Angeles companies",
 ]
 
+# Frontier topics -- the 2026 editorial reset. These reflect the technology
+# decisions businesses actually face now and are drawn from the same agenda as
+# social_backlog.json. Unused frontier topics are published FIRST (see the
+# selection loop below) before the rotation falls back to the classic list.
+frontier_topics = [
+    "Shadow AI: the tools your Los Angeles employees already use with company data",
+    "Preparing your Microsoft 365 tenant before deploying Copilot",
+    "Copilot data governance: what your permissions mistakes will surface",
+    "Voice cloning and deepfake fraud: new verification rules for LA finance teams",
+    "AI-generated phishing: why well-written email is the new red flag",
+    "Passkeys and passwordless sign-in for Los Angeles businesses",
+    "Identity is the new perimeter: what that means for your LA business",
+    "MFA fatigue attacks and number matching: closing the approval loophole",
+    "Session token theft: the attack that bypasses your MFA",
+    "Machine identities: the service accounts nobody is governing",
+    "An AI acceptable-use policy your Los Angeles employees will actually follow",
+    "Choosing AI vendors: the security questions that actually matter",
+    "AI meeting assistants and note-takers: the retention problem nobody discusses",
+    "SaaS sprawl: the subscription audit that is also a security audit",
+    "Modern ransomware is data theft: why backups alone no longer settle it",
+    "Immutable backups: recovery that survives a compromised administrator",
+    "Cyber insurance questionnaires: answering accurately before renewal",
+    "The edge device problem: why firewalls and VPNs are now the way in",
+    "OAuth app grants: the third-party access that survives password resets",
+    "Break-glass accounts: planning for the day your identity provider is down",
+    "Technology debt: how deferred IT decisions compound for LA businesses",
+    "Co-managed IT in 2026: what internal teams keep and what they hand off",
+    "What an MSP is actually for in 2026",
+    "A one-page technology risk summary for your board",
+    "Supply-chain and vendor risk reviews a mid-size business can actually run",
+    "Windows 10 end of life: the unmanaged-device risk that remains",
+    "Data retention as risk management: why keeping everything is a liability",
+    "The quarterly access review: an afternoon that prevents your worst incident",
+]
+
 # Build the rotation by interleaving AI topics evenly through the rest, so AI
 # content -- one of our core service lines -- appears regularly (about one post
 # in every 9-10, i.e. roughly every three weeks) instead of clustering together.
@@ -293,6 +328,9 @@ for _pos in range(_grand_total):
         _ai_i += 1
     else:
         topics.append(other_topics[_pos - _ai_i])
+# Frontier topics join the master list (so TOPIC_INDEX can reach them and the
+# exhaustion check counts them); the selection loop below prefers them.
+topics.extend(frontier_topics)
 
 # Topic selection.
 #   * Manual runs can force a topic via the TOPIC_INDEX workflow input (0-94).
@@ -335,13 +373,23 @@ if len(used_topics) >= len(topics):
     print("ERROR: topic queue exhausted -- all %d topics have already been "
           "published. Add new topics before the next run." % len(topics))
     sys.exit(1)
+# 2026 editorial reset: publish unused FRONTIER topics first (in order), then
+# fall back to the classic rotation. A manual TOPIC_INDEX still forces exactly
+# the topic asked for, frontier or classic.
 topic = None
-for _off in range(len(topics)):
-    _cand = topics[(topic_index + _off) % len(topics)]
-    if _cand not in used_topics:
-        topic = _cand
-        topic_index = (topic_index + _off) % len(topics)
-        break
+if not topic_override.isdigit():
+    for _cand in frontier_topics:
+        if _cand not in used_topics:
+            topic = _cand
+            topic_index = topics.index(_cand)
+            break
+if topic is None:
+    for _off in range(len(topics)):
+        _cand = topics[(topic_index + _off) % len(topics)]
+        if _cand not in used_topics:
+            topic = _cand
+            topic_index = (topic_index + _off) % len(topics)
+            break
 if topic is None:
     print("ERROR: topic queue exhausted -- no unused topics remain. "
           "Add new topics before the next run.")
