@@ -13,9 +13,11 @@ the API path is live — delete the scheduled task, do not post.
 ## Steps
 
 1. `git -C C:\Users\brian.shad\prolink-landing-page\main pull --rebase origin main`
-2. Find the newest `editorial/manifests/<date>-<idea>.json`. If its date is not
-   today (Pacific), the CI run failed or hasn't run — stop and report; do NOT
-   post stale copy.
+2. Find the newest `editorial/manifests/<date>-<idea>.json`. Manifest dates are
+   stamped in UTC by CI, so the newest may be dated one day ahead of Pacific
+   time. Rule: post it only if its date is within the last 2 calendar days;
+   older means the CI run failed or hasn't run — stop and report; do NOT post
+   stale copy.
 3. Read `editorial/gbp_posted.json`. If the newest manifest's stem is already
    recorded, stop (already posted) and report "nothing to do".
 4. From the manifest take:
