@@ -373,6 +373,14 @@ def main():
     with open(MANIFEST, "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2, ensure_ascii=False)
 
+    # Also persist a dated manifest copy that IS committed (pending.json is
+    # gitignored and dies with the CI runner). The GBP browser runner and any
+    # manual X posting read their channel copy from here after the fact.
+    manifests_dir = os.path.join(HERE, "editorial", "manifests")
+    os.makedirs(manifests_dir, exist_ok=True)
+    with open(os.path.join(manifests_dir, f"{stem}.json"), "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+
     if not offline:
         editorial_engine.record_publication(
             idea, excellence=overall,

@@ -1,0 +1,4 @@
+{
+  "_comment": "Ledger of Google Business Profile posts made via the BROWSER runner (interim path while GBP API access awaits Google approval). The scheduled Claude task appends one entry per successful post; the auto-commit watcher pushes it. social_publish.py does NOT read this file - when the GBP API secrets finally land in GitHub, delete the scheduled task and this ledger simply stops growing.",
+  "posts": []
+}
