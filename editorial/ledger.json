@@ -13,6 +13,20 @@
         "Instagram",
         "GBP"
       ]
+    },
+    {
+      "date": "2026-08-10",
+      "idea_id": "S248",
+      "theme": "ai_threats",
+      "format": "framework",
+      "title": "Approval workflows that assume the request is fake",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
     }
   ]
 }
