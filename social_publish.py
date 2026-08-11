@@ -23,6 +23,7 @@ import gbp_post
 import linkedin_post
 import instagram_post
 import facebook_post
+import x_post
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MANIFEST = os.path.join(HERE, "pending.json")
@@ -57,6 +58,9 @@ def main():
     fb_text = per.get("facebook") or post
     gbp_text = per.get("gbp") or post
     ig_caption = per.get("instagram_caption") or post
+    # X copy: dedicated key if the editorial pipeline provides one, else the
+    # shared post text; x_post.fit_280 handles the length limit either way.
+    x_text = per.get("x") or per.get("twitter") or post
 
     headline = m.get("headline", "Pro Link Systems")
     image_url = RAW_BASE + m["image_file"]
@@ -96,6 +100,11 @@ def main():
             "Facebook",
             _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
             lambda: facebook_post.maybe_post(fb_text, image_url),
+        ),
+        (
+            "X",
+            _has("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"),
+            lambda: x_post.maybe_post(x_text, local_image),
         ),
     ]
 
