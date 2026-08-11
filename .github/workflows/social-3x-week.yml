@@ -81,4 +81,8 @@ jobs:
           IG_ACCESS_TOKEN:        ${{ secrets.IG_ACCESS_TOKEN }}
           FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          X_API_KEY:              ${{ secrets.X_API_KEY }}
+          X_API_SECRET:           ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN:         ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET:        ${{ secrets.X_ACCESS_SECRET }}
         run: python social_publish.py
