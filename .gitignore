@@ -5,3 +5,12 @@ _card_preview.png
 # Python
 __pycache__/
 *.pyc
+
+# Produced-video library (videos/library/).
+# Kept on disk under videos/ per Brian's "produced videos live in videos/"
+# preference, but deliberately NOT committed: the flagship master (88.7 MB) and
+# the full-quality GBP cut (44 MB) each exceed Cloudflare Pages' hard 25 MiB
+# per-file asset limit, and pushing them would fail the site deploy.
+# Every video tracked in this repo is under 19 MB for exactly this reason.
+# Side benefit: files that are never pushed can never trigger publish-video.yml.
+videos/library/
