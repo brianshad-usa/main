@@ -25,21 +25,32 @@ the API path is live — delete the scheduled task, do not post.
      markdown; if it somehow has either, strip them)
    - `cta_type` / `cta_url` — the button (LEARN_MORE → "Learn more" etc.)
    - `image_file` — the card PNG in `social/` (local path after the pull)
-5. In Chrome (Claude in Chrome; Brian's profile is signed into the Google
-   account that manages the Pro Link Systems profile):
-   - Go to `https://business.google.com/` and open the Pro Link Systems
-     location (it may redirect to the profile manager embedded in Google
-     Search — both work).
-   - Choose **Add update** (a.k.a. "What's New" post).
-   - Paste the post text. Attach the card image from
-     `C:\Users\brian.shad\prolink-landing-page\main\social\<image_file>`.
-   - Add the CTA button mapped from `cta_type`, with `cta_url`.
-   - **Post it.** Then verify it appears in the profile's Updates list.
+5. **ASSISTED MODE** (current mode — Claude's browser tools are policy-blocked
+   on www.google.com, where Google now hosts the only post-compose UI; verified
+   2026-08-09 with extension site access set to "all sites"):
+   - Put the post text (`channels.gbp`) on the system clipboard
+     (computer-use `write_clipboard`).
+   - In Chrome, open `https://business.google.com/locations` and click
+     **See your profile** on the row for the VERIFIED service-area business
+     named "Pro Link Systems" (Irvine/Orange + 18 other areas). Every other
+     row is permanently closed or unverified — never touch those. The click
+     opens the profile manager in a google.com tab; Claude cannot see that
+     tab, but Brian can.
+   - Notify Brian: the post text is on the clipboard, ready to paste into
+     **Add update**; name the card image to attach
+     (`C:\Users\brian.shad\prolink-landing-page\main\social\<image_file>`)
+     and the CTA button + URL to set. Include the full post text in the
+     notification body as backup (clipboards get overwritten).
+   - If google.com access is ever granted to the browser tools, revert to
+     full-auto: compose, attach, set CTA, publish, and verify in the Updates
+     list directly.
 6. Append to `editorial/gbp_posted.json` `posts`:
-   `{"stem": "<date>-<idea>", "posted": "<ISO timestamp>", "method": "browser",
-     "cta": "<cta_type>"}`
-   (The auto-commit watcher pushes this within a minute — no git commands needed.)
-7. Report: posted/skipped/failed + the post text. If Chrome or the Google
+   `{"stem": "<date>-<idea>", "staged": "<ISO timestamp>",
+     "method": "assisted-clipboard", "cta": "<cta_type>"}`
+   (The auto-commit watcher pushes this within a minute — no git commands
+   needed.) A staged entry counts as handled — never re-stage a recorded stem;
+   the notification is Brian's to act on.
+7. Report: staged/skipped/failed + the post text. If Chrome or the Google
    session is unavailable, DO NOT retry blindly — report the blocker and leave
    the manifest unposted; the next scheduled run picks it up via the ledger gap.
 
