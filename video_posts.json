@@ -5,7 +5,7 @@
     "caption": "Two in the morning is a bad time to learn how your IT partner works.\n\nSo we published our incident-response playbook — the one the on-call engineer actually opens. All of it: how we decide, in what order, and who we call.\n\nIt's free. No form, no email required.\n\nThe time to find out how someone handles a crisis is before the crisis, not during one.\n\n→ Download the free Incident Response Playbook — no form, no email required:\nhttps://prolinksystems.com/incident-response-playbook\n\n→ Book a free 15-minute readiness review:\nhttps://prolinksystems.com/contact\n\nSOME OF WHAT'S IN IT\n· Panic is a choice. We stay calm because the next move is already written down.\n· Contain, don't erase. Isolate the problem, but preserve the evidence — you will need to know what happened.\n· Communicate out-of-band. Never discuss a live incident on a system that may be listening. Verify any payment change by voice.\n· Recover from tested backups. An untested backup is not a backup; it's a hope.\n· Blameless post-incident review. Every incident we handle makes the playbook better.\n· A real person answers, 24/7, in-house — the same team you'd meet at 2 a.m.\n\nThe full playbook also covers the NIST SP 800-61 lifecycle, our severity tiers, per-incident-type runbooks and the full communications protocol.\n\nABOUT PRO LINK SYSTEMS\nPro Link Systems has provided managed IT, cybersecurity, cloud and disaster recovery to Los Angeles businesses since 1999. Our help desk is in-house, US-based and staffed 24/7 — when you call, a person answers. No phone tree, no hold queue. Our average ticket first-response time is 15 minutes, we resolve 90% of issues on first contact, and average resolution is under an hour. We deploy SentinelOne for endpoint detection and response in client environments.\n\nWoodland Hills, California\nhttps://prolinksystems.com\n1-800-890-6133",
     "url": "https://prolinksystems.com/videos/incident-playbook.mp4",
     "first_published": "2026-08-12T17:52:02+00:00",
-    "updated": "2026-08-12T18:02:19+00:00",
+    "updated": "2026-08-12T18:06:13+00:00",
     "channels": {
       "YouTube": {
         "status": "posted",
@@ -24,7 +24,9 @@
         "reason": "not selected for this run"
       },
       "Facebook": {
-        "status": "failed"
+        "status": "posted",
+        "id": "1278636465331404",
+        "url": "https://www.facebook.com/1278636465331404"
       }
     }
   },
@@ -34,7 +36,7 @@
     "caption": "Two in the morning is a bad time to learn how your IT partner works.\n\nSo we published ours — the incident-response playbook our on-call engineers actually open. How we decide, in what order, and who we call.\n\nFree. No form, no email required. Link in bio.\n\n#IncidentResponse #Cybersecurity #ManagedIT #LosAngeles",
     "url": "https://prolinksystems.com/videos/incident-playbook-vertical.mp4",
     "first_published": "2026-08-12T17:41:58+00:00",
-    "updated": "2026-08-12T17:52:02+00:00",
+    "updated": "2026-08-12T18:06:05+00:00",
     "channels": {
       "YouTube": {
         "status": "skipped",
@@ -45,7 +47,8 @@
         "reason": "not selected for this run"
       },
       "Instagram": {
-        "status": "failed"
+        "status": "posted",
+        "id": "18366785245208161"
       },
       "Facebook": {
         "status": "skipped",
