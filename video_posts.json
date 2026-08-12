@@ -1,5 +1,59 @@
 [
   {
+    "file": "incident-playbook.mp4",
+    "title": "Our Incident Playbook, Published | Pro Link Systems",
+    "caption": "Two in the morning is a bad time to learn how your IT partner works.\n\nSo we published our incident-response playbook — the one the on-call engineer actually opens. All of it: how we decide, in what order, and who we call.\n\nIt's free. No form, no email required.\n\nThe time to find out how someone handles a crisis is before the crisis, not during one.\n\n→ Download the free Incident Response Playbook — no form, no email required:\nhttps://prolinksystems.com/incident-response-playbook\n\n→ Book a free 15-minute readiness review:\nhttps://prolinksystems.com/contact\n\nSOME OF WHAT'S IN IT\n· Panic is a choice. We stay calm because the next move is already written down.\n· Contain, don't erase. Isolate the problem, but preserve the evidence — you will need to know what happened.\n· Communicate out-of-band. Never discuss a live incident on a system that may be listening. Verify any payment change by voice.\n· Recover from tested backups. An untested backup is not a backup; it's a hope.\n· Blameless post-incident review. Every incident we handle makes the playbook better.\n· A real person answers, 24/7, in-house — the same team you'd meet at 2 a.m.\n\nThe full playbook also covers the NIST SP 800-61 lifecycle, our severity tiers, per-incident-type runbooks and the full communications protocol.\n\nABOUT PRO LINK SYSTEMS\nPro Link Systems has provided managed IT, cybersecurity, cloud and disaster recovery to Los Angeles businesses since 1999. Our help desk is in-house, US-based and staffed 24/7 — when you call, a person answers. No phone tree, no hold queue. Our average ticket first-response time is 15 minutes, we resolve 90% of issues on first contact, and average resolution is under an hour. We deploy SentinelOne for endpoint detection and response in client environments.\n\nWoodland Hills, California\nhttps://prolinksystems.com\n1-800-890-6133",
+    "url": "https://prolinksystems.com/videos/incident-playbook.mp4",
+    "first_published": "2026-08-12T17:52:02+00:00",
+    "updated": "2026-08-12T18:02:19+00:00",
+    "channels": {
+      "YouTube": {
+        "status": "posted",
+        "id": "zDnJnHL4Zjs",
+        "url": "https://youtu.be/zDnJnHL4Zjs",
+        "privacy": "unlisted"
+      },
+      "LinkedIn": {
+        "status": "posted",
+        "id": "urn:li:ugcPost:7493366265449910272",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7493366265449910272",
+        "first_comment": "failed"
+      },
+      "Instagram": {
+        "status": "skipped",
+        "reason": "not selected for this run"
+      },
+      "Facebook": {
+        "status": "failed"
+      }
+    }
+  },
+  {
+    "file": "incident-playbook-vertical.mp4",
+    "title": "Our Incident Playbook, Published (vertical) | Pro Link Systems",
+    "caption": "Two in the morning is a bad time to learn how your IT partner works.\n\nSo we published ours — the incident-response playbook our on-call engineers actually open. How we decide, in what order, and who we call.\n\nFree. No form, no email required. Link in bio.\n\n#IncidentResponse #Cybersecurity #ManagedIT #LosAngeles",
+    "url": "https://prolinksystems.com/videos/incident-playbook-vertical.mp4",
+    "first_published": "2026-08-12T17:41:58+00:00",
+    "updated": "2026-08-12T17:52:02+00:00",
+    "channels": {
+      "YouTube": {
+        "status": "skipped",
+        "reason": "not selected for this run"
+      },
+      "LinkedIn": {
+        "status": "skipped",
+        "reason": "not selected for this run"
+      },
+      "Instagram": {
+        "status": "failed"
+      },
+      "Facebook": {
+        "status": "skipped",
+        "reason": "not selected for this run"
+      }
+    }
+  },
+  {
     "file": "wildfire-season.mp4",
     "title": "Wildfire Season: The Continuity Checklist | Pro Link Systems",
     "caption": "Most Southern California businesses have a continuity plan.\n\nVery few have ever run it.\n\nThose are not the same thing, and the gap between them shows up on exactly one kind of day — the one where a public safety power shutoff arrives on schedule, announced days in advance, and completely outside your control.\n\nWhat decides how that day goes isn't the size of the binder. It's whether anyone has opened it.\n\nWe made a 90-second film about the three things we check, in the order we check them:\n\n1. Sequence. Not everything has to come back at once — but something has to come back first. Decide that before you need it, not at 7am in a dark office.\n\n2. Location. A copy of what matters, somewhere the same outage can't reach.\n\n3. Rehearsal. Run it on an ordinary Tuesday, when nothing is wrong.\n\nThe third one is the one everyone skips. It's also the only one that makes the first two real.\n\nWe've been doing this in Los Angeles since 1999. The checklist we use is free — link in the first comment.",
