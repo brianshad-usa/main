@@ -1,0 +1,32 @@
+{
+  "title": "Our Incident Playbook, Published | Pro Link Systems",
+  "caption": "Two in the morning is a bad time to learn how your IT partner works.\n\nSo we published our incident-response playbook — the one the on-call engineer actually opens. All of it: how we decide, in what order, and who we call.\n\nIt's free. No form, no email required.\n\nThe time to find out how someone handles a crisis is before the crisis, not during one.\n\n→ Download the free Incident Response Playbook — no form, no email required:\nhttps://prolinksystems.com/incident-response-playbook\n\n→ Book a free 15-minute readiness review:\nhttps://prolinksystems.com/contact\n\nSOME OF WHAT'S IN IT\n· Panic is a choice. We stay calm because the next move is already written down.\n· Contain, don't erase. Isolate the problem, but preserve the evidence — you will need to know what happened.\n· Communicate out-of-band. Never discuss a live incident on a system that may be listening. Verify any payment change by voice.\n· Recover from tested backups. An untested backup is not a backup; it's a hope.\n· Blameless post-incident review. Every incident we handle makes the playbook better.\n· A real person answers, 24/7, in-house — the same team you'd meet at 2 a.m.\n\nThe full playbook also covers the NIST SP 800-61 lifecycle, our severity tiers, per-incident-type runbooks and the full communications protocol.\n\nABOUT PRO LINK SYSTEMS\nPro Link Systems has provided managed IT, cybersecurity, cloud and disaster recovery to Los Angeles businesses since 1999. Our help desk is in-house, US-based and staffed 24/7 — when you call, a person answers. No phone tree, no hold queue. Our average ticket first-response time is 15 minutes, we resolve 90% of issues on first contact, and average resolution is under an hour. We deploy SentinelOne for endpoint detection and response in client environments.\n\nWoodland Hills, California\nhttps://prolinksystems.com\n1-800-890-6133",
+  "tags": [
+    "incident response",
+    "incident response plan",
+    "incident response playbook",
+    "cyber incident response",
+    "ransomware response",
+    "managed detection and response",
+    "MDR",
+    "business email compromise",
+    "out of band communication",
+    "tested backups",
+    "cybersecurity Los Angeles",
+    "managed IT services Los Angeles",
+    "security operations",
+    "Pro Link Systems",
+    "Woodland Hills IT"
+  ],
+  "channels": [
+    "YouTube",
+    "LinkedIn",
+    "Facebook"
+  ],
+  "captions": {
+    "LinkedIn": "Two in the morning is a bad time to learn how your IT partner works.\n\nSo we published our incident-response playbook — the one the on-call engineer actually opens. All of it: how we decide, in what order, and who we call.\n\nSome of what's in it:\n\n· Panic is a choice. We stay calm because the next move is already written down.\n· Contain, don't erase. Isolate the problem, but preserve the evidence.\n· Communicate out-of-band. Never discuss a live incident on a system that may be listening — and verify any payment change by voice.\n· Recover from tested backups. An untested backup is not a backup; it's a hope.\n· Blameless post-incident review. Every incident we handle makes the playbook better.\n\nThe time to find out how someone handles a crisis is before the crisis. Not during one.\n\nIt's free. No form, no email required. Link in the first comment.",
+    "Facebook": "When something goes wrong at two in the morning, a real person answers. In-house, US-based, around the clock — the same team you would meet at 2 a.m.\n\nWe've published the incident-response playbook we actually run, so you can read how we handle a crisis before you ever need us to.\n\nIt's free. No form, no email required.\n\nhttps://prolinksystems.com/incident-response-playbook"
+  },
+  "linkedin_comment": "Download the free Incident Response Playbook — no form, no email required: https://prolinksystems.com/incident-response-playbook",
+  "note": "Landscape 16:9 flagship master, burned-in captions. Instagram is excluded here on purpose and served the 9:16 cut (incident-playbook-vertical.mp4) instead."
+}
