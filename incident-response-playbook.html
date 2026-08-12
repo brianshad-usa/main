@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-1068497497');
+  </script>
+  <!-- Google Ads call-conversion tracking (click-to-call) -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+      if (!link) return;
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'AW-1068497497/LKCuCL275MkcENn0v_0D' });
+      }
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>The Pro Link Systems Incident Response Playbook</title>
+  <meta name="description" content="The incident response plan we actually run: NIST SP 800-61 severity tiers, roles, a first-60-minutes checklist, and runbooks. Free PDF, no form required.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://prolinksystems.com/incident-response-playbook">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://prolinksystems.com/incident-response-playbook">
+  <meta property="og:title" content="The Pro Link Systems Incident Response Playbook">
+  <meta property="og:description" content="The plan we actually run when something goes wrong &mdash; severity tiers, roles, the response lifecycle, a first-60-minutes checklist, and per-incident runbooks. Free PDF.">
+  <meta property="og:image" content="https://prolinksystems.com/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ProLink_Systems">
+  <meta name="twitter:image" content="https://prolinksystems.com/logo.png">
+  <meta name="twitter:title" content="The Pro Link Systems Incident Response Playbook">
+  <meta name="twitter:description" content="The plan we actually run when something goes wrong. Severity tiers, roles, lifecycle, first-60-minutes checklist and runbooks. Free PDF, no form.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://prolinksystems.com/incident-response-playbook#webpage",
+    "url": "https://prolinksystems.com/incident-response-playbook",
+    "name": "The Pro Link Systems Incident Response Playbook",
+    "description": "The incident response plan Pro Link Systems runs when a client is under attack, down, or unsure: severity tiers, assigned roles, the NIST SP 800-61 response lifecycle, a first-60-minutes checklist, and runbooks for ransomware, business email compromise, credential compromise, data breach, major outage, and lost devices.",
+    "inLanguage": "en-US",
+    "isPartOf": { "@id": "https://prolinksystems.com/#website" },
+    "publisher": {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://prolinksystems.com/#business",
+      "name": "Pro Link Systems",
+      "url": "https://prolinksystems.com",
+      "logo": "https://prolinksystems.com/logo.png",
+      "telephone": "+18008906133"
+    },
+    "mainEntity": {
+      "@type": "DigitalDocument",
+      "name": "The Pro Link Systems Incident Response Playbook",
+      "encodingFormat": "application/pdf",
+      "url": "https://prolinksystems.com/downloads/prolink-incident-response-playbook.pdf"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/_shared.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
+      padding: 72px 32px 64px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .page-hero > * { position: relative; }
+    .page-hero h1 {
+      font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 800; color: #fff;
+      letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px;
+      max-width: 860px; margin-left: auto; margin-right: auto;
+    }
+    .hero-lede {
+      color: rgba(255,255,255,.78); font-size: 1.05rem; line-height: 1.7;
+      max-width: 640px; margin: 0 auto 30px;
+    }
+    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    /* .72 not .55: at 13px over the light end of the hero gradient (#0d4d85),
+       .55 composites to only 3.8:1. This clears AA at 5.33:1. */
+    .hero-note { color: rgba(255,255,255,.72); font-size: .82rem; margin-top: 16px; }
+
+    /* ── Intro ─────────────────────────────────────────────── */
+    .ir-intro { max-width: 780px; margin: 0 auto; }
+    .ir-intro p { font-size: 1rem; line-height: 1.75; color: var(--text); margin-bottom: 14px; }
+    .ir-intro p:last-child { margin-bottom: 0; }
+
+    .ir-wrap { max-width: 900px; margin: 0 auto; }
+    .ir-wrap > h2, .ir-lead {
+      max-width: 900px; margin-left: auto; margin-right: auto;
+    }
+    .ir-h2 {
+      font-size: 1.45rem; font-weight: 800; color: var(--navy);
+      letter-spacing: -.02em; margin: 0 0 10px;
+    }
+    .ir-lead { font-size: 1rem; line-height: 1.7; color: var(--text); margin: 0 0 24px; }
+
+    /* ── Severity table ────────────────────────────────────── */
+    .sev-table {
+      width: 100%; border-collapse: collapse;
+      border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden;
+      font-size: .93rem;
+    }
+    .sev-table thead th {
+      background: var(--navy-dark); color: #fff; text-align: left;
+      font-size: .85rem; font-weight: 700; letter-spacing: .02em;
+      padding: 11px 14px;
+    }
+    .sev-table td {
+      padding: 12px 14px; border-top: 1px solid var(--border);
+      color: var(--text); line-height: 1.55; vertical-align: top;
+    }
+    .sev-table tbody tr:nth-child(odd) { background: var(--off-white); }
+    .sev-tier { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .sev-note {
+      font-size: .88rem; line-height: 1.6; color: var(--text-muted);
+      font-style: italic; margin: 14px 0 0;
+    }
+    .sev-scroll { overflow-x: auto; }
+
+    /* ── Numbered checklist ────────────────────────────────── */
+    .ir-steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+    .ir-steps li {
+      position: relative; counter-increment: step;
+      padding: 12px 6px 12px 44px;
+      border-bottom: 1px solid var(--border);
+      font-size: .97rem; line-height: 1.65; color: var(--text);
+    }
+    .ir-steps li:last-child { border-bottom: none; }
+    .ir-steps li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 12px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--navy); color: #fff;
+      font-size: .82rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ir-steps strong { font-weight: 700; color: var(--navy); }
+
+    /* ── Runbook cards ─────────────────────────────────────── */
+    .ir-runbooks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .ir-runbook {
+      background: var(--white); border: 1px solid var(--border);
+      border-left: 3px solid var(--navy);
+      border-radius: var(--r-sm); padding: 20px 22px;
+      box-shadow: var(--sh-sm);
+    }
+    .ir-runbook h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin: 0 0 7px; }
+    .ir-runbook p { font-size: .89rem; line-height: 1.6; color: var(--text); margin: 0; }
+
+    /* ── Lifecycle ─────────────────────────────────────────── */
+    .ir-cycle { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .ir-cycle li {
+      background: var(--off-white); border: 1px solid var(--border);
+      border-radius: var(--r-sm); padding: 16px 20px;
+      font-size: .95rem; line-height: 1.65; color: var(--text);
+    }
+    .ir-cycle strong { font-weight: 700; color: var(--navy); }
+
+    /* ── Download strip ────────────────────────────────────── */
+    .dl-strip {
+      max-width: 900px; margin: 0 auto;
+      background: var(--white); border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--r-md); padding: 24px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap; box-shadow: var(--sh-sm);
+    }
+    .dl-copy h2 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+    .dl-copy p { font-size: .9rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+    .ir-disclaimer {
+      max-width: 900px; margin: 26px auto 0;
+      font-size: .85rem; line-height: 1.6; color: var(--text-muted); font-style: italic;
+    }
+
+    @media (max-width: 900px) {
+      .ir-runbooks { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .page-hero { padding: 56px 20px 48px; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .ir-runbooks { grid-template-columns: 1fr; }
+      .dl-strip { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Pro Link Systems home"><img src="/logo.png" alt="Pro Link Systems" width="160" height="44"></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="nav-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Free Consultation</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+  <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+  <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
+  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero" aria-label="Incident response playbook">
+  <span class="section-label">Free Resource</span>
+  <h1>The Pro Link Systems Incident Response Playbook</h1>
+  <p class="hero-lede">The plan we actually run when something goes wrong &mdash; written down, and published, because the moment to find out how your IT partner handles a crisis is before the crisis.</p>
+  <div class="hero-actions">
+    <a href="/downloads/prolink-incident-response-playbook.pdf" class="btn btn-gold" download>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download the Playbook (PDF)
+    </a>
+    <a href="/contact" class="btn btn-outline-white">Get a free 15-minute readiness review</a>
+  </div>
+  <p class="hero-note">No form, no email required &mdash; read it before you need it.</p>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="ir-intro">
+    <p>Most IT providers keep their incident process in their heads. We wrote ours down and published it, because the moment to find out how your IT partner handles a crisis is <strong>before</strong> the crisis, not at 2 a.m. during one.</p>
+    <p>This is the playbook our team follows when a client is under attack, down, or unsure. It is deliberately calm. Panic skips steps, destroys evidence, and turns a bad hour into a bad week &mdash; our job is to already know the next move so you don&rsquo;t have to.</p>
+    <p>It is built on the incident-response lifecycle from <strong>NIST SP 800-61</strong> &mdash; Prepare, Detect &amp; Analyze, Contain, Eradicate &amp; Recover, and Learn &mdash; adapted for the real conditions of a small or mid-sized business. Four pages, free, and no email address required.</p>
+  </div>
+</section>
+
+<!-- SEVERITY -->
+<section class="section section-off" style="padding-top:0;padding-bottom:56px;">
+  <div class="ir-wrap">
+    <h2 class="ir-h2">How we classify severity</h2>
+    <p class="ir-lead">An incident is any event that threatens the confidentiality, integrity, or availability of your systems or data &mdash; something broken, exposed, or under attack that needs a coordinated response, not just a help-desk ticket. We classify every one so the response matches the stakes.</p>
+    <div class="sev-scroll">
+      <table class="sev-table">
+        <thead>
+          <tr><th scope="col">Severity</th><th scope="col">What it looks like</th><th scope="col">Our response</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sev-tier">SEV-1 &mdash; Critical</td>
+            <td>Active ransomware, confirmed breach, full outage of a critical system, funds at risk</td>
+            <td>Immediate all-hands. Incident Commander assigned. Owner called, not emailed.</td>
+          </tr>
+          <tr>
+            <td class="sev-tier">SEV-2 &mdash; High</td>
+            <td>One compromised account, malware contained to a machine, a key system degraded, targeted phishing</td>
+            <td>Rapid response, senior engineer engaged, client notified within the hour</td>
+          </tr>
+          <tr>
+            <td class="sev-tier">SEV-3 &mdash; Moderate</td>
+            <td>Suspicious activity, isolated outage, a failed backup, a lost device</td>
+            <td>Same-day investigation, monitored to resolution</td>
+          </tr>
+          <tr>
+            <td class="sev-tier">SEV-4 &mdash; Low</td>
+            <td>A blocked threat, a single reported phishing email, a minor anomaly</td>
+            <td>Logged, reviewed, used to tune defenses</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sev-note">Severity can move in either direction as we learn more. We would rather over-classify for the first thirty minutes than under-react.</p>
+  </div>
+</section>
+
+<!-- ROLES + LIFECYCLE -->
+<section class="section" style="padding-top:56px;padding-bottom:56px;">
+  <div class="ir-wrap">
+    <h2 class="ir-h2">Who does what, and in what order</h2>
+    <p class="ir-lead">In an incident, unclear roles cost time. The playbook assigns them immediately &mdash; an <strong>Incident Commander</strong> who owns the response and keeps the timeline, the <strong>Technical Lead(s)</strong> doing containment and recovery, a <strong>Communications Lead</strong> so your team gets one clear voice instead of five fragments, and <strong>your decision-maker</strong>, looped in from the start for anything touching operations, money, or legal exposure.</p>
+    <ul class="ir-cycle">
+      <li><strong>1. Prepare</strong> &mdash; the work done on an ordinary day: MFA on email, remote access and financial systems; endpoint detection and response on every managed device; a real patch cadence; and tested, off-site backups. An untested backup is not a backup.</li>
+      <li><strong>2. Detect &amp; Triage</strong> &mdash; confirm it is real, assign severity, name an Incident Commander, open a live timeline. Then: what is happening, what is affected, and is it still spreading?</li>
+      <li><strong>3. Contain</strong> &mdash; stop the bleeding before cleaning the wound, using the least-disruptive move that stops the spread. We preserve evidence while we contain; we do not wipe or reboot a compromised machine before capturing what it can tell us.</li>
+      <li><strong>4. Eradicate &amp; Recover</strong> &mdash; remove the cause and confirm it is gone, not just quiet. Restore from known-clean, tested backups in a deliberate sequence. Nothing is &ldquo;recovered&rdquo; until it is verified clean and stable, not merely powered on.</li>
+      <li><strong>5. Learn</strong> &mdash; a blameless post-incident review within days: a clear timeline, what worked, what didn&rsquo;t, and the specific changes that make a repeat less likely and less costly.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FIRST 60 MINUTES -->
+<section class="section section-off" style="padding-top:56px;padding-bottom:56px;">
+  <div class="ir-wrap">
+    <h2 class="ir-h2">The first 60 minutes</h2>
+    <p class="ir-lead">The opening hour sets the tone. This is the checklist, in order:</p>
+    <ol class="ir-steps">
+      <li><strong>Confirm and classify</strong> &mdash; is it real, and how bad? Assign severity and an Incident Commander.</li>
+      <li><strong>Open the timeline</strong> &mdash; every action and finding, timestamped, from minute one.</li>
+      <li><strong>Contain, don&rsquo;t erase</strong> &mdash; isolate what&rsquo;s spreading; preserve the evidence.</li>
+      <li><strong>Communicate out-of-band</strong> &mdash; if email or accounts may be compromised, we reach you by phone or a channel the attacker can&rsquo;t see. We never discuss a live incident on a system that may be listening.</li>
+      <li><strong>Protect what matters next</strong> &mdash; verify backups are intact and reachable before anything else touches them.</li>
+      <li><strong>Bring in the right people</strong> &mdash; senior engineers, and where warranted, guidance on cyber-insurance and legal notification obligations.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- RUNBOOKS -->
+<section class="section" style="padding-top:56px;padding-bottom:56px;">
+  <div class="ir-wrap">
+    <h2 class="ir-h2">Runbooks for the incidents that actually happen</h2>
+    <p class="ir-lead">Six specific playbooks, each with the moves that matter and the mistakes that cost the most:</p>
+    <div class="ir-runbooks">
+      <div class="ir-runbook">
+        <h3>Ransomware</h3>
+        <p>Isolate immediately but do <strong>not</strong> power machines down &mdash; it destroys evidence. Assess recovery options before any thought of payment; with tested backups, paying is usually avoidable.</p>
+      </div>
+      <div class="ir-runbook">
+        <h3>Business email compromise</h3>
+        <p>Reset credentials and revoke sessions, then hunt for attacker-created mailbox rules &mdash; auto-forward and auto-delete are the classic hidden footholds. Every payment change is verified by voice.</p>
+      </div>
+      <div class="ir-runbook">
+        <h3>Account or credential compromise</h3>
+        <p>Disable, revoke tokens, reset, re-enroll MFA. Review what the account could reach and whether it was used to move laterally. Assume the credential is public and rotate what it shared.</p>
+      </div>
+      <div class="ir-runbook">
+        <h3>Data breach or exfiltration</h3>
+        <p>Contain the access path first, then determine what data, whose, and how much &mdash; that drives the legal and notification obligations. Breach notification has deadlines, not just technical steps.</p>
+      </div>
+      <div class="ir-runbook">
+        <h3>Major outage or infrastructure failure</h3>
+        <p>Establish what&rsquo;s down and the business impact, then work the restore in priority order &mdash; decided in advance, not during. Steady status cadence, so silence never reads as &ldquo;still broken.&rdquo;</p>
+      </div>
+      <div class="ir-runbook">
+        <h3>Lost or stolen device</h3>
+        <p>Remotely lock or wipe, revoke access and sessions, rotate any credentials it held. Assess what data it could reach and whether encryption was enabled &mdash; it should have been.</p>
+      </div>
+    </div>
+    <p class="ir-disclaimer">This playbook is a general framework, adapted to each client&rsquo;s systems, obligations, and risk. It is guidance, not a substitute for a response plan built for your specific environment.</p>
+  </div>
+</section>
+
+<!-- DOWNLOAD STRIP -->
+<section class="section" style="padding-top:0;">
+  <div class="dl-strip">
+    <div class="dl-copy">
+      <h2>Want the printable version?</h2>
+      <p>The full playbook &mdash; 4 pages, print-ready, no form and no email required.</p>
+    </div>
+    <a href="/downloads/prolink-incident-response-playbook.pdf" class="btn btn-navy" download>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download the Playbook (PDF)
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <span class="section-label">Free 15-Minute Readiness Review</span>
+  <h2>Want us to pressure-test your incident readiness?</h2>
+  <p>A straight read on where you&rsquo;re exposed and what to shore up first &mdash; no pitch. Because the best time to meet the team that answers at 2 a.m. is long before you need them.</p>
+  <div class="cta-buttons">
+    <a href="/contact" class="btn btn-gold">Book your free 15-minute review</a>
+    <a href="tel:18008906133" class="btn btn-outline-white">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <a href="/managed-it-services">Managed IT</a>
+      <a href="/cybersecurity-services">Cybersecurity</a>
+      <a href="/cloud-services">Cloud &amp; Infrastructure</a>
+      <a href="/backup-disaster-recovery">Disaster Recovery</a>
+      <a href="/it-help-desk">24/7 Help Desk</a>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog/">Blog</a>
+      <a href="/continuity-checklist">Continuity Checklist</a>
+      <a href="/incident-response-playbook">Incident Response Playbook</a>
+      <a href="/legal">Legal / Terms</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>21241 Ventura Blvd<br>Woodland Hills, CA 91364</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
+    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
