@@ -103,7 +103,12 @@ def main():
         ),
         (
             "X",
-            _has("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET"),
+            # Deliberately OFF by default even with creds present: X API posting
+            # is paywalled (402 credits-depleted, 2026-08) and posting is manual
+            # for now. Arm by setting the repo Actions VARIABLE X_ENABLED=1 --
+            # credentials alone must never turn this channel on.
+            _has("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")
+            and os.environ.get("X_ENABLED", "").strip() == "1",
             lambda: x_post.maybe_post(x_text, local_image),
         ),
     ]

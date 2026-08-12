@@ -85,4 +85,7 @@ jobs:
           X_API_SECRET:           ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN:         ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET:        ${{ secrets.X_ACCESS_SECRET }}
+          # X posting is manual for now (API paywalled). To arm the automated
+          # channel later: create the repo Actions VARIABLE X_ENABLED = 1.
+          X_ENABLED:              ${{ vars.X_ENABLED }}
         run: python social_publish.py
