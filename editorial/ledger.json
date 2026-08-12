@@ -27,6 +27,20 @@
         "Instagram",
         "GBP"
       ]
+    },
+    {
+      "date": "2026-08-12",
+      "idea_id": "S089",
+      "theme": "ransomware",
+      "format": "linkedin_analysis",
+      "title": "Modern ransomware doesn't need to encrypt anything",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
     }
   ]
 }
