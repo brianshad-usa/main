@@ -1,0 +1,7 @@
+{
+  "title": "Our Incident Playbook, Published - Google Business Profile cut (720p, 52.3s)",
+  "caption": "Archive copy of the GBP short cut for C093. Uploaded to Google Business Profile by hand - there is no video path to GBP in this repo (gbp_post.py posts text plus an image only). Kept at 8.5MB so it clears the GBP composer's upload cap. GBP only.",
+  "channels": [],
+  "archive_only": true,
+  "note": "Archive copy of the GBP short cut for C093. Social publishing for this film is handled by incident-playbook.mp4 (YouTube/LinkedIn/Facebook) and incident-playbook-vertical.mp4 (Instagram). channels: [] means publish nowhere - key presence decides, not truthiness."
+}
