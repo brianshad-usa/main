@@ -1,0 +1,145 @@
+{
+  "post": "A finance director's phone drops to no service mid-morning. Carrier glitch, she assumes. By lunch a retail store has moved her number onto a stranger's SIM, and the six-digit codes guarding her email and the bank portal are arriving on his phone.\n\nThat is why texted codes went from recommended baseline to the weakest option still in wide use. A carrier can reassign a phone number. Nobody can talk a passkey out of a store clerk.\n\nThe companion reversal is the 90-day password change, which mostly produces Summer2026, then Fall2026. Guidance moved years ago to changing on evidence of a problem rather than on a calendar.\n\nBoth rules are still sitting in handbooks that were written once and never reopened. That, more than either rule, is the part worth fixing.",
+  "headline": "The security advice that expired while you were enforcing it",
+  "cta_label": "How we approach identity",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-14-s198-card.png",
+  "image_file_jpg": "2026-08-14-s198-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S198",
+  "core_idea": "Forced 90-day rotation and SMS codes were withdrawn by the institutions that made them standard, and most remediation then stops one tier short — swapping SMS for a push-approval app closes the carrier gap only, while origin-bound credentials close the phishing gap. Underneath both: identity policy is written once, approved once, given no review date and no named owner, so retired guidance keeps getting enforced and removing a control is politically harder than adding one.",
+  "channels": {
+    "linkedin": "Two of the identity controls your company still enforces were withdrawn by the institutions that made them standard practice.\n\nForced password rotation every 90 days. Six-digit codes texted to a phone.\n\nRotation gets met with a pattern: Spring2026 becomes Summer2026, and one leaked version narrows every future guess. NIST's current digital identity guidelines advise against arbitrary periodic change; Microsoft removed password expiry from its Windows security baselines.\n\nA phone number is not an identity. It is a routing instruction a carrier can reassign to whoever sounds convincing — the seam SIM swap and port-out fraud target. Synthetic voice made sounding convincing cheap.\n\nMost remediation plans then stop one tier short. Replacing SMS with a push-approval app closes the carrier gap and nothing else. An attacker relaying the login through a proxy site still harvests the approval, because the user is approving a prompt, not proving which site they are on. Passkeys and hardware keys bind the credential to the origin. Fewer prompts to steal is not the same as nothing to phish.\n\nBefore anyone edits a handbook: dropping expiry works only alongside what replaces it — length over complexity, screening against known-breached passwords, MFA at the phishing-resistant tier. Auditors and insurance questionnaires still ask about expiry, so document the rationale.\n\nThe finding worth carrying upstairs is not either rule. Identity policy rarely carries a review date, and often has no named owner, which is how retired advice stays enforced. The AI use policy someone drafted in 2023 is on the same track.",
+    "facebook": "A finance director's phone drops to no service mid-morning. Carrier glitch, she assumes. By lunch a retail store has moved her number onto a stranger's SIM, and the six-digit codes guarding her email and the bank portal are arriving on his phone.\n\nThat is why texted codes went from recommended baseline to the weakest option still in wide use. A carrier can reassign a phone number. Nobody can talk a passkey out of a store clerk.\n\nThe companion reversal is the 90-day password change, which mostly produces Summer2026, then Fall2026. Guidance moved years ago to changing on evidence of a problem rather than on a calendar.\n\nBoth rules are still sitting in handbooks that were written once and never reopened. That, more than either rule, is the part worth fixing.",
+    "gbp": "Two edits worth making before a cyber insurance questionnaire asks about them.\n\nFirst: remove the 90-day password change. A calendar rule produces Spring2026, then Summer2026, and one leak narrows the next several guesses. NIST guidance moved years ago — change on evidence of compromise, require length over complexity.\n\nSecond: get verification codes off text messages. A carrier can reassign a phone number. If you are opening the project anyway, go to passkeys; app approvals can still be phished through a proxy site.\n\nEdit one is an afternoon of writing. Edit two is a project, and legacy apps and shared logins are where it stalls. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Two identity rules most companies still enforce were withdrawn by the institutions that made them standard: 90-day password rotation and SMS codes. The guidance moved years ago. The handbook did not.",
+      "Rotation loses to human predictability. A calendar requirement produces Spring2026, then Summer2026, and one leaked version narrows every future guess. NIST's digital identity guidelines advise against arbitrary periodic change.",
+      "SMS loses to carrier control. A phone number is a routing instruction, reassignable to whoever sounds convincing — and synthetic voice made that cheap. Microsoft's identity team has urged customers off phone-based authentication.",
+      "Where most upgrades stop: SMS to a push-approval app. That closes the carrier gap only. A proxy-site attacker still collects the approval, because the user approves a prompt rather than proving the origin. Passkeys and hardware keys are bound to it.",
+      "Budget for the politics too. Removal is harder than addition: expiry still appears on audit and insurance questionnaires, so a deletion without written rationale reads as a lapse in the next assessment.",
+      "The transferable part: identity policy rarely carries a review date or a named owner. Neither does the AI use policy written in 2023. Advice retires on its own schedule; documents need someone to reopen them."
+    ],
+    "instagram_caption": "Swapping texted codes for an approval app feels like finishing the job. It closes one gap of two.\n\nForced 90-day rotation and SMS verification were both withdrawn by the institutions that made them standard practice. The reversals are old news. What is worth attention is how long enforcement outlives the reasoning behind it, and how often the replacement stops one tier short of the actual threat.\n\nInside: both reversals, the tier most upgrades miss, why deleting a control is harder than adding one, and the question to ask whoever owns identity.\n\n#identitysecurity #cybersecurity #ITleadership"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-14-s198-01.png",
+      "2026-08-14-s198-02.png",
+      "2026-08-14-s198-03.png",
+      "2026-08-14-s198-04.png",
+      "2026-08-14-s198-05.png",
+      "2026-08-14-s198-06.png",
+      "2026-08-14-s198-07.png",
+      "2026-08-14-s198-08.png"
+    ],
+    "jpg": [
+      "2026-08-14-s198-01.jpg",
+      "2026-08-14-s198-02.jpg",
+      "2026-08-14-s198-03.jpg",
+      "2026-08-14-s198-04.jpg",
+      "2026-08-14-s198-05.jpg",
+      "2026-08-14-s198-06.jpg",
+      "2026-08-14-s198-07.jpg",
+      "2026-08-14-s198-08.jpg"
+    ]
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 89,
+      "originality": 95,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 96,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "EXTERNAL SOURCE, QUALITATIVE (NIST SP 800-63B, Digital Identity Guidelines): current NIST guidance advises against requiring arbitrary periodic password change and supports change on evidence of compromise. No revision number, publication date, or figure asserted, because the brief supplied none.",
+    "EXTERNAL SOURCE, QUALITATIVE (Microsoft): Microsoft removed password expiration requirements from its Windows security baselines, and Microsoft's identity engineering team has publicly urged customers away from phone-based (SMS and voice) authentication. Stated without dates or figures for the same reason.",
+    "ANALYSIS, NEW THIS ROUND: push-approval and TOTP authenticator apps remove carrier reassignment as an attack path but remain phishable through adversary-in-the-middle proxy sites, because the user authenticates to a relay rather than to a verified origin. Named as an established, publicly documented technique class only — no incident, victim, toolkit, or volume claimed.",
+    "ANALYSIS, NEW THIS ROUND: passkeys, FIDO2 hardware keys and certificate-based authentication are bound to the origin, which is why they resist that relay. Stated as a technical property of the credential type, not as a product capability claim about any vendor's implementation.",
+    "CORRECTED THIS ROUND: slides 5 and 7 previously contradicted each other by demanding phishing-resistant MFA and then offering an authenticator app as an equivalent destination. All channels now rank the tiers explicitly.",
+    "CORRECTED THIS ROUND: verbatim cross-channel reuse removed. 'Guidance expires. Documents do not.' no longer appears on both LinkedIn and X; the LinkedIn, Instagram and X closers are now distinct; the audit/insurance argument is expressed once per channel in different terms.",
+    "CORRECTED IN PRIOR ROUND, STILL IN FORCE: no claim that NIST authored the 90-day rotation rule; no dated chronology of the reversals; no 'no new software' or 'no new budget' claim — a policy edit and an MFA migration are kept separate.",
+    "ANALYSIS: scheduled rotation produces predictable incremental passwords, so one disclosed version narrows guesses at successors.",
+    "ANALYSIS: a phone number is a carrier-controlled routing instruction rather than an identity, which is the seam SIM swap and port-out fraud exploit. Both named as established, publicly documented fraud categories, not as any specific incident.",
+    "ANALYSIS: synthetic voice lowers the cost of the social-engineering step in carrier and help-desk impersonation. Framed as reasoning, with no incident, victim, volume, or trend figure claimed.",
+    "ANALYSIS: auditors and cyber insurance questionnaires still commonly ask about password expiry, so removal requires documented rationale and compensating controls. Stated as a general practice observation, not a citation of any named insurer, auditor, or version of a standard. No regulation or deadline is invented.",
+    "OPINION, LABELLED IN CONTEXT: the more valuable executive question is the missing review date and missing named owner on identity policy, not the two controls themselves.",
+    "OPINION / PREDICTION BY ANALOGY: AI use policies written in 2023 are on the same trajectory. No data claimed.",
+    "ILLUSTRATIVE SCENARIO (Facebook): the finance director is a constructed scenario. Not a client, not an implied client, not a described real incident.",
+    "PROLINK CLAIMS: only F012 is used, once, in GBP, in its verified wording — 'served Los Angeles businesses from Woodland Hills since 1999.' No metric from verified_facts.json is cited. F003, F005, F006, F009, F010, F011 are not referenced. No certification, partnership, or compliance status claimed. No competitor named.",
+    "NO NUMBERS about the industry, threat landscape, breach cost, downtime, or attacker behaviour appear anywhere in the package. '90 days' and 'six-digit' describe the controls under discussion, not measured claims."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft leans on a well-worn MSP staple (\"stop rotating passwords, stop using SMS\") and only partly escapes it. The escape route — policy with no expiry date — was stated but under-built; it arrived in the last paragraph of LinkedIn and nowhere in Facebook or GBP. The reframe now carries earlier weight in every channel, and the card headline no longer dates itself to \"2016,\" which was a chronology claim we cannot source."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Four channels repeated the same two sentences nearly verbatim (\"Any MFA beats none,\" \"Spring2026 becomes Summer2026,\" \"A phone number is not an identity\"). That is syndication, not channel doctrine. Each channel now carries a distinct entry point: LinkedIn the governance argument, Facebook the SIM-swap morning, GBP the two-edit advisory, X the compression, Instagram the progression."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel shipped with zero visual specification — kicker/headline/body text with no typographic system, no diagram concept, no color or grid direction. A slide deck of prose is not editorial design. Added an explicit visual_direction: a two-column reversal diagram (\"then / now\") on slides 3 and 4, a timeline-gap graphic on the pattern slide, and a strict type hierarchy with generous negative space. Final render still requires proof sign-off before publication."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two attribution errors. First, \"retired by the people who wrote them\" implies NIST authored the 90-day rule; forced rotation's lineage runs through many bodies and vendor defaults, and the safest true statement is that NIST's current digital identity guidelines advise against arbitrary periodic change. Second, \"both were correct in 2016\" pins a date the brief does not supply — NIST's reversal and Microsoft's baseline change happened on their own timelines. Both softened to \"orthodoxy a decade ago\" with no asserted dates."
+    },
+    {
+      "role": "CIO",
+      "finding": "\"Two policy edits, no new software\" and \"three edits, no new budget\" were operationally false. Removing password expiry is a policy edit; migrating MFA off SMS is a project involving enrollment, legacy applications that only accept passwords, shared and service accounts, and support load during cutover. The revision states plainly that one is an edit and one is a project, and names where projects stall."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft omitted the compensating controls, which makes the advice dangerous as written — dropping expiry without length requirements, breached-password screening, and phishing-resistant MFA weakens the posture rather than improving it. Also removed the self-defeating line \"the reversal came from NIST and Microsoft, not from a vendor with something to sell\"; Microsoft sells identity. Attribution now stands on the guidance itself."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in the package registered as 2026. The SIM-swap seam is materially cheaper to exploit now that voice cloning removes the hardest part of impersonating a customer to a carrier or a help desk, and the \"policy with no review date\" pattern applies with more force to AI use policies written in 2023 than to password rules written in 2016. Both threads added, briefly, without manufacturing AI urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft told an executive to remove a control without telling them how to survive the conversation that follows. Auditors, cyber insurance questionnaires, and PCI scoping still ask about password expiry. Removing a documented control without a written rationale looks like a lapse in the next assessment. That political reality is now a named beat on LinkedIn, X, and its own carousel slide — it is the most useful thing in the package."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread's fourth post restated the LinkedIn closer and gave the reader nothing new, which is where threads lose retention. The thread is now five posts with a distinct payload each, and the highest-value post — how to remove a control without failing an audit — sits at position four where drop-off is steepest."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Nothing in the draft was identifiably ProLink; the GBP asset in particular had no local anchor, which is the entire point of that channel. GBP now closes with F012 (Los Angeles businesses, Woodland Hills, since 1999) as a credibility line rather than a pitch, and the CTA label was changed from the generic \"See our approach.\""
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Concrete violations: GBP had two consecutive sentences opening with \"A\" (\"A phone number can be reassigned... A passkey or authenticator app cannot\"); the revised LinkedIn draft nearly repeated \"Both\" in consecutive sentences and was corrected to \"Both... Each\"; Instagram used British \"favours\"; Facebook opened with the telegraphing throwaway \"Here is a scenario,\" which the standards' spirit rejects. LinkedIn also ran roughly 1,750 characters, over the 1,600 ceiling, and is now inside range."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package contradicts itself on MFA tiers. Slide 5 demands 'phishing-resistant MFA' while slide 7 offers 'passkeys or an authenticator app' as equivalent destinations. They are not equivalent: a push or TOTP app closes the carrier-reassignment gap and nothing else, and an adversary-in-the-middle proxy still harvests the approval because the user is approving a prompt rather than proving the origin. Left as drafted, the most technically literate reader in the audience catches the error, and the post loses the authority the whole concept depends on. Naming the tier gap is also the single most original thing available here."
+    },
+    {
+      "role": "Copy Editor (with Brand Director concurring)",
+      "finding": "Channel doctrine is broken by verbatim reuse. 'Guidance expires. Documents do not.' appears in both LinkedIn and X post 5. 'you have your answer' / 'you already have the finding' is the same closer on LinkedIn and Instagram slide 8. X post 4 and LinkedIn paragraph 5 share the audit-and-insurance argument nearly word for word, including the identical three-item compensating-controls list. Each channel is supposed to carry the best expression of one idea, not the same sentences redistributed."
+    },
+    {
+      "role": "Art Director (with Creative Director concurring)",
+      "finding": "The deck is three designed slides and five text slides. Slides 3, 4 and 6 have graphic devices; the hook, the catch, the guidance and the takeaway are typography alone, so the visual system reads as decoration applied unevenly rather than a system. Slide 8's headline is also two full sentences, which cannot survive the large-scale high-contrast serif treatment specified without collapsing the hierarchy the rest of the deck establishes."
+    }
+  ],
+  "offline_test": false
+}
