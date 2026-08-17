@@ -55,6 +55,20 @@
         "Instagram",
         "GBP"
       ]
+    },
+    {
+      "date": "2026-08-17",
+      "idea_id": "S144",
+      "theme": "exec_strategy",
+      "format": "economics",
+      "title": "Technology debt compounds like financial debt",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
     }
   ]
 }
