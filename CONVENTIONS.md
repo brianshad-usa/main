@@ -121,3 +121,51 @@ bypass the guard; fix the content instead.
 - When counting things in reports, state the unit (lines vs rules vs files).
 
 *Last updated: August 2026. Append new decisions below this line.*
+
+## Google Cloud project & API credentials (2026-08-19)
+
+- All Google API OAuth lives in ONE Cloud project: **"ProLink - Sandbox"**
+  (being renamed "ProLink Marketing APIs"), project number **6748977141**,
+  owned by brianshad@gmail.com. It holds the "ProLink Ads client" OAuth client.
+  **Never migrate this client to another project** — OAuth clients can't move,
+  and re-minting would touch the working Ads pipeline. Enabled APIs there:
+  Google Ads, Search Console, Places (classic).
+- Search Console property is **URL-prefix `https://prolinksystems.com/`**
+  (NOT sc-domain), owner brianshad@gmail.com.
+- **Dual secret stores**: `C:\Googleads\secrets.env` (local scheduled tasks)
+  AND GitHub Actions secrets on `brianshad-usa/prolink-warroom` (cloud
+  workflows refresh.yml / cmo-weekly.yml). Any re-minted token or new key
+  (esp. GSC_REFRESH_TOKEN, GOOGLE_PLACES_API_KEY) must be updated in BOTH,
+  or local and cloud dashboards silently diverge.
+- `dashboard/generate_gsc_token.py` pins login_hint=brianshad@gmail.com,
+  supports `--no-browser` (paste URL into the right browser profile), and
+  prefers GSC_CLIENT_ID/GSC_CLIENT_SECRET when set (falls back to Ads client).
+
+## Review-request agent (2026-08-19)
+
+- Template is approval-locked: gratitude-led opening named to the client's
+  company (never "thank you for your business"), ONE Google link only, fixed
+  subject "A quick favor, {first}?" (no emoji), two-minute friction line.
+  Optional per-contact `relationship` field — ONLY verified tenure (Snitzer
+  18yr, Waverly 23yr); never invent history.
+- `reviewed.txt` (one email/line) = responders, permanently excluded from
+  follow-ups. Check it AND the sent list in review_tracking.json before
+  loading any new batch (Batch-4 load caught 2 duplicates).
+- Sending runs via Scheduled Task "ProLink Review Requests" (weekdays 9am,
+  5/day, self-stops on empty queue). New batches: append to CONTACTS and the
+  schedule picks them up — do not create parallel senders.
+
+## War-room coordination (2026-08-19)
+
+- `C:\Googleads` is repo brianshad-usa/prolink-warroom (branch war-room) with
+  its OWN auto-sync — assume anything you write there reaches GitHub within
+  ~1 minute, and cloud workflows execute the repo's code.
+- `dashboard/tasks.yaml`: claim task ids via the "NEXT FREE ID" header line,
+  incremented IN THE SAME EDIT that adds tasks (T25/T26 were double-assigned
+  by two sessions on 8/11; ads tasks were renumbered T31-T36).
+- Every meaningful Google Ads change gets a row in the Change Ledger in
+  `ADS_COMMAND_CENTER.md` (§3) with an evaluation date. Auction insights are
+  API-gated — refresh the §4c snapshot monthly via the Ads UI.
+- Local scheduled tasks on Brian's PC: "ProLink Weekly Conversions" (Mon 8am),
+  "ProLink Marketing Dashboard" (Mon 8am, registered 8/18), "ProLink Review
+  Requests" (weekdays 9am). Don't duplicate these in new automations.
