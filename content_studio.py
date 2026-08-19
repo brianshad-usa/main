@@ -279,6 +279,26 @@ def offline_package(idea):
 
 def main():
     offline = "--offline" in sys.argv
+
+    # ── Run mode: single-sourced slot generation ─────────────────────
+    # The post "slot" is stem = "<date>-<idea_id>", and editorial_engine.select()
+    # is deterministic given (backlog, ledger, date). So ANY two runs on the same
+    # date with the same ledger mint the SAME slot - which is exactly how a local
+    # test render once collided with the production daily Action (both produced
+    # <date>-s116-*). To make production the single authoritative producer:
+    #   * PRODUCTION (the GitHub Action, which sets CONTENT_STUDIO_ENV=production)
+    #     writes the real social/ + editorial/manifests/ files and is the ONLY
+    #     path that advances the ledger.
+    #   * Every other run (local/dev/test, --offline, --test/--dry-run/--no-commit)
+    #     defaults to a throwaway, gitignored scratch/ namespace with a "test-"
+    #     stem, and never writes a real slot or touches the ledger.
+    # The default is deliberately TEST: a naive `python content_studio.py` on a
+    # laptop can never mint or commit a real slot.
+    explicit_test = offline or any(f in sys.argv for f in
+                                   ("--test", "--dry-run", "--no-commit"))
+    production = (os.environ.get("CONTENT_STUDIO_ENV") == "production"
+                 and not explicit_test)
+
     forced = None
     if "--idea" in sys.argv:
         forced = sys.argv[sys.argv.index("--idea") + 1]
@@ -291,6 +311,21 @@ def main():
     else:
         idea, _ = editorial_engine.select()
     _log(f"selected {idea['id']} [{idea['theme']}/{idea['format']}] - {idea['title']}")
+
+    # Resolve the output namespace from the run mode. Production writes real
+    # slots; everything else is isolated under gitignored scratch/.
+    if production:
+        out_dir = SOCIAL_DIR
+        manifests_dir = os.path.join(HERE, "editorial", "manifests")
+        manifest_path = MANIFEST
+        stem_prefix = ""
+        _log("run mode: PRODUCTION (authoritative slot; ledger will advance)")
+    else:
+        out_dir = os.path.join(HERE, "scratch", "social")
+        manifests_dir = out_dir
+        manifest_path = os.path.join(HERE, "scratch", "pending.json")
+        stem_prefix = "test-"
+        _log(f"run mode: TEST/scratch -> {out_dir} (no real slot, ledger untouched)")
 
     # Visual-style + format rotation: no two consecutive posts (per channel)
     # share the same look+shape, brand DNA held constant. Deterministic from the
@@ -342,13 +377,13 @@ def main():
 
     # ── Render ───────────────────────────────────────────────────
     today = datetime.date.today().isoformat()
-    stem = f"{today}-{idea['id'].lower()}"
-    os.makedirs(SOCIAL_DIR, exist_ok=True)
+    stem = f"{stem_prefix}{today}-{idea['id'].lower()}"
+    os.makedirs(out_dir, exist_ok=True)
 
     render = directive["render"]
     slides = package["instagram"]["slides"]
     rendered = carousel_graphic.render_carousel(
-        slides, SOCIAL_DIR, stem, variant=render.get("carousel_cover", "bold"))
+        slides, out_dir, stem, variant=render.get("carousel_cover", "bold"))
     slide_pngs = [os.path.basename(p) for p, _ in rendered]
     slide_jpgs = [os.path.basename(j) for _, j in rendered]
     _log(f"rendered {len(rendered)} carousel slides [cover: {render.get('carousel_cover')}]")
