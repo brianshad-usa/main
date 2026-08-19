@@ -2,6 +2,16 @@
 pending.json
 _card_preview.png
 
+# Local/dev/test renders from content_studio.py. Real post slots are minted ONLY
+# by the production GitHub Action (CONTENT_STUDIO_ENV=production); every other run
+# writes here instead of the real social/ + editorial/manifests/ paths, so a test
+# render can never collide with a production slot or be staged by git add -A.
+scratch/
+# Belt-and-suspenders: never commit a test-prefixed slot even if one is produced
+# outside scratch/ by an older build.
+social/test-*
+editorial/manifests/test-*
+
 # Python
 __pycache__/
 *.pyc

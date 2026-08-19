@@ -468,7 +468,7 @@ def main():
 
     _log(f"core idea: {package['core_idea']}")
     _log(f"excellence: {overall}/100")
-    _log(f"manifest written: {MANIFEST}")
+    _log(f"manifest written: {manifest_path}")
 
 
 if __name__ == "__main__":

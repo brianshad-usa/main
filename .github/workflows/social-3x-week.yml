@@ -52,6 +52,10 @@ jobs:
       - name: Editorial engine (select, write, review, render)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Marks this as THE authoritative slot producer. Only a run with this
+          # set writes real social/ + editorial/manifests/ files and advances the
+          # ledger. Local/dev runs lack it and render to gitignored scratch/.
+          CONTENT_STUDIO_ENV: production
         run: |
           if [ -n "${{ github.event.inputs.idea }}" ]; then
             python content_studio.py --idea "${{ github.event.inputs.idea }}"
