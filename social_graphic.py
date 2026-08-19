@@ -15,6 +15,7 @@ Used by social_syndicate.py. Pure Pillow, no external services.
 """
 
 import os
+import re
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
@@ -109,34 +110,43 @@ def _tracked(draw, xy, text, font, fill, tracking):
         x += draw.textlength(ch, font=font) + tracking
 
 
-def make_card(headline, kicker, cta, out_path, accent=GOLD):
-    img = Image.new("RGB", (W, H), NAVY_DARK)
-    d = ImageDraw.Draw(img)
+# Visual-style treatments driven by social_variety.py. Every treatment keeps the
+# brand DNA constant (navy ground, gold as the single accent, real logo + contact
+# footer); only the hero composition changes so consecutive posts don't look alike.
+STYLES = ("bold_type", "stat", "illustrative", "quote", "photo")
 
-    _gradient(d, 0, 0, W, H - FOOTER_H, NAVY_DARK, NAVY)
 
-    # Soft accent glow, top-right
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(glow).ellipse([W - 420, -260, W + 220, 380], fill=(*NAVY_MID, 90))
-    img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
-    d = ImageDraw.Draw(img)
+def _brand_footer(img, d, accent):
+    """The fixed brand strip: accent border, real logo, contact block."""
+    d.rectangle([0, H - FOOTER_H, W, H], fill=WHITE)
+    d.rectangle([0, H - FOOTER_H, W, H - FOOTER_H + 5], fill=accent)
+    if os.path.exists(LOGO_PATH):
+        logo = Image.open(LOGO_PATH).convert("RGBA")
+        target_h = 86
+        target_w = int(logo.width * (target_h / logo.height))
+        logo = logo.resize((target_w, target_h), Image.LANCZOS)
+        ly = H - FOOTER_H + (FOOTER_H - target_h) // 2
+        img.paste(logo, (MARGIN, ly), logo)
+    site_font = _font("semi", 32)
+    tel_font = _font("reg", 28)
+    right = W - MARGIN
+    fy = H - FOOTER_H + 56
+    d.text((right - d.textlength("prolinksystems.com", font=site_font), fy),
+           "prolinksystems.com", font=site_font, fill=NAVY)
+    d.text((right - d.textlength("1-800-890-6133", font=tel_font), fy + 44),
+           "1-800-890-6133", font=tel_font, fill=MUTED)
 
-    # Kicker (accent, uppercase, tracked) with leading dot
+
+def _kicker(d, kicker, accent, y=100, dot=True):
     kfont = _font("semi", 30)
-    d.ellipse([MARGIN, 104, MARGIN + 16, 120], fill=accent)
-    _tracked(d, (MARGIN + 30, 100), kicker.upper(), kfont, accent, 2.5)
+    x = MARGIN
+    if dot:
+        d.ellipse([MARGIN, y + 4, MARGIN + 16, y + 20], fill=accent)
+        x = MARGIN + 30
+    _tracked(d, (x, y), kicker.upper(), kfont, accent, 2.5)
 
-    # Accent divider
-    d.rectangle([MARGIN, 156, MARGIN + 76, 162], fill=accent)
 
-    # Headline (white, auto-fit, wrapped)
-    hfont, lines, line_h = _fit_headline(d, headline, W - 2 * MARGIN, 470)
-    y = 212
-    for ln in lines:
-        d.text((MARGIN, y), ln, font=hfont, fill=WHITE)
-        y += line_h
-
-    # CTA pill (gold, navy text)
+def _cta_pill(d, cta, accent=GOLD):
     cfont = _font("semi", 33)
     pad_x, pad_y = 34, 20
     tw = d.textlength(cta, font=cfont)
@@ -147,29 +157,168 @@ def make_card(headline, kicker, cta, out_path, accent=GOLD):
                         radius=pill_h // 2, fill=GOLD)
     d.text((MARGIN + pad_x, pill_y + pad_y - 2), cta, font=cfont, fill=NAVY)
 
-    # White footer strip with accent top border
-    d.rectangle([0, H - FOOTER_H, W, H], fill=WHITE)
-    d.rectangle([0, H - FOOTER_H, W, H - FOOTER_H + 5], fill=accent)
 
-    # Real logo (left, vertically centered)
-    if os.path.exists(LOGO_PATH):
-        logo = Image.open(LOGO_PATH).convert("RGBA")
-        target_h = 86
-        target_w = int(logo.width * (target_h / logo.height))
-        logo = logo.resize((target_w, target_h), Image.LANCZOS)
-        ly = H - FOOTER_H + (FOOTER_H - target_h) // 2
-        img.paste(logo, (MARGIN, ly), logo)
+def _navy_ground(gradient=True):
+    img = Image.new("RGB", (W, H), NAVY_DARK)
+    d = ImageDraw.Draw(img)
+    if gradient:
+        _gradient(d, 0, 0, W, H - FOOTER_H, NAVY_DARK, NAVY)
+    return img, ImageDraw.Draw(img)
 
-    # Contact, right-aligned
-    site_font = _font("semi", 32)
-    tel_font = _font("reg", 28)
-    right = W - MARGIN
-    fy = H - FOOTER_H + 56
-    d.text((right - d.textlength("prolinksystems.com", font=site_font), fy),
-           "prolinksystems.com", font=site_font, fill=NAVY)
-    d.text((right - d.textlength("1-800-890-6133", font=tel_font), fy + 44),
-           "1-800-890-6133", font=tel_font, fill=MUTED)
 
+def _card_bold(headline, kicker, cta, accent):
+    img, d = _navy_ground(gradient=True)
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse([W - 420, -260, W + 220, 380], fill=(*NAVY_MID, 90))
+    img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
+    d = ImageDraw.Draw(img)
+    _kicker(d, kicker, accent)
+    d.rectangle([MARGIN, 156, MARGIN + 76, 162], fill=accent)
+    hfont, lines, line_h = _fit_headline(d, headline, W - 2 * MARGIN, 470)
+    y = 212
+    for ln in lines:
+        d.text((MARGIN, y), ln, font=hfont, fill=WHITE)
+        y += line_h
+    _cta_pill(d, cta)
+    return img, d
+
+
+def _split_stat(headline):
+    """Pull a leading figure out of the headline for the data_viz treatment."""
+    m = re.match(r"^\s*([~<>]?\$?\d[\d,\.]*\s?%?(?:\s?(?:minutes|min|hours|hour|x))?)\b[\s:–-]*(.*)$",
+                 headline, re.IGNORECASE)
+    if m and m.group(1).strip():
+        return m.group(1).strip(), (m.group(2).strip() or headline)
+    return None, headline
+
+
+def _card_stat(headline, kicker, cta, accent):
+    """data_viz: one figure as the hero on a flat navy panel."""
+    img, d = _navy_ground(gradient=False)
+    _gradient(d, 0, 0, W, H - FOOTER_H, NAVY, NAVY_DARK)
+    _kicker(d, kicker, accent)
+    stat, rest = _split_stat(headline)
+    y = 210
+    if stat:
+        sfont = _font("head", 300)
+        # shrink to fit width
+        while d.textlength(stat, font=sfont) > W - 2 * MARGIN and sfont.size > 120:
+            sfont = _font("head", sfont.size - 12)
+        d.text((MARGIN, y), stat, font=sfont, fill=GOLD)
+        y += sfont.size + 24
+        d.rectangle([MARGIN, y, MARGIN + 120, y + 6], fill=accent)
+        y += 34
+        rfont, lines, line_h = _fit_headline(d, rest, W - 2 * MARGIN, 320, start=64, min_size=40)
+        for ln in lines:
+            d.text((MARGIN, y), ln, font=rfont, fill=WHITE)
+            y += line_h
+    else:
+        # no figure available: large centered claim, still distinct from bold_type
+        hfont, lines, line_h = _fit_headline(d, headline, W - 2 * MARGIN, 470, start=88)
+        for ln in lines:
+            d.text((MARGIN, y), ln, font=hfont, fill=WHITE)
+            y += line_h
+    _cta_pill(d, cta)
+    return img, d
+
+
+def _card_illustrative(headline, kicker, cta, accent):
+    """illustrative: abstract ProLink concentric-arc motif, no clip-art."""
+    img, d = _navy_ground(gradient=True)
+    overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    cx, cy = W + 60, -60
+    for i, r in enumerate(range(240, 1200, 150)):
+        col = (*GOLD, 42) if i % 3 == 0 else (*NAVY_MID, 70)
+        od.arc([cx - r, cy - r, cx + r, cy + r], start=90, end=200, fill=col, width=8)
+    img = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+    d = ImageDraw.Draw(img)
+    _kicker(d, kicker, accent)
+    d.rectangle([MARGIN, 156, MARGIN + 76, 162], fill=accent)
+    hfont, lines, line_h = _fit_headline(d, headline, W - 2 * MARGIN - 120, 470)
+    y = 212
+    for ln in lines:
+        d.text((MARGIN, y), ln, font=hfont, fill=WHITE)
+        y += line_h
+    _cta_pill(d, cta)
+    return img, d
+
+
+def _card_quote(headline, kicker, cta, accent):
+    """quote_minimal: one line, big negative space, quotation ornament."""
+    img, d = _navy_ground(gradient=False)
+    _gradient(d, 0, 0, W, H - FOOTER_H, NAVY_DARK, (9, 40, 70))
+    # oversized quotation mark ornament
+    qfont = _font("head", 340)
+    d.text((MARGIN - 12, 70), "“", font=qfont, fill=GOLD)
+    hfont, lines, line_h = _fit_headline(d, headline, W - 2 * MARGIN, 360, start=76, min_size=44)
+    y = 360
+    for ln in lines:
+        d.text((MARGIN, y), ln, font=hfont, fill=WHITE)
+        y += line_h
+    y += 20
+    d.rectangle([MARGIN, y, MARGIN + 90, y + 6], fill=accent)
+    if kicker:
+        _tracked(d, (MARGIN, y + 26), kicker.upper(), _font("semi", 26), accent, 2.5)
+    _cta_pill(d, cta)
+    return img, d
+
+
+def _card_photo(headline, kicker, cta, accent, photo_path=None):
+    """photographic: duotone photo ground. ASSET-GATED - only real photos.
+    Falls back to a textured navy field if no verified photo is supplied, so the
+    engine never fabricates imagery of people."""
+    img, d = _navy_ground(gradient=True)
+    if photo_path and os.path.exists(photo_path):
+        photo = Image.open(photo_path).convert("L").resize((W, H - FOOTER_H))
+        duo = Image.new("RGB", photo.size)
+        px = photo.load()
+        dp = duo.load()
+        for yy in range(photo.height):
+            for xx in range(photo.width):
+                t = px[xx, yy] / 255
+                dp[xx, yy] = tuple(int(NAVY_DARK[k] + (255 - NAVY_DARK[k]) * t * 0.65)
+                                   for k in range(3))
+        img.paste(duo, (0, 0))
+        scrim = Image.new("RGBA", (W, H - FOOTER_H), (*NAVY_DARK, 120))
+        img = Image.alpha_composite(img.convert("RGBA"),
+                                    Image.new("RGBA", (W, H), (0, 0, 0, 0)))
+        img.paste(Image.alpha_composite(Image.new("RGBA", scrim.size, (0, 0, 0, 0)), scrim),
+                  (0, 0), scrim)
+        img = img.convert("RGB")
+        d = ImageDraw.Draw(img)
+    _kicker(d, kicker, accent)
+    hfont, lines, line_h = _fit_headline(d, headline, W - 2 * MARGIN, 320, start=80)
+    y = H - FOOTER_H - 60 - len(lines) * line_h
+    for ln in lines:
+        d.text((MARGIN, y), ln, font=hfont, fill=WHITE)
+        y += line_h
+    return img, d
+
+
+_CARD_BUILDERS = {
+    "bold_type": _card_bold,
+    "stat": _card_stat,
+    "illustrative": _card_illustrative,
+    "quote": _card_quote,
+    "photo": _card_photo,
+}
+
+
+def make_card(headline, kicker, cta, out_path, accent=GOLD, style="bold_type",
+              photo_path=None):
+    """Render a 1080x1080 brand card in one of several visual styles.
+
+    style: bold_type | stat | illustrative | quote | photo  (default preserves
+    the legacy look, so existing callers are unaffected). Brand DNA (navy, gold
+    accent, logo + contact footer) is constant across every style.
+    """
+    builder = _CARD_BUILDERS.get(style, _card_bold)
+    if style == "photo":
+        img, d = builder(headline, kicker, cta, accent, photo_path=photo_path)
+    else:
+        img, d = builder(headline, kicker, cta, accent)
+    _brand_footer(img, d, accent)
     img.save(out_path, "PNG")
     return out_path
 

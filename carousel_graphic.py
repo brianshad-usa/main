@@ -132,7 +132,25 @@ def _chrome(d, img, idx, total, dark):
             d.ellipse([cx - r, H - 76 - r, cx + r, H - 76 + r], fill=fill)
 
 
-def render_slide(spec, idx, total, out_path):
+def _cover_motif(d, img, variant):
+    """A restrained motif on the hook slide so consecutive carousels differ at a
+    glance. Brand DNA constant: navy ground, gold as the only accent."""
+    if variant == "arc":
+        overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        od = ImageDraw.Draw(overlay)
+        cx, cy = W + 40, -40
+        for i, r in enumerate(range(220, 1100, 140)):
+            col = (*GOLD, 46) if i % 3 == 0 else (34, 56, 82, 80)
+            od.arc([cx - r, cy - r, cx + r, cy + r], start=95, end=205, fill=col, width=7)
+        img.paste(Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB"), (0, 0))
+    elif variant == "quote":
+        d.text((MARGIN - 10, 60), "“", font=_font("black", 300), fill=GOLD)
+    elif variant == "stat":
+        d.rectangle([MARGIN, 176, MARGIN + 220, 184], fill=GOLD)
+    # "bold" and "photo" leave the type-led cover as-is.
+
+
+def render_slide(spec, idx, total, out_path, variant="bold"):
     role = spec.get("role", "content")
     dark = role in ("hook", "cta")
     bg = NAVY_DEEP if dark else PAPER
@@ -142,6 +160,9 @@ def render_slide(spec, idx, total, out_path):
 
     img = Image.new("RGB", (W, H), bg)
     d = ImageDraw.Draw(img)
+    if role == "hook" and variant:
+        _cover_motif(d, img, variant)
+        d = ImageDraw.Draw(img)
     _chrome(d, img, idx, total, dark)
 
     y = 208
@@ -188,14 +209,17 @@ def render_slide(spec, idx, total, out_path):
     return out_path
 
 
-def render_carousel(slides, out_dir, stem):
-    """Render every slide; return list of (png_path, jpg_path)."""
+def render_carousel(slides, out_dir, stem, variant="bold"):
+    """Render every slide; return list of (png_path, jpg_path).
+
+    variant restyles the hook/cover slide (bold|arc|quote|stat|photo) so
+    consecutive carousels don't open the same way. Body slides are unchanged."""
     os.makedirs(out_dir, exist_ok=True)
     outputs = []
     total = len(slides)
     for i, spec in enumerate(slides, start=1):
         png = os.path.join(out_dir, f"{stem}-{i:02d}.png")
-        render_slide(spec, i, total, png)
+        render_slide(spec, i, total, png, variant=variant)
         jpg = png[:-4] + ".jpg"
         Image.open(png).convert("RGB").save(jpg, "JPEG", quality=92)
         outputs.append((png, jpg))

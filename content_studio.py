@@ -37,6 +37,7 @@ import datetime
 import editorial_engine
 import carousel_graphic
 import social_graphic
+import social_variety
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOCIAL_DIR = os.path.join(HERE, "social")
@@ -88,13 +89,21 @@ def system_prompt():
     )
 
 
-def draft_prompt(idea):
+def draft_prompt(idea, directive=None):
+    variety_block = ""
+    if directive:
+        variety_block = (
+            f"\nTODAY'S VISUAL TREATMENT: {directive['style']} / {directive['format']}\n"
+            f"{directive['copy_directive']}\n"
+            "Match the copy to this treatment. The brand look (navy, gold accent, logo,\n"
+            "contact line) is fixed by the renderer - do not describe it; write for the shape.\n"
+        )
     return f"""Create today's cross-channel content package from this approved backlog concept:
 
 CONCEPT {idea['id']} - {idea['title']}
 Theme: {idea['theme']}  |  Format: {idea['format']}  |  Timeliness: {idea.get('timeliness')}
 Editorial angle: {idea['angle']}
-
+{variety_block}
 One core idea; the best native expression of it for each channel - never the same
 text twice. The concept's angle is the assignment: sharpen it, don't dilute it.
 
@@ -283,6 +292,14 @@ def main():
         idea, _ = editorial_engine.select()
     _log(f"selected {idea['id']} [{idea['theme']}/{idea['format']}] - {idea['title']}")
 
+    # Visual-style + format rotation: no two consecutive posts (per channel)
+    # share the same look+shape, brand DNA held constant. Deterministic from the
+    # ledger, so a re-run picks the same treatment.
+    directive = social_variety.plan(editorial_engine.load_ledger(), idea=idea)
+    _log(f"variety: {directive['style']}/{directive['format']} "
+         f"(prev {directive['previous_run']['style']}/{directive['previous_run']['format']}"
+         f"{', asset-gated' if directive['asset_gated'] else ''})")
+
     review = None
     if offline:
         package = offline_package(idea)
@@ -293,7 +310,7 @@ def main():
         client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
         system = system_prompt()
 
-        package = call_model(client, system, draft_prompt(idea))
+        package = call_model(client, system, draft_prompt(idea, directive))
         _log("draft complete; convening review board")
 
         review = call_model(client, system, review_prompt(idea, package))
@@ -328,18 +345,29 @@ def main():
     stem = f"{today}-{idea['id'].lower()}"
     os.makedirs(SOCIAL_DIR, exist_ok=True)
 
+    render = directive["render"]
     slides = package["instagram"]["slides"]
-    rendered = carousel_graphic.render_carousel(slides, SOCIAL_DIR, stem)
+    rendered = carousel_graphic.render_carousel(
+        slides, SOCIAL_DIR, stem, variant=render.get("carousel_cover", "bold"))
     slide_pngs = [os.path.basename(p) for p, _ in rendered]
     slide_jpgs = [os.path.basename(j) for _, j in rendered]
-    _log(f"rendered {len(rendered)} carousel slides")
+    _log(f"rendered {len(rendered)} carousel slides [cover: {render.get('carousel_cover')}]")
 
-    # Single-image fallback card (GBP photo, LinkedIn/Facebook image)
+    # Single-image fallback card (GBP photo, LinkedIn/Facebook image), rendered in
+    # this run's rotating visual style. photo_path is only set when a verified
+    # real photograph is registered (assets/variety_assets.json) - the engine
+    # never fabricates imagery of people.
+    photo_path = None
+    if render.get("card_style") == "photo":
+        photos = social_variety.available_assets().get("photographic") or []
+        photo_path = os.path.join(HERE, photos[0]) if photos else None
     card_png = f"{stem}-card.png"
     social_graphic.make_card(package["card_headline"],
                              idea["theme"].replace("_", " ").title(),
                              package["cta_label"],
-                             os.path.join(SOCIAL_DIR, card_png))
+                             os.path.join(SOCIAL_DIR, card_png),
+                             style=render.get("card_style", "bold_type"),
+                             photo_path=photo_path)
     from PIL import Image
     card_jpg = card_png[:-4] + ".jpg"
     Image.open(os.path.join(SOCIAL_DIR, card_png)).convert("RGB").save(
@@ -365,6 +393,8 @@ def main():
             "instagram_caption": package["instagram"]["caption"],
         },
         "carousel": {"png": slide_pngs, "jpg": slide_jpgs},
+        "variety": {"style": directive["style"], "format": directive["format"],
+                    "channels": directive["channels"]},
         "excellence": {"overall": overall, "scores": scores},
         "claims_audit": package.get("claims_audit", []),
         "board_findings": (review or {}).get("board_findings", []),
@@ -384,7 +414,9 @@ def main():
     if not offline:
         editorial_engine.record_publication(
             idea, excellence=overall,
-            channels=["LinkedIn", "Facebook", "Instagram", "GBP"])
+            channels=["LinkedIn", "Facebook", "Instagram", "GBP"],
+            variety={"style": directive["style"], "format": directive["format"],
+                     "channels": directive["channels"]})
 
     _log(f"core idea: {package['core_idea']}")
     _log(f"excellence: {overall}/100")

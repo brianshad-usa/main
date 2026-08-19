@@ -81,10 +81,14 @@ def composite(idea, weights):
     return round(total / wsum, 3) if wsum else 0.0
 
 
-def record_publication(idea, excellence=None, channels=None, today=None):
-    """Append a published (or generated-for-publish) item to the ledger."""
+def record_publication(idea, excellence=None, channels=None, today=None, variety=None):
+    """Append a published (or generated-for-publish) item to the ledger.
+
+    variety (optional): the visual-style/format directive from social_variety,
+    persisted so the next run can avoid repeating the same look per channel.
+    """
     ledger = load_ledger()
-    ledger["posts"].append({
+    entry = {
         "date": (today or datetime.date.today()).isoformat(),
         "idea_id": idea["id"],
         "theme": idea["theme"],
@@ -92,7 +96,10 @@ def record_publication(idea, excellence=None, channels=None, today=None):
         "title": idea["title"],
         "excellence": excellence,
         "channels": channels or [],
-    })
+    }
+    if variety:
+        entry["variety"] = variety
+    ledger["posts"].append(entry)
     save_ledger(ledger)
 
 
