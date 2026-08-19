@@ -20,12 +20,22 @@ Pipeline per run:
                  that take a single image
   6. MANIFEST  - pending.json (extended), ledger updated
 
-Env: ANTHROPIC_API_KEY
+Env:
+    ANTHROPIC_API_KEY
+    CONTENT_STUDIO_ENV=production   # ONLY the GitHub Action sets this. It marks
+                                    # the single authoritative producer: the run
+                                    # that writes real slots and advances the
+                                    # ledger. Absent (any local/dev run), output
+                                    # is isolated to the gitignored scratch/ dir.
 Usage:
-    python content_studio.py                # full run
-    python content_studio.py --offline     # skip the API; canned demo content
-                                            (structure/render testing only)
+    python content_studio.py                # LOCAL: renders to scratch/ (test-*),
+                                            # no real slot, ledger untouched
+    python content_studio.py --test        # same isolation, explicit
+    python content_studio.py --offline     # scratch render with canned content
+                                            # (no API), structure/render testing
     python content_studio.py --idea S031   # force a specific backlog idea
+    CONTENT_STUDIO_ENV=production python content_studio.py   # authoritative run
+                                            # (this is what the daily Action does)
 """
 
 import os
@@ -400,13 +410,13 @@ def main():
     social_graphic.make_card(package["card_headline"],
                              idea["theme"].replace("_", " ").title(),
                              package["cta_label"],
-                             os.path.join(SOCIAL_DIR, card_png),
+                             os.path.join(out_dir, card_png),
                              style=render.get("card_style", "bold_type"),
                              photo_path=photo_path)
     from PIL import Image
     card_jpg = card_png[:-4] + ".jpg"
-    Image.open(os.path.join(SOCIAL_DIR, card_png)).convert("RGB").save(
-        os.path.join(SOCIAL_DIR, card_jpg), "JPEG", quality=92)
+    Image.open(os.path.join(out_dir, card_png)).convert("RGB").save(
+        os.path.join(out_dir, card_jpg), "JPEG", quality=92)
 
     # ── Manifest (superset of the legacy pending.json contract) ──
     manifest = {
@@ -434,19 +444,22 @@ def main():
         "claims_audit": package.get("claims_audit", []),
         "board_findings": (review or {}).get("board_findings", []),
         "offline_test": offline,
+        "test_mode": not production,
     }
-    with open(MANIFEST, "w", encoding="utf-8") as f:
+    with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2, ensure_ascii=False)
 
     # Also persist a dated manifest copy that IS committed (pending.json is
     # gitignored and dies with the CI runner). The GBP browser runner and any
-    # manual X posting read their channel copy from here after the fact.
-    manifests_dir = os.path.join(HERE, "editorial", "manifests")
+    # manual X posting read their channel copy from here after the fact. In test
+    # mode this lands in scratch/ (gitignored), never editorial/manifests/.
     os.makedirs(manifests_dir, exist_ok=True)
     with open(os.path.join(manifests_dir, f"{stem}.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2, ensure_ascii=False)
 
-    if not offline:
+    # The ledger is the authoritative slot counter: ONLY the production run may
+    # advance it, so concurrent/local producers can never desync the sequence.
+    if production:
         editorial_engine.record_publication(
             idea, excellence=overall,
             channels=["LinkedIn", "Facebook", "Instagram", "GBP"],

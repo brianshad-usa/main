@@ -19,6 +19,13 @@ on:
 permissions:
   contents: write
 
+# Serialize production runs so two Actions can never mint the same slot: a queued
+# run only starts after the running one has committed the advanced ledger, and
+# will therefore select the NEXT idea rather than a duplicate.
+concurrency:
+  group: social-daily-production
+  cancel-in-progress: false
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
