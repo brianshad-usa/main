@@ -1,0 +1,172 @@
+{
+  "post": "The power goes out on your block at 7:40 on a Tuesday. Not a disaster. A transformer.\n\nBackups exist. Everyone confirms that within ten minutes, and it was never the hard part.\n\nThe hard part is the order things come back in, and who gets to decide it while the office is dark. Phones and payments usually matter before email. Nobody ranks well with people standing around asking questions.\n\nThen the part almost nobody plans for: getting back in. Sign-in rules written for a normal week can quietly assume a company laptop on the office network. If the code that proves who you are arrives through a system that is also down, the people with the most access are the ones locked out first.\n\nNone of that appears in a backup report. It appears the first time you practise on an ordinary day.",
+  "headline": "Your recovery plan starts one rung too high",
+  "cta_label": "Talk to our team",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/contact",
+  "image_file": "2026-08-20-s126-card.png",
+  "image_file_jpg": "2026-08-20-s126-card.jpg",
+  "theme": "continuity",
+  "idea_id": "S126",
+  "core_idea": "Continuity rests on three decisions, none of which is a purchase: the order systems return in — which begins below the application layer, at whether anyone can authenticate at all, and which differs sharply between an on-premises directory that must be restored and a hosted tenant that must merely be reachable; a copy that shares no building, power feed or admin account with the original; and a restore rehearsed unannounced, in an ordinary week, by whoever is on shift.",
+  "channels": {
+    "linkedin": "A recovery plan that opens with the line-of-business application opens one rung too high.\n\nMost plans answer whether the data still exists. That question is almost always answered. The expensive one — what returns first, and who decides at 6 a.m. — usually is not.\n\nThree decisions. None of them is a purchase.\n\nSequence. Rank by what stops revenue or breaks an obligation; phones and payments outrank email in most businesses. Then look again at position one, because that is where lists are usually wrong. An on-premises directory returns before anything that authenticates against it, and DNS before the directory. Hosted identity is never restored — it only has to be reachable.\n\nReachability is the part that surprises people. A Conditional Access policy requiring a compliant device on a known network behaves exactly as designed when the device is gone and the network is not there. If the second factor arrives through a phone system that is also down, administrators are outside their own tenant in the hour they are needed most. That is what emergency access accounts are for, and the credential belongs somewhere that does not depend on what is being recovered.\n\nSeparation. A copy sharing a building, a power feed or an admin account with the original is one risk written twice. Immutability answers the attacker. Independence answers the weather.\n\nRehearsal. Unannounced, ordinary week, run by whoever is on shift rather than the engineer who built it. A drill that only runs on a good day measures optimism.\n\nThree questions for the next IT meeting. What comes back first, and who decided? Where does the second copy overlap with the first? When did a person last watch a restore finish?",
+    "facebook": "The power goes out on your block at 7:40 on a Tuesday. Not a disaster. A transformer.\n\nBackups exist. Everyone confirms that within ten minutes, and it was never the hard part.\n\nThe hard part is the order things come back in, and who gets to decide it while the office is dark. Phones and payments usually matter before email. Nobody ranks well with people standing around asking questions.\n\nThen the part almost nobody plans for: getting back in. Sign-in rules written for a normal week can quietly assume a company laptop on the office network. If the code that proves who you are arrives through a system that is also down, the people with the most access are the ones locked out first.\n\nNone of that appears in a backup report. It appears the first time you practise on an ordinary day.",
+    "gbp": "If the office is unreachable Thursday, what has to be working Friday morning? Fire season and planned shutoffs make that a scheduling question in Los Angeles, not a hypothetical.\n\nDecide three things while the lights are on. The order systems return in — including whether your team can sign in at all when the office network and company laptops are part of what is missing. A second copy that shares no building, no power feed and no admin account with the original. A restore rehearsed in an ordinary week, not a scheduled one.\n\nPro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999, with an in-house help desk staffed 24/7.",
+    "x": [
+      "Every continuity plan answers \"is the data still there.\" Almost none answer \"what comes back first, and who decides at 6 a.m.\" The second question is the one with a price attached.",
+      "Recovery lists are usually wrong at position one. An on-prem directory has to return before anything that authenticates against it, and DNS before the directory. Hosted identity is never restored — it only has to be reachable. Same slot in the order, different problem.",
+      "Reachability is the quiet failure. Conditional Access asking for a compliant device on a known network works exactly as designed when neither still exists. If the MFA channel rides a phone system that is also down, your admins are outside the tenant. That is what break-glass is for.",
+      "Second copies fail on shared fate, not on technology. Same building, same power feed, same admin account: one risk written twice. Immutability answers the attacker. Independence answers the weather.",
+      "Then rehearse it unannounced, in an ordinary week, with whoever is on shift. What surfaces is rarely the backup. A licence that blocks the restore, a credential one person knows, a transfer measured in days."
+    ],
+    "instagram_caption": "A recovery plan can be current, funded and complete, and still fail on sequence.\n\nThree decisions carry continuity, and none of them is a purchase. The order systems return in — which starts below the application layer, at whether anyone can authenticate at all. A copy that shares no building, no power feed and no admin account with the original. A restore rehearsed unannounced, in an ordinary week, by whoever is on shift.\n\nThe measure of a plan is not that it exists. It is whether three questions can be answered in one meeting.\n\nPro Link Systems, Woodland Hills, serving Los Angeles businesses since 1999.\n\n#BusinessContinuity #IdentitySecurity #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-20-s126-01.png",
+      "2026-08-20-s126-02.png",
+      "2026-08-20-s126-03.png",
+      "2026-08-20-s126-04.png",
+      "2026-08-20-s126-05.png",
+      "2026-08-20-s126-06.png",
+      "2026-08-20-s126-07.png",
+      "2026-08-20-s126-08.png"
+    ],
+    "jpg": [
+      "2026-08-20-s126-01.jpg",
+      "2026-08-20-s126-02.jpg",
+      "2026-08-20-s126-03.jpg",
+      "2026-08-20-s126-04.jpg",
+      "2026-08-20-s126-05.jpg",
+      "2026-08-20-s126-06.jpg",
+      "2026-08-20-s126-07.jpg",
+      "2026-08-20-s126-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 92,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: a plan that confirms data exists still leaves the recovery order undecided",
+    "ANALYSIS: systems should be ranked by what stops revenue or breaks an obligation, with phones and payments typically ahead of email",
+    "ANALYSIS: an on-premises directory is a precondition for restoring systems that authenticate against it, and DNS is a precondition for the directory — a sequencing argument, not a vendor claim",
+    "ANALYSIS: hosted identity is not restored by the customer; the operative requirement is administrative reachability during an outage",
+    "PRODUCT BEHAVIOUR (documented, no figures, no dates, no capability invented): Microsoft Entra Conditional Access policies can require device compliance or named network locations, and Microsoft's own published guidance is to maintain emergency access accounts excluded from those policies. No statistic, incident or deadline attached.",
+    "ANALYSIS: if the second authentication factor depends on a system that is also unavailable, administrators can be locked out during the outage",
+    "ANALYSIS: a credential stored inside the system being restored is unavailable at the moment it is needed",
+    "ANALYSIS: a copy sharing building, power feed, tenant or admin account with the protected system shares its failure mode",
+    "ANALYSIS: immutability addresses attacker-driven loss while independence addresses ordinary physical and regional failures",
+    "ANALYSIS: unannounced restore rehearsals surface credential, licensing and transfer-time problems more often than backup-media failures",
+    "OPINION: a rehearsal run by the engineer who built the backup tests one person's knowledge rather than the organisation's capability",
+    "OPINION: sequence, separation and rehearsal require ownership rather than new spend",
+    "CONTEXT (general, not a statistic): fire season and planned power shutoffs are recurring operational realities for Los Angeles businesses; no date, programme name, frequency or figure claimed",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F001): the Pro Link Systems help desk operates 24/7",
+    "FACT(F002): the help desk is in-house, not outsourced",
+    "NO NUMBERS CLAIMED about the industry, threat landscape, downtime cost, breach cost or attacker behaviour; no client named or implied; no certification, partnership or compliance status claimed; CTA reworded from 'Book a restore review' to avoid implying a named service offering not present in verified facts"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept sits one inch away from a demoted theme (\"remember to back up your files\"). The draft's new angle — sequence, location, rehearsal — is real but under-defended. Without a distinctly 2026 turn, a skim reader files this as backup content and the brand loses the position. The revision must lead with something a 2018 MSP post could not have said."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Channel duplication. \"Same building, same power feed, same tenant, same admin account — same outage\" appears verbatim in LinkedIn and Instagram slide 3; \"ordinary Tuesday\" appears in four channels. The doctrine is the best expression per channel, never the same text twice. Each channel needs its own sentences carrying the same idea."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel is six text slides with no visual idea. Slides 2 and 3 carry 40+ words of body copy, which becomes a paragraph of small type — explicitly banned. Two slides should be diagrams, not prose: the recovery order as a numbered ladder with identity at rung zero, and shared fate as two overlapping fields resolving into one. Body copy on every slide should be cut to roughly 25 words so typography can do the work."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "\"Analysis, not a product pitch\" is meta-labeling that tells the reader what the sentence already demonstrates. Cut it. Separately, the piece asserts the ranking heuristic (phones, payments, LOB app) without acknowledging that the ranking is dependency-bound — an ordered list that ignores what every item depends on is exactly the kind of document the post is criticizing."
+    },
+    {
+      "role": "CIO",
+      "finding": "The largest omission. Nothing on a typical recovery list restores until identity does — directory, MFA, the network path, the break-glass credential. Every real recovery I have watched stalls there, not at the data layer. The draft skips it entirely, which makes the sequence advice technically incomplete and costs the post its most valuable insight. Also, an executive is given no way to test their own plan; add a short set of questions they can ask in one meeting."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Immutability is named but the credential problem is only hinted at. Two specifics matter: the break-glass credential must live somewhere that does not depend on the system being restored, and the rehearsal must not be run by the engineer who built the backup — otherwise the test validates one person's memory, not the organization's capability. Both are concrete, both are free, neither appears in the draft."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no honest 2026 marker here, and bolting AI onto a continuity post would be manufactured urgency, which the standard forbids. The legitimate modernization is identity: the perimeter moved, and it moved the first rung of the recovery ladder with it. That is the update, and it should carry the piece rather than an AI reference."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I finish the draft agreeing with it and still cannot tell whether my own plan is any good. Give me three questions I can put to my IT lead on Monday, and a stated pass condition. Without that, this is well-written commentary rather than something I act on."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X posts are three parallel statements, not a thread — there is no progression, so the second and third earn no reason to be read. Restructure as an argument that advances, and let the identity point be the second beat, since it is the line most likely to be quoted. The Instagram hook \"Your backup is not a recovery plan\" is a sentence a hundred MSPs have posted; the sharper framing is that the backup answers the wrong question."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Fact stacking on GBP. Three verified facts plus a CTA in a 700-character asset reads as a capability list rather than local advisory. Keep the facts that the topic earns — the 1999/Woodland Hills provenance and, because outages do not respect business hours, the in-house 24/7 help desk — and drop the rest. Also, \"Book a walkthrough\" is a generic label; name what is being booked."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook opens two consecutive sentences with \"Then\" across paragraphs. Em dashes are load-bearing in nearly every paragraph and need thinning. \"Southern California hands you a seasonal forcing date every year\" implies a calendar deadline that does not exist as a published fact; rephrase as seasonal risk, not a date. Instagram's \"Very few state what comes back first\" wants \"specify\" or a rewrite. Kickers reading \"Method one / two / three\" are placeholders, not editorial furniture."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Cross-channel duplication. The signature pair 'Immutability answers ransomware. Independence answers the transformer' appears in near-identical form on LinkedIn, X post 3 and Instagram slide 4, and the three closing questions are reproduced verbatim on LinkedIn and the Instagram CTA slide. Channel doctrine requires the best expression of one idea per channel, never the same text twice. As drafted, a reader following ProLink in two places sees a copy-paste."
+    },
+    {
+      "role": "CIO",
+      "finding": "The identity claim is over-general and a technically literate reader will catch it. 'Nothing restores until identity does' is true for an on-premises directory (which really does have an ordered, DNS-dependent recovery) and false for a Microsoft 365 tenant, where identity is never restored at all. The genuinely hard, under-drilled problem for a 20–500 seat business in 2026 is not restoring identity but reaching it: Conditional Access policies written around compliant devices and named locations, an MFA channel that rides the same phone system that is down, and emergency access credentials stored inside the thing being recovered. Fixing this is what moves the piece from BCDR boilerplate to something only an operator would write."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel is seven text blocks with no visual system specified — kicker, headline, body, footer and nothing else. The idea is structurally visual (an ordered dependency chain, a shared-fate comparison, an unannounced date on a calendar) and none of that is directed. Two slides are labelled with the generic role 'content'. Without a stated type system, palette and per-slide diagram direction, this renders as competent slideware, not editorial design, and fails the 'recognisable before the logo' test."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
