@@ -589,6 +589,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://prolinksystems.com/virtual-cio</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/what-does-a-vcio-do</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/vcio-vs-break-fix-vs-managed-it</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/when-your-business-needs-a-vcio</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://prolinksystems.com/blog/2026-08-07-t20-managed-it-services-for-torrance-manufacturing-and-auto</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -633,6 +657,12 @@
   <url>
     <loc>https://prolinksystems.com/blog/2026-08-19-t93-passkeys-and-passwordless-sign-in-for-los-angeles-busin</loc>
     <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-08-21-t94-identity-is-the-new-perimeter-what-that-means-for-your-</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
