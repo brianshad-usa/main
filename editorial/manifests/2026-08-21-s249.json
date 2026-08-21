@@ -1,0 +1,157 @@
+{
+  "post": "A controller takes a call. It is the CFO's voice, same cadence, airport noise behind it. The acquisition that closed last month comes up, and outside counsel's first name. Wire details for the closing payment need updating today.\n\nFamiliar voice. Correct details. Right tone. That call passes every test people were trained to use, and not one of those tests is evidence anymore.\n\nWhat still works is unglamorous. Verify on a different channel than the request arrived on. Call back using the number in your own vendor records, not the one in the email. Require a second approver for any change to bank details.\n\nThen say the part that makes it work: nobody gets in trouble for making that call.",
+  "headline": "The three signals that stopped meaning 'real'",
+  "cta_label": "Review your controls",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-21-s249-card.png",
+  "image_file_jpg": "2026-08-21-s249-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S249",
+  "core_idea": "A familiar voice, correct internal details, and matching writing style were never proof of authenticity — they were proxies for effort, and effort is now cheap, so verification has to move to controls the sender cannot influence, held in records the business itself maintains.",
+  "channels": {
+    "linkedin": "Three signals used to be enough to decide a message was real. Each one is now cheap to counterfeit.\n\nA familiar voice authenticated itself, because imitating one took skill. Synthetic speech trained on public audio — a panel, a podcast, a recorded call — ended that.\n\nCorrect internal detail read as insider knowledge. It no longer proves more than that someone can see a mailbox, a filing, or a press release you also read.\n\nBad grammar was the tell we trained everyone to catch. Generated text matches register and house style, and the awareness training built on that tell is now false comfort.\n\nAnalysis: each signal was a proxy for effort, and effort got cheap. That does not make fraud smarter. It makes fraud arrive at volume — reaching the accounts payable clerk and the six-week-old controller rather than the executive who sits in the security briefing.\n\nMore suspicion is not the answer. Suspicion does not scale either.\n\nWhat replaces the three signals is a control the sender cannot influence.\n\nVerify requests out of band: call back on the number in your own vendor record, never the one in the signature. Which means that record has to be maintained, and a change to it treated as a privileged change in its own right.\n\nTwo approvers on any payment-detail change, with no exception for urgency.\n\nFor system access, separately: phishing-resistant credentials bound to a device, so nothing depends on recognizing a person.\n\nNone of that is a purchase. It is policy — plus one sentence said out loud: no one will be penalized for slowing a payment down to verify it.\n\nPermission to doubt the boss has to come from the boss.",
+    "facebook": "A controller takes a call. It is the CFO's voice, same cadence, airport noise behind it. The acquisition that closed last month comes up, and outside counsel's first name. Wire details for the closing payment need updating today.\n\nFamiliar voice. Correct details. Right tone. That call passes every test people were trained to use, and not one of those tests is evidence anymore.\n\nWhat still works is unglamorous. Verify on a different channel than the request arrived on. Call back using the number in your own vendor records, not the one in the email. Require a second approver for any change to bank details.\n\nThen say the part that makes it work: nobody gets in trouble for making that call.",
+    "gbp": "A payment-change request that arrives with the right voice, the right names and the right deal reference is no longer evidence of anything. Voices clone from public audio, and internal detail can come from a mailbox, a filing or a press release someone else already reads.\n\nThree steps for an LA business: keep one verification number per vendor in your own records, not in email; require a second approver on any bank-detail change; tell staff plainly that slowing a payment down to verify it is never a mistake.\n\nVerification only works if a person answers. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999, with an in-house, US-based help desk that answers the phone live.",
+    "x": [
+      "A familiar voice. Correct internal details. Writing that sounds like the person. Three signals people were taught to read as proof a request was real. All three are now cheap to counterfeit, and the replacement is not sharper instincts.",
+      "Voice: cloned from public audio. Detail: a mailbox, a filing or a press release someone else already reads. Style: the bad-grammar tell is gone, and the training built on it is false comfort. Each signal was a proxy for effort. Effort got cheap.",
+      "Cheap does not mean smarter. It means volume, arriving at the accounts payable clerk and the six-week-old controller rather than the executive who sits in the security briefing.",
+      "The replacement control: verify on a channel the sender did not choose. Call the number in your own vendor record, never the one in the signature. Two approvers on payment-detail changes, no urgency exception. And nobody gets punished for slowing a wire down."
+    ],
+    "instagram_caption": "A familiar voice. Correct internal details. Writing that sounds like the person. Three signals people were taught to read as proof a request was real — and each was really a proxy for effort.\n\nEffort got cheap. Voices clone from public audio. Internal detail can come from a mailbox, a filing or a press release someone else already reads. The grammar tell is gone, and the awareness training built on it is now false comfort.\n\nWhat replaces those signals is a control the sender cannot influence: verification that runs on a channel they did not choose, a vendor number held in records you maintain, and a second approver on any payment-detail change with no exception for urgency. None of it is a purchase. All of it is policy.\n\n#BusinessEmailCompromise #VoiceCloning #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-21-s249-01.png",
+      "2026-08-21-s249-02.png",
+      "2026-08-21-s249-03.png",
+      "2026-08-21-s249-04.png",
+      "2026-08-21-s249-05.png",
+      "2026-08-21-s249-06.png",
+      "2026-08-21-s249-07.png",
+      "2026-08-21-s249-08.png"
+    ],
+    "jpg": [
+      "2026-08-21-s249-01.jpg",
+      "2026-08-21-s249-02.jpg",
+      "2026-08-21-s249-03.jpg",
+      "2026-08-21-s249-04.jpg",
+      "2026-08-21-s249-05.jpg",
+      "2026-08-21-s249-06.jpg",
+      "2026-08-21-s249-07.jpg",
+      "2026-08-21-s249-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "data_viz",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "data_viz",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: a familiar voice, correct internal details, and matching writing style were historically treated as authenticity signals.",
+    "ANALYSIS: synthetic speech can be generated from publicly available audio such as panels, podcasts and recorded calls — stated qualitatively, no figures, no named product, no named incident.",
+    "ANALYSIS: accurate internal detail in a fraudulent message no longer evidences insider status; it may come from a mailbox, a public filing, or published material. Frequency language ('often it is now proof of') removed — no unsourced frequency claim remains.",
+    "ANALYSIS: poor grammar is no longer a reliable indicator of a fraudulent message, and awareness training built on that indicator is weakened.",
+    "ANALYSIS: each of the three signals functioned as a proxy for attacker effort; reduced effort increases volume rather than sophistication.",
+    "OPINION: cheap, high-volume fraud is more likely to reach finance staff such as an accounts payable clerk or a new controller than a senior executive.",
+    "OPINION: out-of-band verification, callback to a number held in the buyer's own vendor record, and dual approval on payment-detail changes are the appropriate replacement controls.",
+    "OPINION: a change to a vendor's contact or banking record should itself be treated as a privileged change.",
+    "OPINION: phishing-resistant, device-bound credentials address system access; stated separately from transaction controls so the two are not conflated.",
+    "OPINION: staff should be explicitly told they will not be penalized for delaying a payment to verify it.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP; Instagram slide 8 footer).",
+    "FACT(F002 + F008 + F007): in-house, US-based help desk that answers the phone live (GBP only). Stated as present-tense capability, not backdated to 1999 — the 1999 claim covers service to Los Angeles businesses only.",
+    "NOT USED: F001, F003, F004, F005 (no response-time or resolution metric appears; none is relevant to this argument). F006, F009, F010, F011 are blocked from automation and do not appear.",
+    "NO STATISTICS CITED: no industry, breach, fraud-loss, deepfake-volume or threat-frequency numbers appear in any channel. The invented 'extra ten minutes' figure from the draft was removed. The only counts present are structural (three signals, two approvers).",
+    "NO CLIENT NAMED OR IMPLIED: the Facebook scenario is an explicitly generic illustration with no identifying detail."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package argues for callback verification but never connects that argument to anything ProLink can actually claim. We hold verified facts — in-house, US-based help desk, phone answered live with no phone tree — that are thematically native to a post about out-of-band verification. Leaving them out means the strongest differentiation sits unused while the GBP closes on a vague 'start there.'"
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram caption ends on 'Swipe for all three, and what to use instead' — swipe-bait that withholds the payoff, which the standards reject. The caption should be complete on its own and let the carousel earn the swipe through the idea, not through instruction."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No art direction is specified anywhere, and every footer field is empty, so eight slides will render as eight identical text cards. Slide bodies also run 230–260 characters, which is a paragraph, not editorial typography. Need a stated visual system, pacing marks in the footers, and body copy trimmed to roughly 180–200 characters."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "LinkedIn mixes two different control categories in one list: out-of-band callback and dual approval are transaction controls, while 'identity bound to a device' is an access control. Bundling them implies device-bound identity solves voice fraud on a phone call, which it does not. Separate the two and say which problem each solves."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Call back on the number in your own directory' assumes a maintained directory. In practice the vendor contact record is stale, held by one person, or updatable by anyone in AP — which is exactly how the control fails. The package needs to say that a change to a vendor's contact or banking record is itself a privileged change."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Often it is now proof of a compromised mailbox' is an unsourced frequency claim, and it is also incomplete: accurate internal detail can come from public filings, LinkedIn, press releases, or a partner's mailbox without any compromise on the target side. Restate qualitatively and widen the explanation."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "AI is present only as the thing that made counterfeiting cheap. The 2026-specific point is missing: the same generation capability now sits inside the reader's own workflow, drafting and summarizing, which compresses the interval where a human pause used to happen. One restrained line, labeled as analysis, is enough — do not inflate it."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Nothing tells the executive what this costs or who owns it. An operator reading this wants to know whether they are being asked to buy something or to change a policy. Say explicitly that this is policy and process, not procurement — that is what makes it actionable Monday morning."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "LinkedIn runs roughly 1,730 characters, over the 1,600 ceiling, and the strongest line — 'permission to doubt the boss has to come from the boss' — is buried past the trim point on mobile. Tighten to about 1,500. On X, post one should be self-contained enough to be quoted without the thread."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Two closings weaken the brand register: GBP's 'start there' is a shrug, and the Instagram CTA slide restates the 1999 line as a full slide, which spends a slide on a credential rather than an idea. Fold the credit into a footer and let the takeaway hold the last slide."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Taking the extra ten minutes' in Facebook is invented precision — no source, no basis — and reads as a soft statistic in a package that otherwise cites none. Also 'It makes fraud scale' and 'each signal was really a proxy for effort' are repeated near-verbatim across four channels; vary the expression so the channels are not transcripts of each other."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
