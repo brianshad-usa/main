@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-08-21",
+      "idea_id": "S249",
+      "theme": "ai_threats",
+      "format": "carousel",
+      "title": "Three signals that used to mean 'real'",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
