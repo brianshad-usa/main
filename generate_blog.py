@@ -659,6 +659,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
       <a href="/managed-it-services-el-segundo">El Segundo</a>
       <a href="/managed-it-services-irvine">Irvine</a>
       <a href="/managed-it-services-orange-county">Orange County</a>
+      <a href="/managed-it-services-long-beach">Long Beach</a>
     </div>
   </div>
   <div class="footer-bottom">
