@@ -414,10 +414,19 @@ def main():
     # this run's rotating visual style. photo_path is only set when a verified
     # real photograph is registered (assets/variety_assets.json) - the engine
     # never fabricates imagery of people.
-    photo_path = None
+    photo_path = photo_focal = photo_text = None
     if render.get("card_style") == "photo":
-        photos = social_variety.available_assets().get("photographic") or []
-        photo_path = os.path.join(HERE, photos[0]) if photos else None
+        # behind_the_scenes format draws from its own (warmer) bucket; otherwise
+        # the general photographic set. The photo rotates by slot so successive
+        # photo posts don't reuse the same frame.
+        bucket = "behind_the_scenes" if directive["format"] == "behind_the_scenes" else "photographic"
+        entry = social_variety.pick_photo(bucket, seed=stem)
+        if entry:
+            photo_path = os.path.join(HERE, entry["path"])
+            focal = entry.get("focal") or [0.5, 0.5]
+            photo_focal = (float(focal[0]), float(focal[1]))
+            photo_text = entry.get("text")
+            _log(f"photographic asset: {entry['path']} ({entry.get('shows', '')[:60]})")
     card_png = f"{stem}-card.png"
     social_graphic.make_card(package["card_headline"],
                              idea["theme"].replace("_", " ").title(),
@@ -425,7 +434,9 @@ def main():
                              os.path.join(out_dir, card_png),
                              style=render.get("card_style", "bold_type"),
                              palette_variant=render.get("palette_variant"),
-                             photo_path=photo_path)
+                             photo_path=photo_path,
+                             photo_focal=photo_focal,
+                             photo_text=photo_text)
     from PIL import Image
     card_jpg = card_png[:-4] + ".jpg"
     Image.open(os.path.join(out_dir, card_png)).convert("RGB").save(
