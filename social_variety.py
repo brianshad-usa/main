@@ -200,20 +200,33 @@ def plan(ledger, today=None, idea=None):
     prev_run = _last_run_pair(ledger)
     n_posts = len(ledger.get("posts", []))
 
-    # Rank eligible pairs by contrast with the previous run; rotate the tie-break
-    # by post count so the engine cycles through the space over successive runs.
+    def _is_multi(fmt):
+        """The format axis really has two shapes: a multi-slide swipe (carousel)
+        vs a single card. Alternating this is what makes the feed feel varied."""
+        return fmt == "carousel"
+
+    # Rank eligible pairs by contrast with the previous run: a different STYLE
+    # matters most (that is the visible ground/palette change), then flipping the
+    # single-card <-> carousel shape, then any format change. Rotate the tie-break
+    # by post count so the engine cycles through the whole space over runs.
     def rank_key(i_pair):
         i, pair = i_pair
         style, fmt = pair
         ps, pf = prev_run
-        contrast = (style != ps) + (fmt != pf)
+        style_diff = 2 if (ps and style != ps) else 0
+        shape_flip = 1 if (pf is not None and _is_multi(fmt) != _is_multi(pf)) else 0
+        fmt_diff = 1 if (pf and fmt != pf) else 0
         rotated = (i + n_posts) % len(pairs)
-        return (-contrast, rotated)
+        return (-(style_diff + shape_flip + fmt_diff), rotated)
 
     ranked = sorted(enumerate(pairs), key=rank_key)
     run_style, run_format = ranked[0][1]
-    # Never repeat the exact previous run pair if any alternative exists.
-    if (run_style, run_format) == prev_run and len(pairs) > 1:
+    # Never repeat the previous run's STYLE if an alternative style exists (no two
+    # consecutive runs share a ground), and never repeat the exact pair.
+    ps, _pf = prev_run
+    if ps and run_style == ps and any(p[0] != ps for _, p in ranked):
+        run_style, run_format = next(p for _, p in ranked if p[0] != ps)
+    elif (run_style, run_format) == prev_run and len(pairs) > 1:
         run_style, run_format = ranked[1][1]
 
     # Per-channel assignment: each channel avoids its own last pair. Instagram
@@ -221,14 +234,15 @@ def plan(ledger, today=None, idea=None):
     # shares the run treatment.
     channel_dirs = {}
     for ci, channel in enumerate(CHANNELS):
-        last = _last_pair_for(ledger, channel)
+        last_style, last_format = _last_pair_for(ledger, channel)
         # candidate order: run pair first, then the ranked alternatives
         candidates = [(run_style, run_format)] + [p for _, p in ranked]
-        chosen = None
-        for cand in candidates:
-            if cand != last:
-                chosen = cand
-                break
+        # Prefer a pair whose STYLE differs from this channel's last style (no two
+        # consecutive posts per channel share a ground); fall back to any pair
+        # that at least differs from the last pair; finally the run pair.
+        chosen = next((c for c in candidates if last_style and c[0] != last_style), None)
+        if chosen is None:
+            chosen = next((c for c in candidates if c != (last_style, last_format)), None)
         chosen = chosen or (run_style, run_format)
         channel_dirs[channel] = {"style": chosen[0], "format": chosen[1]}
 
