@@ -1,0 +1,23 @@
+{
+  "_comment": "Registered REAL Pro Link Systems marketing photos that unlock the asset-gated visual styles/formats in social_variety.py (photographic style, behind_the_scenes format). Source: Brian's Dropbox/Prolink/Marketing/2026 Photos (frames from the 2026 brand shoot), copied + optimized into assets/photos/. The autonomous social engine may use ONLY images listed here for photographic backgrounds - it never fabricates or scrapes imagery of people. Each entry carries render hints the photographic card reads: `focal` [fx,fy] (0-1) is the point kept centered when the landscape frame is cropped to a square; `text` is the safe area (top|bottom) where the headline overlay is placed so it never sits on a face; `people` flags human subjects. Remove an entry to pull it from rotation.",
+  "version": 1,
+  "updated": "2026-08-26",
+  "photographic": [
+    { "path": "assets/photos/server_rack.jpg", "shows": "Blue-lit Dell PowerEdge server rack in the ProLink operations room - no faces, clean tech texture", "focal": [0.5, 0.5], "text": "bottom", "people": false },
+    { "path": "assets/photos/team_brand_polo.jpg", "shows": "Close-up of the ProLink Systems logo embroidered on a team member's navy polo", "focal": [0.45, 0.55], "text": "bottom", "people": false },
+    { "path": "assets/photos/team_dual_monitor.jpg", "shows": "Two ProLink team members (one in a branded polo) reviewing work together at a monitor", "focal": [0.5, 0.38], "text": "bottom", "people": true },
+    { "path": "assets/photos/deskside_support.jpg", "shows": "A senior technician helping a colleague deskside in the support area", "focal": [0.45, 0.42], "text": "bottom", "people": true },
+    { "path": "assets/photos/tech_workbench.jpg", "shows": "A technician in a ProLink polo working at the fiber/network bench with a laptop", "focal": [0.6, 0.45], "text": "bottom", "people": true },
+    { "path": "assets/photos/lab_consult.jpg", "shows": "Two colleagues (one in a lab coat) talking through a task in the lab", "focal": [0.5, 0.45], "text": "bottom", "people": true },
+    { "path": "assets/photos/tech_laptop_notes.jpg", "shows": "A technician working through a checklist on a laptop beside test equipment", "focal": [0.5, 0.5], "text": "top", "people": true },
+    { "path": "assets/photos/circuit_macro.jpg", "shows": "Hands inspecting a circuit board under a bench microscope - close tech detail, no faces", "focal": [0.5, 0.5], "text": "bottom", "people": false }
+  ],
+  "behind_the_scenes": [
+    { "path": "assets/photos/team_dual_monitor.jpg", "shows": "Two ProLink team members reviewing work together at a monitor", "focal": [0.5, 0.38], "text": "bottom", "people": true },
+    { "path": "assets/photos/deskside_support.jpg", "shows": "A senior technician helping a colleague deskside", "focal": [0.45, 0.42], "text": "bottom", "people": true },
+    { "path": "assets/photos/tech_workbench.jpg", "shows": "A technician at the fiber/network bench with a laptop", "focal": [0.6, 0.45], "text": "bottom", "people": true },
+    { "path": "assets/photos/lab_consult.jpg", "shows": "Two colleagues talking through a task in the lab", "focal": [0.5, 0.45], "text": "bottom", "people": true },
+    { "path": "assets/photos/tech_laptop_notes.jpg", "shows": "A technician working through a checklist on a laptop", "focal": [0.5, 0.5], "text": "top", "people": true }
+  ],
+  "reel_clip": []
+}
