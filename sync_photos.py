@@ -43,10 +43,12 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_SRC = r"C:\Users\brian.shad\Dropbox\Prolink\Marketing\2026 Photos"
+# Paths are overridable via env, which keeps the script testable in isolation
+# (point them at a scratch dir) without touching the live repo/registry.
 SRC = os.environ.get("PHOTO_SRC", DEFAULT_SRC)
-DEST = os.path.join(HERE, "assets", "photos")
-REGISTRY = os.path.join(HERE, "assets", "variety_assets.json")
-LEDGER = os.path.join(DEST, ".ingested.json")
+DEST = os.environ.get("PHOTO_DEST", os.path.join(HERE, "assets", "photos"))
+REGISTRY = os.environ.get("PHOTO_REGISTRY", os.path.join(HERE, "assets", "variety_assets.json"))
+LEDGER = os.environ.get("PHOTO_LEDGER", os.path.join(DEST, ".ingested.json"))
 
 EXTS = (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp")
 MAX_W = 1600
@@ -192,9 +194,28 @@ def main():
     if seeded:
         _log(f"seeded {seeded} curated original(s) into the ingest ledger")
 
-    # 2) Scan the source folder for NEW images.
     files = sorted(f for f in os.listdir(SRC)
                    if f.lower().endswith(EXTS) and os.path.isfile(os.path.join(SRC, f)))
+
+    # 1b) One-time BASELINE: everything already in the folder at deployment time
+    # was reviewed with Brian (8 chosen, the rest set aside). Record all of it as
+    # already-considered so the FIRST run reports 0 new and only files Brian adds
+    # LATER are auto-ingested. Runs once; a flag makes it a no-op thereafter.
+    base = 0
+    if not ledger.get("baseline_done"):
+        for fname in files:
+            p = os.path.join(SRC, fname)
+            digest = _sha1(p)
+            if digest not in ingested:
+                ingested[digest] = {"dest": None, "src": fname,
+                                    "added": datetime.date.today().isoformat(),
+                                    "baseline": True}
+                base += 1
+        ledger["baseline_done"] = True
+        if base:
+            _log(f"baseline: recorded {base} pre-existing frame(s) as already reviewed")
+
+    # 2) Scan the source folder for NEW images.
     new_count = skipped = 0
     for fname in files:
         src_path = os.path.join(SRC, fname)
@@ -248,9 +269,10 @@ def main():
              f"{'people' if has_people else 'no-people'})")
 
     # 3) Persist (atomic). Only write when something changed.
-    if not dry and (new_count or seeded):
-        registry["updated"] = datetime.date.today().isoformat()
-        _atomic_write(REGISTRY, registry)
+    if not dry and (new_count or seeded or base):
+        if new_count:
+            registry["updated"] = datetime.date.today().isoformat()
+            _atomic_write(REGISTRY, registry)
         _atomic_write(LEDGER, ledger)
 
     _log(f"done: {new_count} new, {skipped} skipped, "
