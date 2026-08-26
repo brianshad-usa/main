@@ -18,11 +18,13 @@ a failed workflow picks the same treatment instead of silently changing the look
 
 Two axes
 ========
-VISUAL STYLE  - how the asset looks:
-    bold_type       oversized display headline, high-contrast navy card
-    data_viz        a single figure/stat as the hero, chart-card treatment
-    illustrative    geometric ProLink motif (arcs/grid), no stock clip-art
-    quote_minimal   one line, enormous negative space, quotation ornament
+VISUAL STYLE  - how the asset looks (each sits on its OWN ground/palette/layout,
+so the feed stops looking samey at thumbnail scale; brand DNA held constant):
+    bold_type       oversized white display headline on a navy gradient (anchor)
+    data_viz        one giant gold hero figure from verified facts, navy panel
+    illustrative    LIGHT cream/paper ground, navy ink, gold arc motif
+    quote_minimal   inverted gold-on-navy quote card, oversized quote mark, airy
+    bright_accent   solid gold ground, navy type, navy corner block
     photographic    duotone photo ground  (ASSET-GATED - see below)
 
 FORMAT        - the shape of the post:
@@ -58,12 +60,16 @@ ASSETS_MANIFEST = os.path.join(HERE, "assets", "variety_assets.json")
 # The channels the live engine syndicates to. Each keeps its own no-repeat memory.
 CHANNELS = ["linkedin", "facebook", "gbp", "instagram", "x"]
 
-STYLES = ["bold_type", "data_viz", "illustrative", "quote_minimal", "photographic"]
+STYLES = ["bold_type", "data_viz", "illustrative", "quote_minimal",
+          "bright_accent", "photographic"]
 FORMATS = ["single_image", "carousel", "infographic", "quote_stat_card",
            "question_poll", "reel_clip", "behind_the_scenes"]
 
-# Formats/styles the engine can render honestly with no external asset.
-AUTONOMOUS_STYLES = ["bold_type", "data_viz", "illustrative", "quote_minimal"]
+# Formats/styles the engine can render honestly with no external asset. All five
+# approved autonomous styles render fully in Pillow (bright_accent added here so
+# the gold-ground card enters the rotation without any external asset).
+AUTONOMOUS_STYLES = ["bold_type", "data_viz", "illustrative", "quote_minimal",
+                     "bright_accent"]
 AUTONOMOUS_FORMATS = ["single_image", "carousel", "infographic",
                       "quote_stat_card", "question_poll"]
 ASSET_GATED_STYLES = ["photographic"]
@@ -76,21 +82,24 @@ STYLE_FORMAT_MATRIX = {
     "data_viz":      ["single_image", "infographic", "quote_stat_card", "carousel"],
     "illustrative":  ["single_image", "carousel", "infographic"],
     "quote_minimal": ["single_image", "quote_stat_card", "question_poll"],
+    "bright_accent": ["single_image", "carousel", "question_poll"],
     "photographic":  ["single_image", "carousel", "behind_the_scenes", "reel_clip"],
 }
 
 # Render parameters per style. Brand DNA (navy + gold + logo + contact) is fixed
 # in the renderers; these only choose the *treatment*, never the brand marks.
 STYLE_RENDER = {
-    "bold_type":     {"card_style": "bold_type",   "carousel_cover": "bold",
+    "bold_type":     {"card_style": "bold_type",    "carousel_cover": "bold",
                       "palette_variant": "navy_gradient"},
-    "data_viz":      {"card_style": "stat",        "carousel_cover": "stat",
+    "data_viz":      {"card_style": "stat",         "carousel_cover": "stat",
                       "palette_variant": "navy_panel"},
     "illustrative":  {"card_style": "illustrative", "carousel_cover": "arc",
-                      "palette_variant": "navy_arcs"},
-    "quote_minimal": {"card_style": "quote",       "carousel_cover": "quote",
-                      "palette_variant": "navy_flat"},
-    "photographic":  {"card_style": "photo",       "carousel_cover": "photo",
+                      "palette_variant": "cream_paper"},
+    "quote_minimal": {"card_style": "quote",        "carousel_cover": "quote",
+                      "palette_variant": "navy_inverted_gold"},
+    "bright_accent": {"card_style": "bright_accent", "carousel_cover": "gold",
+                      "palette_variant": "gold_ground"},
+    "photographic":  {"card_style": "photo",        "carousel_cover": "photo",
                       "palette_variant": "duotone"},
 }
 
@@ -111,6 +120,7 @@ STYLE_COPY_DIRECTIVE = {
     "data_viz":      "The visual foregrounds one figure; make that figure unmissable in the copy.",
     "illustrative":  "The visual is an abstract ProLink motif; the words do the explaining.",
     "quote_minimal": "The visual is a spare quote card; give it one quotable line.",
+    "bright_accent": "The visual is a bright gold card with navy type; keep the line crisp and confident.",
     "photographic":  "The visual is a real photograph; the caption complements, not repeats, it.",
 }
 
