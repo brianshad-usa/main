@@ -203,6 +203,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-08-26",
+      "idea_id": "S251",
+      "theme": "ai_governance",
+      "format": "scenario",
+      "title": "The AI note-taker that joined a privileged conversation",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }

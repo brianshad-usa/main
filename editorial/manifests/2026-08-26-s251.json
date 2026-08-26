@@ -1,0 +1,168 @@
+{
+  "post": "A manager takes a call with the company's outside attorney. Their AI note-taker joins too, because it auto-accepts everything on the calendar. Nobody comments on it.\n\nCandid legal strategy now exists as a searchable transcript in an account the company does not control.\n\nNo hack. A helpful tool doing what someone approved months ago, in a consent screen nobody read.\n\nWorth knowing: some assistants show up in the meeting, where a host can remove them. Others never appear at all — they hold access to the calendar and pull the recording afterward. Watching the participant list only catches the first kind.\n\nTwo things to check this week: whether an outside guest can bring their own assistant into your meetings, and which conversations at your company should never produce a transcript.",
+  "headline": "The note-taker nobody invited to the call",
+  "cta_label": "Talk it through",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-08-26-s251-card.png",
+  "image_file_jpg": "2026-08-26-s251-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S251",
+  "core_idea": "AI meeting assistants convert conversations into durable, searchable, third-party-held records — a custody and retention problem before it is an accuracy problem. Critically, they arrive through two separate doors: one visible in the meeting and stoppable at admission, one invisible and stoppable only at app consent. Most governance addresses the first and misses the second.",
+  "channels": {
+    "linkedin": "The most sensitive conversation your company had this quarter probably has a transcript nobody authorized.\n\nNot minutes. A verbatim record, created because a meeting assistant joined on one employee's account and was never asked to leave.\n\nAnalysis: the assistant's durable output is not the summary. It is an artifact — timestamped, exportable, held on a vendor's retention schedule. Two people can remember a meeting differently. Transcripts do not.\n\nThat matters in a narrow set of rooms: board, HR investigation, strategy with outside counsel, diligence, incident response — where the value is speaking plainly before the facts are settled.\n\nThe part most companies miss is that assistants arrive two ways, and only one is visible. Some join as a participant, which a meeting lobby rule can stop. Others never enter the room — they hold a standing calendar and content grant on a user's account and collect the transcript through the platform's API. Tightening admission does nothing to the second kind. That one is governed at app consent.\n\nSo it is two questions, not one. Who may admit a bot, and who may grant an outside app persistent access to a calendar. Most companies control neither.\n\nOpinion: bans fail. The tool moves to a personal phone and you lose visibility entirely. Allow assistants on infrastructure you own, then name the meetings where recording is off by configuration rather than by etiquette.\n\nOne for counsel, not IT: California treats recording a confidential communication as an all-party consent question. Better raised now than in discovery.",
+    "facebook": "A manager takes a call with the company's outside attorney. Their AI note-taker joins too, because it auto-accepts everything on the calendar. Nobody comments on it.\n\nCandid legal strategy now exists as a searchable transcript in an account the company does not control.\n\nNo hack. A helpful tool doing what someone approved months ago, in a consent screen nobody read.\n\nWorth knowing: some assistants show up in the meeting, where a host can remove them. Others never appear at all — they hold access to the calendar and pull the recording afterward. Watching the participant list only catches the first kind.\n\nTwo things to check this week: whether an outside guest can bring their own assistant into your meetings, and which conversations at your company should never produce a transcript.",
+    "gbp": "A practical one for LA owners: check what is joining your meetings.\n\nAI note-takers connect to calendars automatically — including calls with your attorney, your CPA, or a candidate. Some appear in the meeting. Others never show up and pull the transcript afterward through access someone granted months ago.\n\nCalifornia treats recording a confidential communication as an all-party consent matter — a question for counsel, not only IT.\n\nTwo steps that cost nothing: name the meetings that are no-transcript by default, and check whether outside guests can bring their own assistant.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "An AI note-taker joined a call with outside counsel. Nobody invited it. It had been auto-accepting every meeting on one employee's calendar for months. Privileged strategy, now a searchable transcript in an account the company doesn't control.",
+      "Custody, not accuracy, is the meeting-assistant problem. A conversation two people remember differently and a timestamped transcript with an export button are not the same asset. One fades. The other gets retained, indexed, and requested.",
+      "Two kinds of meeting bot. One joins the call, so a lobby rule can stop it. One never appears — it holds a standing grant on the calendar and pulls the recording afterward. Watching the participant list catches only half of them.",
+      "If you cannot answer \"who here can give an outside app permanent access to an executive's calendar,\" the meeting-assistant policy you wrote is decoration. That control lives in app consent, not in the memo."
+    ],
+    "instagram_caption": "An AI note-taker doesn't need permission to change your risk profile. It needs a calendar invite.\n\nMost companies adopted meeting assistants by not noticing: an individual account, an auto-accept setting, an app authorization nobody reviewed. Productivity gain is real. The retention decision was never made.\n\nThe part that surprises IT teams: some of these tools never appear in the meeting at all. They hold a standing grant on the calendar and collect the recording afterward, which means watching the participant list catches only the visible ones.\n\nSwipe for the two controls that hold the line, and the rooms where a transcript stops being worth the convenience.\n\n#AIGovernance #ShadowAI #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-26-s251-01.png",
+      "2026-08-26-s251-02.png",
+      "2026-08-26-s251-03.png",
+      "2026-08-26-s251-04.png",
+      "2026-08-26-s251-05.png",
+      "2026-08-26-s251-06.png",
+      "2026-08-26-s251-07.png",
+      "2026-08-26-s251-08.png"
+    ],
+    "jpg": [
+      "2026-08-26-s251-01.jpg",
+      "2026-08-26-s251-02.jpg",
+      "2026-08-26-s251-03.jpg",
+      "2026-08-26-s251-04.jpg",
+      "2026-08-26-s251-05.jpg",
+      "2026-08-26-s251-06.jpg",
+      "2026-08-26-s251-07.jpg",
+      "2026-08-26-s251-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 95,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 93,
+      "platform_fit": 97,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: AI meeting assistants entered most organizations through individual accounts, auto-accept calendar settings, and third-party app authorization rather than an IT approval process.",
+    "ANALYSIS: meeting assistants reach a call by two distinct mechanisms — joining as a visible meeting participant, or holding a standing calendar/content authorization on a user's account and retrieving the artifact through the platform's programmatic interface without appearing in the room. Stated generically; no vendor, product, or specific API is named, and no claim is made about any named vendor's feature set.",
+    "ANALYSIS: because those two mechanisms differ, meeting-admission and lobby controls govern only the first, while third-party app consent governs the second.",
+    "ANALYSIS: the durable output of a meeting assistant is a verbatim, timestamped, exportable transcript, not the summary.",
+    "ANALYSIS: a transcript is a record subject to vendor retention schedules, vendor security posture, litigation requests, and — where an enterprise AI search layer indexes it — later retrieval by anyone with permission to search.",
+    "ANALYSIS: the risk concentrates in board discussions, HR investigations, legal strategy calls, acquisition diligence, and incident response.",
+    "ANALYSIS: external guests can bring their own meeting assistants into a host organization's calls.",
+    "FACT (named primary source, statute): California Penal Code § 632 treats the recording of a confidential communication as an all-party consent matter. Stated as a question to raise with counsel; no compliance conclusion, deadline, penalty, or number is asserted.",
+    "OPINION: outright bans on meeting assistants fail because employees will run them on personal devices instead.",
+    "OPINION: the workable posture is broad allowance on controlled infrastructure with recording off by configuration in a short list of named meeting categories.",
+    "OPINION: executives should raise third-party recording and privilege with counsel before litigation raises it for them.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP and Instagram CTA slide only).",
+    "NOTE: 'catches only half of them' in X post 3 and 'only the visible ones' in the Instagram caption are rhetorical figures for the two-mechanism split, not measured proportions. No industry, breach, vendor, or scenario statistic appears anywhere in this package. No client is named or implied. No certification, partnership, or compliance capability is claimed. No competitor or vendor product is named.",
+    "LENGTH CHECK: LinkedIn ~1,550 chars (limit 1,600). Facebook ~800 (range 400–900). GBP ~670 (range 300–700). All X posts under 280. Instagram: 8 slides, each carrying distinct argument; zero hashtags on LinkedIn, GBP, Facebook."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept is strong but the draft argues at the level of a commentator, not an operator. Every claim is about what happens; nothing names the specific mechanism by which the bot got in. Without one operator-grade detail (how these tools actually obtain calendar access), a well-read competitor could publish the identical argument. The package needed at least one control-layer specific: app consent / OAuth grants, lobby policy for guest-brought bots, and transcript indexing by enterprise AI search."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram caption ends on 'Swipe for the short list of rooms where that trade stops being worth making' — a withheld payoff, explicitly rejected by the standards. The caption must carry value on its own and tell the reader what the carousel adds, not tease it."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package ships eight slides with zero visual direction. Slides with kicker/headline/body and empty footers are a text spec, not editorial design. Without a stated visual system (grid, type hierarchy, the one recurring graphic device), production will default to generic AI imagery — which is exactly what the visual standard forbids. Added a per-slide visual note and a top-level visual system."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The LinkedIn post exceeds the 1,600-character ceiling by roughly 200 characters, and the GBP post exceeds 700. Both were long because the argument was restated rather than advanced. Separately, the strongest available angle — that a transcript does not just sit in a vendor account but becomes retrievable through whatever AI search layer indexes it — was missing entirely."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three questions to 'your IT lead' are the questions an executive already knows to ask. A CIO would want the actual control surface: who can grant a third-party app calendar access, whether the meeting lobby admits external bot participants, and where transcripts land relative to retention policy. Replaced the generic questions with ones a CIO cannot answer without checking a console."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The privilege framing was directionally right but risked implying a legal conclusion the package cannot support. Also missing: the note-taker vendor is now a third party holding your most sensitive content — a breach there is your incident, and that is the third-party risk framing this audience already budgets for. Kept privilege as a question for counsel, added the vendor-breach point, and added the one legal anchor that is verifiable and local: California's all-party consent rule for confidential communications (Penal Code § 632), framed as a counsel question rather than a compliance instruction."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treats meeting assistants as a threat category only. That is half a position, and executives spot it. The genuinely useful turn is that the enterprise-native path (transcription that lands inside your own tenant, under your own retention) is a governance answer, not just a product preference — and that the second-order risk is transcripts becoming grounding data for AI search. Both are now in the argument."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells an executive to worry but does not tell them what 'handled' looks like. A CFO reading this cannot tell whether their company is fine or exposed. The revised 'what to do' now names four concrete controls, so the reader can check them against reality this week."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread's first post is a compressed duplicate of the Facebook scenario, and the thread drops the one detail most likely to earn a quote-post: the mechanism. Added a fourth post carrying the OAuth/lobby insight, which is the shareable, non-obvious beat."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP CTA ('a second set of eyes') is soft to the point of being unmemorable, and GBP was the only channel carrying local relevance through the ProLink founding line alone. Tightened the CTA and gave GBP a genuinely local hook — a California statute an LA owner can act on — so the local channel earns its slot instead of filling it."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three rule violations. LinkedIn: 'A conversation can be remembered differently by two people. A transcript cannot.' — consecutive sentences opening with the same word. Facebook: 'No hack. No malware.' — same violation. Instagram slide 2: three consecutive sentences opening with 'No'. Also: 'Ninety minutes' appears in two channels as an invented precision; in a brand whose register is deliberately number-free, a fabricated-sounding figure in a hypothetical undercuts the discipline. Removed."
+    },
+    {
+      "role": "CIO",
+      "finding": "The remediation advice conflates two mechanically different things and would send an IT lead down half a path. Assistants reach a meeting two ways: some join as a visible participant (stoppable at the lobby / admission policy), and some never enter the room at all — they hold a standing calendar-and-content grant on a user's account and retrieve the artifact through the platform's API after the fact. A lobby rule does nothing to the second kind. The draft names 'app consent' and 'lobby policy' as a pair without ever explaining that they govern different attack surfaces, which is the single most useful, least-published idea available in this topic. Its absence is why the package still reads like a well-written version of a familiar warning."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two channels breach their stated form. LinkedIn runs roughly 1,750 characters against a 1,600 ceiling; GBP runs roughly 755 against a 700 ceiling. Separately, Instagram slide 2 stacks 'No approval step. No assigned owner. No retention decision.' — three consecutive sentences opening with the same word, which the standards prohibit."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "X posts 3 and 4 are near-verbatim reuse of the LinkedIn opinion paragraph and Instagram slide 6 ('bans fail — the tool moves to a phone', 'app-consent policy... not a memo'). Channel doctrine forbids the same text twice; a reader following ProLink on two platforms currently sees the deck reshuffled rather than re-argued. X should be carrying the compressed version of the sharpest idea, not the leftovers of the longest one."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
