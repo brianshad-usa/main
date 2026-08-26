@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "ingested": {
+    "176e3a4a1c11b48835aa87cc2398d48fb4958d14": {
+      "dest": "assets/photos/server_rack.jpg",
+      "src": "Screenshot 2026-06-04 090958.png",
+      "added": null,
+      "seed": true
+    },
+    "462fdf1baf7dff22e656cec50dcc32b576b268f2": {
+      "dest": "assets/photos/team_brand_polo.jpg",
+      "src": "Screenshot 2026-06-04 091258.png",
+      "added": null,
+      "seed": true
+    },
+    "436eb3c438999e28fb434cb3eaeed6a578287c84": {
+      "dest": "assets/photos/team_dual_monitor.jpg",
+      "src": "Screenshot 2026-06-04 091426.png",
+      "added": null,
+      "seed": true
+    },
+    "c8d70931dbd508ffac75e7827de636989953ed22": {
+      "dest": "assets/photos/deskside_support.jpg",
+      "src": "Screenshot 2026-06-04 091327.png",
+      "added": null,
+      "seed": true
+    },
+    "f66de868988518c09b3067933953aaea26e62e9c": {
+      "dest": "assets/photos/tech_workbench.jpg",
+      "src": "Screenshot 2026-06-04 091229.png",
+      "added": null,
+      "seed": true
+    },
+    "f6b80183cdadb7fcf7178238358da10d1d136c4c": {
+      "dest": "assets/photos/lab_consult.jpg",
+      "src": "Screenshot 2026-06-04 091602.png",
+      "added": null,
+      "seed": true
+    },
+    "d5a0aca6b767e04f97d4caa54c1da026932197b8": {
+      "dest": "assets/photos/tech_laptop_notes.jpg",
+      "src": "Screenshot 2026-06-04 091828.png",
+      "added": null,
+      "seed": true
+    },
+    "c2a5a1a8e827687baca10e75cf108a49b5973136": {
+      "dest": "assets/photos/circuit_macro.jpg",
+      "src": "Screenshot 2026-06-04 091457.png",
+      "added": null,
+      "seed": true
+    },
+    "2a843daa5e332c7ac472f54bd6fd7dcab6f82af1": {
+      "dest": null,
+      "src": "Screenshot 2026-06-04 090711.png",
+      "added": "2026-08-26",
+      "baseline": true
+    },
+    "2e316f4c2e6d57d1848d39c84b77a047229fca50": {
+      "dest": null,
+      "src": "Screenshot 2026-06-04 090822.png",
+      "added": "2026-08-26",
+      "baseline": true
+    },
+    "ef3265e0a8512b8bb65f1b1f61125ec0a7ae5b1c": {
+      "dest": null,
+      "src": "Screenshot 2026-06-04 091201.png",
+      "added": "2026-08-26",
+      "baseline": true
+    },
+    "0cdc02c802df2f378b061b9b74e55ddbea8d1110": {
+      "dest": null,
+      "src": "Screenshot 2026-06-04 091640.png",
+      "added": "2026-08-26",
+      "baseline": true
+    },
+    "a7cac8b7d2d371c65888116a1bd3df760d1fcdff": {
+      "dest": null,
+      "src": "Screenshot 2026-06-04 091709.png",
+      "added": "2026-08-26",
+      "baseline": true
+    },
+    "91f1aeca899236f55ad6e6053466e068d5777105": {
+      "dest": null,
+      "src": "Screenshot 2026-06-04 091939.png",
+      "added": "2026-08-26",
+      "baseline": true
+    }
+  },
+  "baseline_done": true
+}
