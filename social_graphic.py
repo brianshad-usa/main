@@ -30,7 +30,7 @@ import os
 import sys
 import json
 import hashlib
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
