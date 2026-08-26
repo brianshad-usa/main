@@ -392,11 +392,23 @@ def main():
 
     render = directive["render"]
     slides = package["instagram"]["slides"]
-    rendered = carousel_graphic.render_carousel(
-        slides, out_dir, stem, variant=render.get("carousel_cover", "bold"))
-    slide_pngs = [os.path.basename(p) for p, _ in rendered]
-    slide_jpgs = [os.path.basename(j) for _, j in rendered]
-    _log(f"rendered {len(rendered)} carousel slides [cover: {render.get('carousel_cover')}]")
+
+    # Format axis: alternate single-card vs carousel instead of always rendering
+    # both. The carousel is produced only when this run's format (or Instagram's
+    # per-channel format) is a multi-slide swipe; otherwise Instagram publishes
+    # the single card (social_publish falls back to it when <2 slides exist).
+    ig_fmt = (directive.get("channels", {}).get("instagram", {}) or {}).get(
+        "format", directive["format"])
+    want_carousel = directive["format"] == "carousel" or ig_fmt == "carousel"
+    if want_carousel:
+        rendered = carousel_graphic.render_carousel(
+            slides, out_dir, stem, variant=render.get("carousel_cover", "bold"))
+        slide_pngs = [os.path.basename(p) for p, _ in rendered]
+        slide_jpgs = [os.path.basename(j) for _, j in rendered]
+        _log(f"rendered {len(rendered)} carousel slides [cover: {render.get('carousel_cover')}]")
+    else:
+        rendered, slide_pngs, slide_jpgs = [], [], []
+        _log("format is single-card this run; skipping carousel (Instagram uses the single card)")
 
     # Single-image fallback card (GBP photo, LinkedIn/Facebook image), rendered in
     # this run's rotating visual style. photo_path is only set when a verified
@@ -412,6 +424,7 @@ def main():
                              package["cta_label"],
                              os.path.join(out_dir, card_png),
                              style=render.get("card_style", "bold_type"),
+                             palette_variant=render.get("palette_variant"),
                              photo_path=photo_path)
     from PIL import Image
     card_jpg = card_png[:-4] + ".jpg"
