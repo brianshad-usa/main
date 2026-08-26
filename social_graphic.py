@@ -343,28 +343,68 @@ def _card_bright(headline, kicker, cta, accent=GOLD, **_):
 # STYLE 6 — photo : duotone photo ground (ASSET-GATED). Falls back to bold navy
 # when no verified photograph is supplied, so the engine never fabricates people.
 # ══════════════════════════════════════════════════════════════════════════
-def _card_photo(headline, kicker, cta, accent=GOLD, photo_path=None, **_):
+def _square_from_focal(src, fx, fy):
+    """Center-crop a landscape frame to a square around its focal point, then
+    resize to the card size. Keeps the subject in frame instead of stretching."""
+    side = min(src.width, src.height)
+    cx, cy = int(src.width * fx), int(src.height * fy)
+    left = max(0, min(src.width - side, cx - side // 2))
+    top = max(0, min(src.height - side, cy - side // 2))
+    return src.crop((left, top, left + side, top + side)).resize((W, H), Image.LANCZOS)
+
+
+def _directional_scrim(text_pos):
+    """A brand-navy scrim (uniform) plus a gradient that deepens toward the text
+    side, so an overlaid headline stays legible over any photo."""
+    base = Image.new("RGBA", (W, H), (*NAVY_BLACK, 96))          # even darkening
+    grad = Image.new("L", (1, H))
+    for yy in range(H):
+        t = yy / (H - 1)
+        a = t if text_pos == "bottom" else (1 - t)
+        grad.putpixel((0, yy), int(24 + 205 * (a ** 1.6)))
+    ramp = Image.new("RGBA", (W, H), (*NAVY_BLACK, 0))
+    ramp.putalpha(grad.resize((W, H)))
+    return Image.alpha_composite(base, ramp)
+
+
+def _card_photo(headline, kicker, cta, accent=GOLD, photo_path=None,
+                photo_focal=None, photo_text=None, **_):
+    """photographic: a REAL registered photo as a duotone ground with a legible
+    headline overlay. ASSET-GATED - only renders a photo when one is registered in
+    assets/variety_assets.json and present on disk; otherwise falls back to the
+    bold navy card so the engine never fabricates imagery of people."""
     if not (photo_path and os.path.exists(photo_path)):
         return _card_bold_type(headline, kicker, cta, accent)
-    img = Image.new("RGB", (W, H), NAVY_BLACK)
-    photo = Image.open(photo_path).convert("L").resize((W, H))
-    duo = Image.new("RGB", photo.size)
-    px, dp = photo.load(), duo.load()
-    for yy in range(photo.height):
-        for xx in range(photo.width):
-            t = px[xx, yy] / 255
-            dp[xx, yy] = tuple(int(NAVY_BLACK[k] + (255 - NAVY_BLACK[k]) * t * 0.65) for k in range(3))
-    img.paste(duo, (0, 0))
-    scrim = Image.new("RGBA", (W, H), (*NAVY_BLACK, 150))
-    img = Image.alpha_composite(img.convert("RGBA"), scrim).convert("RGB")
+    fx, fy = photo_focal or (0.5, 0.5)
+    text_pos = photo_text or "bottom"
+    sq = _square_from_focal(Image.open(photo_path).convert("RGB"), fx, fy)
+    # Brand duotone: shadows -> deep navy, highlights -> soft warm white.
+    duo = ImageOps.colorize(sq.convert("L"), black=NAVY_BLACK, white=(238, 240, 244),
+                            mid=NAVY_DEEP).convert("RGBA")
+    img = Image.alpha_composite(duo, _directional_scrim(text_pos)).convert("RGB")
     d = ImageDraw.Draw(img)
-    _tracked(d, (MARGIN, 124), (kicker or "").upper(), _font("semi", 30), accent, 2.5)
-    hf, lines, lh = _fit(d, headline, "extrabold", W - 2 * MARGIN, 340, 92, 52, 1.06)
-    y = H - 330 - len(lines) * lh
-    for ln in lines:
-        d.text((MARGIN, y), ln, font=hf, fill=WHITE)
-        y += lh
-    _cta_pill(d, cta, MARGIN, H - 300, GOLD, NAVY_DEEP)
+    # thin gold brand rule at the top edge
+    d.rectangle([MARGIN, 96, MARGIN + 84, 104], fill=accent)
+
+    if text_pos == "top":
+        _tracked(d, (MARGIN, 128), (kicker or "").upper(), _font("semi", 30), accent, 2.5)
+        hf, lines, lh = _fit(d, headline, "extrabold", W - 2 * MARGIN, 320, 90, 50, 1.06)
+        y = 182
+        for ln in lines:
+            d.text((MARGIN, y), ln, font=hf, fill=WHITE)
+            y += lh
+        _cta_pill(d, cta, MARGIN, H - 300, GOLD, NAVY_DEEP)
+    else:
+        hf, lines, lh = _fit(d, headline, "extrabold", W - 2 * MARGIN, 320, 90, 50, 1.06)
+        block_h = len(lines) * lh
+        head_bottom = (H - 300) - 40            # sit just above the CTA pill
+        y = head_bottom - block_h
+        _tracked(d, (MARGIN, y - 52), (kicker or "").upper(), _font("semi", 30), accent, 2.5)
+        for ln in lines:
+            d.text((MARGIN, y), ln, font=hf, fill=WHITE)
+            y += lh
+        _cta_pill(d, cta, MARGIN, H - 300, GOLD, NAVY_DEEP)
+
     _logo_lockup(img, d, MARGIN + 22, H - 150, 74, ground="dark")
     _contact_line(d, H - 150)
     return img
@@ -386,7 +426,7 @@ _CARD_BUILDERS = {
 
 def make_card(headline, kicker, cta, out_path, accent=GOLD, style="bold_type",
               photo_path=None, palette_variant=None, stat_value=None,
-              stat_label=None):
+              stat_label=None, photo_focal=None, photo_text=None):
     """Render a 1080x1080 brand card in one of the distinct visual styles.
 
     style: bold_type | stat | illustrative | quote | bright_accent | photo
@@ -402,7 +442,8 @@ def make_card(headline, kicker, cta, out_path, accent=GOLD, style="bold_type",
     builder = _CARD_BUILDERS.get(style, _card_bold_type)
     img = builder(headline, kicker, cta, accent,
                   photo_path=photo_path, palette_variant=palette_variant,
-                  stat_value=stat_value, stat_label=stat_label)
+                  stat_value=stat_value, stat_label=stat_label,
+                  photo_focal=photo_focal, photo_text=photo_text)
     img.save(out_path, "PNG")
     return out_path
 

@@ -53,6 +53,7 @@ previous run's style OR format where a fuller-contrast option is available.
 
 import os
 import json
+import hashlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS_MANIFEST = os.path.join(HERE, "assets", "variety_assets.json")
@@ -142,7 +143,26 @@ def available_assets():
     Only non-empty buckets unlock their style/format.
     """
     data = _load(ASSETS_MANIFEST, {})
-    return {k: v for k, v in data.items() if v}
+    return {k: v for k, v in data.items()
+            if v and not k.startswith("_") and isinstance(v, list)}
+
+
+def pick_photo(bucket="photographic", seed=""):
+    """Deterministically choose one registered photo (with its render hints) from
+    a bucket, so successive photo posts rotate through the set instead of always
+    using the first. Entries may be plain path strings (legacy) or objects with
+    `path` + optional `focal`/`text`/`shows`. Returns a normalized dict or None."""
+    items = available_assets().get(bucket) or []
+    norm = []
+    for it in items:
+        if isinstance(it, str):
+            norm.append({"path": it})
+        elif isinstance(it, dict) and it.get("path"):
+            norm.append(it)
+    if not norm:
+        return None
+    h = int(hashlib.sha1((seed or "prolink").encode("utf-8")).hexdigest(), 16)
+    return norm[h % len(norm)]
 
 
 def _last_pair_for(ledger, channel):
