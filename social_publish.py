@@ -40,6 +40,27 @@ def _has(*names):
     return all(os.environ.get(n, "").strip() for n in names)
 
 
+# Site homepage: the always-live fallback destination when a theme carries no
+# specific cta_url (e.g. the CALL theme). Verified 200.
+HOME_URL = "https://prolinksystems.com/"
+
+
+def _with_cta_link(text, cta_label, cta_url):
+    """Return post copy with a REAL, clickable CTA + URL appended.
+
+    A feed image is not clickable, so the card's on-image CTA is a caption only --
+    the working link has to live in the post text. LinkedIn (and Facebook/X)
+    auto-linkify a bare URL in the body, so appending 'Label: https://...' gives
+    viewers an actual path to follow. No-ops if a link to that page is already in
+    the copy, so editorial copy that already includes the URL isn't doubled up."""
+    text = (text or "").strip()
+    url = (cta_url or "").strip() or HOME_URL
+    if url.rstrip("/").lower() in text.lower():
+        return text
+    label = (cta_label or "Learn more").strip().rstrip(".:→> ") or "Learn more"
+    return f"{text}\n\n{label}: {url}"
+
+
 def main():
     with open(MANIFEST, encoding="utf-8") as f:
         m = json.load(f)
@@ -54,7 +75,11 @@ def main():
     # manifest (m["post"] only) still works unchanged as the fallback.
     per = m.get("channels", {})
     post = m["post"]
-    li_text = per.get("linkedin") or post
+    # LinkedIn: the card's CTA is only a caption on the image (not tappable), so
+    # put the real clickable CTA + destination URL in the post copy itself.
+    li_text = _with_cta_link(
+        per.get("linkedin") or post, m.get("cta_label"), m.get("cta_url")
+    )
     fb_text = per.get("facebook") or post
     gbp_text = per.get("gbp") or post
     ig_caption = per.get("instagram_caption") or post
