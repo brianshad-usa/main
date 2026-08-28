@@ -1,0 +1,141 @@
+{
+  "post": "A department head signs up for a project tool. Cheap, useful, charged to a card. Two years later the team has moved on, the subscription is cancelled in a cost cleanup, and the line disappears from the statement.\n\nWhat often does not disappear: the accounts, and the permission that tool was given to read files and mail in your Microsoft 365 environment. Ending the billing does not revoke the access.\n\nYour software spend list deserves a second pass with a different question. Finance asks whether you are still paying for it. Someone should ask whether it can still sign in, and what it can still see.\n\nOne owner, one afternoon. And the tools that were always free never made the list at all.",
+  "headline": "The invoice stops. The access does not.",
+  "cta_label": "How we work",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/services",
+  "image_file": "2026-08-28-s108-card.png",
+  "image_file_jpg": "2026-08-28-s108-card.jpg",
+  "theme": "cloud_cost",
+  "idea_id": "S108",
+  "core_idea": "A company's SaaS subscription list is a four-column risk ledger — cost, identity, data, exit — of which finance audits exactly one column, and the list's own blind spot is that anything free, including the AI tools staff signed into with work accounts, never appears on it at all.",
+  "channels": {
+    "linkedin": "Your subscription audit and your access review are the same list.\n\nOnly one of them gets budgeted.\n\nFinance runs the software spend review with discipline. Every line gets three questions: still using it, who owns it, can we consolidate. The output is a cost decision, usually a saving.\n\nThat same file is the closest thing most companies have to an inventory of where their people sign in and where their data went. Almost nobody reads it that way.\n\nEach row is four things at once.\n\nCost — the only column with an owner.\n\nIdentity — accounts, often with their own password and their own admin, sometimes outside Conditional Access.\n\nData — whatever left your Microsoft 365 tenant to make the tool useful.\n\nExit — the consent grants, API tokens, and admin accounts that stay behind when the invoice stops.\n\nColumn four is where risk concentrates. Cancelling ends a payment relationship, not an authorization. An app granted admin consent in Entra ID keeps its permissions long after the contract and the approver are gone.\n\nThe list has a blind spot, and it is a 2026 one: anything free never appears. Whoever signed into an AI assistant with a work account produced no invoice, so that access survives the only audit that reliably happens.\n\nMy read: sprawl is treated as a cost story because cost is the half that lands on a statement. Security exposure sends no invoice, so it books no meeting.\n\nThe fix is a second pass, not a second platform. Send finance's file to whoever owns security, and add the free tools it never showed.\n\nOne list. Two audits. The hard half is already done.",
+    "facebook": "A department head signs up for a project tool. Cheap, useful, charged to a card. Two years later the team has moved on, the subscription is cancelled in a cost cleanup, and the line disappears from the statement.\n\nWhat often does not disappear: the accounts, and the permission that tool was given to read files and mail in your Microsoft 365 environment. Ending the billing does not revoke the access.\n\nYour software spend list deserves a second pass with a different question. Finance asks whether you are still paying for it. Someone should ask whether it can still sign in, and what it can still see.\n\nOne owner, one afternoon. And the tools that were always free never made the list at all.",
+    "gbp": "If your business trimmed software subscriptions this year, you finished half of a security project without calling it one.\n\nA subscription list is also an access list. Every tool on it holds user accounts, and many hold standing permission into your Microsoft 365 environment. Cancelling the invoice does not reliably revoke that permission — and the free tools staff signed into with work accounts were never on the list to begin with.\n\nBefore the next renewal cycle, run the list twice: once for cost, once for access. Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "Your SaaS subscription audit and your access review are the same spreadsheet. Only one of them has a budget line.",
+      "Finance reads one column: cost. Three go unread. Identity — every tool is somewhere people sign in. Data — what left your tenant to make the tool useful. Exit — what keeps working after the invoice stops.",
+      "Cancelling ends a payment relationship, not an authorization. An app holding admin consent in Entra ID keeps its permissions after the contract, the champion, and the approver are gone. Grants do not lapse for non-payment.",
+      "The blind spot in the whole exercise: free tools never appear on a subscription list. Whoever signed into an AI assistant with a work account produced no invoice, so that access survives the only audit that reliably happens."
+    ],
+    "instagram_caption": "SaaS sprawl gets discussed as a finance problem because cost is the half that lands on a statement. Security exposure sends no invoice, so it books no meeting.\n\nEvery subscription line is four things at once: a cost, a place people sign in, a copy of your data, and a set of permissions that can outlive cancellation.\n\nFinance already does the hard part — building the list. The second pass is an afternoon and an owner, not a purchase.\n\nSwipe for the four columns, and for the one thing the list never shows.\n\n#SaaSSprawl #IdentitySecurity #ShadowAI"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "infographic",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "infographic"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: A billed software subscription list functions as a partial but unusually complete inventory of identity surface and data location. Stated with its limit named, not as an absolute.",
+    "ANALYSIS: Each SaaS line represents four distinct exposures — cost, identity, data location, residual authorization.",
+    "ANALYSIS: Some SaaS tools authenticate outside Conditional Access scope, reducing central control.",
+    "FACT (documented platform behaviour, no statistic, no source required beyond general product mechanics): Cancelling a SaaS subscription ends billing and does not itself revoke consent grants, API tokens, or accounts. An application holding admin consent in Entra ID retains its permissions independently of the user who approved it, and those permissions do not lapse for non-payment. Stated qualitatively; no numbers, no named incident, no vendor advisory cited.",
+    "ANALYSIS: Free tools, including AI assistants accessed with work accounts, generate no invoice and therefore do not appear on a spend-derived list. Structural inference, not a measured finding — no adoption rate, prevalence figure, or incident is claimed.",
+    "OPINION (labelled 'My read' on LinkedIn): SaaS sprawl is framed as a cost story because cost is the half that produces a statement.",
+    "OPINION/RECOMMENDATION: The remedy is a second review pass over the existing list with a named owner, rather than an additional platform purchase.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used on GBP and the Instagram CTA slide only.",
+    "FACT(F002): The help desk is in-house, not outsourced. Paired with F008 as required.",
+    "FACT(F008): The help desk is US-based.",
+    "REMOVED IN REVISION: F003 (average ticket first-response time). Accurate and citable, but off-topic on a governance asset; its presence made the final slide read as generic MSP promotion.",
+    "REMOVED IN REVISION: GBP language implying the help desk performs advisory access reviews. Support capability is verified; advisory access-review capability is not asserted in the verified facts file.",
+    "No industry statistics, breach costs, vulnerabilities, regulations, deadlines, research findings, competitors, or client references appear in any channel."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The strongest strategic asset in the package — the reframe that finance has already built the identity inventory — is diluted because the two most-repeated surfaces (card_headline, cta_label) are the weakest writing in it. 'See our services' is a stock MSP button attached to a genuinely original argument; it undercuts the register of everything above it."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel has no turn. Four structurally identical column slides in a row is a ledger, not a story — the reader learns the pattern by slide 3 and stops needing slides 4 and 5. The piece needs a slide that breaks the pattern it just established, which is exactly what the free-tool blind spot does."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package ships with zero art direction. Eight slides of kicker/headline/body will default to a text template, and 'four columns' is a gift of a diagram — a ledger figure where one column is filled and three are empty — that nobody has been briefed to draw. Without a specified visual system, this fails the 'recognizable before the logo' test."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The central claim, 'the most complete map of your identity surface anywhere in the company,' is asserted absolutely and never qualified — yet it is not true, because the list contains only what is billed. Qualifying it does not weaken the piece; it produces the best paragraph in it."
+    },
+    {
+      "role": "CIO",
+      "finding": "The 'what to do' is unactionable. 'Ask a different set of questions of the same rows' does not tell a CIO which questions, or where the answers live. Without naming the artifact and its location, this is a good observation an executive cannot delegate on Monday."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'OAuth grants can outlive the contract' is correct but imprecise, and imprecision here costs authority. The load-bearing detail is that an admin-consented application in Entra ID holds permissions that do not depend on any user account and do not lapse for non-payment — deprovisioning the employee who approved it changes nothing. Say that, or the paragraph reads as vibes."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft misses the 2026 version of its own idea. The subscription list is an invoice-derived artifact, so the fastest-growing category of corporate identity exposure — free AI tools signed into with work accounts — is structurally invisible to it. Shadow AI is not an add-on here; it is the proof of the thesis."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Nobody is told who owns the second pass or what it costs in effort. Facebook says 'one afternoon'; LinkedIn and Instagram leave the executive with an insight and no owner. Executives approve work that has a named owner and a bounded cost."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X set is three parallel statements, not a thread — each restates the thesis rather than advancing it, so posts 2 and 3 give a reader no reason to keep reading. Rebuild as setup, mechanism, blind spot, which is an actual progression."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Two problems. The GBP CTA implies the help desk performs advisory access reviews — a quiet capability stretch beyond the verified facts, which cover support operations. And the Instagram CTA slide bolts an average first-response-time metric onto a governance argument; it is the most commodity claim available and reads as a different company wrote the last slide."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Instagram caption uses 'generates' three times in two sentences. Serial commas are inconsistent ('OAuth grants, API tokens and admin accounts' vs 'files, mail, calendars, customer records'). Facebook opens a paragraph with a throat-clearing 'So'. LinkedIn's 'it usually saves money' is a soft generalization dressed as reporting."
+    },
+    {
+      "role": "Final Test (ultimate-test check)",
+      "finding": "Could any MSP have published this? No — and specifically not after revision. The load-bearing moves are a finance-artifact reframe rather than a threat warning, a four-column ledger structure, a named Entra ID mechanism, an argument that the correct fix is not a purchase, and a stated blind spot that limits the piece's own claim. There are no statistics, no fear imagery, and no product. The generic version of this post is 'SaaS sprawl is risky — get visibility'; this is not that."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
