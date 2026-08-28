@@ -165,17 +165,27 @@ def _contact_line(d, y, color=WHITE):
            "1-800-890-6133", font=f2, fill=sub)
 
 
-def _cta_pill(d, cta, x, y, fill, text_fill):
+def _cta_caption(d, cta, x, y, fill, text_fill=None):
+    """Draw the call-to-action as a plain, arrow-led CAPTION -- deliberately NOT a
+    button. A feed image on LinkedIn (and most networks) is not clickable, so a
+    button-shaped affordance baked into the card looks tappable but is dead by
+    design and misleads viewers. We render a flat label with a leading arrow
+    instead; the REAL, clickable CTA + destination URL is placed in the post copy
+    at publish time (see social_publish.py / gbp_post.py). `text_fill` is accepted
+    for call-site compatibility but unused -- the caption is drawn in `fill`, which
+    each style already picks for good contrast against its own ground."""
     if not cta:
         return 0
     cf = _font("semi", 32)
-    pad_x, pad_y = 34, 19
-    tw = d.textlength(cta, font=cf)
+    label = f"→ {cta}"          # e.g. "-> Learn more"
+    d.text((x, y), label, font=cf, fill=fill)
     asc, desc = cf.getmetrics()
-    ph = asc + desc + pad_y * 2
-    d.rounded_rectangle([x, y, x + tw + pad_x * 2, y + ph], radius=ph // 2, fill=fill)
-    d.text((x + pad_x, y + pad_y - 2), cta, font=cf, fill=text_fill)
-    return ph
+    return asc + desc
+
+
+# Back-compat alias: older call sites (and any external callers) used _cta_pill.
+# It now renders a non-interactive caption, never a clickable-looking pill.
+_cta_pill = _cta_caption
 
 
 # ── Verified-fact hero figures for the stat style ────────────────────────
