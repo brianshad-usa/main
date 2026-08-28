@@ -243,6 +243,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-08-28",
+      "idea_id": "S108",
+      "theme": "cloud_cost",
+      "format": "linkedin_analysis",
+      "title": "SaaS sprawl is a security problem wearing a finance costume",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "infographic",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "infographic"
+          }
+        }
+      }
     }
   ]
 }
