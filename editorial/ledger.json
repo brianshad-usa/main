@@ -323,6 +323,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-08-29",
+      "idea_id": "S127",
+      "theme": "continuity",
+      "format": "advisory",
+      "title": "Power shutoff season: what to settle before the notice arrives",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
