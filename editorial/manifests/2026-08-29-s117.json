@@ -1,0 +1,152 @@
+{
+  "post": "A renewal form lands in a CFO's inbox in March. Twenty questions, mostly yes or no. IT reviews it, everything gets a yes, and the policy renews.\n\nSeptember brings an incident. The carrier's investigator asks for proof that multi-factor authentication was enforced on remote access. It was — for everyone except three service accounts and one executive who found it inconvenient.\n\nNobody lied. The form was answered from memory instead of from the settings.\n\nAnd exceptions themselves are not the problem. Undocumented exceptions are. If a service account genuinely cannot take MFA, write down why, what compensates for it, and who reviews it. Then answer the question accurately.\n\nPull last year's form now. Walk each yes against the live configuration while a no is still fixable.",
+  "headline": "Every yes needs an artifact behind it",
+  "cta_label": "Review your controls",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-29-s117-card.png",
+  "image_file_jpg": "2026-08-29-s117-card.jpg",
+  "theme": "compliance",
+  "idea_id": "S117",
+  "core_idea": "A cyber insurance questionnaire is a control attestation verified after a claim, so every yes should be walked against the live configuration months early — and every yes should have an artifact behind it, because the defensible answer is not 'no exceptions,' it is 'documented exceptions.'",
+  "channels": {
+    "linkedin": "Your cyber insurance application gets read twice. Once by an underwriter setting your premium. Then by an adjuster deciding whether to pay a claim.\n\nOnly the second reading has consequences.\n\nThe forms have converged on a short list. MFA on email, remote access, and administrative accounts. Immutable backups with a restore someone actually performed. Endpoint detection with a human reviewing the alerts. Privileged accounts kept separate from the ones people read email in. How fast a departing employee loses access. A response plan that has been rehearsed.\n\nTen minutes of work if the answers are true. A very different exercise if they are aspirational.\n\nThis is analysis rather than legal advice: those answers describe the environment an adjuster reconstructs after a loss. Distance between the form and the live configuration becomes the carrier's argument.\n\nThe failure mode is almost never dishonesty. A CFO signs a form describing controls IT believes are in place, and nobody tests the word \"enforced\" against the actual settings.\n\nSo attach evidence to every yes. A Conditional Access export showing exactly who is excluded. Restore tests with dates on them. Offboarding tickets with timestamps. Exceptions are not automatically disqualifying — break-glass accounts exist for good reason — but undocumented ones are indefensible.\n\nOne prediction, labeled as such: the next question added to these forms will be about AI. Which tools staff use, and who approved them.\n\nAsk your broker for next year's questionnaire now, and answer it this quarter, while a no is still a project rather than an admission.",
+    "facebook": "A renewal form lands in a CFO's inbox in March. Twenty questions, mostly yes or no. IT reviews it, everything gets a yes, and the policy renews.\n\nSeptember brings an incident. The carrier's investigator asks for proof that multi-factor authentication was enforced on remote access. It was — for everyone except three service accounts and one executive who found it inconvenient.\n\nNobody lied. The form was answered from memory instead of from the settings.\n\nAnd exceptions themselves are not the problem. Undocumented exceptions are. If a service account genuinely cannot take MFA, write down why, what compensates for it, and who reviews it. Then answer the question accurately.\n\nPull last year's form now. Walk each yes against the live configuration while a no is still fixable.",
+    "gbp": "Cyber insurance renewal questions have converged on a short list: MFA covering email, remote access, and admin accounts; immutable backups with a documented restore; endpoint detection someone actually monitors; admin accounts kept out of daily use; prompt offboarding; a rehearsed response plan.\n\nThe trap is answering from memory. After a loss, a carrier examines configuration, not intention. Every yes needs an artifact behind it — a policy export, a dated restore log, an offboarding ticket.\n\nWalk your last questionnaire against the live settings this quarter, not the week the renewal is due. Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "A cyber insurance application is not paperwork. It is an attestation about your configuration, and it gets verified after a claim rather than before the policy.",
+      "Every yes on that form is a claim about how your environment is actually built. \"MFA enforced\" with an exception group for three service accounts is not a technical footnote at claim time. It becomes the carrier's argument.",
+      "Exceptions are not disqualifying. Undocumented exceptions are. Attach an artifact to each yes: a Conditional Access export showing who is excluded, a restore test with a date on it, offboarding tickets with timestamps.",
+      "One prediction, labeled as such: the next question added to these forms will be about AI use and who approved it. Ask your broker for next year's questionnaire now — while a no is still a project rather than an admission."
+    ],
+    "instagram_caption": "A cyber insurance application is a control attestation. It gets verified after a claim rather than before the policy, which makes the uncomfortable questions the important ones.\n\nWhether MFA is enforced, or enforced with an exception group nobody wrote down. Whether anyone has restored from a backup this year. Whether admin accounts are separate from the ones people read email in.\n\nExceptions are not disqualifying. Undocumented exceptions are.\n\nSwipe for the six answers worth verifying before you sign, and the artifact that proves each one.\n\n#cyberinsurance #identitysecurity #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-29-s117-01.png",
+      "2026-08-29-s117-02.png",
+      "2026-08-29-s117-03.png",
+      "2026-08-29-s117-04.png",
+      "2026-08-29-s117-05.png",
+      "2026-08-29-s117-06.png",
+      "2026-08-29-s117-07.png",
+      "2026-08-29-s117-08.png"
+    ],
+    "jpg": [
+      "2026-08-29-s117-01.jpg",
+      "2026-08-29-s117-02.jpg",
+      "2026-08-29-s117-03.jpg",
+      "2026-08-29-s117-04.jpg",
+      "2026-08-29-s117-05.jpg",
+      "2026-08-29-s117-06.jpg",
+      "2026-08-29-s117-07.jpg",
+      "2026-08-29-s117-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 93,
+      "originality": 95,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Cyber insurance applications commonly ask about MFA coverage, backup immutability and restore testing, monitored endpoint detection, privileged account separation, offboarding speed, and incident response planning. Stated as observation of common practice, not as a sourced statistic; no quantifier such as 'most renewals' remains in any channel.",
+    "ANALYSIS (labeled in-copy as analysis, not legal advice): application answers describe the environment examined during claim investigation, and divergence between the form and the configuration works against the insured.",
+    "ANALYSIS: Documented exceptions with compensating controls are a defensible answer; undocumented exceptions are not. Break-glass and service-account exclusions are described as legitimate, which corrects the draft's implication that all exceptions are defects.",
+    "ANALYSIS: Suggested evidence artifacts (Conditional Access policy export, dated restore test, timestamped offboarding tickets) are standard administrative outputs of Microsoft 365 and common ITSM tooling. No product capability is claimed beyond ordinary exports and logs.",
+    "PREDICTION (explicitly labeled as prediction in LinkedIn, X post 4, and slide 8): AI tool usage and approval will be added to these questionnaires. No claim is made that any carrier asks this today.",
+    "OPINION: Remediating a 'no' before renewal costs less than defending an unverifiable 'yes' at claim time.",
+    "ILLUSTRATIVE SCENARIO (Facebook): the March form and September incident are hypothetical, generic, and reference no Pro Link Systems client.",
+    "FACT(F012): 'Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.' Used once, in GBP, verbatim, as a closing signature.",
+    "REMOVED FROM DRAFT: 'Insurers stopped underwriting cyber coverage on trust', 'Coverage used to be priced on revenue and industry', 'renewals now turn on', and 'six questions decide most renewals' — all unsourced assertions about market history or prevalence.",
+    "NO NUMBERS: no industry, breach-cost, downtime, premium, or attacker-behaviour statistics appear in any channel. No blocked facts (F006, F009, F010, F011) referenced. No certification, partnership, or compliance status claimed."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is well written but ends where every competent MSP ends: 'verify your answers.' Nothing in it is unavailable from a broker's blog. It needs a proprietary turn — the evidence artifact behind each yes, and a labeled forward view — or it fails the last question on the final test."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The single sharpest line, 'the questionnaire gets read twice,' appears verbatim in the LinkedIn opener, X post 1, the Instagram hook slide, and card_headline. That is one idea recycled four times, not four channel-native expressions. Each surface must earn its own entry."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel ships with no art direction whatsoever — no typographic system, no grid, no palette, no diagram logic, empty footer fields on every slide. Slide 3 is a six-item list rendered as a paragraph, which is the single most common way an editorial carousel degrades into a text screenshot. It needs a numbered ledger treatment and a control-to-artifact pairing table."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two unsourced market-history claims are stated as fact: 'Insurers stopped underwriting cyber coverage on trust' and 'Coverage used to be priced on revenue and industry.' Also 'six questions decide most renewals' quantifies without a source. Rewrite as observation, or cut the quantifier."
+    },
+    {
+      "role": "CIO",
+      "finding": "The advice 'check the answer against the live configuration' is not operational enough for someone who has to delegate it. A CIO needs to know what the proof looks like: a Conditional Access policy export with the exclusion list, a dated restore test, offboarding tickets with timestamps. Name the artifact or the guidance stays abstract."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft implies any MFA exception is a defect. That is wrong and a practitioner will notice. Break-glass accounts and certain service identities legitimately sit outside interactive MFA. The defensible position is a documented exception with a compensating control and a review date. Fixing this makes the piece more accurate and more original at the same time."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "For a 2026 package, there is no AI thread at all — the post would have read identically in 2021. The honest move is not to invent that carriers ask about AI today, but to state a clearly labeled prediction that AI tool usage and approval is the next control question, and tell the reader to have the answer ready."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The Facebook scenario is strong, but nowhere does the package resolve the ownership problem it identifies: the person who signs is not the person who knows. It also never tells the reader they can request next year's form early. Both are one sentence of practical value each."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread ends on a restatement rather than a saveable artifact. Post 3 should carry the concrete evidence list — that is the screenshot people quote-tweet. Instagram caption's 'Swipe for the six questions that decide most renewals' also promises a ranking the carousel does not deliver."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The F012 founding line sits mid-paragraph in GBP as a credential drop that interrupts advisory flow. It should function as a signature at the close, not as an interjection. No other verified-fact misuse present."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Rule violations: X post 1 opens consecutive sentences with 'Once.' LinkedIn contains 'Here is where the risk sits,' which is the banned 'here's the thing' construction in disguise. GBP's 'now turn on' asserts a change without support. All fixed in revision."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
