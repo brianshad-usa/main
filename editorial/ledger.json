@@ -363,6 +363,86 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-08-31",
+      "idea_id": "S033",
+      "theme": "ai_threats",
+      "format": "scenario",
+      "title": "The video call that authorized a wire transfer",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "idea_id": "S053",
+      "theme": "identity",
+      "format": "carousel",
+      "title": "The perimeter moved and nobody sent a memo",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
