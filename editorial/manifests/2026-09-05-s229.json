@@ -1,0 +1,154 @@
+{
+  "post": "A manager connects a reporting dashboard to the company Microsoft 365 account. The screen asks for permission to read mail and files. She approves it, because the tool is legitimate and she needs it working by Thursday.\n\nTwo years on, she has left. Her account was disabled the day she walked out.\n\nThe dashboard is still reading.\n\nOffboarding checklists track people. They rarely track the software those people invited in — and that software was issued a credential of its own, one that never gets an MFA prompt and never appears in a review built for employees.\n\nThe same thing is now happening with every AI tool someone connects the same way, in the same two clicks.\n\nWorth knowing what is on that list before someone else finds it.",
+  "headline": "Your integrations have more access than your CFO",
+  "cta_label": "Talk to Pro Link Systems",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-05-s229-card.png",
+  "image_file_jpg": "2026-09-05-s229-card.jpg",
+  "theme": "api_machine",
+  "idea_id": "S229",
+  "core_idea": "Access reviews are built for employees, but a large and now fast-growing share of the access in a business belongs to software — integrations and AI agents that were approved once, are never re-verified, and are not on anyone's offboarding checklist.",
+  "channels": {
+    "linkedin": "Every quarter someone reviews who has access to what. The list is people.\n\nThe reporting connector that reads your mail and files was approved once, in a browser tab, by a manager solving a Tuesday problem. It has not been asked to prove anything since.\n\nThat is not a flaw in the software. Integrations exist to work when no human is present, which is why they outlast the project, the vendor, and often the person who approved them.\n\nSome of these credentials do expire. Client secrets have end dates; refresh tokens have lifetimes. In practice they are renewed quietly, or the tool breaks and someone re-consents. Expiry is not review.\n\nHuman privilege gets reviewed. Machine privilege accumulates.\n\nWhat makes this a 2026 problem rather than an old one: every AI assistant and agent being wired into your tenant arrives through the same consent screen as that reporting tool, asking for the same standing access to mail, files and chat. The mechanism is unchanged. The volume is not.\n\nThree questions for your next leadership meeting. Who owns the inventory of third-party apps connected to our systems? When was it last reviewed? Who is allowed to approve a new one?\n\nIf the first has no answer, the other two are theoretical.\n\nOne honest trade-off: restricting who can consent means those requests start landing on someone's desk, and that is real work. It costs less than reconstructing the list during an incident.",
+    "facebook": "A manager connects a reporting dashboard to the company Microsoft 365 account. The screen asks for permission to read mail and files. She approves it, because the tool is legitimate and she needs it working by Thursday.\n\nTwo years on, she has left. Her account was disabled the day she walked out.\n\nThe dashboard is still reading.\n\nOffboarding checklists track people. They rarely track the software those people invited in — and that software was issued a credential of its own, one that never gets an MFA prompt and never appears in a review built for employees.\n\nThe same thing is now happening with every AI tool someone connects the same way, in the same two clicks.\n\nWorth knowing what is on that list before someone else finds it.",
+    "gbp": "A worthwhile hour for any Los Angeles business owner this quarter: in the Microsoft Entra admin center, open Enterprise applications and read the list of third-party apps that have been granted access to your company data. Most owners have never seen it. It is usually longer and older than expected.\n\nEach entry holds standing access nobody is asked to re-approve. When an employee leaves, the account is disabled. What that person connected usually stays connected.\n\nTwo decisions follow the list: who owns it, and who is allowed to add to it.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Offboarding disables the person. It rarely revokes what that person connected. The account goes dark; the integration keeps reading mail.",
+      "Every app connected to your tenant holds a credential of its own: no MFA prompt, no manager, no exit date. It was approved in one click by someone solving a problem, not designing a permission model.",
+      "The list is growing faster now. Every AI assistant and agent arrives through the same consent screen, asking for the same standing access to mail, files and chat. Your strongest control is the sign-in, and a token skips the sign-in. Start by asking who owns the list."
+    ],
+    "instagram_caption": "Access reviews cover employees. A large share of the access in your business does not belong to an employee.\n\nEvery integration connected to your Microsoft 365 tenant — reporting tools, e-signature, the AI assistant someone wired in last month — was issued a credential of its own. Approved once. Never prompted for MFA. Not on anyone's offboarding checklist.\n\nSwipe for what to check, and for the trade-off nobody mentions.\n\n#MachineIdentity #Microsoft365 #IdentitySecurity"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-05-s229-01.png",
+      "2026-09-05-s229-02.png",
+      "2026-09-05-s229-03.png",
+      "2026-09-05-s229-04.png",
+      "2026-09-05-s229-05.png",
+      "2026-09-05-s229-06.png",
+      "2026-09-05-s229-07.png",
+      "2026-09-05-s229-08.png"
+    ],
+    "jpg": [
+      "2026-09-05-s229-01.jpg",
+      "2026-09-05-s229-02.jpg",
+      "2026-09-05-s229-03.jpg",
+      "2026-09-05-s229-04.jpg",
+      "2026-09-05-s229-05.jpg",
+      "2026-09-05-s229-06.jpg",
+      "2026-09-05-s229-07.jpg",
+      "2026-09-05-s229-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "data_viz",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "data_viz",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Human accounts re-authenticate on a regular cadence while approved third-party app grants continue operating without re-verifying identity. Stated structurally, not as a measured statistic; the draft's 'zero' headline framing was removed to avoid reading as a fabricated number.",
+    "ANALYSIS (corrected from draft): Application credentials are not uniformly permanent — client secrets carry expiry dates and refresh tokens have lifetimes. The post now says so explicitly and argues that renewal or re-consent is not the same as review. The draft's 'they do not expire on their own' was technically overstated and has been removed.",
+    "ANALYSIS: Standard employee offboarding disables user accounts but commonly does not revoke third-party app grants those employees authorized.",
+    "ANALYSIS: Sign-in-time controls (phishing-resistant authentication, conditional access, location alerting) evaluate authentication events and therefore do not re-evaluate an already-issued application credential.",
+    "ANALYSIS: In a vendor-side compromise of an application credential, resetting end-user passwords does not address the exposure, because the credential is held by the application rather than a person.",
+    "ANALYSIS (2026 framing): AI assistants, agents and plugins are onboarded through the same delegated-consent mechanism as conventional SaaS integrations and request comparable standing access. Stated as analysis of a mechanism, not as a market statistic, adoption figure, or claim about any specific product's behaviour.",
+    "PRODUCT REFERENCE (not a capability claim): Third-party application grants are reviewed under Enterprise applications in the Microsoft Entra admin center. Corrected from the draft, which incorrectly directed readers to the Microsoft 365 admin center.",
+    "ANALYSIS: Recommended actions — inventory app grants, restrict end-user consent, reduce scopes, add integrations to offboarding — are standard identity-governance practice, presented as guidance rather than research findings.",
+    "OPINION: Reconstructing an integration inventory during an incident costs more than restricting consent in advance. Labelled as judgment, and the friction cost of restricting consent is disclosed rather than hidden.",
+    "SCENARIO (illustrative, no client named or implied): a manager connects a reporting dashboard, later departs, and the grant persists. Composite and generic by construction.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used once, on GBP.",
+    "CTA: 'Talk to Pro Link Systems' claims no service, certification, or capability beyond verified facts. Draft label 'Review your access' was removed because it implied an access-review offering not present in verified_facts.json.",
+    "NOTE: No industry statistics, breach costs, vulnerabilities, regulations, deadlines, or research findings appear anywhere in this package. No client is named or implied. No blocked facts (F006, F009, F010, F011) are used."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA promises 'Review your access' but points at a generic cybersecurity services page — the label writes a check the destination does not cash, and it also implies an access-review service that is not in verified_facts. Changed to a restrained, honest invitation."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Three channels open with the identical device — 'Your CFO re-authenticates several times a day' appears near-verbatim in LinkedIn, X and the Instagram caption. That is the same text three times, which channel doctrine forbids. Each channel now enters the idea from a different door: LinkedIn from the access review, Facebook from a scene, X from offboarding, Instagram from the asymmetry itself."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Hook slide carried a 10-word headline plus a numeric label — too much text for a slide whose only job is earning a swipe. Slides 5 and 6 ran to three dense sentences of body, which becomes tiny type in-frame. Headlines tightened, bodies capped at two short sentences, and the weak final CTA slide (whose body was a location line) removed so the carousel ends on the strongest idea."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Token' and 'machine identity' were used on Facebook and Instagram without a plain-English anchor for a non-practitioner. Also 'Zero. That is the figure worth sitting with' dressed a structural observation as a statistic, which is precisely the register this brand avoids. Both fixed: the credential is described in plain terms, and no pseudo-number is used as a headline."
+    },
+    {
+      "role": "CIO",
+      "finding": "The GBP instruction was operationally wrong. Third-party app grants are not reviewed in the Microsoft 365 admin center; they live under Enterprise applications in the Microsoft Entra admin center. Sending an owner to the wrong console is the fastest way to lose a technical reader. Corrected, and a second decision (who may add to the list) added so the exercise ends in governance, not browsing."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'They do not expire on their own' is overstated and would be flagged by any practitioner: client secrets carry expiry dates, refresh tokens have lifetimes, and continuous access evaluation can revoke sessions mid-stream. The argument survives the correction and gets stronger — expiry is not review. Also clarified that in the vendor-compromise scenario it is user password resets that do nothing, because the credential belongs to the application, not a person."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft was a well-written 2019 OAuth-hygiene post. Nothing in it explained why this is a 2026 conversation. The fastest-growing category of non-human identity right now is AI assistants, agents and plugins being connected to tenants through the same consent screen, requesting the same standing access to mail, files and chat. Added as analysis on LinkedIn, X, Facebook and a dedicated carousel slide — no invented capabilities, no manufactured urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft told an executive what to ask but hid the cost of acting. Restricting who can consent to new apps means approval requests start landing on somebody's desk — that is real friction and a real staffing question. Naming the trade-off is what makes this a peer conversation rather than advice. Added to LinkedIn and as a carousel slide."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 1 was a recycled LinkedIn opener, and post 3 crammed three separate ideas into one tweet, so nothing was quotable. Rebuilt as three posts with one idea each, the sharpest line placed where it can stand alone if the thread is never expanded."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'Serving Los Angeles businesses from Woodland Hills since 1999' appeared as both a GBP sign-off and the body of the Instagram CTA slide — boilerplate repetition that reads as template, not publication. Kept once, on GBP, where local credibility is the channel's actual job."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Consecutive sentences opened with the same word in two places ('They do not expire... They are never prompted...' on LinkedIn; 'The account goes dark. The token keeps working.' on X), violating an explicit voice rule. 'That is the figure worth sitting with' is affected phrasing. All corrected; fragment stacks like 'No MFA prompt. No manager. No exit date.' were collapsed into a single line for the same reason."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

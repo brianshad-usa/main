@@ -523,6 +523,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-05",
+      "idea_id": "S229",
+      "theme": "api_machine",
+      "format": "carousel",
+      "title": "Your integrations have more access than your CFO",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
