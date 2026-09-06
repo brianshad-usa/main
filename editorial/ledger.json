@@ -563,6 +563,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-06",
+      "idea_id": "S219",
+      "theme": "network_edge",
+      "format": "explainer",
+      "title": "The device at your network edge is running software too",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "question_poll"
+          }
+        }
+      }
     }
   ]
 }
