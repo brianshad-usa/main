@@ -720,4 +720,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
