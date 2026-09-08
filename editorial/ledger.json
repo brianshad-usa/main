@@ -683,6 +683,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-08",
+      "idea_id": "S252",
+      "theme": "ai_governance",
+      "format": "checklist",
+      "title": "What to ask before letting an agent touch your systems",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
