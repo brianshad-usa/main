@@ -1,0 +1,151 @@
+{
+  "post": "An employee connects an AI meeting assistant to their calendar and mailbox. It works well. It also reads every message in that mailbox, and nobody outside that employee knows it is connected.\n\nA review built on tickets and uptime will not surface that. Those numbers describe what already happened and already got handled.\n\nThree questions do better. Each has a tell.\n\nOne. What changed in our environment since last quarter, beyond what got fixed? Specifics and dates, not categories.\nTwo. What worries you today? One named worry beats confident silence.\nThree. What would you fix first if the budget grew? Ranked business risk, not a hardware quote.\n\nThen keep the answers. Ask the same three in ninety days. Last quarter's worry got fixed, got reprioritized for a stated reason, or quietly faded out. The third one is the signal.\n\nNo technical knowledge required. An honest answer is harder.",
+  "headline": "Three questions no IT dashboard can answer",
+  "cta_label": "Start a conversation",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-08-s143-card.png",
+  "image_file_jpg": "2026-09-08-s143-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S143",
+  "core_idea": "Three questions — what changed, what worries you, what would you fix with more budget — test an IT provider's judgment in a way no uptime dashboard can, but only if each question carries a tell the executive can grade against, and only if the answers are kept and re-asked in ninety days, because the worry that quietly disappeared is the real signal.",
+  "channels": {
+    "linkedin": "Most quarterly IT reviews are a slide deck of things that did not go wrong.\n\nUptime, ticket volume, patch compliance — worth tracking, none of it evidence that the people running your technology are still thinking.\n\nThree questions test that. Each one has a tell.\n\nOne. What changed in our environment since we last met? Not what got fixed — what changed. An AI assistant an employee wired into their own mailbox. Vendor access granted once and never re-reviewed. A service account that outlived its project. The tell: specifics with dates, not categories.\n\nTwo. What worries you right now? Our view: confident silence is the least credible answer available. Every environment has a soft spot — an identity with more reach than anyone intended, a backup nobody has restored from, a control you attested to on an insurance application that stopped being true. The tell: one named worry, and a reason it is not fixed yet.\n\nThree. What would you fix first with more budget? The tell: ranked, and framed as business risk rather than product. A hardware quote means you have a supplier. A list you can argue with means you have an advisor.\n\nThen the part most executives skip. Keep the answers.\n\nRound one shows how your provider thinks. Ask again in ninety days and it becomes an audit: last quarter's worry got fixed, got reprioritized for a stated reason, or quietly vanished. The third case is the one to chase.\n\nNone of this requires technical knowledge. It works the same on an internal IT director as an outside firm.",
+    "facebook": "An employee connects an AI meeting assistant to their calendar and mailbox. It works well. It also reads every message in that mailbox, and nobody outside that employee knows it is connected.\n\nA review built on tickets and uptime will not surface that. Those numbers describe what already happened and already got handled.\n\nThree questions do better. Each has a tell.\n\nOne. What changed in our environment since last quarter, beyond what got fixed? Specifics and dates, not categories.\nTwo. What worries you today? One named worry beats confident silence.\nThree. What would you fix first if the budget grew? Ranked business risk, not a hardware quote.\n\nThen keep the answers. Ask the same three in ninety days. Last quarter's worry got fixed, got reprioritized for a stated reason, or quietly faded out. The third one is the signal.\n\nNo technical knowledge required. An honest answer is harder.",
+    "gbp": "A quarterly review that reports tickets and uptime reports on the past. The more useful conversation is about drift — what changed in your environment, and who noticed at the time.\n\nThree questions worth bringing to your next one:\n\nOne. What changed since last quarter, beyond what got fixed? Ask for dates.\nTwo. What worries you today? Ask for one named worry.\nThree. What would you fix first if the budget grew? Ask for a ranked list.\n\nRecord the answers and ask again in ninety days. The comparison is where governance actually happens.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house and US-based, and calls are answered live.",
+    "x": [
+      "Your IT provider's quarterly deck is a list of things that did not go wrong. Useful. Also not evidence that anyone is still thinking. Three questions test that, and they get sharper the second time you ask them.",
+      "One. What changed in our environment since we last met? Not what got fixed — what changed. An AI assistant wired into a mailbox. A service account that outlived its project. Vendor access nobody re-reviewed. The tell: specifics with dates.",
+      "Two. What worries you right now? \"Nothing\" is the least believable answer available. Every environment has a soft spot — an over-reaching identity, an untested backup, an insurance attestation that stopped being true. The tell: one named worry.",
+      "Three. What would you fix first with more budget? Ranked and framed as business risk means you have an advisor. A hardware quote means you have a supplier.",
+      "Then keep the answers. Ninety days later the same three become an audit: did last quarter's worry get fixed, get reprioritized for a stated reason, or quietly disappear? Chase the third. Judgment only shows when someone thinks out loud in front of you."
+    ],
+    "instagram_caption": "Three questions, no technical knowledge required, and each one carries a tell so you can grade the answer instead of just receiving it.\n\nWe publish them knowing they will be pointed at us. That is the intent. A provider who has to invent an answer to \"what changed\" has not been watching the environment change.\n\nThe part most executives skip: keep the answers. Ask again in ninety days. Whether last quarter's worry got fixed, got reprioritized for a stated reason, or quietly disappeared tells you more than any dashboard will.\n\nWoodland Hills, since 1999.\n\n#ITLeadership #AIGovernance #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "photographic",
+    "format": "behind_the_scenes",
+    "channels": {
+      "linkedin": {
+        "style": "photographic",
+        "format": "behind_the_scenes"
+      },
+      "facebook": {
+        "style": "photographic",
+        "format": "behind_the_scenes"
+      },
+      "gbp": {
+        "style": "photographic",
+        "format": "behind_the_scenes"
+      },
+      "instagram": {
+        "style": "photographic",
+        "format": "behind_the_scenes"
+      },
+      "x": {
+        "style": "photographic",
+        "format": "behind_the_scenes"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 92,
+      "originality": 95,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 97
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: uptime, ticket volume and patch compliance measure past activity and do not reveal a provider's judgment",
+    "ANALYSIS: IT environments change continuously through new AI tool connections, machine and service identities, and third-party access, so a provider unable to describe recent change is not monitoring it",
+    "ILLUSTRATIVE SCENARIO (not a client, not an incident report): an employee connecting an AI meeting assistant to their own calendar and mailbox, granting it read access nobody else knows about",
+    "OPINION (labelled in LinkedIn copy as 'our view'): a provider who reports no concerns is giving the least credible available answer",
+    "ANALYSIS: proposed tells — dated specifics for question one, one named open worry for question two, a ranked risk-framed list for question three — are ProLink's own evaluative criteria, not an external standard or framework",
+    "ANALYSIS: common soft spots include over-privileged identities, backups never test-restored, and control attestations made on an insurance application that later stopped being accurate — offered as examples, not as a claim about any specific policy, insurer or requirement",
+    "ANALYSIS: a budget-priority answer framed as ranked business risk indicates advisory capability; one framed as a hardware quote indicates a sales posture",
+    "ANALYSIS: the practice compounds only if answers are recorded and re-asked, because the diagnostic signal is a prior-quarter concern that disappeared without being fixed or consciously deprioritized",
+    "ANALYSIS: the same three questions apply to internal IT leadership as to an external provider",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F002 + F008): the Pro Link Systems help desk is in-house and US-based",
+    "FACT(F007): phone calls are answered live by the in-house team",
+    "NO EXTERNAL STATISTICS USED. No industry, breach, downtime or attacker figures appear anywhere in the package. No blocked facts (F006, F009, F010, F011) referenced. No certification, partnership or compliance claim made.",
+    "LENGTH CHECK: LinkedIn ~1,500 chars (900–1,600); Facebook ~870 (400–900); GBP ~640 (300–700); all five X posts under 280; hashtags — 3 on Instagram, 0 elsewhere; one CTA per channel."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is one text reused five times. \"A confident 'nothing' is the worst answer available\" and \"a provider who cannot describe the drift is not watching it\" appear verbatim across LinkedIn, Facebook, X and Instagram, and the ProLink stake (\"we would rather be asked than assumed about\") appears in three channels. Channel doctrine requires the best expression per channel, not syndication. Fixed: each channel now carries a different entry point, and the ProLink stake lives once, in the Instagram caption plus a single restrained GBP line."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel has no narrative turn — slides 2, 3, 4 are the same shape three times, then a summary. The story flattens after slide 2. Fixed by adding the compounding-record beat (\"keep the answers; ninety days later the same questions become an audit\"), which gives the sequence an actual escalation instead of a list."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide bodies run 40–50 words, which forces small type and kills negative space, and the kickers (\"Question one\", \"Why they work\") are prose labels rather than a visual system. Fixed: bodies trimmed, kickers converted to a numeric system (01/02/03) so the design can use large numerals as typographic anchors. Remaining gap: slide 5 needs a real two-column quarter-over-quarter diagram; copy alone cannot deliver the visual standard."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "\"Sixty seconds each. Four times a year.\" is invented precision that trivialises the practice, and \"This is our own view\" is clumsy truth-labelling bolted onto a sentence. Both cut; opinion is now labelled inside the sentence (\"Our view: confident silence is...\") and the closing lands on the record-keeping mechanic instead of a fake time estimate."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft assumes the reader has an external provider only. In a 20–500 seat LA business the reviewer is often a co-managed pairing with an internal IT director, and as written the piece excludes half the audience. Fixed with an explicit line that the three questions work identically pointed at internal IT."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The \"what changed\" examples were generic (\"a new admin account\"). The 2026 version of drift is machine and AI identity: assistants connected to mailboxes, service accounts outliving their projects, third-party access never re-reviewed, and controls attested to on an insurance application that quietly stopped being true. Those replace the generic list. Note: the insurance point is framed as an analytical example of a soft spot, not as a named requirement or deadline."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft mentioned \"a new AI tool someone signed up for with a company card\" and then did nothing with it — shadow AI was decoration. Fixed: the concrete mechanism is now named (an assistant granted mailbox scope by the employee who connected it), which is the actual governance gap an executive can ask about, without manufacturing AI urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft told me what to ask but not how to tell a good answer from a fluent one — the value stopped at aphorism. The added mechanic (write the answers down, re-ask in ninety days, watch for the worry that quietly disappeared rather than being fixed or consciously deprioritised) is the part I would actually put in my calendar."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread opened with a soft, abstract line (\"The most useful thing... is not on the dashboard\") and ended on a definition, giving no reason to save or follow. Fixed: the thread now opens with a concrete indictment of the standard review and ends on the audit mechanic, which is the saveable post."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP carried two CTAs (\"Bring the three questions... or call and ask now\") and invoked the in-house help desk alone, which the verified-facts note explicitly says does not carry the differentiator without US-based. Fixed: one CTA, and F002 paired with F008 as required. Also corrected cta_type — BOOK_APPOINTMENT pointed at a generic contact page overclaims what happens on the other side of the click."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three hard-rule violations. (1) Consecutive sentences opening with the same word: \"A new admin account. A vendor with access...\" (LinkedIn, Instagram) and \"A hardware quote... A priority list...\". (2) LinkedIn ran roughly 1,660 characters, over the 1,600 ceiling. (3) Slide 4 had dropped conditionals reading as typos (\"Arrives as a hardware quote, you have a supplier\"), and \"assumed about\" is graceless. All rewritten; hashtags moved to their own line."
+    },
+    {
+      "role": "Executive Audience Representative (with CIO concurrence)",
+      "finding": "The draft gives the reader three questions but only one answer key. Question three has a clean tell (ranked business risk versus hardware quote); questions one and two leave the executive holding an answer they cannot grade. An executive who cannot distinguish a good answer from a fluent one has been handed a conversation starter, not a governance tool. Every question needs a stated tell."
+    },
+    {
+      "role": "Art Director (with Creative Director concurrence)",
+      "finding": "Seven consecutive slides share the identical kicker/headline/body construction. Typographically that is one slide repeated seven times, which caps visual sophistication no matter how good the type is. The carousel needs at least one slide built as a set piece — a two-column comparison the reader can scan side to side — so composition changes as the argument turns, and slide numbering should become part of the editorial furniture rather than being absent."
+    },
+    {
+      "role": "Copy Editor (with Brand Director concurrence)",
+      "finding": "Cross-channel and mechanical faults: X post 1 opens with the same sentence as GBP nearly verbatim, which breaks the never-the-same-text-twice rule; spelling drifts between British and US forms (reprioritised, deprioritised) inside a US publication; GBP runs past the 700-character ceiling; and Facebook, GBP and Instagram all stack three consecutive sentences opening with 'What', which the standards prohibit. Numbering the questions fixes the last one and improves scanability at the same time."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

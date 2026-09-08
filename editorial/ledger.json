@@ -643,6 +643,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-08",
+      "idea_id": "S143",
+      "theme": "exec_strategy",
+      "format": "framework",
+      "title": "Three questions a CEO should ask their IT provider every quarter",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "behind_the_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          }
+        }
+      }
     }
   ]
 }
