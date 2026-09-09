@@ -723,6 +723,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-09",
+      "idea_id": "S240",
+      "theme": "identity",
+      "format": "explainer",
+      "title": "Session tokens: the thing MFA doesn't protect",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
