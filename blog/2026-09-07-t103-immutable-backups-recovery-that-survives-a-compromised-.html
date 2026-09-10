@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>Backups That Survive Your Own Admins | Pro Link Systems</title>
+<meta name="description" content="Immutable backups fail the moment an administrator can shorten retention. The 2026 recovery question is who holds the delete path, not where copies live.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://prolinksystems.com/blog/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://prolinksystems.com/blog/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-">
+<meta property="og:title" content="Backups That Survive Your Own Admins | Pro Link Systems">
+<meta property="og:description" content="Immutable backups fail the moment an administrator can shorten retention. The 2026 recovery question is who holds the delete path, not where copies live.">
+<meta property="og:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ProLink_Systems">
+<meta name="twitter:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:title" content="Backups That Survive Your Own Admins | Pro Link Systems">
+<meta name="twitter:description" content="Immutable backups fail the moment an administrator can shorten retention. The 2026 recovery question is who holds the delete path, not where copies live.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Backups That Survive Your Own Admins",
+  "description": "Immutable backups fail the moment an administrator can shorten retention. The 2026 recovery question is who holds the delete path, not where copies live.",
+  "author": {
+    "@type": "Person",
+    "name": "Brian Shad",
+    "jobTitle": "President",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pro Link Systems"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pro Link Systems",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://prolinksystems.com/logo.png"
+    }
+  },
+  "datePublished": "2026-09-07",
+  "dateModified": "2026-09-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://prolinksystems.com/blog/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-"
+  },
+  "url": "https://prolinksystems.com/blog/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-"
+}
+</script>
+<link rel="stylesheet" href="/_shared.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-1068497497');
+gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
+</script>
+<style>
+.blog-hero {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
+  padding: 60px 0 48px;
+  text-align: center;
+}
+.blog-hero .breadcrumb {
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 16px;
+}
+.blog-hero .breadcrumb a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+.blog-hero .breadcrumb a:hover { color: var(--gold); }
+.blog-hero .breadcrumb span { margin: 0 8px; }
+.blog-hero h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  max-width: 800px;
+  margin: 0 auto 16px;
+  padding: 0 24px;
+}
+.blog-hero .post-meta {
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+}
+.blog-hero .post-meta strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+.blog-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 24px 64px;
+}
+.blog-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -.02em;
+}
+.blog-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+.blog-body ul {
+  margin: 0 0 1.25rem 1.5rem;
+  padding: 0;
+}
+.blog-body li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.blog-body strong { font-weight: 700; color: var(--navy); }
+.blog-cta-box {
+  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 100%);
+  border: 1.5px solid rgba(23,98,168,.15);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--r-lg);
+  padding: 2rem 2rem 2rem 2.25rem;
+  margin: 3rem 0 0;
+}
+.blog-cta-box h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 .75rem;
+  letter-spacing: -.02em;
+}
+.blog-cta-box p {
+  font-size: .95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+.blog-cta-box .btn-group {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+</style>
+</head>
+<body>
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Pro Link Systems home">
+    <img src="/logo.png" alt="Pro Link Systems" width="160" height="44">
+  </a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/blog/" class="active">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="tel:18008906133" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+  <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+  <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
+  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
+</div>
+
+<div class="blog-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>/</span>
+    <a href="/blog/">Blog</a><span>/</span>
+    <span style="color:rgba(255,255,255,.7);">Article</span>
+  </div>
+  <h1>Backups That Survive Your Own Admins</h1>
+  <div class="post-meta">
+    By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; September 07, 2026
+  </div>
+</div>
+
+<article class="blog-body">
+<p>The most valuable credential in a 200-seat company is not the domain administrator's. It belongs to whoever administers the backup platform. That account can make every copy of the business unrecoverable in a single afternoon — no malware deployed, no files encrypted, no endpoint alert raised.</p>
+
+<p>Something shifted in the ransomware economy while most recovery plans stayed where they were. Encryption used to be the attack. Now encryption is the invoice. The work that actually decides the outcome happens earlier and quieter: get in, find the backup console, and remove the thing that would have let the company say no.</p>
+
+<h2>Encryption is loud. Deletion is patient.</h2>
+
+<p>Detection tooling has become genuinely good at spotting encryption. Mass file rewrites, shadow copy deletion, unusual process behavior — that is precisely the signal EDR and MDR platforms are tuned to catch. An intruder who intends to be paid has every reason to delay that stage as long as possible.</p>
+
+<p>Consider an alternative path that requires no exploit at all. This is an illustrative scenario, not an incident report. A credential with rights to the backup platform is phished. Nothing is visibly deleted. Retention is simply reduced from ninety days to three. Jobs keep running. Dashboards stay green. The nightly success email arrives on time. Recovery capability then expires on schedule, by design, through the platform's own normal operation. Nobody deleted a backup — the system did exactly what an authorized administrator instructed it to do.</p>
+
+<p>There is a more mundane version of the same weakness. Backup agents need broad read access, and their service accounts are frequently exempted from Conditional Access policies because enforcing modern authentication on them breaks the job. That exemption tends to live in the backup product's configuration rather than in the identity console, so it rarely surfaces during a security review. Our opinion, stated as opinion: machine identities carrying standing privilege with no adaptive controls are among the least examined risks in mid-market environments, and the backup service account is often the most powerful identity in the building.</p>
+
+<h2>One question decides whether a backup is actually immutable</h2>
+
+<p>"Immutable" has become a datasheet checkbox, which means it now describes several materially different things. The distinction that matters is not where copies live, how many exist, or whether the storage is described as write-once. It is this: <strong>who can shorten retention before the clock runs out?</strong></p>
+
+<p>If the answer includes any human being — an internal administrator with sufficient privilege, a vendor support engineer acting on a ticket, a cloud account owner with a policy override — then the data is durable, not immutable. Durable survives hardware failure and accident. Immutable survives an adversary holding legitimate credentials. Those are different products solving different problems, and the second is what a credential-driven threat model requires.</p>
+
+<p>Backup platforms commonly offer more than one style of retention lock: a mode a sufficiently privileged administrator can override, and a mode nobody can override until the retention period expires. Convenience argues for the first. Only the second deserves the word immutable. Whoever manages your <a href="/backup-disaster-recovery">data backup</a> should be able to say, without hedging, which mode is configured and who holds the authority to change it.</p>
+
+<p>Four questions produce an honest answer in about ten minutes:</p>
+
+<ul>
+<li>Can any single administrator in our organization reduce retention or delete a locked recovery point? If so, name them.</li>
+<li>Can the vendor's support team override the lock at our request — and therefore at an attacker's request, if that attacker sounds like us on the phone?</li>
+<li>Is the backup platform's authentication separate from the production directory, with its own privileged access controls?</li>
+<li>When was a restore last performed and documented — not a job status check, an actual restore?</li>
+</ul>
+
+<p>The fourth question tends to be the uncomfortable one.</p>
+
+<h2>Microsoft 365 retention is one blast radius, not two</h2>
+
+<p>A common and expensive misunderstanding holds that native retention features constitute a backup. Recycle bins, retention policies, litigation hold, and versioning are all genuinely useful. They are also administered from inside the same tenant, by the same privileged roles, under the same identity plane an attacker has just compromised. A Global Administrator can modify retention. That is not a flaw in the platform — it is what administration means.</p>
+
+<p>Which is why <a href="/cloud-services">Microsoft 365</a> deserves an independent, separately authenticated copy of mail, files, Teams content, and increasingly the configuration state of the tenant itself. As business processes migrate into SaaS and AI agents begin acting on that data under delegated permissions, the volume of business-critical information governed by a single administrative boundary keeps expanding. Analysis rather than fact: most mid-market companies have accumulated single-blast-radius data considerably faster than they have redrawn their recovery architecture to match.</p>
+
+<h2>Clean data restored into a compromised directory is not recovery</h2>
+
+<p>Assume the immutable copies held and everything is recoverable. Here is where recovery plans written before identity became the perimeter start to fail: restore into what?</p>
+
+<p>If the intrusion touched the directory — and in credential-driven attacks it usually does — then restoring servers and mailboxes into that same directory reintroduces the attacker's persistence alongside the data. Recovery order becomes the entire problem. A clean identity plane has to exist before restored workloads can safely attach to it, which makes the rebuild path for identity a recovery asset in its own right: documented, tested, and stored somewhere the incident cannot reach.</p>
+
+<p>Two failure modes are easy to predict and easy to prevent. First, the runbook lives in the SharePoint site that is currently unavailable. Second, break-glass credentials live in a password manager that authenticates through the compromised directory. Both are trivial to fix in advance and nearly impossible to fix mid-incident. Treating the recovery procedure as a protected artifact rather than as documentation is a <a href="/cybersecurity-services">cybersecurity</a> decision, not a filing decision.</p>
+
+<h2>The number to put in front of your board</h2>
+
+<p>Storage cost is the wrong axis for this decision. Immutable capacity costs somewhat more than ordinary capacity, and that delta is not the figure that matters. The figure that matters is time-to-first-clean-login: how long from the declaration of an incident until employees are working in a directory nobody else controls, with their data intact. That number is measurable only by rehearsal, and in our experience of how these plans are built, it is almost always longer than executives assume.</p>
+
+<p>So the budget question is not whether backups exist. It is whether the deletion path has been closed against a credentialed adversary, whether the identity rebuild is written down somewhere reachable, and whether anyone has proven a restore recently with evidence a cyber insurer or an auditor would accept. Whether that work sits with internal staff or an outside <a href="/managed-it-services">managed IT</a> partner matters far less than whether a named person owns it. Three honest answers describe an organization's resilience better than any dashboard, because the dashboard's job is to report that the system did what it was told.</p>
+
+<p>Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. In our view, the companies that recover quickly are the ones that decided in advance who is not allowed to delete their history. If you want a second opinion on where your recovery architecture would break, our team will walk through it with you at <a href="/backup-disaster-recovery">prolinksystems.com/backup-disaster-recovery</a>.</p>
+
+<div class="blog-cta-box">
+  <h2>Ready to talk to a real IT engineer?</h2>
+  <p>Pro Link Systems has been protecting and managing IT for Los Angeles businesses since 1999. Book a free 15-minute discovery call &mdash; no pressure, no obligation, no scripts.</p>
+  <div class="btn-group">
+    <a href="/managed-it-services" class="btn btn-navy">Book a Free Discovery Call</a>
+    <a href="tel:18008906133" class="btn btn-outline-navy">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+</div>
+</article>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <a href="/services#helpdesk">24/7 Help Desk</a>
+      <a href="/services#cybersecurity">Cybersecurity</a>
+      <a href="/services#cloud">Cloud &amp; Infrastructure</a>
+      <a href="/services#dr">Disaster Recovery</a>
+      <a href="/services#consulting">IT Consulting</a>
+      <a href="/services#remote">Remote Workplace</a>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog/">Blog</a>
+      <a href="/legal">Legal / Terms</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>21241 Ventura Blvd<br>Woodland Hills, CA 91364</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-areas">
+    <h3>Areas We Serve</h3>
+    <div class="footer-areas-links">
+      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
+      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
+      <a href="/managed-it-services-century-city">Century City</a>
+      <a href="/managed-it-services-pasadena">Pasadena</a>
+      <a href="/it-support-burbank">Burbank</a>
+      <a href="/managed-it-services-santa-monica">Santa Monica</a>
+      <a href="/managed-it-services-glendale">Glendale</a>
+      <a href="/managed-it-services-calabasas">Calabasas</a>
+      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
+      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
+      <a href="/managed-it-services-encino">Encino</a>
+      <a href="/managed-it-services-torrance">Torrance</a>
+      <a href="/managed-it-services-el-segundo">El Segundo</a>
+      <a href="/managed-it-services-irvine">Irvine</a>
+      <a href="/managed-it-services-orange-county">Orange County</a>
+      <a href="/managed-it-services-long-beach">Long Beach</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
+    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
+  </div>
+</footer>
+</body>
+</html>

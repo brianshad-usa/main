@@ -1,0 +1,153 @@
+{
+  "post": "A vendor emails your accounts payable clerk. She has corresponded with this person for years. The signature block is right, the invoice matches a real project, the writing is clean. Only the bank details are new.\n\nHer training does not help. She was taught to look for misspellings and awkward phrasing — the mistakes of someone writing in a language they did not know well. Those mistakes were never security. They were errors, and errors are optional now.\n\nNo amount of careful reading catches this one. The control has to sit outside the message: a change to payment details does not take effect until someone calls the vendor on a number already on file, and notes that the call happened.\n\nReading is not a control. An outbound call to a known number is.",
+  "headline": "Your phishing test was built for an attacker who no longer exists",
+  "cta_label": "Our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-07-s038-card.png",
+  "image_file_jpg": "2026-09-07-s038-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S038",
+  "core_idea": "Phishing training was built to grade an attacker's spelling, which was never a security signal but a byproduct of writing in a second language — and now that fluent text is commodity, the fix is not a better list of tells, because any tell still leaves the decision inside a human's judgment. The control has to move out of the message and into the workflow: payment details change only after an outbound callback to a number already on file.",
+  "channels": {
+    "linkedin": "Your phishing training grades the wrong exam.\n\nMost programs still score employees on surface cues. Misspellings. Broken grammar. A greeting that reads like it was translated twice. Those were never security signals. They were defects in the attacker's work — the residue of writing in a second language — and an industry built a curriculum around the residue.\n\nFluent text is commodity now. The defect is gone, and with it the basis of the test.\n\nWorse is what the test taught by implication. Grade people on surface errors long enough and they absorb the inverse rule: if it reads well, it is probably real.\n\nThe tempting correction is a better list of tells — unexpected authority, urgency about money, a nudge toward text. My view: that correction fails too. It keeps the decision inside a person's judgment at the exact moment messages are being engineered to beat judgment.\n\nTake the decision out of the message instead. No change to payment details takes effect until someone calls the vendor on a number already on file and logs the call. An inbound call is not verification. A voice is no longer proof of a person.\n\nWhich makes accounts payable a security control, and controls get audited. The audit is one query: pull last quarter's bank-detail changes and confirm a logged callback for each.\n\nTraining still has a job — reporting, mostly, and how fast someone answers a report. Just not as a reading test.",
+    "facebook": "A vendor emails your accounts payable clerk. She has corresponded with this person for years. The signature block is right, the invoice matches a real project, the writing is clean. Only the bank details are new.\n\nHer training does not help. She was taught to look for misspellings and awkward phrasing — the mistakes of someone writing in a language they did not know well. Those mistakes were never security. They were errors, and errors are optional now.\n\nNo amount of careful reading catches this one. The control has to sit outside the message: a change to payment details does not take effect until someone calls the vendor on a number already on file, and notes that the call happened.\n\nReading is not a control. An outbound call to a known number is.",
+    "gbp": "If your annual security training still opens with a phishing example full of misspellings, it is teaching your staff the wrong rule. Broken grammar was never a security signal. It was a mistake made by someone writing in a second language, and that mistake is now avoidable.\n\nThe fix is procedural, not perceptual. Write one rule and post it where finance and reception can see it: no change to bank details, direct deposit, or vendor payment instructions takes effect until someone calls back on a number already on file and notes the call. An inbound call does not count.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "Security awareness training was built against an attacker who could not write English well. It graded employees on typos. That attacker is gone, and the grading scheme quietly taught the inverse lesson: if it reads well, it is probably real.",
+      "The tempting fix is a better list of tells: odd authority, urgency about money, a nudge to move to text. It fails for the same reason. Any rule that lives inside a reader's judgment loses to messages engineered to beat judgment.",
+      "Move the decision out of the message. No change to payment details clears until someone calls a number already on file and logs it. An inbound call is not verification. A voice is no longer proof of a person."
+    ],
+    "instagram_caption": "Security awareness training was designed against an attacker who could not write English well. The typos it grades on were never security signals. They were that attacker's mistakes, and mistakes are optional now.\n\nThe trap is the lesson underneath. Grade people on surface errors long enough and they learn that a well-written message is probably a real one.\n\nWhat replaces it is not a better list of warning signs. It is one rule that does not depend on anyone's reading: payment details change only after an outbound callback to a number already on file.\n\n#BusinessEmailCompromise #HumanRisk #SecurityAwareness"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-07-s038-01.png",
+      "2026-09-07-s038-02.png",
+      "2026-09-07-s038-03.png",
+      "2026-09-07-s038-04.png",
+      "2026-09-07-s038-05.png",
+      "2026-09-07-s038-06.png",
+      "2026-09-07-s038-07.png",
+      "2026-09-07-s038-08.png"
+    ],
+    "jpg": [
+      "2026-09-07-s038-01.jpg",
+      "2026-09-07-s038-02.jpg",
+      "2026-09-07-s038-03.jpg",
+      "2026-09-07-s038-04.jpg",
+      "2026-09-07-s038-05.jpg",
+      "2026-09-07-s038-06.jpg",
+      "2026-09-07-s038-07.jpg",
+      "2026-09-07-s038-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "data_viz",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "data_viz",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Spelling and grammar errors in phishing email were artifacts of attackers writing in a second language, not intrinsic security signals.",
+    "ANALYSIS: Fluent text generation is now widely available, so fluency no longer distinguishes legitimate messages from fraudulent ones. No capability, product, or vendor is named and no figure is attached.",
+    "ANALYSIS: Training employees to detect surface errors implicitly teaches that well-written messages are legitimate, inverting the intended lesson.",
+    "ANALYSIS: Contextual tells (unexpected authority, urgency, channel switching) are long-standing curriculum items, not a new discovery; explicitly framed as such rather than presented as novel.",
+    "OPINION: Any detection rule that depends on a reader's in-the-moment judgment is a weaker control than a procedural verification step outside the message.",
+    "OPINION: Out-of-band outbound callback to a number already on file, logged, is the practical control for vendor bank-detail change requests; inbound calls are not treated as verification.",
+    "OPINION: Awareness programs should measure report rates on plausible requests and time-to-human-response rather than click rates on obvious bait.",
+    "OPINION: Accounts payable approval workflow should be funded and audited as a security control; the suggested audit (sampling last quarter's bank-detail changes for a logged callback) is advisory, not a claim about any organization.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used once in GBP and once as an Instagram footer lockup.",
+    "REMOVED: The '0' hook slide and its 'Typos in a competent phishing email, 2026' footer. A large numeral reads as a measured statistic regardless of framing; no such measurement exists in verified_facts.json or in a named primary source.",
+    "REMOVED: The four-fact Instagram CTA slide (F001, F002, F003, F008). All were accurate and citable, but stacking them produced a spec sheet inconsistent with restrained-CTA doctrine. Retained for use in briefs where help-desk response is the subject rather than a bolt-on.",
+    "NOTE: No industry, breach, threat-landscape, or attacker-behaviour statistic appears anywhere in the package. No client is named or implied. No certification, partnership, or compliance status is claimed."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's differentiation is thin in one specific way: 'the tells moved from language to context' is an argument several security vendors already make. Any MSP could publish that. The genuinely ProLink move — and the one that survives the final test — is the second turn: a new list of tells fails too, because it still leaves the decision inside a human's judgment. That turn must become the spine, not a subordinate clause. Also, cta_label 'Explore cybersecurity' is interchangeable with every MSP ad on the internet."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "'Train the callback, not the typo hunt' appears verbatim in LinkedIn, Facebook, the Instagram caption and the Instagram takeaway slide. Channel doctrine explicitly forbids the same text twice. A tagline repeated four times reads as a template fill, not as four best expressions of one idea."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package specifies zero art direction — eight kicker/headline/body slides in an identical layout is a template, not editorial design. The idea has an obvious diagrammatic moment (the decision leaving the message and entering the workflow) that is being wasted as body copy. Also, the giant '0' hook is typographically strong but semantically a fake data point."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Mixed metaphor in the LinkedIn second paragraph: errors are called 'manufacturing defects' and then 'fingerprints' in the same sentence — two incompatible images. Separately, 'Analysis, not fact:' is a correct disclosure but reads as machinery; the same honesty can be carried by 'My view' or 'I think' without stopping the prose."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft reads as 'awareness training is worthless,' which no CIO can act on — they still have a training line item and a compliance requirement attached to it. The piece needs one sentence conceding training still has a job (reporting behaviour), just not as a reading test. Also, 'fund it and audit it like one' is an instruction with no method attached; give the actual audit."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The 'new signals' list — unexpected authority, urgency, channel switching — is not new. Those have been in awareness curricula for a decade, which undercuts the post's own thesis that something changed. Second omission, and it is a real one for 2026: the recommended callback is only a control if it is outbound to a number already on file. An inbound call is no longer proof of a person. That must be stated."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package never names the cause, only gestures at it ('fluent writing is now free'). Naming it plainly once — fluent text generation is commodity — is more credible than the coy version, and the standards warn against manufacturing AI urgency, not against naming AI accurately. The hashtag #AIThreats is exactly the manufactured-urgency register to avoid."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I finish the LinkedIn post agreeing and with nothing to do on Monday. 'Fund and audit your AP workflow' is a category, not an action. Give me the one rule to write down and the one query to run against last quarter."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Nothing here is quotable at a size that travels. The save-trigger for this idea is a policy sentence a reader can lift verbatim into their own handbook; the draft describes such a policy but never states it as a rule. State the rule."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Instagram CTA slide stacks four verified facts — in-house, US-based, 24/7, 15-minute first response — into a spec sheet. That is the exact promotional register the standards call restrained-or-absent, and it is the one slide that would make this look like MSP marketing after seven slides that did not."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "GBP runs approximately 730 characters against a 300–700 ceiling. 'Fluent writing is now free and available to anyone' is redundant (free and available are doing the same work). And the GBP close — 'that is a good place to start' — is a CTA that commits to nothing."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

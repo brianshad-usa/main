@@ -523,6 +523,246 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-05",
+      "idea_id": "S229",
+      "theme": "api_machine",
+      "format": "carousel",
+      "title": "Your integrations have more access than your CFO",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "idea_id": "S219",
+      "theme": "network_edge",
+      "format": "explainer",
+      "title": "The device at your network edge is running software too",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "question_poll"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "idea_id": "S038",
+      "theme": "ai_threats",
+      "format": "linkedin_analysis",
+      "title": "Security awareness training was built for a different attacker",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "idea_id": "S143",
+      "theme": "exec_strategy",
+      "format": "framework",
+      "title": "Three questions a CEO should ask their IT provider every quarter",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "behind_the_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "idea_id": "S252",
+      "theme": "ai_governance",
+      "format": "checklist",
+      "title": "What to ask before letting an agent touch your systems",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "idea_id": "S240",
+      "theme": "identity",
+      "format": "explainer",
+      "title": "Session tokens: the thing MFA doesn't protect",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
