@@ -763,6 +763,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-10",
+      "idea_id": "S217",
+      "theme": "data_governance",
+      "format": "linkedin_analysis",
+      "title": "Good data governance became an AI prerequisite",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
