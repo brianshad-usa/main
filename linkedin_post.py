@@ -146,6 +146,167 @@ def _resolve_access_token():
     return None
 
 
+# ---------------------------------------------------------------------------
+# Personal (member) reshare -- mirrors every successful company-page post onto
+# Brian's personal LinkedIn profile as a RESHARE of the org post (shows up as
+# "Brian shared this" pointing back at the company post).
+#
+# This is a SEPARATE OAuth scope from org posting: it needs w_member_social,
+# and the token that publishes to the company page was minted for
+# w_organization_social / r_organization_social -- so it almost certainly does
+# NOT have w_member_social yet. Every function below degrades cleanly: if the
+# scope or the member URN isn't available it logs a one-line "[skipped]" notice
+# and returns None. It NEVER raises, so it can never fail an org post or a run.
+# ---------------------------------------------------------------------------
+USERINFO_URL = "https://api.linkedin.com/v2/userinfo"
+
+# Cache the resolved member URN for the life of the process so we don't hit
+# /v2/userinfo more than once per run.
+_member_urn_cache = {"resolved": False, "value": None}
+
+
+def _looks_like_scope_error(msg):
+    """Heuristic: does this LinkedIn error body/text indicate the token is
+    simply missing the w_member_social scope (vs. a real outage)?"""
+    m = (msg or "").lower()
+    return any(
+        s in m for s in (
+            "w_member_social",
+            "not enough permissions",
+            "insufficient permissions",
+            "does not have permission",
+            "access to the resource",
+            "acl",
+            "unpermitted",
+            "scope",
+        )
+    )
+
+
+def _resolve_member_urn(token):
+    """Return Brian's personal member URN (urn:li:person:XXXX) or None.
+
+    Order of preference:
+      1. LINKEDIN_MEMBER_URN secret (a bare id or a full urn:li:person:... URN).
+      2. Dynamic lookup via the OpenID /v2/userinfo endpoint (needs the
+         openid+profile scopes on the token; returns 403 otherwise).
+    Result is cached (including a None result) for the process lifetime.
+    Never raises."""
+    if _member_urn_cache["resolved"]:
+        return _member_urn_cache["value"]
+
+    urn = None
+    configured = os.environ.get("LINKEDIN_MEMBER_URN", "").strip()
+    if configured:
+        urn = configured if configured.startswith("urn:") else f"urn:li:person:{configured}"
+        _log(f"Using LINKEDIN_MEMBER_URN for personal reshare ({urn}).")
+    else:
+        try:
+            req = urllib.request.Request(
+                USERINFO_URL,
+                method="GET",
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                info = json.loads(resp.read().decode("utf-8"))
+            sub = (info or {}).get("sub")
+            if sub:
+                urn = f"urn:li:person:{sub}"
+                _log(f"Resolved personal member URN via /v2/userinfo ({urn}).")
+            else:
+                _log("[skipped] member reshare (could not read member id from /v2/userinfo).")
+        except urllib.error.HTTPError as e:
+            body = ""
+            try:
+                body = e.read().decode("utf-8", "replace")
+            except Exception:
+                pass
+            if e.code in (401, 403) or _looks_like_scope_error(body):
+                _log(
+                    "[skipped] member reshare (w_member_social/openid not granted): "
+                    "/v2/userinfo returned "
+                    f"{e.code}. Set LINKEDIN_MEMBER_URN or re-mint the token with "
+                    "openid+profile+w_member_social."
+                )
+            else:
+                _log(f"[skipped] member reshare (/v2/userinfo error {e.code}).")
+        except Exception as e:
+            _log(f"[skipped] member reshare (/v2/userinfo lookup failed: {e}).")
+
+    _member_urn_cache["resolved"] = True
+    _member_urn_cache["value"] = urn
+    return urn
+
+
+def _member_reshare(token, member_urn, org_post_urn, api_version):
+    """POST a reshare of org_post_urn authored by member_urn. Returns the new
+    member post URN. Raises on HTTP failure (caller wraps + swallows)."""
+    body = {
+        "author": member_urn,
+        "commentary": "",
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": [],
+        },
+        "lifecycleState": "PUBLISHED",
+        "isReshareDisabledByAuthor": False,
+        "reshareContext": {"parent": org_post_urn},
+    }
+    req = urllib.request.Request(
+        POSTS_URL,
+        data=json.dumps(body).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+            "LinkedIn-Version": api_version,
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return resp.headers.get("x-restli-id") or resp.headers.get("x-linkedin-id")
+
+
+def maybe_member_reshare(token, org_post_urn, api_version):
+    """Best-effort: reshare a just-published company-page post onto Brian's
+    personal profile. NEVER raises. Returns the member post URN on success,
+    or None if the member scope/URN isn't available or anything goes wrong.
+
+    Degradation is deliberate and quiet: the company-page post has already
+    landed by the time we get here, so a personal reshare that can't run is a
+    logged '[skipped]' line, not a failure."""
+    if not org_post_urn or not token:
+        return None
+    member_urn = _resolve_member_urn(token)
+    if not member_urn:
+        # _resolve_member_urn already logged the specific reason.
+        return None
+    try:
+        mid = _member_reshare(token, member_urn, org_post_urn, api_version)
+        _log(f"Reshared to personal profile ({member_urn}). Member post id: {mid}")
+        return mid
+    except urllib.error.HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode("utf-8", "replace")
+        except Exception:
+            pass
+        if e.code in (401, 403) or _looks_like_scope_error(body):
+            _log(
+                "[skipped] member reshare (w_member_social not granted): reshare POST "
+                f"returned {e.code}. Add the 'Share on LinkedIn' product to the app "
+                "and re-mint the token with w_member_social."
+            )
+        else:
+            _log(f"WARNING: personal reshare failed (org post unaffected). {e.code}: {body[:300]}")
+        return None
+    except Exception as e:
+        _log(f"WARNING: personal reshare failed (org post unaffected). Reason: {e}")
+        return None
+
+
 def _build_post_body(org_urn, commentary, url, title, description):
     return {
         "author": org_urn,
@@ -204,6 +365,7 @@ def post_article(title, url, summary, caption):
         with urllib.request.urlopen(req, timeout=30) as resp:
             post_id = resp.headers.get("x-restli-id") or resp.headers.get("x-linkedin-id")
             _log(f"Published to LinkedIn. Post id: {post_id}")
+            maybe_member_reshare(token, post_id, api_version)
             return post_id
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")
