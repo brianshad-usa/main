@@ -8,7 +8,10 @@ about a year.
 
 PREREQUISITES (see LINKEDIN_SETUP.md for the click-by-click version):
   1. A LinkedIn developer app linked to your Company Page.
-  2. The app approved for the "Community Management API" product.
+  2. The app approved for the "Community Management API" product (company-page
+     posting) AND the "Share on LinkedIn" / "Sign In with LinkedIn using OpenID
+     Connect" product (personal-profile reshare -- grants w_member_social plus
+     the openid/profile scopes used to look up your person URN).
   3. In the app's Auth tab, add this exact Redirect URL:
         http://localhost:8000/callback
   4. Have your Client ID and Client Secret handy (Auth tab).
@@ -39,8 +42,19 @@ REDIRECT_PATH = "/callback"
 REDIRECT_URI = f"http://localhost:{REDIRECT_PORT}{REDIRECT_PATH}"
 AUTH_URL = "https://www.linkedin.com/oauth/v2/authorization"
 TOKEN_URL = "https://www.linkedin.com/oauth/v2/accessToken"
-# Scopes needed to publish to a Company Page via the Community Management API.
-SCOPES = "w_organization_social r_organization_social"
+# Scopes needed by the pipeline:
+#   w_organization_social / r_organization_social -> publish to the Company Page
+#       (Community Management API product).
+#   w_member_social                               -> ALSO reshare each company
+#       post onto Brian's personal profile ("Share on LinkedIn" / Sign In with
+#       LinkedIn product).
+#   openid / profile                              -> read Brian's person URN from
+#       /v2/userinfo so the reshare knows who to post as (skip if you instead
+#       set the LINKEDIN_MEMBER_URN secret).
+# NOTE: w_member_social + openid + profile require the "Share on LinkedIn"
+# (a.k.a. Sign In with LinkedIn using OpenID Connect) product to be added to the
+# LinkedIn app first, otherwise LinkedIn drops them from the consent screen.
+SCOPES = "w_organization_social r_organization_social w_member_social openid profile"
 STATE = "prolink_linkedin_setup"
 
 _captured = {"code": None, "error": None}

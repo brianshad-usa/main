@@ -464,6 +464,7 @@ def post_image(commentary, image_path, alt_text="Pro Link Systems"):
         with urllib.request.urlopen(req, timeout=30) as resp:
             post_id = resp.headers.get("x-restli-id") or resp.headers.get("x-linkedin-id")
             _log(f"Published image post to LinkedIn. Post id: {post_id}")
+            maybe_member_reshare(token, post_id, api_version)
             return post_id
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")
@@ -610,6 +611,7 @@ def post_video(commentary, video_path, title="Pro Link Systems"):
         with urllib.request.urlopen(req, timeout=60) as resp:
             post_id = resp.headers.get("x-restli-id") or resp.headers.get("x-linkedin-id")
             _log(f"Published video post to LinkedIn. Post id: {post_id}")
+            maybe_member_reshare(token, post_id, api_version)
             return post_id
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")
