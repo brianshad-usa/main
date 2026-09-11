@@ -803,6 +803,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-11",
+      "idea_id": "S161",
+      "theme": "msp_change",
+      "format": "framework",
+      "title": "How to evaluate an IT provider without a technical background",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          }
+        }
+      }
     }
   ]
 }
