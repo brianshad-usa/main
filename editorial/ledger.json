@@ -843,6 +843,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-12",
+      "idea_id": "S031",
+      "theme": "ai_threats",
+      "format": "carousel",
+      "title": "The phishing tell that stopped working",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
