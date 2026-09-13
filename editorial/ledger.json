@@ -883,6 +883,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-13",
+      "idea_id": "S101",
+      "theme": "third_party_risk",
+      "format": "linkedin_analysis",
+      "title": "Your security is now your vendors' security",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote_minimal",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          }
+        }
+      }
     }
   ]
 }
