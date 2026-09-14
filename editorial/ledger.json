@@ -923,6 +923,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-14",
+      "idea_id": "S119",
+      "theme": "compliance",
+      "format": "explainer",
+      "title": "CMMC for companies who just found out it applies to them",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
