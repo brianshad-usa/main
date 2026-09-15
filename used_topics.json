@@ -52,5 +52,6 @@
   "Immutable backups: recovery that survives a compromised administrator",
   "Cyber insurance questionnaires: answering accurately before renewal",
   "The edge device problem: why firewalls and VPNs are now the way in",
-  "OAuth app grants: the third-party access that survives password resets"
+  "OAuth app grants: the third-party access that survives password resets",
+  "Break-glass accounts: planning for the day your identity provider is down"
 ]
