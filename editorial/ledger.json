@@ -963,6 +963,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-15",
+      "idea_id": "S006",
+      "theme": "ai_governance",
+      "format": "carousel",
+      "title": "What an AI agent can actually do with your credentials",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote_minimal",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
