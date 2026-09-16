@@ -1003,6 +1003,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-16",
+      "idea_id": "S055",
+      "theme": "identity",
+      "format": "linkedin_analysis",
+      "title": "MFA is not one control",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
