@@ -1043,6 +1043,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-17",
+      "idea_id": "S226",
+      "theme": "api_machine",
+      "format": "explainer",
+      "title": "API keys are credentials that never expire and never sleep",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "infographic",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "infographic"
+          }
+        }
+      }
     }
   ]
 }

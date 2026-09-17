@@ -1,0 +1,138 @@
+{
+  "post": "A scenario that plays out quietly in a lot of businesses.\n\nSomeone in accounting connects a reporting app to the finance system so the numbers update on their own. They approve the access request, it works, nobody thinks about it again.\n\nTwo years later that person moves on. IT closes the mailbox, disables the account, collects the laptop. The checklist is complete.\n\nThe connection is still running. It still reads the data, and resetting the departed employee's password does not touch it, because the app was never using that password.\n\nNothing has gone wrong. There is a door standing open with nobody assigned to close it — and with AI assistants and automations now connecting to everything, most companies are adding those doors faster than they are counting them.\n\nOne question for whoever runs your systems: can we see every key and connected app with access to our data, and who owns each one?",
+  "headline": "A password reset is not a revocation",
+  "cta_label": "Our security services",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-17-s226-card.png",
+  "image_file_jpg": "2026-09-17-s226-card.jpg",
+  "theme": "api_machine",
+  "idea_id": "S226",
+  "core_idea": "Machine credentials — API keys, service accounts and OAuth consent grants — are the fastest-growing identity class in any business and the only one with no device, no geography, no working hours and no owner; which is why a password reset is not a revocation, and why offboarding a person does not offboard their access.",
+  "channels": {
+    "linkedin": "Your identity controls assume the thing signing in has a pulse.\n\nMFA prompts, impossible-travel alerts, session timeouts, quarterly access reviews — all of it is calibrated to a person, a device, a place, a workday. Machine credentials answer to none of it: no device to trust, no home country to compare, no hours that look unusual.\n\nTwo things make this a 2026 problem rather than an API-hygiene footnote.\n\nFirst, the count is rising, and not from IT. Every AI assistant connector, automation and reporting integration signs in as something other than a person, usually created by whoever needed it that afternoon. Access reviews were built for headcount.\n\nSecond, a password reset is not a revocation. Force the change, re-enroll MFA, wipe the laptop — an app that user consented to months ago still holds its token. The human credential is fixed. Nothing happened to the machine one. Read that as analysis rather than a cited finding, but a response that stops at the human account is incomplete.\n\nThe gap is ownership, not technology. Human identity has a shared process between IT and HR. Machine identity has neither — and the credential usually carries wider permission than the person who created it.\n\nThree things for the agenda this quarter.\n\nA named owner for every non-human identity. A person, not a department.\n\nNo new credential issued without an expiry date.\n\nWhere the platform offers a managed identity, stop handing out long-lived secrets.\n\nOne diagnostic first: can anyone produce the list? If it takes more than a week, you have found the thing worth fixing.",
+    "facebook": "A scenario that plays out quietly in a lot of businesses.\n\nSomeone in accounting connects a reporting app to the finance system so the numbers update on their own. They approve the access request, it works, nobody thinks about it again.\n\nTwo years later that person moves on. IT closes the mailbox, disables the account, collects the laptop. The checklist is complete.\n\nThe connection is still running. It still reads the data, and resetting the departed employee's password does not touch it, because the app was never using that password.\n\nNothing has gone wrong. There is a door standing open with nobody assigned to close it — and with AI assistants and automations now connecting to everything, most companies are adding those doors faster than they are counting them.\n\nOne question for whoever runs your systems: can we see every key and connected app with access to our data, and who owns each one?",
+    "gbp": "A practical exercise for any Los Angeles business running more than a handful of software tools.\n\nAsk whoever manages your systems for one list: every API key, service account and connected app with access to your data. Then two follow-ups — which of them expire, and which were created by someone who no longer works here.\n\nExpect the list to come back incomplete. That is the useful part. You cannot rotate or revoke what nobody can see.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. If machine access has never been inventoried, that inventory is where to start.",
+    "x": [
+      "A password reset is not a revocation. Force the change, re-enroll MFA, wipe the laptop — and the app that user consented to last year still holds its token and its access. Human credential fixed. Machine credential untouched.",
+      "Offboarding closes the mailbox, the VPN, the SSO account. It rarely touches the integration that person wired up two years ago — still authenticating, still reading, usually scoped wider than the person who created it.",
+      "What makes this 2026: every AI assistant connector and automation signs in as a non-human identity, most created by people outside IT. Access reviews were built for headcount. So start with one question — can anyone produce the list?"
+    ],
+    "instagram_caption": "Identity became the security perimeter, and nearly all the tooling that followed was designed around people: prompt the user, score the location, time out the session, review the list each quarter.\n\nMachine credentials answer to none of that. And the number of them in an average business is climbing, because every AI connector and automation signs in as something other than a person.\n\nSeven slides on why a password reset is not a revocation, and what to govern instead.\n\n#MachineIdentity #ZeroTrust"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "infographic",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "infographic"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 97,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: MFA prompts, impossible-travel alerts, session timeouts and periodic access reviews are calibrated to human login patterns — device, location, working hours, headcount.",
+    "ANALYSIS: Machine credentials such as API keys, service accounts and OAuth consent grants have no bound device, no fixed geography and no working hours; where an expiry exists it must be deliberately set. Phrased to avoid the flat overclaim that machine credentials never expire, since some carry configurable lifetimes.",
+    "ANALYSIS: A third-party application operating under a previously granted consent or token can continue to hold access after the granting user's password is reset and MFA is re-enrolled, because the application is not authenticating with that password. Explicitly labeled as analysis in the LinkedIn copy; no incident, vendor advisory or research finding is cited or implied.",
+    "ANALYSIS: An incident response that remediates only the human account may leave machine access intact.",
+    "ANALYSIS: AI assistant connectors, automations and integrations authenticate as non-human identities, and are frequently created by staff outside IT. Directional claim only — no growth rate, count or percentage is stated, and the carousel diagram carries no axis figures.",
+    "ANALYSIS: Machine credentials are commonly scoped more broadly than the permissions held by the person who created them.",
+    "ANALYSIS: Employee offboarding processes commonly cover mailbox, VPN and SSO accounts but not credentials or app grants the employee created.",
+    "ANALYSIS: Major cloud and identity platforms offer managed or platform-issued identity options as an alternative to long-lived stored secrets. Stated generically — no vendor, product name, version, default setting or limit is claimed.",
+    "ANALYSIS: The governance gap for machine identity is primarily unassigned ownership rather than technical difficulty.",
+    "OPINION: If an organization cannot produce an inventory of active keys, service accounts and app grants within a week, that itself is the material finding.",
+    "OPINION: An uninventoried machine credential is an unowned open door rather than an incident.",
+    "EXPECTATION (not fact): GBP copy says to expect the list to come back incomplete — framed as an expectation, not as a measured outcome.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "NOTE: No industry, breach-cost, downtime or threat-landscape statistic appears anywhere in the package, as the brief supplied no named, dated primary source. No client is named or implied. The accounting and operations scenarios are generic illustrations, and the 'two years' interval is illustrative, not a case history.",
+    "NOTE: No blocked fact used. F003, F004, F005, F006 and F009–F011 do not appear."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft violates channel doctrine by reusing text across channels: X post 1 is a near-verbatim lift of the LinkedIn opening, and the identical 'three questions' device appears on LinkedIn, X post 3 and the Instagram CTA slide. Three channels are carrying the same expression instead of the best expression for each."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is built as a mold, not a story — 'Part one / two / three / four' kickers are structural filler and the four slides are parallel rather than progressive, so there is no turn. The piece never earns a surprise; it lists four absences and stops. It needs a genuine insight slide (the one the reader forwards) and a 2026 driver, not an enumeration."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package ships no visual direction at all — empty body/footer fields on the hook slide and no typographic or compositional system, which means downstream design defaults to generic. Also the hook headline runs to three clauses; a hook slide's only job is to earn the swipe and must be one short line. Added per-slide visual notes and a package-level visual direction."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Internal mismatch: LinkedIn lists five controls then claims machine access 'breaks all four assumptions.' Bigger problem — 'usually no expiry' is stated too flatly. Some machine credentials do carry expiry (configurable client secrets, token lifetimes); the durable issue is standing consent and unowned long-lived secrets. Language tightened to avoid an overclaim an engineer could puncture."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft's entire recommendation is 'ask for the list.' A CIO already knows the list is incomplete; that is a diagnostic, not a decision. The package gives no governance instruction — no owner assignment, no expiry-on-creation rule, no path off long-lived secrets toward platform-managed identity. Added three concrete rules and positioned the inventory question as the diagnostic that precedes them."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft omits the most consequential mechanism: a third-party OAuth consent grant survives a password reset and MFA re-enrollment. That is the sharpest and least-understood point available on this topic and it was buried in a single phrase, 'app grants.' Also missing: machine credentials are typically scoped wider than the human who created them. Both are now central."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in the draft makes this a 2026 piece — it would have read the same in 2019. The reason machine identity is suddenly urgent is volume: every AI assistant connector, agent and automation authenticates as a non-human identity, and most are created outside IT. Added as one of the two load-bearing arguments, with no invented growth figure."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Nothing has been breached. There is simply an open door' lets the executive off the hook and ends the thought. The consequence an executive needs is that an incident response which stops at the human account is incomplete — that is what makes this their problem, not a hygiene chore for IT. Sharpened, and explicitly labeled as analysis rather than a cited finding."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread has no progression — three posts of equal weight, any of which could be first, so the thread adds nothing over a single post. Rebuilt as counterintuitive claim, then the mundane mechanism, then the 2026 driver ending on the one question worth asking. Each post now stands alone and gains from sequence."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "CTA label 'Review machine access' promises a machine-access resource, while the URL is a general cybersecurity page — a small promise/destination mismatch that costs trust for no gain. Also 'Most lists come back incomplete' on GBP is an unsourced empirical claim stated as fact; reframed as an expectation. Card headline swapped to the package's strongest original line."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Mixed orthography for a Los Angeles audience ('recognises', 'organisation'), and two anaphora runs break the rule against consecutive sentences opening with the same word ('No device… No home country… No hours' and 'The human credential… The machine credential…'). The '18 months' figure also repeated across three channels, reading as a template. All fixed."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
