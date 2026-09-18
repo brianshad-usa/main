@@ -1,0 +1,155 @@
+{
+  "post": "A vendor emails your accounts payable clerk with updated banking details. The thread looks like the one from March. Correct invoice number, correct project, correct name on the approval line. Nothing is misspelled.\n\nNot long ago, that email never gets written for a 60-person company. Composing it took real research, by hand, and that effort went to bigger targets.\n\nThe research is close to free now. The thing that used to protect smaller businesses — being not worth the trouble to study — is gone.\n\nSo the question stopped being whether the email looks right. It is whether someone called the vendor back on a number already on file, and whether a second person had to sign off on a change that size. Worth knowing: a familiar voice on the phone is not the proof it used to be either.",
+  "headline": "Targeted phishing stopped being expensive to write",
+  "cta_label": "Our security practice",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-18-s035-card.png",
+  "image_file_jpg": "2026-09-18-s035-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S035",
+  "core_idea": "Researching a target by hand was expensive, and that expense quietly kept smaller companies and junior employees out of range. The expense is gone, so the defense has to move from judging how a message reads to verifying what it asks for — through a procedure that binds the executive too.",
+  "channels": {
+    "linkedin": "Spear phishing used to be rationed. Not by ethics — by labor.\n\nSounding like your controller meant reading a posting history, learning who signs off, matching the cadence of a real internal thread. Hand work, and it had to go where it paid. Large enterprises. Large wire transfers.\n\nEffort was never a security control. It functioned as one anyway: most companies were shielded less by their defenses than by their irrelevance to an attacker's arithmetic.\n\nThat rate limit is gone. Fluent, context-aware text costs an attacker almost nothing to produce now, and the raw material has been public for a decade. Analysis, not forecast: cheap personalization does not make attacks smarter. It makes them broader — enterprise-grade pretext aimed at people nobody would have spent an afternoon researching.\n\nThree implications.\n\n\"Too small to be targeted\" was always a claim about attacker economics, never about your defenses. It has expired.\n\nAwareness training built on spotting typos now watches for a signal that has stopped appearing. What stays detectable is what a message asks for. And often nothing is spoofed at all — the request arrives inside a real thread from a mailbox someone else already controls.\n\nThe verification rule has to survive rank. Most fail because a junior employee will not challenge a request that appears to come from an executive in a hurry. If the rule exempts you, it is not a rule.\n\nOne caveat on the standard advice to call and confirm: a familiar voice is no longer strong proof of identity. Call back on a number already on file, and above a set amount, require a second approver.",
+    "facebook": "A vendor emails your accounts payable clerk with updated banking details. The thread looks like the one from March. Correct invoice number, correct project, correct name on the approval line. Nothing is misspelled.\n\nNot long ago, that email never gets written for a 60-person company. Composing it took real research, by hand, and that effort went to bigger targets.\n\nThe research is close to free now. The thing that used to protect smaller businesses — being not worth the trouble to study — is gone.\n\nSo the question stopped being whether the email looks right. It is whether someone called the vendor back on a number already on file, and whether a second person had to sign off on a change that size. Worth knowing: a familiar voice on the phone is not the proof it used to be either.",
+    "gbp": "\"We're too small to bother with\" was never a statement about your defenses. It was a bet on attacker workload. Building a customized phishing message used to take real research by hand, so that effort went to larger targets. It costs almost nothing now.\n\nOne rule worth writing this week: banking and payment changes get confirmed by phone on a number already on file, never a number supplied in the message. Above a set amount, a second person approves. The rule applies to requests that appear to come from you.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. If you want a second opinion on how your team handles payment-change requests, ask.",
+    "x": [
+      "\"Too small to be targeted\" was never a claim about your defenses. It was a claim about attacker workload. Researching a target by hand was expensive, so it was spent on big payouts. Smaller companies were shielded by being unprofitable to study. That price has collapsed.",
+      "Cheaper personalization does not produce smarter attacks. It produces broader ones. Pretext quality once reserved for enterprise CFOs now lands in accounts payable, where a single banking-detail change is worth the trouble.",
+      "\"Call to confirm\" needs an update. It works only if you call a number already on file, and a familiar voice is no longer proof of who is speaking. Above a set amount, require a second approver. The control is the procedure, not the listener's judgment."
+    ],
+    "instagram_caption": "Researching a target by hand was the natural rate limit on phishing. Sounding like your controller took real work, and that work went where the payout was biggest. Smaller companies were never defended. They were unprofitable to study.\n\nThat price collapsed. Pretext once reserved for enterprise CFOs now reaches accounts payable and the hire who started three weeks ago.\n\nSo the tell moved. Not how a message reads, but what it asks for, whether a second channel confirmed it on a number already on file, and whether anyone else had to approve it.\n\n#businessemailcompromise #socialengineering"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-18-s035-01.png",
+      "2026-09-18-s035-02.png",
+      "2026-09-18-s035-03.png",
+      "2026-09-18-s035-04.png",
+      "2026-09-18-s035-05.png",
+      "2026-09-18-s035-06.png",
+      "2026-09-18-s035-07.png",
+      "2026-09-18-s035-08.png"
+    ],
+    "jpg": [
+      "2026-09-18-s035-01.jpg",
+      "2026-09-18-s035-02.jpg",
+      "2026-09-18-s035-03.jpg",
+      "2026-09-18-s035-04.jpg",
+      "2026-09-18-s035-05.jpg",
+      "2026-09-18-s035-06.jpg",
+      "2026-09-18-s035-07.jpg",
+      "2026-09-18-s035-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Targeted phishing historically required manual research — posting history, internal names, thread cadence — which cost attacker effort. No quantity of effort is stated anywhere in the package; the draft's 'an hour, minimum' figure was removed as an unsourced claim about attacker behaviour.",
+    "ANALYSIS: Because research cost effort, attacker attention concentrated on larger organizations and larger payouts.",
+    "ANALYSIS: Smaller companies were shielded by attacker economics rather than by their own defenses.",
+    "ANALYSIS: The cost of producing fluent, personalized, context-aware text has collapsed, removing that rate limit. Mechanism named plainly once; no vendor, model, or capability claim is made.",
+    "ANALYSIS: Lower cost of personalization broadens targeting rather than raising sophistication.",
+    "ANALYSIS: Lower-level roles (accounts payable, office manager, new hires) are now economically worth targeting.",
+    "ANALYSIS: Business email compromise frequently originates inside a legitimate thread from an already-compromised mailbox, so sender-appearance checks fail structurally. Stated as analysis; no incident, campaign, or research finding is cited.",
+    "ANALYSIS: Synthetic voice reduces the evidentiary weight of a familiar voice on an inbound call, which is why the recommended control is a callback to a number already on file plus a second approver. No incident or statistic cited.",
+    "OPINION: Awareness training centered on spotting typos and awkward grammar now trains against a signal that no longer reliably appears.",
+    "OPINION: Out-of-band verification of the request, on a number already on file, with an approval threshold and no executive exemption, is the durable control.",
+    "ILLUSTRATION (not a client): hypothetical 60-person company and hypothetical vendor banking-change email. No ProLink client named, implied, or described.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used in GBP and as the Instagram slide 8 footer.",
+    "NO NUMBERS: no industry, breach-cost, downtime, or threat-volume figure appears in any asset. The only numerals used are illustrative scale (a 60-person company) and narrative detail (three weeks into the job), neither presented as data.",
+    "BLOCKED FACTS NOT USED: F006, F009, F010, F011 do not appear."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The LinkedIn post runs past the 1,600-character ceiling and the argument sags in the middle third. More importantly, the package stops one step short of the decision an executive actually owns: who approves what, at what threshold. Trimmed and given a concrete decision to make."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Six of eight Instagram slides are tagged 'content', which means the narrative arc was never designed — it was just a list. Slide roles now map to the progression (problem, why it matters, insight, reality, stale defense, what to do, takeaway), and the deck closes on the sharpest line rather than trailing off into procedure."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The draft contained zero visual direction — no system, no diagram specs, nothing that would stop a designer from reaching for stock imagery. Added a package-level visual system and per-slide direction, including a repeat-with-one-change diagram across slides 3 and 4 that carries the economic argument visually instead of decoratively."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Call it an hour of attacker work, minimum' is a fabricated quantity about attacker behaviour dressed as a casual aside — and the claims_audit then asserted 'no statistics used', contradicting itself. All numeric estimates of attacker effort removed; the argument is stronger without them. The mechanism behind the cost collapse is now named plainly once, rather than gestured at."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Call the vendor' is not a control, it is an intention. A verification rule fails in practice when a junior employee cannot apply it upward against apparent executive authority, and when no threshold defines when one person is no longer enough. Both failure modes are now stated, and the LinkedIn post ends on the rule that exempts no one."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft implied the attacker is always outside the thread. The most convincing business email compromise arrives inside a genuine thread from a mailbox the attacker already controls, where nothing is spoofed and sender checks pass. Added, because it is the reason 'does this look right' fails structurally rather than occasionally."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft advised phone verification without acknowledging that the same cost collapse applies to synthetic voice — which makes 'just call to confirm' incomplete advice from the same argument the post is making. Added the caveat: a familiar voice is no longer proof of identity, so the control is a callback to a known number plus a second approver, not the listener's judgment."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Nothing in the draft told a CFO what changes Monday morning. Now there is one writable rule, one threshold decision, and one explicit statement that the rule must bind the executive who is reading it."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "'The AP clerk, an office manager, someone who started three weeks ago' appeared near-verbatim in LinkedIn, X and Instagram, violating the never-the-same-text-twice rule and wasting the multi-channel surface. Each channel now carries a different entry point into the same idea; the X hook leads with the belief being killed rather than the mechanism."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The CTA label 'Review your controls' is an instruction to the reader that ProLink has not earned in the post, and the Instagram caption's #airisk hashtag is vague enough to read as trend-chasing. CTA is now descriptive rather than imperative, hashtags cut to two precise ones, and the only ProLink claim anywhere is F012."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook's 'Ten years ago' asserts a specific historical timeline nobody sourced; softened. Em-dash density was high enough to flatten the rhythm and has been reduced. Checked every asset for consecutive sentences opening on the same word and for banned phrasing; none remain."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
