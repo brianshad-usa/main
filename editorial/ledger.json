@@ -1123,6 +1123,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-19",
+      "idea_id": "S107",
+      "theme": "third_party_risk",
+      "format": "linkedin_analysis",
+      "title": "Your customers are starting to audit you",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
