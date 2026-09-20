@@ -1163,6 +1163,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-20",
+      "idea_id": "S150",
+      "theme": "exec_strategy",
+      "format": "comparison",
+      "title": "When internal IT is right, and when it isn't",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
