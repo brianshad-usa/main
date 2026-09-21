@@ -1203,6 +1203,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-21",
+      "idea_id": "S001",
+      "theme": "ai_governance",
+      "format": "carousel",
+      "title": "The AI your company didn't buy",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
