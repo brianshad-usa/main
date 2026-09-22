@@ -204,7 +204,9 @@
   }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>window.emailjs={init:function(){},send:function(){return Promise.resolve();}};</script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="/contact-form.js" defer></script>
   <link rel="stylesheet" href="_shared.css">
   <style>
     /* ============================================================
@@ -853,9 +855,9 @@
             <p>Tell us about your business &mdash; we'll follow up within one business day.</p>
           </div>
           <form id="hero-form" novalidate>
-            <input type="hidden" name="access_key" value="d5f91908-e49d-4720-a853-65d7c0a77fde">
-            <input type="hidden" name="subject" value="New Discovery Meeting Request &mdash; Pro Link Systems">
-            <input type="hidden" name="from_name" value="Pro Link Systems Home Page">
+
+
+
             <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
 
             <div class="form-row">
@@ -911,7 +913,8 @@
               <span class="form-error">Please include a message</span>
             </div>
 
-            <button type="submit" class="submit-btn" id="submit-btn">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
+        <button type="submit" class="submit-btn" id="submit-btn">
               <span class="btn-label">Send My Request</span>
               <svg class="btn-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
@@ -1906,9 +1909,9 @@
    CONTACT FORM &mdash; Web3Forms + EmailJS confirmation
    ───────────────────────────────────────────────────────── */
 (function () {
-  var EMAILJS_PUBLIC_KEY  = 'S8d9nu1H2bUKdf_mf';
-  var EMAILJS_SERVICE_ID  = 'service_p6znicx';
-  var EMAILJS_TEMPLATE_ID = 'template_yz71bhl';
+  var EMAILJS_PUBLIC_KEY  = '';
+  var EMAILJS_SERVICE_ID  = '';
+  var EMAILJS_TEMPLATE_ID = '';
 
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 

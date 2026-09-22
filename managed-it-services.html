@@ -942,7 +942,8 @@
               <label for="fi-message">How can we help? <span class="opt">(optional)</span></label>
               <textarea id="fi-message" name="message" rows="2" placeholder="Briefly describe your IT challenge&hellip;"></textarea>
             </div>
-            <button type="submit" class="submit-btn" id="lpBtn">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
+        <button type="submit" class="submit-btn" id="lpBtn">
               <span class="btn-label">Get My Free IT Assessment</span>
               <svg class="btn-arrow" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
@@ -1682,12 +1683,14 @@
 })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>window.emailjs={init:function(){},send:function(){return Promise.resolve();}};</script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="/contact-form.js" defer></script>
 <script>
 (function () {
-  var EMAILJS_PUBLIC_KEY  = 'S8d9nu1H2bUKdf_mf';
-  var EMAILJS_SERVICE_ID  = 'service_p6znicx';
-  var EMAILJS_TEMPLATE_ID = 'template_yz71bhl';
+  var EMAILJS_PUBLIC_KEY  = '';
+  var EMAILJS_SERVICE_ID  = '';
+  var EMAILJS_TEMPLATE_ID = '';
 
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 

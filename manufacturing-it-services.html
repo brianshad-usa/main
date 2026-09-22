@@ -150,7 +150,9 @@
   }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>window.emailjs={init:function(){},send:function(){return Promise.resolve();}};</script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="/contact-form.js" defer></script>
   <link rel="stylesheet" href="_shared.css">
   <style>
     /* ── INDUSTRY HERO ─────────────────────────────────────── */
@@ -647,7 +649,8 @@
               <label>Tell us about your IT situation</label>
               <textarea name="message" placeholder="e.g. We run 3 shifts, have CNC machines on the floor that need to stay connected, and need CMMC compliance for our DoD contract renewal&hellip;"></textarea>
             </div>
-            <button type="submit" class="submit-btn" id="submitBtn">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
+        <button type="submit" class="submit-btn" id="submitBtn">
               <span class="btn-label">Request Free Assessment</span>
               <svg class="btn-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
@@ -1178,9 +1181,9 @@
   }
 
   // FORM
-  var EMAILJS_PUBLIC_KEY  = 'S8d9nu1H2bUKdf_mf';
-  var EMAILJS_SERVICE_ID  = 'service_p6znicx';
-  var EMAILJS_TEMPLATE_ID = 'template_yz71bhl';
+  var EMAILJS_PUBLIC_KEY  = '';
+  var EMAILJS_SERVICE_ID  = '';
+  var EMAILJS_TEMPLATE_ID = '';
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
   document.getElementById('mfgForm').addEventListener('submit', function(e) {
