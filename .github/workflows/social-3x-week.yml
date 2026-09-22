@@ -95,6 +95,11 @@ jobs:
           LINKEDIN_ORG_ID:        ${{ secrets.LINKEDIN_ORG_ID }}
           IG_USER_ID:             ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN:        ${{ secrets.IG_ACCESS_TOKEN }}
+          # Facebook-login flow: set the IG_GRAPH_BASE secret to
+          # https://graph.facebook.com/v21.0 so IG publishing uses the Page/
+          # linked-IG token. If unset, instagram_post.py defaults to
+          # graph.instagram.com (the Instagram-login flow).
+          IG_GRAPH_BASE:          ${{ secrets.IG_GRAPH_BASE }}
           FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           X_API_KEY:              ${{ secrets.X_API_KEY }}

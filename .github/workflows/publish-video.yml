@@ -53,9 +53,11 @@ jobs:
           LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
           LINKEDIN_ACCESS_TOKEN:  ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_ORG_ID:        ${{ secrets.LINKEDIN_ORG_ID }}
-          # Instagram
+          # Instagram (set IG_GRAPH_BASE secret to https://graph.facebook.com/v21.0
+          # for the Facebook-login flow; unset = graph.instagram.com default).
           IG_USER_ID:             ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN:        ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_GRAPH_BASE:          ${{ secrets.IG_GRAPH_BASE }}
           # Facebook
           FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}

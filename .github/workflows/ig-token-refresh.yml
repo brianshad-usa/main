@@ -46,6 +46,10 @@ jobs:
           # Current token to extend + which Graph host the refresh uses.
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_GRAPH_BASE:   ${{ secrets.IG_GRAPH_BASE }}
+          # Needed for the Facebook-login refresh (fb_exchange_token): the main
+          # Meta App ID + App Secret (App settings -> Basic).
+          IG_APP_ID:       ${{ secrets.IG_APP_ID }}
+          IG_APP_SECRET:   ${{ secrets.IG_APP_SECRET }}
           # PAT with "Secrets: Read and write" on this repo (create per PART C).
           GH_PAT:          ${{ secrets.GH_PAT }}
           # GITHUB_REPOSITORY is auto-provided as owner/repo by Actions.
