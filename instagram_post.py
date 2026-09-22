@@ -41,6 +41,57 @@ def _log(msg):
     print(f"[instagram] {msg}", flush=True)
 
 
+# Meta/Instagram signatures for a dead access token. When any of these show up in
+# an HTTPError body the token has expired or been invalidated -- a credential
+# problem no code retry can fix -- so we say so loudly instead of dumping a raw
+# 400/401 that looks like a transient blip.
+_TOKEN_DEAD_MARKERS = (
+    '"code":190',            # OAuthException: access token problem
+    '"error_subcode":463',   # token expired
+    '"error_subcode":460',   # session invalidated (password change / logout)
+    '"error_subcode":467',   # token invalid (session no longer valid)
+    "session has expired",
+    "error validating access token",
+    "access token could not be decrypted",
+    "cannot parse access token",
+)
+
+_TOKEN_FIX_HINT = (
+    "Instagram ACCESS TOKEN is EXPIRED or INVALID (not a transient error). "
+    "Long-lived IG tokens last ~60 days and must be renewed. FIX: regenerate a "
+    "new long-lived token for the Pro Link Systems Instagram account and update "
+    "the GitHub repo secret IG_ACCESS_TOKEN. Instagram-login flow: Meta App "
+    "Dashboard > your app > Instagram > API setup with Instagram login > generate "
+    "a new token for the account (scopes: instagram_business_basic, "
+    "instagram_business_content_publish). Facebook-linked flow: Graph API / "
+    "Business Suite, scopes instagram_basic, instagram_content_publish, "
+    "pages_read_engagement, pages_manage_posts. Then run `python "
+    "instagram_post.py --refresh` periodically to extend it before it lapses."
+)
+
+
+def _token_looks_dead(detail):
+    d = (detail or "").lower().replace(" ", "")
+    hay = (detail or "").lower()
+    return any(
+        (m.replace(" ", "") in d) if m.startswith('"') else (m in hay)
+        for m in _TOKEN_DEAD_MARKERS
+    )
+
+
+def _report_http_error(what, code, detail):
+    """Log an HTTPError from a publish attempt, upgrading a dead-token error to a
+    clear, actionable message so an expired credential can't masquerade as noise."""
+    _log(f"WARNING: {what} failed: {code} {detail}")
+    if _token_looks_dead(detail):
+        _log("ACTION REQUIRED: " + _TOKEN_FIX_HINT)
+        # Surface it as a GitHub Actions error annotation too, so the RED run says
+        # exactly why without anyone digging through the raw log.
+        print("::error::Instagram token expired/invalid - regenerate and update "
+              "the IG_ACCESS_TOKEN GitHub secret (see instagram_post.py).",
+              flush=True)
+
+
 def _post(url, fields):
     data = urllib.parse.urlencode(fields).encode("utf-8")
     req = urllib.request.Request(url, data=data, method="POST")
@@ -79,7 +130,7 @@ def maybe_post(caption, image_url):
         return post_image(caption, image_url)
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")
-        _log(f"WARNING: Instagram post failed: {e.code} {detail}")
+        _report_http_error("Instagram post", e.code, detail)
         return None
     except Exception as e:
         _log(f"WARNING: Instagram post failed: {e}")
@@ -144,7 +195,7 @@ def maybe_post_reel(caption, video_url):
         return post_reel(caption, video_url)
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")
-        _log(f"WARNING: Instagram reel failed: {e.code} {detail}")
+        _report_http_error("Instagram reel", e.code, detail)
         return None
     except Exception as e:
         _log(f"WARNING: Instagram reel failed: {e}")
@@ -197,7 +248,7 @@ def maybe_post_carousel(caption, image_urls):
         return post_carousel(caption, image_urls)
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")
-        _log(f"WARNING: Instagram carousel failed: {e.code} {detail}")
+        _report_http_error("Instagram carousel", e.code, detail)
         return None
     except Exception as e:
         _log(f"WARNING: Instagram carousel failed: {e}")
