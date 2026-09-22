@@ -1,40 +1,52 @@
 """
 instagram_auth.py  --  ONE-TIME local setup / re-mint helper
 ------------------------------------------------------------
-Runs the Instagram OAuth flow ("Instagram API setup with Instagram login")
-on your own machine to mint a fresh LONG-LIVED Instagram access token
-(~60 days). You run this whenever you need a brand-new token -- e.g. the old
-one already expired and can no longer be extended -- then paste the printed
-value into the GitHub repo secret IG_ACCESS_TOKEN. Same spirit as
-linkedin_auth.py / youtube_auth.py.
+Mints a fresh LONG-LIVED token that instagram_post.py will accept, for the
+"ProLink Social" Meta app -- which uses the FACEBOOK-LOGIN flow (Facebook Login
+for Business + the "Manage messaging & content on Instagram" / "Manage
+everything on your Page" use cases). In this flow Instagram publishing goes
+through graph.facebook.com using a token tied to your Facebook Page and its
+linked Instagram business account -- there is NO separate Instagram app
+id/secret; you use the MAIN App ID + App Secret (App settings -> Basic).
 
-WHY THIS EXISTS: instagram_post.py --refresh can only EXTEND a still-valid
-token. Once a token has fully lapsed it cannot be refreshed; you must mint a
-new one from scratch. This script does that in one shot.
+  App ID     : App settings -> Basic -> "App ID"
+  App Secret : App settings -> Basic -> "App Secret" (click Show)
+
+What this script produces (paste into GitHub repo secrets):
+  IG_ACCESS_TOKEN  - a LONG-LIVED (~60 day) user token with IG publish rights,
+                     refreshable by the auto-refresh workflow.
+  IG_USER_ID       - your Instagram BUSINESS ACCOUNT id (discovered from the
+                     Page here; NOT your @handle).
+  IG_GRAPH_BASE    - must be https://graph.facebook.com/v21.0 for this flow.
 
 PREREQUISITES (Meta App Dashboard, one-time):
-  1. A Meta app with the Instagram product added, using
-     "Instagram API setup with Instagram login".
-  2. The IG account must be a Professional (Business or Creator) account.
-  3. In that Instagram setup panel, under "Business login settings" (OAuth
-     redirect URIs), add this EXACT redirect URI:
+  1. App type supports Facebook Login for Business (yours does).
+  2. Under Facebook Login for Business -> Settings, add this EXACT redirect URI
+     to "Valid OAuth Redirect URIs":
         http://localhost:8000/callback
-  4. Have your Instagram App ID and Instagram App Secret handy (same panel).
-     (These are the Instagram app credentials, not the top-level Facebook
-     App ID/Secret -- use the ones shown in the Instagram login setup box.)
+     (Keep the app in Development mode -- that's fine; see note below.)
+  3. Your Facebook Page must have the Instagram business account linked
+     (Page settings -> Linked accounts), and you must be an admin.
+
+DEVELOPMENT MODE IS FINE: an unpublished app can fully use these permissions
+for accounts with a role on the app (you, the admin/owner). You do NOT need App
+Review or to publish the app for first-party posting to your own Page/IG. Just
+make sure your Facebook user has a role on the app (Roles -> Roles), which the
+owner always does.
 
 USAGE:
   Windows PowerShell:
-    $env:IG_APP_ID="xxxx"; $env:IG_APP_SECRET="yyyy"; python instagram_auth.py
+    $env:IG_APP_ID="1008983111864495"; $env:IG_APP_SECRET="yyyy"; python instagram_auth.py
   macOS/Linux:
-    IG_APP_ID=xxxx IG_APP_SECRET=yyyy python instagram_auth.py
+    IG_APP_ID=1008983111864495 IG_APP_SECRET=yyyy python instagram_auth.py
 
   (If you don't set the env vars, the script prompts for them. It also accepts
-  the alternate names IG_CLIENT_ID / IG_CLIENT_SECRET.)
+  IG_CLIENT_ID / IG_CLIENT_SECRET. If your Facebook Login for Business setup
+  requires a configuration id, set IG_LOGIN_CONFIG_ID and it will be used.)
 
-A browser window opens; approve the permissions; control returns here and the
-new long-lived token is printed. If the browser can't reach localhost, the
-script falls back to asking you to paste the redirected URL.
+A browser opens; approve for the Page + Instagram account; control returns here
+and the long-lived token + IG_USER_ID are printed. If the browser can't reach
+localhost, the script falls back to asking you to paste the redirected URL.
 """
 
 import os
@@ -50,14 +62,16 @@ REDIRECT_PORT = 8000
 REDIRECT_PATH = "/callback"
 REDIRECT_URI = f"http://localhost:{REDIRECT_PORT}{REDIRECT_PATH}"
 
-# Instagram-login (graph.instagram.com) OAuth endpoints.
-AUTH_URL = "https://www.instagram.com/oauth/authorize"
-SHORT_TOKEN_URL = "https://api.instagram.com/oauth/access_token"
-LONG_TOKEN_URL = "https://graph.instagram.com/access_token"
+GRAPH_VER = "v21.0"
+AUTH_URL = f"https://www.facebook.com/{GRAPH_VER}/dialog/oauth"
+TOKEN_URL = f"https://graph.facebook.com/{GRAPH_VER}/oauth/access_token"
+ACCOUNTS_URL = f"https://graph.facebook.com/{GRAPH_VER}/me/accounts"
 
-# Scopes for the publishing pipeline. In the Instagram-login flow the scope
-# list is COMMA-separated (unlike the Facebook-login flow).
-SCOPES = "instagram_business_basic,instagram_business_content_publish"
+# Facebook-login flow scopes for Instagram content publishing off a Page.
+SCOPES = (
+    "instagram_basic,instagram_content_publish,"
+    "pages_show_list,pages_read_engagement,pages_manage_posts,business_management"
+)
 STATE = "prolink_instagram_setup"
 
 _captured = {"code": None, "error": None}
@@ -90,59 +104,18 @@ def _get_creds():
     cid = (os.environ.get("IG_APP_ID") or os.environ.get("IG_CLIENT_ID") or "").strip()
     secret = (os.environ.get("IG_APP_SECRET") or os.environ.get("IG_CLIENT_SECRET") or "").strip()
     if not cid:
-        cid = input("Instagram App ID: ").strip()
+        cid = input("Meta App ID (App settings -> Basic): ").strip()
     if not secret:
-        secret = input("Instagram App Secret: ").strip()
+        secret = input("Meta App Secret (App settings -> Basic): ").strip()
     if not cid or not secret:
-        print("Instagram App ID and App Secret are required.")
+        print("App ID and App Secret are required.")
         sys.exit(1)
     return cid, secret
 
 
-def _exchange_code_for_short_token(cid, secret, code):
-    """Trade the authorization code for a SHORT-lived Instagram token."""
-    data = urllib.parse.urlencode(
-        {
-            "client_id": cid,
-            "client_secret": secret,
-            "grant_type": "authorization_code",
-            "redirect_uri": REDIRECT_URI,
-            "code": code,
-        }
-    ).encode("utf-8")
-    req = urllib.request.Request(
-        SHORT_TOKEN_URL,
-        data=data,
-        method="POST",
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        payload = json.loads(resp.read().decode("utf-8"))
-    # Instagram has returned this either flat or wrapped in a "data" list over
-    # time -- handle both shapes.
-    if isinstance(payload, dict) and payload.get("data"):
-        payload = payload["data"][0]
-    token = payload.get("access_token")
-    if not token:
-        raise RuntimeError(f"No short-lived access_token in response: {payload}")
-    return token
-
-
-def _exchange_short_for_long(secret, short_token):
-    """Trade the short-lived token for a LONG-lived (~60 day) token."""
-    q = urllib.parse.urlencode(
-        {
-            "grant_type": "ig_exchange_token",
-            "client_secret": secret,
-            "access_token": short_token,
-        }
-    )
-    with urllib.request.urlopen(f"{LONG_TOKEN_URL}?{q}", timeout=30) as resp:
-        payload = json.loads(resp.read().decode("utf-8"))
-    token = payload.get("access_token")
-    if not token:
-        raise RuntimeError(f"No long-lived access_token in response: {payload}")
-    return token, payload.get("expires_in")
+def _get_json(url):
+    with urllib.request.urlopen(url, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
 
 def _read_body(e):
@@ -154,18 +127,65 @@ def _read_body(e):
     return ""
 
 
+def _exchange_code_for_short_token(cid, secret, code):
+    """Trade the authorization code for a SHORT-lived user token."""
+    q = urllib.parse.urlencode({
+        "client_id": cid,
+        "client_secret": secret,
+        "redirect_uri": REDIRECT_URI,
+        "code": code,
+    })
+    data = _get_json(f"{TOKEN_URL}?{q}")
+    token = data.get("access_token")
+    if not token:
+        raise RuntimeError(f"No short-lived access_token in response: {data}")
+    return token
+
+
+def _exchange_short_for_long(cid, secret, short_token):
+    """Trade the short-lived user token for a LONG-lived (~60 day) user token."""
+    q = urllib.parse.urlencode({
+        "grant_type": "fb_exchange_token",
+        "client_id": cid,
+        "client_secret": secret,
+        "fb_exchange_token": short_token,
+    })
+    data = _get_json(f"{TOKEN_URL}?{q}")
+    token = data.get("access_token")
+    if not token:
+        raise RuntimeError(f"No long-lived access_token in response: {data}")
+    return token, data.get("expires_in")
+
+
+def _discover_pages(long_user_token):
+    """List the Pages this user manages, with each Page's token + linked IG
+    business account, so we can print IG_USER_ID and the (non-expiring) Page
+    token as an alternative."""
+    q = urllib.parse.urlencode({
+        "fields": "name,id,access_token,instagram_business_account{id,username}",
+        "access_token": long_user_token,
+    })
+    data = _get_json(f"{ACCOUNTS_URL}?{q}")
+    return data.get("data", [])
+
+
 def main():
     cid, secret = _get_creds()
 
-    auth_link = AUTH_URL + "?" + urllib.parse.urlencode(
-        {
-            "client_id": cid,
-            "redirect_uri": REDIRECT_URI,
-            "response_type": "code",
-            "scope": SCOPES,
-            "state": STATE,
-        }
-    )
+    params = {
+        "client_id": cid,
+        "redirect_uri": REDIRECT_URI,
+        "response_type": "code",
+        "state": STATE,
+    }
+    # Facebook Login for Business may require a configuration id instead of a raw
+    # scope list; support either.
+    config_id = os.environ.get("IG_LOGIN_CONFIG_ID", "").strip()
+    if config_id:
+        params["config_id"] = config_id
+    else:
+        params["scope"] = SCOPES
+    auth_link = AUTH_URL + "?" + urllib.parse.urlencode(params)
 
     print("\nOpening your browser to authorize. If it doesn't open, paste this URL:\n")
     print(auth_link + "\n")
@@ -177,10 +197,10 @@ def main():
     code = None
     try:
         server = HTTPServer(("localhost", REDIRECT_PORT), _Handler)
-        print(f"Waiting for the Instagram redirect on {REDIRECT_URI} ...")
+        print(f"Waiting for the Facebook redirect on {REDIRECT_URI} ...")
         server.handle_request()  # serves exactly one request (the callback)
         if _captured["error"]:
-            print(f"\nAuthorization error from Instagram: {_captured['error']}")
+            print(f"\nAuthorization error from Facebook: {_captured['error']}")
             sys.exit(1)
         code = _captured["code"]
     except OSError as e:
@@ -196,9 +216,6 @@ def main():
         print("No authorization code received. Aborting.")
         sys.exit(1)
 
-    # Instagram appends a "#_" fragment to the code on the redirect; strip it.
-    code = code.split("#")[0]
-
     print("\nExchanging authorization code for a short-lived token...")
     try:
         short_token = _exchange_code_for_short_token(cid, secret, code)
@@ -206,25 +223,63 @@ def main():
         print(f"Short-lived token exchange failed: {e} {_read_body(e)}")
         sys.exit(1)
 
-    print("Upgrading to a long-lived (~60 day) token...")
+    print("Upgrading to a long-lived (~60 day) user token...")
     try:
-        long_token, expires_in = _exchange_short_for_long(secret, short_token)
+        long_token, expires_in = _exchange_short_for_long(cid, secret, short_token)
     except Exception as e:
         print(f"Long-lived token exchange failed: {e} {_read_body(e)}")
         sys.exit(1)
 
+    print("Discovering your Page + linked Instagram business account...")
+    ig_user_id = None
+    page_token = None
+    pages = []
+    try:
+        pages = _discover_pages(long_token)
+    except Exception as e:
+        print(f"(warning) Could not auto-list Pages: {e} {_read_body(e)}")
+
+    linked = [p for p in pages if p.get("instagram_business_account")]
+    if len(linked) == 1:
+        ig_user_id = linked[0]["instagram_business_account"]["id"]
+        page_token = linked[0].get("access_token")
+    elif len(linked) > 1:
+        print("\nMultiple Pages have a linked Instagram account:")
+        for i, p in enumerate(linked):
+            iba = p["instagram_business_account"]
+            print(f"  [{i}] Page '{p.get('name')}' (id {p.get('id')}) -> "
+                  f"IG @{iba.get('username')} (id {iba.get('id')})")
+        try:
+            choice = int(input("Pick the number for the ProLink Instagram: ").strip())
+            ig_user_id = linked[choice]["instagram_business_account"]["id"]
+            page_token = linked[choice].get("access_token")
+        except Exception:
+            print("(couldn't read a valid choice; set IG_USER_ID manually below)")
+
     print("\n" + "=" * 68)
-    print("  SUCCESS - update this GitHub repo secret")
-    print("  (Repo > Settings > Secrets and variables > Actions > IG_ACCESS_TOKEN)")
+    print("  SUCCESS - update these GitHub repo secrets")
+    print("  (Repo > Settings > Secrets and variables > Actions)")
     print("=" * 68)
-    print(f"\nIG_ACCESS_TOKEN:\n{long_token}\n")
+    print(f"\nIG_ACCESS_TOKEN  (long-lived user token, refreshable):\n{long_token}\n")
     if expires_in:
-        print(f"(long-lived token valid ~{int(expires_in) // 86400} days)")
+        print(f"(valid ~{int(expires_in) // 86400} days; the refresh workflow extends it)")
+    if ig_user_id:
+        print(f"\nIG_USER_ID  (Instagram business account id):\n{ig_user_id}\n")
+    else:
+        print("\nIG_USER_ID: could not auto-detect. Find it via Graph API Explorer:\n"
+              "  GET /me/accounts?fields=instagram_business_account{id,username}\n")
+    print("IG_GRAPH_BASE  (required for this flow):\n"
+          "https://graph.facebook.com/v21.0\n")
+    if page_token:
+        print("-" * 68)
+        print("ALTERNATIVE: a Page access token (does NOT expire) is also available.\n"
+              "If IG publishing ever rejects the user token with a permissions\n"
+              "error, use the Page token as IG_ACCESS_TOKEN instead -- it's\n"
+              "set-and-forget (the refresh workflow then just no-ops safely):\n"
+              f"{page_token}\n")
     print(
-        "\nReminder: also confirm IG_USER_ID is set. Once the automated refresh\n"
-        "workflow (.github/workflows/ig-token-refresh.yml) plus the GH_PAT secret\n"
-        "are in place, this token will be extended on a schedule and you won't\n"
-        "need to run this again.\n"
+        "Reminder: keep the app in Development mode is fine for first-party\n"
+        "posting to your own Page/IG. No App Review needed.\n"
     )
 
 
