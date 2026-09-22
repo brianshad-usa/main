@@ -60,7 +60,16 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 REDIRECT_PORT = 8000
 REDIRECT_PATH = "/callback"
-REDIRECT_URI = f"http://localhost:{REDIRECT_PORT}{REDIRECT_PATH}"
+# Default is a local server. If localhost is awkward with your Facebook Login
+# for Business config, set IG_REDIRECT_URI to a redirect the app already allows
+# (e.g. https://prolinksystems.com/) -- the script will then skip the local
+# server and ask you to paste the redirected URL (which carries ?code=...).
+REDIRECT_URI = os.environ.get(
+    "IG_REDIRECT_URI", f"http://localhost:{REDIRECT_PORT}{REDIRECT_PATH}"
+).strip()
+_USE_LOCAL_SERVER = REDIRECT_URI.startswith(
+    (f"http://localhost:{REDIRECT_PORT}", f"http://127.0.0.1:{REDIRECT_PORT}")
+)
 
 GRAPH_VER = "v21.0"
 AUTH_URL = f"https://www.facebook.com/{GRAPH_VER}/dialog/oauth"
