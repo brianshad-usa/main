@@ -1,0 +1,52 @@
+name: Instagram Token Auto-Refresh
+
+# Keeps the long-lived Instagram token (IG_ACCESS_TOKEN secret) from ever
+# lapsing. IG long-lived tokens last ~60 days and can be EXTENDED while still
+# valid; this runs well inside that window, extends the token, and writes the
+# refreshed value back into the IG_ACCESS_TOKEN repo secret. Fully hands-off
+# once the GH_PAT secret is in place.
+#
+# ONE-TIME setup required: add a fine-grained PAT (scoped to this repo, with
+# "Secrets: Read and write") as the repo secret GH_PAT. See PART C of the setup.
+
+on:
+  schedule:
+    # 08:00 UTC on the 1st AND the 15th of every month (~2 weeks apart, both far
+    # inside the ~60-day expiry). Two runs a month means one failed run can't by
+    # itself cause a lapse.
+    - cron: '0 8 1,15 * *'
+  workflow_dispatch:  # allow a manual run any time from the Actions tab
+
+# The secret write happens via the PAT + REST API, so the default GITHUB_TOKEN
+# needs no write scope here.
+permissions:
+  contents: read
+
+concurrency:
+  group: ig-token-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies (PyNaCl for secret encryption)
+        run: pip install pynacl
+
+      - name: Refresh IG token and write it back to the secret
+        env:
+          # Current token to extend + which Graph host the refresh uses.
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_GRAPH_BASE:   ${{ secrets.IG_GRAPH_BASE }}
+          # PAT with "Secrets: Read and write" on this repo (create per PART C).
+          GH_PAT:          ${{ secrets.GH_PAT }}
+          # GITHUB_REPOSITORY is auto-provided as owner/repo by Actions.
+        run: python ig_refresh_and_store.py
