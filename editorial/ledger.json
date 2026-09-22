@@ -1283,6 +1283,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-22",
+      "idea_id": "S207",
+      "theme": "human_risk",
+      "format": "linkedin_analysis",
+      "title": "Stop calling users the weakest link",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "question_poll"
+          }
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,139 @@
+{
+  "post": "An accounts payable specialist opens a reply in a thread she has been working for two weeks. Same vendor, same signature, new bank details. Something feels off. She is not certain, and she is not comfortable either.\n\nThe real question is what happens in the next five minutes.\n\nIf reporting means forwarding to a shared mailbox nobody watches, she will probably just pay it. Make it one click, with a fast answer from someone who thanks her either way, and the fraud stops in her inbox.\n\nNothing about that outcome is a training issue. It is a plumbing issue.\n\nYour staff already notice things your tools cannot score. Most companies never built the short path from noticing to knowing.",
+  "headline": "The detection layer with no budget line",
+  "cta_label": "How we respond",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-22-s207-card.png",
+  "image_file_jpg": "2026-09-22-s207-card.jpg",
+  "theme": "human_risk",
+  "idea_id": "S207",
+  "core_idea": "Calling employees the weakest link is a budget decision disguised as an observation — people are the broadest detection layer most companies own, generative tools made their contextual judgment more valuable rather than less, and the fix is funding fast blameless reporting plus an out-of-band verification rule, measured as reporting latency rather than click rate.",
+  "channels": {
+    "linkedin": "Two line items, one budget: more phishing training, or more detection tooling?\n\nThat either/or has already decided something. It files your people under training and detection under tooling.\n\nAnalysis: \"weakest link\" describes a budget decision, not a workforce. Once staff are classified as a liability, the money aimed at them buys compliance content rather than signal.\n\nConsider what employees actually see. A vendor's bank details change mid-thread. The familiar voice on a call sounds right and asks wrong. An AI assistant surfaces a file the reader should never have had access to in the first place. None of it generates a clean alert. All of it generates someone who senses something is off.\n\nThat instinct is detection. Unfunded, unmeasured, routed to a mailbox nobody watches.\n\nThe tells have changed, too. Broken grammar and odd phrasing were what awareness training taught people to spot, and they are no longer reliable indicators. What remains is context — a request that does not fit the relationship, which only your staff can judge.\n\nFunding it is unglamorous. One-click reporting inside email and chat. A response function that treats a human report as urgently as a machine alert. Mandatory out-of-band callback to a previously known number before any banking change. And a standing rule that whoever pauses a payment gets thanked, including when they were wrong. Especially then.\n\nThen change the metric. Click rate grades your employees. Median minutes from first suspicion to a qualified person seeing it grades your organization.",
+    "facebook": "An accounts payable specialist opens a reply in a thread she has been working for two weeks. Same vendor, same signature, new bank details. Something feels off. She is not certain, and she is not comfortable either.\n\nThe real question is what happens in the next five minutes.\n\nIf reporting means forwarding to a shared mailbox nobody watches, she will probably just pay it. Make it one click, with a fast answer from someone who thanks her either way, and the fraud stops in her inbox.\n\nNothing about that outcome is a training issue. It is a plumbing issue.\n\nYour staff already notice things your tools cannot score. Most companies never built the short path from noticing to knowing.",
+    "gbp": "Worth timing this week: if someone in your office suspected a fraudulent payment request right now, how many minutes before a qualified person saw it?\n\nMost leadership teams can answer the tooling question and not that one. Reporting that takes three clicks, lands in a shared mailbox, and earns a lecture gets used once.\n\nMake it one click. Route it to a person who answers. Thank whoever turned out to be wrong.\n\nPro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house, US-based, and staffed 24/7, so a call about a suspicious email reaches a person rather than a phone tree.",
+    "x": [
+      "Your employees are not the weakest link. They are the detection layer nobody funded. Every phishing simulation measures them. Nothing measures how fast a bad feeling reaches a person who can freeze a wire.",
+      "Awareness training taught people to look for bad grammar and odd phrasing. Those tells stopped being reliable. What survives is context — the request that does not fit the relationship — and only your staff hold it.",
+      "Stop reporting phishing click rate to the board. Report median minutes from first employee suspicion to a qualified person seeing it. The first number is a training score. The second is an exposure number."
+    ],
+    "instagram_caption": "Most security budgets are framed as training versus tooling. That framing has already sorted your people into the liability column — and sorted detection out of them.\n\nGenerative tools erased the spelling and grammar tells a decade of awareness training taught people to look for. What survives is context: a vendor request that does not fit the relationship, a voice that sounds right and asks wrong, an AI summary quoting a file that should never have been visible to that reader. Software rarely scores those. People do.\n\nSo the question is not whether your staff notice. It is how many minutes pass before the noticing reaches someone who can act.\n\n#humanrisk #cybersecurity #businessemailcompromise"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bold_type",
+    "format": "question_poll",
+    "channels": {
+      "linkedin": {
+        "style": "bold_type",
+        "format": "question_poll"
+      },
+      "facebook": {
+        "style": "bold_type",
+        "format": "question_poll"
+      },
+      "gbp": {
+        "style": "bold_type",
+        "format": "question_poll"
+      },
+      "instagram": {
+        "style": "bold_type",
+        "format": "question_poll"
+      },
+      "x": {
+        "style": "bold_type",
+        "format": "question_poll"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 93,
+      "technical_accuracy": 96,
+      "executive_value": 95,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Framing employees as 'the weakest link' functions as a budget decision that directs spend toward compliance content rather than detection signal.",
+    "ANALYSIS: Employees encounter anomalies — altered vendor banking details mid-thread, voice requests that sound authentic but are irregular, AI assistant output surfacing over-permissioned files — that do not produce clean security alerts. The AI example is framed as an access-model failure made visible, not as a defect in any named product.",
+    "ANALYSIS: Spelling and grammar irregularities are no longer reliable indicators of phishing. Stated as analysis, not as a measured finding, and without claiming any proportion of phishing is machine-generated.",
+    "ANALYSIS: Human suspicion functions as a detection layer whose value depends on the elapsed time between noticing and a qualified person seeing the report.",
+    "ANALYSIS: Multi-step reporting routed to an unmonitored shared mailbox suppresses reporting volume.",
+    "OPINION: Organizations should thank employees for reports that turn out to be false positives, because that is what preserves future reporting.",
+    "OPINION (standard practice, not a regulation or mandate): out-of-band callback to a previously known number before acting on any banking-detail change. Presented as recommended control, not as a legal or insurance requirement.",
+    "OPINION: Median time from first employee suspicion to a qualified person seeing the report is a more useful executive metric than phishing simulation click rate.",
+    "SCENARIO (illustrative, not a client): the accounts payable example on Facebook is a constructed hypothetical. No incident, customer, or outcome is real or implied.",
+    "NUMBERS REMOVED: the draft's '70 percent sure' was deleted; no unsourced figure of any kind now appears.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "FACT(F002): The help desk is in-house, not outsourced.",
+    "FACT(F008): The help desk is US-based.",
+    "FACT(F001): The help desk operates 24/7.",
+    "FACT(F007): Phone calls are answered live by the in-house team — no phone tree, no hold queue.",
+    "NO EXTERNAL STATISTICS CITED: no industry, breach-cost, threat-volume, vendor-research, or regulatory figures appear in any channel. No blocked facts (F006, F009, F010, F011) referenced."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept is strong, but the package violates the one-idea/never-the-same-text rule: the line 'Click rate grades your staff / grades your organization' appears nearly verbatim in LinkedIn, X post 3, and the Instagram takeaway. Cross-channel syndication of an identical aphorism makes the set read as one post reformatted four times. Each channel now carries a distinct expression of the metric."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram hook slide ('More training, or more detection?') is a budget-meeting question, not a swipe-earning idea — it could open a post from any vendor selling either side. Replaced with the sharper proposition the piece actually argues: the broadest detection layer in the company has no budget line."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No art direction existed anywhere in the package, which guarantees a default template and caps visual sophistication. Added a carousel-level visual system (typographic grid, single-accent rule, negative space discipline) and a per-slide visual note, including an elegant latency diagram on the metric slide instead of decorative security imagery."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Facebook contained a fabricated precision — 'She is maybe 70 percent sure.' It is rhetorical, not statistical, but this brand's register is that unsourced numbers do not appear, and a reader cannot tell the difference at a glance. Number removed. Also, the rhetorical device 'X is not A. It is B.' fired three times across the package; reduced to once per channel."
+    },
+    {
+      "role": "CIO",
+      "finding": "The guidance stopped at 'report faster,' which any operator would push back on: faster reports into an unchanged payment process change nothing. Added the concrete control that actually stops this class of fraud — a mandatory out-of-band callback to a previously known number before any banking-detail change — so the advice has an owner and a procedure, not just a sentiment."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Two accuracy risks. 'Copilot surfaces a document the reader was never meant to open' reads as a product defect claim about a named vendor; it is a permissions failure the assistant merely makes visible, so it is now framed generically and as an access-model problem. And 'generative AI removed the tells' was stated as fact; it is analysis, now phrased as those tells no longer being reliable indicators, without implying every phishing message is machine-written."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The AI content was decorative — one Copilot mention inside a list. The genuinely 2026 turn was missing: the specific thing awareness training taught for a decade (spot the bad grammar) is the thing generative tools invalidated, which is exactly why human context, not human vigilance, is the asset worth funding. That argument is now a load-bearing beat on LinkedIn, Instagram and X."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft never said what this costs or who owns it, so a CFO reads it as culture talk. The revision makes the economics implicit and the ownership explicit: routing and callback rules are process changes, the expensive part is response capacity, and the test is something the executive can run personally this week."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Nothing in the draft was saveable as an artifact — no named test, no portable metric. The package now repeats one ownable instrument across channels in different words: time your own reporting path, and report median minutes from first suspicion to a qualified person seeing it. That is the screenshot people keep."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP close and the Instagram CTA slide both stacked four verified facts in a credentials block unrelated to the idea, which is exactly the MSP-advertising register the standards reject. Both now cite only the facts that bear on the argument — a human report is only as fast as whoever answers it — and the card CTA label was changed from the generic 'Explore our approach.'"
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn had consecutive sentences opening with 'A' twice (the signals list and the what-to-do list), a banned construction. GBP ran past the 700-character ceiling. Both fixed; LinkedIn tightened from roughly 1,900 to about 1,500 characters, inside the 900–1,600 band."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
