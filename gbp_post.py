@@ -226,12 +226,17 @@ def preflight():
 
 
 if __name__ == "__main__":
-    # Manual smoke test:
+    # Readiness check (NO live post -- read-only GET):
+    #   python gbp_post.py --check
+    # Manual smoke test (creates a REAL live post):
     #   python gbp_post.py "Test post text" LEARN_MORE https://prolinksystems.com
     import sys
     args = sys.argv[1:]
+    if args and args[0] in ("--check", "-c", "check"):
+        sys.exit(0 if preflight() else 1)
     if len(args) < 1:
-        print("usage: python gbp_post.py SUMMARY [CTA_TYPE] [CTA_URL]")
+        print("usage: python gbp_post.py --check   (verify readiness, no post)")
+        print("       python gbp_post.py SUMMARY [CTA_TYPE] [CTA_URL]  (live post)")
         sys.exit(1)
     summary  = args[0]
     cta_type = args[1] if len(args) > 1 else "LEARN_MORE"
