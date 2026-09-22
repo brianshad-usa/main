@@ -41,8 +41,18 @@ USAGE:
     IG_APP_ID=1008983111864495 IG_APP_SECRET=yyyy python instagram_auth.py
 
   (If you don't set the env vars, the script prompts for them. It also accepts
-  IG_CLIENT_ID / IG_CLIENT_SECRET. If your Facebook Login for Business setup
-  requires a configuration id, set IG_LOGIN_CONFIG_ID and it will be used.)
+  IG_CLIENT_ID / IG_CLIENT_SECRET.)
+
+FACEBOOK LOGIN FOR BUSINESS REQUIRES A CONFIG ID: FLB rejects a raw scope list
+("Invalid Scopes"). Create a login configuration in the dashboard
+(Facebook Login for Business -> Configurations), copy its Configuration ID, and
+set IG_LOGIN_CONFIG_ID before running -- the script then passes config_id and
+sends NO scope. Also add http://localhost:8000/callback to the app's Valid
+OAuth Redirect URIs, and add "localhost" to App settings -> Basic -> App Domains
+(fixes "domain of this URL isn't included"). If localhost stays troublesome,
+set IG_REDIRECT_URI to a redirect the app already allows (e.g.
+https://prolinksystems.com/ with App Domain prolinksystems.com); the script
+then asks you to paste the redirected URL instead of running a local server.
 
 A browser opens; approve for the Page + Instagram account; control returns here
 and the long-lived token + IG_USER_ID are printed. If the browser can't reach
@@ -189,11 +199,20 @@ def main():
     }
     # Facebook Login for Business may require a configuration id instead of a raw
     # scope list; support either.
+    # Facebook Login for Business does NOT accept a raw `scope` list -- it needs
+    # a login CONFIGURATION id (config_id) that bundles the permissions. When
+    # IG_LOGIN_CONFIG_ID is set we pass config_id and DO NOT send scope (sending
+    # both triggers Meta's "Invalid Scopes" error).
     config_id = os.environ.get("IG_LOGIN_CONFIG_ID", "").strip()
     if config_id:
         params["config_id"] = config_id
+        print(f"[auth mode] Facebook Login for Business config_id={config_id} "
+              "(no scope sent).")
     else:
         params["scope"] = SCOPES
+        print("[auth mode] raw scope list (no IG_LOGIN_CONFIG_ID set). If Meta "
+              "says 'Invalid Scopes', create a login configuration and set "
+              "IG_LOGIN_CONFIG_ID.")
     auth_link = AUTH_URL + "?" + urllib.parse.urlencode(params)
 
     print("\nOpening your browser to authorize. If it doesn't open, paste this URL:\n")
@@ -204,19 +223,23 @@ def main():
         pass
 
     code = None
-    try:
-        server = HTTPServer(("localhost", REDIRECT_PORT), _Handler)
-        print(f"Waiting for the Facebook redirect on {REDIRECT_URI} ...")
-        server.handle_request()  # serves exactly one request (the callback)
-        if _captured["error"]:
-            print(f"\nAuthorization error from Facebook: {_captured['error']}")
-            sys.exit(1)
-        code = _captured["code"]
-    except OSError as e:
-        print(f"\nCould not start local server on port {REDIRECT_PORT} ({e}).")
+    if _USE_LOCAL_SERVER:
+        try:
+            server = HTTPServer(("localhost", REDIRECT_PORT), _Handler)
+            print(f"Waiting for the Facebook redirect on {REDIRECT_URI} ...")
+            server.handle_request()  # serves exactly one request (the callback)
+            if _captured["error"]:
+                print(f"\nAuthorization error from Facebook: {_captured['error']}")
+                sys.exit(1)
+            code = _captured["code"]
+        except OSError as e:
+            print(f"\nCould not start local server on port {REDIRECT_PORT} ({e}).")
+            code = None
+    if not code:
         pasted = input(
-            "After approving in the browser you'll land on a localhost page that "
-            "won't load.\nCopy that full URL from the address bar and paste it here:\n"
+            "\nAfter approving in the browser you'll land on the redirect page "
+            "(it may show a blank/won't-load page -- that's fine).\nCopy that "
+            "FULL URL from the address bar and paste it here:\n"
         ).strip()
         qs = urllib.parse.parse_qs(urllib.parse.urlparse(pasted).query)
         code = qs.get("code", [None])[0]
