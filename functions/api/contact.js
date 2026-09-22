@@ -31,7 +31,29 @@
  */
 
 const GRAPH = "https://graph.microsoft.com/v1.0";
-const REQUIRED = ["first_name", "last_name", "email", "phone", "company", "message"];
+// Core fields every form must carry AFTER alias normalization. last_name and
+// message are optional — several industry forms omit them.
+const REQUIRED = ["first_name", "email", "phone"];
+
+// The pages use varied field names (name / firm_name / firm_size / firm_type,
+// honeypot "botcheck" vs "challenge"). Map them to the canonical set the email
+// templates expect so one endpoint serves every form.
+function normalize(f) {
+  if (!f.first_name && f.name) {
+    const parts = String(f.name).trim().split(/\s+/);
+    f.first_name = parts.shift() || "";
+    if (!f.last_name) f.last_name = parts.join(" ");
+  }
+  f.last_name = f.last_name || "";
+  f.company = f.company || f.firm_name || f.organization || "";
+  f.interest = f.interest || f.firm_type || "";
+  f.message = f.message || "";
+  const extra = [];
+  if (f.firm_size) extra.push("Firm size: " + f.firm_size);
+  if (f.firm_type && f.firm_type !== f.interest) extra.push("Type: " + f.firm_type);
+  if (extra.length) f.message = (f.message ? f.message + "\n\n" : "") + extra.join(" · ");
+  return f;
+}
 
 function esc(s) {
   return String(s == null ? "" : s)
@@ -118,8 +140,8 @@ export async function onRequestPost(context) {
     return json(400, { success: false, message: "Invalid request." });
   }
 
-  // Honeypot: silently accept-and-drop obvious bots.
-  if (f.botcheck) return json(200, { success: true, refNumber: makeRef() });
+  // Honeypot: silently accept-and-drop obvious bots (field name varies by page).
+  if (f.botcheck || f.challenge) return json(200, { success: true, refNumber: makeRef() });
 
   // Required env — fail closed if misconfigured.
   for (const k of ["MS_TENANT_ID", "MS_CLIENT_ID", "MS_CLIENT_SECRET", "SEND_FROM", "TURNSTILE_SECRET_KEY"]) {
@@ -133,14 +155,17 @@ export async function onRequestPost(context) {
     return json(400, { success: false, message: "Verification failed — please retry the challenge." });
   }
 
-  // Validate.
+  // Normalize varied field names, then validate the relaxed core set.
+  normalize(f);
   const missing = REQUIRED.filter((k) => !String(f[k] || "").trim());
   if (missing.length) return json(400, { success: false, message: "Missing required fields." });
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(f.email))) {
     return json(400, { success: false, message: "Please enter a valid email address." });
   }
   // Trim overly long inputs (defensive).
-  for (const k of REQUIRED.concat(["interest"])) if (f[k]) f[k] = String(f[k]).slice(0, 5000);
+  for (const k of ["first_name", "last_name", "email", "phone", "company", "interest", "message"]) {
+    if (f[k]) f[k] = String(f[k]).slice(0, 5000);
+  }
 
   const ref = makeRef();
   const from = env.SEND_FROM;
