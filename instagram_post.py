@@ -34,7 +34,10 @@ import urllib.parse
 import urllib.request
 import urllib.error
 
-GRAPH = os.environ.get("IG_GRAPH_BASE", "https://graph.instagram.com/v21.0")
+# Empty-safe: the workflows inject IG_GRAPH_BASE from a secret that may be
+# unset, which passes "" -- `or` falls back to the graph.instagram.com default
+# for both the missing AND empty-string cases.
+GRAPH = os.environ.get("IG_GRAPH_BASE") or "https://graph.instagram.com/v21.0"
 
 
 def _log(msg):
