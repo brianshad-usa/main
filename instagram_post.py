@@ -255,10 +255,46 @@ def maybe_post_carousel(caption, image_urls):
         return None
 
 
+def refresh_long_lived_token():
+    """Extend the long-lived IG token by ~60 more days (Instagram-login flow).
+
+    Meant to be run MANUALLY (or on a schedule) BEFORE the current token expires --
+    a live token can be extended, an already-expired one cannot (you must then
+    regenerate from scratch). Returns the new token string. Prints when it is safe
+    to (interactive/local run); never called from the publish path, so a token
+    value never lands in a CI log.
+    """
+    token = os.environ["IG_ACCESS_TOKEN"].strip()
+    # Only the graph.instagram.com (Instagram-login) flow supports ig_refresh_token.
+    if "graph.instagram.com" not in GRAPH:
+        raise RuntimeError(
+            "Auto-refresh only supports the Instagram-login flow "
+            "(IG_GRAPH_BASE=graph.instagram.com). For the Facebook-linked flow, "
+            "extend the Page token via graph.facebook.com/oauth/access_token "
+            "(grant_type=fb_exchange_token) using your app id/secret."
+        )
+    q = urllib.parse.urlencode({
+        "grant_type": "ig_refresh_token",
+        "access_token": token,
+    })
+    data = _get(f"https://graph.instagram.com/refresh_access_token?{q}")
+    days = round(int(data.get("expires_in", 0)) / 86400)
+    _log(f"Refreshed IG token OK; valid ~{days} more days.")
+    return data.get("access_token")
+
+
 if __name__ == "__main__":
     import sys
+    if "--refresh" in sys.argv:
+        # Local maintenance: extend the token, then paste the printed value into
+        # the IG_ACCESS_TOKEN GitHub secret. Do NOT run this in a public CI log.
+        new_token = refresh_long_lived_token()
+        print("\nNEW IG_ACCESS_TOKEN (update the GitHub secret with this value):")
+        print(new_token)
+        sys.exit(0)
     if len(sys.argv) < 3:
         print("usage: python instagram_post.py CAPTION IMAGE_OR_VIDEO_URL [--reel]")
+        print("       python instagram_post.py --refresh   # extend the long-lived token")
         sys.exit(1)
     if "--reel" in sys.argv:
         print("Result:", maybe_post_reel(sys.argv[1], sys.argv[2]))
