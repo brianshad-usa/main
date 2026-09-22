@@ -155,6 +155,76 @@ def maybe_post(summary, cta_type="LEARN_MORE", cta_url=None, image_url=None):
         return None
 
 
+def preflight():
+    """
+    Read-only readiness check -- verifies the GBP channel WILL work without
+    creating a live post. Safe to run anytime (no writes to the profile).
+
+    It resolves the access token, then does a GET on the location's localPosts
+    collection. That single call exercises every failure mode that would
+    otherwise only surface on the first real post:
+
+      * 200  -> token valid, project allowlisted, account/location correct.
+               Posting is ready.
+      * 401  -> refresh token revoked/expired, or client id/secret mismatch
+               (a refresh token only works with the SAME OAuth client that
+               minted it -- see GBP_SETUP.md, war-room token reuse).
+      * 403  -> the Google Cloud project is NOT allowlisted for the Business
+               Profile / My Business API (quota == 0). Submit the access
+               request form; approval is manual and can take days-weeks.
+      * 404  -> GBP_ACCOUNT_ID / GBP_LOCATION_ID wrong (run gbp_discover.py).
+
+    Returns True only when the collection is reachable (HTTP 200). Never raises.
+    """
+    if not (os.environ.get("GBP_REFRESH_TOKEN", "").strip()
+            or os.environ.get("GBP_ACCESS_TOKEN", "").strip()):
+        _log("[check] not configured: no GBP_REFRESH_TOKEN / GBP_ACCESS_TOKEN.")
+        return False
+
+    account_id  = os.environ.get("GBP_ACCOUNT_ID",  "").strip()
+    location_id = os.environ.get("GBP_LOCATION_ID", "").strip()
+    if not account_id or not location_id:
+        _log("[check] not configured: set GBP_ACCOUNT_ID and GBP_LOCATION_ID "
+             "(run gbp_discover.py to find them).")
+        return False
+
+    try:
+        token = _resolve_access_token()
+    except Exception as e:
+        _log(f"[check] FAIL: could not get an access token. Reason: {e}")
+        return False
+
+    endpoint = (
+        f"{GBP_API_BASE}/accounts/{account_id}"
+        f"/locations/{location_id}/localPosts?pageSize=1"
+    )
+    req = urllib.request.Request(
+        endpoint, headers={"Authorization": f"Bearer {token}"}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            resp.read()
+            _log(f"[check] OK: token valid, project allowlisted, "
+                 f"accounts/{account_id}/locations/{location_id} reachable. "
+                 f"GBP posting is ready.")
+            return True
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")
+        hint = {
+            401: "refresh token revoked/expired, or client id/secret does not "
+                 "match the OAuth client that minted the refresh token.",
+            403: "Cloud project NOT allowlisted for the Business Profile API "
+                 "(quota 0). Submit the access request form -- manual approval.",
+            404: "GBP_ACCOUNT_ID / GBP_LOCATION_ID wrong -- run gbp_discover.py.",
+        }.get(e.code, "see the response detail below.")
+        _log(f"[check] FAIL: GBP API {e.code}: {hint}")
+        _log(f"[check] response: {detail[:500]}")
+        return False
+    except Exception as e:
+        _log(f"[check] FAIL: {e}")
+        return False
+
+
 if __name__ == "__main__":
     # Manual smoke test:
     #   python gbp_post.py "Test post text" LEARN_MORE https://prolinksystems.com
