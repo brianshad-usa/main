@@ -31,7 +31,7 @@
   <meta name="description" content="Contact Pro Link Systems for managed IT, cybersecurity, and cloud services in Los Angeles. Call 1-800-890-6133 or schedule a free discovery call online.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://prolinksystems.com/contact">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <meta property="og:type" content="website">
@@ -583,10 +583,8 @@
       </div>
 
       <form id="contact-form" novalidate>
-        <input type="hidden" name="access_key" value="d5f91908-e49d-4720-a853-65d7c0a77fde">
-        <input type="hidden" name="subject" value="New Contact Form Submission &mdash; Pro Link Systems Website">
-        <input type="hidden" name="from_name" value="Pro Link Systems Website">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+        <input type="hidden" name="source_page" value="contact">
         <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:18px;line-height:1.6;">Fill in your details below and a Pro Link engineer will call you within one business day to schedule a time that works for you.</p>
 
         <div class="form-row">
@@ -642,6 +640,7 @@
           <span class="form-error">Please include a brief message.</span>
         </div>
 
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin-bottom:18px"></div>
         <button type="submit" class="submit-btn" id="submit-btn">
           <span class="btn-label">Send My Request</span>
           <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -858,19 +857,10 @@
 </script>
 <script>
 (function () {
-  /* ── EmailJS ── */
-  var EMAILJS_PUBLIC_KEY  = 'S8d9nu1H2bUKdf_mf';
-  var EMAILJS_SERVICE_ID  = 'service_p6znicx';
-  var EMAILJS_TEMPLATE_ID = 'template_yz71bhl';
-
-  /* Initialize EmailJS as soon as the script runs */
-  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-
   var form = document.getElementById('contact-form');
   var formBody = document.getElementById('form-body');
   var formOk = document.getElementById('form-success');
   var submitBtn = document.getElementById('submit-btn');
-  var btnLabel = submitBtn.querySelector('.btn-label');
 
   function validate() {
     var valid = true;
