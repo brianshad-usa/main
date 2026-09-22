@@ -1,0 +1,155 @@
+{
+  "post": "A 40-person firm switches on an AI assistant Monday. By Wednesday someone asks a harmless question — what are we paying the new hires? — and gets a clean answer with a link to the source: a spreadsheet in a folder shared too widely in 2022.\n\nNothing was hacked. Nobody broke a rule. The assistant read what it was allowed to read, faster than any person would have bothered to.\n\nThat is the awkward part of a lot of AI rollouts. The tool doesn't leak your data. It reveals how your data was already arranged, in front of an employee rather than an auditor.\n\nSo do the unglamorous part first. Find where sensitive files actually live. Close the over-broad sharing links. Delete what you no longer need to keep, because nothing can surface data you got rid of.",
+  "headline": "AI runs on the permissions you forgot",
+  "cta_label": "Book a conversation",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-10-s217-card.png",
+  "image_file_jpg": "2026-09-10-s217-card.jpg",
+  "theme": "data_governance",
+  "idea_id": "S217",
+  "core_idea": "AI assistants operate under the permission model a company actually has rather than the one it believes it has, so classification, permission repair and retention have become the gating work in front of every AI ambition — and with agents holding their own standing credentials, that work stops being a pre-launch cleanup and becomes an operating discipline.",
+  "channels": {
+    "linkedin": "Most Copilot pilots stall in the same place, and it isn't the model. It's the file share.\n\nPoint an AI assistant at Microsoft 365 and it works with the permission model you actually have, not the one implied by your org chart. The site someone opened up to hit a deadline in 2022. An anyone-with-the-link folder of offer letters. The legacy drive nobody re-permissioned after the migration.\n\nEmployees could always reach those files. Almost nobody did, because finding them took effort. Call it practical obscurity, and it was doing the quiet work of access control.\n\nAnalysis, not headline: AI did not create a data governance problem. It removed the friction hiding one.\n\nThere is a way to find out where you stand this week. Ask IT for two counts — how many items in your tenant are shared with anyone-who-has-the-link, and how many with everyone-except-external-users. Those two numbers are the assessment.\n\nTenant controls that narrow what an assistant is allowed to search will buy time. Tourniquet, not treatment.\n\nThen consider what follows Copilot. Reading assistants are the easy case; agents act, and they do it with their own credentials and standing access. Permission hygiene stops being a pre-launch task and becomes an operating discipline.\n\nPrediction: the fastest AI adopters over the next year will not be the companies with the largest license count. They will be the ones whose data was already in order.\n\nAn AI plan with no data workstream is not a plan. It's a purchase order.",
+    "facebook": "A 40-person firm switches on an AI assistant Monday. By Wednesday someone asks a harmless question — what are we paying the new hires? — and gets a clean answer with a link to the source: a spreadsheet in a folder shared too widely in 2022.\n\nNothing was hacked. Nobody broke a rule. The assistant read what it was allowed to read, faster than any person would have bothered to.\n\nThat is the awkward part of a lot of AI rollouts. The tool doesn't leak your data. It reveals how your data was already arranged, in front of an employee rather than an auditor.\n\nSo do the unglamorous part first. Find where sensitive files actually live. Close the over-broad sharing links. Delete what you no longer need to keep, because nothing can surface data you got rid of.",
+    "gbp": "Before switching on an AI assistant across Microsoft 365, run a permissions review. These tools work with the access that already exists, including shares nobody has looked at since the last office move. If a payroll file is reachable company-wide, an assistant will find it and summarize it on request.\n\nThree steps worth their cost: locate where sensitive data actually lives, close over-broad sharing links, and set a retention schedule so old files stop being a standing liability.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "The permission model your company actually runs on is the one an AI assistant will use — not the one in the org chart, and not the one in the policy binder.",
+      "For years, obscurity did the work of access control. The over-shared folder stayed unfound because finding it took effort. An assistant makes effort free.",
+      "Two numbers tell an executive where they stand: how many items in the tenant are shared with anyone-who-has-the-link, and how many with everyone-except-external-users. That is the assessment.",
+      "Reading assistants are the easy case. Agents get their own credentials and standing access, which turns permission hygiene from a pre-launch checklist into an operating discipline."
+    ],
+    "instagram_caption": "The blocker in most AI rollouts isn't the model, the budget, or employee resistance. It's the permission model underneath Microsoft 365 — the shares, the legacy drives, the sites opened up years ago to unblock a deadline.\n\nEmployees could always reach those files. Finding them took effort, so almost nobody bothered. An assistant makes effort free.\n\nSwipe for the argument, and the sequence that has to come before the pilot.\n\n#AIgovernance #DataGovernance #Microsoft365"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-10-s217-01.png",
+      "2026-09-10-s217-02.png",
+      "2026-09-10-s217-03.png",
+      "2026-09-10-s217-04.png",
+      "2026-09-10-s217-05.png",
+      "2026-09-10-s217-06.png",
+      "2026-09-10-s217-07.png",
+      "2026-09-10-s217-08.png"
+    ],
+    "jpg": [
+      "2026-09-10-s217-01.jpg",
+      "2026-09-10-s217-02.jpg",
+      "2026-09-10-s217-03.jpg",
+      "2026-09-10-s217-04.jpg",
+      "2026-09-10-s217-05.jpg",
+      "2026-09-10-s217-06.jpg",
+      "2026-09-10-s217-07.jpg",
+      "2026-09-10-s217-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bold_type",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bold_type",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used once in GBP and once on the Instagram closing slide, in both cases positioned under the argument rather than as the argument.",
+    "ANALYSIS: AI assistants deployed inside Microsoft 365 operate under the requesting user's existing access, so over-broad sharing and inherited permissions determine what can be surfaced. Product-architecture reasoning about access inheritance only; no vendor feature, roadmap, or capability asserted.",
+    "ANALYSIS: 'Practical obscurity' is used as a borrowed conceptual frame for the effort barrier that has functioned as de facto access control. No legal holding, case, or regulation is cited or implied.",
+    "ANALYSIS: The two sharing scopes named — anyone-who-has-the-link and everyone-except-external-users — are standard Microsoft 365 sharing constructs. The post asks the reader to request counts from their own IT team; it does not claim any specific named report, dashboard, or product exists to produce them.",
+    "ANALYSIS: Tenant-level controls that narrow the content an assistant may search reduce immediate exposure without remediating underlying permissions. Described generically; no product named, no capability claimed.",
+    "ANALYSIS: Retention discipline reduces both what an assistant can return and what an intruder can remove.",
+    "ANALYSIS: Agentic deployments involve non-human identities holding their own credentials and standing access, which converts permission hygiene from a one-time pre-launch task into an ongoing discipline. Stated as analysis, not as a description of any specific shipped product.",
+    "OPINION: An AI plan without a data workstream is a purchase order rather than a plan.",
+    "PREDICTION (labeled on LinkedIn and on the Instagram takeaway slide): organizations with well-governed data will adopt AI faster over the next year than those with larger license counts.",
+    "ILLUSTRATIVE HYPOTHETICAL: the 40-person firm on Facebook is explicitly hypothetical; the Instagram scenario is generic and unattributed. No client is named, implied, or described, and no incident is asserted as real.",
+    "NO STATISTICS USED: no industry, breach, downtime, cost, or adoption figures appear on any channel. No external primary source was supplied in the brief, so every claim is argued without a number.",
+    "BLOCKED FACTS NOT USED: F006, F009, F010, F011 absent from all channels.",
+    "CTA DISCIPLINE: one CTA per asset. GBP's in-text call to action was removed so the button is the only CTA; the Instagram CTA slide is the single ask in the carousel."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package has a strong idea but no ownable language and a generic close. \"Start the conversation\" is the CTA every MSP in Los Angeles uses, and the argument never gives the executive a name for the phenomenon or a single concrete thing to ask for on Monday. Without a frame and a diagnostic, this is admired and forgotten."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Cross-channel differentiation is thinner than it looks. The \"obscurity did the work of access control\" line and the \"clean, confident answer\" construction appear near-verbatim on LinkedIn, Facebook, Instagram and X. The X hook is a straight lift of the LinkedIn opener, which violates the one-idea-many-expressions rule. Each channel needs its own facet, not the same three sentences re-cut."
+    },
+    {
+      "role": "Art Director",
+      "finding": "There is no art direction in the package at all — slides carry copy and roles but zero visual specification, which means the render will default to generic layout. For a brand whose standard is \"recognizable before the logo,\" every slide needs a stated composition, and the CTA slide as drafted is a company-brag panel (headline = founding year) rather than the quietest, most confident slide in the set."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "\"That is the real change, and I'd label it analysis rather than headline\" is metadiscourse that trips the reader; truth labeling should be one word, not a clause about labeling. The piece also stops at the read-only case. In 2026 the sharper editorial point is that assistants read while agents act with their own credentials, and the draft leaves that on the table."
+    },
+    {
+      "role": "CIO",
+      "finding": "No diagnostic. An IT director reading this agrees and still doesn't know what to request. It also ignores the obvious counter-move — tenant-level controls that restrict which sites an assistant may search — which every CIO will raise in the first meeting. Address it and rank it honestly, or the argument looks naive."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Technically sound on permission inheritance, but incomplete on why this is worse than a human browsing: the assistant returns the sensitive content with a citation to its source, which turns a latent misconfiguration into an employee-visible disclosure event. That mechanism deserves to be stated. Also, retention framed only as \"less to surface\" understates it — it also shrinks exfiltration value."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package treats AI as Copilot-shaped. Agentic deployments are the live 2026 decision, and they change the governance requirement from a pre-launch cleanup to a standing discipline because agents hold non-human identities with persistent access. Missing that beat makes the piece feel like a 2025 Copilot-readiness post."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I finish the LinkedIn post persuaded and idle. I have no way to size my own exposure and no sense of whether this is a two-week or two-quarter problem. Give me something I can ask my provider for and interpret without a practitioner in the room."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread has no reason to be a thread — three posts that restate one another. Threads should escalate. Add the diagnostic and the agent turn so each post is independently quotable, and stop reusing the LinkedIn first line, which suppresses reach when the same phrasing circulates twice."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Verified-fact usage is compliant but placed for convenience rather than effect: the since-1999 line appears as a headline on the Instagram CTA slide, which makes the brand's most credible asset read as filler. Facts should sit under the argument, not on top of it. GBP also stacks an in-text CTA on top of the button CTA — one CTA maximum."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two hard violations. Instagram slide 4 opens consecutive sentences with the same word (\"No intrusion. No policy violation.\"). GBP runs roughly 770 characters against a 300–700 ceiling, and Facebook lands right at the 900 edge. Also \"reduces what an assistant can surface\" plus \"the surface\" in the audit reads as a repetition tic."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

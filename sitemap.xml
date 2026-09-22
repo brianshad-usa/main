@@ -732,4 +732,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-11-t105-the-edge-device-problem-why-firewalls-and-vpns-are-now-</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-15-t107-break-glass-accounts-planning-for-the-day-your-identity</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-17-t108-technology-debt-how-deferred-it-decisions-compound-for-</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-19-t109-co-managed-it-in-2026-what-internal-teams-keep-and-what</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-09-21-t110-what-an-msp-is-actually-for-in-2026</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

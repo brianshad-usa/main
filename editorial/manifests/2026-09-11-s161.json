@@ -1,0 +1,139 @@
+{
+  "post": "Two IT providers, same conference room, same hour of your afternoon.\n\nThe first talks about enterprise-grade stacks and best-in-class tooling. You leave impressed and unable to repeat a single thing they said.\n\nThe second gets asked how their own technicians get into your systems, and answers in plain sentences. Individual accounts rather than one shared login. Access that expires. A log you can ask to see.\n\nWhoever you hire becomes one of the most privileged identities in your business. That makes it a more useful interview than any product tour.\n\nYou are not judging whether their controls are perfect — that genuinely does take a specialist. The question you can judge is whether they can describe their own work to someone who does not do it for a living.",
+  "headline": "The interview your IT provider is not expecting",
+  "cta_label": "See our answer",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/managed-it-services",
+  "image_file": "2026-09-11-s161-card.png",
+  "image_file_jpg": "2026-09-11-s161-card.jpg",
+  "theme": "msp_change",
+  "idea_id": "S161",
+  "core_idea": "A non-technical executive can evaluate an IT provider accurately by grading the shape of the answers — specificity, ownership, and willingness to be wrong — and in 2026 the highest-signal questions are about the provider's own privileged access and its AI boundaries, not its product stack.",
+  "channels": {
+    "linkedin": "Which tells you more about an IT provider: the certification wall, or the answer to \"what did you get wrong last quarter?\"\n\nDisclosure before anything else: we are an MSP publishing a test for evaluating MSPs. Run it at us too.\n\nVocabulary is the cheapest thing to acquire in this industry, and the easiest to mistake for competence. A non-technical buyer cannot always grade the content of a technical answer. Grading its shape requires no technical background at all.\n\nFour questions:\n\n\"Walk me through the last outage you handled for a company our size — what happened, what you did, what you would do differently.\" Real operators tell a story with a timeline and a decision they regret. Weak vendors give you a category.\n\n\"When we call at 2pm on a Tuesday, what literally happens?\" The good answer is boring and operational. Who picks up, where they sit, when it escalates. Hedging here is the finding.\n\n\"How is your own access to our systems protected?\" Whoever you hire becomes one of the most privileged identities in your business. You are not grading whether their controls are correct. The tell is whether they can describe them without reaching for a brochure.\n\n\"What are you letting AI touch in our environment, and what have you fenced off?\" In 2026 that answer either exists or it does not. Silence is a position.\n\nGrade three signals: specificity, ownership, and willingness to be wrong in front of you.\n\nNone of this requires a procurement cycle. Most executives should run it on the provider they already have.",
+    "facebook": "Two IT providers, same conference room, same hour of your afternoon.\n\nThe first talks about enterprise-grade stacks and best-in-class tooling. You leave impressed and unable to repeat a single thing they said.\n\nThe second gets asked how their own technicians get into your systems, and answers in plain sentences. Individual accounts rather than one shared login. Access that expires. A log you can ask to see.\n\nWhoever you hire becomes one of the most privileged identities in your business. That makes it a more useful interview than any product tour.\n\nYou are not judging whether their controls are perfect — that genuinely does take a specialist. The question you can judge is whether they can describe their own work to someone who does not do it for a living.",
+    "gbp": "A question that works even if you have never touched a server: \"When I call at 2pm on a Tuesday, what literally happens?\"\n\nThe answer should be boring and specific. Who picks up. Where that person sits. What happens if they cannot solve it.\n\nOurs: calls are answered live by our in-house, US-based help desk — no phone tree, no hold queue. Average ticket first-response time is 15 minutes, and first-contact resolution is 90%. We have done this from Woodland Hills, for Los Angeles businesses, since 1999.\n\nThen ask the harder one, of us or of anyone: how is your provider's own access to your systems protected? Compare three answers side by side.",
+    "x": [
+      "Most vendor evaluations are decided by whoever performs confidence best. That is a bad deal for a non-technical buyer: vocabulary is the cheapest thing to acquire in this industry, and the easiest to mistake for competence.",
+      "Grading the content of a technical answer takes a technical background. Grading its shape does not. Specific beats fluent. A timeline beats a category. \"Here is what we would do differently\" beats a polished case study.",
+      "The 2026 version: how is your provider's own access to your systems protected? Whoever you hire becomes one of the most privileged identities you have. You aren't grading the controls. The tell is whether they can describe them without reaching."
+    ],
+    "instagram_caption": "Hiring an IT provider is one of the few executive decisions where the buyer assumes they are unqualified to judge. Mostly untrue.\n\nGrading the content of a technical answer takes a technical background. Grading its shape does not. Specific beats fluent. A timeline beats a category. An admitted mistake beats a polished case study.\n\nFour questions inside — two of which did not exist in this form five years ago. Disclosure: we are an MSP publishing a test for MSPs. Ask us the same four, and run them on the provider you already have.\n\n#ITLeadership #VendorRisk #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "question_poll",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 94,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "DISCLOSURE: LinkedIn and Instagram both state plainly that ProLink is an MSP publishing an MSP evaluation framework. Conflict named, not hidden.",
+    "ANALYSIS: Vendor evaluations are frequently decided by fluency rather than demonstrated competence, which disadvantages non-technical buyers.",
+    "ANALYSIS: The shape of an answer — specificity, timeline, admitted error — is a more reliable competence signal for a non-technical listener than technical vocabulary.",
+    "ANALYSIS/STRUCTURAL FACT: An outsourced IT provider necessarily holds privileged access to a client environment. This is a structural property of the service model, not a cited statistic or a claim about any specific provider.",
+    "ANALYSIS: A provider that can describe its own access model in concrete terms is demonstrating operational discipline; the post explicitly states the buyer is grading describability, not correctness, to avoid overpromising what a non-technical evaluation can establish.",
+    "ANALYSIS: Providers increasingly apply automation and AI to client data in the course of delivery, which makes data scope a fair procurement question. No claim is made about how widespread this is, and no number is attached.",
+    "OPINION/ILLUSTRATIVE: The Facebook two-provider scenario is hypothetical. It is not a client account, not a real incident, and the 'good answer' it depicts describes a generic standard of clarity, not ProLink's own controls.",
+    "NO CLAIM MADE about ProLink's privileged access model, admin controls, AI usage policy, certifications, or partnerships — none appear in verified_facts, so the package poses those questions without answering them for ProLink.",
+    "FACT(F007): Phone calls are answered live by the in-house team — no phone tree, no hold queue (GBP).",
+    "FACT(F002): The help desk is in-house, not outsourced (GBP).",
+    "FACT(F008): The help desk is US-based (GBP).",
+    "FACT(F003): Average ticket first-response time is 15 minutes, metric named in full (GBP).",
+    "FACT(F004): First-contact resolution is 90% (GBP).",
+    "FACT(F012): Serving Los Angeles businesses since 1999, from Woodland Hills (GBP, Instagram slide 8 footer).",
+    "BLOCKED FACTS NOT USED: F006, F009, F010, F011. No client named or implied in any channel.",
+    "NO EXTERNAL STATISTICS CITED: no industry, breach, downtime, threat-landscape, or adoption numbers appear in any channel."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft never acknowledges the obvious conflict: an MSP publishing the test for choosing an MSP. Unaddressed, a skeptical CFO reads the whole piece as a rigged rubric written to favor whoever wrote it. Naming the conflict up front converts the weakest structural fact of the post into its most credible move. Separately, cta_label 'Ask these questions' promises a resource the destination URL does not contain."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The package is a single idea rendered five times with the same signature phrase ('what literally happens') in every channel. Someone who follows ProLink on two platforms sees redundancy, not range. Each channel should carry a different question from the same framework so the set compounds instead of repeats."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Eight slides, one template: kicker, headline, body, empty footer. No visual progression, no diagram, no typographic differentiation between the hook and the fourth bullet. Nothing here would be recognizable as ProLink before the logo. The carousel needs an explicit visual system and a per-slide direction, including at least one non-text device — a grading scale or an answer-shape comparison — to break the list rhythm."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The four questions are well written and could have run verbatim in 2014. 'Does it feel like 2026' fails. Nothing in the draft touches identity, privileged access, third-party risk, or AI governance — all of which are exactly the areas where a provider's answer is now diagnostic. Also: 'a decision it regrets' assigns a pronoun to 'competence' and reads awkwardly."
+    },
+    {
+      "role": "CIO",
+      "finding": "'What would you refuse to do for us?' is the one question in the set that any competent salesperson has a rehearsed answer for ('nothing that compromises your security'). It produces a scripted response and no signal. Meanwhile the question a CIO actually cares about — how the provider's own technicians hold privileged access to the environment — is absent. Replace the weaker question rather than keep four of uneven yield."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The post teaches executives to evaluate a vendor without mentioning that the vendor becomes one of the highest-privilege identities in their environment. That omission is substantively wrong for 2026. Also, any question about access controls must be framed carefully: a non-technical buyer cannot grade whether the controls are correct, only whether the provider can describe them without reaching. State that boundary explicitly or the advice overpromises."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Zero AI content in a 2026 vendor-evaluation post, at a moment when providers are running AI triage against client ticket data and clients are deploying Copilot into tenants their MSP administers. 'What are you letting AI touch in our environment, and what have you fenced off' is a question with no rehearsed answer yet — which makes it the highest-signal question in the set. Add it without manufacturing urgency around it."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft only helps someone currently running a procurement process — a small slice of readers on any given day. The far larger group already has a provider and has never audited them. One line reframing this as a test you can run on your incumbent multiplies the usable audience and the save rate."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread does not progress: post one repeats the LinkedIn hook nearly verbatim and post three repeats LinkedIn's question two. That is three posts doing one post's work. Rebuild as premise, method, 2026 application so each tweet earns its place, and stop reusing LinkedIn's opening line."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP pivot from teaching to 'Ours, for the record' lands as a self-serving turn, and it answers only the easiest of the questions posed. Stronger and more honest: answer the operational question with verified facts, then invite the harder question without claiming an answer to it — since ProLink's access-control and AI practices are not in verified_facts and cannot be asserted here. Instagram's #CyberSecurity is off-topic for a vendor-evaluation post."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn runs past the 1,600-character ceiling. Several sentence pairs violate the consecutive-opening-word rule ('You are not grading... You are grading...' in three separate channels). 'Same pitch length' is imprecise. The Instagram caption promises 'four questions' that the revision must still deliver after the question set changes."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

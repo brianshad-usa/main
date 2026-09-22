@@ -1,0 +1,174 @@
+{
+  "post": "Picture a machine shop in the Valley — hypothetical, but the pattern is common. It renews a subcontract held for years, and this time there is a new paragraph: the prime contractor's cybersecurity requirements now flow down to suppliers.\n\nNobody in the building is a compliance officer, so someone starts shopping for software.\n\nTwo cheaper moves come first. Ask the prime, in writing, what data they will actually send you — not every flow-down lands at the heaviest tier of the framework. Then map where that data would sit: email, the shared drive, two laptops, the tablet on the floor. Every place on that list has to meet the standard, and you have to prove it did.\n\nOne protected place instead of five is the difference between a project and an ordeal.",
+  "headline": "CMMC arrives from your customer, not Washington",
+  "cta_label": "Contact Pro Link Systems",
+  "cta_type": "CONTACT_US",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-14-s119-card.png",
+  "image_file_jpg": "2026-09-14-s119-card.jpg",
+  "theme": "compliance",
+  "idea_id": "S119",
+  "core_idea": "CMMC reaches most small suppliers as a flow-down clause in a customer renewal, and the two decisions that set the entire cost come before any purchase: confirming what the prime will actually send (FCI and CUI sit at different levels of the framework), and deciding how small and deliberate the scope of that data can honestly be. Both matter more in 2026, because an AI assistant pointed at a tenant inherits whatever permission sprawl already exists.",
+  "channels": {
+    "linkedin": "CMMC almost never arrives from the government. It arrives from your customer.\n\nA prime updates its flow-down language, and a supplier that never thought of itself as a defense business finds a new obligation inside a renewal it was about to sign.\n\nThe reflex is to go shopping. That is the expensive path.\n\nAsk two questions first.\n\nDoes this contract actually involve controlled unclassified information, or only federal contract information? Different levels of the framework, very different weight. Ask the prime in writing what they intend to send. Sometimes the answer shrinks the problem.\n\nIf CUI is genuinely in play: where would it live? Most small suppliers answer \"everywhere,\" because in practice it is. Drawings in email. A copy on the shared drive. A version on an estimator's laptop. Then the assessment boundary is the whole company — every workstation and file share carrying the full control set, plus the evidence to prove it.\n\nAn enclave is the alternative: defined systems, defined identities, a defined way in and out. It also puts real friction on engineering. That friction is the price of the smaller boundary. Enclaves fail the same way every time — someone emails a drawing out of one to get work done.\n\nAI raises the cost of vague scope. An assistant pointed at your tenant returns what the requesting user can already open. That is the design, not a defect. Know where the boundary sits before switching one on company-wide.\n\nOpinion, from watching these programs: the ones that go badly bought tooling before drawing the boundary. Scope is a business decision — how engineering shares files, how quoting works, which devices open what.\n\nThe first meeting belongs with the people who touch the data. Its output is a map, not a purchase order.",
+    "facebook": "Picture a machine shop in the Valley — hypothetical, but the pattern is common. It renews a subcontract held for years, and this time there is a new paragraph: the prime contractor's cybersecurity requirements now flow down to suppliers.\n\nNobody in the building is a compliance officer, so someone starts shopping for software.\n\nTwo cheaper moves come first. Ask the prime, in writing, what data they will actually send you — not every flow-down lands at the heaviest tier of the framework. Then map where that data would sit: email, the shared drive, two laptops, the tablet on the floor. Every place on that list has to meet the standard, and you have to prove it did.\n\nOne protected place instead of five is the difference between a project and an ordeal.",
+    "gbp": "A flow-down clause is how most Los Angeles suppliers learn CMMC applies to them — a new cybersecurity paragraph in a renewal from a prime contractor, not a notice from Washington.\n\nBefore you price the work or buy anything: ask the prime what data they will actually send, because the answer decides which tier of the framework applies. Then map where it would live today — mailboxes, shared drives, laptops, the tablet on the shop floor. A long list means the assessment boundary is your whole company. A short, deliberate one means it is not.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Phones are answered live by our in-house team.",
+    "x": [
+      "A flow-down clause is a cybersecurity obligation you acquire by signing a renewal. That is how most small suppliers meet CMMC — not through a notice from the government.",
+      "Question one is not which tool. It is what the prime will actually send you. Federal contract information and controlled unclassified information sit at different levels of the framework and cost very different amounts to satisfy. Ask in writing.",
+      "Question two: where would that data live? Email, the shared drive, someone's laptop — that answer makes the whole company your assessment boundary. One enclave is smaller to defend and far smaller to prove.",
+      "Enclaves fail the same way every time. Someone emails a drawing out of one to get work done. Design the way in and out, or the boundary is decorative.",
+      "2026 note: an assistant pointed at your tenant returns what the requesting user can already open. That is the design, not a defect. Know where the boundary sits before you switch one on company-wide."
+    ],
+    "instagram_caption": "CMMC rarely arrives as a regulation. It arrives as a paragraph in a customer's renewal.\n\nThe person reading that paragraph is not a compliance department. It is an owner, a controller, an operations lead. Two questions come before any purchase: what will the prime actually send, and where would it live?\n\nAnswer \"everywhere\" to the second and the whole company becomes the assessment boundary. Choose one deliberate enclave and the work shrinks to something a small supplier can carry.\n\nScope first. Tools second.\n\n#CMMC #NIST800171 #DefenseSupplyChain"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-14-s119-01.png",
+      "2026-09-14-s119-02.png",
+      "2026-09-14-s119-03.png",
+      "2026-09-14-s119-04.png",
+      "2026-09-14-s119-05.png",
+      "2026-09-14-s119-06.png",
+      "2026-09-14-s119-07.png",
+      "2026-09-14-s119-08.png"
+    ],
+    "jpg": [
+      "2026-09-14-s119-01.jpg",
+      "2026-09-14-s119-02.jpg",
+      "2026-09-14-s119-03.jpg",
+      "2026-09-14-s119-04.jpg",
+      "2026-09-14-s119-05.jpg",
+      "2026-09-14-s119-06.jpg",
+      "2026-09-14-s119-07.jpg",
+      "2026-09-14-s119-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 93,
+      "timeliness": 95,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 95,
+      "platform_fit": 95,
+      "shareability": 91,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 94,
+      "_notes": {
+        "topic_relevance": "93 — CMMC is on the promoted agenda, but it is directly actionable for only a slice of the 20–500 seat LA audience (defense and aerospace supply chain in the Valley and South Bay). The revised takeaway slide generalizes the lesson to any audit, which lifts it; full relevance would require the LinkedIn body itself to make the non-defense reader's case explicitly, and that would dilute the sharpness for the reader who actually has the clause on their desk. Deliberate trade.",
+        "shareability": "91 — the strongest share trigger, 'ask the prime what they will actually send before you buy anything,' is one an in-scope supplier forwards immediately and everyone else scrolls past. Broad shareability would require a hook that lands the scope-discipline idea without the CMMC frame, which is a different post.",
+        "visual_sophistication": "95 — the two-state nine-dot diagram gives the carousel a genuine visual argument and a recognizable system. Held below a higher mark because slides 2, 3 and 6 still lean on typographic treatment rather than a second original diagrammatic idea.",
+        "strategic_value": "94 — positions ProLink as the party that reduces the client's spend before proposing any, which is on-brand and hard to imitate. It does not, however, connect to any capability ProLink can verifiably claim, so it builds authority more than pipeline."
+      }
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: CMMC obligations typically reach small and mid-sized suppliers through prime contractor flow-down contract language rather than direct contact from a government agency.",
+    "FACT (public program structure, DoD CMMC / NIST SP 800-171): CMMC Level 1 addresses federal contract information; Level 2 is assessed against the NIST SP 800-171 control set. Stated as framework structure only. No deadline, phase-in date, assessment mandate, enforcement action or applicability determination is asserted, and no count of practices or requirements is cited.",
+    "ADVICE (not a factual claim): confirm in writing with the prime contractor what data will be transmitted. Framed as prudent practice, not as a contractual right or a legal requirement.",
+    "ANALYSIS: the set of systems holding controlled unclassified information determines the size, cost and documentation burden of a compliance effort.",
+    "ANALYSIS: where controlled information is spread across email, shared drives, laptops and mobile devices, the assessment boundary effectively becomes the entire company.",
+    "ANALYSIS: confining controlled data to a defined enclave reduces the surface that must be controlled, documented and evidenced. Stated as smaller to defend and prove, not as universally cheaper, and paired with a stated cost — operational friction — and a stated failure mode.",
+    "ANALYSIS (permission architecture, not a product capability claim): an AI assistant operating inside a tenant returns content the requesting user already has permission to access, and therefore inherits existing permission sprawl. No vendor, product, feature, roadmap, benchmark or research finding is named or asserted.",
+    "OPINION (explicitly labeled as opinion in the LinkedIn copy): suppliers who purchase tooling before making the scoping decision tend to spend more.",
+    "OPINION: scoping is a leadership decision because it changes file sharing, quoting and device access, not only IT configuration.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used once in GBP and once on the final Instagram slide.",
+    "FACT(F007): phones are answered live by the in-house team. Rendered in GBP without embellishment; no response-time, resolution or satisfaction figure appears anywhere in the package.",
+    "NOT CLAIMED: no CMMC assessment, C3PAO, registered practitioner, compliance advisory or certification capability is claimed or implied for Pro Link Systems anywhere in this package. The CTA offers a meeting, not a service.",
+    "The Facebook scenario is explicitly labeled hypothetical. No client is named, implied or described in any channel. No statistics, incidents, vulnerabilities, deadlines, regulations or certifications are asserted."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The GBP CTA offers \"a second read on your scope,\" which asserts a CMMC advisory capability that does not appear in verified_facts.json. That is a hard-rule violation, not a tone problem. Also, cta_label \"Start a conversation\" is generic filler and mismatched to cta_type LEARN_MORE pointing at a contact form."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The package is well-argued but entirely 2024-safe: nothing in it could not have been written two years ago. The idea needs one genuinely current turn that makes the scoping argument sharper now than it was then — otherwise it reads as evergreen compliance counsel."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide headlines range from six words to fourteen, which breaks typographic hierarchy across the set — a carousel reads as a designed system or it doesn't. The NIST footnote on slide 5 is an orphan: a footer that carries a substantive claim no other slide supports. Headlines tightened to a consistent band; the footnote kept but made precise and attached to the slide it actually proves."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The package says \"controlled information\" throughout and never uses the term the executive will actually encounter in the clause: controlled unclassified information, CUI. Avoiding the real vocabulary makes us look like we are paraphrasing someone else's expertise. Introduce the term once, plainly, then use plain English."
+    },
+    {
+      "role": "CIO",
+      "finding": "\"One enclave\" is asserted as cheaper without naming the trade it forces. An enclave has a defined way in and out — how files arrive from the prime, who can open them, on which devices. Without that, the advice is directionally right and operationally empty."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The claim \"CMMC's higher tier is built on the NIST SP 800-171 control set\" is accurate but vaguely worded (\"higher tier\"), which is exactly how accurate statements turn into inaccurate ones when quoted. State it precisely or drop it. Also: the enclave is not automatically cheaper — it is cheaper to assess and document, which is the honest claim."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The strongest 2026 argument is missing entirely. Scope sprawl used to be dormant; an assistant pointed at a tenant returns what the user already has permission to open, by design. That turns a quiet file-share mess into a retrieval surface. This must be framed as analysis about permission inheritance, not as a claim about any product's undocumented behavior."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The Facebook post opens as a narrative about a specific Valley machine shop, which reads as a client anecdote — prohibited, and a trust risk even when fictional. Mark it explicitly hypothetical. Separately, the reader wants to know what the first meeting produces; \"talk to the people who touch the data\" needs an output attached."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "#ITLeadership is generic and pulls the wrong audience; the value of this post is its precision with a narrow, high-intent segment. Swap for the term that segment actually follows. The X thread also stops at the scoping point and leaves the most quotable line — the AI wrinkle — on the table."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The phrase \"a phone in a truck\" appears verbatim in both GBP and Instagram, violating the one-idea-many-expressions rule. On the ultimate test: after revision, no — a generic MSP would write this as a CMMC deadline scare with a compliance-services CTA, not as a scoping-is-a-leadership-decision argument with zero statistics and a restrained close."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The LinkedIn label \"Analysis, not fact\" is attached to a sentence that is opinion (who tends to overspend), which is exactly the distinction the standards ask us to keep clean. Also \"The decision that sets the cost of the entire program comes earlier\" is a long wind-up to a short idea; compressed. LinkedIn was near the top of the 1,600-character band before additions, so other lines were cut to make room."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package silently assumes every flow-down clause means CMMC Level 2 and CUI. That is the single most expensive assumption a supplier can make, and correcting it is the highest-value thing this post could say. Federal contract information and controlled unclassified information sit at different levels of the framework and carry very different obligations — so the real question one is not 'where does the data live' but 'what will the prime actually send us, in writing.' Second gap: the enclave is presented as a clean win with no failure mode. Enclaves fail predictably, when someone emails a file out of one to get work done. Omitting that makes the advice sound like a brochure."
+    },
+    {
+      "role": "Art Director",
+      "finding": "There is no visual direction anywhere in the package — eight slides shaped identically as kicker/headline/body, which will render as eight text cards and score exactly like every other compliance carousel. The core idea is inherently a diagram: a boundary drawn around everything versus a boundary drawn around three things. That contrast has to be drawn, not described, and the system (grid, palette, accent discipline, hairline rules) has to be specified or the render will default to generic."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The AI paragraph diagnoses and stops. 'An assistant inherits your permission sprawl' is correct and well-stated, but the executive is left with nothing to do about it, which makes the section read as a topical bolt-on to a compliance post rather than the reason scope discipline is more urgent in 2026. It needs one concrete, non-product instruction: know where the boundary is before enabling an assistant tenant-wide."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
