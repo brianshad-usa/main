@@ -21,7 +21,6 @@
     });
   </script>
 
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -878,77 +877,7 @@
   }
 
   (function() {
-    var EMAILJS_PUBLIC_KEY  = '';
-    var EMAILJS_SERVICE_ID  = '';
-    var EMAILJS_TEMPLATE_ID = '';
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-    var form      = document.getElementById('entForm');
-    var formBody  = document.getElementById('formBody');
-    var formOk    = document.getElementById('formSuccess');
-    var submitBtn = document.getElementById('submitBtn');
-
-    var required = {
-      'fg-fname':   function(v){ return v.trim().length > 0; },
-      'fg-lname':   function(v){ return v.trim().length > 0; },
-      'fg-company': function(v){ return v.trim().length > 0; },
-      'fg-email':   function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); },
-      'fg-phone':   function(v){ return v.trim().length > 0; }
-    };
-    var nameMap = { 'fg-fname': 'first_name', 'fg-lname': 'last_name', 'fg-company': 'firm_name', 'fg-email': 'email', 'fg-phone': 'phone' };
-
-    Object.keys(required).forEach(function(fgId) {
-      var inp = form.querySelector('[name="' + nameMap[fgId] + '"]');
-      if (inp) inp.addEventListener('input', function() { document.getElementById(fgId).classList.remove('has-error'); });
-    });
-
-    function validate() {
-      var ok = true;
-      Object.keys(required).forEach(function(fgId) {
-        var inp = form.querySelector('[name="' + nameMap[fgId] + '"]');
-        var fg  = document.getElementById(fgId);
-        if (!inp || !fg) return;
-        if (!required[fgId](inp.value)) { fg.classList.add('has-error'); ok = false; }
-        else { fg.classList.remove('has-error'); }
-      });
-      return ok;
-    }
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (!validate()) return;
-      submitBtn.disabled = true; submitBtn.classList.add('loading');
-
-      var firstName = (form.querySelector('[name="first_name"]') || {}).value || '';
-      var emailVal  = (form.querySelector('[name="email"]') || {}).value || '';
-      var refNum    = 'PLS-' + Date.now().toString(36).toUpperCase().slice(-6);
-      var data      = Object.fromEntries(new FormData(form));
-
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        to_email: emailVal, firstName: firstName,
-        company: data.firm_name || '', phone: data.phone || '',
-        interest: (data.firm_type || '') + ' — ' + (data.challenge || '') + ' — Content: ' + (data.content_security || ''),
-        refNumber: refNum
-      }).catch(function(err){ console.error('EmailJS error:', JSON.stringify(err)); });
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(function(r){ return r.json(); })
-      .then(function(j){
-        if (j.success) {
-          formBody.classList.add('hide');
-          formOk.classList.add('show');
-          formOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else { throw new Error(j.message || 'error'); }
-      })
-      .catch(function(){
-        submitBtn.disabled = false; submitBtn.classList.remove('loading');
-        alert('There was a problem sending your request. Please call us at 1-800-890-6133 or email info@prolinksystems.com directly.');
-      });
-    });
   })();
 </script>
 </body>
