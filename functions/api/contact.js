@@ -46,7 +46,7 @@ function normalize(f) {
   }
   f.last_name = f.last_name || "";
   f.company = f.company || f.firm_name || f.organization || "";
-  f.interest = f.interest || f.firm_type || "";
+  f.interest = f.interest || f.firm_type || f.challenge || "";
   f.message = f.message || "";
   const extra = [];
   if (f.firm_size) extra.push("Firm size: " + f.firm_size);
@@ -140,8 +140,10 @@ export async function onRequestPost(context) {
     return json(400, { success: false, message: "Invalid request." });
   }
 
-  // Honeypot: silently accept-and-drop obvious bots (field name varies by page).
-  if (f.botcheck || f.challenge) return json(200, { success: true, refNumber: makeRef() });
+  // Honeypot: silently accept-and-drop obvious bots. Only "botcheck" is a real
+  // hidden honeypot; "challenge" is a VISIBLE "Primary IT Challenge" dropdown on
+  // the industry pages, so it must NOT be treated as a bot signal.
+  if (f.botcheck) return json(200, { success: true, refNumber: makeRef() });
 
   // Required env — fail closed if misconfigured.
   for (const k of ["MS_TENANT_ID", "MS_CLIENT_ID", "MS_CLIENT_SECRET", "SEND_FROM", "TURNSTILE_SECRET_KEY"]) {
