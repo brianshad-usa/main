@@ -1363,6 +1363,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-24",
+      "idea_id": "S098",
+      "theme": "ransomware",
+      "format": "explainer",
+      "title": "Data exfiltration changes your legal obligations",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
