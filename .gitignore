@@ -1,5 +1,6 @@
 # Social pipeline transient files (not committed)
 pending.json
+_wtest.tmp
 _card_preview.png
 
 # Local/dev/test renders from content_studio.py. Real post slots are minted ONLY
