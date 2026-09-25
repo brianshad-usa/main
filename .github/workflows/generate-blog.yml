@@ -58,5 +58,24 @@ jobs:
           git config --global user.name "ProLink Blog Bot"
           git config --global user.email "blog-bot@prolinksystems.com"
           git add blog/ sitemap.xml index.html used_topics.json
-          git diff --staged --quiet || git commit -m "Auto-generate blog post $(date +'%Y-%m-%d')"
-          git push
+          if git diff --staged --quiet; then
+            echo "Nothing to commit; skipping push."
+            exit 0
+          fi
+          git commit -m "Auto-generate blog post $(date +'%Y-%m-%d')"
+          # Push with rebase-and-retry. The blog generation step takes ~3 minutes,
+          # during which other jobs (the social pipeline, editorial auto-commits,
+          # the local auto-commit watcher) frequently push to main. A bare
+          # "git push" then loses the race with "! [rejected] (fetch first)" and
+          # fails the whole run even though the post generated fine (see run #74).
+          # Rebase our single commit onto the latest main and retry a few times.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin main; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed (likely a concurrent push); retrying in 5s..."
+            sleep 5
+          done
+          echo "::error::Failed to push the generated blog post after 5 attempts."
+          exit 1
