@@ -1443,6 +1443,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-26",
+      "idea_id": "S155",
+      "theme": "exec_strategy",
+      "format": "carousel",
+      "title": "Signs you have outgrown your IT arrangement",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "behind_the_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          }
+        }
+      }
     }
   ]
 }
