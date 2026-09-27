@@ -1,0 +1,168 @@
+{
+  "post": "Nobody audits a restore that worked. That is where this goes wrong.\n\nPicture a routine week. A folder of HR files is deleted by accident, IT restores it that afternoon into a new location, everyone moves on.\n\nTwo weeks later an employee asks Copilot about compensation planning and salary details come back in the answer. No attacker, no breach. The files came home; the walls around them did not.\n\nMicrosoft keeps the platform running. Deciding who can see a file once it is back sits on your side of the line.\n\nWorth asking your IT team this week: the last time we restored something, did anyone check who could see it afterward?",
+  "headline": "Your files came back. Did the permissions?",
+  "cta_label": "Talk to our team",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/managed-it-services",
+  "image_file": "2026-09-27-s076-card.png",
+  "image_file_jpg": "2026-09-27-s076-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S076",
+  "core_idea": "Microsoft keeps the platform running; what happens inside your tenant stays yours — so the 2026 Microsoft 365 question is not whether you have a backup but what state a restore returns content in. Content returned with inherited permissions is content Copilot can now surface to anyone, and the account that can restore your tenant can read your tenant.",
+  "channels": {
+    "linkedin": "Most Microsoft 365 backup conversations stop at the wrong question.\n\nMicrosoft keeps the service running. That is not a commitment to reverse what your users, admins and automations do inside your tenant. Most companies grasped that years ago and bought something.\n\nThe unanswered question is what a restore puts back.\n\nA SharePoint site is not a folder. It is content, version history, sharing links, retention labels, and a permission model that decides who sees what. Some tools return files to a new location with inherited permissions, which is a polite way of saying broader.\n\nThat used to be an untidy cleanup job. In 2026 it is a disclosure risk.\n\nCopilot and the agents built on it answer using whatever an employee's identity can already reach. Widen permissions during a recovery and you have not restored data so much as published it. The exposure arrives through a search box, from an employee who did nothing wrong.\n\nTwo further points, offered as analysis. Backup restores availability, not confidentiality — when attackers copy data before encrypting, a clean recovery does not undo the theft. And whoever can restore your tenant can read your tenant, which makes backup administration privileged access.\n\nThree questions for your IT lead, and the answer you want.\n\nDo permissions and sharing links come back as they were? Good answer: restore-in-place, plus a permission check in the runbook.\n\nWho holds the restore credentials? Good answer: named accounts, phishing-resistant MFA, the conditional access you give any administrator.\n\nWhen did we last test a full-site restore? Good answer: a date, and a duration somebody measured.",
+    "facebook": "Nobody audits a restore that worked. That is where this goes wrong.\n\nPicture a routine week. A folder of HR files is deleted by accident, IT restores it that afternoon into a new location, everyone moves on.\n\nTwo weeks later an employee asks Copilot about compensation planning and salary details come back in the answer. No attacker, no breach. The files came home; the walls around them did not.\n\nMicrosoft keeps the platform running. Deciding who can see a file once it is back sits on your side of the line.\n\nWorth asking your IT team this week: the last time we restored something, did anyone check who could see it afterward?",
+    "gbp": "Add one step to your next Microsoft 365 restore: check the permissions afterward.\n\nMicrosoft keeps the platform running. What your users, admins and automations do inside the tenant stays your responsibility, and that includes who can see a file once it is back.\n\nRestored content placed in a new location can inherit broader access than it had originally. With Copilot answering from whatever an employee's account can already reach, over-shared data becomes findable data.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. If your team has never tested a full site restore end to end, start there.",
+    "x": [
+      "Most companies can restore a deleted SharePoint site. Far fewer can tell you whether the permissions came back with it. In 2026 the second question matters more than the first.",
+      "Restore content into a new location and it can inherit that location's access rather than its own. Copilot answers from whatever an identity can already reach. A clean recovery quietly becomes a searchable set of HR files, surfaced by an employee who did nothing wrong.",
+      "Two lines worth keeping. Backup restores availability, not confidentiality — data copied before encryption stays stolen. And whoever can restore your tenant can read your tenant, which makes backup administration privileged access, not housekeeping.",
+      "One question for your IT lead: when we restore a site, do permissions and sharing links come back as they were? The answer you want involves restore-in-place and a permission check in the runbook, not a promise to tidy it up afterward."
+    ],
+    "instagram_caption": "Everyone asks whether Microsoft 365 is backed up. Almost nobody asks what a restore puts back.\n\nMicrosoft keeps the platform running. Who can see a file after it returns is your side of the line — and a site is content, version history, sharing links, retention labels, and a permission model. Rebuild the first four, flatten the last, and you have not recovered data. You have published it, because Copilot answers from whatever an employee's account can already reach.\n\nSlide seven is the one to screenshot: three questions for your IT lead, each with the answer worth hearing.\n\n#Microsoft365 #CopilotGovernance #ITLeadership"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-27-s076-01.png",
+      "2026-09-27-s076-02.png",
+      "2026-09-27-s076-03.png",
+      "2026-09-27-s076-04.png",
+      "2026-09-27-s076-05.png",
+      "2026-09-27-s076-06.png",
+      "2026-09-27-s076-07.png",
+      "2026-09-27-s076-08.png"
+    ],
+    "jpg": [
+      "2026-09-27-s076-01.jpg",
+      "2026-09-27-s076-02.jpg",
+      "2026-09-27-s076-03.jpg",
+      "2026-09-27-s076-04.jpg",
+      "2026-09-27-s076-05.jpg",
+      "2026-09-27-s076-06.jpg",
+      "2026-09-27-s076-07.jpg",
+      "2026-09-27-s076-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bold_type",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bold_type",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 95,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Microsoft's responsibility covers the platform and service continuity while customer data and configuration inside the tenant remain the customer's responsibility. Stated qualitatively as the shared responsibility premise. No document cited, no retention period, grace window, or recovery figure asserted.",
+    "ANALYSIS: A SharePoint site comprises content, version history, sharing links, retention labels and a permission model. Descriptive characterisation of the platform; no capability invented, no default value claimed.",
+    "ANALYSIS: Content restored into a different location can inherit the permissions of the destination rather than retain the original permissions. Stated conditionally ('can'), with no vendor, product or backup tool named and no behaviour attributed to any named product.",
+    "ANALYSIS: Copilot and agents built on it return results based on what the requesting identity is already permitted to access. Stated qualitatively as product design behaviour; no accuracy, indexing, latency or coverage claim made.",
+    "ANALYSIS: Where attackers copy data before encrypting it, restoring from backup addresses availability but not the disclosure of the copied data. Conditional structural argument; no frequency, prevalence or cost statistic used.",
+    "ANALYSIS: An account able to restore tenant data is by definition able to read that data, which places backup administration inside privileged access. Logical claim; no product or configuration asserted.",
+    "OPINION: Restore fidelity — permissions, sharing links and labels — is the more useful executive test than the existence of a backup. Editorial position, marked in the LinkedIn text as analysis.",
+    "RECOMMENDATION (new this round): The pass conditions attached to the three questions — restore-in-place availability, a permission check in the runbook, named accounts with phishing-resistant MFA and the same conditional access applied to administrators, a dated and measured full-site restore test — are stated as what to look for in an answer, not as claims that any particular product, tenant or vendor provides them. Generally accepted access-control practice, no source cited because no statistic or finding is asserted.",
+    "SCENARIO (hypothetical, explicitly framed): The Facebook post uses 'Picture a routine week' to mark the HR-folder example as illustrative. No client named, implied, described or referenced. No incident asserted as having occurred.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used verbatim in GBP and in the Instagram takeaway footer.",
+    "NOT USED: F001, F002, F003, F004, F005, F007, F008 — the help desk credential stack is unrelated to this idea and would read as promotional filler. F006, F009, F010, F011 are blocked from automation and do not appear.",
+    "No industry, breach-cost, downtime, retention-period or threat-landscape statistic appears in any asset. No certification, partnership or compliance status claimed. No competitor named.",
+    "CHANGED this round: cta_label moved from 'Test your restore' to 'Talk to our team' because the destination is a generic managed IT services page and no Microsoft 365 recovery page is confirmed to exist. The label now matches what the reader will actually find. If a recovery-specific page exists, a human may restore the sharper label and repoint the URL. No URL was invented.",
+    "CHANGED this round: Facebook opener rewritten so it no longer duplicates the Instagram hook slide, and 'No attacker. No breach.' collapsed to a single clause to clear the consecutive-opening rule."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept fails the final test. 'Microsoft 365 isn't backed up / retention isn't backup' is arguably the single most-published MSP topic of the last decade and sits adjacent to the demoted 'remember to back up your files.' Every claim, every scenario, and even the closing aphorism ('Cloud is not a synonym for backed up') exists verbatim in hundreds of competitor posts. The package is well written in service of a concept that must be replaced, not polished."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The arc has no turn. Slide 2 (the line), slide 3 (retention is not backup) and slide 5 (the wrong question) are three restatements of one premise, so the carousel plateaus at slide 3 and the reader has learned everything by then. A carousel needs a point where the reader's model of the problem changes; this one only repeats it more emphatically."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package contains no visual direction whatsoever — only kicker/headline/body text. The standards require editorial design with diagrams, hierarchy and a consistent system, and nothing here tells a designer what slide 3 or 5 looks like. Without per-slide art direction this ships as centered text on a gradient, which is exactly the generic output the standard bans."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two accuracy exposures. First, the ransomware-sync line ignores version history and file restore in OneDrive/SharePoint, which is the first thing a technical reader will raise, and omitting it makes the argument look uninformed rather than cautious. Second, Facebook asserts 'It is gone' as a certainty when OneDrive retention on license removal is configurable and time-bounded — the draft's own claims audit says 'no grace-period length claimed,' but the prose claims the outcome anyway."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three questions are the ones a vendor asks, not the ones I ask. Restore point and restore owner are table stakes I can answer in ten seconds. What I cannot answer without checking is whether a restore reconstructs the permission model, sharing links and retention labels, who holds the credentials that can restore — and therefore read — the entire tenant, and when we last tested a full-site restore end to end. The draft never mentions testing, which is the actual gap."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package treats backup as the answer, which is a 2018 position. Under exfiltration-based extortion, a perfect restore returns availability and does nothing about confidentiality. Equally missing: the backup system is itself a privileged-access and identity problem — whoever can restore the tenant can read the tenant — and immutability is never mentioned. The post protects against accidental deletion and calls it security."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Zero 2026 signal. The word Copilot does not appear, yet the collision between recovery operations and Copilot is the live issue: Copilot and the agents built on it answer from whatever an identity can already reach, so a restore that returns content into a location with inherited permissions converts an outage into discoverable data. That intersection is the only part of this subject that is genuinely new, and the draft misses it entirely."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I finished the LinkedIn post having learned nothing I could act on that I did not already suspect. It tells me to worry and hands me questions my IT lead can answer reassuringly in one sentence. There is no moment where I think 'we may have this wrong,' which is the only reason an executive saves a post."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X set is three parallel statements of the same idea, not a thread — post 2 and post 3 could each stand alone and neither depends on the one before, so the thread format is unearned. The Instagram caption also leans on 'Swipe for the distinction,' a withheld-payoff construction that the standard discourages."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Instagram CTA slide stacks four verified facts (1999, in-house, US-based, 24/7) that have nothing to do with the idea — a credentials dump wearing a CTA's clothes, and a violation of 'restrained CTA' in spirit if not in count. Separately the cta_url points to a generic managed-IT services page that will not match the reader's intent; if a Microsoft 365 recovery page exists it should be used, and that requires a human check before publish."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The sentence 'All of it useful. None of it a point-in-time restore' appears in near-identical form on LinkedIn, Instagram slide 3 and X post 2, breaking the 'never the same text twice' channel rule. Em dashes appear in every asset, often twice in a paragraph, flattening the rhythm. GBP also paraphrases F012 as 'advised' where the verified claim is 'served' — a small drift, but the facts file is quoted, not adapted."
+    },
+    {
+      "role": "Senior Technology Editor (with CIO concurrence)",
+      "finding": "The concept is titled 'What Microsoft backs up, and what it does not,' but no asset ever draws that line. Every channel jumps straight to restore fidelity, which leaves the premise floating: the reader is told the backup question is 'settled' without being shown where Microsoft's responsibility actually ends and theirs begins. One qualitative sentence per channel — Microsoft keeps the platform running; what your users, admins and automations do inside the tenant stays yours — closes the gap without introducing a retention window, a grace period, or any number we cannot source."
+    },
+    {
+      "role": "Brand Director (with Copy Editor)",
+      "finding": "Channel doctrine violation: the Facebook opener ('The recovery worked perfectly. That was the problem.') and the Instagram hook slide ('The restore worked. That was the problem.') are the same line twice, and card_headline echoes the same reversal a third time. One idea, one best expression per channel — the duplicate reads as syndication, which is precisely what this brand is supposed to not look like. Separately, the Facebook draft ran 'No attacker. No breach.' — consecutive sentences opening on the same word."
+    },
+    {
+      "role": "Executive Audience Representative (with CMO on the CTA)",
+      "finding": "The three questions are sound but incomplete for the actual reader. An executive can ask 'do permissions come back as they were?' and has no way to judge the answer they get — which means the asset creates a conversation the reader cannot finish. Each question needs its pass condition attached. Also: cta_label 'Test your restore' promises a restore test and lands on a generic managed IT services page. That mismatch is small and avoidable, and it is a trust cost, not a conversion gain."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

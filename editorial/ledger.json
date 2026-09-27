@@ -1483,6 +1483,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-27",
+      "idea_id": "S076",
+      "theme": "m365_security",
+      "format": "explainer",
+      "title": "What Microsoft backs up, and what it does not",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
