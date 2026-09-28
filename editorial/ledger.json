@@ -1523,6 +1523,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-28",
+      "idea_id": "S002",
+      "theme": "ai_governance",
+      "format": "linkedin_analysis",
+      "title": "Copilot inherits every permission mistake you ever made",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          }
+        }
+      }
     }
   ]
 }
