@@ -1563,6 +1563,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-29",
+      "idea_id": "S255",
+      "theme": "creative_surprise",
+      "format": "economics",
+      "title": "Why the cheapest IT quote is usually the most expensive",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
