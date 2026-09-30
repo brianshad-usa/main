@@ -1,0 +1,136 @@
+{
+  "post": "A ransomware recovery can go well and still shut you down for weeks.\n\nPicture the Monday after. Backups held, restores ran clean, servers are up by early afternoon. Relief all round.\n\nNow the slow part. Orders placed after the last clean backup exist only in email. Invoices get rebuilt by hand. A vendor won't reconnect until someone proves the environment is clean. Staff who would normally do that re-keying are busy rebuilding laptops.\n\nSystems came back in an afternoon. Operations took much longer.\n\nAlmost nobody tests that second stretch. Worth asking this quarter: if every screen went dark tomorrow, how would we take an order, send an invoice, and pay people on paper — and who has actually practiced it?",
+  "headline": "Data restored is not business resumed.",
+  "cta_label": "Review your plan",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-30-s093-card.png",
+  "image_file_jpg": "2026-09-30-s093-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S093",
+  "core_idea": "Ransomware recovery runs on two clocks — technical restore and operational resumption — and most plans are tested against the first while the business is destroyed by the second. In 2026 the gap is widening, because automation compresses the technical clock and nothing compresses reconciliation.",
+  "channels": {
+    "linkedin": "Most recovery plans are tested against the wrong clock.\n\nOne clock stops when systems are restored and data is verified. The other stops when you can invoice, ship, and pay people. Those two moments are rarely the same day.\n\nThree things live in the gap.\n\nSequence. Applications need identity, identity needs directory services, and the network configuration under all of it often sat in the same console the attacker encrypted. Sequence it wrong and you restore twice. Restore the directory carelessly and you inherit the attacker's foothold with it.\n\nReconciliation. A clean backup is a point in time. Everything done between that point and the encryption survives in email, on paper, or in memory, and someone has to re-key it while still doing their job.\n\nOther people's decisions. Forensics may hold machines. An insurer may require an approved response vendor first. Partners may refuse to reconnect until the environment is provably clean.\n\nNone of that appears in a recovery time objective.\n\nTwo 2026 notes. AI-assisted operations keep compressing the technical clock; nothing compresses reconciliation. And exfiltration-only attacks leave nothing to restore — the business clock is the only one running.\n\nSo change the measurement. Stop testing to first successful login; test to first completed transaction — invoice sent, order shipped, payroll run. Put finance and operations in the rehearsal, not only IT.\n\nAnalysis, not prediction: companies that come through this well rarely have faster storage. They rehearsed the paperwork.",
+    "facebook": "A ransomware recovery can go well and still shut you down for weeks.\n\nPicture the Monday after. Backups held, restores ran clean, servers are up by early afternoon. Relief all round.\n\nNow the slow part. Orders placed after the last clean backup exist only in email. Invoices get rebuilt by hand. A vendor won't reconnect until someone proves the environment is clean. Staff who would normally do that re-keying are busy rebuilding laptops.\n\nSystems came back in an afternoon. Operations took much longer.\n\nAlmost nobody tests that second stretch. Worth asking this quarter: if every screen went dark tomorrow, how would we take an order, send an invoice, and pay people on paper — and who has actually practiced it?",
+    "gbp": "Restoring data and resuming operations are two different events. Only one of them appears in most recovery plans.\n\nCustomers do not measure time-to-restore. They measure time to a correct invoice, time to a shipment, time to a straight answer on the phone.\n\nThree questions for your IT team this quarter. In what order must our systems come back, and who wrote that down? Would we still reach that document, and the credentials inside it, if the network were encrypted? What does the business do by hand while it waits?\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Data restored is not business resumed. One clock stops when systems come back. The other stops when you can invoice, ship, and make payroll. Most recovery plans are tested against the first and fail on the second. Test to first completed transaction, not first login.",
+      "The case that proves it: exfiltration-only extortion. Nothing is encrypted, so there is nothing to restore — and the business clock is still the only one anyone cares about. A recovery plan that ends at 'systems online' never started."
+    ],
+    "instagram_caption": "A recovery can succeed technically and still cost a month of operating.\n\nData restored is not business resumed. In between sit restore-order dependencies, an identity layer you can no longer fully trust, every transaction that existed only between the last clean backup and the encryption, and third parties who will not reconnect until you prove the environment is clean.\n\nBetter measure: how long until the first invoice goes out. Not how long until a server answers.\n\nSwipe for the sequence.\n\n#ransomware #cyberresilience #ITleadership"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 92,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 91,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: ransomware recovery has two distinct completion points — technical restore and operational resumption — and plans are typically tested only against the first.",
+    "ANALYSIS: restore sequencing is governed by system dependencies (applications on identity, identity on directory services, both on network configuration), so an incorrect order forces repeated restores.",
+    "ANALYSIS: management or virtualization consoles holding network configuration are themselves common encryption targets, complicating restore order.",
+    "ANALYSIS: restoring directory services returns accounts, tokens and group memberships in their pre-incident state, so identity must be rebuilt and credentials rotated rather than simply recovered. Stated as a general property of point-in-time restore, not as a claim about any specific product or incident.",
+    "ANALYSIS: a backup restores to a point in time, so transactions occurring between that point and the encryption must be manually reconstructed.",
+    "ANALYSIS: forensic evidence holds, insurer-approved vendor requirements, and third-party reconnection conditions can extend operational downtime beyond technical recovery. Stated conditionally ('may'), with no specific policy, carrier, or regulation cited.",
+    "ANALYSIS: extortion without encryption leaves no restore to perform, so only the operational clock applies. General characterization of a known attack pattern; no incident, group, or frequency claim is made.",
+    "PREDICTION (labelled in-copy as a 2026 note): AI-assisted IT operations will continue to shorten technical restore while leaving reconciliation unchanged, widening the gap. No vendor capability, benchmark, or timeframe is asserted.",
+    "OPINION: recovery objectives should be measured to first completed business transaction (invoice, shipment, payroll) rather than first successful login, and rehearsed with finance and operations present.",
+    "OPINION: organizations that recover well are usually distinguished by rehearsed business-side procedures rather than faster storage.",
+    "ILLUSTRATIVE SCENARIO (not a client, not a case study): the Facebook 'Monday after' sequence is a composite hypothetical used to explain the argument; no incident, customer, or outcome is described as real. Card headline carries no implied timeline.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used in GBP only.",
+    "NO STATISTICS USED: no industry, breach-cost, downtime, or attacker-behavior figures appear in any channel; no external research is cited. Concept title numbers ('four hours', 'nine days') are internal shorthand and deliberately appear in no published asset.",
+    "CTA DISCIPLINE: exactly one CTA per asset. GBP body ends on credibility only; the appointment button is the sole ask."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package carries two CTAs on the GBP asset: the body offers a walkthrough and the card fires a BOOK_APPOINTMENT button at the same reader. One must go. The body copy should end on credibility (F012) and let the button carry the ask."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept title promises a specific contrast ('four hours / nine days') that the copy correctly refuses to invent — but card_headline 'Restored by noon. Reopened in weeks.' still reads like a case study with the numbers filed off. Replace it with the argument itself rather than a pseudo-timeline."
+    },
+    {
+      "role": "Art Director",
+      "finding": "There is no visual system specified anywhere in the package. Seven slides of kicker/headline/body with no typographic hierarchy, no motif, and no color logic will default to template design — exactly what the visual standard forbids. A two-clock motif with a divergent-timeline diagram gives the deck a recognizable spine; it needs to be written down."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'RTO' is used unglossed to an executive audience in the line that carries the most weight. Also 'the same management layer the attacker encrypted' is vague — 'console' is more concrete and no less accurate."
+    },
+    {
+      "role": "CIO",
+      "finding": "The restore-order argument omits the failure every CIO who has lived through this remembers: the recovery documentation, vendor contacts, and privileged credentials live inside the environment that just got encrypted. That belongs in the questions an owner actually asks."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treats ransomware as a 2019 encryption event. Two corrections matter. First, restoring directory services restores the attacker's accounts, tokens, and group memberships along with the data — identity is rebuilt, not recovered, and that work sits on the business clock. Second, exfiltration-only extortion leaves nothing to restore at all, which is the strongest possible proof of the two-clock thesis and is missing."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No 2026 register at all. The honest, non-forced angle is that AI-assisted operations and automated runbooks keep compressing the technical clock while doing nothing for reconciliation — so the gap this post is about is widening, not closing. One sentence, no manufactured urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Test to first completed transaction' is the right instruction but leaves the reader without an owner. A CFO reading this needs to know the rehearsal is a tabletop with finance and operations in the room, not an IT storage exercise — otherwise it gets delegated straight back to the people already measuring the wrong clock."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post buries its sharpest line ('data restored is not business resumed') and never says it at all; it leads with a definition instead. Lead with the compression. The exfiltration point genuinely earns a second post, so a two-post thread is warranted here."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Facebook post ends on observation ('it ends too early') rather than giving the reader anything to do, which makes it the weakest asset in the set. Closing on a concrete question the owner can carry into a meeting matches the brand's advisory register. On the ultimate test: the identity-rebuild point, the exfiltration inversion, and the AI-widens-the-gap line are not in generic MSP disaster-recovery content."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Four violations of the consecutive-same-opening-word rule: LinkedIn ('The technical clock... The business clock...'), X (same pair), Instagram slide 2 (same pair), Instagram slide 6 ('First invoice... First order... First payroll...'), plus the hook slide ('The data... The business...'). LinkedIn also runs roughly 1,600+ characters against a 1,600 ceiling and GBP sits within a few characters of 700. Both need trimming, not just editing."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

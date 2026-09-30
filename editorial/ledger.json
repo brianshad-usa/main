@@ -1603,6 +1603,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-09-30",
+      "idea_id": "S093",
+      "theme": "ransomware",
+      "format": "scenario",
+      "title": "Restored in four hours, back in business in nine days",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "single_image"
+          }
+        }
+      }
     }
   ]
 }
