@@ -1643,6 +1643,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-01",
+      "idea_id": "S159",
+      "theme": "msp_change",
+      "format": "linkedin_analysis",
+      "title": "What an MSP is for in 2026",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "carousel"
+          }
+        }
+      }
     }
   ]
 }
