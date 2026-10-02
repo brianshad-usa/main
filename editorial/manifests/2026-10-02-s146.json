@@ -1,0 +1,141 @@
+{
+  "post": "A CFO approves the same IT invoice every month, hears nothing back, and reasonably concludes that silence means everything is fine.\n\nThen a server fails on a Tuesday. The backups had been running for years, but nobody had ever tested a full restore. Licenses for a team that was reorganized away are still on the invoice. The system that failed was never in scope to begin with.\n\nNone of that was hidden. It simply was never volunteered.\n\nA provider worth paying reports bad news early: what would not recover in time, what you are overpaying for, which admin accounts have no owner, which AI tools staff are already pasting company data into, and where their responsibility stops.\n\nIf every update you get is good news, ask what is being left out. That question works on us too.",
+  "headline": "What a good IT provider tells you before you ask",
+  "cta_label": "See our managed IT services",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/managed-it-services",
+  "image_file": "2026-10-02-s146-card.png",
+  "image_file_jpg": "2026-10-02-s146-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S146",
+  "core_idea": "Competence is table stakes in IT. The real differentiator is proactive disclosure — what a provider volunteers about your recovery, your spend, your identity exposure, the AI tools your staff already use, the limits of their own scope, and their own mistakes, before anyone asks.",
+  "channels": {
+    "linkedin": "Most IT providers know more about your risk than their clients do. The failing isn't the knowledge gap. It's how long the knowledge sits there before it reaches you.\n\nCompetence is table stakes. Nearly any provider can patch a server and rebuild a laptop. What separates one from another is what gets volunteered when nobody is asking.\n\nFive reports that should arrive unprompted:\n\nRecovery. Not whether backups run — whether a full restore has been tested end to end, how long it took, and whether a compromised admin account could reach the backups.\n\nSpend. Dormant licenses, duplicated SaaS tools, the platform one department bought and abandoned two reorgs ago.\n\nIdentity. Privileged accounts with no named owner: former staff, retired vendors, service accounts nobody can explain. The perimeter moved to identity, and unowned privilege is the hole in it.\n\nAI. Which tools your people are already pasting company data into. Shadow AI stays invisible until someone maps it. Mapped, it becomes a governance decision instead of an unknown.\n\nScope. The distance between what you assume is covered and what the contract covers tends to get discovered mid-incident, at the worst hour.\n\nAnd the sixth, which almost never arrives: what they got wrong. A provider that has never reported its own miss is not error-free. It is editing.\n\nNone of this is technical work. It is reporting discipline, and it is close to free — that part is analysis, not a measured finding.\n\nAsk for it quarterly, in writing, with an exceptions section. Then apply the same standard to us.",
+    "facebook": "A CFO approves the same IT invoice every month, hears nothing back, and reasonably concludes that silence means everything is fine.\n\nThen a server fails on a Tuesday. The backups had been running for years, but nobody had ever tested a full restore. Licenses for a team that was reorganized away are still on the invoice. The system that failed was never in scope to begin with.\n\nNone of that was hidden. It simply was never volunteered.\n\nA provider worth paying reports bad news early: what would not recover in time, what you are overpaying for, which admin accounts have no owner, which AI tools staff are already pasting company data into, and where their responsibility stops.\n\nIf every update you get is good news, ask what is being left out. That question works on us too.",
+    "gbp": "If your IT provider only contacts you when something breaks, you are carrying risk you cannot see.\n\nThree questions worth raising at your next check-in:\n\nWhen was a full restore last tested, and how long did it take?\n\nWhich administrator accounts exist that nobody can name an owner for?\n\nWhat is explicitly outside our contract?\n\nA provider that answers all three without hedging is doing the job properly. One that needs a week to find out has also told you something.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Ask us the same three.",
+    "x": [
+      "Your IT provider knows about your risk before you do. The lag between what they know and when you hear it is where the damage compounds.\n\nThree updates in a row, all good news? That is not a clean environment. It is an edited one."
+    ],
+    "instagram_caption": "Competence is table stakes in IT. Almost anyone can patch a server.\n\nWhat separates providers is disclosure: untested restores, wasted spend, admin accounts with no owner, the AI tools your staff already use, and the limits of their own scope.\n\nFive reports that should arrive without being requested — plus the sixth that almost never does. Swipe, then hold your provider to the standard. Ours included: start with the question about our own mistakes.\n\n#ITLeadership #ShadowAI #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote_minimal",
+    "format": "quote_stat_card",
+    "channels": {
+      "linkedin": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card"
+      },
+      "facebook": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card"
+      },
+      "gbp": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card"
+      },
+      "instagram": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card"
+      },
+      "x": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 93,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: An IT provider typically holds information about a client's risk exposure before the client does; the reporting lag, not the knowledge itself, is the exposure.",
+    "OPINION: Technical competence is table stakes among providers; proactive disclosure is the actual differentiator.",
+    "ANALYSIS: Backups running is not evidence of recoverability; only a tested end-to-end restore establishes a recovery time.",
+    "ANALYSIS: A backup reachable by a compromised privileged account is not a reliable recovery path — stated as a general architectural point, not a reference to any specific incident, product, or vendor finding.",
+    "ANALYSIS: Unused licenses, duplicated SaaS tools, and abandoned platforms are common recurring-spend leakage in mid-sized organizations.",
+    "ANALYSIS: Privileged accounts without an identified owner (former employees, retired vendors, unattributed service accounts) are a material identity-layer exposure.",
+    "ANALYSIS: Identity functions as the primary security perimeter in current enterprise environments.",
+    "ANALYSIS: Employee use of unsanctioned AI tools is largely unmeasured in most organizations until an inventory exists; no prevalence figure is claimed.",
+    "ANALYSIS: Gaps between assumed and contracted coverage are commonly discovered during an incident rather than before one.",
+    "OPINION: A provider that has never reported one of its own mistakes is filtering its reporting, not operating without error.",
+    "OPINION: Reporting discipline is among the lowest-cost risk reductions available to a mid-sized organization. Flagged in-copy on LinkedIn as analysis rather than measurement.",
+    "RECOMMENDATION: A quarterly written risk-and-spend report with an exceptions section — ProLink's advisory position, not an industry standard or regulatory requirement.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. (GBP, Instagram slide 8 footer.)",
+    "ILLUSTRATIVE SCENARIO (Facebook): The CFO, the untested restore, the stranded licenses, and the out-of-scope failure are a hypothetical composite. No client, no incident, and no figures — the invented license count from the prior draft was removed.",
+    "NO NUMBERS CLAIMED: This package cites no industry, threat, breach, or downtime statistic, and no ProLink performance metric. F001/F002/F003/F004/F005/F007/F008 were available but omitted as off-theme; the concept is disclosure, not response speed.",
+    "NO CLIENT REFERENCE: No client named, implied, or described in any channel."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA chain is dishonest at the edges. 'See the standard' promises a published standard, and the link goes to a generic managed IT services page. A post built entirely on candor cannot close with a label that overpromises the destination. Relabel to match what is actually on the other side."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is a visual list, not a progression. 'Disclosure one / two / three / four' is the weakest possible organizing device — numbering as design. Replace with single-word category kickers (Recovery, Spend, Identity, AI, Scope) plus a discreet index rail, so the system is recognizable before the logo and each slide has a distinct subject, not a position."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 8 in the draft is a boilerplate company card — 'Serving LA since 1999, 24/7 help desk' — which is the single most design-resistant and most generic frame in the set. Cut it. Let the takeaway slide carry one restrained line and a small footer lockup; the brand reads stronger when it is not shouting its own credentials at the end of a piece about restraint."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Internal inconsistency: LinkedIn promises five disclosures, the carousel delivers four and folds the fifth into the takeaway. Also '(Analysis, not a measured finding.)' is an awkward parenthetical bolt-on. Signal the register inside the sentence instead of in brackets, and make the counts agree across channels."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft diagnoses but does not instrument. An executive reading this has no mechanism to install on Monday. Add the operational ask: a quarterly written risk-and-spend report with an exceptions section. One sentence, and the post becomes usable instead of merely agreeable."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The recovery item stops one step short. 'Has a restore been tested' is 2019 advice; the current question is whether the backup is reachable by an account that is already compromised. Add immutability/blast-radius to the recovery disclosure, or the security content is behind the audience."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in the draft could not have been written in 2019. There is no AI surface anywhere in a package about what a provider should disclose — yet the disclosure nobody is volunteering right now is which AI tools staff are already pasting company data into. Shadow AI belongs in the list as a first-class item, not as decoration."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'a 20–500 seat business' is market-segment language leaking into editorial. No CEO describes their own company that way; it reveals the sales model behind the post and breaks the peer register. Remove it."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post resolves into a metaphor ('edited one') with no concrete test attached, and the Instagram caption's closing is soft. Both improve if the reader is handed a specific thing to do or ask within the last line. Keep X as a single post — a thread here would just be the LinkedIn list retyped."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP stacks four verified facts into one sentence, which reads as a credentials blurb pasted onto advisory copy. Carry the founding/location fact only — the one that earns local trust — and let the questions do the work. Also the brand's boldest asset in this concept is the invitation to apply the standard to ProLink; it should appear on every channel, not only LinkedIn."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three violations. Facebook opens three consecutive sentences with 'She'. The Instagram slide-2 body is near-verbatim LinkedIn text ('where quiet damage accumulates'), which breaks the no-duplicate-text rule. And 'She learns the company pays for 40 licenses' invents a number inside a scenario — flagged as illustrative in the audit, but a bare figure still reads as data. Remove the number entirely."
+    },
+    {
+      "role": "Final test — could any MSP have published this?",
+      "finding": "The draft's list of questions is a familiar MSP genre ('questions to ask your IT provider'). What makes this version non-generic is the sixth disclosure — the provider's own mistakes — and the explicit instruction to turn the standard on ProLink. Both were under-weighted. In the revision they close every channel, and no MSP running conventional marketing would invite that audit."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

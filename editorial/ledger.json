@@ -1683,6 +1683,46 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-02",
+      "idea_id": "S146",
+      "theme": "exec_strategy",
+      "format": "carousel",
+      "title": "What your IT provider should tell you without being asked",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card",
+        "channels": {
+          "linkedin": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "facebook": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "gbp": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "instagram": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "x": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          }
+        }
+      }
     }
   ]
 }
