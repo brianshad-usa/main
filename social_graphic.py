@@ -566,16 +566,19 @@ def _card_photo(headline, kicker, cta, accent=GOLD, photo_path=None,
     text_pos = photo_text or "bottom"
     sq = _square_from_focal(Image.open(photo_path).convert("RGB"), fx, fy)
     if light:
-        duo = ImageOps.colorize(sq.convert("L"), black=(40, 55, 78),
-                                white=(250, 248, 243), mid=(150, 150, 150)).convert("RGBA")
-        scrim = _directional_scrim(text_pos, base_alpha=40, deep=NAVY_BLACK)
+        # Warm, brighter editorial wash -- clearly different ground from the deep
+        # navy duotone -- but with a firm directional scrim so WHITE text stays
+        # legible over the photo's midtones.
+        duo = ImageOps.colorize(sq.convert("L"), black=(44, 62, 90),
+                                white=(252, 249, 244), mid=(126, 134, 150)).convert("RGBA")
+        scrim = _directional_scrim(text_pos, base_alpha=70, deep=(20, 34, 56))
     else:
         duo = ImageOps.colorize(sq.convert("L"), black=NAVY_BLACK, white=(238, 240, 244),
                                 mid=NAVY_DEEP).convert("RGBA")
         scrim = _directional_scrim(text_pos, base_alpha=96)
     img = Image.alpha_composite(duo, scrim).convert("RGB")
     d = ImageDraw.Draw(img)
-    text_fill = WHITE if not light else NAVY_INK
+    text_fill = WHITE
     kick_fill = accent
     d.rectangle([MARGIN, 96, MARGIN + 84, 104], fill=accent)
     if text_pos == "top":
@@ -596,9 +599,9 @@ def _card_photo(headline, kicker, cta, accent=GOLD, photo_path=None,
             d.text((MARGIN, y), ln, font=hf, fill=text_fill)
             y += lh
         _cta_caption(d, cta, MARGIN, H - 300, accent)
-    # logo chip always reads (white chip), contact line in a safe color
+    # logo chip always reads (white chip), contact line in white over the scrim
     _logo_lockup(img, d, MARGIN + 22, H - 150, 74, ground="dark")
-    _contact_line(d, H - 150, color=WHITE if not light else NAVY_INK)
+    _contact_line(d, H - 150, color=WHITE)
     return img
 
 
