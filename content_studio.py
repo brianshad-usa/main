@@ -356,8 +356,11 @@ def main():
     # share the same look+shape, brand DNA held constant. Deterministic from the
     # ledger, so a re-run picks the same treatment.
     directive = social_variety.plan(editorial_engine.load_ledger(), idea=idea)
-    _log(f"variety: {directive['style']}/{directive['format']} "
-         f"(prev {directive['previous_run']['style']}/{directive['previous_run']['format']}"
+    _log(f"variety: style={directive['style']} ground={directive['ground']} "
+         f"layout={directive['layout']} register={directive['register']} "
+         f"format={directive['format']} "
+         f"(prev ground={directive['previous_run']['ground']} "
+         f"register={directive['previous_run']['register']}"
          f"{', asset-gated' if directive['asset_gated'] else ''})")
 
     review = None
