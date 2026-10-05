@@ -146,7 +146,12 @@ Return JSON with exactly these keys:
         "footer": "optional attribution/source line or empty string"}}
     ]
   }},
-  "card_headline": "4-8 word hook for the single-image fallback card, sentence case",
+  "card_headline": "the single-image card headline, 4-10 words, sentence case, written
+                   in TODAY'S content register (see CARD HEADLINE RULE above) - a plain tip,
+                   question, benefit, myth, etc., NOT a cryptic one-liner unless the register
+                   is 'insight'",
+  "checklist_items": ["ONLY when the register is 'checklist': 3-4 short checkable actions,
+                      <=6 words each; empty list otherwise"],
   "cta_label": "2-4 word button label",
   "cta_type": "LEARN_MORE|BOOK_APPOINTMENT|CALL",
   "cta_url": "the most relevant prolinksystems.com page",
@@ -425,11 +430,11 @@ def main():
     # real photograph is registered (assets/variety_assets.json) - the engine
     # never fabricates imagery of people.
     photo_path = photo_focal = photo_text = None
-    if render.get("card_style") == "photo":
-        # behind_the_scenes format draws from its own (warmer) bucket; otherwise
-        # the general photographic set. The photo rotates by slot so successive
-        # photo posts don't reuse the same frame.
-        bucket = "behind_the_scenes" if directive["format"] == "behind_the_scenes" else "photographic"
+    if render.get("card_style") in ("photo", "photo_light"):
+        # behind_scenes register draws from its own (warmer) bucket; otherwise the
+        # general photographic set. The photo rotates by slot so successive photo
+        # posts don't reuse the same frame.
+        bucket = "behind_the_scenes" if directive.get("register") == "behind_scenes" else "photographic"
         entry = social_variety.pick_photo(bucket, seed=stem)
         if entry:
             photo_path = os.path.join(HERE, entry["path"])
@@ -437,16 +442,23 @@ def main():
             photo_focal = (float(focal[0]), float(focal[1]))
             photo_text = entry.get("text")
             _log(f"photographic asset: {entry['path']} ({entry.get('shows', '')[:60]})")
+
+    # The card kicker reflects the content register (Quick tip, Checklist, By the
+    # numbers, ...) so the label matches the register; falls back to the theme.
+    card_kicker = directive.get("register_kicker") or idea["theme"].replace("_", " ").title()
+    checklist_items = package.get("checklist_items") or None
+
     card_png = f"{stem}-card.png"
     social_graphic.make_card(package["card_headline"],
-                             idea["theme"].replace("_", " ").title(),
+                             card_kicker,
                              package["cta_label"],
                              os.path.join(out_dir, card_png),
                              style=render.get("card_style", "bold_type"),
                              palette_variant=render.get("palette_variant"),
                              photo_path=photo_path,
                              photo_focal=photo_focal,
-                             photo_text=photo_text)
+                             photo_text=photo_text,
+                             items=checklist_items)
     from PIL import Image
     card_jpg = card_png[:-4] + ".jpg"
     Image.open(os.path.join(out_dir, card_png)).convert("RGB").save(
@@ -473,7 +485,8 @@ def main():
         },
         "carousel": {"png": slide_pngs, "jpg": slide_jpgs},
         "variety": {"style": directive["style"], "format": directive["format"],
-                    "channels": directive["channels"]},
+                    "ground": directive["ground"], "layout": directive["layout"],
+                    "register": directive["register"], "channels": directive["channels"]},
         "excellence": {"overall": overall, "scores": scores},
         "claims_audit": package.get("claims_audit", []),
         "board_findings": (review or {}).get("board_findings", []),
@@ -498,7 +511,8 @@ def main():
             idea, excellence=overall,
             channels=["LinkedIn", "Facebook", "Instagram", "GBP"],
             variety={"style": directive["style"], "format": directive["format"],
-                     "channels": directive["channels"]})
+                     "ground": directive["ground"], "layout": directive["layout"],
+                     "register": directive["register"], "channels": directive["channels"]})
 
     _log(f"core idea: {package['core_idea']}")
     _log(f"excellence: {overall}/100")
