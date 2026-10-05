@@ -40,6 +40,15 @@ LEDGER_PATH = os.path.join(HERE, "editorial", "ledger.json")
 # AI-adjacent themes share a fatigue pool so "balance the mix" has teeth.
 AI_THEMES = {"ai_governance", "ai_threats"}
 
+# Threat/dread themes share a soft fatigue pool so the calendar spreads across
+# service areas (continuity, productivity, cloud, strategy, ...) instead of being
+# wall-to-wall security scares. Tone is separately handled by the content
+# register in social_variety; this just balances the TOPIC mix.
+THREAT_THEMES = {"ai_threats", "ransomware", "soc_detection", "third_party_risk",
+                 "human_risk", "network_edge"}
+THREAT_WINDOW = 4
+THREAT_SOFT_PENALTY = 1.0   # per threat-themed post in the recent window
+
 # How many recent posts to consider for theme/format fatigue.
 FATIGUE_WINDOW = 5
 IDEA_COOLDOWN_DAYS = 182          # same idea: hard block ~26 weeks
@@ -115,6 +124,7 @@ def select(today=None, explain=False):
     recent_formats = [p["format"] for p in recent[-2:]]
     last_theme = recent_themes[-1] if recent_themes else None
     recent_ai = sum(1 for t in recent_themes if t in AI_THEMES)
+    threat_recent = sum(1 for t in recent_themes[-THREAT_WINDOW:] if t in THREAT_THEMES)
     timely_recent = sum(1 for p in recent if p.get("timeliness") == "timely")
 
     published_dates = {}
@@ -149,6 +159,10 @@ def select(today=None, explain=False):
         if idea["format"] in recent_formats:
             score -= FORMAT_RECENT_PENALTY
             why.append(f"format fatigue -{FORMAT_RECENT_PENALTY}")
+        if idea["theme"] in THREAT_THEMES and threat_recent:
+            dampen = THREAT_SOFT_PENALTY * threat_recent
+            score -= dampen
+            why.append(f"threat-topic spread -{dampen:.1f}")
         if months and today.month in months:
             score += SEASONAL_BOOST
             why.append(f"in season +{SEASONAL_BOOST}")
