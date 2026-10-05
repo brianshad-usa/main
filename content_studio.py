@@ -103,10 +103,18 @@ def draft_prompt(idea, directive=None):
     variety_block = ""
     if directive:
         variety_block = (
-            f"\nTODAY'S VISUAL TREATMENT: {directive['style']} / {directive['format']}\n"
-            f"{directive['copy_directive']}\n"
-            "Match the copy to this treatment. The brand look (navy, gold accent, logo,\n"
-            "contact line) is fixed by the renderer - do not describe it; write for the shape.\n"
+            f"\nTODAY'S TREATMENT\n"
+            f"  Visual: {directive['style']} ({directive.get('ground')} ground, "
+            f"{directive.get('layout')} layout) / format {directive['format']}\n"
+            f"  Content register: {directive.get('register')}\n"
+            f"  {directive['copy_directive']}\n"
+            f"  CARD HEADLINE RULE: {directive.get('register_headline_directive','')}\n"
+            "Match the copy AND the card_headline to this register - the register is as\n"
+            "binding as the concept. Critically: do NOT default to a cryptic, ominous\n"
+            "one-liner. Only the 'insight' register is analytical/warning; every other\n"
+            "register must be plain, helpful, warm or positive as described. The brand look\n"
+            "(navy, gold accent, logo, contact line) is fixed by the renderer - do not\n"
+            "describe it; write for the shape.\n"
         )
     return f"""Create today's cross-channel content package from this approved backlog concept:
 
@@ -115,7 +123,9 @@ Theme: {idea['theme']}  |  Format: {idea['format']}  |  Timeliness: {idea.get('t
 Editorial angle: {idea['angle']}
 {variety_block}
 One core idea; the best native expression of it for each channel - never the same
-text twice. The concept's angle is the assignment: sharpen it, don't dilute it.
+text twice. The concept's angle is the assignment: express it through TODAY'S
+content register above - the same security topic becomes a practical tip, a
+myth-vs-fact, a warm client-value note, a question, etc. depending on the register.
 
 Return JSON with exactly these keys:
 {{
