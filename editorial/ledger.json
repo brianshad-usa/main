@@ -1723,6 +1723,86 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-03",
+      "idea_id": "S041",
+      "theme": "ai_threats",
+      "format": "advisory",
+      "title": "Tell your finance team this week",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "idea_id": "S014",
+      "theme": "ai_governance",
+      "format": "linkedin_analysis",
+      "title": "Copilot readiness is a permissions project, not a licensing one",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "infographic",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "infographic"
+          }
+        }
+      }
     }
   ]
 }
