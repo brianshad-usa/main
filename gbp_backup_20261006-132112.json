@@ -1,0 +1,1467 @@
+{
+  "name": "locations/7712242499324845523",
+  "languageCode": "en",
+  "storeCode": "ProLink Systems",
+  "title": "Pro Link Systems",
+  "phoneNumbers": {
+    "primaryPhone": "(800) 890-6133"
+  },
+  "categories": {
+    "primaryCategory": {
+      "name": "categories/gcid:computer_consultant",
+      "displayName": "Computer consultant",
+      "serviceTypes": [
+        {
+          "serviceTypeId": "job_type_id:it_consulting",
+          "displayName": "It consulting"
+        }
+      ],
+      "moreHoursTypes": [
+        {
+          "hoursTypeId": "ACCESS",
+          "displayName": "Access",
+          "localizedDisplayName": "Access"
+        },
+        {
+          "hoursTypeId": "BREAKFAST",
+          "displayName": "Breakfast",
+          "localizedDisplayName": "Breakfast"
+        },
+        {
+          "hoursTypeId": "BRUNCH",
+          "displayName": "Brunch",
+          "localizedDisplayName": "Brunch"
+        },
+        {
+          "hoursTypeId": "DELIVERY",
+          "displayName": "Delivery",
+          "localizedDisplayName": "Delivery"
+        },
+        {
+          "hoursTypeId": "DINNER",
+          "displayName": "Dinner",
+          "localizedDisplayName": "Dinner"
+        },
+        {
+          "hoursTypeId": "DRIVE_THROUGH",
+          "displayName": "Drive through",
+          "localizedDisplayName": "Drive through"
+        },
+        {
+          "hoursTypeId": "HAPPY_HOUR",
+          "displayName": "Happy hours",
+          "localizedDisplayName": "Happy hours"
+        },
+        {
+          "hoursTypeId": "KITCHEN",
+          "displayName": "Kitchen",
+          "localizedDisplayName": "Kitchen"
+        },
+        {
+          "hoursTypeId": "LUNCH",
+          "displayName": "Lunch",
+          "localizedDisplayName": "Lunch"
+        },
+        {
+          "hoursTypeId": "ONLINE_SERVICE_HOURS",
+          "displayName": "Online service hours",
+          "localizedDisplayName": "Online service hours"
+        },
+        {
+          "hoursTypeId": "PICKUP",
+          "displayName": "Pickup",
+          "localizedDisplayName": "Pickup"
+        },
+        {
+          "hoursTypeId": "TAKEOUT",
+          "displayName": "Takeout",
+          "localizedDisplayName": "Takeout"
+        },
+        {
+          "hoursTypeId": "SENIOR_HOURS",
+          "displayName": "Senior hours",
+          "localizedDisplayName": "Senior hours"
+        }
+      ]
+    },
+    "additionalCategories": [
+      {
+        "name": "categories/gcid:computer_support_and_services",
+        "displayName": "Computer support and services",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:installation",
+            "displayName": "Installation"
+          },
+          {
+            "serviceTypeId": "job_type_id:it_consulting",
+            "displayName": "It consulting"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:data_recovery_service",
+        "displayName": "Data recovery service",
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:computer_repair_service",
+        "displayName": "Computer repair service",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:installation",
+            "displayName": "Installation"
+          },
+          {
+            "serviceTypeId": "job_type_id:it_consulting",
+            "displayName": "It consulting"
+          },
+          {
+            "serviceTypeId": "job_type_id:tablet_repair",
+            "displayName": "Tablet repair"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:computer_security_service",
+        "displayName": "Computer security service",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:it_consulting",
+            "displayName": "It consulting"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:internet_service_provider",
+        "displayName": "Internet service provider",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:technical_support",
+            "displayName": "Technical support"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:computer_networking_center",
+        "displayName": "Computer networking service",
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      }
+    ]
+  },
+  "websiteUri": "https://prolinksystems.com/",
+  "regularHours": {
+    "periods": [
+      {
+        "openDay": "MONDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "MONDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "TUESDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "TUESDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "WEDNESDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "WEDNESDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "THURSDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "THURSDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "FRIDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "FRIDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      }
+    ]
+  },
+  "specialHours": {
+    "specialHourPeriods": [
+      {
+        "startDate": {
+          "year": 2026,
+          "month": 2,
+          "day": 16
+        },
+        "openTime": {
+          "hours": 9
+        },
+        "endDate": {
+          "year": 2026,
+          "month": 2,
+          "day": 16
+        },
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "startDate": {
+          "year": 2026,
+          "month": 12,
+          "day": 25
+        },
+        "endDate": {
+          "year": 2026,
+          "month": 12,
+          "day": 25
+        },
+        "closed": true
+      },
+      {
+        "startDate": {
+          "year": 2027,
+          "month": 1,
+          "day": 1
+        },
+        "endDate": {
+          "year": 2027,
+          "month": 1,
+          "day": 1
+        },
+        "closed": true
+      }
+    ]
+  },
+  "serviceArea": {
+    "businessType": "CUSTOMER_LOCATION_ONLY",
+    "places": {
+      "placeInfos": [
+        {
+          "placeName": "Irvine, CA, USA",
+          "placeId": "ChIJ40CRaA7d3IAROZpKYHW1eqc"
+        },
+        {
+          "placeName": "Orange, CA, USA",
+          "placeId": "ChIJr4p1a6nQ3IARvtTvgHJPYiI"
+        },
+        {
+          "placeName": "Oxnard, CA, USA",
+          "placeId": "ChIJn2clE-ZN6IARRbZe-sBJgFk"
+        },
+        {
+          "placeName": "Pomona, CA, USA",
+          "placeId": "ChIJIaGfee8tw4ARM6nKAHCUCVI"
+        },
+        {
+          "placeName": "Ontario, CA, USA",
+          "placeId": "ChIJe2Ld6ts0w4ARkDFY-VrjAwc"
+        },
+        {
+          "placeName": "Palmdale, CA, USA",
+          "placeId": "ChIJtd1w7IRXwoAROuASrS15bGo"
+        },
+        {
+          "placeName": "Pasadena, CA, USA",
+          "placeId": "ChIJUQszONzCwoARSo_RGhZBKwU"
+        },
+        {
+          "placeName": "Torrance, CA, USA",
+          "placeId": "ChIJ096zWNFK3YARHmYKTm7TS60"
+        },
+        {
+          "placeName": "Lancaster, CA, USA",
+          "placeId": "ChIJQYDoaLFawoARBz4Lfc9yxFg"
+        },
+        {
+          "placeName": "Riverside, CA, USA",
+          "placeId": "ChIJu330f9-m3IAR6ApeEwXXofc"
+        },
+        {
+          "placeName": "Santa Ana, CA, USA",
+          "placeId": "ChIJhTCCbJXb3IARvP0eHzqET8c"
+        },
+        {
+          "placeName": "Long Beach, CA, USA",
+          "placeId": "ChIJWdeZQOjKwoARqo8qxPo6AKE"
+        },
+        {
+          "placeName": "Moreno Valley, CA, USA",
+          "placeId": "ChIJm-IZ2wmh3IARLD-boBWy-sM"
+        },
+        {
+          "placeName": "Newport Beach, CA, USA",
+          "placeId": "ChIJ3bO_xLbo3IARvVmLZFSVVPE"
+        },
+        {
+          "placeName": "Orange County, CA, USA",
+          "placeId": "ChIJz_fVVFyS3IARB9bwj2HDpt4"
+        },
+        {
+          "placeName": "Thousand Oaks, CA, USA",
+          "placeId": "ChIJkYgocFYl6IARJi7MRwF6Lo0"
+        },
+        {
+          "placeName": "San Bernardino, CA, USA",
+          "placeId": "ChIJ87j94n1Tw4ARjcKHjHjGZyg"
+        },
+        {
+          "placeName": "Rancho Cucamonga, CA, USA",
+          "placeId": "ChIJkScROPlbw4ARS_Pygq16aq0"
+        },
+        {
+          "placeName": "Los Angeles County, CA, USA",
+          "placeId": "ChIJMc1kAdMq3YARKjm9z9YofYM"
+        },
+        {
+          "placeName": "Woodland Hills, Los Angeles, CA, USA",
+          "placeId": "ChIJVfY28eyewoARiBIkRG5Qhvo"
+        }
+      ]
+    },
+    "regionCode": "US"
+  },
+  "labels": [
+    "ProLink Systems"
+  ],
+  "adWordsLocationExtensions": {
+    "adPhone": "+1 877-470-2739"
+  },
+  "openInfo": {
+    "status": "OPEN",
+    "canReopen": true,
+    "openingDate": {
+      "year": 1999,
+      "month": 3,
+      "day": 15
+    }
+  },
+  "metadata": {
+    "hasGoogleUpdated": true,
+    "canDelete": true,
+    "canModifyServiceList": true,
+    "placeId": "ChIJE0xLnq2ewoARH1TaLVS7CG4",
+    "mapsUri": "https://maps.google.com/maps?cid=7928793114206688287",
+    "newReviewUri": "https://search.google.com/local/writereview?placeid=ChIJE0xLnq2ewoARH1TaLVS7CG4",
+    "canHaveBusinessCalls": true,
+    "hasVoiceOfMerchant": true
+  },
+  "profile": {
+    "description": "Pro Link Systems has delivered managed IT services to Los Angeles businesses since 1999. From Woodland Hills to Downtown LA, we serve as the complete IT department for companies with 5 or more employees — providing 24/7 live help desk support, cybersecurity, cloud infrastructure, disaster recovery, and virtual CIO strategy under one flat-rate agreement. No long-term contracts.\nUnlike break-fix IT companies, we monitor and manage your environment proactively so problems don't start. Real engineers answer your calls around the clock — no ticket queues, no offshore support. We are HIPAA, PCI, CMMC, and SOC 2 compliant and serve clients across healthcare, legal, manufacturing, aerospace, hospitality, and entertainment.\nCall 1-800-890-6133"
+  },
+  "serviceItems": [
+    {
+      "structuredServiceItem": {
+        "serviceTypeId": "job_type_id:it_consulting",
+        "description": "With IT consulting services, we help clients assess different technology strategies and align their business process with our advice. These advisory measures can be anything from strategic planning for new projects or systems implementation down to operational support."
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Amazon Web Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Backup & Disaster Recovery"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cloud Solutions"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Document Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Erp System"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "It Infrastructure"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "It Infrastructure Supporting"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "It Outsourcing Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Managed Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Security Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Server Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Web Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "24/7 Help Desk Support"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Application Installations"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Application Migration"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Artificial Intelligence"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Azure Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Backup Plan"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cloud And Infrastructure"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cloud Computing"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cloud Migration Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Customized Cloud Solutions"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cybersecurity Solutions"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Data Backup Solutions"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Data Migration"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Data Protection Service"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Data Restoration"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Dedicated Help Desk"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Disaster Recovery And Backup Solutions"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Disaster Recovery And Data Backup"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Disaster Recovery Plan"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Disaster Recovery Testing"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Facilities Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Fully Managed Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Helpdesk Support Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Home Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Hybrid Cloud"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Intelligent Automation"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "It Security"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Machine Learning"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Maintenance Windows"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Managed Cloud"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Microsoft 365 Solutions"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Natural Language Processing"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network And Server Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network Installations"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network Migration"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network Monitoring"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Ongoing Support"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Patch Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Personalized Support"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Pos Systems"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Proactive Maintenance"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Remote Monitoring"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Remote Work"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Replacement Parts"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Support And Maintenance Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "User Account Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Vpn Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Workplace Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Managed IT Services"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cybersecurity"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cloud Infrastructure"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "24/7 Help Desk"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Disaster Recovery"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_security_service",
+        "label": {
+          "displayName": "IT Support Services",
+          "description": "IT support is an important part of any computer system, and Prolink offers remote assistance to solve your problems quickly. With this service you can contact our chat or email interface in order to get the problem solved within minutes!"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "AWS Cloud Environment Setup and Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Application and Solutions Development"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Azure Cloud Environment Setup and Management",
+          "description": "Microsoft's cloud computing service, Azure is a public platform that provides over 100+ services such as analytics and more. The core of this service includes: IaaS (Infrastructure as a Service), PaaS/ SaaS for your software needs; there are many options available with endless possibilities!"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Cloud Network Management",
+          "description": "Cloud networking is an innovative approach to managing IT infrastructure. Cloud providers offer a range of services, from hosting data center resources in their own systems or by partnering with other companies on demand--to providing security for networks that are shared across multiple locations."
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Desktop Administartion"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Google Cloud Environment Setup and Management"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Hybrid Cloud Network Support"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Managed IT Services",
+          "description": "With managed IT services, organizations can benefit from reduced in-house workload or gaps left by existing roles and skills. The remote Hybrid IaaS model is an excellent choice for companies who need 24/7 coverage without having to hire additional staff members on top of what they already have."
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Network Migration and Relocation"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Network Security Assessment"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Network Setup and Configuration",
+          "description": "Network configuration is the process of assigning network settings, policies and flows. In a virtual environment this can be done easily because physical devices are replaced by software to make changes that require less manual labor."
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Network Troubleshooting",
+          "description": "Network troubleshooting is the combined measures and processes used to identify, diagnose and solve problems within a computer network. It's an imperfect science that explores every corner of your system in order find what might be going wrong - or how you can make it better!"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Remote Desktop Support",
+          "description": "Remote desktop support is a service that allows you to access your computer or device from anywhere with an internet connection. You can use it for things like troubleshooting software, installing new applications on the remote machine and even backing up important files."
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Systems Administration"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "VPN Tunnel Configuration and Support"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Virtual Apps and Infrastructure"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "Virtual Desktops"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_networking_center",
+        "label": {
+          "displayName": "VoIP Service Provider",
+          "description": "Voice over IP (VoIP), which is the technology that allows you to make a call from your computer, VoIP phone or any other data-driven device."
+        }
+      }
+    }
+  ]
+}
