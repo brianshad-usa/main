@@ -198,6 +198,8 @@ def run(cli_max=None, dry_run=False):
         return 0
 
     posted_now = 0
+    attempted = 0
+    last_error = None
     for url in batch:
         meta = post_meta(url)
         summary = build_summary(meta)
@@ -208,6 +210,7 @@ def run(cli_max=None, dry_run=False):
             print(f"[CTA] LEARN_MORE -> {url}")
             print("-----------------------------")
             continue
+        attempted += 1
         try:
             name = gbp_post.post_update(
                 summary,
@@ -216,6 +219,7 @@ def run(cli_max=None, dry_run=False):
                 image_url=meta["image"],
             )
         except Exception as e:
+            last_error = str(e)
             _log(f"FAILED {url}: {e}")
             # Stop the batch on first failure so we don't hammer a bad token.
             break
@@ -229,9 +233,15 @@ def run(cli_max=None, dry_run=False):
         posted_now += 1
         _log(f"   posted: {name}")
 
-    if not dry_run:
-        _log(f"Done. Posted {posted_now} this run. "
-             f"{len(remaining(log))} remaining.")
+    if dry_run:
+        return 0
+
+    _log(f"Done. Posted {posted_now} this run. {len(remaining(log))} remaining.")
+    # If we tried to post but nothing succeeded, make the run RED with the real
+    # reason so a dead token / API error is never hidden behind a green check.
+    if attempted and posted_now == 0:
+        _log(f"ERROR: attempted {attempted} but posted 0. Last error: {last_error}")
+        return 1
     return 0
 
 
