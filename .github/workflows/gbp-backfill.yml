@@ -50,22 +50,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      # TEMPORARY diagnostic: prints only length + an 8-char SHA256 prefix of
-      # each GBP secret (never the value, which GitHub also masks). Compare the
-      # sha8 here against the local one-liner to prove the GitHub copy matches
-      # the trio that works locally. Remove this step once the secrets are fixed.
-      - name: Fingerprint GBP secrets (safe, no values)
-        env:
-          GBP_CLIENT_ID:     ${{ secrets.GBP_CLIENT_ID }}
-          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
-          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
-        run: |
-          for v in GBP_CLIENT_ID GBP_CLIENT_SECRET GBP_REFRESH_TOKEN; do
-            val="${!v}"
-            printf '%s  len=%s  sha8=%s\n' "$v" "${#val}" \
-              "$(printf '%s' "$val" | sha256sum | cut -c1-8)"
-          done
-
       - name: Post the next paced batch to GBP
         env:
           GBP_CLIENT_ID:     ${{ secrets.GBP_CLIENT_ID }}
