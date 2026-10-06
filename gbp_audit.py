@@ -58,7 +58,6 @@ DEFAULT_LOCATION_ID = "7712242499324845523"
 SECRETS_ENV_PATH = r"C:\GoogleAds\secrets.env"
 
 BI_API  = "https://mybusinessbusinessinformation.googleapis.com/v1"
-V4_API  = "https://mybusinessgoogleapis.com/v4"   # overwritten below
 V4_API  = "https://mybusiness.googleapis.com/v4"
 
 # Comprehensive readMask for the Business Information API location resource.
