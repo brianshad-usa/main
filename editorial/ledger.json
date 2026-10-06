@@ -1803,6 +1803,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-05",
+      "idea_id": "S077",
+      "theme": "m365_security",
+      "format": "carousel",
+      "title": "Where SharePoint sharing went wrong",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          }
+        }
+      }
     }
   ]
 }
