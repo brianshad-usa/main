@@ -53,8 +53,8 @@ BLOG_DIR = os.path.join(HERE, "blog")
 LOG_PATH = os.path.join(HERE, "gbp_backfill_log.json")
 
 SITE = "https://prolinksystems.com"
-DEFAULT_PER_RUN = 2          # conservative, spam-safe default
-HARD_CAP_PER_RUN = 5         # safety rail: never post more than this in one run
+DEFAULT_PER_RUN = 15         # per Brian's request (note: >3/day raises spam-flag risk)
+HARD_CAP_PER_RUN = 20        # safety rail: never post more than this in one run
 DEFAULT_IMAGE = f"{SITE}/logo.png"
 
 
