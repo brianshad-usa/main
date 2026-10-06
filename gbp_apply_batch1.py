@@ -139,7 +139,9 @@ ATTRIBUTES = [
      "valueType": "URL",
      "uriValues": [{"uri": "https://www.instagram.com/prolinksystems"}]},
 ]
-ATTRIBUTE_MASK = ",".join(a["name"].split("/")[-1] for a in ATTRIBUTES)
+# attributeMask entries use the FULL resource name ("attributes/<id>"),
+# per locations.attributes.updateAttributes docs -- not the bare id.
+ATTRIBUTE_MASK = ",".join(a["name"] for a in ATTRIBUTES)
 
 # ---------------------------------------------------------------------------
 # 4) MORE HOURS -- online service 24/7 (regular office hours NOT touched)
