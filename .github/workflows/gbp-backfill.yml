@@ -1,0 +1,92 @@
+name: GBP Blog Backfill (Paced)
+
+# Drips already-published blog posts onto the Google Business Profile as
+# "What's new" local posts, a FEW per day, until the archive is backfilled.
+# Paced on purpose: a burst of posts trips Google's spam heuristics and GBP
+# posts age out after ~6 months, so slow and steady wins. State lives in
+# gbp_backfill_log.json (committed each run) so it resumes cleanly and never
+# double-posts.
+
+on:
+  schedule:
+    # Daily at 15:00 UTC = 8 AM Los Angeles (PDT) / 7 AM (PST).
+    # Deliberately offset from generate-blog (16:00) and social-3x-week (17:00)
+    # so the three jobs never contend for a push.
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+    inputs:
+      max:
+        description: 'How many to post this run (overrides the daily pace). 0 = none.'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Build the batch but post nothing (true/false).'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+# Never let two backfill runs post at once (would risk duplicate posts before
+# the ledger commit lands).
+concurrency:
+  group: gbp-backfill
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Post the next paced batch to GBP
+        env:
+          GBP_CLIENT_ID:     ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_ACCOUNT_ID:    ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID:   ${{ secrets.GBP_LOCATION_ID }}
+          # Daily pace. Set the repo Actions VARIABLE GBP_BACKFILL_PER_RUN to
+          # change it (defaults to 2 inside gbp_backfill.py if unset).
+          GBP_BACKFILL_PER_RUN: ${{ vars.GBP_BACKFILL_PER_RUN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.max }}" ]; then
+            ARGS="--max ${{ github.event.inputs.max }}"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          echo "Progress before:"; python gbp_backfill.py --check
+          echo "Running: python gbp_backfill.py $ARGS"
+          python gbp_backfill.py $ARGS
+          echo "Progress after:"; python gbp_backfill.py --check
+
+      - name: Commit updated backfill ledger
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "ProLink GBP Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add gbp_backfill_log.json
+          if git diff --cached --quiet; then
+            echo "No ledger changes to commit."
+          else
+            git commit -m "GBP backfill: $(date -u +%F) batch"
+            for attempt in 1 2 3; do
+              if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+                echo "Pushed on attempt $attempt."; break
+              fi
+              echo "Push attempt $attempt failed; retrying..."; sleep 5
+            done
+          fi
