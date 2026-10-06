@@ -307,12 +307,29 @@ def main():
                 results["area"] = False
 
     # 3) attributes --------------------------------------------------------
+    # The attributes endpoint does NOT support validateOnly, so a dry run
+    # only prints the payloads. Each attribute is its own PATCH so one bad
+    # value can't block the others, and the failing one is named.
     if want("attributes"):
-        results["attributes"] = _patch(
-            f"{base}/attributes?attributeMask={ATTRIBUTE_MASK}", token,
-            {"attributes": ATTRIBUTES},
-            "attributes (requires_appointments=false; appointment/LinkedIn/"
-            "Facebook/Instagram URLs)", apply)[0]
+        if not apply:
+            _log("attributes: dry run -- endpoint has no validateOnly; "
+                 "payloads that WOULD be sent:")
+            for a in ATTRIBUTES:
+                _log(f"    {a['name']}  ->  "
+                     f"{a.get('values') or [u['uri'] for u in a.get('uriValues', [])]}")
+            results["attributes"] = None
+        else:
+            ok_all = True
+            for a in ATTRIBUTES:
+                aid = a["name"].split("/")[-1]
+                mask = urllib.parse.quote(a["name"], safe="")
+                ok, _ = _patch(f"{base}/attributes?attributeMask={mask}", token,
+                               {"name": f"{LOCATION}/attributes",
+                                "attributes": [a]},
+                               f"attribute {aid}", apply=True)
+                ok_all = ok_all and ok
+                time.sleep(0.3)
+            results["attributes"] = ok_all
 
     # 4) more hours --------------------------------------------------------
     if want("hours"):
