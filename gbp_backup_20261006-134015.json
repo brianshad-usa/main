@@ -1,0 +1,986 @@
+{
+  "name": "locations/7712242499324845523",
+  "languageCode": "en",
+  "storeCode": "ProLink Systems",
+  "title": "Pro Link Systems",
+  "phoneNumbers": {
+    "primaryPhone": "(800) 890-6133"
+  },
+  "categories": {
+    "primaryCategory": {
+      "name": "categories/gcid:computer_consultant",
+      "displayName": "Computer consultant",
+      "serviceTypes": [
+        {
+          "serviceTypeId": "job_type_id:it_consulting",
+          "displayName": "It consulting"
+        }
+      ],
+      "moreHoursTypes": [
+        {
+          "hoursTypeId": "ACCESS",
+          "displayName": "Access",
+          "localizedDisplayName": "Access"
+        },
+        {
+          "hoursTypeId": "BREAKFAST",
+          "displayName": "Breakfast",
+          "localizedDisplayName": "Breakfast"
+        },
+        {
+          "hoursTypeId": "BRUNCH",
+          "displayName": "Brunch",
+          "localizedDisplayName": "Brunch"
+        },
+        {
+          "hoursTypeId": "DELIVERY",
+          "displayName": "Delivery",
+          "localizedDisplayName": "Delivery"
+        },
+        {
+          "hoursTypeId": "DINNER",
+          "displayName": "Dinner",
+          "localizedDisplayName": "Dinner"
+        },
+        {
+          "hoursTypeId": "DRIVE_THROUGH",
+          "displayName": "Drive through",
+          "localizedDisplayName": "Drive through"
+        },
+        {
+          "hoursTypeId": "HAPPY_HOUR",
+          "displayName": "Happy hours",
+          "localizedDisplayName": "Happy hours"
+        },
+        {
+          "hoursTypeId": "KITCHEN",
+          "displayName": "Kitchen",
+          "localizedDisplayName": "Kitchen"
+        },
+        {
+          "hoursTypeId": "LUNCH",
+          "displayName": "Lunch",
+          "localizedDisplayName": "Lunch"
+        },
+        {
+          "hoursTypeId": "ONLINE_SERVICE_HOURS",
+          "displayName": "Online service hours",
+          "localizedDisplayName": "Online service hours"
+        },
+        {
+          "hoursTypeId": "PICKUP",
+          "displayName": "Pickup",
+          "localizedDisplayName": "Pickup"
+        },
+        {
+          "hoursTypeId": "TAKEOUT",
+          "displayName": "Takeout",
+          "localizedDisplayName": "Takeout"
+        },
+        {
+          "hoursTypeId": "SENIOR_HOURS",
+          "displayName": "Senior hours",
+          "localizedDisplayName": "Senior hours"
+        }
+      ]
+    },
+    "additionalCategories": [
+      {
+        "name": "categories/gcid:computer_support_and_services",
+        "displayName": "Computer support and services",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:installation",
+            "displayName": "Installation"
+          },
+          {
+            "serviceTypeId": "job_type_id:it_consulting",
+            "displayName": "It consulting"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:data_recovery_service",
+        "displayName": "Data recovery service",
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:computer_repair_service",
+        "displayName": "Computer repair service",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:installation",
+            "displayName": "Installation"
+          },
+          {
+            "serviceTypeId": "job_type_id:it_consulting",
+            "displayName": "It consulting"
+          },
+          {
+            "serviceTypeId": "job_type_id:tablet_repair",
+            "displayName": "Tablet repair"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:computer_security_service",
+        "displayName": "Computer security service",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:it_consulting",
+            "displayName": "It consulting"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:internet_service_provider",
+        "displayName": "Internet service provider",
+        "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:technical_support",
+            "displayName": "Technical support"
+          }
+        ],
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      },
+      {
+        "name": "categories/gcid:computer_networking_center",
+        "displayName": "Computer networking service",
+        "moreHoursTypes": [
+          {
+            "hoursTypeId": "ACCESS",
+            "displayName": "Access",
+            "localizedDisplayName": "Access"
+          },
+          {
+            "hoursTypeId": "BREAKFAST",
+            "displayName": "Breakfast",
+            "localizedDisplayName": "Breakfast"
+          },
+          {
+            "hoursTypeId": "BRUNCH",
+            "displayName": "Brunch",
+            "localizedDisplayName": "Brunch"
+          },
+          {
+            "hoursTypeId": "DELIVERY",
+            "displayName": "Delivery",
+            "localizedDisplayName": "Delivery"
+          },
+          {
+            "hoursTypeId": "DINNER",
+            "displayName": "Dinner",
+            "localizedDisplayName": "Dinner"
+          },
+          {
+            "hoursTypeId": "DRIVE_THROUGH",
+            "displayName": "Drive through",
+            "localizedDisplayName": "Drive through"
+          },
+          {
+            "hoursTypeId": "HAPPY_HOUR",
+            "displayName": "Happy hours",
+            "localizedDisplayName": "Happy hours"
+          },
+          {
+            "hoursTypeId": "KITCHEN",
+            "displayName": "Kitchen",
+            "localizedDisplayName": "Kitchen"
+          },
+          {
+            "hoursTypeId": "LUNCH",
+            "displayName": "Lunch",
+            "localizedDisplayName": "Lunch"
+          },
+          {
+            "hoursTypeId": "ONLINE_SERVICE_HOURS",
+            "displayName": "Online service hours",
+            "localizedDisplayName": "Online service hours"
+          },
+          {
+            "hoursTypeId": "PICKUP",
+            "displayName": "Pickup",
+            "localizedDisplayName": "Pickup"
+          },
+          {
+            "hoursTypeId": "TAKEOUT",
+            "displayName": "Takeout",
+            "localizedDisplayName": "Takeout"
+          },
+          {
+            "hoursTypeId": "SENIOR_HOURS",
+            "displayName": "Senior hours",
+            "localizedDisplayName": "Senior hours"
+          }
+        ]
+      }
+    ]
+  },
+  "websiteUri": "https://prolinksystems.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp_profile",
+  "regularHours": {
+    "periods": [
+      {
+        "openDay": "MONDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "MONDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "TUESDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "TUESDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "WEDNESDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "WEDNESDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "THURSDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "THURSDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "openDay": "FRIDAY",
+        "openTime": {
+          "hours": 9
+        },
+        "closeDay": "FRIDAY",
+        "closeTime": {
+          "hours": 18
+        }
+      }
+    ]
+  },
+  "specialHours": {
+    "specialHourPeriods": [
+      {
+        "startDate": {
+          "year": 2026,
+          "month": 2,
+          "day": 16
+        },
+        "openTime": {
+          "hours": 9
+        },
+        "endDate": {
+          "year": 2026,
+          "month": 2,
+          "day": 16
+        },
+        "closeTime": {
+          "hours": 18
+        }
+      },
+      {
+        "startDate": {
+          "year": 2026,
+          "month": 12,
+          "day": 25
+        },
+        "endDate": {
+          "year": 2026,
+          "month": 12,
+          "day": 25
+        },
+        "closed": true
+      },
+      {
+        "startDate": {
+          "year": 2027,
+          "month": 1,
+          "day": 1
+        },
+        "endDate": {
+          "year": 2027,
+          "month": 1,
+          "day": 1
+        },
+        "closed": true
+      }
+    ]
+  },
+  "serviceArea": {
+    "businessType": "CUSTOMER_LOCATION_ONLY",
+    "places": {
+      "placeInfos": [
+        {
+          "placeName": "Irvine, CA, USA",
+          "placeId": "ChIJ40CRaA7d3IAROZpKYHW1eqc"
+        },
+        {
+          "placeName": "Orange, CA, USA",
+          "placeId": "ChIJr4p1a6nQ3IARvtTvgHJPYiI"
+        },
+        {
+          "placeName": "Oxnard, CA, USA",
+          "placeId": "ChIJn2clE-ZN6IARRbZe-sBJgFk"
+        },
+        {
+          "placeName": "Pomona, CA, USA",
+          "placeId": "ChIJIaGfee8tw4ARM6nKAHCUCVI"
+        },
+        {
+          "placeName": "Ontario, CA, USA",
+          "placeId": "ChIJe2Ld6ts0w4ARkDFY-VrjAwc"
+        },
+        {
+          "placeName": "Palmdale, CA, USA",
+          "placeId": "ChIJtd1w7IRXwoAROuASrS15bGo"
+        },
+        {
+          "placeName": "Pasadena, CA, USA",
+          "placeId": "ChIJUQszONzCwoARSo_RGhZBKwU"
+        },
+        {
+          "placeName": "Torrance, CA, USA",
+          "placeId": "ChIJ096zWNFK3YARHmYKTm7TS60"
+        },
+        {
+          "placeName": "Lancaster, CA, USA",
+          "placeId": "ChIJQYDoaLFawoARBz4Lfc9yxFg"
+        },
+        {
+          "placeName": "Riverside, CA, USA",
+          "placeId": "ChIJu330f9-m3IAR6ApeEwXXofc"
+        },
+        {
+          "placeName": "Santa Ana, CA, USA",
+          "placeId": "ChIJhTCCbJXb3IARvP0eHzqET8c"
+        },
+        {
+          "placeName": "Long Beach, CA, USA",
+          "placeId": "ChIJWdeZQOjKwoARqo8qxPo6AKE"
+        },
+        {
+          "placeName": "Moreno Valley, CA, USA",
+          "placeId": "ChIJm-IZ2wmh3IARLD-boBWy-sM"
+        },
+        {
+          "placeName": "Newport Beach, CA, USA",
+          "placeId": "ChIJ3bO_xLbo3IARvVmLZFSVVPE"
+        },
+        {
+          "placeName": "Orange County, CA, USA",
+          "placeId": "ChIJz_fVVFyS3IARB9bwj2HDpt4"
+        },
+        {
+          "placeName": "Thousand Oaks, CA, USA",
+          "placeId": "ChIJkYgocFYl6IARJi7MRwF6Lo0"
+        },
+        {
+          "placeName": "San Bernardino, CA, USA",
+          "placeId": "ChIJ87j94n1Tw4ARjcKHjHjGZyg"
+        },
+        {
+          "placeName": "Rancho Cucamonga, CA, USA",
+          "placeId": "ChIJkScROPlbw4ARS_Pygq16aq0"
+        },
+        {
+          "placeName": "Los Angeles County, CA, USA",
+          "placeId": "ChIJMc1kAdMq3YARKjm9z9YofYM"
+        },
+        {
+          "placeName": "Woodland Hills, Los Angeles, CA, USA",
+          "placeId": "ChIJVfY28eyewoARiBIkRG5Qhvo"
+        }
+      ]
+    },
+    "regionCode": "US"
+  },
+  "labels": [
+    "ProLink Systems"
+  ],
+  "adWordsLocationExtensions": {
+    "adPhone": "+1 877-470-2739"
+  },
+  "openInfo": {
+    "status": "OPEN",
+    "canReopen": true,
+    "openingDate": {
+      "year": 1999,
+      "month": 3,
+      "day": 15
+    }
+  },
+  "metadata": {
+    "hasGoogleUpdated": true,
+    "canDelete": true,
+    "canModifyServiceList": true,
+    "placeId": "ChIJE0xLnq2ewoARH1TaLVS7CG4",
+    "mapsUri": "https://maps.google.com/maps?cid=7928793114206688287",
+    "newReviewUri": "https://search.google.com/local/writereview?placeid=ChIJE0xLnq2ewoARH1TaLVS7CG4",
+    "canHaveBusinessCalls": true,
+    "hasVoiceOfMerchant": true
+  },
+  "profile": {
+    "description": "Pro Link Systems has delivered managed IT services to Los Angeles businesses since 1999. From Woodland Hills to Downtown LA, we serve as the complete IT department for companies with 5 or more employees — providing 24/7 live help desk support, cybersecurity, cloud infrastructure, disaster recovery, and virtual CIO strategy under one flat-rate agreement. No long-term contracts.\nUnlike break-fix IT companies, we monitor and manage your environment proactively so problems don't start. Real engineers answer your calls around the clock — no ticket queues, no offshore support. We are HIPAA, PCI, CMMC, and SOC 2 compliant and serve clients across healthcare, legal, manufacturing, aerospace, hospitality, and entertainment.\nCall 1-800-890-6133"
+  },
+  "moreHours": [
+    {
+      "hoursTypeId": "ONLINE_SERVICE_HOURS",
+      "periods": [
+        {
+          "openDay": "SUNDAY",
+          "openTime": {},
+          "closeDay": "SUNDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        },
+        {
+          "openDay": "MONDAY",
+          "openTime": {},
+          "closeDay": "MONDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        },
+        {
+          "openDay": "TUESDAY",
+          "openTime": {},
+          "closeDay": "TUESDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        },
+        {
+          "openDay": "WEDNESDAY",
+          "openTime": {},
+          "closeDay": "WEDNESDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        },
+        {
+          "openDay": "THURSDAY",
+          "openTime": {},
+          "closeDay": "THURSDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        },
+        {
+          "openDay": "FRIDAY",
+          "openTime": {},
+          "closeDay": "FRIDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        },
+        {
+          "openDay": "SATURDAY",
+          "openTime": {},
+          "closeDay": "SATURDAY",
+          "closeTime": {
+            "hours": 24
+          }
+        }
+      ]
+    }
+  ],
+  "serviceItems": [
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Managed IT Services",
+          "description": "Fully managed, proactive IT for LA businesses - monitoring, maintenance, and flat-rate support that keeps systems running.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "24/7 IT Help Desk & Support",
+          "description": "US-based engineers answer around the clock - no ticket queues, no offshore support.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cybersecurity Services",
+          "description": "Layered protection - threat detection, response, and security assessments to cut breach and ransomware risk.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network Security",
+          "description": "Firewalls, segmentation, and monitoring that keep your business network locked down.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Endpoint Security",
+          "description": "Managed EDR/antivirus protecting laptops, desktops, and servers from modern threats.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Email Security",
+          "description": "Anti-phishing, spam, and impersonation defense for Microsoft 365 and business email.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Identity & Access Management",
+          "description": "MFA, SSO, and least-privilege access so only the right people reach your systems.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Cloud Services & Migration",
+          "description": "Plan and run Azure, AWS, and hybrid cloud moves with ongoing cloud management.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Microsoft 365 Support",
+          "description": "Setup, migration, licensing, and day-to-day M365 administration.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Backup & Disaster Recovery",
+          "description": "Automated backups and tested recovery plans so you're back up fast after any outage.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Virtual CIO (vCIO) & IT Strategy",
+          "description": "Budgeting, roadmaps, and technology planning aligned to your business goals.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Governance, Risk & Compliance",
+          "description": "HIPAA, SOC 2, CMMC, and PCI readiness, documentation, and audit support.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Security Awareness Training",
+          "description": "Phishing simulations and staff training that make employees your first line of defense.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "Network Support & Cabling",
+          "description": "Design, installation, and support for wired and wireless business networks.",
+          "languageCode": "en"
+        }
+      }
+    },
+    {
+      "freeFormServiceItem": {
+        "category": "categories/gcid:computer_support_and_services",
+        "label": {
+          "displayName": "AI Automation Services",
+          "description": "Practical AI and workflow automation that cut manual work and boost productivity.",
+          "languageCode": "en"
+        }
+      }
+    }
+  ]
+}
