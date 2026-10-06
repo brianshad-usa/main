@@ -1,0 +1,170 @@
+{
+  "post": "Someone in marketing tries an AI writing tool on their own corporate card. It works. The team keeps it.\n\nNobody did anything wrong. But that tool was never onboarded, never reviewed, and renews quietly for as long as the card stays valid. At a 60-person company there are usually a dozen of these.\n\nThat is how the number moves. Not one bad decision — a hundred small ones nobody revisits. A test environment left running. Storage still billing at the tier chosen years ago. Licences for people who left in spring.\n\nWorth noticing: that list is also a security list. An account nobody cancelled can still sign in, and whatever was pasted into that tool is still sitting in it.\n\nThe fix is not a cheaper provider. It is a renewal calendar, an expiry date on anything you create, and one person who owns the total.",
+  "headline": "Cloud didn't get expensive. It got unowned.",
+  "cta_label": "Start a conversation",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-10-06-s110-card.png",
+  "image_file_jpg": "2026-10-06-s110-card.jpg",
+  "theme": "cloud_cost",
+  "idea_id": "S110",
+  "core_idea": "Cloud and software spend drifts upward because elastic buying removed the approval gate and nothing replaced it — and the correction is not one discipline but two, because the two kinds of spend have two different gates. Infrastructure can be governed at creation with an expiry date and a named owner. Per-seat software cannot: its provisioning console is a corporate card held by a department head, so its gate is the renewal calendar and the offboarding process. What makes this a 2026 problem is that procurement triggers on new vendors, not new capabilities — so AI arriving as an add-on to suites already under contract changes what the organization's data can be used for without ever entering a review. The same unreviewed inventory is the unpatched and un-deprovisioned one, which makes the cost review and the security review one exercise read in two currencies.",
+  "channels": {
+    "linkedin": "Nobody approves a cloud bill. It arrives.\n\nA server used to mean a capital request, a signature, and a depreciation schedule. That friction was doing governance work nobody had named. Elastic buying removed it and left an API call and a card on file.\n\nMost cost reviews then start in the wrong place. In a 20 to 500 seat business the larger recurring number is usually not infrastructure. It is per-seat software, and per-seat software has no provisioning console to tag — the console is a corporate card held by a department head.\n\nWhat makes this a 2026 problem rather than a 2019 one: procurement triggers on new vendors, not new capabilities. AI now ships as an add-on to suites already under contract, so a material change in what your data can be used for arrives as a line item on an invoice you already pay, with no onboarding and no diligence, because no new vendor appeared to trigger either.\n\nAnalysis, not prediction: most mid-market overspend is a governance gap in a technical costume. Tooling produces visibility. Visibility without decommissioning authority produces reports nobody acts on.\n\nThe two corrections are not the same work.\n\nInfrastructure: move the gate to creation. An expiry date and a named owner on anything spun up, so the default stops being forever.\n\nSoftware: the gate is the renewal calendar and the offboarding checklist. A seat that was never cancelled is a licence you fund and an identity that can still sign in.\n\nFinance holds the figure. IT holds the switch.\n\nSpend with no owner does not stay flat. That is design, and design is the part you can change.",
+    "facebook": "Someone in marketing tries an AI writing tool on their own corporate card. It works. The team keeps it.\n\nNobody did anything wrong. But that tool was never onboarded, never reviewed, and renews quietly for as long as the card stays valid. At a 60-person company there are usually a dozen of these.\n\nThat is how the number moves. Not one bad decision — a hundred small ones nobody revisits. A test environment left running. Storage still billing at the tier chosen years ago. Licences for people who left in spring.\n\nWorth noticing: that list is also a security list. An account nobody cancelled can still sign in, and whatever was pasted into that tool is still sitting in it.\n\nThe fix is not a cheaper provider. It is a renewal calendar, an expiry date on anything you create, and one person who owns the total.",
+    "gbp": "If your cloud and software bill only gets attention when it jumps, it was drifting long before that.\n\nThree practical steps for a Los Angeles business running 20 to 500 seats. Put an expiry date and a named owner on anything spun up, so nothing defaults to running forever. Pull every recurring charge on company cards, not only the vendors sitting in the accounting system — that is where departmental AI tools live. Then make offboarding remove the licence and the account, not only the mailbox.\n\nTime the review to your monthly close rather than to the invoice that finally looks alarming.\n\nServing Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Cloud didn't get expensive. It got unowned.\n\nBuying a server required a signature. Buying a seat requires a browser tab and a card nobody audits. The approval gate wasn't moved. It was deleted, and nothing was built to stand where it stood.",
+      "Procurement reviews new vendors. It does not review new capabilities.\n\nSo when AI ships as an add-on to a suite you already license, a change in what your data can be used for arrives as a line item. No onboarding, no diligence, nobody assigned to notice.",
+      "Finance and security are reading the same list in two currencies.\n\nThe subscription nobody cancelled is a charge and a working login. The environment nobody shut down is a cost line and an unpatched box. The cheapest security work of the quarter is already sitting on an invoice."
+    ],
+    "instagram_caption": "Most cloud overspend is not an engineering failure. It is an approval gate that was removed and never replaced.\n\nCapital purchases carried friction — a request, a signature, a schedule — and that friction was quietly enforcing judgment. Elastic buying deleted the step and left the judgment unassigned. The gap widened in 2026 for a specific reason: procurement triggers on new vendors, and AI now arrives as an add-on to software already under contract.\n\nTwo corrections, not one. Infrastructure gets an expiry date at creation. Per-seat software gets a renewal calendar and an offboarding process that removes the identity, not only the mailbox.\n\n#CloudCost #ShadowAI #ITLeadership"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "split",
+    "format": "single_image",
+    "ground": "split",
+    "layout": "split",
+    "register": "insight",
+    "channels": {
+      "linkedin": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight"
+      },
+      "facebook": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight"
+      },
+      "gbp": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight"
+      },
+      "instagram": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight"
+      },
+      "x": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Capital hardware purchases carried procurement friction (request, signature, depreciation schedule) that elastic cloud and SaaS buying removed.",
+    "ANALYSIS: Elastic infrastructure and per-seat software have no built-in mechanism to shrink, so unreviewed spend trends upward over time.",
+    "ANALYSIS: Common drift patterns include test environments outliving projects, licences outliving departed employees, and storage never being re-tiered. Stated as familiar patterns, not as measured incidence.",
+    "ANALYSIS: In businesses of roughly 20–500 seats, per-seat software is commonly the larger recurring line relative to infrastructure. Stated as 'usually' — a qualified generalization, no figure cited.",
+    "ANALYSIS: Per-seat software is frequently purchased on departmental cards, meaning no technical provisioning control exists to tag it; the practical gate is the renewal calendar and the offboarding process.",
+    "ANALYSIS: Procurement processes are typically triggered by onboarding a new vendor rather than by a new capability appearing inside an existing contract. Stated generically about procurement practice, no named company, product, price, or adoption figure.",
+    "ANALYSIS: AI capability is increasingly sold as a per-seat add-on to software organizations already license. No vendor, product name, SKU, price, or market figure appears.",
+    "ANALYSIS: Resources never decommissioned are unlikely to be patched, and uncancelled software seats generally remain active identities with credentials attached. Presented as reasoning, not as a research finding.",
+    "OPINION: Most mid-market cloud and software overspend is a governance gap rather than an engineering failure.",
+    "OPINION: Cost tooling provides visibility but does not correct spend without someone holding decommissioning authority.",
+    "OPINION: Setting an expiry date and owner at creation is a more reliable correction for infrastructure than retrospective review.",
+    "OPINION: The accountable owner should sit with budget authority while IT executes decommissioning.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used in GBP only, rendered as 'Serving Los Angeles businesses from Woodland Hills since 1999.'",
+    "NOTE: No statistic of any kind appears in this package. No brief-supplied primary source was available, so every claim is argued without a number, per truth discipline.",
+    "NOTE: Slide 3's visual was changed from an ascending step chart to an empty-column typographic table, because an unlabelled rising chart implies data this package does not have.",
+    "NOTE: No client named or implied. No certification, partnership, compliance status, or productized service claimed. No competitor named.",
+    "NOTE: Cross-channel copy rewritten so no sentence appears in more than one channel; LinkedIn, Facebook, GBP, X and Instagram now carry distinct expressions of the same idea."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA overreaches. \"Book a review\" with BOOK_APPOINTMENT implies ProLink sells a productized cloud-spend assessment, which is a capability claim that does not appear in verified_facts. Softened to a non-productized invitation. Separately, the package carried no distinctly ProLink angle — the argument was pure FinOps and could have run on any cost-optimization vendor's blog."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel skipped the doctrine's \"why it matters\" beat — nothing translated drift into executive consequence, and nothing gave the story a turn the reader didn't already see coming by slide three. Added a consequence/2026 slide and a genuine insight slide so the sequence actually earns six swipes instead of restating the hook three ways."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No visual system was specified at all, which for this brand is a bigger gap than any copy issue. Slide 4's body was also the longest block in the deck and ended with the floating label \"Analysis, not prediction\" — unreadable as typography. Added an explicit visual direction and rebalanced body lengths so every slide holds one idea at display size."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The most serious problem: this was a 2019 argument. Shadow IT, orphaned test environments and zombie licenses have been MSP blog material for a decade. Nothing in the draft could not have been written before AI existed. Added the actual 2026 mechanism — AI capability arriving as a per-seat add-on to software already under contract, and departmental AI pilots bought on expense cards — which changes the shape of the problem rather than decorating it."
+    },
+    {
+      "role": "CIO",
+      "finding": "\"A named owner with authority to decommission\" is tidy and operationally naive. Nobody turns off a resource they cannot prove is unused; decommission authority without provenance creates an outage, not a saving. The real structural fix is restoring the gate at creation — an expiry date and an owner tag at provisioning time — so the default stops being forever. Elevated that above the owner recommendation."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treated this as purely financial and missed the obvious adjacency: the un-decommissioned environment is the unpatched environment, and the uncancelled seat is a standing identity with credentials behind it. That omission is why the piece read like a finance post from an IT company. Added the security reading as the insight turn across every channel."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "AI was absent, and the risk in fixing that is manufacturing urgency around AI for its own sake, which the standards forbid. Kept it to one proportionate beat where it is genuinely load-bearing: shadow AI and unmanaged spend surface as the same event on the same card statement. No vendor pricing, no product capability claims, no invented adoption figures."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The phrase \"what's new, what's unused, what's oversized\" appeared verbatim in all five channels, which violates the one-idea-many-expressions rule in spirit. Also, the draft never answered the executive's first question: who should own this, finance or IT? Answered it directly — finance holds the figure, IT holds the switch — and varied the review language per channel."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread didn't justify being a thread; post two was a restatement of post one's conclusion. Rebuilt post two around the security turn so progression adds information. Also replaced the weak #CloudCost tag and removed the geo tag from Instagram, where it dilutes rather than targets."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP duplicated two LinkedIn sentences nearly word for word and ran past the 700-character ceiling with a soft sales line appended. Rewritten as standalone practical advisory inside the range, with F012 used as a credential rather than a pitch."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three issues. \"Cloud isn't more expensive than what it replaced\" is an unsourced comparative cost claim stated as fact — removed. The security paragraph opened two consecutive sentences with \"The\". And \"It looks technical. It's structural.\" sits uncomfortably close to the banned \"it's not just X, it's Y\" cadence — rewritten. Verified: no banned phrasing, no emoji, no exclamation marks, no numbers outside verified_facts, LinkedIn now ~1,560 characters, Facebook ~650, GBP ~580, both X posts under 280."
+    },
+    {
+      "role": "Copy Editor (co-signed by Brand Director)",
+      "finding": "Channel doctrine violation that survived round one: three sentences appear near-verbatim across channels. 'An environment nobody decommissioned is one nobody patches' and 'A seat nobody cancelled is a live identity with credentials behind it' run identically in X post 2 and Instagram slide 5, and 'drifts upward by design' closes LinkedIn, X and the Instagram takeaway. Also a hard rule break in the LinkedIn draft's rhythm risk — the package reads as one text redistributed, not five expressions of one idea. Each channel needs its own sentences, not its own line breaks."
+    },
+    {
+      "role": "CIO (co-signed by Executive Audience Representative)",
+      "finding": "The prescription is mismatched to the audience's actual spend mix. For a 20–500 seat LA business, the larger recurring number is usually per-seat SaaS and Microsoft 365 licensing, not IaaS. 'Set an expiry date and an owner tag at provisioning' is an infrastructure control; a marketing director's AI writing subscription has no provisioning console to tag — the console is a corporate card. The package gives one correction where two distinct disciplines are required, and the more valuable one (renewal calendar plus offboarding that removes identity, not just mailbox) is currently buried in a checklist line."
+    },
+    {
+      "role": "Art Director (co-signed by Senior Technology Editor)",
+      "finding": "Slide 3's 'thin ascending step chart with no axis labels and no numbers' is a data visualization of data we do not have. Even unlabelled, a rising chart reads as evidence and quietly imports the authority of a statistic the truth-discipline rules forbid us from citing. It is the one element in the deck that a sceptical reader could call fabricated. Replace it with a typographic device that argues the same point honestly."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

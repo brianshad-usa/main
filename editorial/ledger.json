@@ -1861,6 +1861,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-06",
+      "idea_id": "S110",
+      "theme": "cloud_cost",
+      "format": "economics",
+      "title": "Cloud didn't get expensive, it got un-managed",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "x": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          }
+        }
+      }
     }
   ]
 }
