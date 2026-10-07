@@ -1,5 +1,5 @@
 {
-  "_pulled_at": "2026-10-06T20:07:14.565404Z",
+  "_pulled_at": "2026-10-07T19:31:57.758477Z",
   "_account_id": "106570312922328987685",
   "_location_id": "7712242499324845523",
   "location": {
@@ -12,9 +12,13 @@
     },
     "categories": {
       "primaryCategory": {
-        "name": "categories/gcid:computer_consultant",
-        "displayName": "Computer consultant",
+        "name": "categories/gcid:computer_support_and_services",
+        "displayName": "Computer support and services",
         "serviceTypes": [
+          {
+            "serviceTypeId": "job_type_id:installation",
+            "displayName": "Installation"
+          },
           {
             "serviceTypeId": "job_type_id:it_consulting",
             "displayName": "It consulting"
@@ -90,172 +94,12 @@
       },
       "additionalCategories": [
         {
-          "name": "categories/gcid:computer_support_and_services",
-          "displayName": "Computer support and services",
+          "name": "categories/gcid:computer_consultant",
+          "displayName": "Computer consultant",
           "serviceTypes": [
-            {
-              "serviceTypeId": "job_type_id:installation",
-              "displayName": "Installation"
-            },
             {
               "serviceTypeId": "job_type_id:it_consulting",
               "displayName": "It consulting"
-            }
-          ],
-          "moreHoursTypes": [
-            {
-              "hoursTypeId": "ACCESS",
-              "displayName": "Access",
-              "localizedDisplayName": "Access"
-            },
-            {
-              "hoursTypeId": "BREAKFAST",
-              "displayName": "Breakfast",
-              "localizedDisplayName": "Breakfast"
-            },
-            {
-              "hoursTypeId": "BRUNCH",
-              "displayName": "Brunch",
-              "localizedDisplayName": "Brunch"
-            },
-            {
-              "hoursTypeId": "DELIVERY",
-              "displayName": "Delivery",
-              "localizedDisplayName": "Delivery"
-            },
-            {
-              "hoursTypeId": "DINNER",
-              "displayName": "Dinner",
-              "localizedDisplayName": "Dinner"
-            },
-            {
-              "hoursTypeId": "DRIVE_THROUGH",
-              "displayName": "Drive through",
-              "localizedDisplayName": "Drive through"
-            },
-            {
-              "hoursTypeId": "HAPPY_HOUR",
-              "displayName": "Happy hours",
-              "localizedDisplayName": "Happy hours"
-            },
-            {
-              "hoursTypeId": "KITCHEN",
-              "displayName": "Kitchen",
-              "localizedDisplayName": "Kitchen"
-            },
-            {
-              "hoursTypeId": "LUNCH",
-              "displayName": "Lunch",
-              "localizedDisplayName": "Lunch"
-            },
-            {
-              "hoursTypeId": "ONLINE_SERVICE_HOURS",
-              "displayName": "Online service hours",
-              "localizedDisplayName": "Online service hours"
-            },
-            {
-              "hoursTypeId": "PICKUP",
-              "displayName": "Pickup",
-              "localizedDisplayName": "Pickup"
-            },
-            {
-              "hoursTypeId": "TAKEOUT",
-              "displayName": "Takeout",
-              "localizedDisplayName": "Takeout"
-            },
-            {
-              "hoursTypeId": "SENIOR_HOURS",
-              "displayName": "Senior hours",
-              "localizedDisplayName": "Senior hours"
-            }
-          ]
-        },
-        {
-          "name": "categories/gcid:data_recovery_service",
-          "displayName": "Data recovery service",
-          "moreHoursTypes": [
-            {
-              "hoursTypeId": "ACCESS",
-              "displayName": "Access",
-              "localizedDisplayName": "Access"
-            },
-            {
-              "hoursTypeId": "BREAKFAST",
-              "displayName": "Breakfast",
-              "localizedDisplayName": "Breakfast"
-            },
-            {
-              "hoursTypeId": "BRUNCH",
-              "displayName": "Brunch",
-              "localizedDisplayName": "Brunch"
-            },
-            {
-              "hoursTypeId": "DELIVERY",
-              "displayName": "Delivery",
-              "localizedDisplayName": "Delivery"
-            },
-            {
-              "hoursTypeId": "DINNER",
-              "displayName": "Dinner",
-              "localizedDisplayName": "Dinner"
-            },
-            {
-              "hoursTypeId": "DRIVE_THROUGH",
-              "displayName": "Drive through",
-              "localizedDisplayName": "Drive through"
-            },
-            {
-              "hoursTypeId": "HAPPY_HOUR",
-              "displayName": "Happy hours",
-              "localizedDisplayName": "Happy hours"
-            },
-            {
-              "hoursTypeId": "KITCHEN",
-              "displayName": "Kitchen",
-              "localizedDisplayName": "Kitchen"
-            },
-            {
-              "hoursTypeId": "LUNCH",
-              "displayName": "Lunch",
-              "localizedDisplayName": "Lunch"
-            },
-            {
-              "hoursTypeId": "ONLINE_SERVICE_HOURS",
-              "displayName": "Online service hours",
-              "localizedDisplayName": "Online service hours"
-            },
-            {
-              "hoursTypeId": "PICKUP",
-              "displayName": "Pickup",
-              "localizedDisplayName": "Pickup"
-            },
-            {
-              "hoursTypeId": "TAKEOUT",
-              "displayName": "Takeout",
-              "localizedDisplayName": "Takeout"
-            },
-            {
-              "hoursTypeId": "SENIOR_HOURS",
-              "displayName": "Senior hours",
-              "localizedDisplayName": "Senior hours"
-            }
-          ]
-        },
-        {
-          "name": "categories/gcid:computer_repair_service",
-          "displayName": "Computer repair service",
-          "serviceTypes": [
-            {
-              "serviceTypeId": "job_type_id:installation",
-              "displayName": "Installation"
-            },
-            {
-              "serviceTypeId": "job_type_id:it_consulting",
-              "displayName": "It consulting"
-            },
-            {
-              "serviceTypeId": "job_type_id:tablet_repair",
-              "displayName": "Tablet repair"
             }
           ],
           "moreHoursTypes": [
@@ -404,83 +248,6 @@
           ]
         },
         {
-          "name": "categories/gcid:internet_service_provider",
-          "displayName": "Internet service provider",
-          "serviceTypes": [
-            {
-              "serviceTypeId": "job_type_id:technical_support",
-              "displayName": "Technical support"
-            }
-          ],
-          "moreHoursTypes": [
-            {
-              "hoursTypeId": "ACCESS",
-              "displayName": "Access",
-              "localizedDisplayName": "Access"
-            },
-            {
-              "hoursTypeId": "BREAKFAST",
-              "displayName": "Breakfast",
-              "localizedDisplayName": "Breakfast"
-            },
-            {
-              "hoursTypeId": "BRUNCH",
-              "displayName": "Brunch",
-              "localizedDisplayName": "Brunch"
-            },
-            {
-              "hoursTypeId": "DELIVERY",
-              "displayName": "Delivery",
-              "localizedDisplayName": "Delivery"
-            },
-            {
-              "hoursTypeId": "DINNER",
-              "displayName": "Dinner",
-              "localizedDisplayName": "Dinner"
-            },
-            {
-              "hoursTypeId": "DRIVE_THROUGH",
-              "displayName": "Drive through",
-              "localizedDisplayName": "Drive through"
-            },
-            {
-              "hoursTypeId": "HAPPY_HOUR",
-              "displayName": "Happy hours",
-              "localizedDisplayName": "Happy hours"
-            },
-            {
-              "hoursTypeId": "KITCHEN",
-              "displayName": "Kitchen",
-              "localizedDisplayName": "Kitchen"
-            },
-            {
-              "hoursTypeId": "LUNCH",
-              "displayName": "Lunch",
-              "localizedDisplayName": "Lunch"
-            },
-            {
-              "hoursTypeId": "ONLINE_SERVICE_HOURS",
-              "displayName": "Online service hours",
-              "localizedDisplayName": "Online service hours"
-            },
-            {
-              "hoursTypeId": "PICKUP",
-              "displayName": "Pickup",
-              "localizedDisplayName": "Pickup"
-            },
-            {
-              "hoursTypeId": "TAKEOUT",
-              "displayName": "Takeout",
-              "localizedDisplayName": "Takeout"
-            },
-            {
-              "hoursTypeId": "SENIOR_HOURS",
-              "displayName": "Senior hours",
-              "localizedDisplayName": "Senior hours"
-            }
-          ]
-        },
-        {
           "name": "categories/gcid:computer_networking_center",
           "displayName": "Computer networking service",
           "moreHoursTypes": [
@@ -553,7 +320,7 @@
         }
       ]
     },
-    "websiteUri": "https://prolinksystems.com/",
+    "websiteUri": "https://prolinksystems.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp_profile",
     "regularHours": {
       "periods": [
         {
@@ -772,698 +539,217 @@
     "profile": {
       "description": "Pro Link Systems has delivered managed IT services to Los Angeles businesses since 1999. From Woodland Hills to Downtown LA, we serve as the complete IT department for companies with 5 or more employees — providing 24/7 live help desk support, cybersecurity, cloud infrastructure, disaster recovery, and virtual CIO strategy under one flat-rate agreement. No long-term contracts.\nUnlike break-fix IT companies, we monitor and manage your environment proactively so problems don't start. Real engineers answer your calls around the clock — no ticket queues, no offshore support. We are HIPAA, PCI, CMMC, and SOC 2 compliant and serve clients across healthcare, legal, manufacturing, aerospace, hospitality, and entertainment.\nCall 1-800-890-6133"
     },
+    "moreHours": [
+      {
+        "hoursTypeId": "ONLINE_SERVICE_HOURS",
+        "periods": [
+          {
+            "openDay": "SUNDAY",
+            "openTime": {},
+            "closeDay": "SUNDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          },
+          {
+            "openDay": "MONDAY",
+            "openTime": {},
+            "closeDay": "MONDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          },
+          {
+            "openDay": "TUESDAY",
+            "openTime": {},
+            "closeDay": "TUESDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          },
+          {
+            "openDay": "WEDNESDAY",
+            "openTime": {},
+            "closeDay": "WEDNESDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          },
+          {
+            "openDay": "THURSDAY",
+            "openTime": {},
+            "closeDay": "THURSDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          },
+          {
+            "openDay": "FRIDAY",
+            "openTime": {},
+            "closeDay": "FRIDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          },
+          {
+            "openDay": "SATURDAY",
+            "openTime": {},
+            "closeDay": "SATURDAY",
+            "closeTime": {
+              "hours": 24
+            }
+          }
+        ]
+      }
+    ],
     "serviceItems": [
       {
-        "structuredServiceItem": {
-          "serviceTypeId": "job_type_id:it_consulting",
-          "description": "With IT consulting services, we help clients assess different technology strategies and align their business process with our advice. These advisory measures can be anything from strategic planning for new projects or systems implementation down to operational support."
-        }
-      },
-      {
         "freeFormServiceItem": {
           "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Amazon Web Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Backup & Disaster Recovery"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cloud Solutions"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Document Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Erp System"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "It Infrastructure"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "It Infrastructure Supporting"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "It Outsourcing Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Managed Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Security Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Server Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Web Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "24/7 Help Desk Support"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Application Installations"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Application Migration"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Artificial Intelligence"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Azure Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Backup Plan"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cloud And Infrastructure"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cloud Computing"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cloud Migration Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Customized Cloud Solutions"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cybersecurity Solutions"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Data Backup Solutions"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Data Migration"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Data Protection Service"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Data Restoration"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Dedicated Help Desk"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Disaster Recovery And Backup Solutions"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Disaster Recovery And Data Backup"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Disaster Recovery Plan"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Disaster Recovery Testing"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Facilities Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Fully Managed Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Helpdesk Support Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Home Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Hybrid Cloud"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Intelligent Automation"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "It Security"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Machine Learning"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Maintenance Windows"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Managed Cloud"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Microsoft 365 Solutions"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Natural Language Processing"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Network And Server Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Network Installations"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Network Migration"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Network Monitoring"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Ongoing Support"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Patch Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Personalized Support"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Pos Systems"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Proactive Maintenance"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Remote Monitoring"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Remote Work"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Replacement Parts"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Support And Maintenance Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "User Account Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Vpn Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Workplace Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Managed IT Services"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cybersecurity"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Cloud Infrastructure"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "24/7 Help Desk"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Disaster Recovery"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_support_and_services",
-          "label": {
-            "displayName": "Network Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_security_service",
-          "label": {
-            "displayName": "IT Support Services",
-            "description": "IT support is an important part of any computer system, and Prolink offers remote assistance to solve your problems quickly. With this service you can contact our chat or email interface in order to get the problem solved within minutes!"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "AWS Cloud Environment Setup and Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "Application and Solutions Development"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "Azure Cloud Environment Setup and Management",
-            "description": "Microsoft's cloud computing service, Azure is a public platform that provides over 100+ services such as analytics and more. The core of this service includes: IaaS (Infrastructure as a Service), PaaS/ SaaS for your software needs; there are many options available with endless possibilities!"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "Cloud Network Management",
-            "description": "Cloud networking is an innovative approach to managing IT infrastructure. Cloud providers offer a range of services, from hosting data center resources in their own systems or by partnering with other companies on demand--to providing security for networks that are shared across multiple locations."
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "Desktop Administartion"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "Google Cloud Environment Setup and Management"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
-          "label": {
-            "displayName": "Hybrid Cloud Network Support"
-          }
-        }
-      },
-      {
-        "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
           "label": {
             "displayName": "Managed IT Services",
-            "description": "With managed IT services, organizations can benefit from reduced in-house workload or gaps left by existing roles and skills. The remote Hybrid IaaS model is an excellent choice for companies who need 24/7 coverage without having to hire additional staff members on top of what they already have."
+            "description": "Fully managed, proactive IT for LA businesses - monitoring, maintenance, and flat-rate support that keeps systems running.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Network Migration and Relocation"
+            "displayName": "24/7 IT Help Desk & Support",
+            "description": "US-based engineers answer around the clock - no ticket queues, no offshore support.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Network Security Assessment"
+            "displayName": "Cybersecurity Services",
+            "description": "Layered protection - threat detection, response, and security assessments to cut breach and ransomware risk.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Network Setup and Configuration",
-            "description": "Network configuration is the process of assigning network settings, policies and flows. In a virtual environment this can be done easily because physical devices are replaced by software to make changes that require less manual labor."
+            "displayName": "Network Security",
+            "description": "Firewalls, segmentation, and monitoring that keep your business network locked down.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Network Troubleshooting",
-            "description": "Network troubleshooting is the combined measures and processes used to identify, diagnose and solve problems within a computer network. It's an imperfect science that explores every corner of your system in order find what might be going wrong - or how you can make it better!"
+            "displayName": "Endpoint Security",
+            "description": "Managed EDR/antivirus protecting laptops, desktops, and servers from modern threats.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Remote Desktop Support",
-            "description": "Remote desktop support is a service that allows you to access your computer or device from anywhere with an internet connection. You can use it for things like troubleshooting software, installing new applications on the remote machine and even backing up important files."
+            "displayName": "Email Security",
+            "description": "Anti-phishing, spam, and impersonation defense for Microsoft 365 and business email.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Systems Administration"
+            "displayName": "Identity & Access Management",
+            "description": "MFA, SSO, and least-privilege access so only the right people reach your systems.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "VPN Tunnel Configuration and Support"
+            "displayName": "Cloud Services & Migration",
+            "description": "Plan and run Azure, AWS, and hybrid cloud moves with ongoing cloud management.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Virtual Apps and Infrastructure"
+            "displayName": "Microsoft 365 Support",
+            "description": "Setup, migration, licensing, and day-to-day M365 administration.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "Virtual Desktops"
+            "displayName": "Backup & Disaster Recovery",
+            "description": "Automated backups and tested recovery plans so you're back up fast after any outage.",
+            "languageCode": "en"
           }
         }
       },
       {
         "freeFormServiceItem": {
-          "category": "categories/gcid:computer_networking_center",
+          "category": "categories/gcid:computer_support_and_services",
           "label": {
-            "displayName": "VoIP Service Provider",
-            "description": "Voice over IP (VoIP), which is the technology that allows you to make a call from your computer, VoIP phone or any other data-driven device."
+            "displayName": "Virtual CIO (vCIO) & IT Strategy",
+            "description": "Budgeting, roadmaps, and technology planning aligned to your business goals.",
+            "languageCode": "en"
+          }
+        }
+      },
+      {
+        "freeFormServiceItem": {
+          "category": "categories/gcid:computer_support_and_services",
+          "label": {
+            "displayName": "Governance, Risk & Compliance",
+            "description": "HIPAA, SOC 2, CMMC, and PCI readiness, documentation, and audit support.",
+            "languageCode": "en"
+          }
+        }
+      },
+      {
+        "freeFormServiceItem": {
+          "category": "categories/gcid:computer_support_and_services",
+          "label": {
+            "displayName": "Security Awareness Training",
+            "description": "Phishing simulations and staff training that make employees your first line of defense.",
+            "languageCode": "en"
+          }
+        }
+      },
+      {
+        "freeFormServiceItem": {
+          "category": "categories/gcid:computer_support_and_services",
+          "label": {
+            "displayName": "Network Support & Cabling",
+            "description": "Design, installation, and support for wired and wireless business networks.",
+            "languageCode": "en"
+          }
+        }
+      },
+      {
+        "freeFormServiceItem": {
+          "category": "categories/gcid:computer_support_and_services",
+          "label": {
+            "displayName": "AI Automation Services",
+            "description": "Practical AI and workflow automation that cut manual work and boost productivity.",
+            "languageCode": "en"
           }
         }
       }
@@ -1476,7 +762,7 @@
         "name": "attributes/requires_appointments",
         "valueType": "BOOL",
         "values": [
-          true
+          false
         ]
       },
       {
@@ -1498,7 +784,7 @@
         "valueType": "URL",
         "uriValues": [
           {
-            "uri": "https://www.facebook.com/prolinksys/"
+            "uri": "https://www.facebook.com/prolinksys"
           }
         ]
       },
@@ -1516,7 +802,7 @@
         "valueType": "URL",
         "uriValues": [
           {
-            "uri": "https://www.instagram.com/prolinksystems/"
+            "uri": "https://www.instagram.com/prolinksystems"
           }
         ]
       },
@@ -1525,7 +811,7 @@
         "valueType": "URL",
         "uriValues": [
           {
-            "uri": "https://www.prolinksystems.com/#contact"
+            "uri": "https://prolinksystems.com/contact.html"
           }
         ]
       },
@@ -1977,6 +1263,27 @@
   "localPosts": {
     "localPosts": [
       {
+        "name": "accounts/106570312922328987685/locations/7712242499324845523/localPosts/4816638811763229957",
+        "languageCode": "en",
+        "summary": "If your cloud and software bill only gets attention when it jumps, it was drifting long before that.\n\nThree practical steps for a Los Angeles business running 20 to 500 seats. Put an expiry date and a named owner on anything spun up, so nothing defaults to running forever. Pull every recurring charge on company cards, not only the vendors sitting in the accounting system — that is where departmental AI tools live. Then make offboarding remove the licence and the account, not only the mailbox.\n\nTime the review to your monthly close rather than to the invoice that finally looks alarming.\n\nServing Los Angeles businesses from Woodland Hills since 1999.",
+        "callToAction": {
+          "actionType": "LEARN_MORE",
+          "url": "https://prolinksystems.com/contact"
+        },
+        "state": "LIVE",
+        "updateTime": "2026-10-06T21:39:46.322124Z",
+        "createTime": "2026-10-06T21:39:46.322124Z",
+        "searchUrl": "https://local.google.com/place?id=7928793114206688287&use=posts&lpsid=CIHM0ogKEKCumtS7wO2CEw",
+        "media": [
+          {
+            "name": "accounts/106570312922328987685/locations/7712242499324845523/media/localPosts/AF1QipPYsY7N2EOkugvPR4WcFHrmZx7Y0xLDkAWk85pm",
+            "mediaFormat": "PHOTO",
+            "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipPYsY7N2EOkugvPR4WcFHrmZx7Y0xLDkAWk85pm"
+          }
+        ],
+        "topicType": "STANDARD"
+      },
+      {
         "name": "accounts/106570312922328987685/locations/7712242499324845523/localPosts/4933519367113429350",
         "languageCode": "en",
         "summary": "Business Process Automation for LA Companies\n\nDiscover how business process automation helps Los Angeles companies reduce costs, improve efficiency, and stay competitive with managed IT services.\n\nRead the full article →",
@@ -2160,26 +1467,6 @@
             "name": "accounts/106570312922328987685/locations/7712242499324845523/media/localPosts/AF1QipNWM01g_rFqqWU8KRGrbogYW6rLPPBDHIYYung5",
             "mediaFormat": "PHOTO",
             "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipNWM01g_rFqqWU8KRGrbogYW6rLPPBDHIYYung5"
-          }
-        ],
-        "topicType": "STANDARD"
-      },
-      {
-        "name": "accounts/106570312922328987685/locations/7712242499324845523/localPosts/1301962530179600029",
-        "languageCode": "en",
-        "summary": "When IT issues hit, having a local team matters.\n\nProLink Systems has supported LA businesses since 1999. From our Woodland Hills team, we deliver responsive IT support, security, and business continuity solutions.\n\nLocal IT. Right in your backyard.\n\n#LosAngelesIT #ManagedIT ",
-        "callToAction": {
-          "actionType": "CALL"
-        },
-        "state": "LIVE",
-        "updateTime": "2026-08-07T18:37:40.865273Z",
-        "createTime": "2026-08-07T18:37:40.865273Z",
-        "searchUrl": "https://local.google.com/place?id=7928793114206688287&use=posts&lpsid=CIHM0ogKENWfhcXNtsTFkAE",
-        "media": [
-          {
-            "name": "accounts/106570312922328987685/locations/7712242499324845523/media/localPosts/AF1QipM0x4f1Lx_Dt6FR0LBQG5WFPtP4gGqh8haYCBHd",
-            "mediaFormat": "PHOTO",
-            "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipM0x4f1Lx_Dt6FR0LBQG5WFPtP4gGqh8haYCBHd"
           }
         ],
         "topicType": "STANDARD"
