@@ -1,5 +1,5 @@
 {
-  "_pulled_at": "2026-10-07T19:31:57.758477Z",
+  "_pulled_at": "2026-10-07T19:39:18.129608Z",
   "_account_id": "106570312922328987685",
   "_location_id": "7712242499324845523",
   "location": {
@@ -432,24 +432,12 @@
             "placeId": "ChIJ40CRaA7d3IAROZpKYHW1eqc"
           },
           {
-            "placeName": "Orange, CA, USA",
-            "placeId": "ChIJr4p1a6nQ3IARvtTvgHJPYiI"
+            "placeName": "Burbank, CA, USA",
+            "placeId": "ChIJlcUYKBWVwoAR1IofkK-RdzA"
           },
           {
-            "placeName": "Oxnard, CA, USA",
-            "placeId": "ChIJn2clE-ZN6IARRbZe-sBJgFk"
-          },
-          {
-            "placeName": "Pomona, CA, USA",
-            "placeId": "ChIJIaGfee8tw4ARM6nKAHCUCVI"
-          },
-          {
-            "placeName": "Ontario, CA, USA",
-            "placeId": "ChIJe2Ld6ts0w4ARkDFY-VrjAwc"
-          },
-          {
-            "placeName": "Palmdale, CA, USA",
-            "placeId": "ChIJtd1w7IRXwoAROuASrS15bGo"
+            "placeName": "Glendale, CA, USA",
+            "placeId": "ChIJqYPwyDLAwoARpibJ_p6hP-U"
           },
           {
             "placeName": "Pasadena, CA, USA",
@@ -460,40 +448,28 @@
             "placeId": "ChIJ096zWNFK3YARHmYKTm7TS60"
           },
           {
-            "placeName": "Lancaster, CA, USA",
-            "placeId": "ChIJQYDoaLFawoARBz4Lfc9yxFg"
-          },
-          {
-            "placeName": "Riverside, CA, USA",
-            "placeId": "ChIJu330f9-m3IAR6ApeEwXXofc"
-          },
-          {
-            "placeName": "Santa Ana, CA, USA",
-            "placeId": "ChIJhTCCbJXb3IARvP0eHzqET8c"
+            "placeName": "Calabasas, CA, USA",
+            "placeId": "ChIJwdPvFyOewoARrhXmb8LiomE"
           },
           {
             "placeName": "Long Beach, CA, USA",
             "placeId": "ChIJWdeZQOjKwoARqo8qxPo6AKE"
           },
           {
-            "placeName": "Moreno Valley, CA, USA",
-            "placeId": "ChIJm-IZ2wmh3IARLD-boBWy-sM"
+            "placeName": "Culver City, CA, USA",
+            "placeId": "ChIJnXN32x66woAR_lnrS9HphTE"
           },
           {
-            "placeName": "Newport Beach, CA, USA",
-            "placeId": "ChIJ3bO_xLbo3IARvVmLZFSVVPE"
+            "placeName": "Santa Monica, CA, USA",
+            "placeId": "ChIJGQCRws6kwoARq_Uj_7UKF7Q"
           },
           {
-            "placeName": "Orange County, CA, USA",
-            "placeId": "ChIJz_fVVFyS3IARB9bwj2HDpt4"
+            "placeName": "Beverly Hills, CA, USA",
+            "placeId": "ChIJq0fR1gS8woAR0R4I_XnDx9Y"
           },
           {
             "placeName": "Thousand Oaks, CA, USA",
             "placeId": "ChIJkYgocFYl6IARJi7MRwF6Lo0"
-          },
-          {
-            "placeName": "San Bernardino, CA, USA",
-            "placeId": "ChIJ87j94n1Tw4ARjcKHjHjGZyg"
           },
           {
             "placeName": "Rancho Cucamonga, CA, USA",
@@ -502,6 +478,30 @@
           {
             "placeName": "Los Angeles County, CA, USA",
             "placeId": "ChIJMc1kAdMq3YARKjm9z9YofYM"
+          },
+          {
+            "placeName": "Encino, Los Angeles, CA, USA",
+            "placeId": "ChIJq-KwCjeYwoARLkJopGarvlY"
+          },
+          {
+            "placeName": "Van Nuys, Los Angeles, CA, USA",
+            "placeId": "ChIJa-i6-hqXwoARSIjZDHu_cMg"
+          },
+          {
+            "placeName": "Chatsworth, Los Angeles, CA, USA",
+            "placeId": "ChIJAU5R0MacwoARrI_xnCmhhfk"
+          },
+          {
+            "placeName": "Northridge, Los Angeles, CA, USA",
+            "placeId": "ChIJiUtZIleawoARUmFdWw-rsjM"
+          },
+          {
+            "placeName": "West Hills, Los Angeles, CA, USA",
+            "placeId": "ChIJo1cio4OdwoAR6edV3EL6zz4"
+          },
+          {
+            "placeName": "Sherman Oaks, Los Angeles, CA, USA",
+            "placeId": "ChIJ87ycp9uXwoARFv9xgD9OmwM"
           },
           {
             "placeName": "Woodland Hills, Los Angeles, CA, USA",
@@ -528,6 +528,7 @@
     },
     "metadata": {
       "hasGoogleUpdated": true,
+      "hasPendingEdits": true,
       "canDelete": true,
       "canModifyServiceList": true,
       "placeId": "ChIJE0xLnq2ewoARH1TaLVS7CG4",
