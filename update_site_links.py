@@ -122,6 +122,23 @@ NEARBY_ADD = {
     "managed-it-services-beverly-hills.html": [("managed-it-services-west-los-angeles", "West Los Angeles")],
     "managed-it-services-pasadena.html": [("managed-it-services-downtown-los-angeles", "Downtown LA")],
     "managed-it-services-glendale.html": [("managed-it-services-north-hollywood", "North Hollywood")],
+    # batch 2 (2026-10-08)
+    "managed-it-services-santa-monica.html": [("managed-it-services-west-los-angeles", "West Los Angeles"),
+                                              ("managed-it-services-malibu", "Malibu"),
+                                              ("managed-it-services-playa-vista", "Playa Vista")],
+    "managed-it-services-beverly-hills.html": [("managed-it-services-west-los-angeles", "West Los Angeles"),
+                                               ("managed-it-services-hollywood", "Hollywood")],
+    "managed-it-services-los-angeles.html": [("managed-it-services-downtown-los-angeles", "Downtown LA"),
+                                             ("managed-it-services-west-los-angeles", "West Los Angeles"),
+                                             ("managed-it-services-hollywood", "Hollywood"),
+                                             ("managed-it-services-koreatown", "Koreatown")],
+    "managed-it-services-pasadena.html": [("managed-it-services-downtown-los-angeles", "Downtown LA"),
+                                          ("managed-it-services-san-gabriel-valley", "San Gabriel Valley")],
+    "managed-it-services-west-los-angeles.html": [("managed-it-services-playa-vista", "Playa Vista")],
+    "managed-it-services-downtown-los-angeles.html": [("managed-it-services-koreatown", "Koreatown")],
+    "managed-it-services-north-hollywood.html": [("managed-it-services-sun-valley", "Sun Valley")],
+    "managed-it-services-agoura-hills.html": [("managed-it-services-malibu", "Malibu"), ("managed-it-services-camarillo", "Camarillo")],
+    "managed-it-services-simi-valley.html": [("managed-it-services-camarillo", "Camarillo")],
 }
 NB_RE = re.compile(r'(<p style="font-size:1\.05rem;line-height:2\.1;font-weight:600;">\n)(.*?)(\n\s*</p>)', re.S)
 for fname, adds in NEARBY_ADD.items():
