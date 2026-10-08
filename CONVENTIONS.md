@@ -169,3 +169,24 @@ bypass the guard; fix the content instead.
 - Local scheduled tasks on Brian's PC: "ProLink Weekly Conversions" (Mon 8am),
   "ProLink Marketing Dashboard" (Mon 8am, registered 8/18), "ProLink Review
   Requests" (weekdays 9am). Don't duplicate these in new automations.
+
+## Location pages & GBP (2026-10-08)
+
+- **Location-page template = `managed-it-services-glendale.html`** (Sep-2026
+  deployment: LocalBusiness+GeoCoordinates, BreadcrumbList, 5-Q FAQPage,
+  Organization, Speakable WebPage, "Nearby service areas" section). New city
+  pages are built from it with `gen_location_pages.py` (content in CITIES;
+  refuses to overwrite without `--force`). Don't hand-fork an older page.
+- **Canonical footer city list lives in `gen_location_pages.FOOTER_AREAS`**
+  (30 cities). After adding a page, run `update_site_links.py` -- it syncs the
+  footer in every root page, every blog post AND `generate_blog.py` (the blog
+  template had drifted to a 16-city list, leaving newer pages under-linked),
+  plus sitemap, `_redirects` (.html -> clean URL), and `llms.txt`. Idempotent.
+- Every location page must have a `_redirects` rule; six pages shipped without
+  one (chatsworth, culver-city, long-beach, northridge, van-nuys, west-hills)
+  and were fixed 10/8. The sync script now catches this.
+- GBP service area is capped at 20 places and is NOT the site's city list;
+  site pages can exceed it. GBP read/apply scripts: `gbp_audit.py` (read-only),
+  `gbp_apply_batch1.py` / `gbp_apply_batch2.py` (validate-first, backup JSON
+  before any write), `gbp_reviews.py` (fetch unreplied -> draft -> post).
+  Primary-category changes are made manually in the dashboard, solo.
