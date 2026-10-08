@@ -178,7 +178,13 @@ bypass the guard; fix the content instead.
   pages are built from it with `gen_location_pages.py` (content in CITIES;
   refuses to overwrite without `--force`). Don't hand-fork an older page.
 - **Canonical footer city list lives in `gen_location_pages.FOOTER_AREAS`**
-  (30 cities). After adding a page, run `update_site_links.py` -- it syncs the
+  (39 cities as of 10/8: batch 1 = Tarzana, Agoura Hills, Studio City, North
+  Hollywood, Santa Clarita, Simi Valley, Downtown LA, West LA; batch 2 = Playa
+  Vista, Hollywood, Koreatown, Hawthorne, Manhattan Beach, Sun Valley, San
+  Gabriel Valley, Camarillo, Malibu). Meta descriptions must be <=160 chars --
+  the guard enforces it; write them to the 120-155 target the first time.
+- `site_guard.py` takes ~3 min on the mounted drive from a sandbox but ~2 s
+  locally; run it locally or copy the tree to /tmp first. After adding a page, run `update_site_links.py` -- it syncs the
   footer in every root page, every blog post AND `generate_blog.py` (the blog
   template had drifted to a 16-city list, leaving newer pages under-linked),
   plus sitemap, `_redirects` (.html -> clean URL), and `llms.txt`. Idempotent.
