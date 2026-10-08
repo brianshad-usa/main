@@ -1,0 +1,166 @@
+{
+  "post": "A phishing email lands at 11 p.m. Your tooling pulls it from every inbox and forces the one person who clicked to sign in again. Nobody wakes up. Small, fast, easy to undo.\n\nDifferent alert, same hour: your controller's account starts behaving strangely during payroll week. Locking it might stop an attacker. It might also stop payroll.\n\nMost businesses never made that call. The software shipped with an answer already set.\n\nMature security teams handle the second kind differently. They do not escalate it at 2 a.m. The call gets made in advance, in writing, while everyone is awake and thinking clearly — so the tool can act at midnight on a judgment made at noon.\n\nTwo questions for your IT team. What can our tools do tonight without asking anyone? And for the actions too big to automate blindly, has anyone written the answer down yet?",
+  "headline": "You did not choose this setting",
+  "cta_label": "How the 24/7 desk works",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/cybersecurity",
+  "image_file": "2026-10-08-s141-card.png",
+  "image_file_jpg": "2026-10-08-s141-card.jpg",
+  "theme": "soc_detection",
+  "idea_id": "S141",
+  "core_idea": "Nobody chose their security automation policy — it arrived as vendor defaults and is quietly widening as agentic features land in consoles companies already own. Reversibility and blast radius sort most of it. What those two tests miss is the clock: a set of actions is wide, hard to undo, and has a window shorter than any human approval chain. Escalating those is a decision to lose slowly. They belong in a third bucket — pre-authorized under written conditions, decided in daylight by named people, executed by the tool at midnight.",
+  "channels": {
+    "linkedin": "Most companies never chose their security automation policy. They inherited it from a vendor default and found out what it does the first time it did something.\n\nThat was survivable when automated response meant a few hand-written playbooks. It is less survivable as detection platforms add agentic features that recommend containment, and the approval in front of them becomes a tired analyst clicking yes at 2 a.m.\n\nTwo tests sort most of it.\n\nReversibility: can you undo it in one click? Expire a session token. Quarantine a message. Isolate one laptop with restore a keystroke away. Being wrong costs minutes.\n\nBlast radius: how many people stop working on a false positive? Disabling the controller's account during payroll. Cutting a payment integration. Wrong there is a business event, not a ticket.\n\nReversible and narrow runs unattended. Wide and irreversible gets a person.\n\nWhat both tests miss is the clock. Some actions are wide, hard to undo, and have a window shorter than any approval chain — killing every session for an executive whose token was replayed, cutting an outbound path that is actively moving data. Escalating those is a decision to lose slowly.\n\nThey belong in a third bucket: pre-authorized. Named conditions, named people, written down in daylight. The tool acts at midnight on a judgment made at noon.\n\nAnalysis rather than fact: this is rarely an automation problem. It is an undecided-decision problem, and automation is only where it surfaces.\n\nOne question this month: which actions can run tonight without anyone approving them, and which of those did we choose?",
+    "facebook": "A phishing email lands at 11 p.m. Your tooling pulls it from every inbox and forces the one person who clicked to sign in again. Nobody wakes up. Small, fast, easy to undo.\n\nDifferent alert, same hour: your controller's account starts behaving strangely during payroll week. Locking it might stop an attacker. It might also stop payroll.\n\nMost businesses never made that call. The software shipped with an answer already set.\n\nMature security teams handle the second kind differently. They do not escalate it at 2 a.m. The call gets made in advance, in writing, while everyone is awake and thinking clearly — so the tool can act at midnight on a judgment made at noon.\n\nTwo questions for your IT team. What can our tools do tonight without asking anyone? And for the actions too big to automate blindly, has anyone written the answer down yet?",
+    "gbp": "If your security tools can quarantine mail, isolate a laptop or lock an account on their own, those settings most likely arrived as vendor defaults rather than a decision anyone made.\n\nSort them. Fast, narrow and easy to undo: let those run unattended. Hard to undo, or capable of stopping a department: those need human judgment — and the useful move is making that judgment in daylight, in writing, rather than by text message at midnight.\n\nPro Link Systems runs an in-house, US-based help desk 24/7, serving Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Most security teams never chose their automation policy. They inherited it from a vendor default and learned what it does the first time it did something.",
+      "Reversible and narrow runs unattended: quarantine the message, expire the token, isolate one laptop with restore ready.\n\nWide and hard to undo gets a person: disabling the controller's account during payroll week.",
+      "The bucket most teams miss: wide, irreversible, and faster than any approval chain. Escalating those is a decision to lose slowly.\n\nThey get pre-authorized in daylight, in writing. The tool acts at midnight on a judgment made at noon."
+    ],
+    "instagram_caption": "Almost nobody sat down and decided what their security tools are allowed to do alone. Those settings arrived as defaults, and the list of autonomous actions keeps growing as vendors add agentic features to consoles you already own.\n\nSorting it takes two questions. Can we undo this in one click, and how many people stop working if it fires on a false positive. Reversible and narrow runs unattended. Wide and irreversible waits for a person.\n\nThen the part those questions miss: some actions are wide, hard to undo, and have a window shorter than any approval chain. They are not escalations. They are decisions to make in daylight and write down, so the tool can act at midnight on a judgment made at noon.\n\nAnalysis, not measurement.\n\n#cybersecurity #ITleadership #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "editorial_light",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "centered",
+    "register": "positive",
+    "channels": {
+      "linkedin": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive"
+      },
+      "facebook": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive"
+      },
+      "gbp": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive"
+      },
+      "instagram": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive"
+      },
+      "x": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 94,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95,
+      "_notes": "Visual sophistication at 94: the recurring-matrix device is strong and the clock cliché is gone, but slides 1, 7 and 8 are all type-only, so three of eight slides carry no diagrammatic idea — one of them could hold a quiet compositional element without crowding. Shareability at 92: the argument rewards a reader who already owns the problem, and a forwarding executive has no single quotable line shorter than 'decide at noon, execute at midnight' — which is good but sits on slide 7 rather than the hook. Originality at 95: the pre-authorization turn is the differentiator; the two-axis opening is still a familiar frame, carried by the turn rather than by itself. Writing quality at 95: the LinkedIn post sits near the 1,600-character ceiling and the parallel-construction rhythm ('Expire. Quarantine. Isolate.') is used in two channels."
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Most organizations' autonomous response configurations reflect vendor defaults rather than a documented internal decision. No figure attached, no vendor named, no specific product behaviour asserted.",
+    "ANALYSIS: The set of actions security tooling can take unattended is widening as agentic features are added to existing consoles. Framed as direction of travel, not a claim about any named product's capability or roadmap.",
+    "ANALYSIS: Automated actions should be sorted on reversibility and blast radius rather than reversibility alone.",
+    "ANALYSIS: A third category exists where the containment window is shorter than a human approval chain, and for those an escalation step degrades the outcome rather than controlling it. Reasoning, not a measured claim; no dwell-time or response-time statistic is cited.",
+    "ANALYSIS: Pre-authorization — written trigger conditions approved in advance by named people — is the appropriate control for that third category. Presented as a governance recommendation, not an industry standard or regulatory requirement.",
+    "OPINION, labeled in-copy as analysis: this is an undecided-decision problem rather than an automation problem.",
+    "ILLUSTRATIVE: the 11 p.m. phishing email, the payroll-week controller account, the replayed executive token and the outbound exfiltration path are generic constructed examples. Not clients, not incidents, not implied to be either.",
+    "FACT(F002): The Pro Link Systems help desk is in-house, not outsourced.",
+    "FACT(F008): The Pro Link Systems help desk is US-based.",
+    "FACT(F001): The Pro Link Systems help desk operates 24/7.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "NO NUMBERS beyond the verified facts above. No industry statistic, breach cost, dwell time, response benchmark or research finding appears anywhere in the package. No certification, partnership or compliance status claimed."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is correct but inert — it reads as timeless SOC advice with no reason to exist in 2026. Nothing in it forces an executive to act this quarter. The package needs a live tension: the policy was already set for them by vendor defaults and is quietly expanding as agentic features land in consoles they already pay for."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is seven uniform text blocks. The central idea is a two-axis judgment (reversibility × blast radius) and the draft never gives it a form. Without one visual artifact to carry the idea, there is nothing to screenshot and nothing that distinguishes the deck from any well-written caption."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No visual direction is specified anywhere in the package — slides ship as kicker/headline/body only, which means the design will default to generic. Slide 1's headline is also too long to function as a hook; a hook slide should be readable in one glance at thumbnail size."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Reversibility is presented as a single test when it is actually two independent variables. An action can be reversible and still catastrophic (isolating the host that runs the line-of-business app at month-end), and narrow but not reversible. Splitting reversibility from blast radius makes the framework correct rather than merely tidy."
+    },
+    {
+      "role": "CIO",
+      "finding": "Missing the question an actual IT director would ask first: who set the current configuration? In most environments nobody decided — the EDR, the mail filter and the identity platform arrived with autonomous actions already enabled. 'Write two lists' assumes a blank page that does not exist."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Two technical gaps. First, 'wait for a human' is only a control if the human has a time budget; an unreachable on-call is worse than automation because it adds delay without adding judgment. Second, attackers operate at 2 a.m. precisely because approval chains are slow — the post should acknowledge that the human half is the part most likely to fail, not the automation."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treats automation as deterministic playbooks — a 2019 framing. The 2026 version of this problem is agentic: tooling that proposes containment with a rationale, and a human approval that degenerates into rubber-stamping. The decision shifts from 'what may it do' to 'what may it do without anyone meaningfully reading it.' That must be in the package, stated as analysis, without inventing any specific product capability."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The reader finishes agreeing and does nothing. There is no artifact and no question they can put in an email to their IT lead on Monday. 'Costs nothing but an afternoon' is also slightly glib for someone who knows their team has no afternoons."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X is a single post for an idea with obvious three-beat progression (inherited default → two tests → the human half is the weak link). That is leaving reach on the table where a short thread genuinely earns itself. The hook line is also a flat declarative rather than a claim worth arguing with."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Three selling moments — carousel CTA slide, GBP credential paragraph, and a CTA button labelled 'See our approach,' which is the most generic label available. Also, slide 6's 'from what we see in day-to-day operations' edges toward implying client observation as evidence; the verified-facts file does not support that and it should go."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "GBP opens two consecutive sentences with 'List two,' violating the repetition rule. 'checklist_items' is empty while the whole post argues for a written list — the one field that would make the asset saveable is blank. Facebook's 'That is automation doing exactly what it should' trails the scenario rather than landing it."
+    },
+    {
+      "role": "Cybersecurity Expert (with CIO concurrence)",
+      "finding": "The two-axis model resolves to 'reversible and narrow runs unattended, everything else gets a human' — which is the conclusion any competent MSP would reach, and therefore fails the ultimate test. It ignores the axis practitioners actually collide with: the cost of waiting. Some actions are wide, hard to undo, AND have a containment window shorter than any approval chain (replayed executive session tokens, an outbound path actively moving data, a payment run mid-release). For those, 'gets a person' is not a control, it is a slow loss. The package needs a third disposition — pre-authorized under written conditions, decided in daylight by named people — which is also the genuinely executive move, because it relocates the decision from a tired analyst to the people with actual authority."
+    },
+    {
+      "role": "Copy Editor (with Brand Director concurrence)",
+      "finding": "'2 a.m.' appears in all five channels and the truth-label ('analysis rather than fact' / 'analysis, not measurement') appears three times, twice within the Instagram caption alone. Repeated across channels, a disclosure discipline degrades into a verbal tic and makes the channels read as paraphrases of one text, against channel doctrine. Separately, GBP runs roughly 730 characters, over the 300–700 ceiling, and its closing question duplicates the LinkedIn close verbatim in substance."
+    },
+    {
+      "role": "Art Director (with Creative Director concurrence)",
+      "finding": "Slide 6 is the weakest asset in the deck. A clock face is adjacent to cybersecurity-cliché territory, and 'a blank minute field to be filled in' does not render in a static carousel — it is an interactive idea drawn as a graphic. The deck also builds a strong hero diagram on slide 4 and then abandons it; the matrix should recur and be revised on screen, so the reader watches the model break rather than being told it is incomplete."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
