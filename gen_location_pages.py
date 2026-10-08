@@ -51,6 +51,15 @@ FOOTER_AREAS = [
     ("managed-it-services-long-beach", "Long Beach"),
     ("managed-it-services-irvine", "Irvine"),
     ("managed-it-services-orange-county", "Orange County"),
+    ("managed-it-services-playa-vista", "Playa Vista"),
+    ("managed-it-services-hollywood", "Hollywood"),
+    ("managed-it-services-koreatown", "Koreatown"),
+    ("managed-it-services-hawthorne", "Hawthorne"),
+    ("managed-it-services-manhattan-beach", "Manhattan Beach"),
+    ("managed-it-services-sun-valley", "Sun Valley"),
+    ("managed-it-services-san-gabriel-valley", "San Gabriel Valley"),
+    ("managed-it-services-camarillo", "Camarillo"),
+    ("managed-it-services-malibu", "Malibu"),
 ]
 
 # --------------------------------------------------------------------------
