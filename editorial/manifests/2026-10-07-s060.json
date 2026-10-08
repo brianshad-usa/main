@@ -1,0 +1,169 @@
+{
+  "post": "Your offboarding checklist works. Badge, laptop, email, phone, done.\n\nNow think about the accounts that were never a person. An app syncing calendars. A script pulling sales numbers into a dashboard every morning. A vendor tool connected to your file storage during a project that ended last spring.\n\nThose sign in too. Usually with more access than they need, using a credential that does not expire. There is no last day for an API key.\n\nWhen our team maps a new network, the non-human list is routinely longer than the staff directory. It keeps growing — every AI tool a department adopts arrives as another account with standing access to your data.\n\nStart with the question that unblocks everything: when was this last used? Then give each one an owner and an end date. Not glamorous work. It ages well.",
+  "headline": "Four questions for every account that isn't a person",
+  "cta_label": "About Pro Link Systems",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/about",
+  "image_file": "2026-10-07-s060-card.png",
+  "image_file_jpg": "2026-10-07-s060-card.jpg",
+  "theme": "identity",
+  "idea_id": "S060",
+  "core_idea": "Every identity control a business owns — MFA, offboarding, quarterly review — assumes an account belongs to a person who can be prompted, dated, or recognized. On most networks the majority of accounts fail all three assumptions, and AI agents are adding more of them every quarter.",
+  "channels": {
+    "linkedin": "Access reviews rest on an assumption: that every account belongs to someone who can be asked about it.\n\nOn most networks, most accounts don't.\n\nWhen our team inventories a new environment, we build two lists. The people who can sign in, which goes quickly. Then everything else that signs in — service principals, API keys, the integration someone wired into the CRM two years ago, the reporting tool with read access to nearly everything, set up by a manager since promoted.\n\nThe second list is usually longer. Sometimes much longer.\n\nThe part worth an executive's attention is what that does to your controls. Multi-factor authentication assumes someone can be prompted. Offboarding assumes a last day. Quarterly review assumes a manager who recognizes the name. A long-lived credential satisfies none of those. It was granted in a hurry during a project nobody remembers, and it has outlived the project, the vendor contract, and often the employee who created it.\n\nThe list is also growing. Every AI agent and connector a department pilots this year arrives as another identity with standing access to company data. That is arithmetic, not alarm.\n\nThree questions settle most of it. Who owns this. What does it actually need. When does it expire.\n\nA fourth question is what actually unsticks the work: when was it last used. Teams freeze on machine identities because nobody knows what breaks if they switch one off. Usage data answers that faster than a meeting will.\n\nThis is not an afternoon. It is a quarter of unglamorous attention, and one of the few projects we have never watched a client regret.\n\nWorth asking your IT lead this week: how many non-human accounts can reach our data, and whose name is next to each one.",
+    "facebook": "Your offboarding checklist works. Badge, laptop, email, phone, done.\n\nNow think about the accounts that were never a person. An app syncing calendars. A script pulling sales numbers into a dashboard every morning. A vendor tool connected to your file storage during a project that ended last spring.\n\nThose sign in too. Usually with more access than they need, using a credential that does not expire. There is no last day for an API key.\n\nWhen our team maps a new network, the non-human list is routinely longer than the staff directory. It keeps growing — every AI tool a department adopts arrives as another account with standing access to your data.\n\nStart with the question that unblocks everything: when was this last used? Then give each one an owner and an end date. Not glamorous work. It ages well.",
+    "gbp": "A practical note from our Woodland Hills office.\n\nMost Los Angeles businesses handle a departure well: badge, laptop, email, phone. The accounts that were never people are the ones that stay. API keys, connected third-party apps, automations wired into Microsoft 365 or an accounting system during a project that ended years ago. They keep authenticating, usually with permissions nobody would approve today.\n\nA useful exercise this month: pull the list of every third-party app and service account that can reach your data, note when each was last used, and put a name and an end date beside it.\n\nAnything with no owner and no recent activity is where to start. That is also the shortest conversation you will have all quarter.",
+    "x": [
+      "Your offboarding checklist has a last day on it. An API key does not. On most networks we inventory, the accounts that were never people outnumber the ones that were — and almost none of them have an owner.",
+      "Every AI agent and connector your departments pilot this year arrives as another identity with standing access to company data. The non-human list grows faster than headcount ever will. Arithmetic, not alarm.",
+      "Four questions for every non-human account. Who owns it. What does it actually need. When does it expire. When was it last used. The fourth is the one that unsticks the work — teams freeze because nobody knows what breaks if they turn it off."
+    ],
+    "instagram_caption": "Every identity control a business owns was designed around a person. Multi-factor authentication assumes someone can be prompted. Offboarding assumes a last day. Quarterly review assumes a manager who recognizes the name. A service account, an API key, an integration wired into the CRM three years ago — none of those satisfy any of it, and on most networks we inventory, they outnumber the staff directory. The fix is not a tool. It is a list, a name beside each line, and an end date.\n\n#identitysecurity #machineidentity #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-10-07-s060-01.png",
+      "2026-10-07-s060-02.png",
+      "2026-10-07-s060-03.png",
+      "2026-10-07-s060-04.png",
+      "2026-10-07-s060-05.png",
+      "2026-10-07-s060-06.png",
+      "2026-10-07-s060-07.png",
+      "2026-10-07-s060-08.png"
+    ],
+    "jpg": [
+      "2026-10-07-s060-01.jpg",
+      "2026-10-07-s060-02.jpg",
+      "2026-10-07-s060-03.jpg",
+      "2026-10-07-s060-04.jpg",
+      "2026-10-07-s060-05.jpg",
+      "2026-10-07-s060-06.jpg",
+      "2026-10-07-s060-07.jpg",
+      "2026-10-07-s060-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photo_light",
+    "format": "carousel",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "behind_scenes",
+    "channels": {
+      "linkedin": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "facebook": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "gbp": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "instagram": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "x": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 95,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 91,
+      "platform_fit": 97,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used twice only, in GBP (Woodland Hills office) and Instagram slide 8. Removed from LinkedIn to avoid three-channel repetition in one cycle.",
+    "F002 and F008 (in-house, US-based help desk) removed from the package — true and citable, but irrelevant to an identity-governance subject and reading as a credentials dump in the CTA slide.",
+    "ANALYSIS: on most networks our team inventories, non-human accounts outnumber human accounts. Stated qualitatively as our own observation. No figure, ratio, or percentage claimed.",
+    "ANALYSIS: MFA assumes a promptable human, offboarding assumes a termination date, and periodic access review assumes a recognizable name — mechanisms a long-lived machine credential does not satisfy. Stated as reasoning about how these controls work, not as a vendor product claim or a quantified finding.",
+    "ANALYSIS: machine identities are commonly over-permissioned at creation and outlive the project, vendor contract, or employee that created them.",
+    "ANALYSIS/PREDICTION: agentic AI and connector deployments add non-human identities with standing data access. Framed explicitly as arithmetic, with no adoption rate, growth figure, incident, or deadline attached.",
+    "OPINION: better understood as a bookkeeping gap than a security gap, because these accounts never enter a review at all.",
+    "OPINION: last-used data, not ownership metadata, is the practical unblocker for remediation.",
+    "OPINION: the exercise takes a quarter of sustained attention, not an afternoon. Corrected from the draft, which understated it.",
+    "No industry, breach, downtime, cost, or threat-landscape statistic cited. No regulation, deadline, vulnerability, or research finding referenced. No client named, implied, or described. No certification, partnership, or compliance status claimed. No competitor named."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft reads as a description of our intake process rather than a perspective an executive can act on. The reader finishes it knowing how we work, not what decision it changes for them. The 'so what' for a CEO/CFO — that every existing identity control was designed around a human and therefore does not cover the larger half of the population — is implied but never stated."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel has no turn. Four consecutive slides tagged 'content' deliver the same register at the same volume, and the hook slide ('The first list we build isn't people') is about us rather than about the reader's environment. The structure needs a genuine escalation: assumption, break, consequence, action."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package ships copy with zero visual direction, which guarantees generic output from whoever renders it. Slide headlines also vary from five words to twelve, which makes a consistent type system impossible to hold across the set. Added per-slide visual notes and an art direction block; constrained headline lengths."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Topic is squarely on the 2026 agenda, but the draft could have run in 2021 unchanged. The thing that makes machine identity urgent now — that agentic AI deployments mint new non-human identities with standing data access faster than any provisioning process was designed to absorb — is absent. Added, framed as arithmetic rather than manufactured alarm."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three questions are right and incomplete. In practice teams stall on machine identities not because they lack an owner field but because nobody knows what breaks if they disable one. 'When was it last used' is the question that actually unblocks the project, and it was missing."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Less a security problem than a bookkeeping one' is a good line that reads as minimizing without the mechanism beside it. The real asymmetry is that MFA, conditional access, offboarding and quarterly reviews are all built on the assumption of a human who can be prompted, dated, or recognized — and a long-lived credential satisfies none of those assumptions. Named the mechanism; kept the claim qualitative with no invented statistics."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No mention of AI agents in a post about machine identity growth in 2026 is a real gap, not a stylistic one. Each piloted agent, connector, or automation is an identity with persistent access. Added one paragraph on LinkedIn, one line on Facebook, one X post, one slide — no urgency inflation, no product claims."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Worth the afternoon' is not credible to anyone who has run this exercise, and it undercuts our authority. The executive also leaves without a sentence they can use. Replaced with an honest characterization of the effort and a specific question to put to their IT lead."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X posts were the LinkedIn opener re-typed, and nothing in the package was quotable. There is no line a reader can screenshot. Introduced 'There is no last day for an API key' as the portable idea and threaded it through X, Facebook and the carousel hook."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Instagram CTA slide stacked three verified facts — 1999, in-house, US-based — which reads as a credentials dump and has nothing to do with machine identity. F012 also appeared in three channels in one cycle. Trimmed to one relevant fact per channel, maximum two placements across the package."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Several issues: 'Also one of the few we have never regretted starting' uses 'Also' as a sentence opener awkwardly; card_headline promises a checklist and checklist_items is empty; cta_label 'Meet the team' does not follow from a post about access inventory. Fixed all three. Note: the CTA URL remains the supplied /about page because inventing a contact or assessment URL is not permitted — if a contact page exists, it should be substituted before publication."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

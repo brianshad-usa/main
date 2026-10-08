@@ -1919,6 +1919,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-07",
+      "idea_id": "S060",
+      "theme": "identity",
+      "format": "linkedin_analysis",
+      "title": "Machine identities now outnumber your employees",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          }
+        }
+      }
     }
   ]
 }
