@@ -2035,6 +2035,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-09",
+      "idea_id": "S231",
+      "theme": "exec_strategy",
+      "format": "economics",
+      "title": "Reading an IT proposal like a CFO",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          }
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,156 @@
+{
+  "post": "A mid-size firm in the Valley compares three IT quotes. All three land within a few dollars per seat. The lowest one wins.\n\nSix months later, the invoices look nothing like the quote.\n\nNothing dishonest happened. The cheapest proposal simply put less on page one: Microsoft 365 licensing excluded, onboarding billed as a project, an annual increase sitting quietly in the terms.\n\nTwo questions beat asking for the monthly rate. First: what does this cost all-in over three years at our real seat count? Second: what can raise the invoice without a new signature?\n\nOne more, because low quotes are usually low for a reason. Which security controls are inside this price, and which arrive later as a line item?\n\nThree answers to those will tell you more than three monthly rates ever will.",
+  "headline": "A monthly per-seat rate is not a price",
+  "cta_label": "Get a second read",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-10-09-s231-card.png",
+  "image_file_jpg": "2026-10-09-s231-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S231",
+  "core_idea": "A monthly per-seat rate is the part of the price the vendor chose to show first. The only honest comparison is a 36-month all-in total at your real seat count with the control set normalized — plus two questions no proposal answers: what can raise this invoice without a new signature, and does the rate fall as the provider automates its own labor.",
+  "channels": {
+    "linkedin": "Three managed IT proposals land on a CFO's desk. The per-seat rates sit within a few dollars of each other, and that similarity is the most misleading thing in the packet.\n\nA monthly rate is not a price. It is the part of the price the vendor chose to put on page one.\n\nWhere the rest of it lives:\n\nLicensing — Microsoft 365, endpoint protection, email security, backup, and now AI seats. One proposal bundles them, another passes them through at cost, a third quotes only the labor wrapped around them.\n\nScope — unlimited support that carves out projects, after-hours work, onboarding, offboarding, and anything the contract calls a major change.\n\nEscalators — the annual uplift clause and the auto-renew date. Two lines most often skipped in review and most expensive to find in year two.\n\nExit — offboarding fees, data extraction, and who owns the documentation when you leave.\n\nNormalize all of it to one figure: total cost over 36 months, at a named seat count, same licensing assumption for all three.\n\nThen two questions the documents will not answer.\n\nWhat can raise this invoice without a new signature?\n\nAnd the 2026 version: as a provider automates its own operations, its labor per seat falls. Does any of that reach you, or does the rate hold while their cost curve drops? Ask how price responds to automation.\n\nOne caution on the total. The lowest 36-month number is often lowest because the control set is thinner — conditional access, EDR or MDR coverage, immutable backup, log retention. Normalize the controls before the dollars, or you are comparing two different risk postures.",
+    "facebook": "A mid-size firm in the Valley compares three IT quotes. All three land within a few dollars per seat. The lowest one wins.\n\nSix months later, the invoices look nothing like the quote.\n\nNothing dishonest happened. The cheapest proposal simply put less on page one: Microsoft 365 licensing excluded, onboarding billed as a project, an annual increase sitting quietly in the terms.\n\nTwo questions beat asking for the monthly rate. First: what does this cost all-in over three years at our real seat count? Second: what can raise the invoice without a new signature?\n\nOne more, because low quotes are usually low for a reason. Which security controls are inside this price, and which arrive later as a line item?\n\nThree answers to those will tell you more than three monthly rates ever will.",
+    "gbp": "Budget season in Los Angeles brings IT proposals, and proposals are written to resist comparison. Before you weigh monthly rates, get three things in writing from each vendor: which licenses are included, what work gets reclassified as a billable project, and what the annual uplift and auto-renew terms actually say. Then total each quote over 36 months at your real seat count. Rankings change. Check the security controls inside each price as well — the lowest number is usually lowest because something sits outside it. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. If you want a second read on a proposal, including one of ours, that is a conversation we will take.",
+    "x": [
+      "Budget season. Three IT proposals, three per-seat rates within a few dollars of each other. The similarity is the trick: a monthly rate is not a price. It is the part of the price the vendor chose to put on page one.",
+      "Read the exclusions page first. What a contract refuses to cover explains its price better than anything it promises. Then normalize — 36-month total, your real seat count, same licensing assumption across all three.",
+      "The 2026 question for any provider: as you automate your own operations, your labor per seat falls. Does our rate follow it down? Few proposals answer. The ones that do are selling outcomes rather than capacity."
+    ],
+    "instagram_caption": "Normalizing three IT proposals to one 36-month number is a comparison tool, not a decision rule. The point is not to pick the smallest figure. It is to see what you are actually buying once licensing, project carve-outs, uplift clauses and exit fees sit in the same column. One more line deserves scrutiny: every proposal quotes a response time. Ask what it measures, who measures it, and what happens when it is missed. Response and resolution are different promises, and only one of them ends the downtime you are paying to avoid. #ITbudget #CFO #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "single_image",
+    "ground": "gold",
+    "layout": "left_block",
+    "register": "seasonal",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 95,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Managed IT proposals are structured so monthly per-seat rates cluster while the differentiating costs sit elsewhere in the document.",
+    "ANALYSIS: Licensing (Microsoft 365, endpoint protection, email security, backup, AI seats) is variously bundled, passed through at cost, or excluded across competing proposals.",
+    "ANALYSIS: Unlimited support language commonly carves out projects, after-hours work, onboarding and offboarding.",
+    "ANALYSIS: Annual uplift clauses and auto-renew dates are frequently overlooked during proposal review.",
+    "ANALYSIS: Offboarding fees, data extraction and documentation ownership are recurring exit-cost line items.",
+    "ANALYSIS: Normalizing quotes to a 36-month total at a named seat count with identical licensing assumptions changes vendor ranking.",
+    "ANALYSIS: A lower normalized total frequently reflects a narrower control set rather than greater efficiency; controls must be normalized before dollars.",
+    "ANALYSIS: Response time and resolution time are distinct contractual commitments; only resolution ends downtime.",
+    "PREDICTION/OPINION: As providers automate their own operations, labor cost per seat falls, and whether that reduction reaches the client is a negotiable contract term rather than an automatic outcome. Presented as a question to ask, not as an established market fact.",
+    "OPINION: A contract's exclusions explain its price better than its inclusions.",
+    "ILLUSTRATIVE HYPOTHETICAL: The Facebook scenario about a mid-size Valley firm is constructed. It names no organization, references no ProLink client, and is not presented as a case study.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "REMOVED: GBP claim implying a long-standing contract-review service. No such capability appears in verified_facts.json.",
+    "REMOVED: Instagram CTA use of F003 and F004. Accurate but off-topic here, and self-serving in a post teaching scrutiny of vendor response metrics.",
+    "No industry, breach-cost, downtime, insurance or threat statistics are cited. No external research findings are referenced. No numbers appear except the 36-month comparison window, which is a method, not a claim."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA asks executives to bring us a competitor's proposal to critique. That positions ProLink as the party with an interest in the verdict, which undercuts the whole premise of the piece. Fix: make the offer self-implicating — a second read on any proposal, including one of ours."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram caption is a compressed restatement of the carousel. On a carousel post the caption is a second surface, not a summary. It needs to carry an idea the slides do not — otherwise the swipe and the read teach the same thing twice."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 3 is a comma-run of four cost categories inside one body block; it will typeset as a paragraph of small text, which the visual standard forbids. Rewritten as four parallel fragments so it sets as a numbered cost stack. Added a control-set slide written as a four-item grid for the same reason."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Nothing in the draft is specific to 2026. Every sentence could have run in 2017. The piece needs the thing that has actually changed about MSP pricing: AI seats appearing as licensing line items, and provider-side automation lowering labor per seat while the per-seat rate stays fixed."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft compares price without normalizing scope. Two proposals at the same 36-month total can cover entirely different control sets and identity estates. Added the explicit instruction to normalize the controls before the dollars."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The cheapest quote is frequently cheapest because conditional access, EDR/MDR coverage, immutable backup and log retention sit outside the price — and those are increasingly the controls a cyber insurer asks about. Omitting that made the post financially sound and security-naive."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No AI dimension at all in a piece about 2026 IT pricing. The honest one is uncomfortable for providers: as an MSP automates its own tier-one work, its cost per seat falls. Whether that reaches the client is now a negotiable term, and almost no proposal addresses it."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft implies the lowest normalized total wins. It does not. Clarified in the Instagram caption that the 36-month number is a comparison tool, not a decision rule — its job is to expose what you are buying, not to pick the winner."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The strongest line in the package — exclusions explain the price better than inclusions — was buried in X post three. Moved forward, and the thread now ends on the automation question, which is the only genuinely quotable asymmetry in the piece."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP line we have been reading contracts like this for Los Angeles businesses since 1999 asserts a service capability that does not appear in verified_facts.json. Removed. F012 states founding and location; it does not license a 27-year contract-review practice."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Instagram slide 5 ran Same term. Same seats. Same licensing assumption — three consecutive sentences opening with the same word, which the standards prohibit. Also trimmed the LinkedIn opener's limp causal clause, and the Instagram CTA slide was carrying help desk metrics irrelevant to proposal review; quoting our own response numbers in a post that teaches skepticism of response numbers reads as engineered. Removed."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
