@@ -1,0 +1,168 @@
+{
+  "post": "A director asks the CFO a plain question at the quarterly meeting: if we lost our systems tomorrow, who decides what comes back first, and who can order a shutdown at two in the morning?\n\nThat used to get routed to IT. Now it stays at the table.\n\nThe old answer was a list of protections. The better one is a short record of decisions — what we chose, what we chose against, what risk we took on purpose, and what keeps that risk tolerable in the meantime.\n\nOne line does more work than a page of product names. Say two executives still hold MFA exemptions: write down that the trade was deliberate, that those accounts only work from company laptops, and that it comes off the books in March.\n\nNobody is trying to catch anyone out. Insurers, buyers and auditors ask directors the same question, and the answer has to come from somewhere.",
+  "headline": "A decision log, not a product list",
+  "cta_label": "Our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-10-10-s124-card.png",
+  "image_file_jpg": "2026-10-10-s124-card.jpg",
+  "theme": "compliance",
+  "idea_id": "S124",
+  "core_idea": "Boards have stopped asking whether the company is protected and started asking what was decided, what was accepted on purpose, and when they were told — so the deliverable is a one-page decision log with five fields per entry, where the field most drafts omit is what makes an accepted risk tolerable, and where the date on the line is itself the disclosure record.",
+  "channels": {
+    "linkedin": "Three years ago a board asking about cybersecurity wanted reassurance. Now it wants a record.\n\nThat is a change in who is accountable, not in tone. Reassurance can be answered with tools — the firewall refresh, the training completion rate, the vendor logo on slide nine. A record cannot. It asks what you decided, what you declined, what you accepted on purpose, and when the board was told.\n\nAnalysis, not fact: this is hardening because insurers ask at renewal, acquirers ask in diligence, and audit committees ask because someone is asking them.\n\nThe artifact that answers it is a decision log. One page. Dated entries, five fields each: the decision, the option rejected, the risk accepted on purpose and what makes it tolerable, the owner, and the date it gets reopened.\n\nThat phrase — what makes it tolerable — is where most drafts fail. 'We accepted the risk' is not a governed decision. A governed decision names what holds the exposure down while it stands.\n\nHypothetical entries, not ours:\n\nApproved the finance AI assistant; excluded the drive holding deal documents; revisit at contract renewal.\n\nTwo executives keep MFA exemptions; tolerable only because those accounts are restricted to managed devices; removed by March.\n\nTested the ransomware callout; the person authorized to take systems offline was unreachable for two hours; a deputy is now named.\n\nNone of that is technical. Each line is a judgment a director can question.\n\nThe date on the line is also the disclosure record — proof of when the board knew.\n\nResidual risk is not a failure. Unexamined residual risk is.",
+    "facebook": "A director asks the CFO a plain question at the quarterly meeting: if we lost our systems tomorrow, who decides what comes back first, and who can order a shutdown at two in the morning?\n\nThat used to get routed to IT. Now it stays at the table.\n\nThe old answer was a list of protections. The better one is a short record of decisions — what we chose, what we chose against, what risk we took on purpose, and what keeps that risk tolerable in the meantime.\n\nOne line does more work than a page of product names. Say two executives still hold MFA exemptions: write down that the trade was deliberate, that those accounts only work from company laptops, and that it comes off the books in March.\n\nNobody is trying to catch anyone out. Insurers, buyers and auditors ask directors the same question, and the answer has to come from somewhere.",
+    "gbp": "Write the board page before a director asks for it. One sheet, none of it technical.\n\nName the systems whose loss stops revenue. Write down the risks you took on purpose — the MFA exemption, the aging server, the AI tool you approved — with the reason each is tolerable and the date it gets reopened. Record who declares an incident and who can order systems offline at 2am.\n\nThen test the last line tonight. Call the after-hours number in your own plan and time what happens.\n\nPro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house, US-based and staffed 24/7, and calls are answered live.",
+    "x": [
+      "Three years ago a board asking about cyber wanted reassurance. Now it wants a record: what you decided, what you declined, what you accepted on purpose, and when the board was told. Tools answer the first question. Only a decision log answers the second.",
+      "One page of dated entries. Each line: the decision, the option rejected, the risk accepted on purpose and what makes it tolerable, the owner, the date it reopens. 'We accepted the risk' is not a governed decision until you name what holds the exposure down.",
+      "Residual risk is not a security failure. Unexamined residual risk is a governance failure. And the date on each line is the disclosure record — the cheapest proof you have of when the board actually knew."
+    ],
+    "instagram_caption": "An inventory of security products proves spend. It does not show judgment, and judgment is what directors are now being asked about. The artifact that shows judgment is a one-page decision log: dated entries, five fields each — the decision, the option rejected, the risk accepted on purpose and what makes it tolerable, the owner, the date it reopens. Most drafts skip the tolerable clause, which is the one an insurer or an acquirer reads first. The carousel includes the 2026 lines most boards have never seen written down: which AI tools were approved, what data they can reach, and who signed off.\n\n#boardgovernance #cyberrisk #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "centered",
+    "register": "insight",
+    "channels": {
+      "linkedin": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "facebook": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "gbp": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "instagram": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "x": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Board questions about cyber have shifted from reassurance about protection to a record of decisions, accepted risk and disclosure timing. Framed as a reading of a change, not as a measured finding.",
+    "ANALYSIS, LABELED: The shift is hardening because insurers ask at renewal, acquirers ask in diligence and audit committees ask because someone is asking them. Marked 'analysis, not fact' on LinkedIn and 'our read, not a statistic' on Instagram slide 03.",
+    "OPINION: A board-actionable record is a one-page decision log whose entries carry decision, option rejected, risk accepted on purpose plus what makes it tolerable, owner, and reopen date.",
+    "OPINION: An accepted risk recorded without a compensating condition is not a governed decision.",
+    "OPINION: An inventory of security products demonstrates spend rather than judgment.",
+    "OPINION: Residual risk is not a failure; unexamined residual risk is.",
+    "HYPOTHETICAL, LABELED: The three sample entries on LinkedIn are introduced as 'Hypothetical entries, not ours'. The MFA-exemption line on Facebook is framed conditionally ('Say two executives still hold...'). No real organization, client or incident is described anywhere.",
+    "NO LEGAL CLAIM: Wording avoids asserting personal director liability. Instagram caption says directors are 'being asked about' judgment, not that they are legally answerable for it. No regulation, deadline, enforcement action or standard is cited.",
+    "FACT(F012): Pro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999 (GBP, Instagram slide 08).",
+    "FACT(F001, F002, F007, F008): Help desk is in-house, US-based, staffed 24/7, calls answered live (GBP only; deliberately not repeated on Instagram to avoid a duplicated credential stack). F003, F004, F005 unused — no response-time or resolution figure appears anywhere.",
+    "NOTE: No industry, breach-cost, downtime or threat-landscape statistic appears in any channel. No competitor named. F006, F009, F010 and F011 excluded per blocked_from_automation."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is a competent governance essay that any MSP, any vCISO, any Big Four advisory blog could have published verbatim. Nothing in it draws on something only ProLink knows or does. Fixed by grounding the 'day one' section in the one operational test ProLink can speak to from verified fact — what actually happens when the incident plan says 'call our IT provider' at 2am."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The core idea names an artifact — a decision record — and then never shows one. The reader is told an inventory is the wrong answer but is never shown what a right line of a decision log looks like. Fixed by specifying the five fields of an entry and giving clearly-labeled hypothetical entries."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Carousel slides 2–5 carry 190–240 character bodies — paragraphs of small type, which the visual standard explicitly rejects. None of the slides has a diagrammable structure for the design system to work with. Fixed by cutting bodies to roughly 110–150 characters, converting slide 4 into a five-field anatomy and slide 6 into a two-column comparison, and using the empty footer field as a consistent index."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The GBP post asserts as fact that executives across Los Angeles are hearing a sharper question from boards, lenders and insurers — an unsourced market claim presented in the fact register, with 'lenders' added without basis. Also, the LinkedIn label 'Analysis rather than fact:' is awkward and the sentence 'this is formalizing now' misuses an intransitive. Rewrote GBP as practical advisory with no market claim, and tightened the labeling."
+    },
+    {
+      "role": "CIO",
+      "finding": "The day-one list names declaration, counsel, insurer, spokesperson and payment authority but omits the decision that actually stalls real incidents: who is authorized to disconnect or take systems offline, at any hour, without waiting for an executive to wake up. It also never asks the question a director will ask second — when was this last tested and what broke. Both added."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Accepted risk' stays abstract, and a board cannot interrogate an abstraction. Accepted risk only becomes governance when it has a named exposure, an owner and a revisit date. Added concrete accepted-risk examples (standing MFA exemptions, an aging server) and the revisit date as a required field. Confirmed clean: no client named or implied, no statistic, no invented regulation, vulnerability or deadline anywhere in the package."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "A 2026 board-governance package with no AI governance in it. The entries boards are least likely to have written down — which AI tools were approved, what data those tools can reach, who signed off — are exactly the ones this piece should supply. Added across LinkedIn, Instagram, X and GBP."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells an executive their current board update is wrong and then hands them nothing they could produce before Thursday. 'Write the page' is not a page. Fixed with an explicit entry structure and a populated checklist that functions as the page."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram caption ends on 'Swipe for what a board-ready answer actually contains' — a withheld payoff, rejected on sight by the standard, and the weakest available caption shape. checklist_items was empty, forfeiting the save hook on the single most saveable concept in the package. X posts 1 and 2 restate each other rather than progress. All three fixed."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The line 'answers a question that has already moved on' appears in near-identical form on LinkedIn, Facebook and Instagram — one text across three channels, directly contrary to channel doctrine. The CTA label 'See our approach' is the generic default. Each channel now carries a distinct expression; CTA label made concrete."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'none of them are technical' (subject-verb agreement), 'probe' four times in one paragraph, a filler sentence ('Most leadership teams are still rehearsing the old version of the question') that restates the preceding paragraph, and a GBP post running past the 700-character ceiling. All corrected; LinkedIn now sits near 1,540 characters, GBP near 660, Facebook near 770."
+    },
+    {
+      "role": "Final test — could any MSP have published this?",
+      "finding": "The draft: yes. The revision: not comfortably. The five-field entry structure, the 2026 AI-governance lines, and the 2am authority test grounded in ProLink's own verified help desk facts make the piece hard to lift under another logo without the operational claim becoming false."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The five fields still omit the only field that makes an entry defensible to an insurer, an acquirer, or counsel: what holds the exposure down while the accepted risk stands. As drafted, the model entry 'left MFA exemptions in place for two executives; accepted the exposure knowingly' publishes bad practice as good governance — it is an admission with no compensating control, no condition, and no removal plan. Fix: replace the third field with 'the risk accepted on purpose and what makes it tolerable', and rebuild every hypothetical entry to carry that clause."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Internal inconsistency at the center of the concept. The core idea and every channel claim boards now ask 'when they were told' — but none of the five fields records disclosure, so the artifact does not answer the question the post says boards are asking. Fix: state explicitly that the date on each entry is the disclosure record, and close LinkedIn, X and the takeaway slide on it. It also removes the need for the weaker closing line about product inventories, which the caption and card headline already carry."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel is specified as copy, not as design — slides 04 and 06 are the two most visual ideas in the package (a five-field row anatomy, a then/now comparison) and both are written as body paragraphs, which is how a ProLink carousel ends up looking like anyone's carousel. Separately, the same four-fact credential stack appears verbatim on GBP and on the Instagram CTA slide, which reads as promotion and breaks the one-idea-per-channel doctrine. Fix: add per-slide art direction to the house system, render 02 and 04 as typographic diagrams, and strip the Instagram CTA to the founding fact only, leaving the help-desk facts to GBP where they are advisory."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
