@@ -2151,6 +2151,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-11",
+      "idea_id": "S256",
+      "theme": "creative_surprise",
+      "format": "myth",
+      "title": "Most security advice fails because it assumes free time",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          }
+        }
+      }
     }
   ]
 }
