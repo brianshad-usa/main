@@ -981,6 +981,25 @@ gtag('js', new Date());
 gtag('config', 'AW-1068497497');
 gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 </script>
+<!-- Microsoft UET tag (Bing Ads) — tag 97275167 -->
+<script>
+    (function(w, d, t, u, o) {{
+        w[u] = w[u] || [], o.ts = (new Date).getTime();
+        var n = d.createElement(t);
+        n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");
+        n.async = 1, n.onload = n.onreadystatechange = function() {{
+            var s = this.readyState;
+            s && "loaded" !== s && "complete" !== s ||
+            (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),
+            n.onload = n.onreadystatechange = null)
+    }};
+        var i = d.getElementsByTagName(t)[0];
+        i.parentNode.insertBefore(n, i);
+    }})(window, document, "script", "uetq", {{
+        ti:"97275167",
+        enableAutoSpaTracking: true
+    }});
+</script>
 <style>
 .blog-index-hero {{
   background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
