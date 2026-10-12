@@ -1,0 +1,158 @@
+{
+  "post": "Picture a Tuesday. Your controller gets a wire approval that looks like it came from you. You are unreachable, and email is behaving strangely. Three people have to decide something in the next ten minutes.\n\nMost businesses have a plan for that. Almost none have rehearsed it.\n\nOne hour closes the gap. Laptops down. Read one scenario aloud. Decide who declares an incident and who backs them up. Agree on the second communication channel for when email cannot be trusted, and confirm who already has access to it. Walk through payroll, wire holds and insurance notification.\n\nThen write three gaps, give each an owner and a date, and stop.\n\nOne rule keeps the hour honest: \"we'd call IT\" is not an answer.",
+  "headline": "The first ten minutes are not a technical problem",
+  "cta_label": "Get the one-page run sheet",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/contact",
+  "image_file": "2026-10-12-s244-card.png",
+  "image_file_jpg": "2026-10-12-s244-card.jpg",
+  "theme": "continuity",
+  "idea_id": "S244",
+  "core_idea": "The least rehearsed part of an incident is the first ten minutes of human decision-making, and it has become harder because the evidence executives reason from is now cheap to forge — which makes verification a governance decision a leadership team can rehearse in one hour without a consultant.",
+  "channels": {
+    "linkedin": "Most continuity plans are tested everywhere except the place they break: minute three, when three people have to decide something with incomplete information.\n\nThat has gotten harder for a reason worth naming. The evidence executives used to reason from — a voice on the phone, a face on video, an email in a familiar style — is now cheap to forge. Verification can no longer come from the artifact; it has to come from a channel and a person agreed in advance. Which makes it a governance question, settled in a conference room rather than a SOC.\n\nYou can rehearse that in an hour.\n\n0–5. Read one scenario aloud. A wire approval appears to come from the CEO, who is unreachable. Email is behaving oddly. Laptops closed, and the IT lead listens rather than answers.\n\n5–20. Who declares this an incident? Name a person, not a department. Their backup matters more, because the first choice will be unreachable at some point. Then the expensive question: who can halt a payment or take a system offline?\n\n20–35. Verification and voice. If email cannot be trusted, what is the second channel, and who has access to it today? Who speaks for the company externally?\n\n35–50. Obligations. Payroll timing, wire holds, cyber insurance notification requirements, contracts that require customer notice.\n\n50–60. Write three gaps. Each gets an owner and a date. Nothing else gets written.\n\nOne ground rule decides whether the hour works: \"we'd call IT\" is not an answer.\n\nAnalysis, not prediction: the second exercise runs faster than the first, because the arguments have already happened.",
+    "facebook": "Picture a Tuesday. Your controller gets a wire approval that looks like it came from you. You are unreachable, and email is behaving strangely. Three people have to decide something in the next ten minutes.\n\nMost businesses have a plan for that. Almost none have rehearsed it.\n\nOne hour closes the gap. Laptops down. Read one scenario aloud. Decide who declares an incident and who backs them up. Agree on the second communication channel for when email cannot be trusted, and confirm who already has access to it. Walk through payroll, wire holds and insurance notification.\n\nThen write three gaps, give each an owner and a date, and stop.\n\nOne rule keeps the hour honest: \"we'd call IT\" is not an answer.",
+    "gbp": "A one-hour drill most leadership teams have never run. Close the laptops. Read a single scenario aloud — a wire approval that appears to come from the owner, who is unreachable, and email nobody fully trusts. Then answer four questions: who declares an incident, who backs that person up, which channel you move to when email is suspect, and who speaks for the company. Finish by writing three gaps, each with an owner and a date.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. If you want the one-page version of this run sheet, ask for it.",
+    "x": [
+      "A voice on the phone, a face on video, an email in a familiar style — all cheap to forge now. So verification can no longer come from the artifact. It comes from a channel and a person agreed in advance. That is a conference room decision, not a SOC decision.",
+      "The one-hour tabletop. 0-5: read one scenario aloud, laptops closed. 5-20: who declares the incident, and who backs them up. 20-35: the second channel when email is suspect, and who speaks externally. 35-50: payroll, wire holds, insurance notice, counsel.",
+      "Final ten minutes: three gaps, each with an owner and a date. Nothing else. A tabletop that produces confidence failed. One that produces a short list of false assumptions worked. Ground rule throughout: \"we'd call IT\" is not an answer."
+    ],
+    "instagram_caption": "The least rehearsed part of an incident is the first ten minutes of human decision-making. Not the restore, not the forensics — the moment three people have to decide something with incomplete information and evidence that may itself be fake.\n\nWhat follows is a facilitation script any leadership team can run in an hour, with no consultant and no software. Book the room, close the laptops, and bring the ground rule: \"we'd call IT\" is not an answer.\n\nThe measure of a good exercise is not how calm everyone felt. It is the length of the list you leave with.\n\n#cyberresilience #businesscontinuity #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "stat",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "stat_hero",
+    "register": "stat_insight",
+    "channels": {
+      "linkedin": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "facebook": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "gbp": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "instagram": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "x": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "REMOVED(F003): the average ticket first-response time metric was struck from LinkedIn, X, the Instagram carousel and the card headline. The draft used it as a counterweight to breach-decision latency, which implied an incident-response commitment not covered by the verified facts. A help desk first-response metric is not an incident-response SLA and will not be presented as one.",
+    "FACT(F012): Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999 (GBP, Instagram endcap)",
+    "FACT(F002): the help desk is in-house, not outsourced (Instagram endcap)",
+    "FACT(F008): the help desk is US-based (Instagram endcap)",
+    "FACT(F007): phone calls are answered live by the in-house team (Instagram endcap, phrased without implying incident response)",
+    "ANALYSIS: the first minutes of an incident are dominated by authority and verification decisions rather than technical response, and are the least rehearsed part of most continuity plans",
+    "ANALYSIS: because voice, video and writing style are inexpensive to synthesize, verification has shifted from the artifact to a pre-agreed channel and person — stated as analysis, with no statistic, named incident, vendor capability or research finding attached",
+    "ANALYSIS: a second exercise runs faster than the first because the authority arguments have already been settled — labeled as analysis in the LinkedIn post",
+    "OPINION: the correct output of a tabletop is a short list of falsified assumptions with owners and dates, not a feeling of preparedness",
+    "OPINION: three action items is the right ceiling for a one-hour exercise",
+    "ILLUSTRATIVE SCENARIO: the wire-approval prompt is a generic facilitation device, not a client incident, a named case, or a reported event. No client is named or implied.",
+    "NO EXTERNAL STATISTICS CITED: no industry, breach-cost, downtime, fraud-volume or attacker-behaviour numbers appear in any channel. No regulation, deadline or notification window is quantified.",
+    "NO CERTIFICATION, PARTNERSHIP OR COMPLIANCE CLAIM MADE. NO COMPETITOR NAMED."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft anchors four of five channels on our own help desk metric. A post about rehearsing executive decision-making opens with a vendor SLA — that inverts the value exchange and reads as MSP marketing wearing an editorial jacket. The metric earns one restrained appearance at most, and not as the lede."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The central rhetorical move — 'our 15 minutes vs. your 15 minutes' — is a false equivalence. Average ticket first-response time is a help desk service metric for routine tickets. Placing it beside breach-decision latency implies an incident-response commitment we have not verified and do not claim. Strike the comparison everywhere; it is the one genuinely unsound sentence in the package."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The scenario is business email compromise but the exercise never names out-of-band verification as the control being tested, and it omits the single most expensive decision in the first hour: who is authorized to halt a payment or take a system offline. Added both. The insurance language stays generic — no invented notification deadline, correctly."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft could have run in 2019. The 2026 reason the first ten minutes got harder is that the evidence executives reason from — voice, video, writing style — is now cheap to forge, so verification can no longer come from the artifact. That turn is the piece's actual insight and it was missing. Stated as analysis, with no fabricated numbers or incidents."
+    },
+    {
+      "role": "CIO",
+      "finding": "Without a ground rule, every tabletop collapses into 'we'd call IT' and becomes a technology drill. Added that as an explicit rule and put the IT lead in the room as a listener, not an answerer — which is also what makes the hour produce governance findings rather than a ticket queue."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Instagram slide 2 spent the highest-attention position in the carousel on a company metric, so the deck had a hook and then an ad, with no problem statement. Rebuilt the sequence: hook, what goes untested, why it is harder now, then the run of show."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No visual system was specified, which guarantees generic output. Added an explicit direction: a single horizontal 60-minute timeline bar as the recurring system element, one typographic scale, large numerals for time blocks, no imagery of any kind. The timeline is what makes the carousel recognizable before the logo."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The CTA offered 'the full facilitation script' while the post already contained the script, so the offer had no residual value. Reframed as the one-page run sheet — a format, not a secret. Also: 'fifteen minutes' was too generous a decision window for the scenario described; ten reads truer and sharper."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread opened with our own metric, which is the least shareable sentence available. Reopened on the forgeable-evidence observation, which is the quotable line. Instagram caption also carried a redundant 'Save it' engagement ask on top of a CTA slide — removed; one CTA only."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Restraint is the brand asset here. A publication that declines to insert its own performance number into a piece about the reader's governance gap is more credible than one that cannot resist. The verified facts now appear once, in the GBP close and the carousel endcap, as provenance rather than proof."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three concrete defects: cta_label 'Get the script' paired with cta_type BOOK_APPOINTMENT (mismatch, now LEARN_MORE); checklist_items left empty on a package whose entire payload is a checklist (now populated); and consecutive sentences opening with the same word in Facebook ('Decide... Decide...') and in the proposed slide copy ('Not... Not...'). All corrected. Also normalized numerals vs. words across channels."
+    },
+    {
+      "role": "Ultimate test — could any MSP have published this?",
+      "finding": "The draft: yes, trivially, because its spine was a help desk SLA. The revision: no. The forgeable-evidence governance argument, the 'we'd call IT is not an answer' ground rule, the three-gap ceiling, and the deliberate refusal to quote our own response metric in a piece about response are a combination a typical MSP post would not arrive at and would not want."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

@@ -2209,6 +2209,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-12",
+      "idea_id": "S244",
+      "theme": "continuity",
+      "format": "framework",
+      "title": "A tabletop exercise you can run in one hour",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight",
+        "channels": {
+          "linkedin": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "facebook": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "gbp": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "instagram": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "x": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          }
+        }
+      }
     }
   ]
 }
