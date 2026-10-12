@@ -63,12 +63,27 @@ def _sha1(p):
     return h.hexdigest()
 
 
+_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+       "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
+
+
 def _head_ok(url):
+    """Browser-like GET of the first bytes. Cloudflare commonly 403s a bare
+    HEAD from a default Python user-agent, which would look like 'not live'."""
+    if "--skip-check" in sys.argv:
+        return True
     try:
-        req = urllib.request.Request(url, method="HEAD")
+        req = urllib.request.Request(url, headers={"User-Agent": _UA, "Range": "bytes=0-1023"})
         with urllib.request.urlopen(req, timeout=20) as r:
-            return r.status == 200
-    except Exception:
+            ok = r.status in (200, 206) and "image" in (r.headers.get("Content-Type") or "")
+            if not ok:
+                print(f"   check: {url} -> HTTP {r.status} {r.headers.get('Content-Type')}")
+            return ok
+    except urllib.error.HTTPError as e:
+        print(f"   check: {url} -> HTTP {e.code}")
+        return False
+    except Exception as e:
+        print(f"   check: {url} -> {e}")
         return False
 
 
