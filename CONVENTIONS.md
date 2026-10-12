@@ -196,3 +196,28 @@ bypass the guard; fix the content instead.
   `gbp_apply_batch1.py` / `gbp_apply_batch2.py` (validate-first, backup JSON
   before any write), `gbp_reviews.py` (fetch unreplied -> draft -> post).
   Primary-category changes are made manually in the dashboard, solo.
+
+## Microsoft UET tag / Bing Ads conversions (2026-10-12)
+
+- **Microsoft UET base tag `ti=97275167`** is on every page, placed DIRECTLY AFTER
+  the Google `gtag.js` block in `<head>` (incl. `generate_blog.py`'s post AND index
+  templates, so new blog posts carry it). The tag id is public by design — no
+  secret. Idempotency marker: `ti:"97275167"`. Deployed site-wide via a one-shot
+  content-anchored script (anchor = the gtag include + its inline-config
+  `</script>`), 162 pages.
+- **Conversion events mirror the Google events and live where the gtag event
+  actually fires now**, NOT where `UET_DEPLOYMENT_SPEC.md` (2026-10-12) assumed:
+  - Form success `uetq.push('event','submit_lead_form')` → in **`contact-form.js`**
+    (shared handler, 15 pages) beside the gtag form-conversion, and in
+    **`contact.html`**'s inline success branch. The per-page inline
+    `gtag_report_conversion()` snippets are **dead** (the capture-phase
+    `contact-form.js` overrides submit and fires the conversion itself), so a UET
+    push there would never run — do not add one.
+  - Phone click `uetq.push('event','phone_call_click')` → beside the gtag
+    `tel:` click-conversion (`AW-1068497497/LKCuCL275MkcENn0v_0D`) in the 108
+    pages that carry the delegated tel: listener.
+- Spec §2c (it-help-desk "UET event goes here" placeholder) was moot:
+  `it-help-desk.html` has **no form** — it gets base + phone only, like any page.
+- Turnstile blocks automated form submits, so the `submit_lead_form` beacon can't
+  be self-tested from a headless browser — confirm it with a real human submit or
+  the UET Tag Helper. Base-tag `bat.js` load IS verifiable on any page load.
