@@ -23,6 +23,7 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - [Outsourced IT Services](https://prolinksystems.com/outsourced-it-services-los-angeles): Replace an in-house IT department with a flat-rate team of local engineers, ideal for businesses with 5 to 100 employees.
 - [Microsoft 365 Support](https://prolinksystems.com/microsoft-365-support-los-angeles): Microsoft 365 setup, migration, and management - Exchange, Teams, SharePoint, Azure AD, security hardening, and licensing optimization.
 - [Network Support & Management](https://prolinksystems.com/network-support-los-angeles): 24/7 network monitoring, business WiFi design, firewall, VPN, and network security across the LA metro.
+- [Virtual CIO (vCIO) & IT Consulting](https://prolinksystems.com/virtual-cio): Fractional CIO leadership for LA businesses - strategic technology planning, budgeting, security strategy, and vendor management.
 - [All Services Overview](https://prolinksystems.com/services): Full summary of Pro Link Systems' IT service offerings.
 
 ## Cybersecurity
@@ -98,6 +99,9 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - [How to Choose a Managed IT Provider in Los Angeles](https://prolinksystems.com/how-to-choose-managed-it-provider-los-angeles): Buyer's guide - what to look for, red flags to avoid, and the questions to ask before hiring a managed IT company in LA.
 - [Managed IT Services Pricing in Los Angeles (2026)](https://prolinksystems.com/managed-it-services-pricing-los-angeles): What managed IT costs in Los Angeles - pricing models, typical $75-200 per user per month, and what should be included at each service tier.
 - [Los Angeles Business Cybersecurity Report 2026](https://prolinksystems.com/la-business-cybersecurity-report-2026): The state of cybersecurity for LA businesses in 2026 - top threats (ransomware, BEC, phishing), industry-specific risk by sector, compliance frameworks (HIPAA, PCI DSS, CMMC, SOC 2, CCPA), an industry-benchmark data table, and an 8-point security checklist. Benchmark figures are sourced and attributed to IBM, the Verizon DBIR, and the FBI IC3.
+- [What Does a vCIO Do?](https://prolinksystems.com/what-does-a-vcio-do): A virtual CIO owns technology planning, budgeting, roadmap, security strategy, vendor management, and compliance guidance for a business.
+- [When Your Business Needs a vCIO](https://prolinksystems.com/when-your-business-needs-a-vcio): The growth stages and warning signs that call for strategic IT leadership, budgeting, and a technology roadmap.
+- [vCIO vs. Break-Fix vs. Managed IT](https://prolinksystems.com/vcio-vs-break-fix-vs-managed-it): What each IT model covers, where each costs more than it looks, and how strategy and operations fit together.
 
 ## Company
 
@@ -105,6 +109,14 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - [Contact](https://prolinksystems.com/contact): Phone, email, address, and contact form.
 - [Blog](https://prolinksystems.com/blog/): Practical IT, cybersecurity, and managed IT guidance for Los Angeles businesses.
 
+## Resources
+
+- [Business Continuity Checklist](https://prolinksystems.com/continuity-checklist): Free checklist for Southern California firms to stay open through PSPS shutoffs, wildfire, earthquakes, and outages (PDF).
+- [Incident Response Playbook](https://prolinksystems.com/incident-response-playbook): The incident response plan Pro Link runs - NIST SP 800-61 severity tiers, roles, a first-60-minutes checklist, and runbooks (free PDF).
+- [Next Year's Technology Plan](https://prolinksystems.com/technology-plan): A free framework for building next year's technology budget - start with the business, replace on a schedule, and fund resilience.
+- [Holiday POS Hardening Checklist](https://prolinksystems.com/pos-holiday-checklist): A free, ungated checklist to lock down retail point of sale before the holiday freeze - hardening and PCI obligations.
+
 ## Optional
 
 - [Legal / Terms](https://prolinksystems.com/legal): Managed services agreement and terms of service.
+- [Privacy Policy](https://prolinksystems.com/privacy): What information the website collects, how it is used and shared, and the choices available to you.
