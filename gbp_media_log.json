@@ -11,6 +11,48 @@
       "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhAmcEWoTGGnG0VTd8w12Sul",
       "category": "AT_WORK",
       "at": "2026-10-12T14:16:53"
+    },
+    "74f823bd208cd84ab7ef0e55e119d96c7681e004": {
+      "file": "leadership-interview",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhAJZdztWKcu-0bFcisP2Q_w",
+      "category": "TEAMS",
+      "at": "2026-10-12T14:16:57"
+    },
+    "4206bfea50052f7be2070b48920cbb1930eb6b7f": {
+      "file": "office-team-at-work",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhCkQug2irSyuumye06zhJ6t",
+      "category": "TEAMS",
+      "at": "2026-10-12T14:17:03"
+    },
+    "8e6db45c7c79ef57fb0bf9f9ed2f08ae19d0da1c": {
+      "file": "onsite-assistance",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhDU6PLyPdRqk_vUCnfuOKCU",
+      "category": "AT_WORK",
+      "at": "2026-10-12T14:17:09"
+    },
+    "f8414b5ab46fa46bbc4f23ee34db3fe56530867d": {
+      "file": "onsite-computer-support",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhAdFQJVx39K04bxc5qLdjGW",
+      "category": "AT_WORK",
+      "at": "2026-10-12T14:17:12"
+    },
+    "1049cd1852ad2d9baa11dd91a26481a13b6e0a77": {
+      "file": "server-rack-support",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhAzB_XQXM93QrOTbBDaidx2",
+      "category": "AT_WORK",
+      "at": "2026-10-12T14:17:15"
+    },
+    "155dd759614780bf652177acfe5990fdbc5f2637": {
+      "file": "technology-planning",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhAe8K730L9-xGE6TMpbHYLQ",
+      "category": "AT_WORK",
+      "at": "2026-10-12T14:17:19"
+    },
+    "f46490ce80c968bbf1d7a627002160f1c7dbd863": {
+      "file": "workstation-consultation",
+      "media": "accounts/106570312922328987685/locations/7712242499324845523/media/CIABIhAFkRDl2cruvL-HEKyLH_3w",
+      "category": "AT_WORK",
+      "at": "2026-10-12T14:17:21"
     }
   }
 }
