@@ -1977,6 +1977,238 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-08",
+      "idea_id": "S141",
+      "theme": "soc_detection",
+      "format": "explainer",
+      "title": "What security automation should and should not decide",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive",
+        "channels": {
+          "linkedin": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "facebook": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "gbp": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "instagram": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "x": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "idea_id": "S231",
+      "theme": "exec_strategy",
+      "format": "economics",
+      "title": "Reading an IT proposal like a CFO",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "idea_id": "S124",
+      "theme": "compliance",
+      "format": "linkedin_analysis",
+      "title": "Boards are being asked about cyber in a way they weren't three years ago",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "x": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "idea_id": "S256",
+      "theme": "creative_surprise",
+      "format": "myth",
+      "title": "Most security advice fails because it assumes free time",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          }
+        }
+      }
     }
   ]
 }
