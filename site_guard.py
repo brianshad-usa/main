@@ -310,6 +310,36 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
                 V(17, r, f"possible {key} literal (value starts {val[:6]}...)")
 
 # --------------------------------------------------------------------------- #
+# 18: llms.txt integrity -- every indexable root (non-blog) page is listed, no
+#     listed URL 404s, and no noindexed page is listed. llms.txt is a CURATED
+#     index: the homepage is its header and blog POSTS are covered by the single
+#     /blog/ link, so both are exempt. Only location pages are auto-synced
+#     (update_site_links.py), so service/guide/resource pages used to drift --
+#     this guards against that.
+# --------------------------------------------------------------------------- #
+LLMS_EXEMPT = {"index.html", "404.html", "thank-you.html"}
+llms_path = os.path.join(ROOT, "llms.txt")
+if not os.path.exists(llms_path):
+    V(18, "llms.txt", "missing")
+else:
+    llms_src = read(llms_path)
+    llms_files = set()
+    for u in re.findall(r"\((https?://(?:www\.)?prolinksystems\.com[^)]*)\)", llms_src):
+        f = url_to_file(u)
+        llms_files.add(f)
+        if not os.path.exists(os.path.join(ROOT, f)):
+            V(18, "llms.txt", f"link maps to a missing file: {u} -> {f}")
+        elif f in pages and pages[f]["noindex"]:
+            V(18, "llms.txt", f"noindexed page listed: {u}")
+    for name, pg in pages.items():
+        if "/" in name:                      # blog posts etc. -> covered by the /blog/ link
+            continue
+        if os.path.basename(name) in LLMS_EXEMPT or pg["noindex"]:
+            continue
+        if name not in llms_files:
+            V(18, name, f"indexable page missing from llms.txt (expected a link to {page_url(name)})")
+
+# --------------------------------------------------------------------------- #
 # Report
 # --------------------------------------------------------------------------- #
 advisory = "--fix-report" in sys.argv[1:]

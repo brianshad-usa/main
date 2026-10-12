@@ -52,6 +52,11 @@ bypass the guard; fix the content instead.
 - JSON-LD must parse; `ServiceChannel.servicePhone` must be a ContactPoint object,
   not a string (failed validation once).
 - Indexable pages appear in `sitemap.xml`; noindexed pages do not.
+- `llms.txt` lists every indexable top-level (non-blog) page and no listed URL
+  404s (guard check 18). Blog posts are covered by the single `/blog/` link and
+  the homepage is the file header, so both are exempt. `update_site_links.py`
+  only auto-syncs LOCATION pages into llms.txt — new service/guide/resource
+  pages need a manual llms.txt entry (the guard now enforces this).
 - Superseded/duplicate pages are noindexed + canonicaled to their replacement,
   never deleted (links may exist).
 
