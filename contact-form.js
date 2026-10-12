@@ -65,6 +65,8 @@
           if (typeof gtag === "function") {
             gtag("event", "conversion", { send_to: "AW-1068497497/yYS5CNKQkbccENn0v_0D", value: 50.0, currency: "USD" });
           }
+          window.uetq = window.uetq || [];
+          window.uetq.push('event', 'submit_lead_form', {});
           showSuccess(form, r.json.refNumber, firstName.split(" ")[0]);
         } else {
           if (btn) { btn.disabled = false; btn.classList.remove("loading"); }
