@@ -1,0 +1,152 @@
+{
+  "post": "Your CEO gives a 40-minute talk at an industry event. Good for hiring, good for deals. It also puts 40 minutes of their voice, their phrasing, and their current priorities in front of anyone who wants them.\n\nMost people worry about the voice. Worry about the rest. A caller who sounds like your CEO and knows which deal you are closing this week does not have to be very convincing.\n\nGoing quiet is the wrong trade. Verification that does not depend on recognition is the right one: call back on a number pulled from your payroll system, never one supplied during the request, and require a second approver on any new payee or changed bank details.\n\nThen make the check easy to run. Our help desk is in-house, US-based, and staffed 24/7, and a real person picks up — no phone tree, no hold queue.",
+  "headline": "Recognition is not verification",
+  "cta_label": "Review your verification steps",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-10-13-s044-card.png",
+  "image_file_jpg": "2026-10-13-s044-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S044",
+  "core_idea": "A public talk gives an attacker two things, not one: the executive's voice and the executive's context. Voice gets the call answered; context gets the payment approved. So verification has to move off recognition entirely — onto a system of record, a second approver, and an explicit leadership statement that slowing down the boss is safe. The control lives in finance. What a good IT partner owes you is making the check fast enough at 7pm that someone actually performs it.",
+  "channels": {
+    "linkedin": "Consider the standing instruction a careful CFO gives her controller: if I ever call you about a wire, hang up and call me back on the number in the payroll system. She trusts him completely. She also speaks at four conferences a year.\n\nVoice cloning is the usual framing here, and it is too narrow. A recorded talk hands an attacker two separate assets. One is audio. The other is pattern — how an executive phrases a request, what she is visibly working on, the acquisition or audit or key hire she described from a stage last month.\n\nAudio makes the call sound like her. Context makes the request sound reasonable. The second asset is the one that moves money, and listening harder does not defeat it.\n\nWhich is why the instinct to go quiet is understandable and still wrong. Visibility is how a mid-market company recruits, raises, and sells. Pulling executives off stage pays a certain cost to avoid an uncertain one.\n\nMove the proof instead, onto something an outsider cannot reproduce. Callback on a number pulled from your payroll or HR system of record — not the signature block, not a number offered during the call. Second approver on any new payee or changed bank detail. And a rule the CEO states out loud, in the room: slowing down a request from the top is never a career risk.\n\nThat last one costs nothing, and it is the part most companies skip. Verification fails where a junior employee quietly prices the career cost of doubting the boss.\n\nOne thing worth saying plainly. This control belongs to finance, not IT. What IT owes you is making the check fast enough at 7pm that a hesitating employee performs it instead of guessing.",
+    "facebook": "Your CEO gives a 40-minute talk at an industry event. Good for hiring, good for deals. It also puts 40 minutes of their voice, their phrasing, and their current priorities in front of anyone who wants them.\n\nMost people worry about the voice. Worry about the rest. A caller who sounds like your CEO and knows which deal you are closing this week does not have to be very convincing.\n\nGoing quiet is the wrong trade. Verification that does not depend on recognition is the right one: call back on a number pulled from your payroll system, never one supplied during the request, and require a second approver on any new payee or changed bank details.\n\nThen make the check easy to run. Our help desk is in-house, US-based, and staffed 24/7, and a real person picks up — no phone tree, no hold queue.",
+    "gbp": "If your executives speak publicly, assume two things are now available to anyone: recordings of their voice, and a clear picture of what they are working on. Both show up in the same phone call, and the second one is what makes the request sound reasonable.\n\nPractical steps for an LA business: verify any payment or bank-detail change by calling back on a number pulled from your payroll or HR system, never a number supplied during the request. Require a second approver on new payees. Tell your finance team, in plain words, that slowing down an urgent request from an executive is never held against them.\n\nOur Woodland Hills help desk is in-house, US-based, and staffed 24/7, with calls answered live — which matters at the moment someone is unsure.\n\nHappy to walk through your verification steps if you want a second opinion.",
+    "x": [
+      "Everyone worries an attacker can clone an executive's voice. The sharper problem is the transcript: how she phrases a request, what she said she's working on. Voice gets the call answered. Context gets the wire sent. Verify on a number nobody said out loud."
+    ],
+    "instagram_caption": "Everyone worries that someone can clone your CEO's voice. The sharper problem is everything else a public talk supplies: how she phrases a request, what she is working on, which deal is closing. Voice gets the call answered. Context gets the payment approved. So stop verifying by recognition — call back on a number pulled from your system of record, require a second approver on new payees, and say out loud that slowing down the boss is never a career risk. #deepfakefraud #AIsecurity #LAbusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "photo_light",
+    "format": "single_image",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "client_value",
+    "channels": {
+      "linkedin": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "facebook": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "gbp": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "instagram": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "x": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 97,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: executives who speak publicly leave recordings of their voice and a public record of their current priorities",
+    "ANALYSIS: the contextual detail in a public talk is what makes an impersonated request plausible, independent of audio quality",
+    "ANALYSIS: recognition of a familiar voice is no longer a reliable identity control",
+    "OPINION (labeled 'our view' in-copy): reducing executive public visibility is a poor trade for a mid-market company",
+    "ANALYSIS/RECOMMENDATION: callback on a number from a system of record, and a second approver on new payees or changed bank details, are the effective controls",
+    "ANALYSIS: verification is defeated by employees' perceived career cost of questioning an executive — a mechanism claim, not a frequency claim",
+    "ASSIGNMENT OF OWNERSHIP (opinion): this control belongs to finance; IT's contribution is availability and speed of the check",
+    "FACT(F002, F008, F001): the Pro Link Systems help desk is in-house, US-based, and staffed 24/7",
+    "FACT(F007): calls are answered live by the in-house team — no phone tree, no hold queue",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "REMOVED: the 15-minute average first-response figure (F003) — accurate but it undercut the restraint of the argument; no metric is required to make this point",
+    "ILLUSTRATIVE SCENARIO (not a client): the CFO/controller instruction and the 40-minute talk are composed examples; no client named, implied, or described",
+    "NO industry, breach, or frequency statistics appear anywhere in this package"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The help desk credentials appear in four of five channels in near-identical wording, and in three cases they are the closing beat. That converts an editorial idea into a capability recital. Worse, the logic is strained: a help desk does not verify whether a caller is really your CEO. The benefit claim has to be stated honestly — IT makes the check fast, finance owns the control — or the whole piece reads as a bolted-on pitch."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel's last three slides (human part, what you get, CTA) all pull toward ProLink, so the narrative arc collapses into a sales arc exactly where the takeaway should land. The story needs one idea slide at the end that belongs to the reader, and at most one restrained promotional slide."
+    },
+    {
+      "role": "Art Director",
+      "finding": "There is no visual direction anywhere in the package — slides are text blocks with no system, no diagram, no hierarchy spec. The standards require carousels that read as editorial design before the logo appears. Slide 4 of the draft also carries three dense sentences, which is a wall of small type at 1080px."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two problems. 'Analysis, not a prediction' sits inside display copy as a visible process artifact; truth discipline should be legible in the sentence itself. And 'earnings calls' is wrong for the stated audience — a 20-to-500 seat private LA business does not hold earnings calls, which quietly tells the reader this was written for someone else."
+    },
+    {
+      "role": "CIO",
+      "finding": "The controls are generic finance hygiene. 'A number in the directory' is weak — directories get edited, and signature blocks are attacker-supplied. The instruction must name a system of record (payroll/HR), and the package must say plainly who owns this control. Routing wire doubt to the IT help desk as the primary answer would be bad advice; IT's role is speed and availability of the check, not adjudication of the payment."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Most of these attempts fail at the moment a person pauses' is a frequency claim with no source — a statistic without a number. It must become a mechanism claim. Also, the draft treats this as voice-only. In practice the voice rides on a pretext built from public material, and that pretext is the part that defeats recognition. The piece undersells its own threat model."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The concept is titled 'your executives are training data' and then never delivers it. The draft only says cloning exists, which is 2024 content. The genuinely 2026 observation is that a published talk yields two assets — audio and context — and that context (phrasing, current priorities, named deals) is what makes a fraudulent request plausible. Lead with that or the concept is ordinary."
+    },
+    {
+      "role": "CIO / Executive Audience Representative",
+      "finding": "A CEO reading this cannot tell what they personally own. The one action only an executive can take — stating publicly that slowing down a request from the top carries no career cost — is buried in a subordinate clause. It should be its own beat, because it is free and it is the part that actually fails."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "#businessemailcompromise is a dead tag — long, low-volume, and it describes a different attack than the one in the post. The Instagram caption also opens with a definitional sentence rather than the sharp line; the first clause has to carry the stop."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'The value is not the speed metric' immediately after quoting the speed metric is having it both ways, and it is the only false note in the voice. Either the number earns its place or it is cut. For a piece about restraint and judgment, cut it."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three rule breaks on consecutive sentence openers: LinkedIn runs 'A callback rule... A second approver... A finance team...'; Facebook runs 'The answer is not... The answer is to...'; the X post runs 'The voice... The context...'. Also 'open 24/7' on Facebook conflicts with the verified phrasing 'operates 24/7 / staffed 24/7'."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
