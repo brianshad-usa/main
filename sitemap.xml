@@ -936,4 +936,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://prolinksystems.com/blog/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
