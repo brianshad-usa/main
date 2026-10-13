@@ -623,6 +623,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
       <a href="/about">About Us</a>
       <a href="/contact">Contact</a>
       <a href="/blog/">Blog</a>
+      <a href="/case-studies">Case Studies</a>
       <a href="/legal">Legal / Terms</a>
     </div>
     <div class="footer-col">
