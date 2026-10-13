@@ -108,6 +108,7 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - [About Pro Link Systems](https://prolinksystems.com/about): Company history, founder Brian Shad, and core values.
 - [Contact](https://prolinksystems.com/contact): Phone, email, address, and contact form.
 - [Blog](https://prolinksystems.com/blog/): Practical IT, cybersecurity, and managed IT guidance for Los Angeles businesses.
+- [Client Success Stories](https://prolinksystems.com/case-studies): 14 client case studies across healthcare, defense, legal, manufacturing, logistics, and tech — outcomes from engagements spanning up to 20+ years.
 
 ## Resources
 
