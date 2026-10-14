@@ -610,6 +610,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
     </div>
     <div class="footer-col">
       <h3>Services</h3>
+      <a href="/managed-it-services">Managed IT Services</a>
       <a href="/services#helpdesk">24/7 Help Desk</a>
       <a href="/services#cybersecurity">Cybersecurity</a>
       <a href="/services#cloud">Cloud &amp; Infrastructure</a>
