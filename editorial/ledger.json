@@ -2267,6 +2267,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-13",
+      "idea_id": "S044",
+      "theme": "ai_threats",
+      "format": "linkedin_analysis",
+      "title": "Your public-facing executives are training data",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          }
+        }
+      }
     }
   ]
 }
