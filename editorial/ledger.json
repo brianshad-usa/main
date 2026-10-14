@@ -2325,6 +2325,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-14",
+      "idea_id": "S012",
+      "theme": "ai_governance",
+      "format": "myth",
+      "title": "\"It's fine, we turned off training\"",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question",
+        "channels": {
+          "linkedin": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "facebook": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "gbp": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "instagram": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "x": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          }
+        }
+      }
     }
   ]
 }
