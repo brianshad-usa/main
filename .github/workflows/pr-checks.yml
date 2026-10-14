@@ -1,0 +1,30 @@
+name: PR Checks
+
+# Runs the site guard on every pull request so engine (and human) PRs are gated
+# before merge. Make this check REQUIRED in branch protection for `main`, then
+# low-risk engine PRs can auto-merge only when it passes.
+
+on:
+  pull_request:
+    branches: [main]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: Run site guard
+        run: python site_guard.py

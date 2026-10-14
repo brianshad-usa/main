@@ -260,3 +260,22 @@ bypass the guard; fix the content instead.
   solo dashboard task (see GBP rule above) — the highest-impact lead lever outside
   the site. Pages at organic #3–7 earned ZERO clicks because the local pack + AI
   answers sit above them; measure clicks + position on money queries, not impressions.
+
+## Autonomous SEO/GEO/AEO engine (2026-10-14)
+
+- The engine lives in the PRIVATE war-room repo (`prolink-warroom/seo/`, workflow
+  `seo-daily.yml`, 15:15 UTC daily + manual dispatch). It checks this repo out with
+  the `SITE_REPO_PAT` secret and **only ever opens pull requests** — it never pushes
+  to `main`, so the desktop auto-commit watcher and the engine cannot race.
+  LOW-risk fixes → PR labelled `automerge`; MEDIUM → `needs-review`; HIGH/external
+  → a rolling monthly GitHub issue. Reports, intelligence, ledger and state stay in
+  the war room (this repo is public — never put reports or strategy here).
+- `pr-checks.yml` runs `site_guard.py` on every pull request. Make it a REQUIRED
+  status check in branch protection BEFORE flipping `seo/config.json →
+  risk_policy.low_auto_pr` to true; GitHub auto-merge merges instantly when no
+  checks are required.
+- Engine commits are authored `prolink-seo-engine`. If the guard ever fails on
+  `main` within 48h of an engine merge, the engine blocks further changes and names
+  the commit to revert (rollback = revert PR).
+- Daily audits run on the local checkout (complete, quota-free); `site_guard.py`
+  remains the invariant gate and must not be weakened to make an engine fix pass.
