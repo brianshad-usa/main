@@ -226,3 +226,33 @@ bypass the guard; fix the content instead.
 - Turnstile blocks automated form submits, so the `submit_lead_form` beacon can't
   be self-tested from a headless browser — confirm it with a real human submit or
   the UET Tag Helper. Base-tag `bat.js` load IS verifiable on any page load.
+
+## SEO / local-search push (2026-10-14)
+
+- **City-page titles/H1s are dual-intent**: "Managed IT Services & IT Support {City} |
+  Pro Link" / H1 "Managed IT Services & IT Support in {City}, CA". GSC + Ahrefs showed
+  "it support {city}" and "it services {city}" OUT-volume "managed it services {city}"
+  (Pasadena 600 vs 300/mo, Burbank 600, Irvine 700) while every title targeted only
+  the latter. New city pages must keep both intents (update gen_location_pages
+  CITIES["title"] to this formula before generating).
+- **Cannibalization split**: `/managed-it-services` (hub) owns "Managed IT Services
+  Los Angeles"; `/managed-it-services-los-angeles` owns "IT Support Los Angeles". The
+  hub was **"Crawled – currently not indexed"** (Google treated it as a duplicate of
+  the LA page) despite 142 inbound links. Fixed by differentiating it (title/H1, a
+  6-Q FAQ section with FAQPage + LocalBusiness + BreadcrumbList schema) and making it
+  the FIRST footer "Services" link site-wide plus a homepage link. **Request
+  Indexing must be done in the GSC UI** — the API's URL Inspection is read-only.
+- Meta descriptions use only verifiable hooks: flat-rate, "no long-term contracts"
+  (never "no contracts" — there is an MSA), since 1999, "Rated 4.9/5 on Google"
+  (the live GBP rating). No aggregateRating markup: Google ignores self-serving
+  review stars on LocalBusiness/Organization.
+- Every city page now carries Speakable, office GeoCoordinates (34.1684, -118.5997
+  = the HQ; never fake per-city coords), a "Nearby service areas" section and a
+  `/case-studies` proof link. `update_site_links.py` NEARBY_ADD only appends to
+  existing Nearby blocks; `apply_cs2`-style inserts are needed for pages without one.
+- Local pack reality: Pro Link is ABSENT from the Woodland Hills local pack (its own
+  city — TeamLogic IT / Intelligent IT / Heed hold it) and Places returns no IT
+  category type for the listing. GBP primary/secondary categories are a manual,
+  solo dashboard task (see GBP rule above) — the highest-impact lead lever outside
+  the site. Pages at organic #3–7 earned ZERO clicks because the local pack + AI
+  answers sit above them; measure clicks + position on money queries, not impressions.
