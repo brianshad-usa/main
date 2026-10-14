@@ -581,6 +581,7 @@ NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/services">Services</a>
+    <a href="/case-studies">Case Studies</a>
     <a href="/about">About</a>
     <a href="/blog/" class="active">Blog</a>
     <a href="/contact">Contact</a>
@@ -596,6 +597,7 @@ NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
 <div class="mobile-menu" id="mobile-menu">
   <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
   <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
   <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
   <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
   <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
