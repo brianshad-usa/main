@@ -233,8 +233,12 @@ bypass the guard; fix the content instead.
   Pro Link" / H1 "Managed IT Services & IT Support in {City}, CA". GSC + Ahrefs showed
   "it support {city}" and "it services {city}" OUT-volume "managed it services {city}"
   (Pasadena 600 vs 300/mo, Burbank 600, Irvine 700) while every title targeted only
-  the latter. New city pages must keep both intents (update gen_location_pages
-  CITIES["title"] to this formula before generating).
+  the latter. `gen_location_pages.py` was synced to the live pages on 2026-10-14
+  (CITIES titles/metas = live values; `body()` H1 + the Nearby `/case-studies` proof
+  link patched; render-tested), so new CITIES entries and `--force` regenerations
+  inherit the formula — write new entries' title/meta in the same dual-intent form
+  (<=60 / <=155 rendered chars). Sync method: copy live page values INTO CITIES
+  (the live page is the source of truth), never the reverse.
 - **Cannibalization split**: `/managed-it-services` (hub) owns "Managed IT Services
   Los Angeles"; `/managed-it-services-los-angeles` owns "IT Support Los Angeles". The
   hub was **"Crawled – currently not indexed"** (Google treated it as a duplicate of
