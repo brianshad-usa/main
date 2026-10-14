@@ -70,8 +70,8 @@ CITIES = [
  {
   "slug": "managed-it-services-tarzana", "city": "Tarzana", "state": "CA",
   "h1_city": "Tarzana, CA", "zips": "91356 and 91357", "zip_short": "91356 – 91357",
-  "title": "Managed IT Services Tarzana CA | Pro Link Systems",
-  "meta": "Managed IT for Tarzana businesses. Cybersecurity and 24/7 help desk for medical practices, professional firms, and Ventura Blvd offices. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Tarzana | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Tarzana businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for Tarzana's medical offices, professional services firms, and businesses along the Ventura Boulevard corridor — minutes from our Woodland Hills headquarters. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Tarzana businesses. Medical practices, professional services, and more. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Tarzana businesses. Serving Greater Los Angeles since 1999.",
@@ -114,8 +114,8 @@ CITIES = [
  {
   "slug": "managed-it-services-agoura-hills", "city": "Agoura Hills", "state": "CA",
   "h1_city": "Agoura Hills &amp; Westlake Village", "zips": "91301, 91376, 91361, and 91362", "zip_short": "91301 – 91376 &amp; 91361 – 91362",
-  "title": "Managed IT Services Agoura Hills CA | Pro Link Systems",
-  "meta": "Managed IT for Agoura Hills and Westlake Village. Cybersecurity and 24/7 help desk for biotech, corporate offices, and professional firms. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Agoura Hills | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Agoura Hills businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for the Conejo Valley's corporate headquarters, biotech and life-science companies, financial firms, and professional practices along the 101 corridor in Agoura Hills and Westlake Village. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Agoura Hills and Westlake Village businesses. Biotech, corporate offices, financial services, and more. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Agoura Hills and Westlake Village businesses. Serving Greater Los Angeles since 1999.",
@@ -158,8 +158,8 @@ CITIES = [
  {
   "slug": "managed-it-services-studio-city", "city": "Studio City", "state": "CA",
   "h1_city": "Studio City, CA", "zips": "91604 and 91614", "zip_short": "91604 – 91614",
-  "title": "Managed IT Services Studio City CA | Pro Link Systems",
-  "meta": "Managed IT for Studio City businesses. Cybersecurity and 24/7 help desk for production companies, talent agencies, and medical practices. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Studio City | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Studio City businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for Studio City's production companies, post-production houses, talent and management agencies, medical practices, and the businesses along Ventura Boulevard. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Studio City businesses. Entertainment, production, medical, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Studio City businesses. Serving Greater Los Angeles since 1999.",
@@ -202,8 +202,8 @@ CITIES = [
  {
   "slug": "managed-it-services-north-hollywood", "city": "North Hollywood", "state": "CA",
   "h1_city": "North Hollywood, CA", "zips": "91601 through 91606", "zip_short": "91601 – 91606",
-  "title": "Managed IT Services North Hollywood CA | Pro Link Systems",
-  "meta": "Managed IT for North Hollywood. Cybersecurity and 24/7 help desk for media vendors, manufacturers, and NoHo Arts District firms. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support North Hollywood | Pro Link",
+  "meta": "Managed IT services &amp; IT support for North Hollywood businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for North Hollywood's media and production-support companies, light manufacturers, healthcare providers, and the creative businesses of the NoHo Arts District. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for North Hollywood businesses. Media, manufacturing, healthcare, and creative firms. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for North Hollywood businesses. Serving Greater Los Angeles since 1999.",
@@ -246,8 +246,8 @@ CITIES = [
  {
   "slug": "managed-it-services-santa-clarita", "city": "Santa Clarita", "state": "CA",
   "h1_city": "Santa Clarita, CA", "zips": "91321, 91350, 91351, 91354, 91355, and 91387", "zip_short": "91321 – 91390",
-  "title": "Managed IT Services Santa Clarita CA | Pro Link Systems",
-  "meta": "Managed IT for Santa Clarita Valley. Cybersecurity and 24/7 help desk for aerospace, manufacturing, medical, and Valencia offices. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Santa Clarita | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Santa Clarita businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for the Santa Clarita Valley — aerospace and biomedical manufacturers in the Valencia industrial centers, healthcare providers, logistics companies, and professional firms across Valencia, Newhall, Saugus, and Canyon Country. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Santa Clarita businesses. Aerospace, manufacturing, healthcare, logistics, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Santa Clarita Valley businesses. Serving Greater Los Angeles since 1999.",
@@ -290,8 +290,8 @@ CITIES = [
  {
   "slug": "managed-it-services-simi-valley", "city": "Simi Valley", "state": "CA",
   "h1_city": "Simi Valley, CA", "zips": "93063 and 93065", "zip_short": "93063 – 93065",
-  "title": "Managed IT Services Simi Valley CA | Pro Link Systems",
-  "meta": "Managed IT for Simi Valley businesses. Cybersecurity and 24/7 help desk for aerospace, manufacturing, healthcare, and professional firms. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Simi Valley | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Simi Valley businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for Simi Valley's aerospace and defense contractors, manufacturers, healthcare providers, and professional services firms along the 118 corridor. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Simi Valley businesses. Aerospace, manufacturing, healthcare, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Simi Valley businesses. Serving Greater Los Angeles and eastern Ventura County since 1999.",
@@ -334,8 +334,8 @@ CITIES = [
  {
   "slug": "managed-it-services-downtown-los-angeles", "city": "Downtown Los Angeles", "state": "CA",
   "h1_city": "Downtown Los Angeles", "zips": "90012 through 90017, 90021, and 90071", "zip_short": "90012 – 90071",
-  "title": "Managed IT Services Downtown Los Angeles | Pro Link Systems",
-  "meta": "Managed IT for Downtown Los Angeles. Cybersecurity and 24/7 help desk for law firms, finance, and Arts District creative and tech firms. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Downtown LA | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Downtown LA businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for Downtown LA's law firms and financial companies on Bunker Hill, creative and tech firms in the Arts District, apparel businesses in the Fashion District, and healthcare providers across the urban core. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Downtown Los Angeles businesses. Law, finance, creative, tech, healthcare, and more. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Downtown Los Angeles businesses. Serving Greater Los Angeles since 1999.",
@@ -378,8 +378,8 @@ CITIES = [
  {
   "slug": "managed-it-services-west-los-angeles", "city": "West Los Angeles", "state": "CA",
   "h1_city": "West Los Angeles", "zips": "90025, 90064, 90049, and 90024", "zip_short": "90024 – 90064",
-  "title": "Managed IT Services West Los Angeles | Pro Link Systems",
-  "meta": "Managed IT for West LA, Brentwood, and Westwood. Cybersecurity and 24/7 help desk for medical, legal, entertainment, and tech firms. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support West Los Angeles | Pro Link",
+  "meta": "Managed IT services &amp; IT support for West Los Angeles businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for West LA's medical practices, law firms, entertainment and technology companies, and professional offices across Sawtelle, Brentwood, Westwood, and the Olympic and Pico corridors. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for West Los Angeles businesses. Medical, legal, entertainment, tech, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for West Los Angeles businesses. Serving Greater Los Angeles since 1999.",
@@ -423,8 +423,8 @@ CITIES = [
  {
   "slug": "managed-it-services-playa-vista", "city": "Playa Vista", "state": "CA",
   "h1_city": "Playa Vista &amp; Marina del Rey", "zips": "90094, 90292, and 90293", "zip_short": "90094 – 90293",
-  "title": "Managed IT Services Playa Vista CA | Pro Link Systems",
-  "meta": "Managed IT for Playa Vista and Marina del Rey. SOC 2-ready cloud, cybersecurity, and 24/7 help desk for Silicon Beach tech companies. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Playa Vista | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Playa Vista businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for Silicon Beach — technology and media companies in Playa Vista, Marina del Rey, and Playa del Rey that need SOC 2-ready security, cloud identity, and a help desk that keeps up with growth. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Playa Vista and Marina del Rey companies. Tech, media, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Playa Vista and Marina del Rey businesses. Serving Greater Los Angeles since 1999.",
@@ -467,8 +467,8 @@ CITIES = [
  {
   "slug": "managed-it-services-hollywood", "city": "Hollywood", "state": "CA",
   "h1_city": "Hollywood &amp; West Hollywood", "zips": "90028, 90038, 90046, 90048, 90068, and 90069", "zip_short": "90028 – 90069",
-  "title": "Managed IT Services Hollywood CA | Pro Link Systems",
-  "meta": "Managed IT for Hollywood and West Hollywood. Content-secure IT, cybersecurity, and 24/7 help desk for production, post, and agencies. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Hollywood | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Hollywood businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for Hollywood and West Hollywood — production and post-production companies, talent agencies, music and media firms, design and hospitality businesses along Sunset, Santa Monica, and Melrose. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Hollywood and West Hollywood businesses. Entertainment, media, agencies, design, and hospitality. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Hollywood and West Hollywood businesses. Serving Greater Los Angeles since 1999.",
@@ -511,8 +511,8 @@ CITIES = [
  {
   "slug": "managed-it-services-koreatown", "city": "Koreatown", "state": "CA",
   "h1_city": "Koreatown &amp; Mid-Wilshire", "zips": "90005, 90006, 90010, 90020, and 90036", "zip_short": "90005 – 90036",
-  "title": "Managed IT Services Koreatown CA | Pro Link Systems",
-  "meta": "Managed IT for Koreatown and Mid-Wilshire. Cybersecurity and 24/7 help desk for law firms, medical offices, and finance on Wilshire. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Koreatown | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Koreatown businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for Koreatown and Mid-Wilshire — law firms, medical and dental offices, banks and financial companies, and the Korean-American business community along the Wilshire corridor, Western, and Vermont. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Koreatown and Mid-Wilshire businesses. Legal, medical, finance, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Koreatown and Mid-Wilshire businesses. Serving Greater Los Angeles since 1999.",
@@ -555,8 +555,8 @@ CITIES = [
  {
   "slug": "managed-it-services-hawthorne", "city": "Hawthorne", "state": "CA",
   "h1_city": "Hawthorne &amp; Inglewood", "zips": "90250 and 90301 through 90305", "zip_short": "90250 – 90305",
-  "title": "Managed IT Services Hawthorne CA | Pro Link Systems",
-  "meta": "Managed IT for Hawthorne and Inglewood. CMMC-ready IT and 24/7 help desk for aerospace suppliers, manufacturers, and logistics. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Hawthorne | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Hawthorne businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for the South Bay aerospace corridor — defense and space suppliers, precision manufacturers, logistics operations near LAX, and the healthcare and professional businesses of Hawthorne and Inglewood. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Hawthorne and Inglewood businesses. Aerospace, manufacturing, logistics, healthcare, and more. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Hawthorne and Inglewood businesses. Serving Greater Los Angeles since 1999.",
@@ -599,8 +599,8 @@ CITIES = [
  {
   "slug": "managed-it-services-manhattan-beach", "city": "Manhattan Beach", "state": "CA",
   "h1_city": "Manhattan Beach &amp; Redondo Beach", "zips": "90266, 90254, 90277, and 90278", "zip_short": "90254 – 90278",
-  "title": "Managed IT Services Manhattan Beach | Pro Link Systems",
-  "meta": "Managed IT for Manhattan, Hermosa, and Redondo Beach. Cybersecurity and 24/7 help desk for finance, medical, legal, and tech. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Manhattan Beach | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Manhattan Beach businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for the Beach Cities — wealth managers and family offices, medical and dental practices, law firms, tech and creative companies, and the professional businesses of Manhattan Beach, Hermosa Beach, and Redondo Beach. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Manhattan Beach, Hermosa Beach, and Redondo Beach businesses. Finance, medical, legal, tech, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Manhattan Beach, Hermosa Beach, and Redondo Beach businesses. Serving Greater Los Angeles since 1999.",
@@ -643,8 +643,8 @@ CITIES = [
  {
   "slug": "managed-it-services-sun-valley", "city": "Sun Valley", "state": "CA",
   "h1_city": "Sun Valley &amp; Pacoima", "zips": "91352 and 91331", "zip_short": "91331 – 91352",
-  "title": "Managed IT Services Sun Valley CA | Pro Link Systems",
-  "meta": "Managed IT for Sun Valley and Pacoima. Cybersecurity and 24/7 help desk for manufacturers, distributors, recyclers, and logistics. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Sun Valley | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Sun Valley businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for the northeast San Fernando Valley's industrial belt — manufacturers, distributors, recycling and waste operations, logistics and fleet-based businesses, and the growing companies of Sun Valley and Pacoima. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Sun Valley and Pacoima businesses. Manufacturing, distribution, logistics, recycling, and more. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Sun Valley and Pacoima businesses. Serving Greater Los Angeles since 1999.",
@@ -687,8 +687,8 @@ CITIES = [
  {
   "slug": "managed-it-services-san-gabriel-valley", "city": "San Gabriel Valley", "state": "CA",
   "h1_city": "the San Gabriel Valley", "zips": "91801, 91803, 91006, 91007, and 91016", "zip_short": "Alhambra · Arcadia · Monrovia",
-  "title": "Managed IT Services San Gabriel Valley | Pro Link Systems",
-  "meta": "Managed IT for Alhambra, Arcadia, and Monrovia. Cybersecurity and 24/7 help desk for medical, finance, and professional firms. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support in San Gabriel Valley, CA",
+  "meta": "Managed IT services &amp; IT support for San Gabriel Valley businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Since 1999.",
   "og_desc": "IT support for the San Gabriel Valley — medical and dental practices, banks and financial firms, law offices, biotech and tech companies, and the Asian-American business community of Alhambra, Arcadia, and Monrovia. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for San Gabriel Valley businesses in Alhambra, Arcadia, and Monrovia. Medical, finance, legal, tech, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for San Gabriel Valley businesses in Alhambra, Arcadia, and Monrovia. Serving Greater Los Angeles since 1999.",
@@ -731,8 +731,8 @@ CITIES = [
  {
   "slug": "managed-it-services-camarillo", "city": "Camarillo", "state": "CA",
   "h1_city": "Camarillo, CA", "zips": "93010 and 93012", "zip_short": "93010 – 93012",
-  "title": "Managed IT Services Camarillo CA | Pro Link Systems",
-  "meta": "Managed IT for Camarillo. Cybersecurity and 24/7 help desk for biotech, aerospace, manufacturing, and agriculture. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Camarillo | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Camarillo businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for Camarillo's 101 corridor — biotech and medical-device companies, aerospace and precision manufacturers, agricultural businesses, healthcare providers, and the corporate and professional offices of Ventura County's business hub. Flat-rate, 24/7, no surprises.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Camarillo businesses. Biotech, aerospace, manufacturing, agriculture, and professional services. Flat-rate plans. Serving Greater Los Angeles and Ventura County since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Camarillo businesses. Serving Greater Los Angeles and Ventura County since 1999.",
@@ -775,8 +775,8 @@ CITIES = [
  {
   "slug": "managed-it-services-malibu", "city": "Malibu", "state": "CA",
   "h1_city": "Malibu, CA", "zips": "90263, 90264, and 90265", "zip_short": "90263 – 90265",
-  "title": "Managed IT Services Malibu CA | Pro Link Systems",
-  "meta": "Managed IT for Malibu. Cybersecurity, resilient cloud backup, and 24/7 help desk for family offices, entertainment, and real estate. Flat-rate since 1999.",
+  "title": "Managed IT Services &amp; IT Support Malibu | Pro Link",
+  "meta": "Managed IT services &amp; IT support for Malibu businesses: 24/7 help desk, cybersecurity, cloud. Flat-rate, no long-term contracts. Rated 4.9/5 on Google.",
   "og_desc": "IT support for Malibu — family offices and wealth managers, production and entertainment companies, hospitality and wellness businesses, real estate, and the professional firms along Pacific Coast Highway. Resilient, secure, flat-rate, 24/7.",
   "tw_desc": "Managed IT, cybersecurity, and 24/7 help desk for Malibu businesses. Family offices, entertainment, hospitality, real estate, and professional services. Flat-rate plans. Serving Greater Los Angeles since 1999.",
   "schema_desc": "Managed IT services and cybersecurity for Malibu businesses. Serving Greater Los Angeles since 1999.",
@@ -890,7 +890,7 @@ def body(c):
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
     {c["badge"]}
   </div>
-  <h1>Managed IT Services in<br><em>{c["h1_city"]}</em></h1>
+  <h1>Managed IT Services &amp; IT Support in<br><em>{c["h1_city"]}</em></h1>
   <p>{c["hero_p"]}</p>
   <div class="hero-cta-group">
     <a href="contact" class="btn btn-gold">
@@ -1076,6 +1076,7 @@ def body(c):
 {nearby_links}
     </p>
     <p style="margin-top:14px;"><a href="/managed-it-services" style="color:#0b3d6b;font-weight:700;">See all Los Angeles managed IT service areas &rarr;</a></p>
+    <p style="margin-top:8px;"><a href="/case-studies" style="color:#0b3d6b;font-weight:700;">Read 14 client success stories &rarr;</a></p>
   </div>
 </section>
 
