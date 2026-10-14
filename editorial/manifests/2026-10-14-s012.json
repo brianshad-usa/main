@@ -1,0 +1,164 @@
+{
+  "post": "Someone in accounting pastes a signed lease into a chatbot and asks for a plain-English summary. Fine, or not fine?\n\nDepends on four separate answers, and most companies have checked one. Turning off model training stops your text from shaping future versions of the model. It does not decide how long the text is kept, what gets logged, whether a person can read a flagged conversation, or which other companies help run the service behind the scenes.\n\nHarder part: those answers only cover the account you bought. The same employee, signed in later on a free personal account, is under different terms — and a free account never shows up on an expense report, which is where most companies go looking.\n\nGet the four answers in writing before you standardize on a tool. Then confirm everyone is actually working inside the account they apply to.",
+  "headline": "Training opt-out is one setting. Privacy is four.",
+  "cta_label": "Review your AI tools",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-10-14-s012-card.png",
+  "image_file_jpg": "2026-10-14-s012-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S012",
+  "core_idea": "A training opt-out answers one question out of four — retention, logging and human review, and subprocessor access are set elsewhere — and all four are scoped to an account, which is why the free consumer tier on a personal email is both the largest exposure and the one no spend-based or SSO-based inventory will ever find.",
+  "channels": {
+    "linkedin": "\"We turned off training\" is the answer most executives get when they ask whether an AI tool is safe for company data. It is a true answer to the wrong question.\n\nTraining opt-out governs one thing: whether your inputs shape future versions of the model. Retention, logging, human review of flagged conversations, and the subprocessors a vendor uses to run the service are each decided somewhere else. A vendor can honor the opt-out exactly as written and still store your text, log it, let a reviewer read it, and route it through companies you have never evaluated. Nothing deceptive about any of that. It sits in documentation that gets accepted at signup.\n\nUnderneath all four is a structural problem that no setting fixes. Every one of those controls belongs to an account. Configure the business tier perfectly, and an employee signed into the consumer version of the same product with a personal email is under a different agreement entirely.\n\nThat is where most AI inventories quietly fail. They are assembled from expense reports and identity provider logs. A free account on a personal email appears in neither. The tool doing the most interesting things with your data is the one that costs nothing and leaves no trace in finance.\n\nSo the executive question is narrower and harder than vendor selection: what happens to a prompt after the answer comes back, and can anyone here answer that for the three tools staff actually use?\n\nOne sanctioned tool. One tier. Everyone inside it, and a way to notice who is not. That is a policy. A toggle is a setting.",
+    "facebook": "Someone in accounting pastes a signed lease into a chatbot and asks for a plain-English summary. Fine, or not fine?\n\nDepends on four separate answers, and most companies have checked one. Turning off model training stops your text from shaping future versions of the model. It does not decide how long the text is kept, what gets logged, whether a person can read a flagged conversation, or which other companies help run the service behind the scenes.\n\nHarder part: those answers only cover the account you bought. The same employee, signed in later on a free personal account, is under different terms — and a free account never shows up on an expense report, which is where most companies go looking.\n\nGet the four answers in writing before you standardize on a tool. Then confirm everyone is actually working inside the account they apply to.",
+    "gbp": "Two controls get mixed up in nearly every AI policy conversation. A training opt-out keeps your prompts out of future versions of the model. Retention decides how long those prompts exist at all, on servers you do not own.\n\nSeparate settings. So are logging, human review of flagged conversations, and the subprocessors a vendor relies on to run the service.\n\nBefore approving an AI tool for your team, get all four answers in writing. Then confirm staff are signed into the account those answers cover — a free personal account is a different agreement, and it never appears on an expense report.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Training opt-out and data retention are different dials. One decides whether your prompts improve the model. The other decides how long they exist at all. Most AI policies set the first and assume the second.",
+      "Most companies inventory AI tools by searching expense reports and SSO logs. A free consumer account on a personal email appears in neither. The tool handling your most sensitive prompts is often the one that costs nothing."
+    ],
+    "instagram_caption": "Turning off model training is one setting. Privacy is four.\n\nTraining opt-out decides whether your prompts improve future versions of the model. Retention decides how long they are stored. Logging and human review decide who can read a flagged conversation. Subprocessors decide which other companies touch the data along the way. A vendor can honor the first exactly as written and still do the other three.\n\nThen the part that undoes all of it: these controls belong to an account, not to a person.\n\nSwipe for the four answers worth getting in writing — and the reason a spend-based tool inventory never finds the account that matters.\n\n#AIGovernance #ShadowAI #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "editorial_light",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "centered",
+    "register": "question",
+    "channels": {
+      "linkedin": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "facebook": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "gbp": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "instagram": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "x": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: a training opt-out governs only whether inputs are used to improve future versions of a model, and is distinct from retention, logging, human review, and subprocessor access",
+    "ANALYSIS: retention windows, logging for security and abuse monitoring, human review of flagged conversations, and subprocessor arrangements are each configured or disclosed separately from the training setting",
+    "ANALYSIS: AI platforms rely on third-party subprocessors to operate, so customer data inherits those relationships and their locations",
+    "ANALYSIS (structural, not vendor-specific): account-level configuration governs only the account it is applied to; a user signed into a different tier or a personal account is under a different agreement and is not visible in the organization's admin console",
+    "ANALYSIS (new this round): software inventories built from expense data and identity provider logs cannot surface a free-tier account created with a personal email, because such an account generates neither a transaction nor a federated sign-in event. Stated as structural reasoning, not as a measured finding; no adoption or prevalence figure is claimed",
+    "OPINION: vendor documentation is commonly accepted at signup without being read, and the governance gap sits in the controls nobody asked about",
+    "OPINION: the useful executive question is what happens to a prompt after the response is returned, not whether the tool trains on company data",
+    "RECOMMENDATION: standardize on one sanctioned tool and tier, and maintain a means of detecting use outside it",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "NO STATISTICS USED: no industry, breach, adoption or threat-landscape number appears in any channel; no named external primary source was supplied in the brief, so the argument is made without numbers",
+    "NO VENDOR NAMED: no product, capability, or policy is attributed to a specific AI provider",
+    "NO CLIENT REFERENCE: no client named, implied, or described; the earlier 'an owner asked last week' anecdote remains removed"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's differentiating idea is buried. The four-dial framing (training / retention / logging / subprocessors) is already in circulation among security-literate people — any competent MSP could assemble it. The only line in the package nobody else is saying is the one that is missing entirely: settings attach to the account, not to the person. Without that turn, this is a well-written commodity post. It has to become the spine."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "LinkedIn, X and Instagram all open with the same move — a two-option 'which one' question — and all three repeat the phrase 'the toggle was never the policy.' That is one idea rendered four times, not four best expressions of one idea. Each channel needs a distinct entry point and the signature line should land in exactly one place."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel has no visual system. Seven slides of kicker-plus-headline-plus-paragraph with no counting mechanic, no hierarchy differentiation between the four controls and the argument around them. The four controls should be numbered as a set (01/04) so the deck reads as a designed index, and the CTA slide should move the company credential into the footer instead of trailing it inside body copy where it collides with the instruction."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Slide 4 asserts 'Published policy, not a secret' as a flat statement about vendor behavior generally. We have no named, dated source in this brief. The honest form is an instruction to the reader ('check the vendor's published policy'), not a characterization of what every vendor's policy contains. Same correction applies to 'Platforms commonly capture conversations' — keep the generality, remove the implied survey."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft stops at four questions and never names the decision. An executive reading this has a list and no policy. The operational answer — one sanctioned tool, one tier, everyone signed into the account the answers actually cover — is the deliverable, and it is absent from every channel."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The real failure mode in practice is not a misread retention clause; it is governance that applies to the business tenant while staff use the consumer tier with personal credentials. The draft governs the configured surface and ignores the unconfigured one. That omission makes the advice weaker than the threat."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "'Training opt-out' is treated as one undifferentiated control across all vendors. Keep it structural rather than vendor-specific — the package wisely names no product, and that restraint should be preserved and made explicit in the claims audit rather than left implicit."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Four questions to ask a vendor is homework assigned to someone else. What the reader needs to walk away with is a sentence they can say out loud in a leadership meeting. The takeaway has to compress to something sayable, not a checklist to delegate."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Instagram caption opens 'An owner asked the right version of this question last week' — that is an anecdote implying a real client interaction, which is prohibited and, worse, unverifiable. It must be cut outright, not softened. The X pair also reads as two paraphrases of each other rather than two independent observations."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Ultimate test, applied to the draft: yes, any MSP could have published it. The revision only passes because of the account-versus-person turn and the refusal to use a single statistic where every competitor would have invented one. The GBP entry also soft-pitches ('we are happy to review your AI tools with you') on top of the structured CTA — that is two CTAs in one asset. Cut the inline offer."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Honour' appears twice — British spelling for a Los Angeles audience. 'Worth sitting with, because the first option is usually treated as the whole answer' is flab. checklist_items is empty while the entire post is built around four questions. And in the proposed close, 'One sanctioned tool. One tier.' would open consecutive sentences with the same word — corrected to a single sentence in revision."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "LinkedIn was running the same four-item enumeration as the carousel, GBP and the checklist — five expressions of one list. Channel doctrine requires LinkedIn to carry a perspective the carousel cannot hold. The four dials belong in the carousel, where sequence is the medium; LinkedIn should compress them in one sentence and spend its length on the consequence an executive actually owns."
+    },
+    {
+      "role": "CIO",
+      "finding": "The package asserted the account-scope gap but gave no detection mechanic, so the executive is left with a problem and no instrument. The sharpest operational fact in this territory was missing entirely: most AI tool inventories are assembled from expense reports and SSO logs, and a free consumer account on a personal email appears in neither. Without that, the post diagnoses shadow AI the way everyone else does."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 2–5 are four structurally identical cards with body copy dense enough to force small type, which flattens the sequence into a bulleted list rendered as images. Each of the four needs a different visual shape — a two-position dial, a duration bar, a redacted transcript line, a chain of linked blocks — and the body copy has to shrink so the headline carries the slide. Slide 4 was the worst offender at three sentences."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
