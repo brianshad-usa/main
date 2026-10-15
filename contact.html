@@ -974,6 +974,7 @@
         }
         window.uetq = window.uetq || [];
         window.uetq.push('event', 'submit_lead_form', {});
+        if (typeof gtag === "function") { gtag("event", "generate_lead", { method: "contact_form" }); }
         var nameEl = document.getElementById('success-name');
         if (nameEl && firstName) nameEl.textContent = firstName.split(' ')[0];
         var refEl = document.getElementById('success-ref');

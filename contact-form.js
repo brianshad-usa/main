@@ -67,6 +67,7 @@
           }
           window.uetq = window.uetq || [];
           window.uetq.push('event', 'submit_lead_form', {});
+          if (typeof gtag === "function") { gtag("event", "generate_lead", { method: "contact_form" }); }
           showSuccess(form, r.json.refNumber, firstName.split(" ")[0]);
         } else {
           if (btn) { btn.disabled = false; btn.classList.remove("loading"); }
