@@ -278,6 +278,11 @@ bypass the guard; fix the content instead.
   `main`, so never rename the job, never remove the requirement, and never flip
   `risk_policy.low_auto_pr` / `medium_auto_merge` on without it — GitHub auto-merge
   merges instantly when no checks are required.
+- That same required check blocks DIRECT pushes to `main` (`GH013: Required status
+  check "guard" is expected`) — the desktop watcher and the editorial engine push
+  directly, so the ruleset must keep **Repository admin** on its bypass list
+  (*Always allow*). The engine's reconcile step verifies the `guard` check-run on
+  the PR head itself before merging, so the bypass never weakens the engine's gate.
 - GitHub re-evaluates auto-merge only on events (a check finishing, a push, a
   review), not on a ruleset edit, so an armed PR can sit "clean" and unmerged. The
   engine's reconcile step (daily run + `seo-reconcile.yml` every 4 h) merges clean
