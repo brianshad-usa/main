@@ -267,13 +267,23 @@ bypass the guard; fix the content instead.
   `seo-daily.yml`, 15:15 UTC daily + manual dispatch). It checks this repo out with
   the `SITE_REPO_PAT` secret and **only ever opens pull requests** — it never pushes
   to `main`, so the desktop auto-commit watcher and the engine cannot race.
-  LOW-risk fixes → PR labelled `automerge`; MEDIUM → `needs-review`; HIGH/external
-  → a rolling monthly GitHub issue. Reports, intelligence, ledger and state stay in
-  the war room (this repo is public — never put reports or strategy here).
-- `pr-checks.yml` runs `site_guard.py` on every pull request. Make it a REQUIRED
-  status check in branch protection BEFORE flipping `seo/config.json →
-  risk_policy.low_auto_pr` to true; GitHub auto-merge merges instantly when no
-  checks are required.
+  LOW-risk fixes → PR labelled `automerge`; MEDIUM → PR labelled `automerge` +
+  `medium-risk` (auto-merged too since 2026-10-15 by owner decision — nothing waits
+  on a human); HIGH/external → a rolling monthly GitHub issue, never automated.
+  Reports, intelligence, ledger and state stay in the war room (this repo is public
+  — never put reports or strategy here).
+- `pr-checks.yml` runs `site_guard.py` on every pull request as the job `guard`. The
+  ruleset `main-protection` REQUIRES the status check named exactly `guard` (GitHub
+  Actions); that required check is the only thing standing between an engine PR and
+  `main`, so never rename the job, never remove the requirement, and never flip
+  `risk_policy.low_auto_pr` / `medium_auto_merge` on without it — GitHub auto-merge
+  merges instantly when no checks are required.
+- GitHub re-evaluates auto-merge only on events (a check finishing, a push, a
+  review), not on a ruleset edit, so an armed PR can sit "clean" and unmerged. The
+  engine's reconcile step (daily run + `seo-reconcile.yml` every 4 h) merges clean
+  policy-allowed engine PRs through the API — GitHub still enforces `guard` there —
+  updates branches behind `main` and closes conflicted ones. It only ever touches
+  `seo/auto-*` branches; human PRs are left alone.
 - Engine commits are authored `prolink-seo-engine`. If the guard ever fails on
   `main` within 48h of an engine merge, the engine blocks further changes and names
   the commit to revert (rollback = revert PR).
