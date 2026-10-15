@@ -18,6 +18,8 @@ that aren't set up yet (no creds) are skipped and never fail the run.
 import os
 import sys
 import json
+import time
+import urllib.request
 
 import gbp_post
 import linkedin_post
@@ -38,6 +40,29 @@ RAW_BASE = os.environ.get(
 def _has(*names):
     """True only if every named env var is set and non-empty."""
     return all(os.environ.get(n, "").strip() for n in names)
+
+
+def _url_live(url, tries=6, delay=5):
+    """Confirm a public image URL actually serves (HTTP 200) before handing it to
+    a channel that publishes by FETCHING the image by URL (GBP, Instagram,
+    Facebook). A freshly pushed raw.githubusercontent.com asset can lag a few
+    seconds behind the push, and if the push never landed at all the URL 404s
+    forever -- either way, handing Meta/Google a dead URL produces a cryptic
+    "media could not be fetched" failure. A short poll absorbs propagation lag;
+    a persistent miss returns False so the caller can skip that channel with a
+    clear reason instead of a confusing downstream error. LinkedIn is unaffected
+    (it uploads the local file, not a URL)."""
+    req = urllib.request.Request(url, method="HEAD")
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=10) as r:
+                if 200 <= getattr(r, "status", 200) < 300:
+                    return True
+        except Exception as e:
+            print(f"[publish] image URL not live yet (try {i + 1}/{tries}): {e}")
+        if i < tries - 1:
+            time.sleep(delay)
+    return False
 
 
 # Site homepage: the always-live fallback destination when a theme carries no
@@ -101,12 +126,21 @@ def main():
             return instagram_post.maybe_post_carousel(ig_caption, carousel_urls)
         return instagram_post.maybe_post(ig_caption, ig_image_url)
 
-    # (name, is_configured, attempt) -- attempt() returns a truthy id on success, None on failure.
+    # The image URL Instagram will try to fetch (first carousel slide, else the
+    # single card jpg) -- used for the pre-flight liveness check below.
+    ig_dep_url = carousel_urls[0] if len(carousel_urls) >= 2 else ig_image_url
+
+    # (name, is_configured, attempt, dep_url) -- attempt() returns a truthy id on
+    # success, None on failure. dep_url is the public image URL the channel must
+    # fetch (None for channels that upload the local file, like LinkedIn); it is
+    # pre-flighted for HTTP 200 before the attempt so a channel is never handed a
+    # dead/not-yet-propagated URL.
     channels = [
         (
             "LinkedIn",
             _has("LINKEDIN_REFRESH_TOKEN") or _has("LINKEDIN_ACCESS_TOKEN"),
             lambda: linkedin_post.maybe_post_image(li_text, local_image, alt_text=headline),
+            None,
         ),
         (
             "GBP",
@@ -115,16 +149,19 @@ def main():
             lambda: gbp_post.maybe_post(
                 gbp_text, m.get("cta_type", "LEARN_MORE"), m.get("cta_url"), image_url=image_url
             ),
+            image_url,
         ),
         (
             "Instagram",
             _has("IG_USER_ID", "IG_ACCESS_TOKEN"),
             do_instagram,
+            ig_dep_url,
         ),
         (
             "Facebook",
             _has("FB_PAGE_ID", "FB_PAGE_ACCESS_TOKEN"),
             lambda: facebook_post.maybe_post(fb_text, image_url),
+            image_url,
         ),
         (
             "X",
@@ -135,16 +172,39 @@ def main():
             _has("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")
             and os.environ.get("X_ENABLED", "").strip() == "1",
             lambda: x_post.maybe_post(x_text, local_image),
+            None,
         ),
     ]
 
     summary = []
     failures = []
-    for name, configured, attempt in channels:
+    url_live_cache = {}
+
+    def _dep_ok(url):
+        """Memoized HTTP-200 pre-flight for a channel's image URL."""
+        if url not in url_live_cache:
+            url_live_cache[url] = _url_live(url)
+        return url_live_cache[url]
+
+    for name, configured, attempt, dep_url in channels:
         if not configured:
             summary.append(f"  [skipped] {name} (not configured)")
             continue
-        result = attempt()
+        # Pre-flight: never hand a URL-fetching channel an image that isn't live.
+        if dep_url and not _dep_ok(dep_url):
+            print(f"[{name.lower()}] image URL is not reachable (HTTP != 200): {dep_url} "
+                  f"- skipping to avoid a 'media could not be fetched' failure.")
+            summary.append(f"  [FAILED]  {name} (image URL not live: {dep_url})")
+            failures.append(name)
+            continue
+        # Fault isolation: a channel that RAISES (rather than returning None) must
+        # not abort the loop and take the other channels down with it -- the newly
+        # added GBP channel especially must degrade, not nuke the run.
+        try:
+            result = attempt()
+        except Exception as e:
+            print(f"[{name.lower()}] ERROR (isolated, pipeline unaffected): {e}")
+            result = None
         if result:
             summary.append(f"  [posted]  {name}")
         else:

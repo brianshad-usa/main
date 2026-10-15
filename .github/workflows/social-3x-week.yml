@@ -72,12 +72,24 @@ jobs:
             echo "No new content to commit."
           else
             git commit -m "Editorial content $(date -u +%F)"
+            pushed=0
             for attempt in 1 2 3; do
               if git pull --rebase --autostash origin main && git push origin HEAD:main; then
-                echo "Pushed on attempt $attempt."; break
+                echo "Pushed on attempt $attempt."; pushed=1; break
               fi
               echo "Push attempt $attempt failed; retrying..."; sleep 5
             done
+            # The card image and ledger MUST reach origin: GBP/Instagram/Facebook
+            # publish by fetching the raw.githubusercontent.com URL, which 404s
+            # until the push lands. A swallowed push failure here is what let a
+            # run go on to "publish" a non-existent image (LinkedIn uploads the
+            # local file so it posted, while the three URL-based channels failed
+            # on an unfetchable URL). So a failed push must stop the run BEFORE
+            # publishing, not continue silently.
+            if [ "$pushed" != "1" ]; then
+              echo "::error::Editorial content could not be pushed to origin/main after 3 attempts - NOT publishing (the card image would 404 for GBP/Instagram/Facebook). If the push was rejected with GH013 'Required status check \"guard\" is expected', the 'main-protection' ruleset is blocking the Actions bot's direct push: add GitHub Actions to that ruleset's bypass list (Settings -> Rules -> main-protection -> Bypass list)."
+              exit 1
+            fi
             echo "Waiting for raw URL to propagate..."; sleep 15
           fi
 
