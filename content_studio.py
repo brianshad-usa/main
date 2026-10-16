@@ -309,6 +309,96 @@ def offline_package(idea):
     }
 
 
+def _norm_path(url):
+    """Reduce a URL (or bare path) to a normalized site path for comparison:
+    lowercase, domain stripped, no query/fragment, no .html suffix, no trailing
+    slash (except root '/')."""
+    u = (url or "").strip()
+    u = re.sub(r"^https?://[^/]+", "", u, flags=re.IGNORECASE)   # strip scheme+host
+    u = u.split("#", 1)[0].split("?", 1)[0]
+    if not u.startswith("/"):
+        u = "/" + u
+    if u.lower().endswith(".html"):
+        u = u[:-5]
+    if len(u) > 1:
+        u = u.rstrip("/")
+    return u.lower() or "/"
+
+
+def load_live_paths():
+    """The set of REAL, published page paths - the ONLY URLs a post may link to.
+
+    Why this exists: the model proposes cta_url from the topic, and it will
+    cheerfully invent a plausible-but-nonexistent slug (observed in production:
+    a "co-managed IT" post linked to /co-managed-it, which 404s - no such page
+    exists). So every generated link is validated against the pages the site
+    actually serves.
+
+    Source of truth is sitemap.xml (the canonical extensionless URLs the site
+    publishes). The repo's own *.html files (root pages + blog/) are unioned in
+    as a backstop in case the sitemap lags a freshly added page."""
+    paths = set()
+    try:
+        xml = _read(SITEMAP)
+        for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>", xml):
+            paths.add(_norm_path(loc))
+    except OSError:
+        pass
+    for f in os.listdir(HERE):                      # root .html -> /stem
+        if f.endswith(".html"):
+            stem = f[:-5]
+            paths.add("/" if stem == "index" else _norm_path("/" + stem))
+    blog = os.path.join(HERE, "blog")               # blog/ posts -> /blog/stem
+    if os.path.isdir(blog):
+        for f in os.listdir(blog):
+            if f.endswith(".html") and f != "index.html":
+                paths.add(_norm_path("/blog/" + f[:-5]))
+    paths.add("/")                                   # homepage is always live
+    return paths
+
+
+def _topic_tokens(*parts):
+    stop = {"the", "and", "for", "a", "of", "to", "in", "on", "with", "your",
+            "los", "angeles", "prolinksystems", "com", "https", "http", "www"}
+    out = set()
+    for p in parts:
+        for w in re.split(r"[^a-z0-9]+", (p or "").lower()):
+            if len(w) >= 2 and w not in stop:
+                out.add(w)
+    return out
+
+
+def resolve_cta_url(candidate, idea, live=None, log=True):
+    """Guarantee a post's CTA points at a page that REALLY EXISTS.
+
+    Keep the model's candidate only if it maps to a live published path;
+    otherwise remap to the best-matching real page by topic-keyword overlap
+    (preferring top-level service/industry pages over deep location/blog pages),
+    and if nothing matches, fall back to a known-live page (/services, then '/').
+    Returns the final absolute URL. Never returns a fabricated slug."""
+    if live is None:
+        live = load_live_paths()
+    cand = _norm_path(candidate)
+    if cand in live:
+        return SITE + ("" if cand == "/" else cand)
+
+    want = _topic_tokens(cand, idea.get("title"), idea.get("theme"), idea.get("angle"))
+    # Rank real pages: most shared topic tokens wins; ties go to the shallowest
+    # (fewest '/') then shortest path, so /managed-it-services beats both
+    # /managed-it-services-encino and /blog/...-co-managed-it-....
+    ranked = sorted(
+        ((len(want & _topic_tokens(p)), -p.count("/"), -len(p), p) for p in live),
+        reverse=True,
+    )
+    best_score, _, _, best = ranked[0]
+    chosen = best if best_score >= 1 else next((f for f in SAFE_FALLBACKS if f in live), "/")
+    url = SITE + ("" if chosen == "/" else chosen)
+    if log:
+        _log(f"CTA link guard: '{candidate}' is not a live page - remapped to {url} "
+             f"(match score {best_score})")
+    return url
+
+
 def main():
     offline = "--offline" in sys.argv
 
@@ -409,6 +499,15 @@ def main():
             print(f"::error::Content quality gate failed (overall {overall}, "
                   f"lint: {problems or 'clean'}). Publishing nothing beats publishing filler.")
             sys.exit(1)
+
+    # ── CTA link guard ───────────────────────────────────────────
+    # The model proposes cta_url from the topic and will fabricate a slug for a
+    # page that does not exist (production bug: a co-managed-IT post linked to
+    # /co-managed-it -> 404). Validate it against the pages the site actually
+    # publishes and remap anything fabricated to a real page BEFORE it reaches the
+    # manifest, so no channel (and no later manual/GBP post reading the dated
+    # manifest) can ship a dead link.
+    package["cta_url"] = resolve_cta_url(package.get("cta_url"), idea)
 
     # ── Render ───────────────────────────────────────────────────
     today = datetime.date.today().isoformat()
