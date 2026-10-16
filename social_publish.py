@@ -69,6 +69,58 @@ def _url_live(url, tries=6, delay=5):
 # specific cta_url (e.g. the CALL theme). Verified 200.
 HOME_URL = "https://prolinksystems.com/"
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+_SITEMAP = os.path.join(HERE, "sitemap.xml")
+
+
+def _live_paths():
+    """Normalized set of real published page paths (from sitemap.xml + the repo's
+    own .html pages). Used as a last-resort check so a stale/legacy manifest can
+    never publish a link to a page that doesn't exist. content_studio.py already
+    validates cta_url at generation; this is defense in depth at publish time."""
+    import re
+    paths = set()
+    try:
+        with open(_SITEMAP, encoding="utf-8") as f:
+            for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>", f.read()):
+                paths.add(_norm_path(loc))
+    except OSError:
+        pass
+    try:
+        for fn in os.listdir(HERE):
+            if fn.endswith(".html"):
+                stem = fn[:-5]
+                paths.add("/" if stem == "index" else _norm_path("/" + stem))
+    except OSError:
+        pass
+    paths.add("/")
+    return paths
+
+
+def _norm_path(url):
+    import re
+    u = (url or "").strip()
+    u = re.sub(r"^https?://[^/]+", "", u, flags=re.IGNORECASE)
+    u = u.split("#", 1)[0].split("?", 1)[0]
+    if not u.startswith("/"):
+        u = "/" + u
+    if u.lower().endswith(".html"):
+        u = u[:-5]
+    if len(u) > 1:
+        u = u.rstrip("/")
+    return u.lower() or "/"
+
+
+def _ensure_live_url(cta_url):
+    """Return cta_url if it points at a real page; else the homepage (always live).
+    Prevents a post from ever shipping a 404 CTA."""
+    if not (cta_url or "").strip():
+        return HOME_URL
+    if _norm_path(cta_url) in _live_paths():
+        return cta_url
+    print(f"[publish] CTA url '{cta_url}' is not a live page - falling back to {HOME_URL}")
+    return HOME_URL
+
 
 def _with_cta_link(text, cta_label, cta_url):
     """Return post copy with a REAL, clickable CTA + URL appended.
@@ -95,6 +147,11 @@ def main():
     if m.get("offline_test"):
         print("::error::pending.json is an offline test manifest - refusing to publish.")
         sys.exit(1)
+
+    # Dead-link guard (last resort): never publish a CTA to a page that doesn't
+    # exist. Applied once here so every channel - the appended LinkedIn link and
+    # the GBP button URL alike - uses a validated destination.
+    m["cta_url"] = _ensure_live_url(m.get("cta_url"))
 
     # Per-channel copy from the editorial pipeline; the legacy single-text
     # manifest (m["post"] only) still works unchanged as the fallback.
