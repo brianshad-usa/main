@@ -54,6 +54,13 @@ SOCIAL_DIR = os.path.join(HERE, "social")
 MANIFEST = os.path.join(HERE, "pending.json")
 STANDARDS = os.path.join(HERE, "editorial", "standards.md")
 FACTS = os.path.join(HERE, "editorial", "verified_facts.json")
+SITEMAP = os.path.join(HERE, "sitemap.xml")
+
+# Known-live destinations to fall back to when a post's topic has no good specific
+# page. Tried in order; both are verified real pages (and re-checked against the
+# live set at runtime).
+SAFE_FALLBACKS = ["/services", "/"]
+SITE = "https://prolinksystems.com"
 
 MODEL = os.environ.get("EDITORIAL_MODEL", "claude-opus-5")
 TARGET = 95
