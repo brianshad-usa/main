@@ -25,3 +25,7 @@ __pycache__/
 # Every video tracked in this repo is under 19 MB for exactly this reason.
 # Side benefit: files that are never pushed can never trigger publish-video.yml.
 videos/library/
+
+# transient dedup-ledger staging (CI only)
+.ledger-cache/
+.ledger-branch/

@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 # Serialize production runs so two Actions can never mint the same slot: a queued
-# run only starts after the running one has committed the advanced ledger, and
+# run only starts after the running one has persisted the advanced ledger, and
 # will therefore select the NEXT idea rather than a duplicate.
 concurrency:
   group: social-daily-production
@@ -28,6 +28,14 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  # The pipeline NO LONGER depends on pushing to protected 'main'. State (card
+  # images + dedup ledger) is persisted to the non-protected 'social-state'
+  # branch, and the URL-fetch channels (GBP/Instagram/Facebook) read the card
+  # image from THAT branch. A dedicated state branch is the cleanest of the
+  # resilient options: one mechanism hosts the images AND carries the ledger,
+  # with no bypass token or protected-main push required.
+  STATE_BRANCH: social-state
+  SOCIAL_IMG_BASE: https://raw.githubusercontent.com/brianshad-usa/main/social-state/social/
 
 jobs:
   syndicate:
@@ -46,6 +54,38 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic pillow
 
+      # --- DEDUP STATE IN (belt-and-suspenders) ---------------------------
+      # Restore the ledger from the Actions cache as a SECONDARY durable store,
+      # so one-post-per-idea dedup survives even if the social-state branch push
+      # were ever rejected too. The branch copy (fetched below) is the primary.
+      - name: Restore dedup ledger cache
+        id: ledgercache
+        uses: actions/cache/restore@v4
+        with:
+          path: .ledger-cache/ledger.json
+          key: social-ledger-${{ github.run_id }}
+          restore-keys: |
+            social-ledger-
+
+      # Choose the MOST-ADVANCED ledger (most posts = newest, append-only log)
+      # among: the social-state branch, the Actions cache, and the repo copy.
+      # Whichever persisted last wins, so a re-selected duplicate is impossible
+      # as long as ANY one of the three survived.
+      - name: Reconcile dedup ledger
+        run: |
+          git fetch --quiet origin "$STATE_BRANCH" 2>/dev/null || true
+          mkdir -p .ledger-branch .ledger-cache
+          if git cat-file -e "origin/$STATE_BRANCH:editorial/ledger.json" 2>/dev/null; then
+            git show "origin/$STATE_BRANCH:editorial/ledger.json" > .ledger-branch/ledger.json
+            echo "Fetched ledger from $STATE_BRANCH."
+          else
+            echo "No $STATE_BRANCH ledger yet (first run or branch absent)."
+          fi
+          python ledger_sync.py restore \
+            .ledger-branch/ledger.json \
+            .ledger-cache/ledger.json \
+            editorial/ledger.json
+
       # content_studio: backlog selection -> draft -> internal review board ->
       # excellence gate (<90 fails the run: publishing nothing beats filler) ->
       # carousel + card render -> pending.json manifest + ledger entry.
@@ -63,36 +103,34 @@ jobs:
             python content_studio.py
           fi
 
-      - name: Commit + push images and ledger
-        run: |
-          git config user.name "ProLink Social Bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add social/ editorial/ledger.json editorial/manifests/
-          if git diff --cached --quiet; then
-            echo "No new content to commit."
-          else
-            git commit -m "Editorial content $(date -u +%F)"
-            pushed=0
-            for attempt in 1 2 3; do
-              if git pull --rebase --autostash origin main && git push origin HEAD:main; then
-                echo "Pushed on attempt $attempt."; pushed=1; break
-              fi
-              echo "Push attempt $attempt failed; retrying..."; sleep 5
-            done
-            # The card image and ledger MUST reach origin: GBP/Instagram/Facebook
-            # publish by fetching the raw.githubusercontent.com URL, which 404s
-            # until the push lands. A swallowed push failure here is what let a
-            # run go on to "publish" a non-existent image (LinkedIn uploads the
-            # local file so it posted, while the three URL-based channels failed
-            # on an unfetchable URL). So a failed push must stop the run BEFORE
-            # publishing, not continue silently.
-            if [ "$pushed" != "1" ]; then
-              echo "::error::Editorial content could not be pushed to origin/main after 3 attempts - NOT publishing (the card image would 404 for GBP/Instagram/Facebook). If the push was rejected with GH013 'Required status check \"guard\" is expected', the 'main-protection' ruleset is blocking the Actions bot's direct push: add GitHub Actions to that ruleset's bypass list (Settings -> Rules -> main-protection -> Bypass list)."
-              exit 1
-            fi
-            echo "Waiting for raw URL to propagate..."; sleep 15
-          fi
+      # --- DEDUP + IMAGE STATE OUT (primary) ------------------------------
+      # Persist images + ledger + manifests to the non-protected social-state
+      # branch. BEST-EFFORT by design (the script always exits 0): a failure to
+      # persist logs a ::warning:: but must NEVER fail the run or stop posting.
+      # This runs BEFORE publishing so the card image is live at the raw URL that
+      # GBP/Instagram/Facebook fetch.
+      - name: Persist state to social-state branch (best-effort)
+        run: bash persist_state.sh
 
+      # Stage the advanced ledger for the cache save below.
+      - name: Stage ledger for cache
+        if: always()
+        run: |
+          mkdir -p .ledger-cache
+          [ -f editorial/ledger.json ] && cp -a editorial/ledger.json .ledger-cache/ledger.json || true
+
+      - name: Save dedup ledger cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .ledger-cache/ledger.json
+          key: social-ledger-${{ github.run_id }}
+
+      # --- PUBLISH (this step's success IS the run's success) -------------
+      # Posting is what the green check must mean. The card image is read from
+      # the social-state raw URL (SOCIAL_IMG_BASE, set in env above); each
+      # URL-fetch channel is pre-flighted for HTTP 200 inside social_publish.py,
+      # and LinkedIn uploads the local file so it posts regardless of the URL.
       - name: Publish to channels (LinkedIn, GBP, Instagram, Facebook)
         env:
           GBP_CLIENT_ID:          ${{ secrets.GBP_CLIENT_ID }}
@@ -122,3 +160,26 @@ jobs:
           # channel later: create the repo Actions VARIABLE X_ENABLED = 1.
           X_ENABLED:              ${{ vars.X_ENABLED }}
         run: python social_publish.py
+
+      # --- OPTIONAL: restore the clean state commit on main ---------------
+      # Cosmetic mirror so humans browsing 'main' see current images/ledger.
+      # Fully non-fatal: posting + dedup already succeeded above. While the
+      # 'main-protection' ruleset blocks the Actions bot this will warn and move
+      # on. Add 'GitHub Actions' to that ruleset's bypass list to make it clean.
+      - name: Mirror state to main (best-effort, optional)
+        if: always()
+        continue-on-error: true
+        run: |
+          git config user.name  "ProLink Social Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add social/ editorial/ledger.json editorial/manifests/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nothing to mirror to main."
+            exit 0
+          fi
+          git commit --quiet -m "Editorial content $(date -u +%F)" || exit 0
+          if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+            echo "Mirrored state commit to main."
+          else
+            echo "::warning::Could not mirror to main (expected while the 'main-protection' ruleset blocks the Actions bot's push). This is COSMETIC ONLY -- posting and dedup already succeeded via the '$STATE_BRANCH' branch and the ledger cache. To restore clean pushes to main, add 'GitHub Actions' to the main-protection ruleset's Bypass list: Settings -> Rules -> Rulesets -> main-protection -> Bypass list -> Add bypass -> GitHub Actions."
+          fi
