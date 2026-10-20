@@ -387,7 +387,8 @@ def resolve_cta_url(candidate, idea, live=None, log=True):
     # (fewest '/') then shortest path, so /managed-it-services beats both
     # /managed-it-services-encino and /blog/...-co-managed-it-....
     ranked = sorted(
-        ((len(want & _topic_tokens(p)), -p.count("/"), -len(p), p) for p in live),
+        ((len(want & _topic_tokens(p)), -p.count("/"), -len(p), p)
+         for p in live if not p.startswith("/blog/")),   # CTAs resolve to service/top-level pages, not blog posts
         reverse=True,
     )
     best_score, _, _, best = ranked[0]
