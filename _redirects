@@ -68,6 +68,9 @@
 /backup-disaster-recovery.html             /backup-disaster-recovery            301
 /ai-automation-services.html               /ai-automation-services              301
 /it-help-desk.html                         /it-help-desk                        301
+/co-managed-it-services.html               /co-managed-it-services              301
+/co-managed-it                             /co-managed-it-services              301
+/co-managed-it/*                           /co-managed-it-services              301
 
 # ---- Case studies ----
 /case-studies.html                         /case-studies                        301

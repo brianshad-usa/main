@@ -21,6 +21,7 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - [24/7 IT Help Desk](https://prolinksystems.com/it-help-desk): Round-the-clock support answered by real engineers, with under-15-minute average response.
 - [AI & Automation Services](https://prolinksystems.com/ai-automation-services): AI knowledge assistants, workflow automation, Microsoft Copilot deployment, and custom AI solutions.
 - [Outsourced IT Services](https://prolinksystems.com/outsourced-it-services-los-angeles): Replace an in-house IT department with a flat-rate team of local engineers, ideal for businesses with 5 to 100 employees.
+- [Co-Managed IT Services](https://prolinksystems.com/co-managed-it-services): Augment an existing internal IT person or team with 24/7 help desk overflow, SOC-backed cybersecurity, cloud, backup, and vCIO strategy - we extend your team, not replace it.
 - [Microsoft 365 Support](https://prolinksystems.com/microsoft-365-support-los-angeles): Microsoft 365 setup, migration, and management - Exchange, Teams, SharePoint, Azure AD, security hardening, and licensing optimization.
 - [Network Support & Management](https://prolinksystems.com/network-support-los-angeles): 24/7 network monitoring, business WiFi design, firewall, VPN, and network security across the LA metro.
 - [Virtual CIO (vCIO) & IT Consulting](https://prolinksystems.com/virtual-cio): Fractional CIO leadership for LA businesses - strategic technology planning, budgeting, security strategy, and vendor management.
