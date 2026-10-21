@@ -12,6 +12,14 @@
 # policy block at the bottom of this file. (www -> apex is a Cloudflare rule.)
 # ===========================================================================
 
+# ---- Recovery: blog runs that failed to deploy (Oct 15/17/19, 2026) ----
+# These runs were announced on LinkedIn but never deployed (push blocked by
+# branch protection), so their dated URLs 404. Redirect to the blog index so
+# the shared LinkedIn links resolve. No real posts exist on these dates.
+/blog/2026-10-15-*    /blog/    301
+/blog/2026-10-17-*    /blog/    301
+/blog/2026-10-19-*    /blog/    301
+
 # ---- Core pages ----
 /index.html                                /                                    301
 /services.html                             /services                            301
