@@ -1,0 +1,139 @@
+{
+  "post": "A marketing coordinator has a client deck due tomorrow. She pastes the rough draft into an AI tool a colleague recommended, gets something usable in four minutes, and tells nobody.\n\nThat one is recoverable. The session ends, the exposure ends with it.\n\nThe version that lingers looks different. Someone clicks allow and gives an AI app permission to read the company mailbox or shared drive. They stop using the tool by Friday. The access stays.\n\nBlocking the app rarely ends either habit. The work moves to a phone and a personal login, out of view.\n\nWhat works is duller. Name a few approved tools, say clearly what information may go into them, and make approval for a new one fast enough that going around it is not the quicker option.",
+  "headline": "The AI your company didn't buy",
+  "cta_label": "About Pro Link Systems",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/",
+  "image_file": "2026-09-21-s001-card.png",
+  "image_file_jpg": "2026-09-21-s001-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S001",
+  "core_idea": "Shadow AI is a supply problem, not a discipline problem — and it splits into two unequal risks: pasting, which expires with the session, and connecting, where a third-party app holds standing permission to read company data long after the employee loses interest. The durable control is a fast, tiered path to yes plus a review of who already has consent.",
+  "channels": {
+    "linkedin": "Shadow AI is not your people being reckless. It is your people being faster than your own procurement process.\n\nThe pattern repeats across finance, marketing, sales ops. Someone finds a tool that removes an hour from a daily task. Approval takes weeks and might end in a no. The arithmetic is obvious to them, even when the exposure is not.\n\nTwo versions of this risk sit inside the same phrase. Pasting is episodic: a draft goes into a consumer chatbot and the exposure ends with the session. Connecting is not. An employee grants a third-party AI app standing permission to read a mailbox, a drive, a CRM, and that access outlives their interest in the tool. Nobody revokes what nobody approved.\n\nBlocking the category moves both onto personal devices, where nothing is logged and no agreement governs the data.\n\nThe supply fix is unglamorous. Publish a short sanctioned list with plain rules about what may go into each tool. Split the request path: anything touching customer, financial or regulated data gets full review, everything else gets a fast lane measured in days. Name one person who decides, not a committee that meets monthly.\n\nThen check whether you are already paying for an AI capability sitting unenabled inside a licence you own. Shadow AI often grows beside a seat the company already bought.\n\nPrediction, not fact: the firms with the least shadow AI next year will be the ones that learned to say yes quickly and narrowly.\n\nThe question for your next IT conversation is not which tools you have blocked. It is how long approval takes, and who signs it.",
+    "facebook": "A marketing coordinator has a client deck due tomorrow. She pastes the rough draft into an AI tool a colleague recommended, gets something usable in four minutes, and tells nobody.\n\nThat one is recoverable. The session ends, the exposure ends with it.\n\nThe version that lingers looks different. Someone clicks allow and gives an AI app permission to read the company mailbox or shared drive. They stop using the tool by Friday. The access stays.\n\nBlocking the app rarely ends either habit. The work moves to a phone and a personal login, out of view.\n\nWhat works is duller. Name a few approved tools, say clearly what information may go into them, and make approval for a new one fast enough that going around it is not the quicker option.",
+    "gbp": "An operations manager at a 60-person LA firm asks IT to approve an AI note-taker. The request sits in a queue. Three weeks later she is still running the free version under a personal login, and it holds a standing connection to her calendar and her recordings, on terms your company never agreed to.\n\nThat is the shape of most shadow AI. Not defiance. A queue.\n\nTwo practical moves this quarter. Review which third-party apps already hold consent to read your Microsoft 365 or Google Workspace data, and revoke what nobody can account for. Then publish a short sanctioned list and give new requests a turnaround people can plan around.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "Most shadow AI gets filed as a discipline problem. The sharper split is pasting versus connecting. Pasted text expires with the session. A consent grant to read your mailbox does not, and it outlives the employee's interest in the tool. Nobody revokes what nobody approved."
+    ],
+    "instagram_caption": "The unapproved AI inside your company is a demand signal.\n\nTwo kinds of exposure hide in the same phrase. Pasting a draft into a consumer chatbot is episodic; it ends with the session. Granting an AI app standing permission to read a mailbox or a drive is not. That access outlives whoever clicked allow.\n\nBans remove neither. They remove your visibility into both.\n\nThe companies handling this well are not the strictest. They are the fastest to say yes to a narrow, well-defined list, and clear about what data may go into each tool.\n\n#AIGovernance #ShadowAI #ITLeadership"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 94,
+      "_notes": {
+        "originality": "94 — the paste-versus-connect split and the standing-consent point are the differentiators and they are genuinely underused in this market. The supply-problem framing itself is not unique. Raising this would require an angle nobody is running, for example the licence-you-already-own observation promoted to the core idea rather than a secondary beat.",
+        "visual_sophistication": "92 — direction is now specified and the permissions diagram gives the carousel a real visual argument rather than decorated text, but this is intent, not execution. The score moves to the mid-90s only when the rendered slides show the slide-four to slide-five line continuity working at thumbnail scale and the type hierarchy holding on a phone.",
+        "shareability": "93 — the reposted line will be 'nobody revokes what nobody approved,' which is strong, but the package has no single artefact a reader forwards as a thing rather than a post. A one-slide approval-tier diagram would fix this.",
+        "strategic_value": "94 — it establishes AI governance authority without selling, which is right, but it does not create a next step ProLink uniquely owns. A follow-on asset on consent review would convert this into a sequence."
+      }
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Shadow AI adoption is driven by employees moving faster than procurement, not by recklessness.",
+    "TECHNICAL EXPLANATION (general, not vendor-specific product claim): delegated consent granted to a third-party application persists until revoked, independent of whether the granting user continues to use the application. This is a standard property of OAuth-style consent in mainstream business platforms, not an invented capability or a claim about any named product's specific behaviour.",
+    "ANALYSIS: The pasting risk is episodic and the connecting risk is standing; the two should be prioritised differently.",
+    "ANALYSIS: Blocking an AI tool commonly relocates the activity to personal devices and personal accounts, reducing organizational visibility rather than reducing exposure.",
+    "ANALYSIS: A published sanctioned-tool list, plain data-entry rules, tiered approval by data class, and a single named decision owner reduce unsanctioned use more effectively than prohibition.",
+    "ADVISORY, NOT A CLAIM: the suggestion to check for an AI capability already included in an owned licence is posed as a question for the reader to verify, not as a statistic about how many companies this applies to. No prevalence figure is stated or implied.",
+    "PREDICTION (labelled as such in the LinkedIn copy): the firms with the least shadow AI next year will be those that learned to say yes quickly and narrowly. Corrected from the prior draft, which labelled this as analysis in the post and as opinion in the audit.",
+    "OPINION: the useful executive question is how long approval takes and who signs it, not which tools are blocked.",
+    "ILLUSTRATIVE SCENARIOS (not clients, not incidents): the marketing coordinator on Facebook and Instagram, and the operations manager on GBP, are hypothetical composites. No client named, implied, or described.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. (GBP only)",
+    "NO STATISTICS USED: no industry, breach, adoption, cost, or threat-landscape numbers appear in any channel. No ProLink operational metrics are cited in this package.",
+    "CTA CHANGE: destination moved from a cybersecurity services page to the site root, because the asset concerns AI governance and the prior routing both mismatched the topic and risked promising page content the brief does not verify."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA is a topic mismatch. An AI-governance post routing to /cybersecurity tells the reader we filed AI under 'security services' — the exact reflex the post argues against. It also risks pointing at a page whose content does not match the promise. Route to a page that certainly exists and keep the label neutral, or drop the CTA entirely."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is all abstraction. Facebook and GBP each carry a concrete human scenario; Instagram — the most visual channel — carries none. Six slides of reasoning with no moment of recognition. The story needs a beat where the viewer sees the behaviour, not just the argument about it."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package ships zero visual direction. The standards demand editorial design with diagrams and hierarchy, and the design team is handed only kicker/headline/body. Slide 5 in the draft is four stacked imperatives — that is a paragraph, not a slide. Add per-slide visual intent and a system-level direction, and break the instruction slide into a three-part typographic structure."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The LinkedIn post labels a forward-looking statement as 'Analysis, not fact' when it is plainly a prediction, and the claims_audit then contradicts the post by calling the same sentence an opinion. Three labels for one claim. Pick the accurate one — prediction — and make the audit match."
+    },
+    {
+      "role": "CIO",
+      "finding": "The guidance is directionally right and operationally empty. 'Give the request path a turnaround' is not actionable; a CIO needs the triage rule. Missing: approvals should be tiered by data class, with a fast lane for anything that touches no customer, financial, or regulated data. Also missing the uncomfortable check — many companies are already paying for an AI capability sitting unenabled inside a licence they own, while shadow tools fill the gap."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treats the entire risk as data entry. That is the smaller half. The durable exposure is consent: an employee grants a third-party AI app standing delegated permission to read a mailbox, drive, or CRM, and that grant persists long after the person stops using the tool. Also, 'start with an inventory' with no method is generic — point at where the evidence already lives: existing third-party app consent grants in the tenant, plus expense reports."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Every AI tool is treated as one undifferentiated category, which is a 2023 framing. The 2026 distinction is episodic tools versus connected agents. Without that split, the advice cannot be prioritised — and prioritisation is the whole executive value of the piece."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Name who is allowed to decide' is the right instinct but too soft. Executives read 'who decides' as 'form a committee.' Say explicitly: one named person, not a committee on a monthly cycle. That is the sentence a COO will act on this week."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post restates the LinkedIn thesis rather than compressing to the sharpest thing in the package. The most repostable line — nobody revokes what nobody approved — is absent. Also #CIO is a low-value hashtag that attracts no relevant surface; replace it."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP closes with 'start with an inventory,' which is the single most common sentence in MSP local content. It undoes the differentiation the rest of the package earns. The local asset should carry the sharpest practical specificity, not the softest."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "British spelling 'behaviour' in the Instagram caption against otherwise US register. Facebook's 'She pastes the rough draft into whatever AI tool a friend recommended' — 'whatever' editorialises against the person the paragraph is defending. And the claims_audit mislabels the LinkedIn prediction line twice. No consecutive-sentence-opening repeats found; no banned phrasing found."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

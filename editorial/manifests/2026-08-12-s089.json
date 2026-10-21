@@ -1,0 +1,130 @@
+{
+  "post": "Picture a distribution company in the Valley. Hypothetical, but the shape is common now.\n\nHit on a Friday night. IT does everything right, systems come back from clean backups over the weekend, the warehouse ships Monday.\n\nThen the email arrives: a sample of customer contracts, and a deadline before the rest goes public.\n\nBackups solved the outage. Nothing about them can pull a file back off the internet.\n\nRestoring data and containing a disclosure are two different jobs, with different people, different decisions, and a very different phone call to your insurer.\n\nWorth asking this week: if the contents of our most sensitive folder were readable by anyone tomorrow, what would that cost us, and who makes the first decision?",
+  "headline": "Modern ransomware may never encrypt anything",
+  "cta_label": "Test the disclosure scenario",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-12-s089-card.png",
+  "image_file_jpg": "2026-08-12-s089-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S089",
+  "core_idea": "Extortion moved from locking data to copying it, and the 2026 turn is that volume no longer hides anything: semantic search lets an attacker triage a stolen archive — and lets a compromised identity search your tenant — so a flawless restore ends the outage while leaving the actual incident untouched.",
+  "channels": {
+    "linkedin": "Your backups worked perfectly. You paid anyway.\n\nTen years ago that sentence was incoherent. It is now an ordinary shape for a ransomware event.\n\nEncryption was always the means, not the objective. Expensive to build, noisy to deploy, and it loses outright to immutable backups and a rehearsed restore. So the model adjusted: copy the data first, decide later whether scrambling it is worth the effort. Publication became the threat, and a restore is no answer to publication.\n\nAnalysis, not prediction: most continuity plans now solve a problem the extortionist stopped posing. RTO and RPO describe how fast you return to operations. Neither describes what happens when contract terms, a payroll file or an executive's mailbox becomes readable by anyone.\n\nOne further change deserves board attention. Volume used to be a defense — the quiet assumption that nobody could find the two sensitive folders inside twelve terabytes of sediment. Semantic search ended that on both sides. Copilot surfaces whatever a compromised account already had permission to open, and a stolen archive can be triaged with the same class of tooling. Obscurity is not a control.\n\nSo the work moves upstream. Privileged access. Whether anyone would notice bulk reads, or a large upload to a service you already sanctioned. Which repositories still hold records nobody needs. And who decides — legal, communications, the insurer, the chief executive — in the first twenty-four hours, before IT is asked.\n\nKeep the immutable backups. They still defeat the encryption half. Stop treating them as the plan.",
+    "facebook": "Picture a distribution company in the Valley. Hypothetical, but the shape is common now.\n\nHit on a Friday night. IT does everything right, systems come back from clean backups over the weekend, the warehouse ships Monday.\n\nThen the email arrives: a sample of customer contracts, and a deadline before the rest goes public.\n\nBackups solved the outage. Nothing about them can pull a file back off the internet.\n\nRestoring data and containing a disclosure are two different jobs, with different people, different decisions, and a very different phone call to your insurer.\n\nWorth asking this week: if the contents of our most sensitive folder were readable by anyone tomorrow, what would that cost us, and who makes the first decision?",
+    "gbp": "A note for Los Angeles owners: a clean restore no longer ends a ransomware incident. Attackers copy data before doing anything else, then threaten to publish it. Backups fix the outage; they do nothing about disclosure.\n\nMuch of what LA firms hold belongs to someone else — a client, a partner, a patient — and the duty to notify often sits in the contract.\n\nThree checks: who holds administrative access and whether it is monitored; whether anyone would notice a large volume of files leaving; which systems still store records nobody needs.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Worth testing your plan against a disclosure scenario, not only an outage.",
+    "x": [
+      "A ransomware crew may never encrypt a thing. Copying the data is cheaper, quieter, and it still works against a company that restores perfectly.",
+      "Backups answer one question: how fast can we be operational again. They say nothing about what happens when the contents appear on a leak site.",
+      "Volume used to be a defense. Nobody could find the two sensitive folders inside twelve terabytes of sediment. Semantic search ended that — for the attacker sorting a stolen archive, and for the compromised account that now has a search box.",
+      "So the tabletop changes. Less \"how fast can we restore.\" More \"who decides what we say in the first 24 hours, and what does the policy actually cover.\" That is a legal and executive conversation before it is an IT one."
+    ],
+    "instagram_caption": "Obscurity used to be a security control. Nobody said it out loud, but the assumption held: an attacker inside twelve terabytes of sediment would never find the two folders that matter.\n\nThat assumption is gone. Stolen archives get triaged by search, and a compromised account inside a Copilot-enabled tenant inherits a semantic index of everything it could already open. Which is why extortion moved from locking data to copying it — and why a flawless restore ends the outage without ending the incident.\n\nSwipe for what changes in the plan.\n\n#ransomware #dataexfiltration #cyberresilience"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-12-s089-01.png",
+      "2026-08-12-s089-02.png",
+      "2026-08-12-s089-03.png",
+      "2026-08-12-s089-04.png",
+      "2026-08-12-s089-05.png",
+      "2026-08-12-s089-06.png",
+      "2026-08-12-s089-07.png",
+      "2026-08-12-s089-08.png"
+    ],
+    "jpg": [
+      "2026-08-12-s089-01.jpg",
+      "2026-08-12-s089-02.jpg",
+      "2026-08-12-s089-03.jpg",
+      "2026-08-12-s089-04.jpg",
+      "2026-08-12-s089-05.jpg",
+      "2026-08-12-s089-06.jpg",
+      "2026-08-12-s089-07.jpg",
+      "2026-08-12-s089-08.jpg"
+    ]
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Extortion has shifted from encryption toward exfiltration and threatened publication.",
+    "ANALYSIS: Encryption is operationally costly and noisy for attackers and is defeated by immutable backups plus a rehearsed restore. Hedged throughout — 'may never encrypt', not 'no longer encrypts'.",
+    "ANALYSIS: A successful restore does not resolve an incident in which data was already copied.",
+    "ANALYSIS: RTO and RPO measure operational recovery and do not measure consequence of disclosure.",
+    "ANALYSIS (documented product behavior, no capability invented, no source claimed): Microsoft Copilot returns content the signed-in account already has permission to access; therefore a compromised identity inherits search over that same material. No statistic, no named study.",
+    "ANALYSIS: Exfiltration frequently transits sanctioned cloud services, which limits the value of classic egress rules.",
+    "OPINION: First-24-hour decision rights in a disclosure event belong to legal, communications, insurance and the chief executive before IT.",
+    "OPINION: Priority controls are privileged access, bulk-read and large-upload alerting, data inventory, and disciplined deletion.",
+    "OPINION: Immutable backups remain necessary and are not a complete plan.",
+    "ILLUSTRATIVE SCENARIO, LABELED AS HYPOTHETICAL IN THE PUBLISHED COPY (Facebook: 'Hypothetical, but the shape is common now'; Instagram slide 6: 'Hypothetical' plus 'Illustrative' footer): a Valley distribution company restores over a weekend and then receives a publication threat. Not a client, not an incident report.",
+    "GENERAL LEGAL FRAMING, NO REGULATION NAMED OR INVENTED: contractual notification obligations often accompany third-party data. No statute, deadline or penalty cited.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "NO STATISTICS CITED anywhere in the package. No industry, breach-cost, downtime or attacker-behavior numbers. 'Twelve terabytes' is explicitly a rhetorical illustration of scale, not a measurement.",
+    "NO CLIENT named or implied. No certification, partnership or compliance status claimed. No competitor named.",
+    "PRE-PUBLISH CHECK REQUIRED: confirm https://prolinksystems.com/cybersecurity resolves; if not, publish with the root domain."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package argues the shift well but stops at 2021's version of double extortion — exfiltration-plus-leak-site has been common knowledge for years. Without a 2026-specific turn, this is a smart post any competent security firm could have run in 2022. It needs the thing that actually changed recently: semantic search on both sides of the fence (attacker triage of stolen archives, Copilot/enterprise search inside a compromised identity) which kills the old unspoken defense of data volume and disorganization."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Every channel opens on the same beat — backups worked, you paid anyway. LinkedIn, Instagram caption, and slide 1 are the same move three times. One channel should enter through a different door so a follower who sees two of them doesn't feel duplicated."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide bodies run 30–40 words with no hierarchy break, which will render as paragraphs of small type — the exact failure mode the visual standard forbids. Slide 4 is a natural comparison (what RTO/RPO measure vs. what nothing measures) and should be built as a two-column typographic diagram, not prose. There is also no art direction attached to the package at all, so the design layer is being left to chance."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The line 'Encryption was always a means, not an end' is close enough to the banned 'it's not just X, it's Y' rhythm to be worth rewriting, and the LinkedIn post runs roughly 1,750 characters — over the 900–1,600 ceiling. GBP is also over its 700-character limit at roughly 770."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Detection of unusual outbound transfer' is stated as though classic egress monitoring solves it. In practice exfiltration now rides sanctioned services — OneDrive/SharePoint sync, a browser upload to an approved SaaS tenant — so a firewall egress rule sees nothing anomalous. The guidance must say that explicitly or it will read as advice from someone who hasn't run a network since 2018."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Disciplined deletion' is hand-waving. Executives need to know where the retained-and-forgotten data actually lives: departed-employee mailboxes and OneDrives, the decommissioned file server nobody unplugged, SaaS export dumps. Also, the analysis correctly avoids claiming encryption has disappeared, but the X hook 'may never encrypt anything' should stay hedged — hybrid encrypt-and-leak is still common and overstating would be inaccurate."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package has no 2026 layer at all. The genuinely new fact of this era is that a compromised identity inside a Copilot-enabled tenant inherits a semantic index of everything that account could already open — the attacker no longer has to know your folder structure. That is the strongest, least-published idea available on this topic and it is missing. It must be stated as analysis of documented product behavior, with no invented capability and no numbers."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "A CFO finishes this and still cannot answer 'what do I do Monday.' The controls list is abstract. It needs one concrete, delegable action — test the plan against a disclosure scenario, not just an outage — and clarity that the first-24-hours decision rights should be written down before the event, not discovered during it."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread has no standalone quotable line; posts 1 and 2 are both explanatory rather than arresting. Instagram hashtag #cybersecurity is dead weight — too broad to reach anyone specific. Swap for a term the actual audience searches."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Facebook and Instagram scenarios open as reported fact — 'A distribution company in the Valley gets hit on a Friday night.' Under our rules that reads as an implied client story. It must be framed as hypothetical on the face of the copy, not only in the internal claims audit where readers never see it. Separately, the CTA URL is asserted without verification; if /cybersecurity does not resolve, the post publishes a broken promise."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Instagram slide 3 opens two consecutive sentences with 'Two' — a direct rule violation. GBP writes three questions as declaratives with periods, which reads as a typo rather than a style choice. 'un-publish' should be closed or rephrased. 'defence' spelling must be US English if it enters the copy."
+    }
+  ],
+  "offline_test": false
+}

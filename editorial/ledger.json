@@ -1,0 +1,2446 @@
+{
+  "posts": [
+    {
+      "date": "2026-08-08",
+      "idea_id": "S125",
+      "theme": "continuity",
+      "format": "carousel",
+      "title": "A plan you have never tested is a document, not a plan",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "idea_id": "S248",
+      "theme": "ai_threats",
+      "format": "framework",
+      "title": "Approval workflows that assume the request is fake",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "idea_id": "S089",
+      "theme": "ransomware",
+      "format": "linkedin_analysis",
+      "title": "Modern ransomware doesn't need to encrypt anything",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "idea_id": "S198",
+      "theme": "creative_surprise",
+      "format": "comparison",
+      "title": "2016 IT advice that is now actively harmful",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "idea_id": "S144",
+      "theme": "exec_strategy",
+      "format": "economics",
+      "title": "Technology debt compounds like financial debt",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "idea_id": "S116",
+      "theme": "compliance",
+      "format": "linkedin_analysis",
+      "title": "Cyber insurance is quietly setting your security policy",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "idea_id": "S126",
+      "theme": "continuity",
+      "format": "framework",
+      "title": "Sequence, location, rehearsal",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "idea_id": "S249",
+      "theme": "ai_threats",
+      "format": "carousel",
+      "title": "Three signals that used to mean 'real'",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "idea_id": "S247",
+      "theme": "ransomware",
+      "format": "explainer",
+      "title": "Why attackers target your backup system first",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "idea_id": "S251",
+      "theme": "ai_governance",
+      "format": "scenario",
+      "title": "The AI note-taker that joined a privileged conversation",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "idea_id": "S108",
+      "theme": "cloud_cost",
+      "format": "linkedin_analysis",
+      "title": "SaaS sprawl is a security problem wearing a finance costume",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "infographic",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "infographic"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "idea_id": "S117",
+      "theme": "compliance",
+      "format": "checklist",
+      "title": "Answer these before your renewal, not during it",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "idea_id": "S127",
+      "theme": "continuity",
+      "format": "advisory",
+      "title": "Power shutoff season: what to settle before the notice arrives",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "idea_id": "S033",
+      "theme": "ai_threats",
+      "format": "scenario",
+      "title": "The video call that authorized a wire transfer",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "idea_id": "S053",
+      "theme": "identity",
+      "format": "carousel",
+      "title": "The perimeter moved and nobody sent a memo",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "idea_id": "S250",
+      "theme": "ai_governance",
+      "format": "advisory",
+      "title": "Before your team uses AI with client data",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "idea_id": "S083",
+      "theme": "m365_security",
+      "format": "linkedin_analysis",
+      "title": "Before you deploy Copilot, run this report",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-05",
+      "idea_id": "S229",
+      "theme": "api_machine",
+      "format": "carousel",
+      "title": "Your integrations have more access than your CFO",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "idea_id": "S219",
+      "theme": "network_edge",
+      "format": "explainer",
+      "title": "The device at your network edge is running software too",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "question_poll"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "idea_id": "S038",
+      "theme": "ai_threats",
+      "format": "linkedin_analysis",
+      "title": "Security awareness training was built for a different attacker",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "idea_id": "S143",
+      "theme": "exec_strategy",
+      "format": "framework",
+      "title": "Three questions a CEO should ask their IT provider every quarter",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "behind_the_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "idea_id": "S252",
+      "theme": "ai_governance",
+      "format": "checklist",
+      "title": "What to ask before letting an agent touch your systems",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "idea_id": "S240",
+      "theme": "identity",
+      "format": "explainer",
+      "title": "Session tokens: the thing MFA doesn't protect",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "idea_id": "S217",
+      "theme": "data_governance",
+      "format": "linkedin_analysis",
+      "title": "Good data governance became an AI prerequisite",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "idea_id": "S161",
+      "theme": "msp_change",
+      "format": "framework",
+      "title": "How to evaluate an IT provider without a technical background",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "idea_id": "S031",
+      "theme": "ai_threats",
+      "format": "carousel",
+      "title": "The phishing tell that stopped working",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "idea_id": "S101",
+      "theme": "third_party_risk",
+      "format": "linkedin_analysis",
+      "title": "Your security is now your vendors' security",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote_minimal",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "quote_minimal",
+            "format": "question_poll"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "idea_id": "S119",
+      "theme": "compliance",
+      "format": "explainer",
+      "title": "CMMC for companies who just found out it applies to them",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "idea_id": "S006",
+      "theme": "ai_governance",
+      "format": "carousel",
+      "title": "What an AI agent can actually do with your credentials",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote_minimal",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "quote_minimal",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "idea_id": "S055",
+      "theme": "identity",
+      "format": "linkedin_analysis",
+      "title": "MFA is not one control",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "idea_id": "S226",
+      "theme": "api_machine",
+      "format": "explainer",
+      "title": "API keys are credentials that never expire and never sleep",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "infographic",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "infographic"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "idea_id": "S035",
+      "theme": "ai_threats",
+      "format": "carousel",
+      "title": "Why targeted phishing got cheap",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "idea_id": "S107",
+      "theme": "third_party_risk",
+      "format": "linkedin_analysis",
+      "title": "Your customers are starting to audit you",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "idea_id": "S150",
+      "theme": "exec_strategy",
+      "format": "comparison",
+      "title": "When internal IT is right, and when it isn't",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "idea_id": "S001",
+      "theme": "ai_governance",
+      "format": "carousel",
+      "title": "The AI your company didn't buy",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "idea_id": "S054",
+      "theme": "identity",
+      "format": "explainer",
+      "title": "Passkeys, explained for people who approve budgets",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "idea_id": "S207",
+      "theme": "human_risk",
+      "format": "linkedin_analysis",
+      "title": "Stop calling users the weakest link",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "question_poll"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "idea_id": "S186",
+      "theme": "creative_surprise",
+      "format": "prediction",
+      "title": "Three things about IT in 2026 that would have sounded absurd in 2020",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "idea_id": "S098",
+      "theme": "ransomware",
+      "format": "explainer",
+      "title": "Data exfiltration changes your legal obligations",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "idea_id": "S032",
+      "theme": "ai_threats",
+      "format": "linkedin_analysis",
+      "title": "Voice is no longer proof of identity",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "data_viz",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "data_viz",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "data_viz",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "idea_id": "S155",
+      "theme": "exec_strategy",
+      "format": "carousel",
+      "title": "Signs you have outgrown your IT arrangement",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "behind_the_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "behind_the_scenes"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "idea_id": "S076",
+      "theme": "m365_security",
+      "format": "explainer",
+      "title": "What Microsoft backs up, and what it does not",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bold_type",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bold_type",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bold_type",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "idea_id": "S002",
+      "theme": "ai_governance",
+      "format": "linkedin_analysis",
+      "title": "Copilot inherits every permission mistake you ever made",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "question_poll",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "question_poll"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "idea_id": "S255",
+      "theme": "creative_surprise",
+      "format": "economics",
+      "title": "Why the cheapest IT quote is usually the most expensive",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "idea_id": "S093",
+      "theme": "ransomware",
+      "format": "scenario",
+      "title": "Restored in four hours, back in business in nine days",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "single_image"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "single_image"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "idea_id": "S159",
+      "theme": "msp_change",
+      "format": "linkedin_analysis",
+      "title": "What an MSP is for in 2026",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photographic",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "photographic",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "photographic",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "idea_id": "S146",
+      "theme": "exec_strategy",
+      "format": "carousel",
+      "title": "What your IT provider should tell you without being asked",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote_minimal",
+        "format": "quote_stat_card",
+        "channels": {
+          "linkedin": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "facebook": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "gbp": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "instagram": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          },
+          "x": {
+            "style": "quote_minimal",
+            "format": "quote_stat_card"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "idea_id": "S041",
+      "theme": "ai_threats",
+      "format": "advisory",
+      "title": "Tell your finance team this week",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "idea_id": "S014",
+      "theme": "ai_governance",
+      "format": "linkedin_analysis",
+      "title": "Copilot readiness is a permissions project, not a licensing one",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "infographic",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "infographic"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "infographic"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "idea_id": "S077",
+      "theme": "m365_security",
+      "format": "carousel",
+      "title": "Where SharePoint sharing went wrong",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "client_value"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "idea_id": "S110",
+      "theme": "cloud_cost",
+      "format": "economics",
+      "title": "Cloud didn't get expensive, it got un-managed",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          },
+          "x": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "insight"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "idea_id": "S060",
+      "theme": "identity",
+      "format": "linkedin_analysis",
+      "title": "Machine identities now outnumber your employees",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "idea_id": "S141",
+      "theme": "soc_detection",
+      "format": "explainer",
+      "title": "What security automation should and should not decide",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "positive",
+        "channels": {
+          "linkedin": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "facebook": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "gbp": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "instagram": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          },
+          "x": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "positive"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "idea_id": "S231",
+      "theme": "exec_strategy",
+      "format": "economics",
+      "title": "Reading an IT proposal like a CFO",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "seasonal",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "seasonal"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "idea_id": "S124",
+      "theme": "compliance",
+      "format": "linkedin_analysis",
+      "title": "Boards are being asked about cyber in a way they weren't three years ago",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "x": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "idea_id": "S256",
+      "theme": "creative_surprise",
+      "format": "myth",
+      "title": "Most security advice fails because it assumes free time",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to",
+        "channels": {
+          "linkedin": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "facebook": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "gbp": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "instagram": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          },
+          "x": {
+            "style": "illustrative",
+            "format": "carousel",
+            "ground": "cream",
+            "layout": "left_block",
+            "register": "how_to"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "idea_id": "S244",
+      "theme": "continuity",
+      "format": "framework",
+      "title": "A tabletop exercise you can run in one hour",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight",
+        "channels": {
+          "linkedin": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "facebook": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "gbp": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "instagram": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "x": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "idea_id": "S044",
+      "theme": "ai_threats",
+      "format": "linkedin_analysis",
+      "title": "Your public-facing executives are training data",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "idea_id": "S012",
+      "theme": "ai_governance",
+      "format": "myth",
+      "title": "\"It's fine, we turned off training\"",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question",
+        "channels": {
+          "linkedin": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "facebook": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "gbp": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "instagram": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "x": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "idea_id": "S156",
+      "theme": "exec_strategy",
+      "format": "economics",
+      "title": "What automation actually removed from IT work",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist",
+        "channels": {
+          "linkedin": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "facebook": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "gbp": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "instagram": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "x": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          }
+        }
+      }
+    }
+  ]
+}

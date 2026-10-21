@@ -1,0 +1,154 @@
+{
+  "post": "Picture a Tuesday. Nothing is broken. The network is up, laptops are fine, nobody has filed a ticket all morning.\n\nThat is also the day a finance manager approves a wire because the voice on the phone sounded exactly like the CFO. Or the day someone pastes a customer list into an AI tool to finish a report faster.\n\nNeither one is a help desk event. Nothing crashed. No alert fired. Nobody had anything to report.\n\nSo the question worth asking an IT provider is not how fast they answer. It is what they are watching when nothing is wrong: who has access to what, which tools showed up without approval, how far one stolen password would travel.\n\nFixing what breaks is still part of the job. It stopped being the part that decides your year.",
+  "headline": "The failures nobody files a ticket for",
+  "cta_label": "How we work",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/managed-it-services",
+  "image_file": "2026-10-01-s159-card.png",
+  "image_file_jpg": "2026-10-01-s159-card.jpg",
+  "theme": "msp_change",
+  "idea_id": "S159",
+  "core_idea": "The IT work that decides whether a business has a bad year no longer generates a ticket, so an MSP should now be judged on what it decides, discovers, and refuses — and judged on artifacts, not assurances.",
+  "channels": {
+    "linkedin": "Ask most executives what their IT provider is for, and the answer still describes 2016: keep the machines running, fix what breaks, show up.\n\nThat work still exists. It just stopped being where the risk lives.\n\nThe decisions that determine whether a 60-person company has a bad year are not hardware decisions. Who holds standing admin access, and who reviewed it last. Which SaaS tools arrived without procurement. Whether Copilot surfaces a finance folder over-shared years ago and never re-scoped. A voice on the phone authorizing a wire. Backups reachable with the credentials an attacker steals first.\n\nNone of that surfaces in a ticket queue. A ticket is something a person noticed and reported. The expensive failures are the ones nobody reports, because nothing looked broken.\n\nThree tests. Analysis, not received wisdom.\n\nDoes it decide, or only execute? If every change to your security posture traces back to a request you made, you have a vendor.\n\nWhat has it told you that you never asked about? Shadow AI, a machine identity nobody owns, an admin account belonging to someone who left. Discovery is the service.\n\nWhat has it refused? A provider that never pushes back on a convenient but risky request is not managing your risk. It is quietly absorbing it.\n\nAsk for artifacts, not assurances: last quarter's access review, the changes made unprompted, one documented refusal.\n\nOur own numbers — average ticket first-response time of 15 minutes, 90% first-contact resolution — answer the first question only. Hygiene, not strategy. Ask us for the second kind of proof.",
+    "facebook": "Picture a Tuesday. Nothing is broken. The network is up, laptops are fine, nobody has filed a ticket all morning.\n\nThat is also the day a finance manager approves a wire because the voice on the phone sounded exactly like the CFO. Or the day someone pastes a customer list into an AI tool to finish a report faster.\n\nNeither one is a help desk event. Nothing crashed. No alert fired. Nobody had anything to report.\n\nSo the question worth asking an IT provider is not how fast they answer. It is what they are watching when nothing is wrong: who has access to what, which tools showed up without approval, how far one stolen password would travel.\n\nFixing what breaks is still part of the job. It stopped being the part that decides your year.",
+    "gbp": "Evaluating an IT provider in Los Angeles this year? The sales conversation will center on response times and a monitoring dashboard. Useful, not decisive.\n\nThree better questions:\n\nWhich security decisions do you make without waiting for my approval?\n\nWhat did you find last quarter that I never asked you to look for?\n\nWhen did you last tell a client no?\n\nMost of the work that protects a business now is quiet: access reviews, identity controls, and knowing which AI tools have touched company data.\n\nPro Link Systems has supported LA businesses from Woodland Hills since 1999. Happy to give you a second read on what your current provider is actually managing.",
+    "x": [
+      "An IT ticket queue only contains problems a human noticed. The failures that cost real money in 2026 are the ones where nothing looked broken.",
+      "Nobody files a ticket for standing admin access that goes unreviewed, a SaaS tool procurement never saw, a folder over-shared years ago that Copilot now surfaces, or a cloned voice approving a payment. Silence is not the same as safety.",
+      "Judge a provider on three things: what it decides without being asked, what it tells you that you never asked about, and what it refuses when you ask. Then ask for artifacts. Response speed is hygiene. Judgment is the service."
+    ],
+    "instagram_caption": "The break-fix model assumed failure announces itself. Something stops working, someone reports it, a technician fixes it.\n\nThat loop still runs. It no longer covers where the damage comes from: admin access nobody reviews, unapproved AI tools, a folder over-shared years ago, a cloned voice on a payment call. None of it files a ticket.\n\nThree questions worth asking any provider, including us. What do you decide without being asked. What have you found that I never asked you to look for. When did you last say no.\n\n#ManagedIT #CyberResilience #AIGovernance"
+  },
+  "carousel": {
+    "png": [
+      "2026-10-01-s159-01.png",
+      "2026-10-01-s159-02.png",
+      "2026-10-01-s159-03.png",
+      "2026-10-01-s159-04.png",
+      "2026-10-01-s159-05.png",
+      "2026-10-01-s159-06.png",
+      "2026-10-01-s159-07.png",
+      "2026-10-01-s159-08.png"
+    ],
+    "jpg": [
+      "2026-10-01-s159-01.jpg",
+      "2026-10-01-s159-02.jpg",
+      "2026-10-01-s159-03.jpg",
+      "2026-10-01-s159-04.jpg",
+      "2026-10-01-s159-05.jpg",
+      "2026-10-01-s159-06.jpg",
+      "2026-10-01-s159-07.jpg",
+      "2026-10-01-s159-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photographic",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "photographic",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 93,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 94,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: the risk that matters most to a 20-500 seat business has moved from hardware failure to identity, access, SaaS, and AI data exposure",
+    "ANALYSIS: a ticket queue only contains problems a human noticed and reported, so unreported exposure is structurally invisible to it",
+    "ANALYSIS (corrected for mechanism): Copilot honors existing permissions; the exposure described is content over-shared in the past and never re-scoped, which Copilot then surfaces. No claim is made that Copilot bypasses access controls.",
+    "ANALYSIS: backups reachable with the same credentials an attacker would steal first are not a reliable recovery path",
+    "ANALYSIS: voice-cloned payment authorization and unapproved AI tool use are stated as illustrative scenarios, not as reported incidents. No victim, company, dollar figure, or date is attached to either.",
+    "OPINION: a provider should be judged on what it decides, what it discovers unprompted, and what it refuses",
+    "OPINION: response-time metrics are hygiene, not evidence of security posture",
+    "FACT(F003): average ticket first-response time of 15 minutes — stated with the full metric name in both uses (LinkedIn close, Instagram slide 8). No bare '15-minute response' anywhere.",
+    "FACT(F004): first-contact resolution is 90% (LinkedIn close, Instagram slide 8)",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999 (GBP, Instagram slide 8 footer)",
+    "NOT USED: F005, F006, F009, F010, F011. No satisfaction score, no incident story, no named or implied client in any channel.",
+    "NO EXTERNAL STATISTICS CITED: no industry, breach-cost, downtime, or threat-landscape number appears in any channel. No regulation, deadline, vulnerability, or research finding is named.",
+    "NO CERTIFICATION, PARTNERSHIP, OR COMPLIANCE CLAIM. NO COMPETITOR NAMED."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The subject — 'what an MSP is for' — is structurally self-serving, and the draft's LinkedIn metrics paragraph tips it over. Citing our own help desk numbers immediately after telling readers help desk numbers are not the point reads as a plug wearing a disclaimer. Compressed to a single self-limiting line and moved to the close so the standard applies to us last, not first."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram carousel had no 'what to do' slide — it went insight, insight, takeaway. An executive finishes the swipe agreeing and holding nothing. Added a Monday-morning artifacts slide (access review, unprompted changes, one documented refusal) and moved the ProLink numbers to a restrained final slide where a CTA belongs."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 3 carried five list items and slide 5 four long sentences — at carousel scale that becomes a paragraph of small type, which the visual standard explicitly forbids. Trimmed slide 3 to four short items and slide 5 to three numbered clauses so each slide can be set with real hierarchy and negative space. Hook slide correctly stays near-empty."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Redundancy in the risk inventory: 'standing admin access' and 'dormant privileged accounts' are the same idea stated twice in the LinkedIn body, which weakens a list whose power is breadth. De-duplicated and replaced one instance with 'an admin account belonging to someone who left.' Also cut the LinkedIn body by roughly 90 characters to sit comfortably inside the 1,600 limit."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three tests were sound but unfalsifiable — a provider can claim all three in a sales meeting. An executive needs an artifact to request. Added: last quarter's access review, the list of changes made without being asked, one documented refusal. That turns a rhetorical frame into a procurement checklist."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Whether Copilot can read the finance folder nobody scoped' misstates the mechanism. Copilot honors existing permissions; the exposure comes from content that was over-shared years ago and never re-scoped. Left uncorrected, a technical reader discounts the whole post. Reworded across LinkedIn, Instagram and X to 'a folder over-shared years ago that Copilot now surfaces.'"
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treated shadow AI only as unapproved tool adoption. The more common 2026 pattern is sanctioned tools pointed at unsanctioned data. Sharpened the Facebook scenario from 'connects an AI tool to the file share' to a person pasting a customer list into a tool to finish a report, which is the behaviour executives actually recognize."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The Facebook post diagnosed but never told me what to ask. Added one pivot line — the question is not how fast they answer, it is what they are watching when nothing is wrong — so the reader leaves with a sentence they can repeat in a meeting."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram caption used 'Swipe for three questions...' — a withheld payoff, which the standard rejects. Replaced with the three questions stated plainly in the caption; the carousel earns the swipe by expanding them, not by hiding them. X post 2 also opened as a fragment list without a standalone claim; tightened so it survives being screenshotted alone."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Mid-carousel self-promotion on slide 6 broke the editorial register — a premium publication does not interrupt its own argument to quote its SLA. Relocated to the terminal slide, framed as a limitation of our own metric rather than a boast. CTA label 'See our approach' was generic; changed to 'How we work.'"
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two rule violations. LinkedIn: 'They matter. They are also hygiene' — consecutive sentences opening with the same word. GBP: two consecutive questions both opening with 'What.' Both fixed. GBP also ran within a few characters of the 700 ceiling; trimmed to roughly 670. Verified: no banned phrasing, no emoji, no exclamation marks, zero hashtags on LinkedIn/Facebook/GBP, three on Instagram, one CTA per channel."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

@@ -1,0 +1,149 @@
+{
+  "post": "Picture a new hire in marketing, first week, asking the company assistant what exists on next year's compensation planning. It answers. Clean summary, sources listed, every file one she could already open.\n\nNothing was breached. The permissions had been wrong for years. Nobody had ever thought to search.\n\nSo the work before an assistant goes live is mostly not about the assistant. Find out who can reach what today. Close the gaps that matter. Decide what should never be in scope at all, starting with legal, HR and board material.\n\nThen the part most teams skip: someone has to own this after launch. Access drifts the week new projects start. A list of wide-open folders is an IT deliverable. Deciding which ones close is a business one, and it needs a name attached.\n\nBuy the licenses last.",
+  "headline": "Copilot is a permissions project, not a licensing one",
+  "cta_label": "Review your access",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/contact",
+  "image_file": "2026-10-04-s014-card.png",
+  "image_file_jpg": "2026-10-04-s014-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S014",
+  "core_idea": "Microsoft 365 Copilot grants no new access — it makes existing access conversational, so readiness is a permissions project jointly owned by IT and the business, not a licensing decision. And the familiar reassurance that 'it runs under the user's permissions' expires the moment employees begin building and sharing their own agents.",
+  "channels": {
+    "linkedin": "A Copilot pilot rarely fails because the assistant was wrong. It fails because the assistant was right — about a file nobody meant to share.\n\nCopilot answers inside the permissions of the person asking. No new access is granted. What changes is retrieval. Finding a mislabeled folder used to require knowing it existed. Now someone asks in plain English and gets a synthesized answer with sources.\n\nThat makes readiness a permissions project, and most of it is not an IT decision. IT can produce the list of what is overshared. Only the business owner of that data can say whether the FP&A folder should have been open to everyone since 2021.\n\nThen the harder part.\n\nThe moment employees start building and sharing their own agents, \"it runs under the user's permissions\" stops being a complete answer. Whose access applies — the person who built the agent, or the colleague using it? What data was it pointed at? Ask before the first one is published, because the governance question moves from who can open what to who can build what, and on top of which data.\n\nTwo practical notes.\n\nA clean subset beats a stalled program. Pilot where the data is already governed, remediate the rest in parallel. All-or-nothing readiness programs tend to become neither.\n\nDelay is not neutral. A company that defers a governed assistant for a year does not get a year without AI. It gets a year of the same documents pasted into whatever tool is open in a browser tab.\n\nPermissions hygiene was always the right work. The assistant only removed the option to keep deferring it.",
+    "facebook": "Picture a new hire in marketing, first week, asking the company assistant what exists on next year's compensation planning. It answers. Clean summary, sources listed, every file one she could already open.\n\nNothing was breached. The permissions had been wrong for years. Nobody had ever thought to search.\n\nSo the work before an assistant goes live is mostly not about the assistant. Find out who can reach what today. Close the gaps that matter. Decide what should never be in scope at all, starting with legal, HR and board material.\n\nThen the part most teams skip: someone has to own this after launch. Access drifts the week new projects start. A list of wide-open folders is an IT deliverable. Deciding which ones close is a business one, and it needs a name attached.\n\nBuy the licenses last.",
+    "gbp": "Weighing Microsoft 365 Copilot? The first question is not how many seats. It is who can open what in your tenant this morning.\n\nAn assistant answers inside each employee's existing permissions. Years of accumulated sharing simply become easy to find in plain language.\n\nA sensible first move: pull a report of everything shared company-wide or by open link — then check whether meeting recordings, transcripts and chat history sit inside the same scope. That one is usually the surprise. Then have the people who own that data confirm what stays open.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Worth a clear access picture before the seats are priced.",
+    "x": [
+      "Copilot gives employees no new access. It makes the access they already had conversational. One of those is a licensing decision. The other is a permissions project, and it never appears in the quote.",
+      "Readiness order for an AI assistant in Microsoft 365: inventory what an ordinary employee can actually open. Remediate company-wide sharing and open links. Label what carries consequence. Name an owner for the drift. Licensing is step five.",
+      "\"It runs under the user's permissions\" answers the question for one assistant. It stops answering the moment employees build and share their own agents. Whose access applies then — the maker's or the user's? Worth asking before the first one is published.",
+      "Delaying the governed assistant does not delay the risk. It relocates it to whatever tool is already open in a browser tab."
+    ],
+    "instagram_caption": "Nobody ever searched for it. Now they can just ask.\n\nMicrosoft 365 Copilot answers inside whatever access an employee already has. The rollout does not create a permissions problem. It reads the existing one out loud, in plain language, at conversational speed.\n\nFour things belong on the pre-deployment plan. None of them involve configuring the assistant.\n\nAnd one reassurance with a shorter shelf life than people expect: \"it runs under the user's permissions\" stops being a complete answer the moment employees start building and sharing their own agents.\n\nSave this before the licensing conversation starts.\n\n#AIGovernance #Microsoft365 #CopilotReadiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "infographic",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "infographic"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "infographic"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 95,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Microsoft 365 Copilot responds within the existing permissions of the user asking and grants no new access — a description of the product's access model, not a statistic or benchmark.",
+    "ANALYSIS: A Copilot deployment surfaces pre-existing oversharing because conversational retrieval is easier than keyword search.",
+    "ANALYSIS: Common sources of unintended access include company-wide sharing, open-link sharing, orphaned SharePoint sites, group inheritance errors from migrations, and meeting recordings/transcripts/chat history that fall outside a document-centric review.",
+    "QUESTION, NOT CLAIM: The agent-identity section (LinkedIn, X post 3, Instagram slide 5) asserts no specific behaviour of any Microsoft agent-building product. It states that the identity and data scope an agent operates under depend on how it was built and shared, and instructs the reader to ask. No SKU, feature name, default setting, or capability is claimed.",
+    "OPINION: Licensing is the predictable cost; readiness is the real project, and licenses should be purchased last.",
+    "OPINION/ANALYSIS: The four-part readiness sequence (inventory effective access, remediate oversharing, label and exclude, assign an owner) is ProLink's recommended order of work.",
+    "OPINION: Remediation decisions belong with the business owners of the data, not with IT alone. IT enumerates; owners adjudicate.",
+    "OPINION: A bounded pilot on already-governed data, with remediation running in parallel, is preferable to an all-or-nothing readiness program. Recommendation, not a finding.",
+    "ANALYSIS/OPINION: Deferring a governed assistant relocates rather than removes AI data risk, because employees use ungoverned tools in the interim. Reasoned argument, no incident or statistic cited.",
+    "ANALYSIS: Permissions configurations drift over time without a named owner and a recurring review cadence.",
+    "ILLUSTRATIVE SCENARIO (Facebook, Instagram slide 3): The new-hire example is explicitly hypothetical ('Picture a...'). It is not a client, not based on a client, and is not presented as an incident. The year 2021 appears only as a plausible detail inside a hypothetical, not as data.",
+    "FACT(F012): Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Only ProLink claim in the package.",
+    "No industry, breach, cost, downtime, or threat-landscape statistics appear in any channel. No client is named or implied. No certification, partnership, or compliance status is claimed. No competitor is named. No regulation or deadline is invented."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The four-step readiness list is the most duplicated element in the package — it appears nearly verbatim in GBP, X post 2, and four Instagram slides. Channel doctrine requires the best expression per channel, not one list re-typed four ways. Each channel now carries a different lead idea: LinkedIn carries the ownership split and the three approval questions, Facebook carries the scenario, GBP carries the first operational move, X carries the compression, Instagram carries the sequence."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram hook slide was the thesis statement, not a hook — it told the reader the conclusion before they had any reason to care, so slide one did no work. Replaced with 'Nobody ever searched for it. Now they can just ask,' which creates the swipe and lets slide two deliver the thesis."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Body copy was uneven — slide four ran roughly 230 characters against a 160-character average, which breaks typographic rhythm across a carousel and forces a point-size change mid-deck. All bodies trimmed toward a consistent 150–190 character band so the layout system holds. Slide count held at eight rather than nine; the counterweight idea moved to the caption rather than becoming a ninth slide that would weaken pacing."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft had one unflagged logical slip: 'Two very different risks, and only one of them appears in a licensing quote.' Neither risk appears in a licensing quote — a quote prices seats. Rewritten so the contrast is between a licensing decision and a permissions project. Also tightened the LinkedIn sentence that stacked three oversharing causes into a single unparseable subject."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft treated readiness as entirely an IT workstream, which is the most common and most expensive mistake in these rollouts. IT can enumerate what is overshared; it cannot adjudicate whether a finance folder should have been open. The ownership split is now explicit on LinkedIn, Facebook, GBP, and slide seven. Added a procurement question executives can actually use — which governance and reporting tooling is included versus licensed separately — phrased as a question, not an unverified capability claim."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Scope was incomplete: the draft covered SharePoint, OneDrive, and Teams files but omitted meeting recordings, transcripts, and chat history, which are routinely the last surfaces anyone reviews and often the most sensitive. Added as the third approval question on LinkedIn. No invented vulnerability, incident, or statistic appears anywhere in the package."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft's implicit advice was 'clean up first, deploy later,' with no acknowledgment that deferral has its own cost. That reads as 2024 caution, not 2026 judgment. Added the counterweight: a year without a governed assistant is a year of the same material pasted into an ungoverned one. This is the line least likely to appear in any other MSP's post."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "A CEO reading the draft still would not know who to put in the room on Monday. Fixed with a concrete first move in GBP (pull the company-wide and open-link report, then route it to data owners) and with the explicit statement that most of the remediation decision-making is a business call, not an IT call."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 2 was a list, which does not travel. Kept for sequence value but tightened, and added a fourth post carrying the counterweight — the most quotable line in the package and the one most likely to be screenshotted. Post one now works fully standalone for readers who never see the thread."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP close ('that is a sensible place to begin') was soft to the point of saying nothing, and the paragraph above it opened two consecutive sentences with 'It.' Both fixed. ProLink identity still appears in exactly one channel, using only F012, which is the correct restraint for this topic."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two violations of the consecutive-opening rule: GBP ('It does not expand access. It makes years...') and X post 3 ('A fast answer... A slow one...'). Both rewritten. Also removed the brand-voice 'I' in 'the test I would put to an IT leader' and the stilted inversion 'Should the answer be slow or hedged.' No banned phrasing was present in the draft."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package still argues the 2024 version of this idea. 'Copilot runs under the user's permissions' is now the single most repeated sentence in MSP Copilot content, and it has a shelf life: once employees start building and publishing their own agents, 'it runs as the user' stops being a complete answer, because the identity and data scope an agent operates under depend on how it was built and shared. Without that turn, the piece has no insight the reader could not get from a vendor FAQ. Added as the Instagram insight slide, an X post, and a LinkedIn section — framed as a question to put to whoever builds the agent, not as a product capability claim."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 4 through 7 are structurally identical — same kicker/headline/body mass, same rhythm, four swipes with no change in form. That reads as a template, not editorial design, and it is the fastest way to lose a swipe-through. Restructured: the four-step program is compressed into one numbered-stack slide built to be screenshotted, a taxonomy slide ('where access accumulates') is set as a labeled figure, and the insight slide breaks form with a question headline. Eight slides, six distinct visual treatments, footers now carry figure labels so the deck has an editorial spine."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Channel doctrine is broken by verbatim reuse. 'IT can show which folders are open to everyone. Only the people who own that data can say which ones should be' appears word-for-word in Facebook and Instagram slide 7, and 'in front of whoever asks the assistant first' appears in both X and the Instagram takeaway. A reader following two channels sees copy-paste, which costs more authority than the lines are worth. All duplication removed; each channel now carries a point the others do not — Facebook owns the ownership-after-launch argument, GBP owns the recordings-and-transcripts scope gap, X owns the agent-identity question in its sharpest form."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

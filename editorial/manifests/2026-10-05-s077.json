@@ -1,0 +1,164 @@
+{
+  "post": "Two sharing problems live inside Microsoft 365, and they do not look alike.\n\nA link set to \"Anyone with the link\" works for whoever holds the URL. No sign-in, no multifactor prompt. It outlives the project, the vendor, sometimes the employee who created it — and it never shows up in your own search, because it points outward.\n\nThe other kind points inward: files shared with everyone in the company, sites whose membership quietly grew. That stayed invisible while search was weak. Copilot now answers in plain language using whatever a person already had rights to open, so the old sprawl surfaces as odd results.\n\nChanging the sharing defaults only governs the next link. What is already out there needs a review, oldest first. And the inward half is not an IT decision at all — somebody in the business has to say who belongs on each site.\n\nAsk for both lists before anyone starts cleaning.",
+  "headline": "Two sharing problems, opposite fixes",
+  "cta_label": "Talk to ProLink",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/contact",
+  "image_file": "2026-10-05-s077-card.png",
+  "image_file_jpg": "2026-10-05-s077-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S077",
+  "core_idea": "Two sharing failures accumulated in every mature Microsoft 365 tenant and they fail in opposite directions: anonymous links leak outward with no identity attached and never appear in internal search, while org-wide links and overgrown site membership leak inward and only became visible once search and Copilot got good. The fixes are opposite — policy versus ownership — and both halves have a trap: tightening the tenant default governs only the next link, and the ownership half cannot be delegated to IT at all, which is why it is the half that never finishes.",
+  "channels": {
+    "linkedin": "\"Anyone with the link\" is not the setting that puts a file into your colleague's Copilot results.\n\nTwo exposures accumulated in your tenant, and they fail in opposite directions.\n\nAnonymous links are access without an identity. No sign-in, no MFA, no Conditional Access, no line in anyone's offboarding checklist. Whoever holds the URL is a legitimate reader until someone revokes it. Your own search will never surface them, because they point outward.\n\nThe inward failure is the reverse. Links scoped to everyone in the company, sites inheriting membership from a group that quietly grew. For years that stayed theoretical, because finding a file meant knowing where it lived. Then Microsoft 365 search got good and Copilot started answering in plain language. Both are permission-trimmed: they return only what the person could already open. Copilot created none of this exposure. It removed the obscurity holding it in place.\n\nSo the work splits.\n\nPolicy half: change the tenant default link type, set expiration, review the oldest external links first. One caution — the default governs the next link. The ones already issued keep the scope they were created with, so flipping the setting feels like completion without being it.\n\nOwnership half: every site needs a named owner who can defend its membership list out loud. No administrator can decide who belongs in the finance site. That is why this half stalls, and why it is yours.\n\nRestricted SharePoint Search can narrow what organization-wide search and Copilot reach while you work, at the cost of degrading search for everyone. Tourniquet, not a fix.\n\nThe payoff is not only safety. It is a search bar your people stop second-guessing.",
+    "facebook": "Two sharing problems live inside Microsoft 365, and they do not look alike.\n\nA link set to \"Anyone with the link\" works for whoever holds the URL. No sign-in, no multifactor prompt. It outlives the project, the vendor, sometimes the employee who created it — and it never shows up in your own search, because it points outward.\n\nThe other kind points inward: files shared with everyone in the company, sites whose membership quietly grew. That stayed invisible while search was weak. Copilot now answers in plain language using whatever a person already had rights to open, so the old sprawl surfaces as odd results.\n\nChanging the sharing defaults only governs the next link. What is already out there needs a review, oldest first. And the inward half is not an IT decision at all — somebody in the business has to say who belongs on each site.\n\nAsk for both lists before anyone starts cleaning.",
+    "gbp": "Two things pile up in SharePoint, and only one is a search problem.\n\nLinks set to \"Anyone with the link\" open for whoever holds the URL. No sign-in, no multifactor, and they never appear in your own search, because they point outward.\n\nInternal over-sharing is the other kind. Microsoft 365 search and Copilot return only what someone already had rights to open, so permissions that were harmless while search was weak now surface as odd results.\n\nTightening the sharing default only governs the next link. Ask your IT team for two lists: every externally shared link, oldest first, and every site with a named owner beside it.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "\"Anyone with the link\" and \"People in your organization with the link\" fail in opposite directions. The first hands access to whoever holds a URL — no sign-in, no MFA. The second is why Copilot occasionally surfaces a file someone should never have found.",
+      "Copilot created neither problem. Search got good enough that permissions became the only boundary left. Anonymous links are a policy fix — though changing the tenant default only governs the next link, not the ones already issued. Internal sprawl is an ownership fix.",
+      "Restricted SharePoint Search narrows what organization-wide search and Copilot can reach while you clean up. It also degrades search for everyone. Tourniquet, not a fix. And no administrator can decide who belongs on the finance site. That half belongs to the business."
+    ],
+    "instagram_caption": "Most SharePoint cleanups treat over-sharing as one problem. It is two, and they fail in opposite directions.\n\nAnonymous links point outward. Access with no identity attached — no sign-in, no MFA — working for whoever holds the URL long after the project closed. Your own search will never show them to you.\n\nOrg-wide links and overgrown site membership point inward. Harmless-looking for years, because finding a file meant knowing where it lived. Then search got good, and Copilot started answering in plain language using whatever a person already had rights to open.\n\nTwo fixes, not one. Tightening the sharing default governs the next link, not the ones already issued. And deciding who belongs on a site was never an IT decision in the first place.\n\nRestricted SharePoint Search can narrow what organization-wide search and Copilot reach while you work. It degrades search for everyone, so treat it as a tourniquet.\n\n#Microsoft365 #Copilot #ITLeadership"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "tip_banner",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "banner",
+    "register": "client_value",
+    "channels": {
+      "linkedin": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value"
+      },
+      "facebook": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value"
+      },
+      "gbp": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value"
+      },
+      "instagram": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value"
+      },
+      "x": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "client_value"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 91,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "FACT (Microsoft 365 product behaviour, widely documented, no statistic stated): SharePoint and OneDrive sharing links include an anonymous 'Anyone with the link' type and an organization-scoped 'People in your organization with the link' type. The first does not require sign-in; the second resolves against an authenticated identity.",
+    "ANALYSIS: Because anonymous links require no sign-in, they are not evaluated by MFA or Conditional Access and are not retired by user offboarding. No figure, breach, or incident is claimed.",
+    "FACT (Microsoft 365 product behaviour): Microsoft 365 search and Microsoft 365 Copilot are permission-trimmed — they return only content the requesting user already has rights to access.",
+    "FACT (Microsoft 365 product behaviour): the tenant default link type governs links created after the setting is changed; links already created retain the scope they were created with. Claim is deliberately scoped to link type only — no assertion is made about whether expiration settings apply retroactively, because that behaviour is not stated in the brief.",
+    "ANALYSIS: Internal over-exposure is therefore driven by organization-wide links and broad site membership rather than by anonymous external links, which point outward and do not appear in a colleague's internal results.",
+    "FACT (Microsoft feature description, no number or date claimed): Restricted SharePoint Search limits what organization-wide search and Copilot can reach to an admin-curated set of sites, and is described by Microsoft as a temporary measure. Its trade-off (degraded search for all users) is stated as ANALYSIS.",
+    "ANALYSIS: Tenant-level levers for anonymous links include the default link type, link expiration, and reviewing the oldest external links first. These are standard administrative settings, not claimed capabilities of Pro Link Systems.",
+    "OPINION: a sharing cleanup should be split into a policy workstream and a site-ownership workstream rather than run as one project.",
+    "OPINION: the ownership half cannot be performed by IT, because membership decisions are business decisions; this is offered as judgement, not as a product or regulatory fact.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "NO NUMBERS: no statistics about breaches, costs, timeframes, prevalence, or threat activity appear in any channel. No client is named or implied. No certification, partnership, or compliance status is claimed. No vulnerability, regulation, deadline, or research finding is invented."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's central claim is the one every MSP has already posted this year — 'clean up your sharing before Copilot embarrasses you.' The only thing separating us is tone. That is not a moat. The package needs a technical distinction an executive has not heard, not a better-written version of the common warning."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "There is a real accuracy problem under the polish. Anonymous 'Anyone with the link' sharing is external, credential-free access — it does not put a file into a colleague's Microsoft 365 search or Copilot results. What drives internal over-exposure is org-wide links ('People in your organization with the link') and sites whose membership grew. The draft merges the two into one villain, which means the advice it gives does not map to the failure it describes."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The exposure is never named. 'Anyone with the link' means access with no identity attached: no sign-in, no MFA, no Conditional Access evaluation, no entry in an offboarding checklist, and no internal search surface that would ever reveal it. Stating that plainly is the difference between a productivity post and a security post that an executive forwards."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The AI section is correct but incomplete. It omits the governance lever an admin actually reaches for first — Restricted SharePoint Search, which limits what organization-wide search and Copilot can reach to an admin-curated set of sites. Omitting it makes the post advisory rather than operational; including it with its real trade-off (it degrades search for everyone) is the kind of judgment that signals we have done this work."
+    },
+    {
+      "role": "CIO",
+      "finding": "Two unverifiable time claims: 'somebody can answer the same week' and 'the answer takes a day, not a month.' Neither is sourced and neither survives contact with a real tenant. Also missing: who owns the remediation. Permissions sprawl is not an IT project, it is a site-ownership accountability problem, and the draft never says so."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is linear — buildup, change, payoff, payoff, payoff. There is no turn. A seven-slide deck with no surprising pivot does not earn seven swipes. Restructuring around two opposing failures gives the deck a genuine structural spine and a natural midpoint reversal."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Nothing in the slide copy gives the design anything to draw. A deck built on two exposures that fail in opposite directions supports a real editorial diagram: a split composition, opposing directional arrows (outward vs. inward), and a shared typographic rule running through slides 2, 3 and 5. Specified visual system: one accent color per direction, generous negative space, no imagery, body copy capped near 180 characters per slide so type can stay large."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'None of this is glamorous work' is consultant self-pity and tells a CFO nothing. Also, the LinkedIn post promises 'three good things' and then lists four. An executive notices that, and it costs more credibility than the sentence was worth."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X is a single post at roughly 275 characters doing three jobs at once, with no room to breathe. The revised idea has clean progression — two failures, two fixes, one stopgap — which is exactly when a thread is justified under the doctrine."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP post ends with a company line bolted onto advisory copy like a signature block. It stays, because local credibility is the GBP role, but it must follow a specific, locally useful instruction rather than a generic benefit paragraph. Separately, card_headline — 'You know exactly who can see each file' — states a destination the post never argues for and does not match the core idea."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook contains 'Different problems. Different fixes.' — consecutive sentences opening with the same word, which the standard prohibits. 'Permission became the boundary that decides everything' is hyperbole in a package whose register depends on not overstating. Both corrected."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The remediation guidance is incomplete in a way that creates false confidence. The draft tells the reader to 'change the tenant default link type, set expiration' and then moves on — implying the backlog is addressed. It isn't: the default link type governs links created from that point forward, and links already issued keep the scope they were created with. An executive who reads this draft will approve a settings change and believe the cleanup is done. The non-retroactivity trap has to be stated on every channel that gives the policy advice."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Both halves of the fix are written as IT tasks, so the post never tells the reader what they personally own. The genuinely executive turn — that no administrator can adjudicate who belongs in the finance site, which is precisely why the ownership half is the one that never finishes — is implied by 'defend its membership list out loud' but never said. Without it this is an excellent IT-admin post addressed to the wrong audience."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel carries no visual direction at all — only kicker/headline/body text — so 'visual sophistication' is being asserted rather than specified, and the slide labeled 'takeaway' actually carries the Restricted SharePoint Search stopgap, meaning the deck ends without compressing its own lesson. The two opposing problem slides are the strongest visual asset in the concept (an outward/inward diptych) and nothing in the package instructs a designer to treat them as a mirrored pair."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

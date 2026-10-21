@@ -1,0 +1,132 @@
+{
+  "post": "A deal is in final review. Then the buyer's procurement team sends a security questionnaire — access control, backups, incident response, who can see their data, and now a page about AI.\n\nNobody owns it. It sits. The answers go back written from memory, with nothing attached.\n\nThe deal may still close. It closed slower, and the buyer learned something about how you run.\n\nOne thing most owners miss: you are allowed to say no. A clear gap with a fix date reads better than a confident yes nobody can show. These answers also become part of the contract, so optimism has a cost later.\n\nThe companies winning these reviews are not more secure than you. They can find their own paperwork.",
+  "headline": "Your customers are starting to audit you",
+  "cta_label": "Our security services",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-19-s107-card.png",
+  "image_file_jpg": "2026-09-19-s107-card.jpg",
+  "theme": "third_party_risk",
+  "idea_id": "S107",
+  "core_idea": "Vendor security reviews have moved from the audit cycle to the deal timeline, and the mid-market failure point is not weak controls but unproducible evidence — with two consequences executives miss: a documented gap outscores an unevidenced yes, and every answer becomes a contractual representation. The section that will fail first in 2026 is AI.",
+  "channels": {
+    "linkedin": "The security questionnaire in your inbox came from a customer's procurement team, not a regulator.\n\nPull your last cyber insurance renewal application, then the master services agreement a large customer sent you. Both ask questions that used to belong to auditors. Your customers are now accountable for the vendors they choose, and they are pushing that accountability down the supply chain.\n\nAnalysis: this moves security off the cost line and onto the deal timeline.\n\nMost mid-market companies would pass the review. Far fewer can prove it inside a week. The constraint is evidence. MFA is enforced, but nobody can export the Conditional Access policy behind it. Offboarding happens, and no access review carries a date. Backups run, though immutability is assumed rather than verified this quarter.\n\nTwo things get missed. A documented \"no\" beats an unevidenced \"yes\" — a gap with a compensating control and a remediation date reads as a company that knows its own environment. And these answers are representations. They attach to a contract, and after an incident the optimistic line someone wrote from memory becomes a legal question.\n\nPrediction: the section that catches mid-market suppliers first is AI. Which models touch our data. Whether Copilot access is governed. Which subprocessors changed this year.\n\nThis is not an IT chore. One owner, drawn from legal, IT, and sales together. Current answers. Proof attached.",
+    "facebook": "A deal is in final review. Then the buyer's procurement team sends a security questionnaire — access control, backups, incident response, who can see their data, and now a page about AI.\n\nNobody owns it. It sits. The answers go back written from memory, with nothing attached.\n\nThe deal may still close. It closed slower, and the buyer learned something about how you run.\n\nOne thing most owners miss: you are allowed to say no. A clear gap with a fix date reads better than a confident yes nobody can show. These answers also become part of the contract, so optimism has a cost later.\n\nThe companies winning these reviews are not more secure than you. They can find their own paperwork.",
+    "gbp": "Sell to a hospital, a studio, a law firm, or anyone with a compliance department, and expect a vendor security questionnaire before the contract is signed. These reviews used to stop at enterprise suppliers.\n\nThe hard part is rarely the security. It is evidence: the access policy, the offboarding record, the backup configuration, the incident response plan — produced quickly and in writing.\n\nTwo notes for LA owners. A documented gap with a fix date scores better than a vague yes. And your answers become contract language, so write them carefully.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "A documented \"no\" beats an unevidenced \"yes.\" Vendor security reviews score whether you can describe your own environment accurately. A gap with a compensating control and a fix date reads better than a confident claim nobody can produce a screenshot for.",
+      "The newest page in the vendor security questionnaire asks which models touch the buyer's data, whether Copilot access is governed, and which subprocessors changed this year. Most mid-market suppliers cannot answer it. Prediction: that page starts deciding deals before any control does."
+    ],
+    "instagram_caption": "Vendor security reviews are moving down-market. The questionnaire now arrives from a customer's procurement team, somewhere between verbal agreement and signature.\n\nMost mid-market companies would pass. What they cannot do is prove it quickly — the policy export, the dated access review, the backup setting somebody actually verified.\n\nThe counterintuitive part: a documented gap with a remediation date scores better than a confident answer nobody can evidence. And every answer attaches to a contract.\n\n#ThirdPartyRisk #VendorRisk #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 95,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Third-party security review practices are extending from enterprise suppliers down to mid-market vendors. Presented as reader-verifiable — the post directs executives to their own insurance renewal application and customer MSA rather than asserting market data.",
+    "ANALYSIS: Security questionnaires increasingly arrive during the sales process rather than during an audit cycle, placing them on the deal timeline.",
+    "ANALYSIS: For many mid-market companies the constraint is producing evidence quickly, not the absence of controls (examples: Conditional Access policy export, dated access review, verified backup immutability).",
+    "ANALYSIS: A documented gap accompanied by a compensating control and a remediation date is scored more favorably than an unevidenced affirmative answer.",
+    "ANALYSIS: Questionnaire responses typically become contractual representations attached to an agreement, which creates post-incident legal exposure for overstated answers. Framed as analysis; no specific statute, regulation, or case is cited or implied.",
+    "PREDICTION (labeled in-text): The AI section of vendor questionnaires — model access to buyer data, Copilot governance, AI subprocessors, training exclusions — will be the first section mid-market suppliers fail. Explicitly marked as prediction on LinkedIn and X.",
+    "OPINION: Ownership of the answer set belongs jointly to legal, IT, and sales rather than to IT alone.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used once, in GBP and the final carousel slide footer.",
+    "REMOVED IN REVISION: 'forty-odd questions' (invented quantity); 'will win more deals than most of what sits in the marketing budget' (unfalsifiable claim); 'no longer just a control, it is an advantage' (banned construction).",
+    "NOTE: No industry, breach, cost, frequency, or timing statistics used. No client named or implied. No certification, partnership, or compliance status claimed. No external research cited. SIG/CAIQ and other named questionnaire formats deliberately omitted to avoid characterizing form contents we cannot source."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA label 'Assess your readiness' promises an assessment tool, but the URL is a generic cybersecurity services page. That mismatch is the one moment in the package where the reader feels marketed to. Also, the draft's entire argument stops at 'answer faster' — a conclusion any competitor could reach — so the package carries no proprietary point of view."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel has no turn. Slides 2–5 restate the LinkedIn post in shorter sentences, and the hook slide is a verbatim copy of card_headline, so the swipe from slide 1 to 2 delivers nothing new. A carousel needs an idea the caption did not already give away."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package contains zero visual direction — empty body and footer fields and no system note — which makes the 'recognizable before the logo' standard unenforceable. Separately, slide 6's headline ('Being ready is no longer just a control. It is an advantage.') is the banned 'it's not just X, it's Y' construction and is too long to set as a takeaway typographically."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The down-market trend is asserted rather than made checkable. The claims_audit labels it ANALYSIS, but the LinkedIn body treats it as settled ('That is the shift worth noticing'). The fix is not a statistic — it is pointing the reader at two documents already in their own building that prove the claim: the cyber insurance renewal application and a large customer's MSA."
+    },
+    {
+      "role": "CIO",
+      "finding": "The prescription — named owner, answer library, evidence attached — is table stakes and is the same advice every vendor-risk article gives. It also misassigns ownership: a questionnaire answer set is legal plus IT plus sales, not an IT chore. Missing entirely is the operationally useful insight that a documented gap with a remediation date scores better than an unevidenced yes."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "No mention that questionnaire answers become contractual representations. Overstating a control to close a deal converts a security gap into a breach-of-contract and misrepresentation exposure after an incident — that is the single highest-stakes fact in this subject and the draft omits it. Minor: 'export the Conditional Access policy' is Entra-specific and should read naturally to an M365 audience rather than as jargon."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package is a 2022 argument. The newest and least-answerable section of a 2026 vendor questionnaire is the AI section: which models touch buyer data, whether Copilot access is governed, which AI subprocessors were added this year, whether customer data is excluded from training. That is where mid-market suppliers actually fail, and the draft never mentions it."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The line 'will win more deals than most of what sits in the marketing budget' is an unfalsifiable swipe that reads as posturing to a CFO. And the post tells me the problem without telling me the cost of the fix or who in my org owns it — both are the first questions I would ask."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Both X posts are near-verbatim lifts of the LinkedIn opening and its fourth paragraph, which breaks the one-idea-many-expressions rule. X should carry the sharpest standalone claim in the package, not a trailer for LinkedIn."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The F012 fact in GBP is decorative — 'since 1999, from Woodland Hills' is dropped in as credential garnish rather than doing work. Also, the same sentence pattern ('Most mid-market companies would pass') appears in four of five channels, which reads as syndication rather than authorship."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Forty-odd questions' in the Facebook post is invented specificity — a fabricated quantity, which the truth discipline prohibits even in soft form. 'Analysis, not prophecy' is cleverness over clarity. GBP runs approximately 718 characters, over the 300–700 ceiling."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

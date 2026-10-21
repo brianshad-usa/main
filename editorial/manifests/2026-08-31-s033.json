@@ -1,0 +1,149 @@
+{
+  "post": "Picture a Tuesday in accounts payable. An email lands about a confidential deal, and the money has to move before close. The clerk does the right thing and asks to confirm it with someone. A video call is set for that afternoon.\n\nOn screen: the CFO's face, the CFO's voice, a colleague nodding along. Someone asks the verification question. It gets answered well, because the people answering wrote the request in the first place.\n\nNothing careless happened here. The confirmation simply took place inside the same channel as the request, and that channel belonged to the attacker.\n\nSo the confirmation has to leave it. Call a number your company already had on file, not one from the email or the screen. And make sure whoever picks up the phone knows that slowing a payment will never be held against them.",
+  "headline": "The video call that approved the wire",
+  "cta_label": "Review your payment controls",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-31-s033-card.png",
+  "image_file_jpg": "2026-08-31-s033-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S033",
+  "core_idea": "Synthetic-participant video fraud does not defeat an employee's judgment — it defeats the topology of the approval, because the request and the confirmation both arrive through the one channel the attacker controls. Breaking the channel requires a callback to a number in a vendor record IT actually controls, and a clerk with standing permission to delay the CEO.",
+  "channels": {
+    "linkedin": "The employee on that call did verify. That is exactly why it worked.\n\nComposite illustration. No client is described.\n\nAn email arrives about something confidential and time-boxed — a settlement that must clear before close. Finance asks to confirm with a person, which is the correct instinct, and a video call is scheduled within the hour. On it: the CFO's face, the CFO's voice, a familiar colleague nodding along. The question is asked and answered well, because everyone on screen wrote the original request.\n\nNobody skipped a control. The control was redirected into a channel the attacker already owned.\n\nAnalysis, not fact: as synthetic audio and video get cheap, a face and a voice stop being identity evidence and become presentation. Challenge questions decay with them — \"something only they would know\" is answerable by anyone who has been reading the mailbox for a month.\n\nIT owns the entry point. The call is the payload. The way in is a mailbox, compromised or spoofed well enough to pass, so phishing-resistant sign-in and Conditional Access sit underneath the finance policy.\n\nFinance owns the topology. Confirmation has to leave the channel the request arrived on: a callback to a number held in your own vendor master, never one in the thread or on the screen. Initiator and approver are different people. Whoever can edit that vendor record is a payment control, whether or not anyone has told them so.\n\nThen the part no policy document captures. A junior AP clerk has to be able to delay a payment the CEO appears to be demanding, at no cost to themselves. Absent that permission, pressure does the attacker's work.\n\nUrgency is not a reason to move faster. It is the tell.",
+    "facebook": "Picture a Tuesday in accounts payable. An email lands about a confidential deal, and the money has to move before close. The clerk does the right thing and asks to confirm it with someone. A video call is set for that afternoon.\n\nOn screen: the CFO's face, the CFO's voice, a colleague nodding along. Someone asks the verification question. It gets answered well, because the people answering wrote the request in the first place.\n\nNothing careless happened here. The confirmation simply took place inside the same channel as the request, and that channel belonged to the attacker.\n\nSo the confirmation has to leave it. Call a number your company already had on file, not one from the email or the screen. And make sure whoever picks up the phone knows that slowing a payment will never be held against them.",
+    "gbp": "Wire fraud used to need a convincing email. It can now include a convincing meeting — a familiar face and voice answering the verification question your finance team was right to ask.\n\nThe control is unchanged, and it is not a product. Confirm every payment-instruction change and out-of-pattern transfer by phone, to a number your company already holds on file, never one from the email or the screen. Keep the person who initiates a payment separate from the person who approves it.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. If you want the identity and email controls sitting underneath that process reviewed, ask.",
+    "x": [
+      "Confirming a wire request on a video call the requester arranged confirms nothing. Request and confirmation travelled the same channel, and the attacker owns it. Cheap synthetic audio and video turned a familiar face into presentation rather than evidence.",
+      "The failure is not attention. The verification question gets asked. It gets answered well — by the people who wrote the original request, wearing a face the employee trusts. Challenge questions will not save you either. The attacker has been reading the mailbox.",
+      "Break the channel. Callback to a number in your own vendor master, never one in the thread or on screen. Initiator never approves. Whoever can edit that vendor record is a payment control. And an AP clerk has to be able to delay the CEO at no cost to themselves."
+    ],
+    "instagram_caption": "A composite walkthrough of how a synthetic-participant wire fraud unfolds — and why the employee in the middle of it did ask for verification.\n\nThe attack does not target attention. It targets the shape of the approval: one channel carrying the request, the confirmation and the sign-off. Recognition is no longer identity evidence.\n\nBreaking the channel costs one phone call to a number you already had. The harder question is who controls the record that number lives in.\n\n#DeepfakeFraud #BusinessEmailCompromise #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-31-s033-01.png",
+      "2026-08-31-s033-02.png",
+      "2026-08-31-s033-03.png",
+      "2026-08-31-s033-04.png",
+      "2026-08-31-s033-05.png",
+      "2026-08-31-s033-06.png",
+      "2026-08-31-s033-07.png"
+    ],
+    "jpg": [
+      "2026-08-31-s033-01.jpg",
+      "2026-08-31-s033-02.jpg",
+      "2026-08-31-s033-03.jpg",
+      "2026-08-31-s033-04.jpg",
+      "2026-08-31-s033-05.jpg",
+      "2026-08-31-s033-06.jpg",
+      "2026-08-31-s033-07.jpg"
+    ]
+  },
+  "variety": {
+    "style": "data_viz",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "data_viz",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 95,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS (composite, explicitly labeled on LinkedIn and Instagram; framed hypothetically on Facebook with 'Picture a Tuesday'): a synthetic-participant fraud pairs an inbound request with an offered video confirmation, placing verification inside the attacker's channel. No incident, victim, loss figure or frequency is claimed.",
+    "ANALYSIS: as synthetic audio and video become cheap and interactive, facial and vocal recognition stops functioning as identity evidence.",
+    "ANALYSIS: knowledge-based challenge questions decay against an attacker with prolonged mailbox access.",
+    "ANALYSIS: when request, confirmation and approval share one channel, the remaining controls are never consulted.",
+    "OPINION/ANALYSIS: out-of-band callback to a vendor-master number, separation of initiator and approver, and change control over the vendor record are the process controls that defeat this pattern.",
+    "ANALYSIS: the entry point for this pattern is a mailbox (compromised or spoofed), so phishing-resistant sign-in and Conditional Access are prerequisites to the finance policy. Stated structurally; no frequency or prevalence claim is made.",
+    "OPINION: urgency in a payment request should trigger verification rather than bypass it; staff require explicit standing permission to delay.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used once, on GBP only.",
+    "NUMERALS AUDIT: the only numerals in the package are the year 1999 (F012) and 'two channels' / 'one channel' used structurally. No industry statistic, breach cost, incident count or research finding appears anywhere.",
+    "REMOVED IN REVISION: the words 'usually does verify' (X post 2) and 'usually did verify' (Instagram caption) — unsourced frequency claims. Also removed: an implied payment-process consulting capability in the GBP CTA, replaced with identity and email controls."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's differentiation rests entirely on one framing device ('one channel'), and that device is then repeated near-verbatim on LinkedIn, X and Instagram — so the package reads as one post syndicated four times rather than four expressions of an idea. It also stops at the finance control, which is where every MSP deepfake post stops. Revision adds two claims no generic MSP post makes: the vendor-master edit right is itself a payment control, and the real control is whether a junior AP clerk has social permission to delay the CEO."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Eight Instagram slides with a numeral slide ('1') in the middle is template-following, not story-following. Slide 4 and slide 8 were the two weakest. Revision cuts to seven, converts slide 4 into a topology contrast (one channel vs two) that a diagram can actually carry, and removes the CTA slide entirely — the takeaway is a stronger last frame and the package already carries one CTA on GBP."
+    },
+    {
+      "role": "Art Director",
+      "finding": "A slide whose entire visual payload is a giant '1' will be read as a statistic by a scrolling viewer, which is exactly the misreading a no-statistics brand cannot afford. Replaced with a two-state diagram slide (request→confirmation inside one channel; request and confirmation on separate channels). Art direction for the set: type-only editorial layout, single accent rule, generous margins, no imagery of screens, faces, locks or masks — the deepfake subject makes literal illustration a trap."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two unsourced frequency claims slipped through: X post 2 ('The finance employee usually does verify') and the Instagram caption ('usually did verify'). 'Usually' is a statistic without a source. Both rewritten to conditional/structural framing. Also moved the composite disclaimer out of a mid-argument parenthetical into a standalone line where a reader actually registers it."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft hands the entire fix to finance and gives IT nothing to own, which is how these policies die. Added the split: the call is the payload, the entry point is a mailbox, so phishing-resistant sign-in and Conditional Access sit underneath the payment policy — and the directory the callback number comes from is only as trustworthy as the change controls on the vendor master record."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft's control set has a live gap: 'callback to a number from your own directory' fails if the attacker already changed the vendor record, which is the more common objective than the single wire. Revision names the vendor master explicitly and makes edit rights on it part of the control. Second gap: no mention that liveness/challenge questions are a decaying control — a mailbox-resident attacker can answer 'something only they would know.' Added."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft implies deepfake quality is what changed. The consequential change is availability and interactivity — real-time synthetic participation moved from bespoke to routine, which retires the assumption that a live, responsive call is proof of presence. Reframed, and kept explicitly labeled as analysis rather than a claim about tooling we have not sourced."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "A CEO finishes the draft agreeing and with nothing to do that isn't already delegated. The most useful sentence — that finance staff need explicit permission to delay — was buried in an Instagram body field. Promoted to a load-bearing paragraph on LinkedIn and to the takeaway slide, because it is the one item only an executive can authorize."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 1 opens with 'the topology of the approval', which is the paper's vocabulary, not a scroll-stopping standalone line, and the thread repeats the LinkedIn structure beat for beat. Rewritten so post 1 stands alone as a quotable assertion and posts 2 and 3 add material the other channels do not carry. Instagram hashtags swapped: #DeepfakeFraud is a live discovery term, #AIThreats is not."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP close offered to 'walk through your payment approval process,' which drifts toward a capability we have not established in verified facts — payment process consulting is not an IT security service on its face. Reframed to the identity and email controls underneath that process, which is squarely ours. Also removed the duplicated 1999/Woodland Hills line from the Instagram CTA slide so the founding fact lands once, in the channel built for local credibility."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three mechanical failures: LinkedIn ran roughly 1,630 characters (limit 1,600) and GBP roughly 750 (limit 700); consecutive sentences opened with the same word in the LinkedIn scenario ('A regulator. A vendor settlement') and in Facebook ('The question... The answer...'); and the claims_audit asserted 'the only numeral used is one channel' while 1999 appears twice. All corrected, and the audit rewritten to be accurate."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

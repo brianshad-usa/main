@@ -1,0 +1,154 @@
+{
+  "post": "A scenario, not a client story.\n\nA paralegal is 40 minutes from a filing deadline and needs a long contract summarized. She opens a chatbot on her own laptop, pastes it in, gets a clean summary, files on time. Nothing breaks. No alert fires.\n\nThe document also went to a company the firm has no agreement with, and the engagement letter probably has something to say about who may see client material.\n\nThat is the shape of most AI exposure in professional services. Not attackers. Capable people with no rule to follow — and, increasingly, AI features that switch themselves on inside software the firm already bought.\n\nGive people a rule. A short list of approved tools under the firm's own accounts, and one page on what information may go where.",
+  "headline": "Your AI rule lives in the engagement letter",
+  "cta_label": "Start the inventory",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-03-s250-card.png",
+  "image_file_jpg": "2026-09-03-s250-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S250",
+  "core_idea": "For any firm that signs engagement letters or NDAs, the AI boundary is set by client contracts rather than IT policy — which makes the accountable owner the person who signs those contracts, not the IT director. And the 2026 version of the problem is no longer staff pasting text into a chatbot; it is AI features arriving inside software the firm already approved, where no procurement review ever looked.",
+  "channels": {
+    "linkedin": "Ask the person who signs your engagement letters, not your IT director:\n\nhow many AI tools has this firm approved, in writing, to handle client information?\n\nConfidentiality obligations sit in contracts. Engagement letters, NDAs, client agreements — most drafted before a chatbot could be a recipient. Analysis, not legal advice: those documents generally govern who else may see the material, and a consumer AI account is someone else.\n\nThe harder version is no longer staff pasting documents into personal accounts. It is AI arriving inside tools you already approved — a note-taker joining a client call, a summarizer inside a product you already pay for, an assistant with standing mailbox access. Nobody selected those. They shipped.\n\nPrediction: this surfaces in a diligence request or a client security questionnaire before it surfaces as an incident. The question then is not which tool was used, but what was disclosed, to whom, under what terms.\n\nThe work is unglamorous. Card statements and expense reports, sign-in logs from your identity provider, browser extensions, and one amnesty question asked without consequence. Approve a short list under company accounts. Name an owner and a review date. Write one page on which information may go into which tool.\n\nMake the approved path faster than the workaround, or you will run the same inventory next year.\n\nUntil that page exists, each employee is drawing the confidentiality line alone — under your client's contract.",
+    "facebook": "A scenario, not a client story.\n\nA paralegal is 40 minutes from a filing deadline and needs a long contract summarized. She opens a chatbot on her own laptop, pastes it in, gets a clean summary, files on time. Nothing breaks. No alert fires.\n\nThe document also went to a company the firm has no agreement with, and the engagement letter probably has something to say about who may see client material.\n\nThat is the shape of most AI exposure in professional services. Not attackers. Capable people with no rule to follow — and, increasingly, AI features that switch themselves on inside software the firm already bought.\n\nGive people a rule. A short list of approved tools under the firm's own accounts, and one page on what information may go where.",
+    "gbp": "For Los Angeles firms that sign NDAs or engagement letters, AI use is a contract question before it is a technology question. Those agreements generally limit who else may see client material, and a consumer AI account is a third party your client did not approve.\n\nA practical order of operations: find out what staff already use, including AI features switched on inside software you already bought. Approve a short list under company accounts rather than personal logins. Put in writing which information may go where, and name who owns that page.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Start with the inventory.",
+    "x": [
+      "Ask the person who signs your engagement letters, not your IT director: how many AI tools has this firm approved, in writing, to handle client information? A firm that cannot answer has already answered.",
+      "Confidentiality obligations live in engagement letters and NDAs, not in an IT policy. Those contracts generally govern who else may see client material. A consumer AI account is someone else.",
+      "The 2026 version is not staff pasting text into a chatbot. It is AI inside tools you already approved: note-takers joining client calls, summarizers in software you already pay for, assistants with standing mailbox access. Nobody selected those. They shipped.",
+      "Where to look first: card statements and expense reports, sign-in logs from your identity provider, browser extensions, and one amnesty question asked without consequence. Then approve a short list under company accounts and name who owns it.",
+      "Blocking is the reflex, and it moves the work to personal phones where you can see none of it. The approved path has to be faster than the workaround, or next year's inventory reads exactly like this year's."
+    ],
+    "instagram_caption": "The instinct is to ask IT how many AI tools are approved for client data. Wrong desk.\n\nConfidentiality obligations are written into engagement letters, NDAs and client agreements — which makes the accountable owner whoever signs them. Most of those documents were drafted before a chatbot could be a recipient.\n\nAnd the exposure has moved. It is less about someone pasting a document into a personal account, more about AI features arriving inside software the firm already approved, where no procurement review ever looked.\n\nSwipe for where to look and what to write down.\n\n#AIGovernance #ProfessionalServices #LosAngeles"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-03-s250-01.png",
+      "2026-09-03-s250-02.png",
+      "2026-09-03-s250-03.png",
+      "2026-09-03-s250-04.png",
+      "2026-09-03-s250-05.png",
+      "2026-09-03-s250-06.png",
+      "2026-09-03-s250-07.png",
+      "2026-09-03-s250-08.png"
+    ],
+    "jpg": [
+      "2026-09-03-s250-01.jpg",
+      "2026-09-03-s250-02.jpg",
+      "2026-09-03-s250-03.jpg",
+      "2026-09-03-s250-04.jpg",
+      "2026-09-03-s250-05.jpg",
+      "2026-09-03-s250-06.jpg",
+      "2026-09-03-s250-07.jpg",
+      "2026-09-03-s250-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "data_viz",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "data_viz",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: professional services confidentiality obligations originate in client contracts (engagement letters, NDAs, client agreements) rather than internal IT policy; explicitly framed as analysis, not legal advice, in the LinkedIn asset",
+    "ANALYSIS: those contracts generally govern who else may see client material, so a consumer AI account functions as an unapproved third-party recipient — 'generally' retained as a hedge; no specific contractual language is asserted",
+    "ANALYSIS: accountability therefore sits with the signatory to the client agreement rather than the IT function — reasoning, not a rule or regulation",
+    "ANALYSIS: AI capabilities are increasingly bundled into software organizations have already purchased, so they bypass procurement review. Stated as a category-level observation. No vendor, product, or feature is named and no product capability is asserted.",
+    "PREDICTION (labelled in-copy on LinkedIn and Instagram): the exposure is more likely to surface in a diligence request, audit, or client security questionnaire than as a reported security incident",
+    "ANALYSIS: accounts held under a company's own agreement place retention, training use and administrative visibility under governing terms rather than assumption; readers are directed to their own vendor terms. No specific vendor terms are characterized.",
+    "OPINION: the effective remedy is inventory (expense data, IdP sign-in logs, browser extensions, an amnesty question), a short approved list under company accounts, a named owner and review date, and a one-page data-handling rule",
+    "OPINION: blocking alone displaces usage to unmanaged personal devices, so the approved path must be faster than the workaround",
+    "HYPOTHETICAL: the Facebook paralegal vignette is labelled in the first line as a scenario and not a client story. No client of Pro Link Systems is named, described, or implied in any asset.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used in GBP and the Instagram footer only",
+    "NO EXTERNAL STATISTICS CITED: no industry, breach, cost, adoption or attacker-behaviour numbers appear in any channel. No certification, partnership or compliance status is claimed. No competitor is named."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept is strong but the same sentence — \"if nobody can produce it, you have your finding\" — appears in LinkedIn, X, and the Instagram CTA. Channel doctrine forbids reusing text; worse, repetition makes the idea feel like one line stretched five ways rather than one idea expressed five ways."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The package has one move: ask a question, get zero, write a page. It never turns. A premium editorial piece needs a second beat the reader did not see coming — here, the fact that the shadow-AI framing is already dated, because the exposure is increasingly arriving inside software the firm already approved."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The hook slide headline is a full sentence with a colon and a question — too much type for a slide whose only job is to earn a swipe. And the package ships no art direction at all: no grid, no type hierarchy, no diagram. Slide 4's idea (a document leaving the client's contract boundary) is the one genuinely diagrammable moment in the deck and it is set as body copy."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "\"My expectation is that\" puts a first-person singular voice into a company byline, and \"That page is not a restriction. Its purpose is that your staff currently has no way to know the answer\" is ungrammatical. The prediction label belongs in the sentence, not in a possessive."
+    },
+    {
+      "role": "CIO",
+      "finding": "\"Inventory what people are already using\" is the entire ask and it is the hardest step in the list — a CIO knows consumer accounts on personal devices are invisible to the tooling. Without concrete places to look (expense and card data, IdP sign-in logs, browser extensions, an amnesty question), the advice is a slogan. It also never names who owns the approved list or when it gets re-reviewed."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "No acknowledgment that blocking is the reflex and that blocking pushes the work to personal phones, where nothing is visible. The unstated control is that the approved path must be faster than the workaround; without it, the same inventory produces the same result next year."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treats AI risk as \"someone pastes into a chatbot,\" which is a 2023 framing that most MSPs have already published. The 2026 exposure is ambient: meeting assistants joining client calls, summarization built into products the firm already pays for, assistants granted standing mailbox access. Nobody procured those, so no procurement review caught them."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The reader is told to ask for a number but not who should answer it. The instinct is to ask IT, which is exactly the wrong desk — the obligation sits with whoever signs the engagement letter. Naming that owner is the most useful thing in the piece and the draft omits it."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread is three restatements of the LinkedIn post with no post that is useful on its own. At least one post has to be independently valuable — the \"where to look first\" list is the most saveable material in the package and it is missing from X entirely."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Facebook's paralegal vignette reads as though it happened. Under truth discipline it must be unmistakably hypothetical, or it edges toward an implied client story. \"Good work, honestly\" also breaks register — chummy in a brand that earns trust by being level."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn runs long against the 900–1,600 band and GBP runs slightly over 700. Slide 4's \"Not a tool. A recipient.\" is the banned \"it's not just X, it's Y\" construction in compressed form, and the parenthetical \"(Prediction.)\" is a footnote pretending to be body copy."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

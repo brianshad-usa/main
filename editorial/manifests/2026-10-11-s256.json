@@ -1,0 +1,185 @@
+{
+  "post": "A security plan nobody finishes is not a plan. It is a document.\n\nMost of them stall for the same reason. They were written for someone with a free afternoon, and you have twenty minutes between meetings.\n\nThree things, in this order.\n\nPasskeys on the email and administrator accounts that can move money. Worth knowing: a six-digit code is better than a text message, and a convincing fake login page can still catch it in real time. The passkey is what closes that door, whether it lives on a phone or a security key.\n\nRestore one file yourself this month. Green status is a promise. The file back on your screen is proof — and the clock you ran while waiting for it is the real number.\n\nThen look at what still has access: people who left, contractors who finished, and the apps someone connected to your email last year. None of them ever hand in a badge.\n\nOne name and one date on each. Short lists get finished.",
+  "headline": "Security advice priced in time you don't have",
+  "cta_label": "Review your short list",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-10-11-s256-card.png",
+  "image_file_jpg": "2026-10-11-s256-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S256",
+  "core_idea": "Security programs stall because the advice is priced in uninterrupted attention rather than dollars, so the executive move is three items in a deliberate order with an owner and a date on each: phishing-resistant sign-in on email and admin accounts (the passkey does the work, not the app), one restore actually performed and timed against tolerable downtime with one immutable copy, and a standing-access review that includes the non-human grants held by AI and SaaS integrations. The order is the argument: identity first because every other control assumes the account is yours, restore second because it is the floor, access review third because it never finishes.",
+  "channels": {
+    "linkedin": "Security frameworks are written for a reader with a free afternoon. Almost nobody running a 60-person company has one.\n\nThat gap stalls more security programs than any budget line. The advice is rarely wrong. It is priced in a currency executives do not have: uninterrupted attention.\n\nThe useful question is not what should we do. It is which three survive a quarter that goes sideways.\n\nOne. Phishing-resistant sign-in on email and administrator accounts. A passkey is bound to the domain that issued it, so a lookalike sign-in page gets nothing back. Codes and push approvals beat SMS and remain relayable — an attacker proxying your login takes the code and the session token in one motion. Authenticator apps can hold passkeys now; it is the passkey doing the work, not the app.\n\nTwo. One restore, performed by a human. Dashboards report. Restores prove. Recover a mailbox, time it against how long the business could run without it, and confirm at least one copy is immutable — unchangeable and undeletable for a fixed window, even by someone holding admin credentials.\n\nThree. Access that should already be gone. Former staff and finished contractors, yes. Also the quieter category: every AI notetaker, scheduler and vendor integration connected to your tenant holds standing permission to read mail or files, granted once by someone who has since moved on.\n\nThe sequence matters as much as the list. Identity first, because every other control assumes the account is yours. Restore second, because it is the floor when identity fails.\n\nEach gets an owner and a date, or it becomes the checklist it replaced.\n\nCompleteness is a fantasy. Order of operations is a strategy.",
+    "facebook": "A security plan nobody finishes is not a plan. It is a document.\n\nMost of them stall for the same reason. They were written for someone with a free afternoon, and you have twenty minutes between meetings.\n\nThree things, in this order.\n\nPasskeys on the email and administrator accounts that can move money. Worth knowing: a six-digit code is better than a text message, and a convincing fake login page can still catch it in real time. The passkey is what closes that door, whether it lives on a phone or a security key.\n\nRestore one file yourself this month. Green status is a promise. The file back on your screen is proof — and the clock you ran while waiting for it is the real number.\n\nThen look at what still has access: people who left, contractors who finished, and the apps someone connected to your email last year. None of them ever hand in a badge.\n\nOne name and one date on each. Short lists get finished.",
+    "gbp": "Thirty-item security plans fail for an unremarkable reason: nobody has the afternoon they assume. Three carry most of the risk for a 20 to 500 seat business.\n\nStart with phishing-resistant sign-in on email and administrator accounts. A passkey is bound to the real domain; a six-digit code can be relayed by a convincing fake login page.\n\nThen one restore you have personally watched finish, with a copy that cannot be deleted even by an admin account.\n\nLast, a current list of standing access — including the apps connected to your Microsoft 365 tenant that nobody reviews.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Calls reach our in-house, US-based help desk live.",
+    "x": [
+      "The thirty-item security plan does not fail on budget. It fails because every item assumes an uninterrupted hour nobody has. A shorter list, in order, beats a complete one that stalls at item four.",
+      "Phishing-resistant is a specification, not a mood. A passkey is bound to the domain that issued it, so a lookalike page gets nothing back. Push prompts and six-digit codes can be relayed by an attacker sitting between you and the real sign-in page.",
+      "Backup status is self-reported. Recovery is not. Restore one mailbox, time it, hold that number against how long billing and email can realistically be down, then confirm one copy is immutable for a fixed window.",
+      "Offboarding was designed for people. The AI notetaker, the scheduling tool, the vendor portal — each was granted standing permission to read mail or files by someone who has since left, and none of them ever leave the company.",
+      "Identity first, because everything else assumes the account is yours. A proven restore second. Standing access third, because it never finishes. Owner and date on each, or you have written a document, not a plan."
+    ],
+    "instagram_caption": "The order is the argument.\n\nIdentity first, because every other control assumes the account actually belongs to the person using it. A proven restore second, because that is the floor you land on when the first one fails. Standing access third, because it is the only one of the three that never finishes.\n\nMost security plans do not fail on any of this. They fail because they were written for a reader with an open afternoon.\n\nThree items. An owner and a date on each. That is a plan.\n\n#cybersecurity #identitysecurity #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-10-11-s256-01.png",
+      "2026-10-11-s256-02.png",
+      "2026-10-11-s256-03.png",
+      "2026-10-11-s256-04.png",
+      "2026-10-11-s256-05.png",
+      "2026-10-11-s256-06.png",
+      "2026-10-11-s256-07.png"
+    ],
+    "jpg": [
+      "2026-10-11-s256-01.jpg",
+      "2026-10-11-s256-02.jpg",
+      "2026-10-11-s256-03.jpg",
+      "2026-10-11-s256-04.jpg",
+      "2026-10-11-s256-05.jpg",
+      "2026-10-11-s256-06.jpg",
+      "2026-10-11-s256-07.jpg"
+    ]
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "carousel",
+    "ground": "cream",
+    "layout": "left_block",
+    "register": "how_to",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "carousel",
+        "ground": "cream",
+        "layout": "left_block",
+        "register": "how_to"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 95,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Security programs stall because the work is priced in uninterrupted executive attention rather than budget.",
+    "FACT (mechanism, not statistic): Passkeys and FIDO2 security keys are phishing-resistant because the credential is cryptographically bound to the legitimate origin. TOTP codes and push approvals are relayable by an adversary-in-the-middle proxy, which can capture the code and the resulting session token. Stated as authentication mechanics; no vendor research, no figures.",
+    "ACCURACY CORRECTION (this round): the claim is now scoped to credential type, not to the app category. Authenticator applications can store passkeys; the revised copy says explicitly that the passkey, not the app, provides the resistance. The blanket 'authenticator apps are phishable' phrasing has been removed from every channel.",
+    "ACCURACY CORRECTION (this round): 'one copy no admin can delete' replaced with immutability stated as a property of the copy — unchangeable and undeletable for a fixed window.",
+    "OPINION: Phishing-resistant sign-in should be deployed first to email and administrator accounts rather than universally at once.",
+    "ANALYSIS: Backup dashboard status is a reported claim; a performed restore is evidence.",
+    "OPINION: Restore time is meaningful only when compared against the downtime the business can tolerate.",
+    "ANALYSIS: Standing access granted to OAuth-connected applications is routinely missed by offboarding processes designed for people.",
+    "OPINION: The sequence — identity, restore, access — is itself the recommendation, and each item requires a named owner and a date.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "FACT (F002, F007, F008): The help desk is in-house and US-based and calls are answered live by that team. Used in GBP only, and not in combination with any response or resolution metric.",
+    "NOT USED: F003, F004, F005 (no service-metric claim is relevant to this concept), F006, F009, F010, F011 (blocked from automation).",
+    "NOTE: No industry statistics, breach costs, downtime figures, vendor research findings, incidents, vulnerabilities, regulations, deadlines or client references appear in any channel.",
+    "DOCTRINE: Cross-channel verbatim repetition removed. 'Apps do not resign' now appears only as the Instagram slide 5 headline; the dashboard line, the 'specification not a mood' line and the Instagram caption have each been rewritten so no sentence runs in two channels."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's three-item list — MFA, test your backups, offboard old accounts — is the single most published triad in MSP marketing. The prioritization frame is good, but the contents are indistinguishable from any competitor's blog. The package only earns its place if at least one item contains a correction an executive has not heard before."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The line 'Completeness is a fantasy. Order of operations is a strategy' appears verbatim in LinkedIn, X and the Instagram takeaway. Channel doctrine forbids the same text twice; repeating the best line three times also cheapens it. Keep it in one place and let the other channels earn their own close."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide bodies run three full sentences with subordinate clauses — that becomes a paragraph of small type on a phone, which the visual standard explicitly bans. There is also no visual system marker across slides. Bodies should cap at two short sentences, and footers should carry a consistent index (01 / 07) so the deck reads as a designed series, not seven unrelated cards."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Thirty-one items' and 'the API key a vendor created in 2022' are invented specifics. They are not statistics, but they read as reported detail in a brand whose register depends on never fabricating particulars. Genericize both."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three actions have no owner and no date, which is precisely how they become the thirty-item list they replaced. The restore test is also incomplete: timing a restore is meaningless unless it is compared to how long the business can actually tolerate being without the system."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Material technical error. The draft calls an authenticator app 'phishing-resistant sign-in.' It is not. Passkeys and FIDO2 hardware keys are phishing-resistant because the credential is cryptographically bound to the real domain; TOTP and push apps are a clear upgrade over SMS but still fall to an adversary-in-the-middle proxy that harvests the code and the session token together. Publishing the conflation would be the most damaging line in the package. Secondary note: 'cannot be deleted by someone holding admin credentials' is correct immutability language and should be kept."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing here is 2026. The stale-access item lists people only. The fastest-growing category of standing access in a Microsoft 365 tenant is non-human: OAuth grants held by AI notetakers, schedulers, and vendor integrations that keep read access to mail and files long after the person who authorized them stops using them. Offboarding processes almost never touch them. That is the item that makes this post current rather than evergreen filler."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells me what to do but not what I would learn. After reading it I know nothing I did not know in 2019. I would not forward it. One genuinely corrective fact — that the authenticator app I rolled out last year is not actually phishing-resistant — changes that entirely."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X opener ends on 'here is the short list,' which withholds the payoff and depends on the reader continuing. Post one should carry a complete, quotable idea on its own. The Instagram caption also repeats the LinkedIn argument rather than leading with the sharpest asset in the package."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'My answer, in order' introduces a first-person individual voice the brand does not have. The GBP entry also reads as a Facebook rewrite and uses none of the operational facts that are the only true proof points available — the in-house, US-based help desk answering live is the local credibility this channel exists to carry."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook has consecutive sentences opening with 'A' ('A dashboard...' / 'A file...'), which violates the repeated-opener rule. The LinkedIn draft also exceeds the 1,600-character ceiling. card_headline ('How to cut real risk in three steps') is listicle boilerplate and checklist_items is empty while the schema supports it."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft repeatedly says 'an authenticator app is still phishable' as a flat statement. That was true of TOTP codes and push approvals; it is no longer true of the app category, because Microsoft Authenticator, Google, 1Password and others now store passkeys. A technically literate CIO will catch the imprecision and discount the rest of the post. The claim must be narrowed to the mechanism — codes and push prompts are relayable, passkeys are domain-bound — and the app-holds-passkeys case acknowledged once. Same issue on 'one copy no admin can delete': the correct idea is immutability, and it should be stated as a property of the copy, not a vague permission claim."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Every slide is a headline plus a paragraph. Seven text cards in sequence is a template, not editorial design, and visual_sophistication is the weakest dimension in the package as a result. Slides 3, 4 and 5 each contain a natural diagram — a two-path credential flow, a two-bar time comparison, a roster of revoked people beside still-lit app tiles — and none of them are specified, so production will default to type on a field. The package needs explicit art direction per slide and a stated visual system, or the carousel will be indistinguishable from any competently typeset deck."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Channel doctrine says never the same text twice, and the draft violates it four times: 'A green backup dashboard is a claim' runs near-verbatim in LinkedIn, X and the carousel; 'Apps do not resign' appears in Facebook, X and Instagram; 'phishing-resistant is a technical term, not a vibe' appears in X and Instagram; the Instagram caption restates slide 3 almost word for word, wasting the one place where the caption could add something the slides cannot. Also two consecutive sentences in the LinkedIn item one both open with 'A'."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

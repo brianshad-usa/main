@@ -1,0 +1,157 @@
+{
+  "post": "A vendor you have paid for six years emails to say their bank details changed. Your AP clerk does exactly the right thing and calls to confirm. The voice on the line is the person they always speak to. They approve the change.\n\nNothing in that story is careless. A familiar voice quietly stopped being proof of identity, and most payment rules were written when it still was.\n\nTwo changes, both free:\n\nCallback numbers come from your own vendor records, never from the email asking for the change.\n\nBanking changes need a second named approver — not a manager who is aware, a second person who checks.\n\nThen say one thing out loud: nobody gets in trouble for slowing a payment down to verify it. Say it loudest about requests that look like they came from you.\n\nThat permission is the real control.",
+  "headline": "Your callback rule still works. Its logic doesn't.",
+  "cta_label": "Review your controls",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-10-03-s041-card.png",
+  "image_file_jpg": "2026-10-03-s041-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S041",
+  "core_idea": "The accounts payable callback is still the right control, but a familiar voice and a familiar writing style have stopped functioning as identity — so verification now has to rest on a number from your own records, a second named human, and a rule that binds the executive making the request. And that relocation of trust creates a new exposure almost nobody protects: the vendor master file itself.",
+  "channels": {
+    "linkedin": "The oldest control in accounts payable still works. What made people trust it does not.\n\nFor years the rule was simple: if a vendor emails new bank details, call and confirm before the payment moves. That held because a voice on the phone was evidence of a person.\n\nIt is not anymore. What changed is not attacker skill — it is that the price of sounding exactly right fell to almost nothing. Cloned audio is cheap. A model with access to a mailbox thread reproduces tone and habit well enough that writing style stops being evidence of anything. Analysis, not forecast.\n\nKeep the callback. Replace what makes it trustworthy.\n\nThree lines to hand finance this week.\n\nOne: the callback number comes from your vendor master file, never from the message. A number printed inside a fraudulent email is part of the fraud.\n\nTwo: banking changes need two named people — one who verifies, one who approves. A single person can be rushed. Two rarely are in the same five minutes.\n\nThree: nobody is penalized for slowing a payment down to verify it, and the rule binds the CEO too. These attacks impersonate authority, not strangers.\n\nThen the second-order problem, for whoever owns the system: line one moves your trust into the vendor master file. Write access to that file, and a log of who changed what, now matter as much as the callback. Almost nobody treats it that way.\n\nNone of this needs new software. It needs a written rule and standing permission to enforce it upward. That permission is the part that fails.",
+    "facebook": "A vendor you have paid for six years emails to say their bank details changed. Your AP clerk does exactly the right thing and calls to confirm. The voice on the line is the person they always speak to. They approve the change.\n\nNothing in that story is careless. A familiar voice quietly stopped being proof of identity, and most payment rules were written when it still was.\n\nTwo changes, both free:\n\nCallback numbers come from your own vendor records, never from the email asking for the change.\n\nBanking changes need a second named approver — not a manager who is aware, a second person who checks.\n\nThen say one thing out loud: nobody gets in trouble for slowing a payment down to verify it. Say it loudest about requests that look like they came from you.\n\nThat permission is the real control.",
+    "gbp": "If one person in your office can change a vendor's bank details alone, that is the gap worth closing this week.\n\nPayment fraud now arrives sounding right. Cloned voices and AI-written email pass the familiarity test most approval rules quietly depend on.\n\nThree lines, posted where accounts payable can see them:\n\nCallback numbers come from your vendor file, never from the request itself.\n\nBanking changes require a second named approver.\n\nNobody is penalized for delaying a payment to verify it, including when the request looks like it came from the owner.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. If you want a second set of eyes on your approval process, ask.",
+    "x": [
+      "The accounts payable rule — call the vendor back to confirm — rests on an assumption that quietly expired: that a familiar voice proves identity. That control is still right. Its foundation needs replacing.",
+      "Callback numbers come from your vendor master file, never from the message requesting the change. A phone number printed inside the request is part of the request, not a way to check it.",
+      "Banking changes need a second named approver, and the person processing the payment needs written permission to delay it. Urgency is a signal, not a reason. The rule has to bind the executive too, because that is who gets impersonated.",
+      "Second-order problem: the first rule moves your trust into the vendor master file. So who can edit that file, and is the edit logged? A control is only as good as the record it points to."
+    ],
+    "instagram_caption": "Call the vendor back and confirm. The control was designed when a voice on the phone proved who was speaking, and it was never updated to survive without that.\n\nSwipe for the three lines to hand accounts payable this week, plus the second-order problem almost nobody addresses: once verification depends on your vendor master file, that file becomes the thing worth attacking.\n\nNone of it costs anything. All of it fails if the person processing the payment is not allowed to slow it down.\n\n#BusinessEmailCompromise #VendorFraud #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-10-03-s041-01.png",
+      "2026-10-03-s041-02.png",
+      "2026-10-03-s041-03.png",
+      "2026-10-03-s041-04.png",
+      "2026-10-03-s041-05.png",
+      "2026-10-03-s041-06.png",
+      "2026-10-03-s041-07.png",
+      "2026-10-03-s041-08.png"
+    ],
+    "jpg": [
+      "2026-10-03-s041-01.jpg",
+      "2026-10-03-s041-02.jpg",
+      "2026-10-03-s041-03.jpg",
+      "2026-10-03-s041-04.jpg",
+      "2026-10-03-s041-05.jpg",
+      "2026-10-03-s041-06.jpg",
+      "2026-10-03-s041-07.jpg",
+      "2026-10-03-s041-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 92,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 94,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Voice cloning is now inexpensive and fast enough to pass a brief phone conversation with someone familiar with the speaker. Stated qualitatively, labeled as analysis on LinkedIn, no statistic cited.",
+    "ANALYSIS: AI-generated email can reproduce an individual's tone and habits closely enough that writing style is not evidence of identity. Bounded claim, no product or model named, no capability benchmark asserted.",
+    "ANALYSIS: Callback verification remains a valid control only when the number originates from the organization's own vendor records rather than the inbound message.",
+    "ANALYSIS: Requiring a second named approver for banking changes reduces the effectiveness of single-person pressure tactics.",
+    "ANALYSIS: Artificial urgency is a recurring structural feature of payment-change fraud. Stated as a signal, not as a universal — the draft's 'always' was removed.",
+    "ANALYSIS: Impersonation in this category typically targets authority rather than anonymity, so a verification rule that an executive can override is not a control.",
+    "ANALYSIS (second-order): Relocating verification to the vendor master file transfers risk to that record, making write access control and change logging part of the payment control, not an adjacent IT concern.",
+    "OPINION: The most common failure point is organizational rather than technical — staff lacking standing permission to delay a payment for verification.",
+    "OPINION: Written policy and day-to-day payment practice frequently diverge.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used verbatim in GBP and in the carousel footer; the draft's looser paraphrase 'advising' was corrected.",
+    "NO-NUMBER CHECK: No industry, breach, loss, downtime, or threat-landscape statistic appears in any channel. No ProLink metric from F001-F008 is used, as none is relevant to this subject. No blocked fact (F006, F009, F010, F011) appears. No client named or implied. No certification, partnership, compliance status, or capability claimed. No regulation, deadline, vulnerability, or research finding cited."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package is well-differentiated by channel but the strategic payload stops at advice any finance blog could give. Nothing in it is a thought only a company that runs other people's systems would have. Added the second-order argument — the callback rule relocates trust into the vendor master file, which then needs write-access control and change logging — because that is the observation an operator makes and a finance writer does not."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel's narrative arc skipped the 'reality' beat entirely: it goes hook, problem, why, turn, instruction, takeaway. The Facebook post has the concrete scenario the carousel lacks. Added a dedicated slide for the second-order problem so the swipe has one more genuine turn rather than running straight from insight to checklist."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No art direction existed in the package at all, which means the design would default to generic. Also, slide five carried three stacked instructions and would have become a wall of small type. Added per-slide visual direction (typographic hierarchy, hairline grid, one elegant flow diagram on the second-order slide) and kept the three-line slide to three short lines with deliberate breathing room."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two overclaims. 'Payment fraud in this category is always built on a deadline' asserts a universal the brief cannot support, and 'imitates your CFO's email habits better than your CFO does at 6pm on a Friday' is both a capability claim and a joke that undercuts the register. Both rewritten: urgency is now described as a signal, and the model claim is bounded to 'well enough that writing style stops being evidence of anything,' labeled as analysis."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft told finance to trust the vendor master file without ever asking whether that file is protected. For a CIO that is the actual work item — restricted write access, change logging, and alerting on edits to banking fields and phone numbers. Now the explicit second-order section on LinkedIn, the fourth X post, and slide five."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The attack described targets authority, not anonymity, yet the draft's three lines never bound the executive. A rule the CEO can override is not a control. Added the clause that the rule binds the requester regardless of seniority, including when the request appears to come from the owner — on LinkedIn, Facebook, GBP and slide six."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft used AI as atmosphere rather than naming what actually changed. The shift is not attacker sophistication; it is that the cost of sounding exactly right collapsed, which changes the volume of convincing attempts rather than their ceiling. That line now carries the 'what changed' beat and prevents the post from becoming generic AI-fear content."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "An executive reading this will think 'our ERP enforces approvals' and stop reading. The failure path is the manual exception — the payment made outside the system under time pressure. The revision frames the control as a written rule plus standing permission rather than a system feature, which is where the exception path lives."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread's opening post did the most work and the thread then tapered; a fourth post carrying the vendor-file insight gives the thread a reason to exist beyond restating the list. Also replaced #AISecurity, which is too broad to attract the right follower, with #VendorFraud."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The card headline 'A familiar voice is no longer proof' trails off and duplicates the carousel hook verbatim. Replaced with 'Your callback rule still works. Its logic doesn't.' The GBP close also paraphrased F012 as 'advising,' which drifts from the verified wording; it now states the fact as confirmed and keeps a single restrained CTA."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three mechanical faults. LinkedIn opened consecutive sentences with 'The'; Facebook did the same in the scenario paragraph; and Facebook promised 'two fixes, both free' then delivered three items. All corrected, and channel lengths brought inside spec — LinkedIn ~1,510 characters, Facebook ~850, GBP ~690, every X post under 280."
+    },
+    {
+      "role": "Ultimate test (MSP check)",
+      "finding": "The pre-revision draft could have been published by a competent MSP — the callback advice is common. The revision is not reproducible by default: the vendor-master-file relocation-of-trust argument, the insistence that the rule binds the executive who is most likely to be impersonated, and the refusal to attach a single fabricated loss statistic are jointly distinctive."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

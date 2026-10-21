@@ -1,0 +1,143 @@
+{
+  "post": "Your controller clicks a link on a Tuesday afternoon, lands on what looks exactly like the Microsoft 365 sign-in page, types her password, approves the push notification, and arrives in her real inbox. Nothing seemed wrong, because from where she was sitting, nothing was.\n\nBehind that page, her login was relayed to the real service and the session cookie was copied as it came back. The attacker can now read her mail with no password and no prompt.\n\nMFA did its job at the door. The exposure is in what gets handed out after the door.\n\nThe fixes are specific to how the theft happens. A passkey cannot be relayed to a fake page. A stolen cookie is far less useful if sign-in also requires a company-managed device. And whatever slips past matters less when a session can be ended on demand instead of waiting to expire.",
+  "headline": "MFA didn't fail. It was answered.",
+  "cta_label": "See our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-09-s240-card.png",
+  "image_file_jpg": "2026-09-09-s240-card.jpg",
+  "theme": "identity",
+  "idea_id": "S240",
+  "core_idea": "MFA protects the moment of login, but attackers now steal the proof issued after it — and because the two theft routes are different, so are the fixes: origin-bound credentials defeat the real-time relay, device binding constrains a stolen cookie, and shorter sessions plus real revocation limit whatever gets through. All of it is policy, not procurement, paid for in re-authentication friction.",
+  "channels": {
+    "linkedin": "\"We had MFA on. How did they get in?\"\n\nThey didn't. Access was already granted — the attacker only had to pick up the proof of it.\n\nEvery sign-in ends with the service handing the browser a session cookie or refresh token: proof that this person already answered the challenge. Access tokens expire quickly. That longer-lived proof is what attackers now go after.\n\nTwo routes reach it. Infostealer malware on an unmanaged laptop lifts cookies out of the browser profile. Or a phishing page relays a real login to the real service in real time and captures the session on its way back.\n\nEither way, the MFA challenge was satisfied — by your employee. Replayed elsewhere, that session creates no sign-in event to challenge, no prompt, nothing a user would notice.\n\nBecause the routes differ, the fixes differ. Passkeys are origin-bound, so a relay page cannot forward them — that closes the phishing route, not the malware one. What constrains a stolen cookie is sign-in tied to a managed device. Shorter sessions on your most sensitive applications limit whatever still gets through, and revocation that terminates live sessions, where the application supports it, ends the rest.\n\nNone of that is a purchase. It is policy, and it costs re-authentication — which makes it an executive call about which systems are worth the friction.\n\nThree questions for your IT lead:\n\nWhat is our sign-in frequency policy, and does it differ on unmanaged devices?\n\nWhen we disable an account, what happens to sessions and to app tokens already consented to?\n\nCould a cookie copied off a laptop be replayed from a device we have never seen?\n\nIf the third answer is yes, MFA is doing less work than your board assumes.",
+    "facebook": "Your controller clicks a link on a Tuesday afternoon, lands on what looks exactly like the Microsoft 365 sign-in page, types her password, approves the push notification, and arrives in her real inbox. Nothing seemed wrong, because from where she was sitting, nothing was.\n\nBehind that page, her login was relayed to the real service and the session cookie was copied as it came back. The attacker can now read her mail with no password and no prompt.\n\nMFA did its job at the door. The exposure is in what gets handed out after the door.\n\nThe fixes are specific to how the theft happens. A passkey cannot be relayed to a fake page. A stolen cookie is far less useful if sign-in also requires a company-managed device. And whatever slips past matters less when a session can be ended on demand instead of waiting to expire.",
+    "gbp": "A question worth asking about your Microsoft 365 tenant: when you disable a departing employee's account on Friday afternoon, does the session they left open end with it?\n\nOften not. Signing in issues a session cookie or refresh token that can stay usable until it expires or is explicitly revoked. Same mechanism that lets a stolen browser cookie get an attacker into a mailbox with no password and no prompt.\n\nSign-in frequency, device requirements, and immediate revocation are Conditional Access settings rather than products — worth reviewing before your next offboarding.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "MFA didn't fail. It was answered — by your employee, on an attacker's page. Sign-in ends with a session cookie handed to the browser. Take that and there is no login left to challenge: no password, no prompt, no anomaly.",
+      "Two routes. Infostealer malware lifts cookies off an unmanaged laptop. Or a phishing page relays the real login in real time and captures the session on the way back, while the user lands on the legitimate site and notices nothing.",
+      "Different theft, different fix. Passkeys are origin-bound, so a relay page can't forward them. A stolen cookie is what device-bound sign-in constrains. Shorter sessions on sensitive apps limit the rest, and revocation ends what's still open.",
+      "Authentication is a moment. Access is a duration. Most identity programs are built around the moment. The damage happens across the duration."
+    ],
+    "instagram_caption": "MFA is the checkpoint at the door. The session cookie is the wristband you get after passing it.\n\nAttackers stopped working on the door.\n\nAn infostealer on an unmanaged laptop copies browser cookies. A real-time phishing proxy captures the session as it returns from the real service. Replayed, it produces no sign-in event, no prompt, nothing the user would notice.\n\nTwo thefts, two different fixes. Passkeys cannot be relayed. Device-bound sign-in is what constrains a stolen cookie.\n\nSwipe to slide 7 for the three questions worth putting to your IT lead.\n\n#identitysecurity #conditionalaccess #zerotrust"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "photographic",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "photographic",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "photographic",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "photographic",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "photographic",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "photographic",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: A successful sign-in results in a session cookie and/or refresh token issued to the browser so the user is not re-prompted on every request — standard, widely documented behavior of web and cloud authentication.",
+    "ANALYSIS: Access tokens are comparatively short-lived while session cookies and refresh tokens persist longer; stated qualitatively, with no lifetime figures asserted, since specific defaults are tenant-configurable and no primary source was supplied in the brief.",
+    "ANALYSIS: Stealing and replaying a valid session artifact permits access without the password and without an MFA prompt, because no new authentication event occurs.",
+    "ANALYSIS: Infostealer malware on an unmanaged device can extract session cookies from a browser profile.",
+    "ANALYSIS: Adversary-in-the-middle phishing pages can proxy a legitimate login and capture the returned session while the user lands on the real service.",
+    "ANALYSIS: Passkeys are origin-bound, which prevents a relay page from forwarding the credential. Scoped explicitly to the phishing route — the package no longer implies passkeys mitigate post-authentication cookie theft.",
+    "ANALYSIS: Device-bound sign-in conditions are what limit the usefulness of a cookie stolen from an unmanaged machine.",
+    "ANALYSIS: Revocation that terminates already-issued sessions depends on the application supporting continuous evaluation; hedged as 'where the application supports it' rather than stated universally.",
+    "ANALYSIS: Disabling a user account does not necessarily terminate sessions or third-party application tokens already issued and consented to.",
+    "ANALYSIS: Sign-in frequency, device requirements, and session revocation are configuration settings rather than separately purchased products. No specific product capability, license tier, or SKU is claimed.",
+    "OPINION: Most identity programs are designed around the moment of authentication rather than the duration of access.",
+    "OPINION: If a stolen session can be replayed from an unknown device, MFA provides less protection than executives assume.",
+    "OPINION: Choosing which applications warrant re-authentication friction is an executive decision rather than a technical default.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999 (GBP only). Stated without attaching any capability or service tenure to that date, correcting the draft's implied 'identity and security configuration since 1999'.",
+    "NO NUMBERS CITED: no industry, breach, downtime, or threat-landscape statistics; no client named, implied, or described; no certification, partnership, or compliance status claimed; no competitor named."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's only stated business consequence is 'MFA is doing less work than your board assumes' — true, but it leaves the executive with no decision to make. Missing the honest tradeoff: shorter sessions and device requirements are policy, not procurement, and they cost re-authentication friction. That framing is what makes the post a management decision rather than an IT briefing, and it is the most under-published angle on this topic."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The phrase 'closes/close that window' is reused verbatim across LinkedIn, Facebook, Instagram caption and X. Channel doctrine forbids the same text twice; recycled signature phrasing makes a multi-channel package read as one asset resized. Each channel needs its own turn of phrase for the same idea."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The Instagram package ships slide copy with zero visual direction — no typographic system, no diagram concept, no composition guidance. Without that, this renders as text-on-gradient and fails the 'recognize a ProLink carousel before the logo' test. The two-route slide and the two-fixes slide are inherently diagrammatic and should be specified as such."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Terminology is loose. 'Session token' is used as a single object when the theft targets are a session cookie and a refresh token, while access tokens are comparatively short-lived. Naming that distinction qualitatively (without inventing lifetimes) is what separates a practitioner-grade explanation from a summary. Also: revocation ending live sessions depends on the application supporting continuous evaluation, and the draft states it as universal."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three questions are the most useful artifact in the package but the first is imprecise — 'how long does a session live' is not a setting anyone can look up. The operational question is the sign-in frequency policy and whether it differs on unmanaged devices. The offboarding question should also cover OAuth app tokens already consented to, which survive account disablement in ways executives never anticipate."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Material accuracy problem: the draft lists passkeys among the defenses against token theft generally. Passkeys defeat the real-time relay route because credentials are origin-bound — they do nothing about an infostealer copying a cookie after a legitimate sign-in. Presenting one control as covering both routes is exactly the overclaim this brand cannot make. Fix by pairing each theft route with its actual fix."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No fabricated AI angle is needed here, and inventing one would be worse. The legitimate 2026 connection the draft omits is non-human access: tokens held by third-party SaaS apps, connectors and assistants that a user consented to once and that persist independently of that user's account. One clause in the offboarding question covers it without manufacturing urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn hook 'MFA didn't fail. It was never asked' contradicts the body four paragraphs later, which correctly says the MFA challenge was satisfied by the employee. An executive reading closely catches that, and it undercuts trust in everything after it. 'It was answered' keeps the same snap and is true in both attack routes."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread ends on a bulleted remediation list, which is the weakest possible close for the platform — nothing quotable. The strongest line in the whole package ('Authentication is a moment. Access is a duration.') is buried on the last Instagram slide. It belongs as the thread's final post. Instagram also lacks a screenshot-worthy slide; the IT-lead questions should be one."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP copy states ProLink 'has worked on identity and security configuration for Los Angeles businesses from Woodland Hills since 1999' — that fuses F012 with a capability-and-tenure claim not in verified facts. F012 authorizes the founding year and location, nothing about identity work since 1999. Separately, the CTA label 'Explore cybersecurity' is the kind of generic nav-menu language the brand register rejects."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn runs roughly 1,760 characters against a 1,600 ceiling. Facebook's closing sentence — 'It just isn't the last line of defense anyone assumes it is' — is both garbled and a cliché. 'Picture a Tuesday afternoon' is a soft, interchangeable opener that could preface any scenario post; leading with the controller's actual action is stronger."
+    },
+    {
+      "role": "Final Test — MSP Differentiation",
+      "finding": "The draft would have passed as strong; the revision hardens the parts a generic MSP would never write: the per-route control mapping, the access-token-versus-refresh-token distinction, the continuous-evaluation caveat, the OAuth-token offboarding question, and the explicit statement that this is a friction tradeoff rather than a purchase. No MSP running template content produces that combination."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

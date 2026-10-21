@@ -1,0 +1,159 @@
+{
+  "post": "A two-week test is how most agents reach production. Someone wires an assistant into the billing system, it works, nobody turns it off, and a year later it still holds write access nobody reviewed.\n\nFour answers to get before that happens:\n\nWhat can it touch, up to what amount, and until what date?\nWhich of its actions cannot be walked back once taken?\nWhere does its activity appear in your logs, under its own name?\nWho can switch it off in minutes, without calling a vendor?\n\nAn agent does not get suspicious. It follows the instructions in front of it, including instructions that arrive inside the data it is processing. Written limits are the only ones it has.",
+  "headline": "The four answers before an agent gets write access",
+  "cta_label": "Review agent access",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-08-s252-card.png",
+  "image_file_jpg": "2026-09-08-s252-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S252",
+  "core_idea": "Before an AI agent is granted write access, four answers must exist in writing — scope (reach and duration), reversibility of consequence, logging under the agent's own identity, and revocation — because they are ordinary change-control questions; what makes them urgent is that an agent takes instruction from the data it reads and, run under a person's account, inherits that person's entire reach.",
+  "channels": {
+    "linkedin": "Most agent pilots pass security review at the wrong moment — before anyone asks what the agent is allowed to change.\n\nRead access is a data question, and most companies have a policy for it. Write access is another category. An agent that can send mail, issue a refund or change a permission carries an employee's authority without an employee's instinct that a request looks odd.\n\nTwo details make it riskier than it looks. An agent takes instruction from the data it reads, so its limits have to hold against input you don't control. And running it under a staff account gives it that person's entire reach rather than the task's.\n\nFour answers, in writing, before deployment.\n\nScope. Which systems, which records, what dollar ceiling — and until what date. Grants that expire prevent the usual failure: a two-week pilot still writing to production a year later under a pilot's governance.\n\nReversibility. Judge consequence, not state. You can restore a mailbox permission; nobody can un-read the mail it exposed. Irreversible steps keep a human in the path.\n\nLogging. Give the agent its own identity, never a shared service account, in the same audit trail as your people.\n\nRevocation. Name the person, the console, the elapsed time. If the answer starts with opening a vendor ticket, what you have is a request form.\n\nNone of this is new. Change control and privileged access, applied to something that acts faster than your review cycle. Prediction, clearly labeled: auditors and insurers will eventually ask who authorized an agent's write access. Easier to have written it down first.",
+    "facebook": "A two-week test is how most agents reach production. Someone wires an assistant into the billing system, it works, nobody turns it off, and a year later it still holds write access nobody reviewed.\n\nFour answers to get before that happens:\n\nWhat can it touch, up to what amount, and until what date?\nWhich of its actions cannot be walked back once taken?\nWhere does its activity appear in your logs, under its own name?\nWho can switch it off in minutes, without calling a vendor?\n\nAn agent does not get suspicious. It follows the instructions in front of it, including instructions that arrive inside the data it is processing. Written limits are the only ones it has.",
+    "gbp": "If an AI pilot at your company is heading toward production this quarter, the access review matters more than the model choice.\n\nBefore any agent can send, delete, approve or pay, get four answers in writing:\n\nScope — which systems, which records, what dollar limit, and an expiry date on the grant.\nReversibility — which actions cannot be walked back once taken.\nLogging — where its activity appears, under its own identity rather than a shared account.\nRevocation — who shuts it off, from where, in how many minutes.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Most agent pilots clear security review before anyone asks what the agent is allowed to change. Read access is a data question. Write access is authority. Four answers to have in writing first.",
+      "Scope. An allow list, not a prohibition list: which systems, which records, what dollar ceiling — and an expiry date. Grants that never expire are how a two-week pilot ends up writing to production for a year.",
+      "Reversibility. Judge consequence, not state. You can restore a mailbox permission; nobody can un-read the mail it exposed. Irreversible steps keep a human in the path.",
+      "Logging. Give the agent its own identity, not a shared service account, in the same audit trail as your people. Otherwise Tuesday's strange action is still invisible on Wednesday.",
+      "Revocation. Name the person, the console, the elapsed time. If it begins with opening a vendor ticket, what you have is a request form.",
+      "Two details separate agents from employees: an agent takes instruction from the data it reads, and one run under a staff account inherits that person's entire reach. Neither is fixed by a better model. Both are fixed by scoping the grant.",
+      "Put the four answers on one page and have the system owner sign it. Call it a write-access memo. The teams that scale agents fastest will be the ones that wrote it before deployment, not after an incident."
+    ],
+    "instagram_caption": "An agent pilot usually clears security review before anyone asks the question that matters: what is it allowed to change?\n\nRead access is a data question. Write access is authority — held by something with none of an employee's instinct that a request looks odd. Two things make that sharper than it sounds. An agent takes instruction from the data it processes, and one running under a staff account inherits that person's entire reach.\n\nFour answers, one page, before deployment: scope, reversibility, logging, revocation. Call it a write-access memo and have the system owner sign it.\n\n#AIGovernance #MachineIdentity #ITLeadership"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-08-s252-01.png",
+      "2026-09-08-s252-02.png",
+      "2026-09-08-s252-03.png",
+      "2026-09-08-s252-04.png",
+      "2026-09-08-s252-05.png",
+      "2026-09-08-s252-06.png",
+      "2026-09-08-s252-07.png",
+      "2026-09-08-s252-08.png"
+    ],
+    "jpg": [
+      "2026-09-08-s252-01.jpg",
+      "2026-09-08-s252-02.jpg",
+      "2026-09-08-s252-03.jpg",
+      "2026-09-08-s252-04.jpg",
+      "2026-09-08-s252-05.jpg",
+      "2026-09-08-s252-06.jpg",
+      "2026-09-08-s252-07.jpg",
+      "2026-09-08-s252-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bold_type",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bold_type",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bold_type",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: read access and write access are different categories of governance risk for AI agents",
+    "ANALYSIS: an agent with write access carries employee-level authority without an employee's judgement that a request is unusual",
+    "ANALYSIS (general mechanism, no incident cited): an agent can take instruction from the content it processes, so access boundaries must hold against untrusted input",
+    "ANALYSIS: an agent running under a user's delegated permissions inherits that user's full reach rather than the reach the task requires",
+    "ANALYSIS: scope should be defined as an allow list with an expiry date rather than as a list of prohibitions",
+    "ANALYSIS: reversibility should be judged on consequence rather than system state — a permission can be restored, the exposure it created cannot",
+    "ANALYSIS: agent actions should be logged to the same audit trail as human actions under the agent's own identity, not a shared service account",
+    "ANALYSIS: a revocation path dependent on a vendor ticket does not function as a kill switch",
+    "ANALYSIS: scope, reversibility, logging and revocation are existing change-control and privileged-access disciplines, not new AI-specific ones",
+    "OPINION: the common failure mode is a pilot granted production write access under a pilot's governance and left running",
+    "PREDICTION (labeled as prediction in the LinkedIn post): auditors and insurers will eventually ask who authorized an agent's write access. No regulation, deadline or insurer requirement is named or implied.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999 — used once, in GBP only",
+    "NO STATISTICS CITED: no industry, breach, threat, adoption or downtime numbers appear in any channel",
+    "NO CLIENT NAMED OR IMPLIED. No certification, partnership or compliance status claimed. No competitor named."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "Two channels open with the same line ('drafts your invoices is a tool / one that sends them is a signatory' appears in both Facebook and X post 1). Channel doctrine requires the best expression per channel, never the same text twice. Also, the F012 founding line is bolted onto both GBP and the Instagram CTA slide, which makes a verified fact read as boilerplate padding rather than credibility."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept is a checklist, and checklists are the most commoditized format in this category. The draft has no differentiating turn — no slide or paragraph explains why these four questions bite harder for an agent than for a new hire. Without that turn, the package is competent but replicable."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package contains zero visual direction, in a standard with an explicit visual doctrine. Eight slides share an identical kicker/headline/body block, so the carousel has no compositional rhythm — no diagram, no comparison frame, no numeric type moment. There is nothing here that would let a viewer recognize a ProLink carousel before the logo."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The reversibility section is technically imprecise. A permission change is trivially reversible as state; what is irreversible is the exposure that occurred during the window. Filing 'a changed permission' under 'cannot be undone' invites correction from any competent CIO. Separately, LinkedIn runs roughly 1,800 characters against a 900–1,600 ceiling."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft names the failure mode — a pilot left running in production under a pilot's governance — but offers no control for it. Every other question resolves into an artifact; this one resolves into a hope that someone remembers. Scope needs a duration dimension: grants that expire by default make the failure structurally impossible rather than merely known."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treats the agent as a well-behaved but unhesitating employee. It omits the mechanism that actually distinguishes agent risk: instructions can arrive inside the data the agent processes — a ticket, an inbox, a web page — so scope has to hold against input the business does not control. That is the reason allow-lists matter more here, and it is missing."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No distinction between an agent that holds its own identity and one that runs on a staff member's delegated token. The second is the most common over-provisioning path in real deployments — the agent inherits everything that person can reach, not what the task needs — and it is the single most useful thing an executive could learn from this post."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The post tells me what to ask but not who owns the answers or what the artifact is called. Executives act on named deliverables. Also missing: any sense of who will eventually ask me for this, which is what converts a good practice into a scheduled one."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Nothing in the package is nameable, so nothing is quotable at second hand. Saveability improves sharply if the four answers become a named one-page artifact a reader can request by name. The X thread also opens with a rhetorical flourish rather than the frame, which reduces standalone value of post 1 if it is seen alone."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Instagram CTA slide spends the final impression on a company founding line rather than an idea, which is the weakest possible closing beat for a publication-register brand. The GBP entry carries both a soft ask ('a good afternoon's work') and the appointment button — effectively two CTAs."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two consecutive-opening violations: 'A CRM field, yes. A sent email...' (LinkedIn), 'That is not a kill switch. That is a request form.' (Instagram slide 6), plus 'you don't have... You have...' in X post 5. Facebook closes on 'you're not testing an agent — you're trusting one,' which reproduces the rhythm of the banned 'it's not just X, it's Y' construction."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

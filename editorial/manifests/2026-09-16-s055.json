@@ -1,0 +1,162 @@
+{
+  "post": "It's 11:40 pm. Your controller's phone buzzes with a sign-in approval request. She didn't sign in, so she taps Deny. Ninety seconds later it buzzes again. And again.\n\nAround the eighth prompt, assuming something is broken, she taps Approve.\n\nNote what that took: a password the attacker already had, plus patience. The second factor was handed over free.\n\nMFA was on the whole time. It was the kind that can be worn down.\n\nText codes, app codes, push approvals, number matching and hardware keys all get called multi-factor authentication — but one can be intercepted, one can be typed into a convincing fake page, one can be nagged, one can be relayed live, and one simply refuses to answer a site that isn't the real one.\n\nWorth asking which of those guards your finance and admin accounts, and which one is still sitting behind them as the backup.",
+  "headline": "MFA is not one control",
+  "cta_label": "See our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-16-s055-card.png",
+  "image_file_jpg": "2026-09-16-s055-card.jpg",
+  "theme": "identity",
+  "idea_id": "S055",
+  "core_idea": "\"MFA enabled\" is not a security state. Five controls answer yes to that checkbox and they collapse into three failure classes — codes that can be read aloud, approvals that can be worn down, approvals that can be relayed — with origin-bound credentials as the only exception, and even that exception is bounded by what sits behind it: recovery paths, help-desk resets, and sign-ins that never invoke MFA at all.",
+  "channels": {
+    "linkedin": "On most security questionnaires, MFA is a yes/no field.\n\nFive different controls answer yes to that field, and they fail in five different ways.\n\nSMS codes are a shared secret in transit, sent to a number the carrier ultimately controls.\n\nAuthenticator app codes remove the carrier and keep everything else: a code a user can read aloud is a code that user can be talked into typing on the wrong page.\n\nPush approvals assume the attacker already has the password. Fatigue is the second factor handed over free — enough prompts at the wrong hour and someone taps approve to stop the buzzing.\n\nNumber matching fixes fatigue and stops there. A real-time proxy site relays the genuine number to the victim, who types it into the app exactly as instructed.\n\nPasskeys and hardware keys are the only ones on that list bound to the site's origin, which means the browser will not release the credential to a lookalike domain at all.\n\nThen the three things the questionnaire never asks:\n\nWhere does the strong factor fall back to SMS or a help-desk reset? Voice cloning has made that phone call a more attractive path than the login page. Analysis, not a reported incident.\n\nWhich sign-ins never invoke MFA at all — legacy protocols, trusted-location exclusions, exempted service accounts? A factor that is never invoked is not a control.\n\nWho can enroll a new factor on the CFO's account, and how would anyone notice?\n\nStart where money moves and where identity policy changes. Prediction, labeled as one: \"MFA enabled\" will age the way \"we have antivirus\" did.\n\nIdentity is the perimeter now. Perimeters are not graded pass or fail.",
+    "facebook": "It's 11:40 pm. Your controller's phone buzzes with a sign-in approval request. She didn't sign in, so she taps Deny. Ninety seconds later it buzzes again. And again.\n\nAround the eighth prompt, assuming something is broken, she taps Approve.\n\nNote what that took: a password the attacker already had, plus patience. The second factor was handed over free.\n\nMFA was on the whole time. It was the kind that can be worn down.\n\nText codes, app codes, push approvals, number matching and hardware keys all get called multi-factor authentication — but one can be intercepted, one can be typed into a convincing fake page, one can be nagged, one can be relayed live, and one simply refuses to answer a site that isn't the real one.\n\nWorth asking which of those guards your finance and admin accounts, and which one is still sitting behind them as the backup.",
+    "gbp": "A practical identity check for Los Angeles owners: ask which factor actually guards your Microsoft 365 admin and finance accounts.\n\nText codes can be intercepted. App codes can be typed into a convincing fake page. Push approvals can be worn down by repeat prompts. Number matching stops the nagging, not a live relay. Passkeys and hardware keys are bound to the real site, so a lookalike page gets nothing.\n\nThen check what sits behind them. A strong factor with SMS recovery or a phone-call help-desk reset behind it inherits the weaker one.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "On a security questionnaire, MFA is a yes/no field. Five different controls answer yes to it, and they fail in five different ways.",
+      "SMS: a shared secret in transit, sent to a number the carrier ultimately controls rather than you.",
+      "Authenticator app codes: the carrier risk is gone, the phishability isn't. A code a user can read aloud is a code that user can be talked into typing on the wrong page.",
+      "Push approval: the attacker already has the password. The second factor is the free part — enough prompts at the wrong hour and someone taps approve to stop the buzzing.",
+      "Number matching: fixes fatigue, not proxying. A real-time attacker-in-the-middle site relays the genuine number to the victim, who types it into the app exactly as instructed.",
+      "Passkeys and hardware keys: the browser will not release the credential to a domain that isn't the registered origin. There is nothing for a lookalike page to collect.",
+      "Then the parts no questionnaire asks about: what the strong factor falls back to, which sign-ins skip MFA entirely, and who can enroll a new factor on the CFO's account without anyone noticing."
+    ],
+    "instagram_caption": "Enabled is not a security state. Five different controls all answer yes to the MFA question, and the one you inherited — usually whatever was easiest to roll out — decides which attacks still work.\n\nSwipe for the three failure classes those five collapse into, the one exception, and the boundary of that exception nobody puts on a questionnaire.\n\nAnalysis, not a product pitch. #passkeys #identitysecurity #mfa"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-16-s055-01.png",
+      "2026-09-16-s055-02.png",
+      "2026-09-16-s055-03.png",
+      "2026-09-16-s055-04.png",
+      "2026-09-16-s055-05.png",
+      "2026-09-16-s055-06.png",
+      "2026-09-16-s055-07.png",
+      "2026-09-16-s055-08.png",
+      "2026-09-16-s055-09.png"
+    ],
+    "jpg": [
+      "2026-09-16-s055-01.jpg",
+      "2026-09-16-s055-02.jpg",
+      "2026-09-16-s055-03.jpg",
+      "2026-09-16-s055-04.jpg",
+      "2026-09-16-s055-05.jpg",
+      "2026-09-16-s055-06.jpg",
+      "2026-09-16-s055-07.jpg",
+      "2026-09-16-s055-08.jpg",
+      "2026-09-16-s055-09.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 95,
+      "originality": 94,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 91,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Security questionnaires and internal reporting typically treat MFA as a binary field rather than asking which factor is in use on which accounts.",
+    "FACT(public): SMS one-time codes are a transmitted shared secret delivered to a phone number controlled by the carrier, making interception and number takeover viable paths.",
+    "FACT(public): TOTP authenticator app codes remove carrier dependency but remain phishable, because the code can be entered on an attacker-controlled page.",
+    "FACT(public): Push-approval fatigue presupposes the attacker already holds valid credentials; the second factor is obtained by repeated prompting, not by further theft. (Corrected from draft, which claimed no credential theft was required.)",
+    "FACT(public): Number matching mitigates push fatigue but not real-time attacker-in-the-middle proxying. Direction corrected: the number is generated at the sign-in page and relayed by the proxy to the victim, who enters it in the app.",
+    "FACT(public — FIDO2/WebAuthn origin binding): Passkey and security key credentials are registered to a specific origin and the private key does not leave the authenticator, so a lookalike domain cannot obtain a usable assertion.",
+    "FACT(public): Origin binding protects the authentication event only. Post-authentication session token theft and account recovery or help-desk reset paths are outside its scope. (Boundary added; draft overstated with 'mostly they don't fail'.)",
+    "ANALYSIS (labeled in LinkedIn and Instagram): Voice cloning increases the attractiveness of help-desk-driven factor reset relative to credential phishing. No incident, victim, vendor, or figure is cited.",
+    "ANALYSIS: An account is limited by the weakest factor enrolled on it, including recovery and fallback methods.",
+    "ANALYSIS: Sign-ins that bypass MFA entirely — legacy authentication protocols, trusted-location exclusions, exempted service accounts — make factor choice moot for those paths.",
+    "ANALYSIS: Factor-enrollment permissions and enrollment monitoring are a control distinct from the factor itself.",
+    "PREDICTION (labeled as prediction in LinkedIn): the assertion 'MFA enabled' will lose evaluative weight, comparable to 'we have antivirus.'",
+    "OPINION: Identity is the effective security perimeter and should not be assessed pass/fail.",
+    "FACT(F012): Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Used in GBP only, phrased per the verified-facts entry.",
+    "No industry statistics, breach costs, vendor incident reports, dated research findings, certifications, partnerships, or client references appear in any channel. No blocked facts (F006, F009, F010, F011) are used or implied."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA label promises something the destination does not deliver. \"Review your setup\" reads as an offer of an identity assessment, but the link lands on a generic /cybersecurity service page. Either the label matches the page or the page changes. Fixed by relabeling to \"See our security approach.\""
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is a four-item list with a happy ending. Slide 6 declares hardware keys \"mostly don't fail,\" and the deck never turns on itself. A premium editorial piece needs a boundary beat — what the strongest factor does not cover — or it reads as vendor advocacy for passkeys. Restructured by failure class with an explicit limits slide."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Every footer field is an empty string, so there is no repeating system element and the hierarchy is flat kicker/headline/body on all nine slides. Added a consistent verdict line in the footer (Phishable / Phishing-resistant / Not covered) which functions as a small data-visualization device and makes the deck recognizable before the logo. Slide bodies also trimmed — several ran past 35 words, which is a paragraph, not a slide."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two accuracy problems. First, authenticator app codes (TOTP) are omitted entirely — the most widely deployed factor in 20–500 seat Microsoft 365 environments — so the taxonomy is incomplete and an informed reader will notice. Second, number matching is described backwards: the number originates at the sign-in page and is typed into the app, so the proxy relays the genuine number to the victim rather than \"asking for it.\""
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft treats factor selection as the whole control. In practice the decisive question is whether MFA is invoked at all — legacy protocols, trusted-location exclusions, and exempted service accounts routinely mean the strong factor is never reached. A factor that is never invoked is not a control, and that point is missing from every channel."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "\"No credential theft required, just persistence\" (LinkedIn and X) is factually wrong and contradicts the package's own claims audit. Push fatigue presupposes the attacker already holds valid credentials; the point is that the second factor is surrendered for free. Separately, \"mostly they don't fail\" overstates origin-bound credentials — post-authentication session token theft and help-desk-driven recovery bypass the login page entirely."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in the package places it in 2026. Attacker-in-the-middle proxying is commodity tooling now, and voice cloning is what makes the help-desk factor reset a practical route around a passkey. Added as labeled analysis, with no invented incident, statistic, or vendor claim."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The three questions are good and the reader still has no idea what to do Monday. No scope, no sequencing, no acknowledgement that rolling passkeys to 300 seats is not a one-quarter project. Added account-tier prioritization: money movement and identity policy first."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The hook slide is a bare headline with no subline; on a muted mobile feed it has to carry the swipe alone and it does not. Added a six-word subline. Also #cybersecurity is a dead broad tag — replaced with #mfa, which matches actual search intent. X thread now closes on a post that stands alone if quoted."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Channel doctrine violated: \"cannot collect something it is not permitted to see\" appears near-verbatim in LinkedIn, Instagram and X. That is the same text three times, which is exactly what the doctrine forbids. Each channel now expresses origin binding differently."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three defects. \"SMS codes fail to interception\" and \"Push approvals fail to fatigue\" are ungrammatical as written. \"No stolen password logic required beyond the first one\" (IG slide 4) is unparseable. And Facebook opens five consecutive sentences with \"One,\" which breaks the standing rule against repeated sentence-opening words — recast as a single list sentence."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

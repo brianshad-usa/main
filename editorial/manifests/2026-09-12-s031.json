@@ -1,0 +1,158 @@
+{
+  "post": "A vendor you have paid for six years emails an updated invoice. Wording is right. Sign-off matches. One detail is new: the bank account.\n\nA decade ago that email probably had a clumsy sentence in it somewhere, and someone in accounting slowed down without quite knowing why. Writing well used to cost an attacker real effort. Not anymore.\n\nSo the question is no longer whether the message looks real. It is whether anyone checked it the way you already agreed to check it.\n\nCall the number you had on file before the email arrived — never a number printed inside it. And if a familiar voice answers, remember that a familiar voice is no longer proof either. The known number is the control, not the recognition.\n\nNo standing rule for banking changes? That is the thing worth fixing this month.",
+  "headline": "The phishing tell that stopped working",
+  "cta_label": "Learn more",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-12-s031-card.png",
+  "image_file_jpg": "2026-09-12-s031-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S031",
+  "core_idea": "Bad grammar was never written into anyone's security policy, yet every organization relied on it as a detection control. Generated text collapsed the cost of fluency and ended that subsidy — but the attack did not get smarter, human review just got cheaper to pass. Machine detection kept its signals; humans lost theirs. What survives is procedural — process, context, channel — enforced through a known channel rather than a familiar voice, and it fails on authority long before it fails on detection.",
+  "channels": {
+    "linkedin": "Nobody ever wrote \"bad grammar\" into a security policy. Every organization relied on it anyway.\n\nFor years the typo in the third sentence did quiet work. It marked a sender who was rushed, working outside their own language, or not who they claimed to be. Unassigned, unmeasured, load-bearing.\n\nGenerated text ended the subsidy. Clean prose costs nothing now, and register matching is close behind — a vendor's cadence, a CFO's sign-off habits, the way your AP team writes about invoices.\n\nThe honest read is narrower than the alarm. The attack did not get smarter; the filter got cheaper to pass. (Analysis, not prediction.) Machine detection kept its signals — domain, headers, authentication, link reputation. Human detection lost most of its own.\n\nSo the tells that survive are procedural:\n\nProcess — a payment change arriving outside the normal change path, or an approver quietly skipped.\n\nContext — urgency built on something the sender should not know, or should know and clearly doesn't.\n\nChannel — a request that lands where verification is hardest and resists moving to where it is easy.\n\nThose are not reading skills. They are controls.\n\nTwo consequences. Verification has to run out-of-band on contact details you held before the message arrived — and the control is the known channel, not the familiar voice, because voice is now about as cheap to imitate as prose. Second, the rule fails on authority long before it fails on detection: if a junior AP clerk cannot hold a payment the CFO appears to have approved, the control exists on paper only.\n\nThe question worth asking your team this week: who is allowed to change our bank details, and what stops them.\n\nGrammar was doing work nobody paid for. That subsidy has ended.",
+    "facebook": "A vendor you have paid for six years emails an updated invoice. Wording is right. Sign-off matches. One detail is new: the bank account.\n\nA decade ago that email probably had a clumsy sentence in it somewhere, and someone in accounting slowed down without quite knowing why. Writing well used to cost an attacker real effort. Not anymore.\n\nSo the question is no longer whether the message looks real. It is whether anyone checked it the way you already agreed to check it.\n\nCall the number you had on file before the email arrived — never a number printed inside it. And if a familiar voice answers, remember that a familiar voice is no longer proof either. The known number is the control, not the recognition.\n\nNo standing rule for banking changes? That is the thing worth fixing this month.",
+    "gbp": "The spelling mistake used to do a lot of free work. A sloppy sentence in a vendor email was often the first hint something was wrong. Generated text ended that, and no amount of staff training brings the signal back.\n\nThe replacement is not sharper eyes. It is a standing rule: any change to bank details, payroll, or login credentials gets verified on a number you already had on file — not a number supplied in the message, and not on a recognized voice alone.\n\nOur help desk is in-house, US-based and staffed 24/7, and calls are answered live with no phone tree. Serving Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "For years your best phishing filter was a typo. It cost an attacker effort to avoid and cost you nothing to use. Generated text ended that arrangement.",
+      "Worth being precise about what changed: the attack didn't get smarter, the filter got cheaper to pass. Machine detection kept its signals — domain, headers, authentication. Human detection lost most of its own.",
+      "The tells that survive aren't literary. Process: a payment change outside the normal path. Context: urgency about something the sender shouldn't know, or should know and clearly doesn't. Channel: a request that resists moving somewhere verifiable.",
+      "Call back on a number you held before the email arrived. Not the one printed in it. And not on voice recognition alone — voice is about as cheap to imitate as prose now. The known channel is the control.",
+      "Last part nobody likes: this fails on authority before it fails on detection. If a junior clerk can't hold a payment the CFO appears to have approved, the rule exists on paper only."
+    ],
+    "instagram_caption": "Security awareness training spent a decade teaching people to read carefully. That skill had a shelf life.\n\nThe typo was never policy. It was just cheap — a clumsy sentence meant a sender who was rushed, working outside their own language, or pretending to be someone else. Generated text removed the tell, and the honest read is narrower than the alarm: the attack didn't improve, human review just got cheaper to pass.\n\nMachine detection still has its signals. Human detection lost most of its own. What remains is procedural — process, context, channel — enforced by a callback to a known number rather than by anyone's instinct about sentence structure. The carousel walks each one, including the part that fails first: authority, not detection.\n\nIf your verification rule lives only in people's heads, that is this month's fix.\n\n#businessemailcompromise #aisecurity #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-12-s031-01.png",
+      "2026-09-12-s031-02.png",
+      "2026-09-12-s031-03.png",
+      "2026-09-12-s031-04.png",
+      "2026-09-12-s031-05.png",
+      "2026-09-12-s031-06.png",
+      "2026-09-12-s031-07.png",
+      "2026-09-12-s031-08.png"
+    ],
+    "jpg": [
+      "2026-09-12-s031-01.jpg",
+      "2026-09-12-s031-02.jpg",
+      "2026-09-12-s031-03.jpg",
+      "2026-09-12-s031-04.jpg",
+      "2026-09-12-s031-05.jpg",
+      "2026-09-12-s031-06.jpg",
+      "2026-09-12-s031-07.jpg",
+      "2026-09-12-s031-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photographic",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "photographic",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "photographic",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 94,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Poor grammar historically functioned as an informal, unassigned detection signal for fraudulent email.",
+    "ANALYSIS: Generated text makes fluent, register-matched writing effectively costless for an attacker, removing that signal. Stated as a collapse in cost, not a new capability class.",
+    "ANALYSIS: Automated/technical detection signals (domain reputation, message headers, authentication, link reputation) were not degraded by fluent prose; human inspection was. Explicitly labeled analysis on LinkedIn and on the IG slide footer.",
+    "ANALYSIS: Remaining reliable tells are procedural — process deviation, contextual implausibility in either direction, and channel choice — rather than literary.",
+    "ANALYSIS: Synthetic voice makes a recognized voice an unreliable verifier; the reliable element is the pre-held contact channel, not the voice on it. No product, tool, incident, or capability is named.",
+    "OPINION: Organizations should stop treating human detection as the last line and verify money movement and credential changes out-of-band on pre-held contact details.",
+    "OPINION: Such rules fail on authority gradient before they fail on detection; a named owner and a no-cost right to hold a payment are required for the control to function.",
+    "FACT(F002): The Pro Link Systems help desk is in-house, not outsourced. (GBP only.)",
+    "FACT(F008): The help desk is US-based. (GBP only.)",
+    "FACT(F001): The help desk operates 24/7. (GBP only.)",
+    "FACT(F007): Phone calls are answered live by the in-house team — no phone tree. (GBP only.)",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. (GBP and IG final slide footer.)",
+    "NOTE: No industry, breach-cost, threat-volume, or incident statistic appears anywhere in this package. No client is named, implied, or described. No certification, partnership, or compliance status is claimed. Blocked facts F006, F009, F010, F011 are not used.",
+    "NOTE: 'A decade ago' and 'for years' are used as ordinary temporal framing, not as dated research claims.",
+    "NOTE: No text is repeated verbatim across channels; each channel enters the idea from a different opening."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package is a strong essay compressed four ways, but the same signature line — 'Bad grammar was never a security control. It was a free one.' — opens LinkedIn, the IG hook slide, and the first X post. Channel doctrine forbids running the same text twice. Each channel needs its own entry point into the idea, or the feed reads like syndication rather than a publication."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept has a second act it never uses. Everything stays in the attacker's hands; nothing addresses that businesses are erasing their own authenticity baseline by routing internal comms through generated text too — 'this doesn't sound like Dave' has stopped working from both directions. Without that turn, the piece is a well-written observation rather than a reframe."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Two concrete problems. Slide 1 carries a two-sentence headline where the standard calls for minimal text whose only job is earning the swipe. Slide 8 stacks four separate company facts plus a URL into one frame — competing hierarchy, and it terminates an editorial sequence with an ad slab. Separately, the package schema carries no visual direction field at all, so the renderer is being handed typography decisions with no system specified; that is a pipeline gap, not a copy gap."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft says the signal is gone without qualifying which signal. Domain reputation, header authentication, and link analysis did not degrade when prose got fluent — only human inspection did. A technically literate CIO will spot the imprecision immediately, and fixing it actually sharpens the argument: machine detection kept its signals, humans lost theirs."
+    },
+    {
+      "role": "CIO",
+      "finding": "The 'what to do' section is correct and incomplete. Every organization that has ever failed a BEC callback failed it on authority, not on detection — a clerk who suspects the CFO's payment request still approves it. No ownership, no named authority to say 'wait,' no statement of who is permitted to hold a payment. Without that, the recommendation is a policy nobody can execute under pressure."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Recommending 'pick up the phone' in 2026 without addressing voice cloning is the single most serious weakness in the package. The draft replaces a dead signal (prose) with another signal that is also now cheap to fake (a familiar voice). The control must be stated as the known channel — a number held before the message arrived — explicitly not the recognizability of the voice that answers. Also, the 'context tell' is flattened in IG and X to 'something the sender shouldn't know'; thread-hijacking from a compromised mailbox means the attacker often knows plenty. The LinkedIn version's both-directions phrasing is the accurate one and should carry across."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treats generated text as a capability jump. It is better understood as a cost collapse — the attack profile is unchanged, the price of passing human review went to zero. The draft nearly says this ('the filter got cheaper to pass') but then undercuts it with slide copy implying novelty. Hold the line on cost, not capability; it is the more defensible and more original claim, and it avoids manufacturing AI urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "A CFO finishes the LinkedIn post agreeing and still does not know what to ask on Monday. The piece needs one question an executive can put to their team verbatim: who is allowed to change our bank details, and what stops them. Abstract instruction to 'verify out-of-band' is something they have heard; the naming question is not."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "'Swipe for what replaces the grammar check' is a withheld payoff, which the standards reject on sight. Name the payoff in the caption — process, context, channel — and let the carousel earn the swipe on quality. Also #cybersecurity is a dead-weight hashtag at that volume; the specific ones are doing all the work."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "cta_label 'Talk to us' is paired with cta_type LEARN_MORE — a mismatch that reads as sloppy on rendered cards. Separately, the GBP entry and the IG CTA slide both use the '\"does this look right to you?\"' line, repeating the same device in two channels in the same cycle."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The core line is logically broken: 'Bad grammar was never a security control. It was a free one.' A free what? If it was never a control, it cannot have been a free one. The intended meaning is that nobody classified it as a control and everyone relied on it as one. Additionally, the IG caption's second paragraph is a near-verbatim restatement of LinkedIn's second paragraph, the Facebook draft opens three consecutive sentences with 'The'/'An' patterns ('The wording... The sign-off...'), and 'without effort or fluency in the target language' in slide 3 parses as nonsense."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

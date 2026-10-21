@@ -1,0 +1,155 @@
+{
+  "post": "A wind advisory goes out Tuesday. By evening the utility notice lands: power may be off in your area for part of Wednesday.\n\nHere is the part nobody rehearses. Everyone tries to work from home, and the sign-in rules built around office networks and company laptops start treating your own staff like intruders — hotspot, personal device, desk phone unreachable, no code arriving. The outage came from the utility. Your lockout came from policy.\n\nThe second part is quieter. When people cannot reach each other the usual way, approvals move to whatever channel works, and a voice on the phone that sounds right starts counting as verification. It does not count anymore. Call back on a number from your own directory before money moves.\n\nPick an afternoon this month. Have someone sign in the hard way and see what breaks.",
+  "headline": "The outage is not what locks you out",
+  "cta_label": "Talk to ProLink",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-08-29-s127-card.png",
+  "image_file_jpg": "2026-08-29-s127-card.jpg",
+  "theme": "continuity",
+  "idea_id": "S127",
+  "core_idea": "A public safety power shutoff is not an equipment test. It is an identity and verification test: the sign-in rules that protect a normal day can lock people out of an abnormal one, a familiar voice no longer verifies anything, and the workarounds people invent in the dark outlive the outage that caused them.",
+  "channels": {
+    "linkedin": "A shutoff does not lock anyone out of email. Sign-in policy does.\n\nThat is the part continuity plans never test. Conditional Access tuned around office networks and managed devices behaves correctly right up until the day nobody is in the office and half the team is on a phone hotspot with a borrowed laptop. Then the control built to stop an intruder stops your controller.\n\nThree decisions to make before a notice, not after.\n\nTest the abnormal path. Sign in from a hotspot, on an unmanaged device, with the desk phone unreachable. Whatever breaks then breaks on an afternoon of your choosing. Confirm the break-glass account is excluded from the policies it exists to bypass, that its credentials do not live in the building, and that using it raises an alarm.\n\nName who declares a closure, and on which channel, and say so in advance. A closure notice is a cheap thing for a stranger to send, and staff act on one fast.\n\nRetire voice as verification. A familiar voice on an inbound call can be synthetic. Disruption is when approvals migrate to text and verification quietly becomes optional, so what has to hold is a callback to a directory number and a second signal before money moves — including when the person being impersonated is you.\n\nThen watch what happens after the power returns. Files parked on personal drives, work pushed through consumer AI tools, approvals shortened. Those exceptions rarely get closed. The outage ends and the exposure stays.",
+    "facebook": "A wind advisory goes out Tuesday. By evening the utility notice lands: power may be off in your area for part of Wednesday.\n\nHere is the part nobody rehearses. Everyone tries to work from home, and the sign-in rules built around office networks and company laptops start treating your own staff like intruders — hotspot, personal device, desk phone unreachable, no code arriving. The outage came from the utility. Your lockout came from policy.\n\nThe second part is quieter. When people cannot reach each other the usual way, approvals move to whatever channel works, and a voice on the phone that sounds right starts counting as verification. It does not count anymore. Call back on a number from your own directory before money moves.\n\nPick an afternoon this month. Have someone sign in the hard way and see what breaks.",
+    "gbp": "Shutoff season rewards whoever decided early.\n\nThree things to settle before a notice arrives. Who is authorized to send staff home, on which channel, announced in advance — a closure notice is an easy thing for a stranger to fake. Whether your sign-in and MFA rules let people work from a phone hotspot on a personal device, or quietly lock them out. Which approvals require a callback to a number from your own directory, because a familiar voice on an inbound call no longer verifies anything.\n\nBattery backup buys a clean shutdown, not a working day.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999, with an in-house help desk answering 24/7.",
+    "x": [
+      "A power shutoff does not lock anyone out of email. Sign-in policy does. Conditional Access tuned around office networks and managed devices works exactly as designed, right up until the day nobody is in the office.",
+      "Test the abnormal path before you need it: hotspot, unmanaged device, desk phone unreachable. Then confirm the break-glass account is excluded from the policies it exists to bypass, its credentials are not in the building, and using it raises an alarm.",
+      "Battery runtime is a scheduling decision, not a spec. A UPS buys a graceful shutdown, not a working day. Decide now which minutes go to door access, the phone handoff, and whatever on-prem thing remote staff quietly depend on.",
+      "The control that quietly expired: confirm it by voice. A familiar voice is cheap to synthesize. When disruption pushes approvals into text, what holds is a callback to a directory number plus a second signal before money moves.",
+      "Watch what happens after the lights come back. Files parked on personal drives, work pushed through consumer AI tools, approvals shortened to keep up. The outage ends. Nobody ever closes the exception."
+    ],
+    "instagram_caption": "The outage is not the thing that locks people out. Sign-in policy is.\n\nRules tuned around office networks and managed devices work perfectly until nobody is in the office. Test that path before a notice arrives — hotspot, unmanaged device, desk phone unreachable — and make sure the break-glass account is excluded from the policies it exists to bypass.\n\nTwo more worth settling. Who is allowed to declare a closure, and on which channel, said out loud in advance. And what still counts as verification, because a familiar voice on an inbound call does not.\n\nThen, once power returns, close the workarounds. They outlast the outage.\n\n#BusinessContinuity #IdentitySecurity #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 94,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: A power shutoff functions as an identity and verification test before it is an equipment test.",
+    "ANALYSIS (common knowledge, qualitative only): Southern California utilities issue power shutoff notices ahead of high-risk weather with limited advance warning. No dates, durations, frequencies, seasons-to-date or statistics stated.",
+    "ANALYSIS: Conditional Access is referenced only as a general, publicly documented capability of modern identity platforms to condition sign-in on network location and device state. No licensing tier, default configuration, product behaviour or vendor claim asserted beyond that.",
+    "ANALYSIS: MFA methods bound to office-tethered infrastructure, such as a desk phone, can fail during unplanned remote work. General architectural observation; no vendor named as deficient.",
+    "GUIDANCE (general practice, not a vendor claim): emergency access accounts should be excluded from the policies they exist to bypass, stored out of band, and alerted on when used. Stated as design practice, not as a documented product default.",
+    "ANALYSIS: Battery backup provides runtime for a graceful shutdown rather than a full working day — a general characteristic of UPS equipment. No capacity, runtime or model figures claimed.",
+    "ANALYSIS: On-premises dependencies such as door access, phone handoff and file storage are commonly overlooked when planning for loss of building power.",
+    "ANALYSIS: Operational disruption tends to weaken payment verification discipline, and improvised exceptions often persist after the disruption ends.",
+    "OPINION / RECOMMENDATION: Voice confirmation alone is a weaker verification control than it was five years ago; treat a familiar voice as potentially synthetic. Framed as a recommendation about control design, not as a claim about incident prevalence. No statistic, named incident, research finding or vendor capability cited.",
+    "OPINION: A closure announcement is a plausible pretext, so the legitimate notification channel should be communicated in advance. No specific campaign or incident referenced.",
+    "OPINION: Out-of-band callback to a directory-sourced number, plus a second signal, should be mandatory for money movement during disruption, including when the apparent requester is an executive.",
+    "OPINION: Workarounds adopted during an outage — personal storage, consumer AI tools, shortened approvals — commonly remain in place afterward. Stated as an observed pattern and a risk judgement, not as measured data.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — GBP and Instagram CTA slide.",
+    "FACT (F001 + F002): The help desk is in-house and operates 24/7 — GBP only, stated without response-time or resolution figures.",
+    "NO STATISTICS USED: no outage, disaster, breach, downtime, fraud or industry numbers appear in any channel.",
+    "NO CLIENT REFERENCES: no client named, implied or described in any channel.",
+    "NO BLOCKED FACTS USED: F006, F009, F010, F011 do not appear.",
+    "CROSS-CHANNEL DUPLICATION CHECK: no sentence appears in more than one channel; the previously duplicated 'while the power is on' line now appears once, on the Instagram takeaway slide only."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is a good continuity post and a weak ProLink post. Its anchor subject — power outage prep — sits outside the 2026 agenda, and nothing in it forces the reader to update a belief they already hold. It needs a load-bearing tie to the promoted themes (identity as perimeter, BEC, voice-clone fraud) or it reads as seasonal service copy with better sentences."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The same three lines are recycled nearly verbatim across four channels: 'a decision problem before it is a technical one,' 'a graceful shutdown, not a working day,' and 'attackers read the same weather coverage.' Channel doctrine requires the best expression of one idea per channel, not one text lightly re-cut. Each surface needs its own strongest sentence."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel is seven text cards with no art direction at all — no typographic system, no diagram, no data visualization, nothing that would make a viewer recognize a ProLink slide before the logo. Slide 2's headline is two sentences and will collapse the hierarchy. At minimum the battery slide should be a runtime-allocation diagram and the verification slide a two-column then/now comparison."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The piece stops one turn short. It correctly identifies that improvised exceptions outlive the outage, then recommends the exact control that has degraded most since 2020 — verifying by voice — without noticing the contradiction. The strongest available insight is sitting unclaimed in the draft's own logic."
+    },
+    {
+      "role": "CIO",
+      "finding": "The operational inventory is incomplete in a way a practitioner would notice immediately. Unplanned remote work is a security-policy test: sign-in rules tuned to office IP ranges and managed devices, MFA methods bound to a desk phone or an on-prem service, and break-glass admin credentials stored inside the building. Those lock out exactly the people you need during a shutoff, and none of it appears in the draft."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Two gaps. First, the recommended notification channel — a text tree — is itself unauthenticated; a closure announcement is a cheap and highly effective pretext, and staff need to know the legitimate channel in advance. Second, 'a live voice on a known number' is stated as if it were a single control when the protective part is the callback to a directory-sourced number, not the voice."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No AI angle, and here one is genuinely earned rather than manufactured. Synthetic voice makes the draft's own recommended verification step insufficient on its own. That is a real, non-hype 2026 update to a control most finance teams still trust — omitting it is the difference between a timeless post and a current one."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Facebook invents a number — 'forty people' — in a brand whose register is the deliberate absence of numbers. It reads as a statistic for half a second, which is half a second too long. Also, nothing tells the executive who owns this decision; 'settle it' with no accountable role is advice that dies in an inbox."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread has no reason to be a thread — posts one and three make overlapping claims, and none of the three carries a line sharp enough to be quoted independently. The thread needs a progression that ends on a genuinely quotable reversal rather than a restatement of the opener."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP invokes 1999 and Woodland Hills but skips the one verified fact that is directly relevant to an outage: an in-house help desk answering around the clock. The credibility claim and the subject matter are unconnected, which makes the sign-off feel bolted on."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'On-premise' is an adjective misuse; the correct form is 'on-premises' or 'on-prem'. 'None of those questions are difficult' takes a plural verb after 'none'. And 'difficult' repeats within two sentences of itself in the Facebook draft."
+    },
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The spine is still seasonal outage prep — declare closure, check the UPS, forward the phones — which every MSP in Southern California publishes every fire season. The only material here that no one else is writing is the identity failure (office-tuned Conditional Access and desk-phone MFA blocking your own people) and the verification decay (voice no longer verifies). Both sat at slides 5 and 6, behind two slides of commodity continuity. The package fails the last question of the final test as structured. Fix: make identity and verification the spine, demote battery math to one line inside the takeaway list, and add the point nobody makes — the improvised workarounds (personal drives, consumer AI tools, shortened approvals) outlive the outage and no one ever closes them."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The takeaway slide fights itself: the headline carries four full clauses while the visual spec says the four numbered lines are the design. One of them has to go, and it is the headline. Separately, the hook slide's amber rule 'reading as a power line about to go dark' is a literal metaphor of exactly the kind the visual standard exists to prevent, and slide 4's battery allocation bar was the least editorial diagram in the deck — a bar chart with no axis is decoration. Cut it; the deck is stronger at seven slides carrying three real diagrams than at eight carrying four."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three concrete overruns and one repeat. LinkedIn ran past the 1,600-character ceiling. GBP ran past 700. Facebook stacked five consecutive questions, which is the rhetorical-question padding the voice section bans regardless of how operational the questions are. And the Instagram hook headline ('Decide it while the power is on') and the LinkedIn closer ('deciding while the lights are on') were the same line twice across channels, which the channel doctrine forbids outright."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

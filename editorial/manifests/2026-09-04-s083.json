@@ -1,0 +1,148 @@
+{
+  "post": "A department head asks the new assistant something ordinary: summarize the compensation bands for the ops team. It answers, and the answer is complete.\n\nNo one made a mistake. The workbook has sat on a site shared with the whole company since a migration years ago, and nobody thought to look.\n\nMost businesses have that conversation after rollout instead of before. Copilot grants no new access. It makes existing access easy to use.\n\nSo step one is not a training deck. Pull an oversharing report: sites shared company-wide, sharing links still open, and the Teams channels and shared mailboxes that collected members nobody approved.\n\nRemediation will not be finished by launch day. Start the pilot in one department whose content has been cleaned. Deciding who should have had access all along is the real project, and it needs a business owner, not only an admin.",
+  "headline": "Run the report before you run the pilot",
+  "cta_label": "Book a readiness review",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-09-04-s083-card.png",
+  "image_file_jpg": "2026-09-04-s083-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S083",
+  "core_idea": "Copilot does not bypass permissions — it removes obscurity as an accidental control. So the oversharing report is the prerequisite to deployment, remediation will not finish before launch (scope the pilot to cleaned content and widen in waves), the standing controls matter more than the one-time cleanup, and the 'it only acts as the user' assurance describes chat, not a published agent carrying its own identity.",
+  "channels": {
+    "linkedin": "The most valuable thing a Copilot pilot produces is not a productivity number. It is an honest map of who can already reach what inside your company.\n\nMost Microsoft 365 tenants carry a decade of access debt. A site shared with \"Everyone except external users\" during a migration. Old board-deck links, still live. Team sites with no living owner.\n\nNone of it was risky while it was unfindable. Keyword search rarely surfaces what you did not know to look for. That was the control, whether anyone admitted it or not.\n\nCopilot changes the finding, not the permissions. The severance letter was reachable last year. Now it is one plain question away.\n\nSo the prerequisite is a report: sites shared org-wide, sharing links still live, and — because file reports miss them — Teams channel membership and shared mailboxes around HR, finance and legal.\n\nThree decisions belong to the business, not to IT.\n\nRemediation will not finish before launch. Scope the pilot to a department whose content has been cleaned, then widen in waves.\n\nWho should have had access all along is a governance question with a budget and an owner outside IT.\n\n\"It only acts as the user\" describes Copilot chat. An agent published with its own connection or service identity carries its own reach. Approve agents one at a time.\n\nThen set the standing controls, or this exercise repeats in two years: default sharing scope, link expiry, an attested owner for every site.\n\nOpinion: rollouts that stall rarely stall over AI. They stall over the first honest inventory of access anyone has run.",
+    "facebook": "A department head asks the new assistant something ordinary: summarize the compensation bands for the ops team. It answers, and the answer is complete.\n\nNo one made a mistake. The workbook has sat on a site shared with the whole company since a migration years ago, and nobody thought to look.\n\nMost businesses have that conversation after rollout instead of before. Copilot grants no new access. It makes existing access easy to use.\n\nSo step one is not a training deck. Pull an oversharing report: sites shared company-wide, sharing links still open, and the Teams channels and shared mailboxes that collected members nobody approved.\n\nRemediation will not be finished by launch day. Start the pilot in one department whose content has been cleaned. Deciding who should have had access all along is the real project, and it needs a business owner, not only an admin.",
+    "gbp": "A sequence for a Los Angeles business turning on Microsoft 365 Copilot this quarter.\n\nStep one is not user training. It is discovery: which SharePoint sites are shared with the whole organization, which sharing links are still live, which HR, finance and legal locations inherited membership from an old migration. Teams channels and shared mailboxes need the same look.\n\nCopilot answers inside the permissions a user already holds, in plain language.\n\nRemediate the widest exposure first, then pilot one cleaned department and widen from there.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Copilot honors your permissions exactly. That is the problem. Most tenants run on permissions nobody has read since a migration, and the only thing keeping that safe was bad search.",
+      "Security by obscurity was never a policy. It was a side effect. A finance workbook on an org-wide site stayed private because nobody knew to look for it. Plain-language search ends that arrangement.",
+      "Order of operations: oversharing report first. Org-wide sites, live sharing links, and — because file reports miss them — Teams channel membership and shared mailboxes around HR, finance and legal.",
+      "Remediation will not finish before launch day. That is not a reason to delay: pilot one department whose content has been cleaned, then widen in waves. Pulling the report is the fast part. Deciding who should have had access is the project.",
+      "\"It only acts as the user\" describes Copilot chat. An agent published with its own connection or service identity carries its own reach. Approve agents one at a time, and record which identity each one runs under."
+    ],
+    "instagram_caption": "Copilot honors every permission you already have. That is exactly why rollout order decides how the launch goes.\n\nPull the oversharing report before the pilot: sites shared org-wide, sharing links still live, and — because file reports miss them — Teams channel membership and shared mailboxes around HR, finance and legal.\n\nRemediation will not be finished by launch day. Scope the pilot to a department whose content has been cleaned, then widen in waves, and set the standing controls so the same report does not read identically in two years.\n\nOne more thing: \"it only acts as the user\" describes chat, not an agent published with its own connection. Govern agents individually.\n\n#Microsoft365 #CopilotGovernance #AIGovernance"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 89,
+      "platform_fit": 97,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "PRODUCT BEHAVIOR (qualitative, vendor-documented): Microsoft 365 Copilot returns results within the requesting user's existing permissions and does not bypass access controls. Stated qualitatively. No version, SKU, licensing tier, feature name or availability date claimed.",
+    "PRODUCT-DESCRIPTIVE: 'Everyone except external users' is a standard Microsoft 365 sharing scope. Describing its existence and typical use is not a claim about any specific organization.",
+    "ANALYSIS: Microsoft 365 tenants commonly accumulate over-permissive access over years — org-wide sharing, stale sharing links, unowned legacy sites, Teams channels and shared mailboxes whose membership was never pruned. No number, percentage or prevalence figure claimed.",
+    "ANALYSIS: File- and site-sharing reporting does not cover Teams channel membership or shared mailbox access; those are separate reviews. Described generically as scope guidance, with no admin-center feature name, report name or licensing requirement claimed.",
+    "GOVERNANCE GUIDANCE (hedged, not a product claim): the 'operates with the invoking user's permissions' assurance applies to Copilot chat and should not be assumed for a published agent that carries its own connection or runs under a service identity. Written as an instruction to verify per agent and to record the identity each agent uses — deliberately not stated as any product's default behavior.",
+    "METHOD (ProLink recommendation, new this round): validate with a purpose-built test account placed in the same group memberships as a typical employee, and decommission it at pilot end. The retirement step was added so the readiness exercise does not itself create an orphaned identity. No real employee identity is used and no HR content is probed outside documented scope.",
+    "SEQUENCING GUIDANCE (new this round, recommendation not claim): remediation of accumulated oversharing will not complete before a pilot date, so scope the pilot to a department whose content has been remediated and widen in waves. Stated as ProLink's recommended order of operations. No duration, effort or completion-rate figure claimed.",
+    "STANDING CONTROLS (new this round, described generically): default sharing scope, expiry on sharing links, and an attested owner for every site are named as governance practices to establish after cleanup. No product feature name, admin setting path, licensing requirement or effectiveness figure claimed.",
+    "OPINION (labeled as opinion in the copy): rollout pauses are usually a reaction to access posture rather than to AI risk. Prevalence phrasing avoided; the on-page label and this audit agree.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. GBP only, phrased so it does not imply Microsoft 365 work dating to 1999. The draft's second soft CTA in GBP ('glad to read your findings with you') was removed so only one CTA exists per asset.",
+    "NO STATISTICS: no industry, breach, cost, downtime or threat-landscape numbers in any channel. No ProLink operational metric cited. No certification, partnership or compliance status claimed. No client named, implied or described. No competitor named."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package has no differentiated ProLink point of view outside GBP — every channel stops at 'run the oversharing report,' which is now standard Copilot-readiness advice from Microsoft partners and dozens of MSPs. It needs one turn no one else is making, and the card_headline duplicates the Instagram hook slide verbatim, wasting a surface."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel has six slides but only one idea; slides 2 and 3 are the same beat restated (files were unfindable / finding changed). The story needs a genuine escalation after the report, or the swipe stops paying off at slide 4."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 4 is written as prose but is functionally a checklist — as specified it will render as a paragraph of small type, which the visual standard prohibits. Report scope should be short discrete lines with typographic hierarchy, and the deck has no consistent progression device or restrained brand mark on the final slide."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Copilot does not leak data' is stated as flat fact and is arguably false — data leakage through Copilot via oversharing is precisely the documented concern. The accurate claim is narrower: it does not bypass permissions. Also 'Search was weak enough that access on paper never became access in practice' asserts a measured property of search; it should be framed as observation."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Pilot with an ordinary non-IT account and ask about pay, layoffs, the acquisition' is operationally reckless as written — it reads as either an admin borrowing an employee's identity or probing HR content without a documented scope. The correct instruction is a purpose-built test account placed in the same groups as a typical employee. Separately, the draft never tells the executive who owns the remediation decision."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The scope is files only. Copilot reasons over Teams messages, channel content and mail the user can reach, and SharePoint sharing reports will not surface Teams channel membership or shared-mailbox access — two of the most common oversharing vectors around HR, finance and legal. Omitting them makes the advice incomplete in a way a practitioner will notice."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The whole package rests on 'it acts as the user,' which is true of Copilot chat and not a durable guarantee once an organization publishes agents that carry their own connections or run under a service identity. In 2026 that is the actual governance frontier; leaving it out makes the post a 2024 oversharing piece with a 2026 date."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells me to run a report and stops. It never says what decision the report forces, what it will cost me, or that I can proceed narrowly while remediation runs. Without that, a CFO reads it as an IT chore rather than a sequencing choice with budget and calendar implications."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram caption opens with a summary of the carousel rather than a hook, and the X thread ends on housekeeping — no line in the thread is quotable on its own, which is what actually gets reposted. The thread also stops before the most shareable idea (agents)."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The same artifact is called three different things across channels — 'data access governance review,' 'discovery report,' 'oversharing report.' A publication brand names its concepts consistently; three names read as three writers. GBP also implies ProLink has been working on Microsoft 365 environments since 1999, which the verified fact does not support and which is anachronistic on its face."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three defects. The LinkedIn copy labels the closing paragraph 'Analysis, not prediction' while the claims audit labels the same sentence OPINION, and it asserts what 'most organizations' do — a prevalence claim with no source. 'It answers. Completely.' is theatrical fragmenting. And any replacement effort estimate ('takes days,' 'takes a quarter') would be an unsourced quantitative claim and must stay qualitative."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three hard mechanical failures survived round one. LinkedIn runs roughly 1,680 characters against a 1,600 ceiling. X post 3 measures ~283 characters, over the 280 limit. And the 'never open consecutive sentences with the same word' rule is broken twice: LinkedIn's 'A site shared… / A OneDrive link…' and Facebook's 'That workbook has sat… / That is the Copilot conversation…'. All four fixed by rewrite, not trimming at the margins."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package stops at discovery and leaves the executive with an unanswerable instruction. No tenant with a decade of access debt finishes remediation before a pilot date, so 'fix the oversharing first' reads as 'delay indefinitely.' Two things were missing: a sequencing answer (scope the pilot to a department whose content has been remediated, widen in waves) and a standing control so the same report does not read identically in two years — default sharing scope, link expiry, an attested owner per site. Also added: the purpose-built test account must be retired at pilot end, or the readiness exercise creates the next orphaned identity."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Typographic hierarchy is inconsistent across the set, which is what breaks a carousel visually before any image exists. Slide 3's headline ran thirteen words and reads as body copy; slide 5's ran nine; the hook used a contraction while every other slide did not. Slide 4 carried five list lines, making it the densest panel with no counterweight. Fixed: headlines capped at seven words with the explanation pushed into body, kickers held to two or three words, list capped at four lines, contractions removed throughout so the register is uniform."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

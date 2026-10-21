@@ -1,0 +1,135 @@
+{
+  "post": "Your operations manager asks the company AI assistant what the business spends on contractors. Back comes a clean answer, drawn partly from a spreadsheet sitting in a SharePoint site that was opened to the whole company during a file server migration six years ago.\n\nNobody was hacked. No new permission was granted. The assistant read what that employee already had the right to open — and found it in one sentence instead of never.\n\nMost advice stops there and tells you to clean up permissions before you deploy. Worth knowing: that cleanup is slower than it sounds. Your IT team can list the over-shared sites quickly. Deciding who actually should have access to a finance folder is a call only the manager who owns that folder can make, and those calls queue up for months.\n\nSo make the pilot do the work. Pick one department, keep it small, and treat every answer that surfaces something it should not have as the real result — then send it to whoever owns that file.",
+  "headline": "The Copilot cleanup that never finishes",
+  "cta_label": "Review your access",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-28-s002-card.png",
+  "image_file_jpg": "2026-09-28-s002-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S002",
+  "core_idea": "Copilot readiness is scoped as a permissions cleanup project, and those projects do not finish — because IT can find the over-shared content in days but only business content owners can decide who belongs in it. Since indefinite delay pushes staff toward unapproved assistants, the executive move is not sequencing but measurement: run a narrow pilot and score it on what it wrongly surfaced, not on hours saved, turning the rollout itself into the exposure audit that funds the cleanup.",
+  "channels": {
+    "linkedin": "Most Copilot readiness plans are written as if permissions cleanup comes first. Those projects do not finish.\n\nThe mechanic is well understood by now. Copilot grants no new access; it inherits. Anything a user could already technically open sits inside the answer set for a plain-English question. The access model does not change. What collapses is the cost of finding things.\n\nThe part leadership underweights is why the cleanup stalls. IT can produce the list of over-shared sites in days — the legacy Everyone Except External Users grants attached during migrations, the folders whose inheritance broke years ago. IT cannot decide who belongs in the finance folder. Only the manager who owns that content can, and that manager has a quarter to close. The remediation queue does not sit in IT. It sits in the business, unattended, for months.\n\nWaiting is not neutral either. People denied an approved assistant use an unapproved one, and a compensation file pasted into a consumer chatbot is a worse outcome than the same file indexed inside your tenant.\n\nSo change what the pilot is for. Most Copilot pilots are scored on hours saved, which tells you almost nothing you did not assume. Score yours on exposure instead: run a narrow group whose work touches finance, HR and legal-adjacent content, log every answer that drew on something the user should not have seen, and route each one to the content owner with a name attached. Now the cleanup has evidence behind it, and the queue moves.\n\nMicrosoft ships a tourniquet for the interim — Restricted SharePoint Search confines organization-wide search to an approved site list while you work. Useful. Not a governance program.\n\nIf an internal audit would embarrass you, an assistant will get there faster than the auditor.",
+    "facebook": "Your operations manager asks the company AI assistant what the business spends on contractors. Back comes a clean answer, drawn partly from a spreadsheet sitting in a SharePoint site that was opened to the whole company during a file server migration six years ago.\n\nNobody was hacked. No new permission was granted. The assistant read what that employee already had the right to open — and found it in one sentence instead of never.\n\nMost advice stops there and tells you to clean up permissions before you deploy. Worth knowing: that cleanup is slower than it sounds. Your IT team can list the over-shared sites quickly. Deciding who actually should have access to a finance folder is a call only the manager who owns that folder can make, and those calls queue up for months.\n\nSo make the pilot do the work. Pick one department, keep it small, and treat every answer that surfaces something it should not have as the real result — then send it to whoever owns that file.",
+    "gbp": "Copilot cannot open anything your staff could not already open. Los Angeles owners hear that as reassurance. It reads more like a disclosure notice.\n\nMost tenants carry sharing decisions made in a hurry — a site opened to the whole company during a migration, a folder whose permissions broke and never got repaired. An assistant answering in plain English finds all of it.\n\nOrder of operations: review who can reach finance, HR, legal, and client content today, retire company-wide links on sensitive material, then pilot with one department and judge that pilot by what it surfaces rather than by hours saved.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "Copilot readiness gets scoped as a permissions cleanup project. Those projects do not finish. IT can list the over-shared sites in a week. Only the manager who owns a finance folder can decide who belongs in it, and that queue sits in the business, unattended.",
+      "Waiting is not the safe option either. People denied an approved assistant use an unapproved one. A comp file pasted into a consumer chatbot beats the same file indexed inside your own tenant. The real choice is deploy narrow and watch, or deploy wide and find out.",
+      "So change the pilot's scorecard. Not hours saved. Count the answers that surfaced something the user should never have seen, then route each one to whoever owns that content. Scored this way, the rollout becomes the exposure audit nobody would have funded on its own."
+    ],
+    "instagram_caption": "Every Copilot readiness plan starts the same way: clean up permissions first. Those projects do not finish — and not because IT is slow.\n\nIT can produce the list of over-shared sites in days. Only the manager who owns a folder can decide who belongs in it, and that decision queues behind a quarter close.\n\nMeanwhile, delay has its own cost. People denied an approved assistant use an unapproved one.\n\nThe way out is to change what the pilot measures. Swipe for the sequence.\n\n#AIGovernance #Microsoft365 #Copilot"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "question_poll",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "question_poll"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 97,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Microsoft 365 Copilot returns content based on the requesting user's existing permissions rather than granting new access. Stated as documented product behavior; no statistic attached.",
+    "PRODUCT BEHAVIOR (documented, no figures cited): 'Everyone Except External Users' is a standard Microsoft 365 sharing principal commonly applied in bulk during legacy migrations. Named without any claim about prevalence, counts, or percentages.",
+    "PRODUCT BEHAVIOR (documented, no figures cited): Restricted SharePoint Search limits organization-wide search and Copilot grounding to an approved list of sites. Described in function only — no site limits, licensing tiers, dates, or capability claims beyond that function.",
+    "ANALYSIS: Over-broad sharing, org-wide links, and broken permission inheritance are common in mature tenants. Stated qualitatively; no figure or research finding claimed.",
+    "ANALYSIS: Remediation stalls with business content owners rather than IT, because access decisions on business data are owner decisions. Advisory analysis, not a cited framework.",
+    "ANALYSIS: Indefinite delay drives shadow AI use of consumer assistants. Reasoned argument; no study, survey, or statistic cited.",
+    "OPINION: A Copilot pilot should be scored on exposure surfaced rather than hours saved.",
+    "ILLUSTRATIVE SCENARIO (Facebook): the contractor-spend query and migration-era SharePoint site are hypothetical and reference no client, named or implied.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used on GBP and the Instagram CTA slide.",
+    "No industry statistics, breach costs, vendor research findings, regulations, deadlines, certifications, partnerships, or client references appear anywhere in this package.",
+    "Blocked facts F006, F009, F010, F011 are not referenced.",
+    "Timelines used ('in days', 'six years ago', 'months') are scenario and estimation language about a hypothetical organization, not claims about ProLink performance or industry measurement."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft fails the final test. 'Copilot inherits your existing permissions, so clean up SharePoint first' is the single most-published MSP Copilot take of the last two years — every vendor blog, every Microsoft partner newsletter. The mechanic is correct but it is not a proprietary insight. The package needs a turn that a generalist MSP would not reach: what actually blocks remediation, and what the pilot should be measured on."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Channel doctrine is violated outright. The line 'Fix permissions first, or deploy and fix as you go' appears verbatim or near-verbatim in LinkedIn, X post 1, the Instagram caption, the Instagram hook slide, and the card headline. 'A Copilot pilot is a security assessment wearing a productivity badge' appears twice. 'Cost of discovery' appears three times. This is one text syndicated five ways, not five expressions of one idea."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 6 carries five imperative sentences in a body block — that is a paragraph of small type, which the visual standard explicitly rejects. The sequencing slide should compress to a four-step sequence that a designer can set as a diagram. Slides 2 through 6 are also all identical structurally (kicker + headline + three-sentence body), so the deck has no visual rhythm."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "LinkedIn runs past the 1,600-character ceiling and closes twice — 'Readiness here is access governance, not prompt training' and the auditor line are both endings. Also, the piece asserts a problem and prescribes generic hygiene; it never engages the constraint that makes the advice hard, which is the only thing an executive reader actually wants addressed."
+    },
+    {
+      "role": "CIO",
+      "finding": "The prescription 'inventory who can reach what, retire org-wide links, repair inheritance' is where every readiness program dies and the draft does not say so. IT can produce the over-shared site list quickly. What it cannot do is decide who belongs in the finance folder — that is a content-owner decision, and the remediation queue stalls in business units, not in IT. Omitting this makes the advice sound easier than it is and costs the piece credibility with anyone who has tried it."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Too abstract where specificity was available. 'Shared with everyone in the organization' has a real name — the Everyone Except External Users principal, attached in bulk during legacy migrations — and naming it signals actual tenant experience. The draft also omits that Microsoft ships an interim control for exactly this problem (Restricted SharePoint Search), which means the post describes a risk without acknowledging the documented mitigation. That is an accuracy gap, not just a depth gap."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package is one-sided: it treats delay as the safe option. It is not. Staff denied an approved assistant use an unapproved one, and pasting the same compensation spreadsheet into a consumer chatbot is a worse outcome than indexing it inside the tenant. Without that counterweight the post reads as fear content and gives the reader permission to do nothing."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I finish the draft agreeing with it and still not knowing what to do on Monday. 'A permissions review before go-live is a good conversation to have' is not a decision. Give me the actual choice set and a metric I can hold a team to."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread is a compression of the LinkedIn post, so anyone following both channels sees the same three sentences twice. Post 3 also ends on a reused metaphor rather than the sharpest idea. The thread needs its own progression with the strongest claim carried in post 1."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'Wearing a productivity badge' is the kind of line that reads as cleverness for its own sake on second encounter, and it is deployed twice. Use it once, if at all. Separately, the GBP close softens into MSP-standard 'a good conversation to have', which undercuts the authority the rest of the package earns."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook contains consecutive sentences opening with the same word: 'It does not create exposure. It indexes exposure.' LinkedIn has the same fault in 'The access model does not change. What changes is the cost of discovery' only narrowly avoided, and the revised structure must be checked throughout. GBP also drops the serial comma in 'finance, HR, legal and client folders'."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

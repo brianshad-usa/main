@@ -1,0 +1,134 @@
+{
+  "post": "Your bookkeeper calls on a Thursday. Their accounting platform was breached over the weekend, and your company's records were sitting in it. Nothing about that was your fault. It is still your phone call to make, to clients who will not care about the distinction.\n\nThat is third-party risk at a normal-sized business. Not a headline event — a vendor with live access to your data, having a bad week.\n\nHandling it does not require a procurement department. You need a list of every outside party that can reach your systems, an honest answer about what each one can see, and a rule that access ends the day the relationship does.\n\nThe surprising part is usually who turns up on the list. Some of it was approved by an employee clicking Accept on a permissions screen, not by anyone who thought they were onboarding a vendor.",
+  "headline": "Your breach, or your vendor's breach",
+  "cta_label": "Our security practice",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-13-s101-card.png",
+  "image_file_jpg": "2026-09-13-s101-card.jpg",
+  "theme": "third_party_risk",
+  "idea_id": "S101",
+  "core_idea": "Your newest vendor was not onboarded by procurement — an employee clicked Accept on a permissions screen. Third-party risk and shadow AI are now the same problem, and the real vendor inventory is sitting in your identity platform, not in a contract folder.",
+  "channels": {
+    "linkedin": "Which would hurt more this quarter: an attacker inside your network, or an attacker inside your outsourced bookkeeper's?\n\nMost executives answer the first without hesitating. The second is the harder problem: you would learn about it last, from someone else, with almost no control over the response.\n\nVendor diligence used to be an enterprise ritual everyone else skipped. That was defensible when a small company had a few suppliers and a filing cabinet.\n\nLook at what holds standing access to your data today. SaaS platforms with permanent tokens. An agency with admin rights. A fractional CFO inside the accounting system. The AI notetaker that joins every leadership meeting.\n\nAlmost none of that was approved by procurement. It was approved by an employee clicking Accept on a permissions screen. Shadow AI is third-party risk wearing a friendlier name.\n\nAnalysis, not prediction: supply-chain compromise persists because one vendor buys an attacker access to many customers at once, and that access already looks legitimate. A stolen token does not trigger the instincts a strange login does.\n\nSkip the questionnaire nobody has the staff to read. Your real vendor inventory already exists — the list of connected applications and consented permissions in your identity platform.\n\nThen ask three questions of anything touching money movement or client data.\n\nWhat can this vendor reach, and is that what we intended when we signed?\n\nIf their credentials were used by someone else, how would we know?\n\nAre they required to tell us, and how fast?\n\nAfter that, govern vendor access like employee access. Scope it. Review it. Revoke it the day the relationship ends.\n\nYour clients will not distinguish between your breach and your vendor's.",
+    "facebook": "Your bookkeeper calls on a Thursday. Their accounting platform was breached over the weekend, and your company's records were sitting in it. Nothing about that was your fault. It is still your phone call to make, to clients who will not care about the distinction.\n\nThat is third-party risk at a normal-sized business. Not a headline event — a vendor with live access to your data, having a bad week.\n\nHandling it does not require a procurement department. You need a list of every outside party that can reach your systems, an honest answer about what each one can see, and a rule that access ends the day the relationship does.\n\nThe surprising part is usually who turns up on the list. Some of it was approved by an employee clicking Accept on a permissions screen, not by anyone who thought they were onboarding a vendor.",
+    "gbp": "If one of your vendors were breached tomorrow, would you hear it from them, or from a client?\n\nGrowing businesses accumulate third parties with live system access — cloud platforms, an outside bookkeeper, an agency, a contractor whose login was never removed. Several of them were approved by an employee accepting a permissions prompt rather than reviewed by anyone.\n\nStart with an inventory: who has access, to what, and who approved it. Your identity platform's list of connected apps is a faster start than asking around.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. If you want a second set of eyes on that list, we are glad to look.",
+    "x": [
+      "Which would you rather explain to your biggest client: that you were breached, or that your bookkeeping vendor was? Same phone call. That is the whole argument for vendor diligence at companies that assumed they were too small to need it.",
+      "Vendor access is employee access. Scope it, review it, revoke it the day the relationship ends. And open your identity platform's connected apps list — that is your real vendor inventory, and nobody in procurement wrote it."
+    ],
+    "instagram_caption": "Would you rather your network be breached, or your vendor's?\n\nOne you can investigate, contain and explain. The other arrives as a notification, on their timeline, with their lawyers deciding what you are told and when.\n\nVendor diligence used to be an enterprise ritual. Then vendors stopped arriving through procurement. The last one you onboarded was probably approved by an employee clicking Accept on a permissions screen.\n\nSlide seven has the three questions that replace the questionnaire nobody reads, and the one place your real vendor list is already sitting.\n\n#ThirdPartyRisk #ShadowAI #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote_minimal",
+    "format": "question_poll",
+    "channels": {
+      "linkedin": {
+        "style": "quote_minimal",
+        "format": "question_poll"
+      },
+      "facebook": {
+        "style": "quote_minimal",
+        "format": "question_poll"
+      },
+      "gbp": {
+        "style": "quote_minimal",
+        "format": "question_poll"
+      },
+      "instagram": {
+        "style": "quote_minimal",
+        "format": "question_poll"
+      },
+      "x": {
+        "style": "quote_minimal",
+        "format": "question_poll"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: A business learns of a vendor's breach later than its own and controls little of the disclosure or investigation.",
+    "ANALYSIS: Mid-sized businesses grant standing system access to multiple third parties — SaaS platforms, outsourced finance, agencies, AI meeting tools. Stated without quantification; no counts, no 'dozens', no seat-size example.",
+    "ANALYSIS: Many of those third parties are onboarded through an employee granting application permissions rather than through procurement or contract review. Presented as mechanism, not measurement.",
+    "ANALYSIS: Supply-chain compromise persists because one compromised vendor yields access to many customers and that access appears legitimate. Explicitly labeled 'Analysis, not prediction' on LinkedIn.",
+    "ANALYSIS: Stolen vendor tokens evade detection instincts tuned to anomalous logins.",
+    "TECHNICAL: An identity platform's connected-applications and consented-permissions list functions as a vendor access register. General, accurate capability description; no vendor product, tier, or feature named or claimed.",
+    "OPINION: Three scoping, notification and revocation questions deliver most of the practical value of a formal vendor questionnaire.",
+    "OPINION: Vendor access should be governed like employee access — scoped, reviewed, revoked at offboarding.",
+    "OPINION: Clients do not distinguish between a company's own breach and its vendor's.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. (GBP only.)",
+    "REMOVED IN REVISION: 'Most third-party incidents are not sophisticated' and 'Most companies have never made that list' — unsourced prevalence claims. 'More third parties than IT staff', 'dozens', and '60-seat' removed as unverifiable or invented specificity.",
+    "NOTE: No industry statistics, named incidents, vulnerabilities, regulations, deadlines, competitors or client references appear in any channel. No blocked facts (F006, F009, F010, F011) used."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA is misaligned with its destination: 'Review vendor access' promises a vendor-access resource but points at a general /cybersecurity page. Either the label matches the page or a human builds the page — the automation may not invent a URL. Relabeled honestly; flagging that a dedicated vendor-access page is the real fix and belongs on a human's roadmap."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The package's distinguishing idea — that vendors now arrive through an employee clicking Accept rather than through procurement — was buried as one item in a list on LinkedIn and absent from Facebook, GBP and X. That reframe is the only thing here a generic MSP would not write. It is now the pivot in every channel."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 4 and 6 carry paragraph-length bodies, and slide 6 crams three questions into a single block — that is a wall of small type, which the visual standard forbids. Bodies shortened; the three questions are now numbered lines with a single-line footer, and the inside-baseball footer 'Analysis, not prediction.' is removed from the carousel (the truth label belongs in long-form, not on a designed slide)."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two prevalence claims were stated as fact without a source: 'Most third-party incidents are not sophisticated' (X) and 'Most companies have never made that list' (Facebook). 'Most' is a statistic in disguise and violates the hard rule. Both rewritten to carry the argument without quantification."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft told an executive to build an inventory but never said where the inventory already lives. Added the concrete operational move: the connected-applications and consented-permissions list in the company's identity platform is the real vendor register, and it is more complete than anything procurement has. Also added triage order — start with anything touching money movement or client data."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'You now have more third parties inside your systems than you have IT staff' is an unverifiable quantitative assertion about the reader's environment. Replaced with a directive that produces the same realization without a claim: count what has standing access, then count who reviews it. Also removed 'dozens' and the invented '60-seat' specificity from LinkedIn and the Instagram caption."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The AI notetaker was treated as a cute example rather than the structural point. An AI tool granted OAuth scopes by a single employee is a third party with standing data access and no contract review — shadow AI and third-party risk are the same problem under two names. That line is now the hinge of the piece and is what makes it a 2026 post rather than a 2019 one."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft gave three good questions but no sequencing, so the honest executive reaction is 'I have forty vendors, where do I start Monday?' Added the prioritization rule and kept the questions to three so the whole thing survives a single meeting."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The two X posts read as duplicates rather than a thread with progression, and the Instagram caption used 'Swipe for the one-page version' — a withheld payoff, which the standards reject. X is now an explicit two-beat progression (the stake, then the operational move), and the caption states the payoff and where it is."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP ended on a service offer and the card carried a second CTA, reading as two asks in one asset. GBP keeps one restrained invitation; the card CTA is now descriptive rather than instructional so the two do not compete. F012 is used as credential, not as a pitch."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two consecutive-sentence-opening violations: Facebook's 'You did nothing wrong. You also have no access...' and LinkedIn's 'An agency with admin rights. An AI notetaker...'. Both fixed. GBP was also within a few characters of the 700 ceiling before trimming, and LinkedIn was within margin of error of 1,600 — both now sit comfortably inside range."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

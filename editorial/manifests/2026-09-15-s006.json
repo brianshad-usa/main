@@ -1,0 +1,135 @@
+{
+  "post": "Your controller connects an AI agent to the accounting system to speed up invoice matching. It works, so someone extends it: now it reads the shared mailbox, because that is where invoices arrive, and sends the confirmations, because that was the obvious next step.\n\nNone of that is a breach. All of it is a permission decision nobody made on purpose.\n\nAgents do more than answer questions. They take actions, using someone's credentials — usually whoever set the thing up.\n\nThree questions before the next one goes live. Which account does it run as? What can it do without a person clicking confirm? Who can switch it off today?\n\nIf the answer to the first one is a named employee, start there.",
+  "headline": "An AI agent is an identity, not a feature",
+  "cta_label": "Review agent access",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-15-s006-card.png",
+  "image_file_jpg": "2026-09-15-s006-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S006",
+  "core_idea": "An AI agent is not a feature you switch on — it is an identity you create. It either borrows a person's permissions or holds a credential of its own, and that choice is the governance decision almost no approval meeting actually makes.",
+  "channels": {
+    "linkedin": "A chatbot that gets something wrong costs you a bad answer. The same mistake from an agent sends the invoice.\n\nMost AI approval processes were written for the first one.\n\nThe shift underneath is structural: an agent is not a feature you turn on, it is an identity you create. To be useful it has to read mail, write files, query systems, trigger workflows, call APIs. So it borrows permissions, and it does that one of two ways. Either it acts as a person, inheriting everything that person can reach. Or it acts as itself, holding a credential no employee-offboarding process ever touches.\n\nNeither option comes up in the meeting. The request arrives as \"can we use this to clear invoice matching,\" and the permission scope gets decided by whoever builds it — usually the most capable person in the department, which is to say the one with the most access.\n\nNothing gets purchased, either. Agent-building sits inside tools you already license, so there is no procurement gate where this would once have surfaced.\n\nFour questions belong in that approval meeting:\n\nWhich identity does it authenticate as? A good answer is a dedicated identity, scoped to the task. A bad answer is a person.\n\nWhat can it do without a human confirming the action?\n\nAre its actions logged distinctly from human activity, so an audit can separate them?\n\nWho can revoke it inside a day, and is that on your offboarding checklist?\n\nThat last one is analysis rather than a reported incident: mature revocation for people, nothing equivalent for the agents they built.\n\nThe question is not what this AI can do. It is what it can do as you.",
+    "facebook": "Your controller connects an AI agent to the accounting system to speed up invoice matching. It works, so someone extends it: now it reads the shared mailbox, because that is where invoices arrive, and sends the confirmations, because that was the obvious next step.\n\nNone of that is a breach. All of it is a permission decision nobody made on purpose.\n\nAgents do more than answer questions. They take actions, using someone's credentials — usually whoever set the thing up.\n\nThree questions before the next one goes live. Which account does it run as? What can it do without a person clicking confirm? Who can switch it off today?\n\nIf the answer to the first one is a named employee, start there.",
+    "gbp": "If someone on your team wired up an AI agent this quarter, it is running under an identity — and it can act inside whatever permissions it was granted, which are usually wider than the job it was built for.\n\nBefore the next one goes live, get three answers in writing: which account it authenticates as, which actions it can take without a human confirming, and who can shut it off the same day. Then add agents to the offboarding checklist you already use for people.\n\nPro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999. If you cannot answer the first question, that is the conversation worth having.",
+    "x": [
+      "A chatbot that gets something wrong costs you a bad answer. The same mistake from an agent sends the invoice. Same model, different permission model — and the second one is the question almost nobody asks before switching it on.",
+      "An agent borrows permissions one of two ways: it acts as a person, inheriting everything that person can reach, or it acts as itself, holding a credential your employee-offboarding process never touches. Neither shows up in the approval meeting.",
+      "Four questions before an agent goes live. Which identity does it authenticate as — a dedicated one, or a person's? What can it do unattended? Are its actions logged separately from human activity? Who can revoke it inside a day?"
+    ],
+    "instagram_caption": "Most AI approval conversations stop at capability. Can it read the mailbox, can it draft the reply, can it clear the queue.\n\nThe harder question is identity. An agent does not get handed information — it gets handed credentials and the authority to act on them. Sometimes a person's. Sometimes one of its own, which no HR offboarding step has ever seen.\n\nSwipe for the four questions that belong in the approval meeting, and what a good answer to the first one actually sounds like.\n\n#AIGovernance #IdentitySecurity #ShadowAI"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote_minimal",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "quote_minimal",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "quote_minimal",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "quote_minimal",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "quote_minimal",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "quote_minimal",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 99,
+      "timeliness": 97,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: agents execute actions rather than only generating text, so an error produces a completed transaction rather than a bad response.",
+    "TECHNICAL BACKGROUND (standard, not a product claim): an integration authenticates either on behalf of a signed-in user, inheriting that user's access, or as itself using its own credential. This is the long-established OAuth 2.0 / directory-integration model, described generically; no vendor feature, roadmap item, or product capability is asserted.",
+    "ANALYSIS: permission scope is commonly set by whoever configures the agent, which tends to be a person with broader access than the task requires.",
+    "ANALYSIS: agent-building now occurs inside already-licensed tooling, so no procurement or vendor-review gate is triggered.",
+    "ANALYSIS: most organizations have mature human-offboarding revocation and no equivalent process for agent or machine identities — explicitly labeled as analysis rather than a reported incident in the LinkedIn copy and in the Instagram slide footer.",
+    "CORRECTED FROM DRAFT: draft claimed a departed employee's agent 'keeps running on a token nobody owns.' Disabling a user identity does invalidate that user's refresh tokens; persistence occurs when the agent holds its own service or application credential. All channels now state the accurate mechanism.",
+    "OPINION: the permission model is the governance question that matters most before deployment.",
+    "OPINION: the four pre-deployment questions, and the standard for a passing answer to the first, are the right agenda for an approval meeting.",
+    "FACT(F012): Pro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999 — GBP only.",
+    "REMOVED FROM DRAFT: GBP line offering 'a review alongside your next access audit.' No access-audit or agent-permission-review service appears in verified_facts.json, so the implied capability was cut.",
+    "NO STATISTICS USED: no industry, breach, adoption, or threat numbers appear in any channel. No external source was supplied in the brief, so every argument is made without a number.",
+    "NO CLIENT REFERENCE: no named, implied, or described client anywhere in the package. F006, F009, F010, F011 not used."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's differentiator is a framing device ('identity, not feature') that a security-literate competitor could also reach. Nothing in the draft demonstrates practitioner-grade knowledge of *how* an agent actually authenticates, which is where ProLink's authority would be unmistakable. Added the delegated-identity vs. own-credential split so the post carries knowledge, not just a reframe."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The package had no stated visual system at all — slides were text objects with roles. A carousel claiming editorial-publication standing cannot be handed to design with no compositional direction. Added an explicit visual_direction spec (typographic system, the identity-arrow diagram on slide 3, the two-column good/bad answer on slide 6)."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 5 packs four full questions into one body block — at carousel scale that becomes a paragraph of small type, which the visual standard prohibits. Specified it as a numbered four-line typographic list with generous leading, and split the 'good answer' payload onto its own slide so no slide carries two ideas."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'That gap is the entire AI governance conversation for 2026' is an unsupportable absolute; the brand's register does not need superlatives. Also 'Here is the shift executives keep missing' is patronizing toward a peer audience and adjacent to banned 'here's the thing' phrasing. Both rewritten."
+    },
+    {
+      "role": "CIO",
+      "finding": "The four questions told the reader what to ask but never what a passing answer looks like — which leaves an executive unable to evaluate the reply they get. Added the standard: a dedicated identity, scoped to the task, owned by a named person, listed in the access review. Also added the point that agents now require no procurement step, which is why existing governance gates never see them."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Technical error in the offboarding slide: 'keeps running on a token nobody owns' is wrong in the common case — disabling a user identity does invalidate refresh tokens. The real persistence mechanism is that the agent was wired to a service identity or app credential of its own, which human offboarding never touches. Corrected everywhere it appeared; this also makes the point stronger."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The Facebook scenario implied the agent expanded its own scope by Friday ('it is also reading the shared mailbox'). That is inaccurate and slides into agent-autonomy scaremongering. Rewritten so a person extends the scope, which is both true and the more useful warning."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft ends every channel on a question the reader cannot resolve alone, with no threshold for 'is my answer acceptable.' Fixed by the 'a bad answer is a person' test, which an executive can apply in the meeting itself without technical support."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The two-post X thread had no progression — post two was a compressed restatement of the LinkedIn list. Rebuilt as three posts with actual movement: the stakes gap, the authentication mechanism, then the checklist. Post one is now short enough to quote-tweet without truncation."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP contained a soft capability claim — 'ask for a review alongside your next access audit' — describing a service that does not appear in verified_facts.json. Removed and replaced with an invitation to a conversation, which claims nothing. F012 phrasing kept intact."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three consecutive-sentence-opening violations: 'A chatbot... An agent...' (LinkedIn), 'An AI assistant... An AI agent...' (X post 1), 'An assistant... An agent...' (Instagram slide 2). All rewritten. Also thinned em-dash density and cut the second use of the jargon 'stood up.'"
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

@@ -1,0 +1,125 @@
+{
+  "post": "The renewal packet lands six weeks before the policy expires. Forty-odd questions. Your controller forwards it to whoever handles IT, and someone works through it in an afternoon.\n\nThat afternoon just became your security policy.\n\nMost mid-size companies never picked a security framework. They inherited one from their insurer, a question at a time: multi-factor authentication, backups an attacker can't encrypt, separate administrator accounts, a recovery plan somebody has tested.\n\nReasonable list. Two things worth remembering while you fill it out.\n\nAn answer isn't a control. \"Yes, we use MFA\" can quietly mean everyone except the two people who found it annoying.\n\nAnd your insurer is protecting its payout, not your Tuesday. The outage that costs you a week but never becomes a claim isn't on the form. That part is still yours.",
+  "headline": "The security framework nobody chose",
+  "cta_label": "Review your renewal answers",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-19-s116-card.png",
+  "image_file_jpg": "2026-08-19-s116-card.jpg",
+  "theme": "compliance",
+  "idea_id": "S116",
+  "core_idea": "Cyber underwriting questionnaires have become the middle market's default security framework — useful as intelligence because insurers know which controls stop paid claims, but incomplete because insurers price claims, not your continuity. The discipline is to keep two documents: the one you submit and the honest one you don't.",
+  "channels": {
+    "linkedin": "Your security roadmap was probably written by an underwriter.\n\nNot your CIO, and not a consultant — whoever built the questionnaire your broker emailed last quarter. MFA everywhere. EDR on every endpoint. Immutable backups. Admin accounts separated from daily-use accounts. A recovery plan someone has actually tested.\n\nMid-size companies rarely sit down and choose a control framework. They inherit the insurer's, one question at a time, because coverage depends on it. Analysis, not statistic: cyber underwriting is now the most widely implemented security framework in the middle market, and almost nobody chose it.\n\nThe form is better intelligence than it looks. Insurers have a direct financial interest in knowing which controls stop paid claims. A question that wasn't there last year means something moved in their loss data.\n\nTwo cautions. A control built to answer a question is not a control that works — MFA with a quiet exception for one executive still answers yes. The form cannot tell the difference. An attacker can.\n\nAnd the underwriter is not optimizing for your business. They price claim frequency and severity. A week of lost revenue that never becomes a claim appears nowhere on that form. Where their objective and yours diverge is where your own roadmap has to live.\n\nSo keep two documents. The one you submit, answered the way you would defend it at claim time. And the one you don't: every soft yes, with an owner and a date.\n\nPrediction, not news: the next questions will be about identity and AI — which tools people may use, on what data, and how non-human accounts are governed.",
+    "facebook": "The renewal packet lands six weeks before the policy expires. Forty-odd questions. Your controller forwards it to whoever handles IT, and someone works through it in an afternoon.\n\nThat afternoon just became your security policy.\n\nMost mid-size companies never picked a security framework. They inherited one from their insurer, a question at a time: multi-factor authentication, backups an attacker can't encrypt, separate administrator accounts, a recovery plan somebody has tested.\n\nReasonable list. Two things worth remembering while you fill it out.\n\nAn answer isn't a control. \"Yes, we use MFA\" can quietly mean everyone except the two people who found it annoying.\n\nAnd your insurer is protecting its payout, not your Tuesday. The outage that costs you a week but never becomes a claim isn't on the form. That part is still yours.",
+    "gbp": "If cyber coverage renews this year, read the questionnaire yourself before it goes back to your broker.\n\nThe controls insurers ask about — multi-factor authentication on every account, backups an attacker can't encrypt, separated administrator credentials, a recovery plan someone has tested — have become the working security standard for mid-size Los Angeles businesses, chosen or not. Most companies answer the form and move on. The better move: treat every uncomfortable answer as a project with an owner and a date.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Walk the questions through with someone technical before you sign.",
+    "x": [
+      "The most widely adopted security framework in the middle market isn't NIST or CIS. It's the cyber insurance renewal questionnaire. Nobody voted on it. Coverage just depends on it.",
+      "Which makes the form worth reading as intelligence. Insurers have a direct financial interest in knowing which controls stop paid claims. A question that wasn't there last year means their loss data moved.",
+      "Two catches. An answer isn't a control — MFA with one executive exception still answers yes. And the underwriter prices claims, not your uptime. The week-long outage nobody claims on isn't on the form. That gap is your actual roadmap."
+    ],
+    "instagram_caption": "Nobody in the middle market sat down and chose a security framework. Most have one anyway, assembled a question at a time by their insurer.\n\nThe renewal questionnaire is a better document than it looks: insurers have a direct financial interest in knowing which controls stop paid claims. It is also an incomplete one. Underwriters price claims, not your uptime — the outage that never becomes a claim appears nowhere on the form.\n\nThe carousel covers how to read the packet as a security document, and what belongs on the list you keep for yourself. #CyberInsurance #RiskManagement #ITLeadership"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-19-s116-01.png",
+      "2026-08-19-s116-02.png",
+      "2026-08-19-s116-03.png",
+      "2026-08-19-s116-04.png",
+      "2026-08-19-s116-05.png",
+      "2026-08-19-s116-06.png",
+      "2026-08-19-s116-07.png",
+      "2026-08-19-s116-08.png"
+    ],
+    "jpg": [
+      "2026-08-19-s116-01.jpg",
+      "2026-08-19-s116-02.jpg",
+      "2026-08-19-s116-03.jpg",
+      "2026-08-19-s116-04.jpg",
+      "2026-08-19-s116-05.jpg",
+      "2026-08-19-s116-06.jpg",
+      "2026-08-19-s116-07.jpg",
+      "2026-08-19-s116-08.jpg"
+    ]
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 92,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 95,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 95,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 93
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Cyber underwriting questionnaires now function as a de facto control framework for mid-size businesses. Labeled in-copy as analysis, no statistic attached, no carrier or form named.",
+    "ANALYSIS: Typical questionnaire subject matter (MFA, EDR, offline or immutable backups, separated administrator accounts, a tested recovery plan) described generically as common underwriting topics. No source cited, no specific requirement, deadline, or carrier asserted.",
+    "ANALYSIS: Insurers have a direct financial interest in knowing which controls reduce paid claims; a newly added question implies movement in their loss experience. Framed as inference, not a documented research finding.",
+    "ANALYSIS: A control implemented to produce a 'yes' is not necessarily an effective control (MFA exceptions, untested restores).",
+    "ANALYSIS: Underwriting objectives (claim frequency and severity) and business-continuity objectives overlap but are not identical; losses that never become claims are outside the form's scope. Reasoning, not a sourced claim.",
+    "PREDICTION (labeled in-copy): Future underwriting questions will address identity and AI — tool sanction, data exposure, and governance of non-human accounts. Explicitly marked 'prediction, not news'; no carrier, product, or date asserted.",
+    "OPINION: The application should be answered as something you could defend at claim time, and the honest gap list should be retained as the real roadmap.",
+    "OPINION: Difficulty answering this year's questionnaire honestly is itself a meaningful finding.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used on GBP and as a subtle footer on the final carousel slide.",
+    "REMOVED IN REVISION: the flat assertion that a cyber application 'is a signed statement' — an unsourced legal characterization. Replaced with defend-it-at-claim-time framing.",
+    "NO STATISTICS CITED: no industry, breach-cost, premium, claim-denial, downtime, or threat-landscape numbers in any channel. No client named or implied. No certification, partnership, or compliance status claimed. No competitor named."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft delivers one idea (the questionnaire is a de facto framework) and then re-delivers it five times. There is no second move, so a well-read executive finishes with a nod rather than a forward. It needs a payload only ProLink is offering — added: the underwriter is pricing claim frequency and severity, not your continuity, so the controls that satisfy the form and the controls that keep the business running are overlapping, not identical sets."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The MFA-exception line and the 'form can't tell the difference / an attacker can' line appear near-verbatim on LinkedIn, Facebook, X and Instagram. That is a direct violation of channel doctrine — each channel must be the best expression of the idea, not a re-cut of the same sentences. Rewrote so the punchline is carried in full on LinkedIn and Instagram, compressed differently on X, and replaced with plain-language scenario on Facebook."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 3 packs five control statements into a running body paragraph, which forces small type and kills hierarchy; slide 8 is a brand card with an oversized 'since 1999' headline — exactly the oversized-logo failure mode the visual standard bans. Slide 3 is now a set-line checklist built for large type, and the brand card is deleted, with branding demoted to a subtle footer line on the takeaway."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The control list (MFA, EDR, immutable backups, separated admin, tested recovery plan) is 2022 underwriting. Nothing in the draft signals 2026, and the piece has no forward edge. Added an explicitly labeled prediction — the next questions are identity and AI: which tools people may use, on what data, and how non-human accounts are governed — labeled as prediction, not reported news, so no fabricated carrier requirement is implied."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Mark every soft yes' is advice without a method. Sharpened the action into something a CIO can actually assign: two documents — the submitted one, answered as you'd defend it at claim time, and the retained one where every soft yes carries an owner and a date. Also removed the flat assertion that the application 'is a signed statement,' which edges into a legal claim we cannot source; the revision says only that you should answer it the way you'd defend it at claim time."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft implies the insurer's list is a sufficient security program by never saying what it omits. Underwriting is silent on the things that hurt a mid-market business most often — SaaS sprawl, identity hygiene outside the MFA checkbox, availability events that never become claims. The revision names the omission explicitly instead of leaving the reader with 'do the insurer's list well.'"
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Zero connection to the 2026 agenda in the original. Rather than bolt AI on for its own sake (the standards forbid manufactured AI urgency), the revision uses AI only where it genuinely belongs in this argument — as the predictable next frontier of underwriting questions about tool sanction, data exposure, and machine identity — and marks it as prediction."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The original never answers 'and then what?' — it says a soft yes is risky without stating the consequence. We cannot cite claim-denial statistics, so the revision supplies the structural consequence instead: the answer becomes part of the file you will be read against, and the risks the underwriter ignores are still fully yours."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 1 was the only standalone-shareable unit and posts 2–3 restated LinkedIn. Rebuilt post 3 to carry the two-catch compression so the thread has its own payoff. Also removed 'Swipe for how to read your renewal packet' as instructional filler from the Instagram caption and replaced it with the actual idea, so the caption stands alone in feed."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP entry ran roughly 780 characters against a 300–700 ceiling and the LinkedIn entry sat within a few characters of the 1,600 cap — format discipline is part of the brand. Both trimmed inside spec. The CTA card headline also duplicated the LinkedIn hook verbatim; replaced."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "No banned phrases, no emoji, no exclamation marks, and hashtag counts are compliant — but 'My read:' introduces a first-person singular narrator a company account cannot sustain, and 'Not your CIO. Not a consultant.' would open consecutive sentences with the same word if split. Replaced 'My read' with an explicit 'Analysis, not statistic' label, and kept the two 'Not' clauses in a single sentence."
+    }
+  ],
+  "offline_test": false
+}

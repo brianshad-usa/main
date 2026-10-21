@@ -1,0 +1,137 @@
+{
+  "post": "Your office manager gets a call on a Tuesday morning. The voice belongs to a sales rep — his name is right, his manager's name is right, and he is locked out of email ten minutes before a client meeting. He wants the account reset immediately.\n\nThat call is a security control, whether or not anyone treats it as one.\n\nMost businesses have accepted the larger shift already. Email, accounting and file storage moved out of the office, so an account login is the boundary that matters now, not the firewall in the closet.\n\nWhat gets missed is the other side of that login. Every account has a reset process behind it, and a reset process is a person making a judgment call under pressure, usually while someone important is annoyed.\n\nWrite the rule before you need it. Decide what proof is required to restore access, and who is allowed to say yes.",
+  "headline": "You cannot phish a passkey. You can call the help desk.",
+  "cta_label": "Our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-01-s053-card.png",
+  "image_file_jpg": "2026-09-01-s053-card.jpg",
+  "theme": "identity",
+  "idea_id": "S053",
+  "core_idea": "Identity became the perimeter — and the two parts of identity almost nobody defends are the recovery path (the human who resets access when someone is locked out) and the accounts that never log in at all: service principals, API keys, and the OAuth consent granted to an AI assistant. Both are fixed by deciding who has authority, not by buying a product.",
+  "channels": {
+    "linkedin": "A well-built identity program can be defeated by a phone call.\n\nNot a sophisticated one. Someone contacts support, sounds like your regional sales manager, explains that a new phone did not restore the authenticator app, and asks for a reset before a client meeting. The account is real. The urgency is convincing. Whoever picks up has about thirty seconds and, usually, no written rule to follow.\n\nMost executives have already accepted the first half of the identity argument. Work stopped happening inside the office network, so the login became the boundary that matters. Budget moved. MFA went in. Passkeys are on the roadmap.\n\nThe second half gets skipped, and it contains two undefended areas.\n\nThe recovery path. Every authentication control ships with a human bypass attached — the person authorized to restore access when it fails. Strong authentication raises the cost of phishing an employee. It does not raise the cost of persuading a help desk.\n\nThe accounts that never log in. Service principals, API keys, and the OAuth consent your team granted to an AI assistant last quarter. These hold delegated access, appear on no offboarding checklist, and are unaffected by a password reset.\n\nAnalysis, not prediction: the identity spending that matters least this year is the spending. The controls are commodity now. Authority over them is not.\n\nSo the Monday question, for whoever owns IT: what proof do we require before we restore someone's access, and who is allowed to approve it. If that answer lives in one person's judgment rather than in writing, it is not a control.\n\nBuy the passkeys. Then decide who is permitted to turn them off.",
+    "facebook": "Your office manager gets a call on a Tuesday morning. The voice belongs to a sales rep — his name is right, his manager's name is right, and he is locked out of email ten minutes before a client meeting. He wants the account reset immediately.\n\nThat call is a security control, whether or not anyone treats it as one.\n\nMost businesses have accepted the larger shift already. Email, accounting and file storage moved out of the office, so an account login is the boundary that matters now, not the firewall in the closet.\n\nWhat gets missed is the other side of that login. Every account has a reset process behind it, and a reset process is a person making a judgment call under pressure, usually while someone important is annoyed.\n\nWrite the rule before you need it. Decide what proof is required to restore access, and who is allowed to say yes.",
+    "gbp": "If someone calls your IT support claiming to be your controller — locked out, in a hurry, meeting about to start — what proof is required before their access is restored?\n\nMost Los Angeles businesses now run email, accounting and file storage outside the office, so an account login is the real boundary. The reset process behind that login is part of the boundary too, and it is usually undocumented.\n\nWorth settling this week: who may authorize a reset, and what verification they must collect first. Then make sure whoever answers the phone knows it.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house, US-based, and answers live.",
+    "x": [
+      "You cannot phish a passkey. You can call the help desk.\n\nEvery authentication control ships with a human bypass attached: the person authorized to restore access when it fails. Hardening the login moves the attack, it does not remove it.",
+      "The other undefended half of identity is the accounts that never log in.\n\nService principals. API keys. The OAuth consent someone granted an AI assistant last quarter. Delegated access, no offboarding checklist, unaffected by a password reset.",
+      "Two documents worth more than most security purchases this year:\n\n1. Who may reset MFA or grant access, and what proof they must collect first.\n2. Every non-human identity, its owner, and when its credential expires.\n\nNeither requires a budget cycle."
+    ],
+    "instagram_caption": "Harden a login until it cannot be phished. Then someone calls support, says the new phone lost the authenticator, and asks for a reset before a client meeting.\n\nIdentity became the perimeter. Two parts of it usually go undefended: the recovery path, and the accounts that never log in at all — service principals, API keys, and the OAuth consent granted to an AI assistant last quarter.\n\nNeither gap closes with a purchase. Both close by writing down who has the authority to decide.\n\n#identitysecurity #accessmanagement #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 97,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 97,
+      "trust": 98,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: business applications increasingly run in hosted services outside the company network, so an account login is the common control point rather than the office firewall",
+    "FACT (general, non-numeric, widely documented product behaviour): phishing-resistant authentication means passkeys/FIDO2 or certificate-based credentials, as distinct from SMS or push approval",
+    "FACT (general product behaviour): OAuth consent grants delegated access to an application identity; that access is not removed by a user password reset and does not appear on a standard employee offboarding checklist",
+    "ANALYSIS: hardening authentication increases the relative attractiveness of the account-recovery path, because every authentication control has an authorized human reset process behind it",
+    "OPINION: the identity controls themselves are now commodity; the scarce thing is documented authority over who may reset or grant access",
+    "OPINION/ADVICE: recommended actions — a written reset-authorization and verification rule, and an inventory of non-human identities with named owners and credential expiry",
+    "ILLUSTRATIVE SCENARIO, NOT AN INCIDENT: the locked-out sales rep and the controller call are hypothetical constructions. No real incident, breach, vulnerability, victim or research finding is described, dated or implied.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used in GBP and Instagram CTA slide",
+    "FACT (F002 + F008): the help desk is in-house and US-based — used as a pair, per the publishing note, in GBP and Instagram CTA slide",
+    "FACT (F007): phone calls are answered live by the in-house team, no phone tree — used in GBP ('answers live') and Instagram CTA slide",
+    "NOT USED: F003, F004, F005 (response, resolution and first-contact metrics) — off-topic here and omitted rather than padded in. F006, F009, F010, F011 are blocked from automation and do not appear.",
+    "NO STATISTICS CITED: no industry, breach, downtime, cost or attacker-behaviour numbers appear in any channel. No regulation, deadline or compliance status is claimed.",
+    "NO CLIENT REFERENCE: no client is named, implied or described in any channel.",
+    "NO CAPABILITY CLAIM BEYOND VERIFIED FACTS: the package does not claim a ProLink verification procedure, certification, partnership or compliance status. The help desk claims are limited to F002, F007 and F008 as written."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept fails the final test. \"Identity is the new perimeter\" has been vendor boilerplate for years; every MSP in Los Angeles could have published this exact argument. The package needs a proprietary turn — and ProLink has one available that competitors cannot copy: the help desk is where strong authentication gets bypassed, and ProLink's own help desk posture is a verified fact."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Channel doctrine is violated by reuse, not by weakness. \"An account with every right to be there\" appears in LinkedIn, X and Instagram; \"Firewalls still have a job. It is no longer the job.\" appears twice verbatim. One idea should get five different best expressions, not one text lightly re-cut."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No visual direction exists anywhere in the package, so the carousel will be designed by default. Slide 5 also stuffs four separate recommendations into one body block, which becomes a paragraph of small type — exactly what the visual standard forbids. Every slide needs a stated typographic or diagrammatic treatment, and the list slide needs to become a structured two-column artifact."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "LinkedIn runs past the 1,600-character ceiling, and the \"Analysis, not prediction\" label is attached to a paragraph that is mostly prescription. Labeling the epistemic mode is a discipline, not a decoration — it must sit on the sentence that is actually analysis."
+    },
+    {
+      "role": "CIO",
+      "finding": "\"Inventory every account, human and machine\" is a multi-quarter program presented as a bullet. Nothing in the draft addresses identity recovery or offboarding, which is where a 200-seat company actually loses control. An executive needs a scoped first move with a named owner, not a maturity model."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The threat description is dated. Late-night MFA push fatigue was largely closed by number matching; the operative 2026 patterns are adversary-in-the-middle session token theft and help desk social engineering to reset MFA. Also, \"phishing-resistant\" is used four times without ever being defined as passkeys/FIDO2 or certificate-based rather than SMS or push."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package has no 2026 AI presence at all, and the honest one is sitting right there: OAuth consent granted to an AI assistant or agent creates a delegated-access identity that nobody offboards and that a password reset does not touch. That belongs in the argument as a fact of configuration, not as manufactured AI urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I finish the LinkedIn post with four workstreams and no priority. Tell me the one question to ask on Monday and the one person who should own the answer. Otherwise this forwards to IT and dies there."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post one is a compression of the LinkedIn opening, so the thread reads as leftovers. The Instagram caption opens with a claim the audience already accepts, which costs the stop. Each needs an opening line the reader has not heard before."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "\"See our approach\" is a label any company could attach to any page, and GBP spends its credibility slot on the founding date alone. F002, F007 and F008 — in-house, US-based, phone answered live — are directly on-topic evidence for this specific argument and are the only assets here a competitor cannot borrow."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook runs three consecutive sentences opening with \"Who,\" which breaks the repetition rule and adds rhetorical-question padding. \"Picture a Tuesday morning\" is a soft opener that could preface any topic. The claims audit also lists no verified-fact IDs beyond F012, leaving the strongest available substantiation unused."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

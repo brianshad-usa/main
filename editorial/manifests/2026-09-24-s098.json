@@ -1,0 +1,138 @@
+{
+  "post": "Picture a mid-size manufacturer hit on a Friday night. By Sunday the backups are restored, production runs Monday morning, and everyone exhales.\n\nThree weeks later, a law firm calls. Employee records and customer files from that server are on a leak site.\n\nRecovery was real. The incident was not over.\n\nEncryption is a downtime problem, and backups solve it. Stolen data is a disclosure problem, and that one gets solved with attorneys, notification letters, and evidence about what actually left the network.\n\nEvidence is the catch. You can only answer \"what was taken\" if something was recording before the attack started.\n\nWorth asking your IT team this week: how long do we keep the logs that would tell us?",
+  "headline": "Backups end the outage, not the obligation",
+  "cta_label": "Our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-24-s098-card.png",
+  "image_file_jpg": "2026-09-24-s098-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S098",
+  "core_idea": "Encryption is an availability problem you solve with backups; exfiltration is a notification problem you can only answer with evidence collected before the attack — and the hardest version of the attack produces no outage at all, so it never trips the plan you rehearsed.",
+  "channels": {
+    "linkedin": "Restoring from backup no longer ends a ransomware incident. It ends one of them.\n\nEncryption is an availability problem. Backups, a runbook, a recovery time objective — success is measured in how fast systems come back.\n\nTheft is a different problem with a different owner. Once data leaves your environment, the question stops being \"when are we operational\" and becomes \"who do we have to tell, and on what basis.\" That answer sits in state breach law, customer contracts, your cyber insurance policy, and, in regulated sectors, a regulator's rules. None of it pauses while IT restores.\n\nThe harder version of this attack has no outage at all. Data leaves, nothing is encrypted, and the first signal is a demand. No downtime, no trigger for the plan you actually practiced.\n\nThen the evidence problem. What you can disclose depends on what you were already recording: which identities touched which data, what moved outbound, over what channel. If log retention is shorter than the attacker's dwell time, you cannot show what wasn't taken. \"We were unable to determine scope\" is among the most expensive sentences in an incident. Uncertainty gets resolved toward broader disclosure.\n\nThree things worth confirming before you need them:\n\nWho declares a notifiable event, and on what evidence?\n\nDoes your cyber policy name panel counsel, and do you know the name?\n\nIs retention long enough to cover identity, email, and outbound transfer logs, including what your AI assistants can reach?\n\nRecovery is an IT function. Notification is a board function. Most companies have rehearsed only the first.",
+    "facebook": "Picture a mid-size manufacturer hit on a Friday night. By Sunday the backups are restored, production runs Monday morning, and everyone exhales.\n\nThree weeks later, a law firm calls. Employee records and customer files from that server are on a leak site.\n\nRecovery was real. The incident was not over.\n\nEncryption is a downtime problem, and backups solve it. Stolen data is a disclosure problem, and that one gets solved with attorneys, notification letters, and evidence about what actually left the network.\n\nEvidence is the catch. You can only answer \"what was taken\" if something was recording before the attack started.\n\nWorth asking your IT team this week: how long do we keep the logs that would tell us?",
+    "gbp": "If your incident response plan ends at \"restore from backup,\" it is half a plan.\n\nRansomware crews commonly copy data before encrypting, and some skip the encryption entirely. Restoring gets you operational. It does not answer the question your attorney, your insurer, and your customers will ask: what left the building?\n\nThat answer comes from logs — sign-ins, email activity, outbound transfers — kept long enough to cover the whole time an intruder was inside. Retention defaults are set for storage cost, not for investigations.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Knowing your retention window is a good place to start.",
+    "x": [
+      "Encryption is an availability problem. Exfiltration is a notification problem. Backups solve the first one completely and the second one not at all.",
+      "The version that breaks most response plans: theft with no encryption. Nothing goes down, so nothing trips the incident process. The first signal is an email from someone who already has your data. Your only evidence is whatever your logs were already keeping."
+    ],
+    "instagram_caption": "Two things happen in a modern ransomware attack, and most response plans only rehearse one of them.\n\nEncryption stops the business. Backups fix it. That clock is yours to control.\n\nTheft starts a separate clock set by statute, contract, and your insurance policy. It does not pause while you restore, and you can only answer it with logs you were already keeping.\n\nCheck your retention window before you need it.\n\n#ransomware #cyberresilience #ITleadership"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bold_type",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "bold_type",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "bold_type",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "bold_type",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "bold_type",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "bold_type",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 93,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Ransomware operations commonly copy data before encrypting, creating a theft problem alongside an outage problem. Hedged as 'commonly' in all channels; no frequency figure asserted.",
+    "ANALYSIS: Some extortion operations take data without encrypting anything, producing no outage and therefore no automatic trigger for a recovery-oriented response plan. Stated as a pattern, not a measured trend; no share, count, or date claimed.",
+    "ANALYSIS: Encryption is an availability problem solved by backups and recovery objectives; exfiltration is a notification problem governed by law, contract, and insurance.",
+    "ANALYSIS: Notification obligations arise from state breach notification law, customer contracts, cyber insurance policies, and sector regulators. No specific statute, deadline, jurisdiction, or requirement is named or quantified.",
+    "ANALYSIS: Notification timelines run independently of technical recovery progress.",
+    "ANALYSIS: Determining what data was taken depends on identity, email, and outbound transfer logs captured before and during the intrusion.",
+    "ANALYSIS: Log retention defaults are generally configured around storage cost rather than investigative need. Phrased as a reason to check, not as a measured statistic.",
+    "ANALYSIS: AI assistants and agents widen the set of data reachable through a compromised identity, so their access paths belong in the logging plan. No product, license tier, or capability is named.",
+    "CONDITIONAL STATEMENT: 'Does your cyber policy name panel counsel' is framed as a question about the reader's own policy. No claim is made that policies generally contain such a provision.",
+    "OPINION: 'We were unable to determine scope' is among the most expensive sentences in an incident, because uncertainty gets resolved toward broader disclosure. Superlative hedged to 'among'.",
+    "OPINION: Most organizations rehearse technical recovery and assume the disclosure decision.",
+    "OPINION: Recovery is an IT function; notification is a board-level responsibility.",
+    "ILLUSTRATIVE HYPOTHETICAL: The Facebook manufacturer scenario is explicitly framed with 'Picture a mid-size manufacturer.' It is not a client, is not attributed to Pro Link Systems, and describes no real engagement.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used on GBP and the Instagram CTA slide only.",
+    "NO STATISTICS CITED: no industry, breach-cost, downtime, dwell-time, or attacker-behavior numbers appear in any channel.",
+    "NO CAPABILITY CLAIM: CTA label changed from 'Review your readiness' to avoid implying an assessment product not present in verified_facts.json."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA label \"Review your readiness\" implies a packaged readiness assessment — a service capability that does not appear in verified_facts.json. It promises a deliverable we cannot substantiate and is the one soft spot in an otherwise credible package. Replaced with a restrained, non-promising label."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram deck had two adjacent slides doing nearly the same work (\"Two incidents\" and \"Different clocks\"), which flattens the swipe rhythm. The deck also lacked a genuine turn — a moment the reader did not see coming. Merged the duplicate beat and added the sharper insight: the version of this attack with no outage at all."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide kickers were inconsistent in category (\"Two incidents\", \"The real constraint\", \"Pro Link Systems\"), which prevents the deck from reading as a numbered editorial system. Slide 4's body was three sentence fragments at near-paragraph density, which forces small type. Kickers are now a consistent numbered system and body copy is cut so typography can carry hierarchy."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "\"the most expensive sentence in an incident\" is an unhedged superlative presented in the register of fact. Also \"Modern ransomware crews copy data before they encrypt anything\" is stated absolutely on GBP while the claims audit logs it as analysis — copy and audit must agree. Both hedged."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft told the reader to check retention but gave no boundary for what to retain. A CIO needs the log families named and the AI surface included — copilots and agents now reach data whose access paths are frequently outside the traditional logging plan. Added explicitly, without inventing product specifics."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package described exfiltration only as a precursor to encryption. The scenario that actually breaks response plans is theft with no encryption: no outage, therefore no trigger for the runbook the company rehearsed. That omission was the single biggest technical gap and is now the centerpiece turn on LinkedIn, X, and the carousel."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No 2026 AI dimension appeared anywhere — and manufacturing one would violate the standard. The one legitimate connection is scope: AI assistants widen the set of data an intruder's stolen identity can reach, which changes what has to be logged. Added as a single clause, not a theme."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn close asked two good questions but both were internal-IT questions. The missing executive lever is the insurance policy itself — if a policy names panel counsel, the CEO should know the name before the incident, not during it. Added as a third, conditional question."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X pair was two parallel observations, not a thread — the second restated the first with more words. Rebuilt so post one frames and post two delivers the twist, which is the more forwardable of the two beats."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Facebook scenario opened \"A manufacturer gets hit on a Friday night,\" which reads as a case we witnessed. Even unattributed, it edges toward an implied client. Reframed as explicitly hypothetical with \"Picture a mid-size manufacturer.\""
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook broke the consecutive-opening rule: \"The recovery was real. The incident was not over.\" The LinkedIn checklist had two consecutive items opening with \"Whether.\" Instagram slide 3 was ungrammatical (\"Systems back online by Monday says nothing\"). GBP ran over the 700-character ceiling. All four corrected."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

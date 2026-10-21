@@ -1,0 +1,171 @@
+{
+  "post": "A finance manager opens what looks exactly like a Microsoft sign-in page. The design is flawless. She types her password, approves the notification on her phone, and gets back to work. Her mailbox now has a second occupant.\n\nReplay that morning with a passkey and there is no password to type. The credential is tied to your real domain, so on the fake page it is never offered at all. Nothing is captured. That attempt ends quietly, before anyone has to notice anything.\n\nOne catch worth knowing before someone pitches you this. Passkeys only close the gap once the old sign-in methods are switched off. Leave the password enabled as a backup and an attacker will ask for the backup.\n\nWhich is why the first decision isn't technical. Decide how an employee proves who they are when a phone is lost, and who is allowed to approve that reset. Then enroll.",
+  "headline": "The number behind passkeys is zero",
+  "cta_label": "Plan a pilot",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-09-22-s054-card.png",
+  "image_file_jpg": "2026-09-22-s054-card.jpg",
+  "theme": "identity",
+  "idea_id": "S054",
+  "core_idea": "Passkeys deserve a budget line because they replace a control priced on human attention with one priced on design — zero shared secrets — but the value only arrives on the day the old sign-in methods are switched off, and the risk it displaces lands on account recovery, which is why an executive has to force both decisions before enrollment starts.",
+  "channels": {
+    "linkedin": "The strongest argument for passkeys is a number, and the number is zero.\n\nA passkey creates no shared secret. The service stores a public key, worthless to whoever steals it. Nothing exists for an employee to type into a fake sign-in page, reuse elsewhere, or read aloud to a caller who sounds like the help desk.\n\nThat reframes the spending question. Most credential budget buys vigilance — training, simulated phishing, a prompt a tired employee approves at 7pm. Generative tooling removed the cost of producing convincing lures at volume.\n\nStructure does not degrade. Behavior does.\n\nTwo things rarely make the pitch. Enabling passkeys changes almost nothing while the password still works, because an attacker simply asks for the weaker method still enabled. Phishing resistance starts the day you switch those off, not the day enrollment opens.\n\nAnd a passkey protects the sign-in, not everything after it. Attackers move to what remains stealable: the session token in a browser, and the person who resets accounts when a phone is lost. Design recovery, and the identity check your help desk performs, before enrolling anyone.\n\nThe standard carries no license fee and already ships in Entra ID, Apple, Google, and every major browser. Confirm enforcement licensing in your own tenant. Real spend is operational: directory cleanup, recovery design, service accounts, legacy exceptions.\n\nMy read, not a measured claim: enrolling executives, finance, and admins first takes the largest available bite out of business email compromise risk.\n\nOne number to ask for quarterly — the share of sign-ins completed with a phishing-resistant method.",
+    "facebook": "A finance manager opens what looks exactly like a Microsoft sign-in page. The design is flawless. She types her password, approves the notification on her phone, and gets back to work. Her mailbox now has a second occupant.\n\nReplay that morning with a passkey and there is no password to type. The credential is tied to your real domain, so on the fake page it is never offered at all. Nothing is captured. That attempt ends quietly, before anyone has to notice anything.\n\nOne catch worth knowing before someone pitches you this. Passkeys only close the gap once the old sign-in methods are switched off. Leave the password enabled as a backup and an attacker will ask for the backup.\n\nWhich is why the first decision isn't technical. Decide how an employee proves who they are when a phone is lost, and who is allowed to approve that reset. Then enroll.",
+    "gbp": "If your team signs into Microsoft 365 with a password plus a push notification, one convincing fake login page stands between an attacker and a mailbox. Passkeys remove the thing being stolen: no password exists, and the credential will not work on a domain that isn't yours.\n\nTwo decisions come before enrollment. How an employee proves identity when a phone is lost, because recovery is where the attack moves next. And the date the old sign-in methods are turned off, because that is when the risk actually drops.\n\nPilot the accounts that can move money first: executives, finance, IT admins. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Passkeys get sold on convenience. The budget argument is better: zero shared secrets. The server holds a public key that is worthless to a thief, and there is nothing for an employee to type into a fake page or repeat to a caller who sounds like IT.",
+      "A password can be phished because it can be handed over. Passkeys can't be handed over, only used. The credential is bound to your real domain, so on a lookalike page it is never offered. The attack doesn't get a wrong answer. It gets silence.",
+      "The part usually left out of the pitch: enabling passkeys changes almost nothing while the password still works. Attackers downgrade to whatever weaker method is still enabled. Phishing resistance begins the day you turn the old ones off.",
+      "Also left out: a passkey protects the sign-in, not everything after it. Once the credential is unstealable, attention moves to the session token in a browser and to whoever resets accounts when a phone is lost. Recovery becomes the attack surface. Design it first.",
+      "Cost reality: the standard is free and already in Entra ID, Apple, Google, every browser. The spend is operational: directory cleanup, recovery design, legacy exceptions. Start with accounts that move money. Track one number: share of sign-ins that are phishing-resistant."
+    ],
+    "instagram_caption": "Passkeys are usually sold on convenience. That is the least interesting thing about them.\n\nThe version that belongs in a budget meeting is structural: a passkey creates zero shared secrets, so there is nothing to phish, reuse, or repeat to a convincing caller. The standard is free and already sitting in tools you own.\n\nTwo things rarely make the pitch. Nothing improves until the old sign-in methods are switched off. And once the credential is unstealable, the attack moves to account recovery and to the people who perform it — which makes recovery a design decision, not a support ticket.\n\n#passkeys #identitysecurity #microsoft365"
+  },
+  "carousel": {
+    "png": [
+      "2026-09-22-s054-01.png",
+      "2026-09-22-s054-02.png",
+      "2026-09-22-s054-03.png",
+      "2026-09-22-s054-04.png",
+      "2026-09-22-s054-05.png",
+      "2026-09-22-s054-06.png",
+      "2026-09-22-s054-07.png",
+      "2026-09-22-s054-08.png"
+    ],
+    "jpg": [
+      "2026-09-22-s054-01.jpg",
+      "2026-09-22-s054-02.jpg",
+      "2026-09-22-s054-03.jpg",
+      "2026-09-22-s054-04.jpg",
+      "2026-09-22-s054-05.jpg",
+      "2026-09-22-s054-06.jpg",
+      "2026-09-22-s054-07.jpg",
+      "2026-09-22-s054-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "data_viz",
+    "format": "carousel",
+    "channels": {
+      "linkedin": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "facebook": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "gbp": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "instagram": {
+        "style": "data_viz",
+        "format": "carousel"
+      },
+      "x": {
+        "style": "data_viz",
+        "format": "carousel"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 92,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 94,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "FACT (public standard, FIDO2/WebAuthn): passkey authentication creates no shared secret; the relying party stores only a public key, and the private key is never transmitted to the service being signed into.",
+    "FACT (public standard, FIDO2/WebAuthn): passkey credentials are scoped to an origin, so a lookalike sign-in page cannot elicit a usable response. No claim is made that the private key never leaves the device, which would be false for synced passkeys.",
+    "FACT (vendor-documented public capability): passkey support exists in Microsoft Entra ID, Apple and Google platforms, and every major browser; the standard itself carries no license fee. No claim is made about which license tier is required to enforce phishing-resistant methods — readers are directed to confirm that in their own tenant (LinkedIn and carousel slide 6).",
+    "ANALYSIS: password-plus-push MFA remains susceptible to a convincing fake sign-in page because the employee still supplies and approves a transferable credential.",
+    "ANALYSIS: leaving password and push methods enabled alongside passkeys permits method downgrade, so risk reduction tracks decommissioning of weaker methods rather than enrollment.",
+    "ANALYSIS (new this round): phishing-resistant authentication does not protect the session issued after a successful sign-in, nor the account recovery path. Both are described as residual risk, not as passkey failures. No incident, technique prevalence, or frequency figure is claimed, and no specific token-theft toolkit is named.",
+    "ANALYSIS: account recovery and the people who perform it become the likely next target once phishable credentials are removed, so recovery should be designed before rollout.",
+    "ANALYSIS: generative tooling lowers the cost of producing convincing targeted lures, increasing pressure on controls that depend on human attention. No volume, growth rate, or incident figure is claimed.",
+    "ANALYSIS: the material cost of passkey adoption is operational — identity directory cleanup, recovery design, shared and service account decisions, legacy application exceptions, elevated help desk volume during enrollment.",
+    "OPINION, labeled in copy as 'my read, not a measured claim': enrolling executives, finance staff, and IT admins first takes the largest available reduction in business email compromise risk.",
+    "OPINION: share of sign-ins completed with a phishing-resistant method is the right single governance metric. Presented as a metric to request, not a benchmark; no target value is stated.",
+    "ILLUSTRATIVE: the Facebook sign-in scenario is a hypothetical composite. No client is named, implied, or described.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used on GBP and the final carousel slide only.",
+    "WITHHELD: F002/F007/F008 (in-house, US-based, live-answered help desk) are accurate and citable but remain excluded here. The piece argues that help-desk identity verification is a control to design, and pairing that argument with our own help desk facts would imply an identity-verification capability not established in the fact file.",
+    "NO STATISTIC CLAIMED: no industry, breach-cost, adoption-rate, or threat-volume number appears in any channel. The only figure is 'zero', a structural property of the protocol rather than a measurement.",
+    "STRUCTURAL CHANGES THIS ROUND: LinkedIn trimmed to within the 900–1,600 character range and the 'Analysis, not fact:' label rewritten as voice; carousel reduced from the redundant password-definition slide and rebuilt at eight slides with a residual-risk slide added; caption's 'Swipe for the full case' removed; X extended to five posts so the thread lands on the operational decision rather than on cost."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft argues passkeys are worth a budget line but never tells the budget holder how they would know it worked. No governance metric, no review cadence. An executive can approve this and have nothing to ask for in ninety days. Added a single quarterly metric — share of sign-ins completed with a phishing-resistant method — which is a real, unmeasured-by-us ask, not a fabricated statistic."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "LinkedIn and X open on the same rhetorical move ('the number is zero'), and the LinkedIn line 'Show it a lookalike sign-in page and it produces nothing at all' is reproduced almost verbatim on Instagram slide 5. Channel doctrine forbids the same text twice. Differentiated the X opener (convenience vs. budget) and rewrote the lookalike-page line uniquely per channel."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide bodies run 200+ characters against headlines of similar weight, which flattens hierarchy and pushes toward the 'paragraphs of tiny text' failure named in the visual standard. Slides 4 and 5 also carried one idea between them, wasting a frame. Merged them, capped every body at roughly 190 characters, and added an explicit visual_direction spec so the carousel is built as a type-and-diagram system rather than decorated text."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two precision failures. 'Nothing sits on a server to be stolen' is wrong — the relying party stores a public key; the correct claim is that what it stores is worthless to a thief. And 'the private key stays in the device's secure hardware and never travels' is true of device-bound passkeys but not of synced passkeys, which move encrypted through a platform keychain. Rewrote to the claim that survives both cases: the private key is never sent to the service being signed into."
+    },
+    {
+      "role": "CIO",
+      "finding": "'The protocol is free' invites a licensing ambush. Enrollment is one thing; enforcing phishing-resistant authentication through Conditional Access sits in a tenant's licensing tier, and a CIO who quotes this in a budget meeting gets corrected. Reframed cost as operational and added enforcement/licensing as something to confirm in your own tenant rather than a claim we make about Microsoft's SKUs."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The most important operational fact about passkey rollouts is missing entirely: enabling passkeys changes the risk profile by almost nothing while password-plus-push remains enabled on the same account, because attackers simply downgrade to the weaker method still available. Phishing resistance begins on decommission day, not enrollment day. Added this as a named turn on every channel and as its own carousel slide. Also kept recovery-as-next-target, which was present but buried in a parenthetical."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The AI framing was decorative — 'AI removed the spelling errors' is close to a stock line and risks the manufactured-AI-urgency trap the standard warns about. Sharpened it to the structural point: generative tooling removed the cost of producing convincing, targeted lures at volume, which is precisely what breaks controls priced on human attention. That connects AI to the budget argument instead of gesturing at it."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "After reading the original, I know passkeys are good and I should start with finance. I do not know what I am approving, in what order, or what stops the project. The revision names the three decisions that actually stall these rollouts — recovery identity proofing, shared and service accounts, legacy app exceptions — and a decommission date, which is the thing an executive has to force and nobody else can."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Instagram hashtags led with #cybersecurity, the single most saturated tag in the category and worthless for reach among LA operators. Swapped to #passkeys #identitysecurity #microsoft365. The X thread also stopped one post short of its best material; the downgrade point is the most quotable line in the package and now has its own post."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP had the in-house help desk scoping a passkey pilot, which misassigns the capability — a 24/7 help desk is a support function, and implying it does identity architecture is the kind of soft overclaim our fact file exists to prevent. Replaced with the F012 tenure statement and a restrained advisory close. One CTA per asset, as required."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Four defects. British 'behaviour' in a Los Angeles asset. X post one opened consecutive sentences with 'zero' and post two with 'A', both banned. The LinkedIn list 'Nothing sits on a server to be stolen, typed into a page that can be faked, or read aloud' breaks parallelism after the first item. And LinkedIn ran past the 1,600-character ceiling once the new material was added, so it was cut to fit rather than allowed to sprawl."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package still draws the boundary of passkey protection too generously. It says what passkeys remove but never says what they do not remove: a passkey secures the authentication event, not the session token minted after it, and it does not secure the human-operated recovery path — which is exactly where voice-clone and help-desk social engineering now land. Without that beat, a sophisticated reader treats the whole piece as vendor optimism. Naming the residual risk is also the single most differentiating thing in the package."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn runs past the 1,600-character ceiling, and two constructions read as compliance scaffolding rather than voice: the dangling lead-in fragment 'Two things executives are rarely told.' standing alone as a paragraph, and the label 'Analysis, not fact:' bolted to the front of a sentence. The truth-discipline signal is required; the clerical phrasing is not. Facebook also has two consecutive sentences opening with 'The'."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel carries one genuinely weak slide and one redundant ending. Slide 2 ('A password is a secret that can be handed over') explains a password to executives who already know what one is — it is the only slide any MSP could have made — and slides 7 and 8 both close the piece, splitting the landing. Meanwhile the caption ends on 'Swipe for the full case,' which is navigational filler in a brand that does not pad. Cut slide 2 into slide 3's job, reclaim the slot for the residual-risk beat, and let the caption end on an idea."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

@@ -1,0 +1,178 @@
+{
+  "post": "Picture an ordinary Tuesday. Nothing is broken. The intruder holding a stolen admin password is not encrypting anything yet — they are reading your backup settings.\n\nThere is a reason that comes first. Encrypted files are only a crisis if you cannot restore them, so the opening move is to remove the restore. Deleting backups is noisy. Trimming a retention policy is quiet, and a few weeks later the useful recovery points have simply aged out.\n\nNow trace that password backwards. It often starts with a friendly call to a help desk asking for an MFA reset, in a voice that sounds like someone on staff.\n\nWhich makes the protection list shorter than most people expect: copies no single logged-in admin can shorten, an alert to a human when retention changes, a restore your team has actually finished end to end, and a service desk that calls the person back on the number already on file.",
+  "headline": "Recovery is the thing being attacked",
+  "cta_label": "See our approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://www.prolinksystems.com/services",
+  "image_file": "2026-08-25-s247-card.png",
+  "image_file_jpg": "2026-08-25-s247-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S247",
+  "core_idea": "Ransomware crews attack recoverability before they attack data, the fastest route to the backup console in 2026 is a phone call to a service desk, and even a flawless restore leaves the disclosure problem intact — so backup is an identity control, a verification-script problem, and a two-budget incident.",
+  "channels": {
+    "linkedin": "Ransomware operators rarely open with encryption. They open by establishing whether you can recover without them.\n\nThat sequencing is the business model. Encrypted data is leverage only when restoring is impossible, or slower than paying. So the first system a competent intruder hunts is not the file server. It is the console that governs recovery.\n\nReaching it often takes no exploit. Shorten retention. Disable a job. Wait. Nothing fails and nothing alerts, because recovery points expire exactly as configured.\n\nWhat changed is how that credential arrives. The cheapest route to a backup administrator is a call to a service desk asking for an MFA reset, and synthetic voice has made that call cheap to make convincing. Your help desk verification script is now a backup control.\n\nThree things worth asking your team this quarter.\n\nFirst: can one logged-in administrator shorten retention or release a lock? If so, a single phished person is your recovery plan's failure mode. Destructive changes deserve a second approver and a waiting period, the same treatment a wire transfer gets.\n\nSecond: what happens when a privileged account holder calls for a reset? Employee ID, last four, a manager's name — all scrapeable. A callback to the number already on record, through a channel the caller did not choose, is not.\n\nThird: who is told when retention changes? That event belongs with the people watching identity, not filed in the backup team's own inbox.\n\nOne more item for the budget. Data leaves before anything is encrypted, so a flawless restore converts a survival problem into a disclosure problem. Different plan, different people, and rarely the same line item.",
+    "facebook": "Picture an ordinary Tuesday. Nothing is broken. The intruder holding a stolen admin password is not encrypting anything yet — they are reading your backup settings.\n\nThere is a reason that comes first. Encrypted files are only a crisis if you cannot restore them, so the opening move is to remove the restore. Deleting backups is noisy. Trimming a retention policy is quiet, and a few weeks later the useful recovery points have simply aged out.\n\nNow trace that password backwards. It often starts with a friendly call to a help desk asking for an MFA reset, in a voice that sounds like someone on staff.\n\nWhich makes the protection list shorter than most people expect: copies no single logged-in admin can shorten, an alert to a human when retention changes, a restore your team has actually finished end to end, and a service desk that calls the person back on the number already on file.",
+    "gbp": "One agenda item for your next IT meeting: who is able to shorten your backup retention, and who finds out when they do.\n\nAttackers look at recovery capability early, because it decides whether you have to negotiate at all. Deleting backups makes noise. Trimming retention makes none.\n\nThree questions: Can one compromised admin account shorten our copies? Does a human get alerted when retention changes? When did we last finish a full restore?\n\nSince the credential usually arrives by phone, add a fourth: does your help desk call people back on a number already on record before resetting anything?\n\nPro Link Systems, Woodland Hills since 1999. Our help desk is in-house, US-based, and answered live.",
+    "x": [
+      "Ransomware crews do not start with your data. They start with your backup console. Encrypted files are only leverage if recovery is off the table, so recovery capability is the first thing worth attacking.",
+      "The quiet version deletes nothing. Someone shortens retention, disables a job, and waits. No failure, no alert. Recovery points expire exactly as configured, and you find out on the worst possible day.",
+      "Backup is therefore an identity problem before it is a storage problem. A retention lock your own administrator can release is a preference, not a control. Destructive changes should need a second approver and a waiting period.",
+      "Cheapest way to become that administrator: a phone call to a service desk asking for an MFA reset. Synthetic voice made the call convincing. Employee ID and last four are scrapeable. A callback to the number already on record is not.",
+      "Recovery does not fix the copy they already took. A clean restore removes the outage leverage and leaves the disclosure leverage exactly where it was. Two incidents, two plans, two budgets.",
+      "Test worth running this quarter: pick a system, name a recovery point, have someone finish the restore end to end while a second person checks who could have shortened retention along the way. What that exercise cannot prove is your real risk."
+    ],
+    "instagram_caption": "The backup console is the first system an intruder looks for and the last one most companies audit.\n\nEncrypted data is leverage only if restoring it is impractical, so a modern intrusion does not open with encryption. It opens by finding the settings that decide how far back you can go, and quietly making that window smaller.\n\nTwo consequences. The credential that gets an attacker there increasingly arrives by phone rather than by malware, which turns your help desk verification script into a backup control. And even a perfect restore does not undo the copy already taken.\n\nThe executive question is not whether backups exist. It is what survives an administrator account under hostile control.\n\n#ransomware #cyberresilience #identitysecurity"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-25-s247-01.png",
+      "2026-08-25-s247-02.png",
+      "2026-08-25-s247-03.png",
+      "2026-08-25-s247-04.png",
+      "2026-08-25-s247-05.png",
+      "2026-08-25-s247-06.png",
+      "2026-08-25-s247-07.png",
+      "2026-08-25-s247-08.png"
+    ],
+    "jpg": [
+      "2026-08-25-s247-01.jpg",
+      "2026-08-25-s247-02.jpg",
+      "2026-08-25-s247-03.jpg",
+      "2026-08-25-s247-04.jpg",
+      "2026-08-25-s247-05.jpg",
+      "2026-08-25-s247-06.jpg",
+      "2026-08-25-s247-07.jpg",
+      "2026-08-25-s247-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "illustrative",
+    "format": "single_image",
+    "channels": {
+      "linkedin": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "facebook": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "gbp": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "instagram": {
+        "style": "illustrative",
+        "format": "single_image"
+      },
+      "x": {
+        "style": "illustrative",
+        "format": "single_image"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 95,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 91,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Ransomware operators commonly target recovery capability before encrypting data, because encrypted data is leverage only when restoration is impractical. Hedged with 'rarely', 'often', 'usually' since the brief supplies no named primary source.",
+    "ANALYSIS: Backup consoles are frequently joined to the same directory and administered by the same privileged accounts as production systems, and often sit outside routine monitoring.",
+    "ANALYSIS: Shortening retention or disabling backup jobs destroys recoverability without producing a job failure or alert, because recovery points expire on the configured schedule.",
+    "ANALYSIS: Service desk reset requests are a practical route to privileged credentials, and voice synthesis has lowered the cost of making such a request sound legitimate. No incident, victim, vendor, tool, or figure is cited.",
+    "ANALYSIS: Knowledge-based verification factors (employee ID, partial account numbers, manager name) are widely obtainable from public and breached sources; out-of-band callback to a number already on record does not depend on information an attacker can gather. Stated as reasoning, not as a research finding.",
+    "ANALYSIS: Data exfiltration commonly precedes encryption in modern ransomware operations, so successful restoration removes availability leverage but not disclosure leverage.",
+    "OPINION: Backup should be governed as an identity problem before it is treated as a storage problem.",
+    "OPINION: A retention lock a logged-in administrator can release does not function as a control.",
+    "OPINION: Destructive backup changes should require a second approver and a waiting period.",
+    "OPINION: Help desk identity verification belongs in the backup control set, and privileged resets should be verified by callback rather than by knowledge questions.",
+    "OPINION: Retention and job-change events should be routed to the team monitoring identity rather than to the backup team alone.",
+    "OPINION: The useful executive question is what remains restorable if the highest-privilege account is hostile, not whether backups exist.",
+    "OPINION: A restore rehearsed end to end against a named system and stated recovery point matters more than additional storage capacity.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "FACT(F002/F008): The help desk is in-house, not outsourced, and US-based.",
+    "FACT(F007): Phone calls are answered live by the in-house team.",
+    "FACT(F001): The help desk operates 24/7.",
+    "No statistics, incidents, vulnerabilities, regulations, deadlines, product capabilities, or third-party research findings are cited in any channel. No client is named or implied. No certification, partnership, or compliance status is claimed. Blocked facts F006, F009, F010, F011 are unused. No competitor is named. No metric from F003/F004/F005 is used, so no phrasing rule is triggered."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The ProLink connection is bolted on. The Instagram CTA slide pivots to help desk speed metrics (24/7, in-house, US-based) in a post about backup governance — a non sequitur that reads as a house ad. Either the brand fact earns its place inside the argument or it does not appear. It can: the credential that reaches a backup console most often arrives through a service desk reset request, which makes help desk identity verification a genuine backup control and the ProLink facts structurally relevant instead of decorative."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The idea has one turn and repeats it five times across channels. Each surface says 'retention gets shortened quietly' and stops. The concept needs a second movement to survive a full cycle — the draft has no answer to the obvious executive rebuttal ('so we restore, and we're fine'), which is where the more interesting territory sits."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package specifies zero art direction. Slides carry empty body and footer strings and no compositional intent, which means production will default to generic layout — the exact failure mode the visual standard exists to prevent. Slide 1 in particular is a headline floating on nothing. Needs a defined type system, a slide index, and one diagrammatic slide so the carousel is recognizable before the logo."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The copy states attacker behavior in the indicative ('Ransomware operators do not open with encryption') while the claims audit labels it ANALYSIS. No source is supplied in the brief, so the prose must carry the hedge itself. 'Rarely' and 'usually' cost nothing and keep the register honest."
+    },
+    {
+      "role": "CIO",
+      "finding": "The 'what to do' slide is directionally right but skips the two controls a CIO would actually be asked about: phishing-resistant authentication on the backup identity, and whether Microsoft 365 and SaaS data is inside the backup scope at all. Also, no bar for what 'good' looks like — a restore test with no defined target and no executive-visible result is theater."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Material accuracy problem. The draft's central claim — recovery capability determines whether you negotiate — was true in 2019 and is only half true now. Crews exfiltrate before encrypting, so a perfect restore removes the outage leverage and leaves the disclosure leverage untouched. Publishing the unqualified version would be a real error and would be spotted by anyone who has actually worked an incident. Must be corrected, and correcting it strengthens the piece."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in this post is dated 2026. The mechanics described would have read identically five years ago. The live change is how the privileged credential is obtained: service desk social engineering with cloned voice, targeting MFA resets rather than exploiting software. That is the hinge and it is absent."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "I am handed a question to ask IT but no way to evaluate the answer. Tell me what a defensible response sounds like — which system, restored to what point, within what window, verified by whom — otherwise I have a conversation opener and nothing else."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread's first post spends its opening on setup and buries the sharp line. It also ends on the identity point with no payoff line worth quoting. Three posts is a fragment, not a thread; the sequence earns a fourth and fifth only if they add the credential path and the exfiltration limit."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "card_headline duplicates the Instagram hook verbatim, and cta_label 'Review your recovery' plus a generic /services URL is the least considered part of the package. A topic-specific landing page would be correct, but inventing a URL is prohibited, so the honest fix is a sharper label pointed at the URL we know exists, and a card headline that carries the thesis rather than repeating slide one."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "GBP runs roughly 765 characters against a 300–700 ceiling and must be cut, not trimmed at the margins. LinkedIn sits near the top of its range with room to tighten. 'On their own published schedule' is a strong phrase used twice in one package; keep it in the two places it lands hardest and cut it elsewhere."
+    },
+    {
+      "role": "Final Test (board consensus)",
+      "finding": "Draft fails 'could any MSP have published this' — the backup-console-first argument is standard MSP fare. Revision passes: the combination of the service desk as a backup control, the explicit limit of recovery against exfiltration, and the reframe of backup as an identity budget line is not a post another MSP is currently writing, and the brand fact used at the close is the one fact that is actually load-bearing for the argument."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Cross-channel cannibalization. The signature line 'Immutability an administrator is able to switch off is not immutability' appears verbatim on LinkedIn, X and Instagram slide 05, and the phrase 'expire on their own published schedule' appears in three places as well. Channel doctrine requires the best expression of one idea per channel, not the same sentence pasted across four. A reader who follows ProLink on two platforms sees a copy-paste operation, which undercuts the publication premise. Every recurring line must be re-expressed in the register of its channel."
+    },
+    {
+      "role": "Cybersecurity Expert / CIO",
+      "finding": "The guidance stops one level above the useful. The package correctly identifies help desk verification as a backup control, then never says what a good verification path actually is — so the reader is left with 'verify people', which any MSP could write. Missing specifics that a CIO can act on this quarter: knowledge-based checks (employee ID, last four, manager's name) are scrapeable and clonable; callback to the number already on record and out-of-band confirmation through a channel the caller did not choose are the controls that survive a synthetic voice; destructive backup changes should require a second approver plus a waiting period, the way a wire transfer does; and retention/job-change events belong in the identity team's telemetry, not the backup team's own inbox. Without those, the strongest asset ProLink actually owns — an in-house, US-based help desk that answers live — is asserted rather than demonstrated."
+    },
+    {
+      "role": "Art Director / Social Growth Strategist",
+      "finding": "Slide 07 is the designated save-worthy slide, but the copy delivers a single 60-word paragraph while the art direction promises five independently readable lines. The layout cannot be built from the text supplied, and at thumbnail scale it will read as the wall of small type the visual standard forbids. Separately, the X thread has two posts opening on connective words ('Which', 'And') that read as fragments when quoted or screenshotted, and the thread ends on an assertion rather than something the reader can do — which is where threads lose the reshare."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

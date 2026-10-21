@@ -1,0 +1,145 @@
+{
+  "post": "Friday, 4:40. A vendor emails updated bank details for an invoice you were already expecting. Right tone, right logo, and a voicemail an hour later to follow up.\n\nMost attempts to fix this fail in the same place: someone calls to confirm, using the phone number in the email.\n\nBetter rule. Call a number that was in your records before the request arrived, and let someone other than the person who received it make the call. Do not read the new account number aloud and ask whether it is correct — ask them to read it to you.\n\nDecide all of this before a vendor legitimately changes banks. Vendors do. If that gets handled as an exception, someone invents a process under deadline.\n\nThe last part belongs to the owner. Say out loud that checking a request from the top is expected and will never be read as distrust. A control your team is nervous about using is not a control.",
+  "headline": "Assume the requester is fake",
+  "cta_label": "Our security approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity",
+  "image_file": "2026-08-10-s248-card.png",
+  "image_file_jpg": "2026-08-10-s248-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S248",
+  "core_idea": "An approval workflow should be designed on the assumption that the requester is an impersonation and still run comfortably when the request is real: confirmation on a channel the requester did not choose, using contact details that predate the request; the confirmer is never the recipient; the verifier never supplies the detail being verified; a pre-agreed path for legitimate bank changes; destination authority separated from amount authority; friction concentrated on new payees and changed destinations; an executive who publicly removes the social cost of being verified — and the recognition that the next requester may be an AI assistant nobody can call back, which moves the control from authenticating the sender to constraining what any sender may ask for.",
+  "channels": {
+    "linkedin": "Your approval workflow probably verifies that a payment was authorized. It probably does not verify that the person who authorized it exists.\n\nThat gap was theoretical when a familiar voice was hard to fake. Now it is a design flaw.\n\nConfirmation should run on a channel the requester did not pick, using a contact detail that predates the request. And the person who received the instruction should not be the person who confirms it — one compromised mailbox should not be able to complete both halves.\n\nOn the call, do not read the new account number aloud and ask whether it is correct. Ask them to state it. A detail you supplied is not evidence.\n\nBuild the honest path before you need it. Vendors do change banks, and if a genuine change is handled as an exception, someone will improvise a process at 4:40 on a Friday. Agree the verification method at onboarding, while nobody is in a hurry.\n\nApproving an amount and approving a destination should not be the same authority.\n\nThen the part only an executive can do. If a controller has to weigh a wire against the risk of irritating you, the control is decorative. Say plainly that you expect to be verified.\n\nA prediction, offered as a prediction: the exposure after synthetic voice is an AI assistant holding standing permission to submit requests on someone's behalf — a requester nobody can call back. At that point the control has to move from authenticating who asked to constraining what any requester is allowed to ask for.",
+    "facebook": "Friday, 4:40. A vendor emails updated bank details for an invoice you were already expecting. Right tone, right logo, and a voicemail an hour later to follow up.\n\nMost attempts to fix this fail in the same place: someone calls to confirm, using the phone number in the email.\n\nBetter rule. Call a number that was in your records before the request arrived, and let someone other than the person who received it make the call. Do not read the new account number aloud and ask whether it is correct — ask them to read it to you.\n\nDecide all of this before a vendor legitimately changes banks. Vendors do. If that gets handled as an exception, someone invents a process under deadline.\n\nThe last part belongs to the owner. Say out loud that checking a request from the top is expected and will never be read as distrust. A control your team is nervous about using is not a control.",
+    "gbp": "A one-hour exercise for a Los Angeles business this month. Pull the last time a vendor changed its bank details and trace who approved it, and on what evidence.\n\nIf the answer involves recognizing an email tone, a voice, or a signature block, that is not a control anymore.\n\nTwo fixes worth the hour. Confirm on a channel the requester did not choose, using a contact detail that predates the request. And decide now how a legitimate bank change will be verified, so nobody has to invent a process under deadline.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Most payment approvals verify that a request was authorized. Almost none verify that the requester exists. Those are different controls, and only one of them survives a cloned voice.",
+      "The out-of-band callback is the right control and the easiest one to fake out. If the number came from the request, or from a vendor record updated the same week, you confirmed nothing. Use a contact detail that predates the request. Let someone other than the recipient dial.",
+      "Do not read the new account number aloud and ask whether it is right. Ask them to state it. A detail you supplied is not evidence.",
+      "Most approval controls are calibrated to the amount. Impersonation does not need to touch the amount — it changes the destination. In a lot of companies that field can be edited without triggering a second signature.",
+      "Vendors do legitimately change banks. If your process treats that as an exception, someone will improvise around the control on a Friday afternoon. Agree the verification method at onboarding, before anyone is under deadline.",
+      "Prediction, not fact: the impersonation problem after synthetic voice is an AI assistant with standing permission to submit requests on someone's behalf. Nobody to call back. The control moves from authenticating who asked to constraining what any requester may ask for."
+    ],
+    "instagram_caption": "Impersonation fraud rarely has to break an approval workflow. It can run the workflow as designed, because most approvals were built to confirm that a request was authorized — never that the requester was real.\n\nInside: where out-of-band verification quietly fails, why the destination field matters more than the amount, how to keep a legitimate vendor bank change from becoming an improvised exception, the one part of this only an executive can fix, and what happens when the requester is an AI assistant nobody can call back.\n\nSave it, then walk your last vendor banking change through it.\n\n#BusinessEmailCompromise #CyberResilience #AIGovernance"
+  },
+  "carousel": {
+    "png": [
+      "2026-08-10-s248-01.png",
+      "2026-08-10-s248-02.png",
+      "2026-08-10-s248-03.png",
+      "2026-08-10-s248-04.png",
+      "2026-08-10-s248-05.png",
+      "2026-08-10-s248-06.png",
+      "2026-08-10-s248-07.png",
+      "2026-08-10-s248-08.png",
+      "2026-08-10-s248-09.png"
+    ],
+    "jpg": [
+      "2026-08-10-s248-01.jpg",
+      "2026-08-10-s248-02.jpg",
+      "2026-08-10-s248-03.jpg",
+      "2026-08-10-s248-04.jpg",
+      "2026-08-10-s248-05.jpg",
+      "2026-08-10-s248-06.jpg",
+      "2026-08-10-s248-07.jpg",
+      "2026-08-10-s248-08.jpg",
+      "2026-08-10-s248-09.jpg"
+    ]
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 94,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 95,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: most finance approval workflows were designed to confirm authorization and intent rather than the identity of the requester",
+    "ANALYSIS (qualitative, no statistic): synthetic voice and video are inexpensive and no longer rare; stated without frequency, cost, incident, or vendor-capability figures",
+    "ANALYSIS (mechanism, not prevalence): impersonation-driven payment fraud does not need to alter the amount, because the money moves when the destination changes; argued structurally, with no measured frequency claim",
+    "ANALYSIS: out-of-band verification is only as strong as the provenance of the contact detail used; a detail supplied by, or updated alongside, the request verifies nothing",
+    "ANALYSIS: a confirmation in which the verifier supplies the detail being confirmed is weak, because the counterparty need only agree; asking the counterparty to state the destination details unprompted is the stronger form",
+    "ANALYSIS: separating the recipient of an instruction from the person who performs the confirmation prevents a single compromised mailbox from completing both halves of the control",
+    "ANALYSIS: legitimate vendor bank changes occur, and a control with no designed path for the honest case will be improvised around under time pressure — argued from process behaviour, no incident cited",
+    "ANALYSIS: workflows that accelerate under urgency reduce verification precisely where impersonation applies pressure",
+    "OPINION: verification friction should be concentrated on new payees and changed payment destinations; universal application leads to abandonment",
+    "OPINION: executives must publicly remove the social cost of verifying a senior person, or the verification step will not be used",
+    "PREDICTION, explicitly labeled as a prediction in the LinkedIn copy ('A prediction, offered as a prediction'), in the X thread ('Prediction, not fact') and in the Instagram takeaway kicker ('Prediction, not fact'): the exposure following synthetic voice is an AI assistant holding standing permission to submit requests, for which out-of-band callback has no analogue",
+    "FACT(F012), used in GBP body and Instagram slide footer only: Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999",
+    "No other ProLink operational metric cited (F001–F008 not used; not needed by this concept). No industry, breach-cost, fraud-frequency, or threat-landscape statistic anywhere. No client named, implied, or described. No certification, partnership, compliance status, or capability claimed. No competitor named. No blocked fact (F006, F009, F010, F011) used.",
+    "Cross-channel check: no sentence is reused verbatim between any two channels; each asset carries a different entry point and a different emphasis of the same core idea."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft answers 'what should we do' but never answers the question an operator will ask thirty seconds later: do we now slow down every invoice? Without a friction budget, the advice reads as unpriced and gets ignored. Also, the CTA label 'See our approach' is soft — it promises nothing and could sit under any post."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is a rules list with a hook glued on. The most interesting turn in the whole concept — that the callback itself is the step most often faked — is buried inside a bullet instead of getting its own beat. Sequencing should escalate: rule, then the trap inside the rule, then who pays for the friction, then the leadership move."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide one's kicker ('Assume it's fake') and headline restate each other, wasting the hierarchy the layout depends on. Several bodies run long enough to force small type. Concrete deliverable gap: the package carries no per-slide art direction, so the visual standard is left to whoever builds it. Copy has been tightened to support typographic composition, but the design brief remains the package's weakest element."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Impersonation almost always targets the second one' is a frequency claim with no source. Replace with a structural argument that needs no statistic: money moves because the destination changed, not because the amount looked wrong. Same issue with the Instagram caption's 'rarely breaks an approval workflow' — must be phrased as reasoning, not measurement."
+    },
+    {
+      "role": "CIO",
+      "finding": "The out-of-band rule as written is exploitable. 'A number already in your directory' assumes the directory is clean — but in vendor fraud the contact record is frequently updated by the same actor, in advance. The rule needs provenance ('existed in your records before the request did') and the callback must restate the transaction details rather than ask a yes/no question, since a compromised mailbox can pass a yes/no check."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "A voice callback is now weaker evidence than the draft implies; the control that survives is the combination of channel separation, contact-detail provenance, and split authority over the destination field — not the callback alone. The revision makes that stack explicit instead of resting the argument on 'call them back.'"
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package treats AI as deepfakes only, which is a 2024 framing. The 2026 version of this exposure is an automated assistant with standing permission to submit or route requests — an identity in the approval chain that nobody will ever recognize by voice. Added as a labeled prediction, one line, without manufacturing urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The leadership paragraph is the best thing in the draft, but the reader is given no cost boundary. An executive will not authorize a control that appears to add friction to all payables. Naming the two triggers that deserve the full path — new payees and changed destinations — is what makes it adoptable."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread is a compression of the LinkedIn post with several sentences carried over verbatim ('No channel can authenticate itself', 'the control is decorative'), which violates one-idea-many-expressions. Rebuilt so X leads with the callback-provenance trap, which is the most quotable and least-published point in the set."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP's ProLink line arrives as a bolted-on credential after unrelated advice. Reordered so the local-credibility line closes the advisory rather than interrupting it, and the only ProLink claims anywhere are F012."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn breaks the no-consecutive-same-word rule: 'A familiar voice on the phone was evidence. A short video call was stronger evidence.' Facebook's original also risked it. Fixed. Also verified all channel lengths against doctrine and removed 'Deepfake-enabled' as a caption opener since it fronts the technology rather than the decision."
+    },
+    {
+      "role": "Brand Director (with Copy Editor)",
+      "finding": "The draft violates channel doctrine by reusing load-bearing sentences verbatim across all five channels — \"Money leaves because the destination changed, not because the amount looked wrong,\" \"Time pressure is the payload,\" and \"a number that existed in your records before the request did\" each appear in three or more assets. Read in sequence by the same follower, the package reads as one text sliced five ways rather than five best expressions of one idea. Separately, the LinkedIn post runs roughly 1,700+ characters against a 900–1,600 ceiling. Both fixed in revision: every channel now carries a different entry point, a different emphasis, and phrasing it does not share with the others, and LinkedIn is trimmed to spec."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The control as described is still bypassable, and an executive who implements it exactly will believe they are covered when they are not. Three gaps: (1) no separation between the person who receives the instruction and the person who performs the callback, so a single compromised mailbox can complete both halves; (2) the callback script says to repeat details back, which lets the caller confirm a number you supplied — the stronger form is to have them state the destination details unprompted and compare; (3) no designed path for a legitimate vendor bank change, which is the actual failure mode, because a genuine change treated as an exception gets improvised around under deadline. All three are now in the revision, and the onboarding-time agreement is the detail that makes this advice operational rather than aspirational."
+    },
+    {
+      "role": "AI Strategist (with CIO)",
+      "finding": "The 2026 edge is buried as a throwaway final line on LinkedIn and absent from Facebook, GBP, and X entirely — and the claims_audit asserts it is \"labeled as such in the LinkedIn copy\" when the copy never labels it, which is a truth-discipline error inside the audit itself. The idea also stops short of its own conclusion: an agent with standing permission to submit requests has no phone number, so out-of-band callback has no analogue at all. That is the turn that makes the whole post non-obvious — the control has to move from authenticating the requester to constraining what any requester is permitted to ask for. It is now explicitly labeled as prediction, carried on LinkedIn, X, and Instagram, and used as the closing turn rather than a footnote."
+    }
+  ],
+  "offline_test": false
+}

@@ -1,0 +1,18 @@
+{
+  "_comment": "Backfilled by hand 2026-08-07: the CI run that published S125 to LinkedIn/Instagram/Facebook predates manifest persistence, so its pending.json died with the runner. GBP copy below was written to the same standards for the browser runner's first supervised post. Future manifests are written by content_studio.py automatically.",
+  "backfill": true,
+  "idea_id": "S125",
+  "theme": "continuity",
+  "cta_label": "Get the checklist",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/continuity-checklist",
+  "image_file": "2026-08-08-s125-card.png",
+  "image_file_jpg": "2026-08-08-s125-card.jpg",
+  "channels": {
+    "gbp": "Most Southern California businesses have a continuity plan. Far fewer have tested one — and a plan you have never tested is a document, not a plan. Before fire and power-shutoff season settles in: decide which systems come back first, keep one copy of your data somewhere the same outage can't reach, and rehearse the recovery on an ordinary Tuesday, when nothing is wrong. Our full business continuity checklist is free on our site — no form, no email required."
+  },
+  "excellence": {
+    "overall": 95,
+    "note": "Carried from the CI review of the S125 package; the GBP text above restates the approved carousel's core idea and claims nothing beyond it."
+  }
+}
