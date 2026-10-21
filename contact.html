@@ -966,6 +966,19 @@
     .then(function(r) {
       if (r.ok && r.json && r.json.success) {
         if (typeof gtag === 'function') {
+          /* Enhanced Conversions: supply first-party lead data so Google can
+             match the conversion even when cookies are unavailable. gtag hashes
+             these client-side (SHA-256) before sending over HTTPS. */
+          var __ph = String(data.phone || '').replace(/[^0-9]/g, '');
+          if (__ph.length === 10) __ph = '1' + __ph;
+          gtag('set', 'user_data', {
+            'email': String(data.email || '').trim().toLowerCase(),
+            'phone_number': __ph ? ('+' + __ph) : undefined,
+            'address': {
+              'first_name': String(data.first_name || '').trim(),
+              'last_name': String(data.last_name || '').trim()
+            }
+          });
           gtag('event', 'conversion', {
             'send_to': 'AW-1068497497/yYS5CNKQkbccENn0v_0D',
             'value': 50.0,

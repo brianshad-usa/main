@@ -63,6 +63,18 @@
       .then(function (r) {
         if (r.ok && r.json && r.json.success) {
           if (typeof gtag === "function") {
+            // Enhanced Conversions: supply first-party lead data (gtag hashes it
+            // client-side before sending) so Google can match cookieless conversions.
+            var ph = String(data.phone || "").replace(/[^0-9]/g, "");
+            if (ph.length === 10) ph = "1" + ph;
+            gtag("set", "user_data", {
+              email: String(data.email || "").trim().toLowerCase(),
+              phone_number: ph ? ("+" + ph) : undefined,
+              address: {
+                first_name: String(data.first_name || data.name || "").trim(),
+                last_name: String(data.last_name || "").trim()
+              }
+            });
             gtag("event", "conversion", { send_to: "AW-1068497497/yYS5CNKQkbccENn0v_0D", value: 50.0, currency: "USD" });
           }
           window.uetq = window.uetq || [];
