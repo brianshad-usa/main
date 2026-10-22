@@ -29,3 +29,4 @@ videos/library/
 # transient dedup-ledger staging (CI only)
 .ledger-cache/
 .ledger-branch/
+editorial/pending_linkedin/test-slug.json
