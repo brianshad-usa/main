@@ -1174,12 +1174,16 @@ try:
 except Exception as e:
     print(f"[home] WARNING: home page update skipped: {e}")
 
-# --- Cross-post to the company LinkedIn page -------------------------------
-# Safe by design: maybe_post() never raises, so a LinkedIn problem (expired
-# token, outage, missing secrets) can never block the blog from publishing.
+# --- Queue the LinkedIn announcement for AFTER the post is live ------------
+# Do NOT post to LinkedIn here. At this point the post has only been GENERATED,
+# not merged to main or deployed, so announcing now risks a dead link. That is
+# exactly what happened on 2026-10-21: LinkedIn announced a URL whose PR never
+# got created/merged, so the link 404'd. Instead, write a pending-announcement
+# sidecar that the announce-blog workflow picks up ONLY after the post is merged
+# to main AND the URL returns HTTP 200. Never raises — a queueing problem must
+# not block the blog from publishing.
 try:
-    import linkedin_post
-
+    import json as _json, os as _os
     post_url = f"https://prolinksystems.com/blog/{slug}"
     if not caption:
         caption = (
@@ -1187,8 +1191,12 @@ try:
             f"New on the Pro Link Systems blog: {meta}\n\n"
             "#ManagedIT #Cybersecurity #LosAngeles #ITSupport"
         )
-    linkedin_post.maybe_post(
-        title=title, url=post_url, summary=meta, caption=caption
-    )
+    _pending_dir = "editorial/pending_linkedin"
+    _os.makedirs(_pending_dir, exist_ok=True)
+    with open(f"{_pending_dir}/{slug}.json", "w", encoding="utf-8") as _f:
+        _json.dump({"slug": slug, "url": post_url, "title": title,
+                    "summary": meta, "caption": caption},
+                   _f, ensure_ascii=False, indent=2)
+    print(f"[linkedin] Queued announcement for after publish: {_pending_dir}/{slug}.json")
 except Exception as e:
-    print(f"[linkedin] WARNING: cross-post step skipped: {e}")
+    print(f"[linkedin] WARNING: could not queue LinkedIn announcement: {e}")
