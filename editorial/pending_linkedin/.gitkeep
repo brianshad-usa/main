@@ -1,0 +1,2 @@
+# Queued LinkedIn announcements land here as <slug>.json, written by generate_blog.py.
+# announce-blog.yml reads them AFTER the post is live (200) and posts to LinkedIn.
