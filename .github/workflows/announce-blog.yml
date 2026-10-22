@@ -1,0 +1,61 @@
+name: Announce Blog Post (LinkedIn)
+
+# Posts a newly published blog article to the company LinkedIn page — but ONLY
+# after it is live. It triggers when a blog post lands on main (the merge of the
+# generate-blog PR), confirms the post URL returns HTTP 200 (Cloudflare has
+# deployed it), and only then posts. This replaces the old behavior where the
+# generator announced the URL before the post was merged/deployed, which on
+# 2026-10-21 produced a LinkedIn link to a 404.
+#
+# It announces exactly the post(s) added by the triggering push, so earlier posts
+# are never re-announced. For manual recovery, run it from the Actions tab with a
+# "slug" input (the blog filename without .html).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/**'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Blog slug to announce (filename without .html). Blank = posts added in the last push.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: announce-blog
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need both sides of the push to diff the added files
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Announce to LinkedIn (only if the URL is live)
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          ANNOUNCE_SLUG: ${{ github.event.inputs.slug }}
+          # If these LinkedIn secrets are unset the step no-ops cleanly.
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
+          LINKEDIN_API_VERSION: ${{ secrets.LINKEDIN_API_VERSION }}
+        run: python announce_blog.py
