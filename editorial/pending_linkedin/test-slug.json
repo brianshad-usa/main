@@ -1,1 +1,4 @@
-{"slug": "test-slug", "url": "https://prolinksystems.com/blog/test-slug", "title": "T", "summary": "S", "caption": "C"}
+{
+  "disabled": true,
+  "note": "Inert test artifact left over from announce-pipeline development on 2026-10-22. It has no 'url' and its slug never matches a real post, so announce_blog.py will never post it. Safe to delete from GitHub whenever convenient."
+}
