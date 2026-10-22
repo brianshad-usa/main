@@ -2441,6 +2441,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-22",
+      "idea_id": "S064",
+      "theme": "identity",
+      "format": "comparison",
+      "title": "Password manager vs passkeys vs single sign-on",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photo",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "facebook": {
+            "style": "photo",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "gbp": {
+            "style": "photo",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "instagram": {
+            "style": "photo",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "x": {
+            "style": "photo",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          }
+        }
+      }
     }
   ]
 }

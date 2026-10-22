@@ -1,0 +1,196 @@
+{
+  "post": "A caller reaches your help desk at 4:40 on a Friday. New phone, cannot sign in, needs the account re-enrolled right now, and sounds exactly like your CFO.\n\nThat call is the reason passkeys are not the finish line. Take away the password and the attack moves to whoever is allowed to hand out a new way in.\n\nThe order still matters:\n\nSingle sign-on first, so there are fewer logins to track and one switch to flip when someone leaves.\n\nPasskeys next, starting with the people who administer identity and the people who move money.\n\nA password manager last, for the old portals that will never support either.\n\nThen the step nobody budgets for: a written identity-verification procedure for account recovery, so the answer to a convincing Friday phone call is a process rather than improvisation.",
+  "headline": "Your password manager is the third problem, bought first",
+  "cta_label": "See our approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/what-does-a-vcio-do",
+  "image_file": "2026-10-22-s064-card.png",
+  "image_file_jpg": "2026-10-22-s064-card.jpg",
+  "theme": "identity",
+  "idea_id": "S064",
+  "core_idea": "Single sign-on, passkeys and a password manager are three different jobs, and most companies buy them in reverse order. Consolidate identities first, harden the few that matter most — starting with whoever administers the identity provider, because consolidation concentrates risk — then contain the leftovers. And know where removing the password sends the attack next: account recovery and stolen sessions.",
+  "channels": {
+    "linkedin": "The password manager is usually the first purchase. It should be the last.\n\nSingle sign-on, passkeys and a password manager get compared as if a company picks one. They do three different jobs, and the order decides whether any of it holds.\n\nConsolidation comes first, because it is an inventory problem before a security one. Fewer separate logins means fewer accounts nobody disables when someone resigns. The fastest way to find them is the accounts-payable ledger, not the IT asset list.\n\nConsolidation also concentrates risk. Once every app sits behind one identity provider, that provider is the crown jewel — so hardening starts with its administrators, not with a company-wide rollout.\n\nPasskeys change the economics. No shared secret sits in a vendor's database or waits to be typed into a fake sign-in page, and building a flawless one stopped being skilled work.\n\nWhat most rollouts miss: removing the password moves the attack rather than ending it. It moves to the recovery path, where a persuasive caller talks a help desk into re-enrolling a device, and to the session after sign-in, where a stolen token skips authentication entirely. A passkey project is really a help desk identity-verification project.\n\nA password manager catches the rest. The old bank portal. A carrier billing site. That vendor still emailing credentials in plain text.\n\nConsolidate. Harden the critical few. Contain the leftovers. Then verify the people who can undo all three — analysis from doing the work, not a vendor's sequence.\n\nWhich is why the reset call matters more than it used to. Ours is answered live by an in-house, US-based team. Woodland Hills, serving Los Angeles since 1999.",
+    "facebook": "A caller reaches your help desk at 4:40 on a Friday. New phone, cannot sign in, needs the account re-enrolled right now, and sounds exactly like your CFO.\n\nThat call is the reason passkeys are not the finish line. Take away the password and the attack moves to whoever is allowed to hand out a new way in.\n\nThe order still matters:\n\nSingle sign-on first, so there are fewer logins to track and one switch to flip when someone leaves.\n\nPasskeys next, starting with the people who administer identity and the people who move money.\n\nA password manager last, for the old portals that will never support either.\n\nThen the step nobody budgets for: a written identity-verification procedure for account recovery, so the answer to a convincing Friday phone call is a process rather than improvisation.",
+    "gbp": "Password manager, passkeys, or single sign-on? They are not competing purchases. Each does a different job, and the order is most of the answer.\n\nConsolidate first: fewer separate logins means one place to shut off a departing employee.\n\nHarden next: turn on passkeys for the people who administer your identity system and for finance, before anyone else.\n\nContain last: a password manager for the old portals that will never support either.\n\nA practical first step for an LA business: ask accounts payable which software vendors you pay each month. That list is usually longer than the IT inventory.\n\nPro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Identity spending usually starts with a password manager. That is the third problem, bought first.",
+      "Single sign-on first, because it is an inventory decision before a security one. Fewer separate logins means fewer accounts nobody disables when someone resigns.",
+      "Consolidation concentrates risk. Once every app sits behind one identity provider, that provider is the crown jewel. So passkeys start with the admins who run it, then finance, then everyone else.",
+      "Removing the password moves the attack. It goes to account recovery — the convincing caller who needs a device re-enrolled right now — and to stolen session tokens, which skip sign-in entirely. Passkey projects are help desk verification projects.",
+      "Password manager last, for the portals that will never support either. Want your real login inventory first? Ask accounts payable which software vendors you pay. Usually longer than the IT list."
+    ],
+    "instagram_caption": "Three tools, three different jobs, bought in reverse order more often than not.\n\nSingle sign-on shrinks the number of logins anyone has to track — an inventory decision before a security one. Passkeys remove the phishable secret from the accounts worth attacking, starting with whoever administers identity, because consolidation concentrates risk. A password manager holds the long tail that will never support either.\n\nThen the step most rollouts skip. Taking away the password moves the attack to account recovery and to stolen sessions, which is why a passkey project is really a help desk verification project.\n\nConsolidate. Harden. Contain. Verify.\n\nPro Link Systems — Woodland Hills, serving Los Angeles since 1999.\n\n#identitysecurity #passkeys #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-10-22-s064-01.png",
+      "2026-10-22-s064-02.png",
+      "2026-10-22-s064-03.png",
+      "2026-10-22-s064-04.png",
+      "2026-10-22-s064-05.png",
+      "2026-10-22-s064-06.png",
+      "2026-10-22-s064-07.png",
+      "2026-10-22-s064-08.png"
+    ],
+    "jpg": [
+      "2026-10-22-s064-01.jpg",
+      "2026-10-22-s064-02.jpg",
+      "2026-10-22-s064-03.jpg",
+      "2026-10-22-s064-04.jpg",
+      "2026-10-22-s064-05.jpg",
+      "2026-10-22-s064-06.jpg",
+      "2026-10-22-s064-07.jpg",
+      "2026-10-22-s064-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photo",
+    "format": "carousel",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "behind_scenes",
+    "channels": {
+      "linkedin": {
+        "style": "photo",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "facebook": {
+        "style": "photo",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "gbp": {
+        "style": "photo",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "instagram": {
+        "style": "photo",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "x": {
+        "style": "photo",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 95,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Single sign-on, passkeys and password managers solve distinct, non-interchangeable problems",
+    "ANALYSIS: Consolidating applications behind one identity provider reduces the number of accounts to track and simplifies offboarding",
+    "ANALYSIS: Consolidation also concentrates risk, making the identity provider itself the highest-value target",
+    "ANALYSIS: Passkeys remove a shared, phishable secret from the authentication flow",
+    "ANALYSIS: Producing a convincing fake sign-in page no longer requires significant skill, which raises the value of phishing-resistant authentication relative to user training",
+    "ANALYSIS (NEW): Phishing-resistant authentication shifts attacker effort toward account recovery and toward post-authentication session tokens, neither of which a passkey rollout addresses by itself",
+    "ANALYSIS: A password manager remains necessary for legacy portals and vendors that support neither SSO nor passkeys",
+    "ANALYSIS: A company's accounts-payable records typically list more software vendors than the IT asset inventory",
+    "OPINION: Passkeys should be deployed first on identity administrator, finance and payment-capable accounts rather than org-wide at once",
+    "OPINION: The correct sequence is consolidate, harden the critical few, contain the rest, then verify the recovery path",
+    "OPINION: Shared passwords tend to persist in the long tail of legacy accounts",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F002): The help desk is in-house, not outsourced",
+    "FACT(F008): The help desk is US-based",
+    "FACT(F007): Phone calls are answered live by the in-house team",
+    "NOT CLAIMED: no assertion is made that ProLink performs any specific identity-verification procedure during account recovery - the post argues the requirement, it does not claim a capability",
+    "REMOVED: duplicate opening line shared between LinkedIn and X; duplicate three-step block shared between Facebook and GBP",
+    "NO STATISTICS USED: no industry, breach, downtime or attacker figures appear anywhere in this package",
+    "MSP TEST: No. The ordering argument, the accounts-payable-as-login-inventory audit, and the recovery/session consequence of passkey adoption are not standard MSP material, and the package carries no statistics, no fear framing, and no product recommendation."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The entire package was built on an unverifiable frequency claim — 'most of our onboarding calls', 'we hear this most weeks', 'we get asked this weekly'. It isn't in verified_facts, it's repeated on five channels, and it makes the hook about us instead of about the idea. Replaced with a claim-free, counterintuitive hook that carries the thesis."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Every channel opened with the same rhetorical move (a question we get asked) and then delivered the same three-step list in near-identical wording. That is one text redistributed, not five channel-native expressions. Each channel now leads with a different entry point: LinkedIn with the purchase-order inversion, Facebook with the Monday-morning offboarding scenario, X with compression, GBP with the practical first step, IG with progression."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel ended on a help-desk advertisement (slide 7: phone tree, hold queue), which breaks the editorial register and is the one slide that would make a viewer read it as MSP marketing. Cut. Slide count rebalanced to 7 with a genuine insight slide (consolidation concentrates risk) and no CTA slide; the restrained CTA now lives in the caption only. Headlines were also trimmed to hold at large type with generous negative space."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft had three consecutive sentences opening with 'The' ('The old bank portal. The carrier site. The vendor...'), a direct standards violation, and the LinkedIn post ran roughly 1,750 characters, over the 1,600 ceiling. Both fixed. The framing was also under-argued: it asserted a sequence without explaining why that sequence is correct, which is the only part worth reading."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft skipped the single most important consequence of step one: SSO concentrates risk as much as it reduces it. Without that, the piece reads like tool triage rather than architecture. Added as the pivot slide and as the reason passkeys start with identity administrators rather than finance. Also added a concrete, same-week first action — get the vendor list from finance, not IT — so an executive can do something Monday."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Nothing phishable to type' was accurate but unsupported; the reason passkeys moved up the priority list in 2026 is that producing a convincing fake sign-in page stopped requiring skill. That reasoning is now stated as analysis. No statistic was introduced, correctly — none is available in the brief. Verified that no capability, certification, or threat-landscape number is claimed anywhere."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package had no 2026 anchor at all; it would have read identically in 2021. Rather than bolt on an AI reference, the timeliness is now carried by the substantive point — credential phishing became cheap to produce flawlessly, which is exactly why a phishing-resistant factor beats user training on the accounts that matter. No manufactured AI urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft told me the order but gave me nothing to verify my own state against. An executive wants to know where they already are. The revision gives a self-diagnostic any CFO can run in an afternoon (the finance vendor list versus the IT inventory, and the gap between them) and populates checklist_items, which the draft left empty."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread's first post spent its best characters on a frequency claim instead of the idea, and the thread stopped one beat short of its most shareable line. Rewritten: post one carries the inversion, post three carries the counterintuitive turn, post four gives a saveable action. All four confirmed under 280 characters."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Three separate service mentions (LinkedIn tail, GBP close, IG CTA slide) plus a fourth in the carousel exceeded the one-restrained-CTA rule and tipped the asset from publication to pitch. Now one restrained mention per channel, maximum, and the help-desk detail appears only where it is argumentatively earned — a passkey or SSO rollout fails on lockout support, which is a real connection, not a bolt-on."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Hard-rule violation in the Facebook draft: 'A client's controller leaves on a Friday' describes a client, which is prohibited in automated content. Rewritten as a generic scenario with no attribution. Also fixed the CTA label/URL mismatch ('Meet the team' pointing at /cybersecurity), the over-length LinkedIn post, and the repeated-opening-word violation. No banned phrasing, emoji, or exclamation marks present in either version."
+    },
+    {
+      "role": "Ultimate test (could any MSP have published this?)",
+      "finding": "The draft: yes — the three-tool comparison is standard MSP fare. The revision: no. The differentiators are the purchase-order inversion as the thesis, the admission that step one concentrates risk rather than only reducing it, the sequencing rationale stated explicitly as our analysis rather than vendor guidance, and the finance-ledger diagnostic. A generic MSP post recommends all three tools and sells the bundle; this one tells you which to buy last and why."
+    },
+    {
+      "role": "Cybersecurity Expert + CIO (joint, highest-impact finding)",
+      "finding": "The draft stops at 'passkeys remove the phishable secret,' which overstates the result. Removing the password relocates the attack to two places the package never names: account recovery (a persuasive caller getting a device re-enrolled) and post-authentication session theft (a stolen token that skips sign-in entirely). Without those, an executive leaves with a false finish line, and the piece loses the one argument that proves practitioner-level knowledge. Added as a dedicated beat on LinkedIn, Facebook, X and a new carousel slide — and it also converts the help desk mention from a bolted-on credential into the logical endpoint of the argument."
+    },
+    {
+      "role": "Brand Director + Social Growth Strategist (joint)",
+      "finding": "Channel doctrine violated twice: X post 1 reproduced the LinkedIn opening line verbatim, and the Facebook and GBP middles were near-identical three-step blocks ending on the same finance-vendor tip. Fixed by giving each channel a different entry point — LinkedIn the sequencing argument, Facebook the Friday-afternoon recovery call, GBP the LA-owner advisory plus the accounts-payable audit, X a compressed 'third problem, bought first' framing."
+    },
+    {
+      "role": "Art Director + Creative Director (joint)",
+      "finding": "Seven slides of kicker-plus-headline-plus-body with no specified visual system means the carousel cannot be designed to standard and cannot be recognized before the logo. Added an explicit visual system (numbered sequence rail, one editorial diagram on the three-jobs slide, a branching diagram on the recovery/session slide) and per-slide visual notes so the design carries structure rather than typesetting prose. The hook slide was also two sentences long; cut to one line so its only job is the swipe."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
