@@ -1,0 +1,163 @@
+{
+  "post": "Someone on your team tried a free AI note-taker last year and clicked allow so it could read calendars and meeting invites. By spring they had stopped using it. The connection is still there.\n\nThat is the quiet version of a security gap. Not a break-in. An app nobody remembers approving.\n\nWhat catches owners off guard is this: closing the employee's account does not close the app's access. The app was registered in your systems in its own right, with permissions of its own.\n\nOur opinion — this deserves attention before the third product a vendor wants to add at renewal. Most of the protection for a 40-person company is a short, dull list. Strong sign-in on the accounts that can move money. Access rules that match how people actually work. A standing date to review which apps and AI tools are still connected.\n\nIt is a list, not a project.",
+  "headline": "The app does not resign",
+  "cta_label": "See how we approach identity",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/what-does-a-vcio-do",
+  "image_file": "2026-10-23-s192-card.png",
+  "image_file_jpg": "2026-10-23-s192-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S192",
+  "core_idea": "The most overhyped idea in business technology right now is the size of the gap. Most mid-sized companies are a handful of identity decisions from genuinely good security, and the decision they are most likely missing concerns identities that were never people: applications are registered in the tenant in their own right, and offboarding a person does not retire what that person approved.",
+  "channels": {
+    "linkedin": "We sell security services, which makes this the commercially inconvenient opinion: the distance between most mid-sized companies and genuinely good security is shorter than the market keeps telling them.\n\nOverhyped, in our view — tool count. The ninth dashboard panel. The AI badge on a product that did the same work last year under a plainer name. Buying produces invoices and a persuasive sense of motion.\n\nUnderhyped — the identities that were never people.\n\nWhen an employee connects a scheduling tool, a contract reader or an AI assistant to your Microsoft 365 tenant, that application is registered in your directory in its own right, with permissions of its own. Offboarding the employee does not retire the application. Where permissions were granted to the app rather than on behalf of a person, they survive the account, the password reset and the exit interview.\n\nSo the useful question has changed. Not who works here. What still holds a grant, who approved it, and whether anyone should be able to approve the next one without review — that last item is an administrative setting most companies have never deliberately chosen.\n\nAnalysis rather than fact: posture tracks less with product count than with whether a named person can answer those questions from memory.\n\nNone of this argues against detection. Monitoring earns its budget. It is not a substitute for knowing what holds privileged access.\n\nIf you suspect you are behind, you are probably behind by a handful of decisions, not by years. Ask who owns the list of applications consented into your tenant. If no name comes back, that is the first decision, and it is free.",
+    "facebook": "Someone on your team tried a free AI note-taker last year and clicked allow so it could read calendars and meeting invites. By spring they had stopped using it. The connection is still there.\n\nThat is the quiet version of a security gap. Not a break-in. An app nobody remembers approving.\n\nWhat catches owners off guard is this: closing the employee's account does not close the app's access. The app was registered in your systems in its own right, with permissions of its own.\n\nOur opinion — this deserves attention before the third product a vendor wants to add at renewal. Most of the protection for a 40-person company is a short, dull list. Strong sign-in on the accounts that can move money. Access rules that match how people actually work. A standing date to review which apps and AI tools are still connected.\n\nIt is a list, not a project.",
+    "gbp": "A quote for new security tools lands on your desk. Before you sign it, run a cheaper check.\n\nOpen the list of applications connected to your Microsoft 365 tenant — scheduling tools, contract readers, marketing plug-ins, AI assistants. For each one, ask three things: is it still in use, who approved it, and what permissions does it hold.\n\nRemoving a staff member does not remove what that staff member approved. The application is registered in your directory in its own right. Then decide the policy question behind it: should anyone here be able to approve the next one without review.\n\nIn our opinion, that afternoon protects a Los Angeles business more than another dashboard will.\n\nPro Link Systems has worked with LA businesses from Woodland Hills since 1999.",
+    "x": [
+      "Commercially inconvenient opinion: most security tooling sold to mid-sized companies this year addresses a problem further down the list than the one sitting on top of it. The item on top is unglamorous — identity, and specifically the identities that were never people.",
+      "Removing the employee does not remove the application they approved. It is registered in your tenant in its own right, and where its permissions were granted to the app rather than to the person, they outlive the account, the password reset and the exit interview.",
+      "Two decisions cover most of it. Who in your tenant may approve a new application. When someone last read the list of approvals already standing. Neither costs money. Both are usually unowned."
+    ],
+    "instagram_caption": "An opinion we will state plainly: the gap between most mid-sized companies and genuinely good security is smaller than the market keeps telling them, and tool count is not what closes it. Identity discipline is. The part that surprises executives is where that discipline fails — not with employees, but with the applications employees approve. A scheduling tool, a contract reader, an AI assistant connected to Microsoft 365 is registered in the directory in its own right, with permissions of its own. Offboarding a person does not retire the app. Analysis, not statistics: posture tracks less with how many products a company owns than with whether a named person can say what holds privileged access and why. The conclusion is good news. Behind by decisions, not by years. #ITleadership #identitysecurity #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "single_image",
+    "ground": "gold",
+    "layout": "left_block",
+    "register": "positive",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 95,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 89,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 95,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "OPINION (labeled in-copy): tool count is the most overhyped element of business security buying right now, and much of what is sold addresses a problem lower on the list than identity",
+    "ANALYSIS (labeled in-copy): the decisions that most improve posture for 20–500 seat businesses concentrate in identity — sign-in, device, conditions, and speed of access removal",
+    "FACTUAL PLATFORM BEHAVIOUR (generally documented Microsoft Entra ID / Microsoft 365 behaviour, no vendor statistic, no capability claimed beyond documented function): an application granted consent is registered in the tenant directory as its own object with its own permissions; permissions granted to the application rather than on behalf of a signed-in user continue to function independently of any individual user account. No claim is made that disabling a user account leaves that user's own delegated session active.",
+    "FACTUAL PLATFORM BEHAVIOUR: administrators can review consented applications and can configure whether users are permitted to consent to new applications. Stated as an available setting, not as a recommendation with claimed outcomes.",
+    "ANALYSIS (labeled in-copy): posture correlates less with product count than with whether a named person can state what holds privileged access and why",
+    "EXPLICIT BOUNDARY: the package states it does not argue against detection or monitoring",
+    "OPINION (labeled in-copy): companies that feel behind are usually behind by a small number of decisions rather than by years",
+    "FACT (F012): Pro Link Systems has worked with Los Angeles businesses from Woodland Hills since 1999",
+    "REMOVED FROM PRIOR DRAFT: the GBP live-answer claim (F007/F002/F008) — accurate and citable, but it created a second call to action in a 300–700 character asset. Dropped for restraint, not for accuracy.",
+    "NOT USED: no industry statistic, breach cost, prevalence or growth figure, incident, vulnerability, regulation, deadline, client reference, certification, partnership, or competitor name appears anywhere in the package"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The same self-aware framing — 'an opinion that costs us money / costs us something to publish' — opened LinkedIn, X and Instagram. Read across channels in one day it becomes a brand tic and tips from candor into humblebrag. Revised so only LinkedIn carries the commercial-cost framing, and each other channel enters the idea from a different door."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The four identity questions appeared verbatim in LinkedIn, X post 2, and Instagram slide 3 — three channels, identical sentences. That violates the one-idea/different-expression doctrine. The questions now anchor LinkedIn and the Instagram slide; X post 2 was rebuilt around the non-human identity turn instead, which also gives the thread a reason to be a thread."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 3 carried four fragments plus two sentences — too much type for one frame at the point where the viewer is being asked to absorb a list. Bodies trimmed across slides 2–5 so each frame holds one typographic idea; slides 2 and 3 are now a deliberate overhyped/underhyped pair that should be designed as mirrored compositions, and slide 2 carries the 'sequence, not neglect' qualifier as a footer rather than a sixth slide."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft's strongest potential claim was never made: it argued identity in general terms that have been argued since 2019. Added the 2026-specific turn — standing access held by service accounts, app integrations and AI agents granted via consent screens, which no offboarding process was built to revoke. This is the paragraph that makes the piece dated 2026 rather than 2020."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Offboarding that runs the same day' assumed a human departure as the only trigger, which is precisely the assumption that fails. Reframed the fourth question from 'when someone leaves' to 'when access is no longer needed', and added one concrete, verifiable mechanism an executive can hand to IT: review the third-party apps consented into the Microsoft 365 tenant."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "As written, a security provider arguing that tooling is overhyped could be read as arguing against detection and response, which would be irresponsible advice. Added an explicit boundary in LinkedIn and as a slide footer: this is an argument about sequence, not a case for skipping monitoring. Also confirmed 'phishing-resistant sign-in' is used correctly and no capability, certification or partnership is implied anywhere."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft's only AI content was a dismissal ('AI badge on a product'). That is cheap. The genuine AI governance angle — agents and integrations holding standing OAuth access outside any identity lifecycle — was missing and is now the pivot of the piece. Also removed any implication of measurement: the original candidate phrasing 'fastest-growing group of identities' would have been an unsourced statistic and was rewritten structurally instead."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft diagnosed well but left the reader without an order of operations. Added a first move that costs nothing (name the owner of the access list) and a second that is specific enough to delegate on Monday (review consented third-party apps). Also populated the previously empty checklist so the asset has something to save."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 2 did not depend on post 1 — it was a second summary, not a progression, so the thread had no reason to exist. Rebuilt as a turn that only lands after the setup. Instagram hashtags narrowed to the topic (#identitysecurity replaces the generic #cybersecurity)."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Card headline 'You are closer to good security than vendors say' made the enemy a competitor rather than an idea, which is off-register and skirts the no-competitors rule. Replaced with 'Behind by decisions, not by years.' On the ultimate test: an MSP could publish the identity hygiene half of this, but very few would publish a seller arguing their own category is overhyped, label opinion and analysis separately, and land on non-human identity as the real gap. That combination is not generically reproducible."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Concrete errors fixed: 'telling you you're in' (stacked pronoun plus a contraction in an otherwise contraction-free register), the cliché 'move the needle', inconsistent 'don't' on X against 'do not' elsewhere, and LinkedIn running to roughly 1,700 characters against a 1,600 ceiling. Revised LinkedIn is approximately 1,530 characters; Facebook approximately 730; GBP approximately 640. No banned phrasing, no emoji, no exclamation marks, no consecutive sentences opening with the same word."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft stopped one step short of the detail that makes the argument defensible and non-obvious. It said non-human identities 'hold standing access, granted by a consent screen and revoked by nobody' — true as rhetoric, imprecise as mechanism, and in Entra ID partly wrong: disabling a user account does invalidate that user's delegated tokens. The accurate and far sharper point is that the application is registered in the directory in its own right, with permissions of its own, and where those permissions were granted to the app rather than on behalf of a person they survive the account entirely. The draft also omitted the one administrative lever an executive can actually pull: whether users in the tenant are permitted to consent to new applications at all. Fixed in revision across all five channels."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Channel doctrine violation that survived round one: 'A resignation triggers a process. An abandoned integration triggers nothing' appeared verbatim in LinkedIn, X and the Instagram slide, and 'how fast access is removed when it is no longer needed' appeared in four of five assets plus the checklist. That is one text syndicated, not five expressions of one idea — and verbatim reuse is the single most reliable signal that an asset came out of an automation pipeline. Every channel now carries a different entry point: LinkedIn the directory mechanism, Facebook the abandoned AI note-taker, GBP the pre-signature review, X the compressed contradiction, Instagram the progression. On the ultimate test — no, another MSP could not publish this. The generic version of this post argues for more tools; this one argues against buying them, names the specific place consent outlives an employee, and the owner-confirmed facts are used as credibility rather than as the subject."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel was still eight text cards with three-sentence bodies plus footers — density that forces small type and kills the editorial look the visual standard demands. Reduced to seven slides, each carrying one idea; slide 2 is built as a two-column contrast and slide 3 as a four-line ladder so the deck has structural variety rather than uniform paragraphs. Remaining limitation, stated honestly: this schema carries no per-slide art direction field, so visual sophistication depends entirely on the render system applying consistent typographic hierarchy and negative space. That is why visual_sophistication is scored below target rather than at it. Separately, GBP carried two calls to action (a 'call us' imperative plus the button); the imperative is removed and the 1999/Woodland Hills line now does credibility work instead."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

@@ -2499,6 +2499,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-23",
+      "idea_id": "S192",
+      "theme": "creative_surprise",
+      "format": "prediction",
+      "title": "What we think is overhyped right now",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "single_image",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "single_image",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          }
+        }
+      }
     }
   ]
 }
