@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>PCI DSS Moved Into the Browser | Pro Link Systems</title>
+<meta name="description" content="Hosted checkout keeps card data off your servers, not your site out of PCI scope. PCI DSS v4 moved the obligation into the browser, where the scripts run.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://prolinksystems.com/blog/2026-10-23-t34-pci-dss-compliance-for-los-angeles-retail-and-e-commerc">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://prolinksystems.com/blog/2026-10-23-t34-pci-dss-compliance-for-los-angeles-retail-and-e-commerc">
+<meta property="og:title" content="PCI DSS Moved Into the Browser | Pro Link Systems">
+<meta property="og:description" content="Hosted checkout keeps card data off your servers, not your site out of PCI scope. PCI DSS v4 moved the obligation into the browser, where the scripts run.">
+<meta property="og:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ProLink_Systems">
+<meta name="twitter:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:title" content="PCI DSS Moved Into the Browser | Pro Link Systems">
+<meta name="twitter:description" content="Hosted checkout keeps card data off your servers, not your site out of PCI scope. PCI DSS v4 moved the obligation into the browser, where the scripts run.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PCI DSS Moved Into the Browser",
+  "description": "Hosted checkout keeps card data off your servers, not your site out of PCI scope. PCI DSS v4 moved the obligation into the browser, where the scripts run.",
+  "author": {
+    "@type": "Person",
+    "name": "Brian Shad",
+    "jobTitle": "President",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pro Link Systems"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pro Link Systems",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://prolinksystems.com/logo.png"
+    }
+  },
+  "datePublished": "2026-10-23",
+  "dateModified": "2026-10-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://prolinksystems.com/blog/2026-10-23-t34-pci-dss-compliance-for-los-angeles-retail-and-e-commerc"
+  },
+  "url": "https://prolinksystems.com/blog/2026-10-23-t34-pci-dss-compliance-for-los-angeles-retail-and-e-commerc"
+}
+</script>
+<link rel="stylesheet" href="/_shared.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-1068497497');
+gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
+</script>
+<!-- Microsoft UET tag (Bing Ads) — tag 97275167 -->
+<script>
+    (function(w, d, t, u, o) {
+        w[u] = w[u] || [], o.ts = (new Date).getTime();
+        var n = d.createElement(t);
+        n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");
+        n.async = 1, n.onload = n.onreadystatechange = function() {
+            var s = this.readyState;
+            s && "loaded" !== s && "complete" !== s ||
+            (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),
+            n.onload = n.onreadystatechange = null)
+    };
+        var i = d.getElementsByTagName(t)[0];
+        i.parentNode.insertBefore(n, i);
+    })(window, document, "script", "uetq", {
+        ti:"97275167",
+        enableAutoSpaTracking: true
+    });
+</script>
+<style>
+.blog-hero {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
+  padding: 60px 0 48px;
+  text-align: center;
+}
+.blog-hero .breadcrumb {
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 16px;
+}
+.blog-hero .breadcrumb a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+.blog-hero .breadcrumb a:hover { color: var(--gold); }
+.blog-hero .breadcrumb span { margin: 0 8px; }
+.blog-hero h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  max-width: 800px;
+  margin: 0 auto 16px;
+  padding: 0 24px;
+}
+.blog-hero .post-meta {
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+}
+.blog-hero .post-meta strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+.blog-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 24px 64px;
+}
+.blog-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -.02em;
+}
+.blog-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+.blog-body ul {
+  margin: 0 0 1.25rem 1.5rem;
+  padding: 0;
+}
+.blog-body li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.blog-body strong { font-weight: 700; color: var(--navy); }
+.blog-cta-box {
+  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 100%);
+  border: 1.5px solid rgba(23,98,168,.15);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--r-lg);
+  padding: 2rem 2rem 2rem 2.25rem;
+  margin: 3rem 0 0;
+}
+.blog-cta-box h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 .75rem;
+  letter-spacing: -.02em;
+}
+.blog-cta-box p {
+  font-size: .95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+.blog-cta-box .btn-group {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+</style>
+</head>
+<body>
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Pro Link Systems home">
+    <img src="/logo.png" alt="Pro Link Systems" width="160" height="44">
+  </a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/case-studies">Case Studies</a>
+    <a href="/about">About</a>
+    <a href="/blog/" class="active">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="tel:18008906133" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+  <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
+  <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+  <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
+  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
+</div>
+
+<div class="blog-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>/</span>
+    <a href="/blog/">Blog</a><span>/</span>
+    <span style="color:rgba(255,255,255,.7);">Article</span>
+  </div>
+  <h1>PCI DSS Moved Into the Browser</h1>
+  <div class="post-meta">
+    By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; October 23, 2026
+  </div>
+</div>
+
+<article class="blog-body">
+<p>"We use a hosted checkout. Doesn't that put us out of scope?"</p>
+
+<p>It is the most common question a Los Angeles retailer asks about card security, and for most of the last decade the answer was close enough to yes that nobody argued. Outsource the payment page to a processor, never touch a card number, file the short self-assessment questionnaire, move on. That arrangement did real work. It moved cardholder data out of merchant systems and into better-defended ones.</p>
+
+<p>Attackers adapted before the standard did. Rather than hunting card numbers at rest, they began intercepting them in the browser, in the seconds between a customer typing and the processor receiving. The PCI Security Standards Council answered in version 4.0 of PCI DSS, whose future-dated requirements became mandatory on 31 March 2025. That date is now more than a year behind us, which means the opening question has had a different answer for a while: your checkout page is in scope even when your servers never see a card.</p>
+
+<h2>Your iframe is fine. The page around it is the exposure.</h2>
+
+<p>Two requirements carry most of the weight. Requirement 6.4.3 obliges a merchant to manage the scripts loaded and executed on a payment page — know what each one is, authorize it, confirm its integrity, and maintain an inventory with written business justification. Requirement 11.6.1 obliges a mechanism that detects unauthorized changes to the payment page as it is received by the consumer's browser, run at least weekly or at a frequency the merchant justifies through a documented risk analysis.</p>
+
+<p>Read those together and the Council's reasoning is clear. Its concern is not your database. Its concern is the analytics tag, chat widget, A/B testing tool, or ad pixel a marketing contractor added three years ago, which executes in the same browser session as the iframe collecting a customer's card. A skimming script does not need access to your infrastructure. It needs permission to run next to the form. This is third-party supply-chain risk wearing a marketing badge, and it enters through a workflow no security team was asked to approve.</p>
+
+<p>Version 4.0.1 of the standard, published by the Council in 2024, changed how this lands on the smallest e-commerce merchants. Those two requirements were removed from the shortest self-assessment questionnaire and replaced with an eligibility criterion: the merchant confirms its site is not susceptible to script-based attacks. Softer on paper. Harder in practice. Somebody has to say that sentence and mean it, and in many companies of twenty to five hundred seats, no one currently can, because no single person owns the list of what loads on the site.</p>
+
+<h2>Annual attestation, continuous obligation</h2>
+
+<p>The second change is cadence, and that is where budgets get surprised. Much of v4 assumes controls that run as ordinary operations rather than evidence assembled in the two weeks before an attestation. Scope must be confirmed and documented at least annually and whenever the environment changes. Several requirements let a merchant define its own testing frequency, but only on the basis of a targeted risk analysis that is written down, reviewed, and defensible. Multi-factor authentication is required for all access into the cardholder data environment, not only for remote administrative access. Minimum password length increased.</p>
+
+<p>None of that is exotic. All of it is incompatible with treating compliance as seasonal paperwork. Offered as analysis rather than fact: for a mid-sized merchant, the expensive part of v4 is not any individual control. It is the discovery that the company has no operating owner for the controls it already believed it had. Scripts get added by marketing. Identity is configured in <a href="/cloud-services">Microsoft 365</a> by whoever stood up the tenant. Logs exist and nobody reads them. Scans run and the findings are filed. Each piece has a vendor. None has an owner.</p>
+
+<h2>PCI fails like a contract, not like a statute</h2>
+
+<p>Executives routinely misclassify PCI DSS as regulation. Across most of the country it is not. It is a condition of the agreements you signed with your acquiring bank and the card brands, which means enforcement does not arrive as a government letter. It arrives as a liability shift.</p>
+
+<p>That distinction should change how the risk is modeled, and the following is analysis. A statute produces a penalty with a ceiling. A contract produces an obligation that can follow a skimming incident through forensic investigation costs, card reissuance and fraud recovery claims passed back through the acquirer, revised processing terms, and — if the relationship sours badly enough — the loss of the ability to accept cards. For a retailer or direct-to-consumer brand, that last outcome is not a compliance problem. It is a revenue stop. The specific terms sit in your merchant agreement, and they are worth reading rather than assuming.</p>
+
+<p>Cyber insurance has started to mirror this logic. Applications have moved from asking about control categories to asking about control specifics, and insurers can test those answers after a claim. My read, not legal advice: a company that attests to PCI compliance while running an unmanaged set of third-party scripts on its checkout page has created the same documentation gap in two contracts at once. The language that governs it is in your policy, and counsel should be the one interpreting it.</p>
+
+<h2>Four questions a 60-person retailer should be able to answer</h2>
+
+<p>This does not require a program. It requires an owner, and four answerable questions:</p>
+
+<ul>
+<li>Who maintains the inventory of every script that loads on our payment and checkout pages, and when was it last reconciled against what is actually in production?</li>
+<li>What mechanism tells us the checkout page changed without authorization, and who receives that alert on a Saturday?</li>
+<li>Is multi-factor authentication enforced on every account that can reach systems in scope, including the CMS, the tag manager, and the hosting console?</li>
+<li>When did we last confirm scope in writing, and did anyone check whether a new integration pulled a system back into it?</li>
+</ul>
+
+<p>The underlying work is unglamorous: identity hygiene, change detection, vendor inventory. It overlaps almost entirely with what a serious security program does anyway, which is why firms already running disciplined <a href="/managed-it-services">managed IT</a> tend to experience v4 as an exercise in documentation, and firms without it experience v4 as an exercise in archaeology.</p>
+
+<p>Worth naming plainly: detection matters more than paperwork. Script-based skimming is designed to be quiet and to persist. It gets found either because someone notices the page changed, or because an acquirer calls. Only one of those paths is cheap, and it depends on having an <a href="/it-help-desk">IT support</a> function that reads alerts rather than archiving them.</p>
+
+<h2>The decision behind the questionnaire</h2>
+
+<p>PCI DSS v4 did not get harder for its own sake. It relocated the obligation to where the attacks had already moved, and it assumed merchants would operate controls continuously rather than reconstruct them annually. For a Los Angeles business taking cards online, the executive decision is not which questionnaire to file. It is whether the controls behind that questionnaire have a named owner who runs them every week.</p>
+
+<p>If compliance currently lives in a folder rather than in an operating rhythm, that is the gap worth closing first. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999, and the pattern holds: merchants who handle PCI well are the ones who stopped treating it as an annual event. For a clear-eyed read on where your scope actually sits, start with our <a href="/cybersecurity-services">cybersecurity</a> team.</p>
+
+<div class="blog-cta-box">
+  <h2>Ready to talk to a real IT engineer?</h2>
+  <p>Pro Link Systems has been protecting and managing IT for Los Angeles businesses since 1999. Book a free 15-minute discovery call &mdash; no pressure, no obligation, no scripts.</p>
+  <div class="btn-group">
+    <a href="/managed-it-services" class="btn btn-navy">Book a Free Discovery Call</a>
+    <a href="tel:18008906133" class="btn btn-outline-navy">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+</div>
+</article>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <a href="/managed-it-services">Managed IT Services</a>
+      <a href="/services#helpdesk">24/7 Help Desk</a>
+      <a href="/services#cybersecurity">Cybersecurity</a>
+      <a href="/services#cloud">Cloud &amp; Infrastructure</a>
+      <a href="/services#dr">Disaster Recovery</a>
+      <a href="/services#consulting">IT Consulting</a>
+      <a href="/services#remote">Remote Workplace</a>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog/">Blog</a>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/legal">Legal / Terms</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-areas">
+    <h3>Areas We Serve</h3>
+    <div class="footer-areas-links">
+      <a href="/managed-it-services-los-angeles">Los Angeles</a>
+      <a href="/managed-it-services-downtown-los-angeles">Downtown LA</a>
+      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
+      <a href="/managed-it-services-tarzana">Tarzana</a>
+      <a href="/managed-it-services-west-hills">West Hills</a>
+      <a href="/managed-it-services-chatsworth">Chatsworth</a>
+      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
+      <a href="/managed-it-services-century-city">Century City</a>
+      <a href="/managed-it-services-west-los-angeles">West Los Angeles</a>
+      <a href="/managed-it-services-pasadena">Pasadena</a>
+      <a href="/it-support-burbank">Burbank</a>
+      <a href="/managed-it-services-studio-city">Studio City</a>
+      <a href="/managed-it-services-north-hollywood">North Hollywood</a>
+      <a href="/managed-it-services-santa-monica">Santa Monica</a>
+      <a href="/managed-it-services-culver-city">Culver City</a>
+      <a href="/managed-it-services-glendale">Glendale</a>
+      <a href="/managed-it-services-calabasas">Calabasas</a>
+      <a href="/managed-it-services-agoura-hills">Agoura Hills</a>
+      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
+      <a href="/managed-it-services-simi-valley">Simi Valley</a>
+      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
+      <a href="/managed-it-services-van-nuys">Van Nuys</a>
+      <a href="/managed-it-services-northridge">Northridge</a>
+      <a href="/managed-it-services-santa-clarita">Santa Clarita</a>
+      <a href="/managed-it-services-encino">Encino</a>
+      <a href="/managed-it-services-torrance">Torrance</a>
+      <a href="/managed-it-services-el-segundo">El Segundo</a>
+      <a href="/managed-it-services-long-beach">Long Beach</a>
+      <a href="/managed-it-services-irvine">Irvine</a>
+      <a href="/managed-it-services-orange-county">Orange County</a>
+      <a href="/managed-it-services-playa-vista">Playa Vista</a>
+      <a href="/managed-it-services-hollywood">Hollywood</a>
+      <a href="/managed-it-services-koreatown">Koreatown</a>
+      <a href="/managed-it-services-hawthorne">Hawthorne</a>
+      <a href="/managed-it-services-manhattan-beach">Manhattan Beach</a>
+      <a href="/managed-it-services-sun-valley">Sun Valley</a>
+      <a href="/managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
+      <a href="/managed-it-services-camarillo">Camarillo</a>
+      <a href="/managed-it-services-malibu">Malibu</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
+    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
+  </div>
+</footer>
+</body>
+</html>

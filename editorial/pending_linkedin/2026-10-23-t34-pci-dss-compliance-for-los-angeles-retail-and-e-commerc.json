@@ -1,0 +1,7 @@
+{
+  "slug": "2026-10-23-t34-pci-dss-compliance-for-los-angeles-retail-and-e-commerc",
+  "url": "https://prolinksystems.com/blog/2026-10-23-t34-pci-dss-compliance-for-los-angeles-retail-and-e-commerc",
+  "title": "PCI DSS Moved Into the Browser",
+  "summary": "Hosted checkout keeps card data off your servers, not your site out of PCI scope. PCI DSS v4 moved the obligation into the browser, where the scripts run.",
+  "caption": "A hosted checkout moved card data out of your systems. It never moved your website out of PCI scope.\n\nThe deadline for PCI DSS v4's future-dated requirements passed in March 2025. Payment pages now carry explicit obligations for script inventory and tamper detection, because skimming moved into the browser years before the standard did.\n\nMost executives still treat PCI as an annual form. The standard treats it as a continuous control set with a signature on top. Those are very different operating costs.\n\nThe useful question is not whether you are compliant. It is who in your company can name every third-party script loading on your checkout page, and when they last looked."
+}
