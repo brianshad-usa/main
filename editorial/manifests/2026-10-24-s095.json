@@ -1,0 +1,156 @@
+{
+  "post": "Picture a forty-person distributor hit on a Tuesday morning. The recovery plan ranks the servers. It does not rank the point-of-sale platform, the payroll service, or the ordering portal — because those are not servers. They belong to other companies.\n\nHalf of a modern recovery plan is a phone list.\n\nSo start by ranking the systems you own and can bring back yourself. Next, list the vendors you can only wait on, with the name of the person who calls each one. The hard part comes last: what the business does on paper for a few days, and which customers hear from you first.\n\nThat final decision is not technical. It belongs to the owner, and it is far easier to make before Tuesday.",
+  "headline": "You cannot restore a vendor",
+  "cta_label": "Review your restore order",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-10-24-s095-card.png",
+  "image_file_jpg": "2026-10-24-s095-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S095",
+  "core_idea": "A ranked restore list assumes you own the restore, and most of a 2026 mid-market stack is no longer yours to restore — so the real deliverable has three columns: what we bring back ourselves and in what order, what we can only wait on and who makes that call, and what the business runs by hand in the gap.",
+  "channels": {
+    "linkedin": "Ask a leadership team which systems they would bring back first after a ransomware event and most can rank them in twenty minutes. Billing. Payroll. Whatever takes orders.\n\nThen ask which of those they could actually restore themselves. The room goes quiet.\n\nA ranked restore list assumes you own the restore. Most mid-market stacks stopped working that way years ago. What the business actually runs on is a SaaS tenant, an identity provider, a payment processor, and the service accounts holding them together. A vendor is not something you restore. You wait, at their pace, on their status page.\n\nSo the version of this exercise worth an hour of executive time has three columns.\n\nOne: the systems we restore ourselves, in order. Identity leads — nothing else is usable until people can sign in, and after ransomware identity is rebuilt clean rather than restored from the environment that was encrypted.\n\nTwo: the systems we can only wait on. Name the vendor, and the person who makes the call. Know what recovery commitment you actually bought.\n\nThree: the work we run by hand in the gap. Which obligations get met on paper. Who gets a phone call first. What stops for a week. That column is not an IT decision, and it is the one executives are uniquely qualified to rank.\n\nIf you carry cyber insurance, expect the carrier's incident response firm and breach counsel to shape the sequence as well. A ranked list signed by your executive team is what you negotiate from. Without one, somebody else's default becomes your business priority.\n\nRank it. Sign it. Revisit it once a year.",
+    "facebook": "Picture a forty-person distributor hit on a Tuesday morning. The recovery plan ranks the servers. It does not rank the point-of-sale platform, the payroll service, or the ordering portal — because those are not servers. They belong to other companies.\n\nHalf of a modern recovery plan is a phone list.\n\nSo start by ranking the systems you own and can bring back yourself. Next, list the vendors you can only wait on, with the name of the person who calls each one. The hard part comes last: what the business does on paper for a few days, and which customers hear from you first.\n\nThat final decision is not technical. It belongs to the owner, and it is far easier to make before Tuesday.",
+    "gbp": "Most recovery plans rank servers. In a 2026 office, much of what the business runs on is not a server — it is a SaaS tenant, a payment processor, an identity provider. Those you cannot restore. You wait.\n\nA useful restore plan has three parts: the systems you bring back yourself, in order, starting with identity; the vendors you can only wait on, each with a named caller; and the work you run manually in between.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house, US-based, and operates 24/7. If you want a second set of eyes on your restore order, call us.",
+    "x": [
+      "Ask a leadership team which system comes back first after ransomware and you'll get a ranked answer in twenty minutes. Then ask which of those they could restore themselves. The room goes quiet.",
+      "A ranked restore list assumes you own the restore. Much of a 2026 stack is someone else's tenant — identity provider, payment processor, the platform that takes orders. A vendor is not something you restore. You wait, at their pace, on their status page.",
+      "So the list needs three columns: what we restore and in what order, what we can only wait on and who makes the call, and what the business runs by hand in between. The third column is the one only executives can rank."
+    ],
+    "instagram_caption": "A ranked restore list assumes you own the restore. For most mid-market companies, that assumption quietly stopped being true.\n\nThe modern version of the exercise has three columns: what you bring back yourself and in what order, what you can only wait on and who makes that call, and what the business runs by hand in the gap. The third column is the one only executives can decide.\n\nOne page. Signed. Revisited once a year.\n\n#cyberresilience #businesscontinuity #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "split",
+    "format": "single_image",
+    "ground": "split",
+    "layout": "split",
+    "register": "seasonal",
+    "channels": {
+      "linkedin": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "facebook": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "gbp": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "instagram": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "x": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 96,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP, Instagram CTA slide)",
+    "FACT(F001): the help desk operates 24/7 (GBP only)",
+    "FACT(F002): the help desk is in-house, not outsourced (GBP only)",
+    "FACT(F008): the help desk is US-based (GBP only)",
+    "ANALYSIS: recovery is sequential because storage, bandwidth and available responders are finite, so a de facto restore order always exists whether or not it is written down",
+    "ANALYSIS: a significant share of a mid-market technology stack is vendor-operated SaaS, which the customer cannot restore and can only wait on",
+    "ANALYSIS: identity services must be usable before most other systems are, and after a ransomware event the identity plane is typically rebuilt clean rather than recovered from the compromised environment",
+    "ANALYSIS: applications restored without their associated service accounts, API keys and automations will start but fail to exchange data",
+    "ANALYSIS: where cyber insurance is in force, breach counsel and a carrier-selected incident response firm are commonly involved in incident decision-making, including order of operations. No specific policy, carrier, or contractual requirement is asserted.",
+    "ANALYSIS: a formal sequencing exercise commonly exposes undocumented dependencies between systems",
+    "OPINION: the ranked restore order should be a one-page artifact signed by the executive team and revisited annually",
+    "OPINION: deciding what the business runs manually during the gap is an executive decision rather than an IT decision",
+    "ILLUSTRATIVE, NOT MEASURED: 'twenty minutes', 'an hour of executive time', 'a week', 'a few days' are rhetorical estimates of a planning exercise and an outage window, not research findings or measured figures",
+    "HYPOTHETICAL: the forty-person distributor in the Facebook post is an invented illustration. No Pro Link Systems client is named, described or implied anywhere in this package.",
+    "NO EXTERNAL STATISTICS CITED: no breach cost, downtime, ransomware frequency or recovery-time figure appears in any channel."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The entire package is load-bearing on a calendar gimmick. 'August is quiet' opens LinkedIn, Facebook, GBP, X and the Instagram caption — it is the same device five times, which violates the spirit of channel doctrine even though the words differ. Worse, it makes the asset disposable on September 1 and it is the one element any MSP could have written. The restore-sequencing idea is strong enough to stand without a seasonal excuse."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel has no organizing visual conceit even though the subject is literally ordering. Kickers are decorative labels ('The paper answer', 'Why order exists') when they should be the ranked sequence itself. The CTA slide is a credential dump — 1999, Woodland Hills, 24/7, in-house, US-based — none of which relates to restore sequencing, so it reads as an ad bolted to an editorial piece."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide text lengths swing from 0 to ~230 characters with no typographic rhythm, so a consistent grid cannot hold them. Slide 5's headline ('Identity first. Then whatever the business runs on.') carries two sentences and a period mid-headline, which breaks hierarchy at display size. Headlines should be single-clause at 6–11 words so the type system stays consistent across all eight frames."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The package equivocates between three different events: 'ransomware event' (core idea), 'everything went dark' (LinkedIn), and 'an outage' (Facebook, GBP). Those are materially different recovery problems. In a power or hardware outage you restore in business-priority order; after ransomware you cannot, because the identity plane and the backups themselves are suspect. Publishing them as interchangeable is an accuracy failure, not a wording one."
+    },
+    {
+      "role": "CIO",
+      "finding": "A ranked list of systems is only half the deliverable. The decision executives are actually uniquely qualified to make — what the business does manually during the gap, which obligations get met on paper, which customers get called first — is missing entirely. Without that column the exercise is still an IT artifact an executive signs rather than an executive decision."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Identity first' is stated as a restore step. After ransomware, identity is normally rebuilt clean rather than restored from the environment that was encrypted, and the draft's phrasing would lead a reader to restore a compromised directory. The draft also omits that service accounts, API keys and automations must come back with the application — a system restored without its machine identities opens, looks correct, and moves nothing."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in this package is specific to 2026. It would have published unchanged in 2014. The genuinely current fact is that a large share of a mid-market stack is no longer restorable by its owner at all — it is a SaaS tenant, an identity provider, a payment processor, plus the machine identities stitching them together. That reframes the whole exercise and it is absent."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'A sequencing exercise takes about an hour' is asserted twice as if measured, and 'September fills up fast' is soft sales pressure. An executive reading this learns the meeting is short but not what artifact lands on their desk or what they personally sign off on. Give them the deliverable shape, not the meeting duration."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X is a single 280-character post opening with the word 'August' — weak scroll-stop, and the idea plainly has progression (you own this / you cannot restore that / here is the third column), which is exactly the case where a short thread outperforms. Instagram's #ransomware is a high-volume, low-intent tag that attracts practitioners rather than owners."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'The loudest manager sets the order' appears in LinkedIn, Facebook and Instagram in near-identical form, and '3 a.m.' appears in four places. Repetition across channels reads as syndication, which is precisely what the publication premise rejects. Each channel should carry a different expression of the same idea."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Instagram slide 3 opens consecutive sentences with the same word ('Something comes back third. Something comes back eleventh.'), which the standards prohibit. The claims audit also mislabels estimates ('about an hour', 'the first few minutes') as OPINION when they are illustrative planning estimates, and labels the CTA-slide credentials correctly but does not flag the Facebook scenario as hypothetical, which matters given the no-client rule."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

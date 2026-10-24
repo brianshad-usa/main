@@ -2557,6 +2557,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-24",
+      "idea_id": "S095",
+      "theme": "ransomware",
+      "format": "carousel",
+      "title": "What gets restored first",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal",
+        "channels": {
+          "linkedin": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "facebook": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "gbp": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "instagram": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "x": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          }
+        }
+      }
     }
   ]
 }
