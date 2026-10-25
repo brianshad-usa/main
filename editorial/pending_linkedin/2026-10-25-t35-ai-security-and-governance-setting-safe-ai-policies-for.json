@@ -1,0 +1,7 @@
+{
+  "slug": "2026-10-25-t35-ai-security-and-governance-setting-safe-ai-policies-for",
+  "url": "https://prolinksystems.com/blog/2026-10-25-t35-ai-security-and-governance-setting-safe-ai-policies-for",
+  "title": "AI Governance Is a Permissions Problem",
+  "summary": "AI risk in most LA businesses is not policy failure. It is inherited permissions and unscoped agents, and the real fix comes before any policy document.",
+  "caption": "Ask an executive whether the company has adopted AI and you get a careful answer about pilots. Ask which software they already pay for shipped an AI feature this year, and the answer is all of it.\n\nYour vendors made the adoption decision. The permissions decision is still yours.\n\nAn assistant does not break access controls. It obeys them perfectly, at a speed no employee could match, which is why a decade of over-shared folders stops being dormant and becomes searchable.\n\nThe real work is not the policy document. It is knowing what your identities can reach, scoping agents as narrowly as you would scope a new hire, and being able to revoke one this afternoon.\n\nNew essay on what Los Angeles executives should fix before they write the policy."
+}
