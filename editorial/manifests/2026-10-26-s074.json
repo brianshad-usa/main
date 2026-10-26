@@ -1,0 +1,154 @@
+{
+  "post": "A CFO signs the Microsoft 365 renewal every year without a second thought. Inside that renewal are security features nobody ever switched on.\n\nThat isn't negligence. Buying licenses is a purchasing decision. Deploying what they contain is a project, and projects need an owner.\n\nSo the work is already paid for — except it isn't free. It costs admin hours, a change window, and a few weeks of people asking why sign-in looks different.\n\nStill the best value in security. Compare what your licenses include against what is actually configured, pick the two biggest gaps, and turn them on for a small pilot group first. Skipping the pilot is how a company locks its own leadership out of email on a Monday morning.",
+  "headline": "You already bought it. Nobody turned it on.",
+  "cta_label": "Talk to ProLink",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-10-26-s074-card.png",
+  "image_file_jpg": "2026-10-26-s074-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S074",
+  "core_idea": "Mid-size companies routinely hold Microsoft 365 security capability they never configured — and the gap matters more in 2026 because Copilot sits on top of the same unconfigured permissions and labeling. The purchase was approved last year; the real risk and the real work live in the rollout, not the invoice.",
+  "channels": {
+    "linkedin": "The cheapest security project available to most mid-size companies is already sitting on an invoice they signed last year.\n\nMicrosoft 365 licenses bundle capability. Turning that capability on is separate work — and separate work needs an owner, a change window, and someone willing to field the help desk calls it generates. So it quietly doesn't happen.\n\nThe gap is more expensive to ignore now than it was two years ago. Copilot deployments run on top of the same permissions and labeling that were never configured. The assistant doesn't create the exposure; it makes previously buried exposure easy to ask for in plain language. That is analysis, not a vendor claim — but it follows from how the product works.\n\nThree questions to put to your IT lead or your provider. Not three tasks for you.\n\nWhich SKUs are we actually paying for — by license type, not headcount? A mixed estate is normal: premium seats bought for one project, a long tail of basic seats, licenses still assigned to people who left. Those last ones are not a refund opportunity. They are active identities in your directory.\n\nFor the tiers we hold, what is licensed versus what is configured? Capability varies by tier, which is why step one comes first. Microsoft Secure Score gives a starting read — treat it as a prompt list, not a grade. Its weighting reflects Microsoft's model of risk, not yours.\n\nWhat breaks when we turn it on? This is the real question and the one that gets skipped. Conditional Access is usually the first control worth deploying, because identity is the point nearly everything else depends on. It is also the fastest way to lock your own executive team out of email. Report-only mode first. Break-glass accounts excluded and tested before anything enforces.\n\nThe budget was approved last year. The risk is in the rollout.",
+    "facebook": "A CFO signs the Microsoft 365 renewal every year without a second thought. Inside that renewal are security features nobody ever switched on.\n\nThat isn't negligence. Buying licenses is a purchasing decision. Deploying what they contain is a project, and projects need an owner.\n\nSo the work is already paid for — except it isn't free. It costs admin hours, a change window, and a few weeks of people asking why sign-in looks different.\n\nStill the best value in security. Compare what your licenses include against what is actually configured, pick the two biggest gaps, and turn them on for a small pilot group first. Skipping the pilot is how a company locks its own leadership out of email on a Monday morning.",
+    "gbp": "Before your next Microsoft 365 renewal, run one comparison: what your licenses include versus what is actually turned on.\n\n1. Export the license report from the admin center and read it by SKU, not headcount. A license still assigned to a departed employee is also an account still assigned to them. The identity problem matters more than the refund.\n\n2. For the tiers you hold, list the included security features and check which are configured. Microsoft Secure Score is a fair starting read.\n\n3. Run new policies in report-only mode and pilot with a small group before anything goes company-wide.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. If step three makes you nervous, that is the correct instinct.",
+    "x": [
+      "Licensing is a purchasing decision. Deployment is a project. Most mid-size companies are paying for Microsoft 365 security capability that no one was ever assigned to switch on.",
+      "Read the license report by SKU, not headcount. List what your tier includes. Compare it against what is configured. Secure Score is a useful prompt list — its weighting reflects Microsoft's model of risk, not yours.",
+      "Then the part everyone skips. Report-only mode. Break-glass accounts excluded and tested. Pilot group before the company. Conditional Access rolled out carelessly is the fastest way to lock your own executives out of email."
+    ],
+    "instagram_caption": "The gap between what you license and what you've configured used to be a budget inefficiency. With Copilot in the environment, it's a data question.\n\nThis carousel walks the comparison: read your license report by SKU rather than headcount, list what your tier actually includes, check what's configured — then treat the rollout as the hard part, because it is. Report-only mode. Break-glass accounts tested. Pilot before production.\n\n#Microsoft365 #ITLeadership #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "tip_banner",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "banner",
+    "register": "how_to",
+    "channels": {
+      "linkedin": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "facebook": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "gbp": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "instagram": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "x": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999 (GBP, Instagram slide 8 footer).",
+    "FACT (public product knowledge): The Microsoft 365 admin center provides a license report showing assigned SKUs.",
+    "FACT (public product knowledge): Microsoft Secure Score reports on security configuration posture and applies Microsoft's own weighting to recommendations.",
+    "FACT (public product knowledge): Conditional Access supports report-only mode, and Microsoft documents excluding emergency access (break-glass) accounts from policies.",
+    "FACT (public product knowledge, stated conditionally): Microsoft 365 tiers include capabilities requiring configuration; the package explicitly states capability varies by tier rather than asserting any specific SKU contents.",
+    "FACT (public product knowledge): Microsoft 365 Copilot operates within the user's existing permissions, so its retrieval reflects configured access and labeling.",
+    "ANALYSIS (labeled in-copy): Licensing is a purchasing decision while deployment is a separate project that often lacks an owner, change window and budget line.",
+    "ANALYSIS (labeled in-copy): The licensed-versus-deployed gap carries more consequence once an AI assistant makes existing access easy to query.",
+    "ANALYSIS: Licenses still assigned to departed staff indicate active directory identities, not merely recoverable cost.",
+    "OPINION: Conditional Access is the best first deployment candidate because identity is the control point other controls depend on.",
+    "OPINION: Report-only mode, tested break-glass exclusions, and a pilot group are the correct rollout sequence.",
+    "No industry statistics, breach costs, incidents, vulnerabilities, regulations, deadlines, client references, certifications, partnerships, or ProLink capabilities beyond F012 are claimed anywhere in the package. No blocked facts (F006, F009, F010, F011) appear.",
+    "No banned phrasing present. No duplicated sentences across channels. Zero hashtags on LinkedIn, Facebook, GBP and X; three on Instagram."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The Instagram asset is a single slide carrying a three-step numbered process in the body — exactly the case the standards say should default to a carousel. The strongest-performing, most saveable format for this idea was forfeited. Also, the package had no 2026 hook; 'audit your licenses' is a 2019 idea unless it is tied to something happening now."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The core idea is inherently visual — licensed capability versus deployed capability is a two-column comparison — and the draft contains no visual thinking at all. The concept was written as copy and then dropped into a frame. Revised into an eight-slide sequence with an editorial diagram at the center."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The one slide violated the visual standard directly: a numbered list of three multi-clause steps set as a paragraph becomes tiny text in a square frame. Each slide now carries one idea, a short headline, and at most two lines of body, with explicit art direction per slide so the carousel reads as a system rather than eleven sentences split across cards."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Advanced email protections' and 'data labeling and retention' were listed as though every tier includes them, which edges toward a product claim we cannot verify per SKU. Revised to say capability varies by tier and the point of step one is to find out which tier you hold — accurate and more useful."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft skipped the only part that is actually hard. Conditional Access deployed without report-only mode, excluded-and-tested break-glass accounts, and a staged pilot is the fastest way to lock an executive team out of email on a Monday. A package that recommends CA without naming that risk reads as written by someone who has never run the change. This is now the center of the piece."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Two problems. Secure Score was presented as a neutral read; its weighting reflects Microsoft's model of risk, not the organization's — it is a prompt list, not a grade. And license reclamation from departed staff was framed as a cost recovery when the real finding is an active identity still in the directory. Both corrected."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft had no reason to exist in 2026 specifically. The licensed-versus-deployed gap matters more now because Copilot rollouts sit on the same permissions and labeling that were never configured — the assistant does not create exposure, it surfaces exposure that already existed. That connection is now the 'why it matters' beat and is labeled as analysis."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Someone in finance can start them this week' was wrong and mildly condescending. Finance can pull an invoice; nobody in finance is exporting SKU reports from the admin center. Executives want the questions to ask, not tasks to perform. LinkedIn is restructured as three questions for an IT lead or provider."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread opener leaned on 'most mid-size companies own more capability than they have deployed,' which is soft. The post one now leads with the sharpest compression in the package. Post three carries the operational warning, which is the line most likely to be quoted."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'A licensing audit is a security audit wearing an accounting costume' appeared verbatim in both LinkedIn and X, breaching the never-the-same-text-twice rule and cheapening the best line in the package. It now appears once, and nowhere else."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Facebook called the fix 'unglamorous and free.' It is not free — it costs admin hours and a change window, and claiming otherwise undercuts the credibility of everything around it. Fixed, and the honest cost is now part of the argument. GBP also exceeded nothing but ran loose; tightened to 680 characters."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
