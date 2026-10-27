@@ -1,0 +1,153 @@
+{
+  "post": "Picture a two-hour outage on a Tuesday morning. Service is back by 10:40. By the standard calculation, that incident cost two hours.\n\nThe team is not actually caught up until Thursday.\n\nThat gap is what the math leaves out. Orders taken on paper get re-entered. Records get reconciled. Systems that normally talk to each other have to be checked for the hours they spent out of sync, because automated steps keep running whether or not the data behind them arrived. Tuesday's deliverable goes out Thursday, and the customer notices the delay without ever hearing the word outage.\n\nSo after the next incident, ask a second question. Not how long were we down. How long until we were genuinely current again.\n\nThose two numbers are rarely close, and the second one shrinks fast when the first one is short.",
+  "headline": "Measure to caught up, not to back online",
+  "cta_label": "See our support model",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/managed-it-services",
+  "image_file": "2026-10-27-s148-card.png",
+  "image_file_jpg": "2026-10-27-s148-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S148",
+  "core_idea": "The real cost of downtime is the recovery tail after service returns — and in 2026 that tail is longer, because the catch-up is no longer retyping orders but reconciling the systems and automations that kept running without their inputs. The management fix is two timestamps per incident.",
+  "channels": {
+    "linkedin": "Most downtime calculations stop the moment the system comes back up.\n\nThe standard method is tidy: hours offline times loaded labor. Defensible, easy to put in a board deck, incomplete.\n\nThree costs sit outside that window.\n\nRecovery labor. Work captured on paper or in a side spreadsheet has to be re-entered, reconciled and verified afterward, by the people who were already behind.\n\nMissed commitments. A Tuesday deliverable that slips to Thursday does not leave the ledger. It moves, and something moves behind it.\n\nReputational drag. That one is analysis, not measurement — there is no clean number for it. The client who waited an extra day rarely complains. They quietly reduce how much they depend on you.\n\nTwo things have lengthened that tail.\n\nWork is more interconnected than it was five years ago. The catch-up is no longer retyping orders; it is finding the gaps left by integrations and automated workflows that kept executing on stale or missing data, often without raising an error.\n\nAnd when the cause is a security incident rather than a failed disk, restoration is the early part of the job. Validating what was altered, resetting access, and answering counsel and an insurer all happen after service is technically back.\n\nA more honest method costs nothing to adopt: record two timestamps per incident — when service returned, and when the work was genuinely current again. Report the distance between them to the same audience that sees the outage duration.\n\nResilience is not measured when service returns. It is measured when the work is current again.",
+    "facebook": "Picture a two-hour outage on a Tuesday morning. Service is back by 10:40. By the standard calculation, that incident cost two hours.\n\nThe team is not actually caught up until Thursday.\n\nThat gap is what the math leaves out. Orders taken on paper get re-entered. Records get reconciled. Systems that normally talk to each other have to be checked for the hours they spent out of sync, because automated steps keep running whether or not the data behind them arrived. Tuesday's deliverable goes out Thursday, and the customer notices the delay without ever hearing the word outage.\n\nSo after the next incident, ask a second question. Not how long were we down. How long until we were genuinely current again.\n\nThose two numbers are rarely close, and the second one shrinks fast when the first one is short.",
+    "gbp": "After the next outage, ask your team a second question. Not how long were we down — how long until we were actually caught up. The re-entry, the reconciliation, the integrations that spent the morning out of sync: that work lands after service is restored and almost never appears in a report. It also scales with the length of the interruption, which is why how fast you reach a human matters more than it looks on paper. Our help desk is in-house and US-based, phones answered live, with average ticket resolution time under an hour. Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Downtime cost is usually calculated as hours offline times loaded labor. That is the floor, not the total. The rest arrives after service returns: re-entering work, reconciling systems that fell out of sync, delivering Tuesday's commitment on Thursday.",
+      "Record two timestamps for every incident: when service came back, and when the work was genuinely current again. Report the distance. That gap is what nobody budgets for, and it scales with how long the interruption lasted."
+    ],
+    "instagram_caption": "Picture a two-hour outage on a Tuesday. The team is caught up on Thursday.\n\nThat distance is the part of downtime nobody budgets for: re-entering work, reconciling systems that ran out of sync, moving commitments that were already promised. The tail is longer than it used to be, because automated steps keep executing on stale or missing data and the errors surface days later.\n\nAnd when the cause is a security incident, restoration is the early part of the job — validating what was altered comes after.\n\nA more honest calculation measures to the moment the work is current again. Record both timestamps. Report the distance.\n\n#BusinessContinuity #ITStrategy #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "stat",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "stat_hero",
+    "register": "stat_insight",
+    "channels": {
+      "linkedin": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "facebook": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "gbp": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "instagram": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "x": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 91,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "FACT(F005): average ticket resolution time is under an hour — GBP only, phrased as a bound, scoped explicitly to help-desk tickets so it cannot be read as a major-incident restoration claim",
+    "FACT(F002 + F008): in-house, US-based help desk — GBP only",
+    "FACT(F007): phones answered live by the in-house team — GBP only",
+    "FACT(F012): Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999 — GBP only",
+    "ANALYSIS: the standard downtime calculation (hours offline x loaded labor) is a floor, not a total",
+    "ANALYSIS: recovery labor, missed commitments and reputational drag land after service is restored and are typically unbudgeted",
+    "ANALYSIS: the recovery tail has lengthened because interconnected systems and automated steps continue executing on stale or missing data, producing errors that surface later",
+    "ANALYSIS: when the cause is a security incident, restoration precedes validation, access resets and insurer/counsel obligations",
+    "ANALYSIS: the recovery tail scales with the length of the interruption",
+    "RECOMMENDATION: record and report two timestamps per incident",
+    "OPINION, labeled in-copy: reputational drag is real but not cleanly measurable",
+    "HYPOTHETICAL SCENARIO, explicitly framed with 'Picture': the two-hour Tuesday outage with Thursday catch-up. No client named, implied, or described",
+    "NO industry statistics, breach costs, downtime figures or research findings cited — none supplied in the brief"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The under-an-hour metric appears on all five channels, including twice on Instagram. Repeating a single proof point everywhere converts a publication-grade idea into a vendor spot. Cut it to the one channel where service claims belong (GBP), where local buyers are actually evaluating a provider."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept is strong but the package never names the artifact it is giving the reader. 'Two timestamps per incident' is a protocol — it should be the repeatable, nameable thing the audience takes away, reinforced identically across channels and captured in checklist_items (currently empty)."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Instagram slide 3 carries three labeled costs plus explanations in one body block — that is a paragraph of small type, exactly what the visual standard forbids. The three costs should be three short stacked lines that a designer can set as a typographic list; the explanation belongs in the caption or on separate slides."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft could have been written in 2016. Nothing in it reflects why the recovery tail is longer in 2026: work now moves through integrations and automations that keep running without their inputs, so catch-up is reconciliation and gap-hunting, not retyping. That reasoning needs to be in the body, not implied."
+    },
+    {
+      "role": "CIO",
+      "finding": "F005 is a help-desk ticket metric. Attaching it to an outage-recovery narrative implies ProLink restores major incidents in under an hour — a category error and an overclaim by juxtaposition. Where it is used it must read 'average ticket resolution time', in a help-desk context, not as the resolution of the downtime argument."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The piece treats downtime as a generic infrastructure failure. The most consequential multi-hour outages are security incidents, where 'service restored' is furthest from 'work current' — validation of what was altered, credential resets, counsel and insurer obligations all follow restoration. Omitting that leaves the strongest version of the argument on the table."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No weakness from forced AI insertion — correctly absent. The real gap is adjacent: automated and agentic workflows that execute on stale or missing data during an interruption create silent downstream errors that surface days later. One sentence of that, framed as analysis, earns the 2026 register without manufacturing AI urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft diagnoses but does not hand over anything an executive can run on Monday. 'Record two timestamps and report the distance' needs to be stated as an instruction with the specific post-incident fields, or this is an interesting observation rather than a usable management practice."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The second X post is a product line, not a progression — it fails the 'thread only when progression adds value' test. Replace it with the operational instruction so the thread earns its second beat and the save-worthy content sits in the tweet people quote."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Serious trust exposure: the Facebook opener ('The server came back at 10:40 on a Tuesday morning') reads as a recounted client incident. The standards prohibit naming, implying, or describing a customer situation. The scenario must be explicitly framed as hypothetical on every channel where it appears."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Record two timestamps... When service returned. When the work was genuinely current again.' puts two consecutive sentences on the same opening word — a banned construction. Also 'frequently exceeds the outage itself' asserts a frequency with no source; it should be reasoned, not quantified by implication."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
