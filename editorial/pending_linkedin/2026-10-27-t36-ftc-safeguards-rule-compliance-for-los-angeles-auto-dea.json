@@ -1,0 +1,7 @@
+{
+  "slug": "2026-10-27-t36-ftc-safeguards-rule-compliance-for-los-angeles-auto-dea",
+  "url": "https://prolinksystems.com/blog/2026-10-27-t36-ftc-safeguards-rule-compliance-for-los-angeles-auto-dea",
+  "title": "Your Breach Notice Is Now Public Record",
+  "summary": "The FTC's 2024 Safeguards amendment turned breach notices into public record. The exposure is no longer an audit — it is what lenders and insurers can read.",
+  "caption": "Most dealer principals picture Safeguards Rule risk as a regulator with a clipboard. That is the wrong picture.\n\nSince the FTC's amended rule took effect in May 2024, a covered financial institution that discovers a security event involving the unencrypted information of 500 or more consumers has 30 days to report it to the Commission — and under the rule those reports go into a publicly available database.\n\nYour floorplan lender can read it. So can a cyber insurer pricing your renewal, and the buy-side team running diligence on your group.\n\nThe control that decides whether you file is encryption, and the customer information most likely to sit unencrypted is never in the system of record. It is in mailboxes, scan folders, and backup copies nobody inventoried — now joined by the AI tools a department adopted without a service provider review.\n\nCompliance stopped being a defense against examination. It became a decision about what the market gets to look up."
+}
