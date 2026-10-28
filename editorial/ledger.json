@@ -2789,6 +2789,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-28",
+      "idea_id": "S065",
+      "theme": "identity",
+      "format": "carousel",
+      "title": "What an attacker does in the first hour after a login",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          }
+        }
+      }
     }
   ]
 }

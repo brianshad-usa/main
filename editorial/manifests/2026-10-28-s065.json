@@ -1,0 +1,177 @@
+{
+  "post": "Your controller signs into Microsoft 365 on a Tuesday. The sign-in works. It also works for someone else, because a phishing page relayed a live session two weeks ago and the MFA prompt was approved by your controller.\n\nNothing gets encrypted. No ransom note arrives. A rule quietly files anything containing the word \"invoice\" into a folder nobody opens, a connected app is approved so access survives a password change, and copies of incoming mail begin flowing to an outside address.\n\nThen the waiting. Fraud is scheduled for whenever a genuine payment thread appears.\n\nMost people miss what comes next: resetting the password undoes none of that. Containment means cutting active sessions, removing the app consent, checking which MFA methods are registered, and deleting the rule nobody wrote.\n\nWorth asking your IT team which of those four actually happens.",
+  "headline": "A password reset is not containment",
+  "cta_label": "See our security services",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/what-does-a-vcio-do",
+  "image_file": "2026-10-28-s065-card.png",
+  "image_file_jpg": "2026-10-28-s065-card.jpg",
+  "theme": "identity",
+  "idea_id": "S065",
+  "core_idea": "Most email intrusions now begin with a stolen session rather than a stolen password, which makes the standard response — reset the password — not containment at all. The first hour is administrative persistence work: a mailbox rule, a consent grant, a second authenticator, outbound forwarding. The executive-grade insight is knowing the five actions that actually end the intrusion, and knowing who performs them at 2am.",
+  "channels": {
+    "linkedin": "Most email intrusions do not begin with a guessed password. They begin with a session, captured by a relay page sitting between your controller and a real Microsoft sign-in screen. MFA was satisfied. It was satisfied by the person it was meant to protect.\n\nWhat happens next is administrative, not dramatic.\n\nA rule gets created that files anything matching \"invoice\" or \"wire\" into a folder nobody opens. Consent is granted to a connected app, which keeps reading mail after any password change. Then a second authenticator is registered, so the intruder no longer needs the stolen session at all. Forwarding points somewhere outside the tenant. After that, nothing — sometimes for weeks — until a payment thread appears worth hijacking.\n\nThat sequence is analysis of common business email compromise tradecraft, not an account of any specific incident.\n\nThe executive consequence sits in the gap. Access happens now. Loss is scheduled for later.\n\nWhich is why \"we reset the password\" is not an answer. Containment means revoking active sessions and refresh tokens, removing the consent grant, auditing MFA methods and registered devices, deleting the rules the user never wrote, and reviewing what else the account reached. Skip one and the intruder is still sitting inside a mailbox you believe you have recovered.\n\nThree questions worth putting to your IT lead this week:\n\nWho sees an alert for a new forwarding rule at 2am?\n\nHow quickly can we revoke every active session for one user?\n\nWould we know if a second authenticator had been added to the CFO's account last month?\n\nIf any answer takes longer than a sentence, that is the finding.",
+    "facebook": "Your controller signs into Microsoft 365 on a Tuesday. The sign-in works. It also works for someone else, because a phishing page relayed a live session two weeks ago and the MFA prompt was approved by your controller.\n\nNothing gets encrypted. No ransom note arrives. A rule quietly files anything containing the word \"invoice\" into a folder nobody opens, a connected app is approved so access survives a password change, and copies of incoming mail begin flowing to an outside address.\n\nThen the waiting. Fraud is scheduled for whenever a genuine payment thread appears.\n\nMost people miss what comes next: resetting the password undoes none of that. Containment means cutting active sessions, removing the app consent, checking which MFA methods are registered, and deleting the rule nobody wrote.\n\nWorth asking your IT team which of those four actually happens.",
+    "gbp": "A stolen Microsoft 365 session does not announce itself. In the first hour an intruder does administrative work: a mailbox rule that hides invoice replies, an app consent that survives a password reset, a second authenticator registered quietly, forwarding pointed outside the company. Fraud comes later, when a real payment thread appears.\n\nPractical note for Los Angeles owners: a password reset is not containment. Sessions have to be revoked, consent grants removed, MFA methods and registered devices reviewed.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. The help desk is in-house, US-based and staffed 24/7, with an average ticket first-response time of 15 minutes.",
+    "x": [
+      "Most email intrusions start with a stolen session, not a stolen password. MFA was satisfied, by the victim, on a page that relayed it. Then comes paperwork: a rule hiding anything saying \"invoice,\" a consent that outlives the reset, a second authenticator registered quietly.",
+      "So the password reset that follows is not containment. Containment is revoking sessions and refresh tokens, removing the consent grant, auditing MFA methods and registered devices, deleting the rule nobody wrote. Miss one and you still have a guest."
+    ],
+    "instagram_caption": "The first hour after an account takeover is administrative. No encryption, no ransom note — a mailbox rule that hides invoice replies, a consent grant that keeps reading mail after the password changes, a second authenticator registered quietly, forwarding pointed outside the company.\n\nThe loss is scheduled for later, when a real payment thread appears. Which is why a password reset, on its own, resolves nothing.\n\nAnalysis of common business email compromise tradecraft, not an account of any specific incident.\n\nPro Link Systems. Serving Los Angeles businesses from Woodland Hills since 1999.\n\n#identitysecurity #microsoft365 #losangelesbusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-10-28-s065-01.png",
+      "2026-10-28-s065-02.png",
+      "2026-10-28-s065-03.png",
+      "2026-10-28-s065-04.png",
+      "2026-10-28-s065-05.png",
+      "2026-10-28-s065-06.png",
+      "2026-10-28-s065-07.png",
+      "2026-10-28-s065-08.png"
+    ],
+    "jpg": [
+      "2026-10-28-s065-01.jpg",
+      "2026-10-28-s065-02.jpg",
+      "2026-10-28-s065-03.jpg",
+      "2026-10-28-s065-04.jpg",
+      "2026-10-28-s065-05.jpg",
+      "2026-10-28-s065-06.jpg",
+      "2026-10-28-s065-07.jpg",
+      "2026-10-28-s065-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photo_light",
+    "format": "carousel",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "client_value",
+    "channels": {
+      "linkedin": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "facebook": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "gbp": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "instagram": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "x": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 93,
+      "hook_strength": 95,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: many email account takeovers now begin with a relayed session rather than a guessed password, meaning an MFA prompt was approved by the legitimate user",
+    "ANALYSIS: intruders with mailbox access commonly create rules that hide invoice or wire-related mail",
+    "ANALYSIS: an approved OAuth application consent can retain mailbox access after a password reset",
+    "ANALYSIS: registering an additional MFA method is a common persistence step that removes dependence on the original stolen credential or session",
+    "ANALYSIS: quiet external forwarding allows continued visibility without further sign-ins",
+    "ANALYSIS: in business email compromise the financial loss typically occurs later than the intrusion, creating a response window",
+    "ANALYSIS: containment requires session and refresh token revocation, consent removal, MFA method and device review, rule deletion, and activity review — a password reset alone does not achieve it",
+    "FACT(F001): the Pro Link Systems help desk operates 24/7",
+    "FACT(F002): the help desk is in-house, not outsourced",
+    "FACT(F003): average ticket first-response time is 15 minutes (metric named in full)",
+    "FACT(F008): the help desk is US-based",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "NO STATISTICS cited about threat prevalence, breach cost, or attacker dwell time — no named primary source was supplied in the brief",
+    "NO CAPABILITY CLAIM: removed prior draft language implying ProLink detection, alerting, or monitoring services, which are not in verified_facts.json",
+    "OPINION: the quality of an identity response program is best measured by who answers the 2am alert, not by the toolset"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft sells before it teaches. LinkedIn ends on a help-desk paragraph, Facebook ends on a pitch, X post 2 is pure advertisement, and Instagram carries promotional copy on both slide 7 and slide 8 — effectively two CTAs, which the standards forbid. The distinctive asset here is operational knowledge, not response-time metrics; the metrics should appear once, in the channels where service claims belong (GBP, IG CTA slide)."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Card headline 'We catch the mailbox rule you never made' asserts a detection capability that does not appear in verified_facts.json. The verified facts cover help desk availability, staffing, and response speed — not security monitoring, alerting, or SOC operations. The LinkedIn and Facebook narratives ('An alert fires... a technician picks up') carry the same implied capability. This is a hard-rule violation and must be rewritten so ProLink claims stay inside the file and the incident sequence is described as what good containment looks like generally."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The tradecraft is dated by one generation. Framing the intrusion as 'a stolen password' misses the dominant 2026 pattern: an adversary-in-the-middle relay page capturing a live session, with MFA satisfied by the victim. The draft also omits the two persistence moves that matter most — registration of an additional MFA method and device registration — and never states the operationally important conclusion: a password reset, by itself, is not containment."
+    },
+    {
+      "role": "CIO",
+      "finding": "Nothing in the draft is actionable by an internal IT team. There is no containment sequence, no audit surface named (inbox rules, enterprise app consents, MFA method registration, device registration), and no test an executive can run on their own organization. checklist_items is empty, which wastes the one field built for saveability."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Fact/analysis labeling is inconsistent — LinkedIn carries a full disclaimer sentence mid-post, Instagram carries a footer on one slide only, and Facebook and GBP carry none while making the same generalized claims. Labeling should be light, consistent, and placed where the generalization is made."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells me a bad thing happens quietly and that someone should watch for it. It does not tell me what to ask on Monday. Without three specific questions I can put to my IT lead, this is interesting reading rather than something I act on or forward."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is a list of statements rather than a narrative with a turn. Slides 2–6 all operate at the same emotional register. The piece needs a pivot slide — the moment the reader realizes the obvious remedy is the wrong one — which is where the swipe-through retention is actually earned."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide bodies run 25–35 words, which forces small type and kills hierarchy. Slide 3 is the natural diagram — a sequence of four persistence actions on a timeline — but it is written as prose. Body copy trimmed to roughly 20 words per slide; slide 3 restructured as four parallel items for typographic treatment; slide 4 built as a two-term comparison."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No weakness of manufactured AI urgency — correctly avoided. One genuine 2026 point is missing and worth a single clause: credential-relay phishing is now effective against users who do everything right, which is why the mental model of 'the user fell for something' no longer predicts who gets compromised."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 2 kills the thread. The first post is shareable; the second converts it into an ad and suppresses it. Replace with the genuine second beat — that the reset is not containment — so the thread earns its second post."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Multiple violations of the consecutive-sentence-opening rule: 'The intrusion happens now. The theft is scheduled for later.' appears in both LinkedIn and X, and Instagram slide 4's headline repeats it. Facebook's proposed 'Here is the part most people miss' is a variant of the banned 'here's the thing'. Draft LinkedIn's closing line ('in a sentence') is opaque and was cut."
+    },
+    {
+      "role": "Ultimate test",
+      "finding": "The draft failed it: any MSP could publish a quiet-attacker story that ends in a help-desk pitch. The revision passes on a specific, contestable claim most MSP content gets wrong — that password reset is not containment — plus a named five-action containment sequence and three questions an executive can use to find the gap in their own organization."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
