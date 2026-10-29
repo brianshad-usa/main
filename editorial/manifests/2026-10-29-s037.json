@@ -1,0 +1,155 @@
+{
+  "post": "A vendor your bookkeeper has paid for six years emails on a Friday afternoon. Updated bank details, invoice attached, same signature block, same thread she replied to last month. Nothing about it looks wrong, because nothing about it was built to look wrong.\n\nThe question is not whether she can spot it. It is whether she is allowed to stop and call.\n\nFour requests should always get a phone call first: a change to payment details, payment by crypto, gift card or same-day wire, a password or MFA reset outside the usual path, and urgency that arrives with a request to keep things quiet.\n\nUse the number you already had on file. Whoever wrote the email also chose the number inside it.\n\nTell your team you would rather be interrupted on a Friday than spend Monday on the phone with your bank.",
+  "headline": "Four requests that should never be approved by email alone",
+  "cta_label": "See our approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-10-29-s037-card.png",
+  "image_file_jpg": "2026-10-29-s037-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S037",
+  "core_idea": "Four requests should never be approved on the strength of the message that carried them — a change to payment details, payment on an irreversible rail, a credential or MFA re-enrollment outside the normal path, and urgency paired with secrecy. The callback is the control, and it works not because the voice on the line is trustworthy but because the recipient chose the number, which is the one part of the exchange the sender cannot control.",
+  "channels": {
+    "linkedin": "Most finance teams have never been told out loud whether they are allowed to stop a payment and call the CEO to check.\n\nSo the decision gets made in the moment, by whoever happens to be holding the request, against a message that looks entirely normal.\n\nTreating that as a judgment call is the mistake. Judgment is exactly what the attack is built to defeat — a live thread, the right names, the right tone, and, now that a voice can be cloned from a recorded panel talk, a familiar voice on the line. Those signals have become among the cheapest parts of the job. (Analysis, not forecast. The capability already exists.)\n\nFour requests should trigger a callback, whoever appears to have sent them.\n\n1. A change to payment details — bank, routing, remittance address.\n2. Payment on an irreversible rail — crypto, gift cards, same-day wire.\n3. A password, MFA re-enrollment, or new authenticator device requested outside the normal path.\n4. Urgency paired with secrecy. \"Keep this between us until it closes\" is a tell, not a courtesy.\n\nTwo of those move money. One moves access. The fourth is how the other three get past a second person.\n\nCallback means a number your company already had — the vendor master, the internal directory. The number printed in the message was chosen by whoever sent it.\n\nAn executive's job here is small. Put it in writing that verifying with you will never be treated as an insult, then behave that way the first time someone interrupts you to ask. The request that beats you will claim to come from the one person nobody calls back.",
+    "facebook": "A vendor your bookkeeper has paid for six years emails on a Friday afternoon. Updated bank details, invoice attached, same signature block, same thread she replied to last month. Nothing about it looks wrong, because nothing about it was built to look wrong.\n\nThe question is not whether she can spot it. It is whether she is allowed to stop and call.\n\nFour requests should always get a phone call first: a change to payment details, payment by crypto, gift card or same-day wire, a password or MFA reset outside the usual path, and urgency that arrives with a request to keep things quiet.\n\nUse the number you already had on file. Whoever wrote the email also chose the number inside it.\n\nTell your team you would rather be interrupted on a Friday than spend Monday on the phone with your bank.",
+    "gbp": "Ask your finance team this week whether anyone has ever stopped a payment to call and confirm it with you — and what happened to them when they did.\n\nFour requests should always trigger a callback to a number you already had on file: a change to vendor bank details, payment by crypto, gift card or same-day wire, a credential or MFA reset outside the normal path, and urgency that arrives with a request for secrecy. Never the number printed in the message itself.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. If you want a second opinion on how your approval path holds up under pressure, we are glad to walk through it.",
+    "x": [
+      "A familiar voice used to be a usable identity check. Cloned from a recorded panel talk, it is now one of the cheapest things in the attack. The callback still works — not because the voice is trustworthy, but because you picked the number.",
+      "Four requests should trigger a callback, whoever sent them:\n\n1. A change to payment details.\n2. Crypto, gift cards, or same-day wire.\n3. A password, MFA re-enrollment, or new device, off the normal path.\n4. Urgency paired with secrecy.",
+      "Two of those move money. One moves access. The fourth is how the other three get past a second person. \"Keep this between us until it closes\" is a tell, not a courtesy.",
+      "Your company already has the right number: vendor master, HR record, internal directory. Whoever sent the message also chose the number inside it. Replying to the thread only confirms the attacker to themselves.",
+      "Put the callback step inside the vendor-change form and the privileged-reset workflow, so it is logged rather than remembered. A memo degrades under pressure. A required field does not.",
+      "Then the uncomfortable part. The identity most worth impersonating is the one nobody feels entitled to call back. If verification stops at the executive floor, it is not a control."
+    ],
+    "instagram_caption": "Ask your finance team whether anyone has ever stopped a payment to call and confirm it with you — and what happened to them when they did. Four requests should always trigger a callback: a change to payment details, payment on an irreversible rail, a credential or MFA re-enrollment outside the normal path, and urgency that arrives with a request for secrecy. Always to a number you already had on file. Whoever sent the message also chose the number inside it.\n#BusinessEmailCompromise #CyberResilience #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "editorial_light",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "centered",
+    "register": "question",
+    "channels": {
+      "linkedin": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "facebook": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "gbp": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "instagram": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "x": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 94,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: fraudulent requests increasingly arrive inside legitimate-looking threads with correct names and tone, so familiarity is not a reliable identity signal. No volume, frequency, or loss figure is asserted.",
+    "ANALYSIS: voice cloning from publicly available recordings means a recognizable voice no longer functions as identity verification. Stated as existing capability, explicitly labeled analysis rather than forecast in the LinkedIn copy and on the Instagram slide.",
+    "OPINION: verification by individual judgment is the wrong control; a short, procedural rule embedded in a workflow is the right one.",
+    "ANALYSIS: the four request types named — payment detail changes, irreversible payment rails, out-of-band credential/MFA re-enrollment, and urgency paired with secrecy — are the categories that warrant mandatory callback verification. Presented as reasoned categorization, not as a research finding.",
+    "ANALYSIS: crypto, gift cards, and same-day wire are practically irreversible, which is why they are requested. No recovery-rate figure is claimed.",
+    "ANALYSIS: an attacker who can reach the credential reset path does not require the password. Mechanism statement, no incident or vendor research cited.",
+    "ANALYSIS: callbacks must use a number already held in the organization's own records, because contact details inside the message are controlled by the sender.",
+    "OPINION: a verification policy that exempts senior executives will fail, because the exempt identity is the most valuable one to impersonate.",
+    "RECOMMENDATION: embed the callback as a required, logged field in the vendor-master change form and privileged-reset workflow.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used in GBP and on the Instagram CTA slide only.",
+    "No external statistics, named incidents, vulnerabilities, regulations, deadlines, or research findings are cited. No client is named, implied, or described. No certification, partnership, or compliance status is claimed."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package violates channel doctrine on duplication. The LinkedIn opener, the X thread's first post, and the card headline are near-identical variations of 'Would your controller call back, or just process it?' — and the closing line 'A verification rule the CEO is exempt from is not a rule' appears verbatim in LinkedIn, X, and the Instagram takeaway. Four channels delivering the same two sentences reads as syndication, not editorial. Each channel needs its own entry point and its own closing line."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram caption ends with 'Swipe through' — a mechanical directive that the hook slide should already be earning. It also stacks two CTAs (caption directive plus CTA slide). Separately, the slide taxonomy 'Trigger one and two' / 'Trigger three and four' is an arbitrary pairing with no idea inside it; the grouping exists only to fit the slide count. The four triggers have a real structure (two move money, one moves access, one is the pressure mechanism that defeats the second approver) and that structure should drive the carousel."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Seven slides with no dedicated insight slide means the sharpest idea in the concept — why a callback actually works — never gets its own frame. Slide bodies also run to three sentences in places, which pushes toward paragraph-of-tiny-text territory. Bodies should cap at roughly 30 words so typography can carry hierarchy, and the kickers should function as a consistent labeling system rather than ad-hoc captions."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'What changed is not the fraud. Payment fraud no longer arrives looking suspicious' contradicts itself inside two sentences — the reader is told nothing changed, then told what changed. The intended point is that the request category is old but the cost of faking its identity signals has collapsed. Say that directly. Also, 'That is analysis, not prediction' is correctly disciplined but awkwardly placed mid-paragraph; it reads as a tic rather than a label."
+    },
+    {
+      "role": "CIO",
+      "finding": "The guidance stops at 'tell people to call back,' which is a memo, not a control. A memo degrades under pressure. The missing operational instruction is to put the callback step inside the vendor-master change form and the privileged-reset workflow so it is logged and auditable rather than remembered. Without that, the post describes a cultural aspiration an operator cannot implement on Monday."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Two accuracy and currency problems. First, 'gift cards or crypto' is a 2019-era BEC signature; the 2026 version of 'irreversible instrument' is crypto, gift cards, and same-day/instant wire rails, which is where the real exposure sits. Second, 'a password, MFA, or access reset' underspecifies the live 2026 attack — the target is MFA re-enrollment and new-authenticator-device registration through the help desk, not the password. Both should be named precisely. The four triggers are otherwise sound and nothing in the draft states an unsourced statistic."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The voice-cloning point is handled responsibly but stops one step short of the insight. The useful executive takeaway is not 'voices can be faked' — it is that a callback never relied on recognizing anyone in the first place. It works because the recipient selects a channel the sender does not control. Framing it that way makes the rule survivable against whatever synthesis capability arrives next, rather than tying it to today's clone quality."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Tell your team you would rather be interrupted than reimbursed' is a good rhythm with a wrong word — reimbursement implies the money comes back, which quietly undercuts the entire argument for prevention. Also, the exemption problem is stated as a principle but never explained: the reason an exempt CEO breaks the rule is that the CEO is the identity most worth impersonating. State the mechanism, not the maxim."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread's first post cannot stand alone as a quotable unit because it is a setup that depends on post two for payoff — and it duplicates LinkedIn's opening. The most screenshot-able line in the package (the callback works because you chose the number) is buried. Lead the thread with the compressed insight, then enumerate."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "cta_label 'Talk to ProLink' is a contact prompt attached to cta_type LEARN_MORE pointing at a service page — a small mismatch that reads as vendor-default rather than considered. Also, checklist_items is empty on a concept whose entire value is a four-item checklist; that is the single most saveable artifact in the package left unbuilt."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three mechanical violations. 'Not the number in the message. Not the number in the signature block.' opens consecutive sentences with the same word in both LinkedIn and X. 'Call the vendor contact... Call the executive...' repeats the fault on the Instagram callback slide. LinkedIn also runs approximately 1,600+ characters, at or past the ceiling. Em-dash density is high enough across LinkedIn and Instagram to flatten the rhythm."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
