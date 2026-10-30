@@ -2905,6 +2905,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-30",
+      "idea_id": "S190",
+      "theme": "creative_surprise",
+      "format": "comparison",
+      "title": "The most useful security investments are the least impressive",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist",
+        "channels": {
+          "linkedin": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "facebook": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "gbp": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "instagram": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "x": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          }
+        }
+      }
     }
   ]
 }

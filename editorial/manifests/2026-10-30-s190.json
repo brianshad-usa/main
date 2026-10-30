@@ -1,0 +1,152 @@
+{
+  "post": "A vendor you have paid for years emails new bank details. Same signature block, same tone, nothing odd in the wording. The invoice gets paid, because nothing looked wrong.\n\nConfirming by phone used to settle it. Voice cloning changed that, so the call now has to go the other direction — you dial the number already on file, never one supplied in the message.\n\nThat is the shape of the controls that work hardest. Cheap, repetitive, mildly annoying, and sitting exactly where the money leaves the building.\n\nUnglamorous and ineffective are not the same thing.",
+  "headline": "Do these four before buying anything else",
+  "cta_label": "Walk the list with us",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-10-30-s190-card.png",
+  "image_file_jpg": "2026-10-30-s190-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S190",
+  "core_idea": "Ranked by risk reduced per dollar, the security moves that matter most are cheap, repetitive habits that demo badly — and the way to find out whether you actually have them is to ask for evidence they ran last month.",
+  "channels": {
+    "linkedin": "Sort security spending by risk reduced per dollar and the order comes out close to upside down from the way it gets sold.\n\nFour items sit near the top. Nobody builds a demo around any of them.\n\nPhishing-resistant MFA on email and administrator accounts — passkeys or hardware keys, not an app prompt someone approves while distracted. Most companies that believe they have MFA have the second kind.\n\nOffboarding that revokes sessions and third-party app grants, not just the directory account. Disabling a user does not reliably end a live token.\n\nOne restore you have personally watched run to completion, on the system you would actually need back.\n\nA callback before any payment detail changes, placed outbound to a number you already had on file. Voice confirmation stopped being confirmation.\n\nAnalysis, not fact: these get skipped for organizational reasons rather than technical ones. A platform purchase is one decision with a number and a renewal date attached. Offboarding is work somebody repeats every month, forever. Approving budget is easier than assigning ownership.\n\nSo the useful question before the next renewal is not what the tool detects.\n\nAsk who performs each of these, how often, and what evidence shows it ran last month. If the answer is a name plus a record, the control exists. Anything else is paperwork.\n\nThe items that would have changed the outcome are usually the ones nobody wanted to present.",
+    "facebook": "A vendor you have paid for years emails new bank details. Same signature block, same tone, nothing odd in the wording. The invoice gets paid, because nothing looked wrong.\n\nConfirming by phone used to settle it. Voice cloning changed that, so the call now has to go the other direction — you dial the number already on file, never one supplied in the message.\n\nThat is the shape of the controls that work hardest. Cheap, repetitive, mildly annoying, and sitting exactly where the money leaves the building.\n\nUnglamorous and ineffective are not the same thing.",
+    "gbp": "A practical way to sequence security spending for an LA business: order by risk reduced per dollar, not by how the product demos.\n\nFour items usually come first. Passkeys or hardware keys on email and admin accounts. Offboarding that revokes sessions and app tokens the same day, not just the account. One restore watched end to end by a person. A callback to a number already on file before any payment detail changes.\n\nBuying these is easy. Owning them every month is the hard part. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999, with an in-house, US-based help desk. Ask us to walk the list with you.",
+    "x": [
+      "Most security budgets are sorted by sophistication. Risk is sorted by how ordinary the failure is. Those two orders rarely match, which is why the highest-return control in a lot of companies is a passkey on the email account of whoever approves payments.",
+      "Test for whether a control is real: who performs it, how often, and what evidence shows it ran last month. A name plus a record means it exists. Anything else is paperwork. Most of the distance between security spending and security sits in that gap."
+    ],
+    "instagram_caption": "Ranked by risk reduced per dollar, the best security investments are the ones nobody wants to present: passkeys on the accounts that matter, offboarding that kills sessions and tokens, one restore someone actually watched finish, and an outbound callback before money moves. The test of whether you have them is not the policy. It is whether anyone can show you they ran last month.\n\n#CyberSecurity #ITLeadership #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "checklist",
+    "format": "single_image",
+    "ground": "cream",
+    "layout": "checklist",
+    "register": "checklist",
+    "channels": {
+      "linkedin": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "facebook": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "gbp": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "instagram": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "x": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 92,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: ranking security controls by risk reduced per dollar produces a different order than vendor messaging",
+    "ANALYSIS: passkeys/hardware keys on email and admin accounts, offboarding that revokes sessions and app tokens, a watched restore, and an outbound payment-change callback are among the highest-value low-cost controls",
+    "TECHNICAL (no source required, general product behaviour): push-approval MFA is not phishing-resistant; disabling a directory account does not reliably terminate live sessions or third-party app grants. Stated as capability description, not as research finding, and with no figures attached.",
+    "ANALYSIS (no statistic, no named source): voice confirmation is no longer sufficient verification, which is why the callback must be outbound to a number already on file. No cost, prevalence, or incident number asserted.",
+    "ANALYSIS: common incident starting points at mid-sized companies include stolen credentials, dormant accounts, untested backups, and invoice redirection",
+    "ANALYSIS (labelled in-copy on LinkedIn and Instagram): cheap controls are skipped for organizational reasons — ongoing ownership — rather than technical ones",
+    "OPINION: the right pre-renewal question is who performs the control, how often, and what evidence exists that it ran last month",
+    "OPINION: the controls that would have changed the outcome are usually the ones nobody wanted to present",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP and Instagram CTA slide)",
+    "FACT(F002 + F008): the help desk is in-house and US-based (GBP only, used once, attached to the ownership argument rather than as a standalone boast)",
+    "NO STATISTICS CITED: no industry, breach-cost, downtime, or threat-landscape numbers used, per hard rules",
+    "NO CLIENT REFERENCE: prior phrasing 'most gaps we see' removed from Instagram slide 5 as implied client observation"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft argues that unglamorous controls win, then never gives the executive a way to verify whether they actually have them. Without a test, the post is a list — and lists of basics are the most commoditized asset in this category. The 'who performs it, how often, what evidence exists it ran last month' line was the strongest asset in the package and it was buried in paragraph five of one channel. It should be a pillar of the idea across channels."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Two lines are reused verbatim across channels — 'Unimpressive is not the same as ineffective' (Facebook and Instagram takeaway) and 'Budget is easier to approve than ownership' (LinkedIn and Instagram). Channel doctrine says each channel gets the best expression of the idea, never the same text twice. Reuse also flattens the perceived editorial effort."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package specifies no visual system at all — seven slides of kicker/headline/body with no direction means the designer defaults to generic. The concept is literally a ranking inversion, which is a diagram waiting to happen: two stacked lists, one sorted by how a product sells, one sorted by risk reduced per dollar, with connecting lines crossing. Added explicit visual direction so the carousel is recognizable before the logo."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The Instagram hook says 'the four best security buys' but three of the four are not purchases — offboarding discipline, a tested restore, and a callback rule are process, not procurement. That imprecision undercuts the whole argument, which is precisely that the best moves are not buys. Headline rewritten."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Remove access the day someone leaves' is where every CIO stops believing a generic post. Disabling the directory account does not necessarily terminate live sessions, refresh tokens, or third-party OAuth grants, and it does nothing to SaaS apps bought outside SSO. Specifying session and token revocation is the difference between advice an IT director nods at and advice they forward."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Turn on phishing-resistant MFA' reads as a toggle, and most companies that believe they have MFA have push-approval MFA, which is not phishing-resistant. The post must name the distinction — passkeys or hardware keys versus an app prompt someone approves while distracted — or it quietly tells a reader they are already covered when they are not."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Nothing in the draft places the advice in 2026. The callback rule in particular needs its modern justification: voice confirmation is no longer confirmation, which is exactly why the call must go outbound to a number already on file rather than inbound from whoever contacted you. Without that turn, the control sounds like 2016 wire-fraud advice. Also avoided manufacturing AI urgency elsewhere — the other three controls do not need an AI angle and did not get one."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells an executive what is good but not what to ask for. Executives do not implement controls; they request evidence. Reframing the close around an artifact — a name plus a record from last month — converts the post from reading material into something usable in the next leadership meeting."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X thread was a list dump: post two added items, not progression, which is exactly the case where the standard says do not thread. Also the LinkedIn, GBP and X openers were near-identical sentences, so anyone following ProLink on two platforms sees the same first line twice. Rewrote X to enter from a different angle and gave post two a genuine turn. Caption also carried two CTAs ('Save the list' plus the CTA slide); reduced to one."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Instagram slide five said the ownership gap 'explains most gaps we see' — that implies client observation in an automated asset, which brushes against the rule on implying clients. Removed. Separately, the package had no legitimate ProLink proof point attached to its actual thesis; ownership of recurring work is exactly where the in-house, US-based help desk (F002, F008) is relevant, so it appears once, in GBP, and nowhere else."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn opened consecutive sentences with 'A' ('A restore you have personally watched...' / 'A standing rule that...'), violating the repeated-opener rule; the revision was checked line by line for the same fault, including the new X copy. Also fixed: 'end to end' used inconsistently, the Facebook scenario defaulted to a gendered 'she' for the bookkeeper with no narrative reason, and GBP ran close to the 700-character ceiling before the added proof point."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
