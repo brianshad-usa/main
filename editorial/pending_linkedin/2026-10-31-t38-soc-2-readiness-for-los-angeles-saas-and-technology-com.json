@@ -1,0 +1,7 @@
+{
+  "slug": "2026-10-31-t38-soc-2-readiness-for-los-angeles-saas-and-technology-com",
+  "url": "https://prolinksystems.com/blog/2026-10-31-t38-soc-2-readiness-for-los-angeles-saas-and-technology-com",
+  "title": "SOC 2 Readiness Is an Operations Problem",
+  "summary": "A clean SOC 2 opinion says you did what you said you would do, not that you are secure. Why readiness is an IT operations decision, not a compliance one.",
+  "caption": "The sharpest question an enterprise buyer asks about your SOC 2 report is not whether you have one.\n\nIt is which subservice organizations you carved out, and what the report expects the customer to do about them. The reflex to reach for the PDF is itself the finding.\n\nAutomated evidence platforms made a clean Type II far easier to produce than it used to be. So sophisticated buyers stopped reading the opinion letter and started reading the scope, the exceptions, and the subprocessor list. In 2026 that list doubles as your AI governance document, because the model provider behind your new feature sits inside your system boundary whether or not you described it there.\n\nAlmost every control an auditor tests is ordinary IT operations with a paper trail. Access approvals. Offboarding. Log review. Restore testing. Change management that covers model and prompt changes, not just code.\n\nIf the only thing that changes is that you now own a PDF, you bought the wrong thing."
+}
