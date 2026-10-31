@@ -2963,6 +2963,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-10-31",
+      "idea_id": "S243",
+      "theme": "continuity",
+      "format": "scenario",
+      "title": "The backup ran every night and restored nothing",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "facebook": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "gbp": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "instagram": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "x": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          }
+        }
+      }
     }
   ]
 }
