@@ -1,0 +1,7 @@
+{
+  "slug": "2026-11-01-t39-ccpa-and-cpra-data-privacy-compliance-for-california-bu",
+  "url": "https://prolinksystems.com/blog/2026-11-01-t39-ccpa-and-cpra-data-privacy-compliance-for-california-bu",
+  "title": "A CCPA Deletion Request Tests Your Data",
+  "summary": "California privacy compliance now turns on data architecture, not policy text. Why deletion requests, AI indexes and ad pixels expose where records live.",
+  "caption": "Ask where one customer's personal data lives. You will get a list. Ask whether the list is complete, and you will get a pause.\n\nThat pause is your actual privacy posture.\n\nA California deletion request is not a form to process. It is an unannounced audit of your data architecture with a clock attached, and it reaches systems nobody mapped — the AI assistant indexing an over-shared drive, the meeting transcript procured by a sales leader, the ad tag that passes an identifier without any money changing hands.\n\nThe test worth running costs nothing. Submit a privacy request against your own company, with real personal data, and time it. Whatever you cannot find or cannot prove you deleted is the gap someone else will document later.\n\nPrivacy in California has quietly become an infrastructure capability wearing a legal label."
+}
