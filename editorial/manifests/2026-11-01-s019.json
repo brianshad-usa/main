@@ -1,0 +1,174 @@
+{
+  "post": "A 70-person design firm renews a national account. The packet looks familiar except for one page: which AI tools does your team use, does our data go into them, who approved that, and does a person review what you send us?\n\nThat page did not exist a few years ago. Large companies wrote AI rules for themselves first, and those rules are now travelling down to the suppliers they buy from.\n\nThe useful part is that this begins as a writing exercise, not a software purchase. One page listing each approved tool, who owns it, what data it touches, and when it was last reviewed. Whoever answers your vendor paperwork should hold that page. IT supplies the facts.\n\nAnd the question most firms are least ready for is the last one — whether a human checks the work before it ships.",
+  "headline": "The vendor questionnaire has a new page",
+  "cta_label": "How we work with LA businesses",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/services",
+  "image_file": "2026-11-01-s019-card.png",
+  "image_file_jpg": "2026-11-01-s019-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S019",
+  "core_idea": "Enterprise buyers are pushing their internal AI policy questions down to smaller suppliers, and the question that catches suppliers out is not which tools they use but whether the work they deliver is machine-generated and human-reviewed. A one-page written record turns that section of the vendor packet from a hurdle into a reason to be approved.",
+  "channels": {
+    "linkedin": "Vendor questionnaires are growing a new section, and it asks about AI.\n\nCall this analysis rather than forecast. Large enterprises spent the past two years writing internal AI policy, and a policy that stops at your own payroll has an obvious hole in it. The next place those questions travel is outward — to the firms touching their data, their code, their customer records.\n\nFor a 20 to 500 seat supplier in Los Angeles, that looks like homework. It is closer to an opening.\n\nFive questions cover most of what gets asked:\n\nWhich AI tools are approved here, and who approved them?\nDoes our data go into them, and is it used to train anything?\nWho has access, and can you show it?\nWhat happens to those tools when an employee leaves?\nIs any of what you deliver to us produced with AI, and does a person review it first?\n\nThat last one surprises people. It matters most when the work product is writing, design, or code — and it is the question a tooling inventory does not answer.\n\nNone of this starts as a technology project. The mechanisms are usually already in place: app consent settings, conditional access, sign-in logs, the leaver step in your identity platform. Missing is the written record — tool, business owner, data it touches, date approved, date to review. One page, kept current, owned by whoever answers vendor paperwork. IT supplies the facts.\n\nWorth noting which tool is hardest to govern: the one nobody provisioned. A personal account opened with a work email never shows up in offboarding, because it was never tied to corporate identity to begin with.\n\nAnswer early and the questionnaire stops being a hurdle. It becomes the reason you were the easy supplier to approve.",
+    "facebook": "A 70-person design firm renews a national account. The packet looks familiar except for one page: which AI tools does your team use, does our data go into them, who approved that, and does a person review what you send us?\n\nThat page did not exist a few years ago. Large companies wrote AI rules for themselves first, and those rules are now travelling down to the suppliers they buy from.\n\nThe useful part is that this begins as a writing exercise, not a software purchase. One page listing each approved tool, who owns it, what data it touches, and when it was last reviewed. Whoever answers your vendor paperwork should hold that page. IT supplies the facts.\n\nAnd the question most firms are least ready for is the last one — whether a human checks the work before it ships.",
+    "gbp": "If your business supplies a larger company, expect an AI section in your next vendor review. Enterprise buyers have finished writing internal AI policy, and extending the same questions to suppliers is the natural next step. That is our read on the direction, not a deadline.\n\nWorth putting on one page before anyone asks: which AI tools are approved, who approved them, what data they touch, who has access, and whether anything you deliver is AI-produced and human-reviewed. The mechanisms usually exist already in Microsoft 365 and your identity platform. The written record is what is missing.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Happy to talk through what belongs on that page first.",
+    "x": [
+      "Internal AI policy stops at your own payroll. That gap is why the questions are now moving outward, into vendor questionnaires. Analysis, not forecast: suppliers who can say which AI tools are approved here, and who approved them, will clear procurement faster.",
+      "The question smaller suppliers are least ready for is not about tools. It is: does anything you deliver to us get produced with AI, and does a person review it before it ships? A tooling inventory does not answer that. Put the answer in writing before a buyer asks for it."
+    ],
+    "instagram_caption": "Enterprise AI policy is moving outward. Having written the internal rules, large buyers are starting to put the same questions to their suppliers — and the one that catches firms out is not about tools at all.\n\nAnalysis rather than forecast. The practical version is a single page: each approved AI tool, who owns it, what data it touches, when it was approved, when it gets reviewed. The mechanisms are mostly already in Microsoft 365 and your identity platform. The record is what is missing.\n\nSwipe for the five questions worth answering before anyone asks.\n\n#AIGovernance #Procurement #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-11-01-s019-01.png",
+      "2026-11-01-s019-02.png",
+      "2026-11-01-s019-03.png",
+      "2026-11-01-s019-04.png",
+      "2026-11-01-s019-05.png",
+      "2026-11-01-s019-06.png",
+      "2026-11-01-s019-07.png"
+    ],
+    "jpg": [
+      "2026-11-01-s019-01.jpg",
+      "2026-11-01-s019-02.jpg",
+      "2026-11-01-s019-03.jpg",
+      "2026-11-01-s019-04.jpg",
+      "2026-11-01-s019-05.jpg",
+      "2026-11-01-s019-06.jpg",
+      "2026-11-01-s019-07.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "ground": "gold",
+    "layout": "left_block",
+    "register": "positive",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 90,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Large enterprises have spent recent years writing internal AI policy and are beginning to extend those questions to suppliers through vendor questionnaires. Labelled as analysis in LinkedIn, GBP and the IG caption; no date, volume or percentage attached.",
+    "ANALYSIS: A supplier able to document its AI practices reads as more mature in a procurement review when price and capability are comparable. Framed as a buying preference, explicitly not a regulatory requirement.",
+    "OPINION: The output question (is the deliverable AI-produced and human-reviewed) is the one smaller suppliers are least prepared for. Stated as judgment in LinkedIn, X and the IG slide footer; no research cited.",
+    "ANALYSIS: Preparing for these questions is primarily a documentation exercise rather than a technology purchase. The prior draft's 'takes an afternoon' time estimate has been removed as unverifiable.",
+    "QUALITATIVE PLATFORM REFERENCE: App consent settings, conditional access, sign-in logs and identity-platform leaver processes are described as generally available mechanisms in Microsoft 365 and identity platforms. No version, SKU, configuration claim, or ProLink capability is asserted.",
+    "ANALYSIS: Tools signed up for on personal accounts with a work email are not covered by identity-based offboarding. Stated as a structural observation, not an incident.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Used once in GBP and once in the Instagram CTA slide.",
+    "NO STATISTICS: No industry figure, breach cost, adoption rate, percentage or dated deadline appears anywhere in the package.",
+    "NO CLIENT REFERENCE: The 70-person design firm in the Facebook post is an explicitly illustrative scenario. No ProLink client is named, implied, or described. Blocked facts F006, F009, F010 and F011 are not used.",
+    "AUDIT CORRECTION: The previous audit referenced a 'firm-in-Burbank' scenario that appeared nowhere in the package. That line has been removed."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The single strongest commercial claim — \"most of your competitors cannot answer this yet\" — is repeated in all five channels. It is an opinion carrying the weight of a fact, and repeating it five times turns the package into one assertion wearing five outfits. It should appear once or twice, framed as judgment, with each channel carrying a different load-bearing idea."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is eight slides because the template has eight. Slides 3 (\"why it matters\") and 4 (\"the good news\") make the same competitive-advantage argument twice in a row, which kills swipe momentum at exactly the midpoint. Merge them and let the deck run seven."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 5 packs four questions into a single running paragraph — the exact \"paragraph of tiny text\" the visual standard prohibits. The questions are a numbered list and should be set as one, with short lines, so the slide reads as a designed index rather than a text block."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The epistemic hedge appears in every channel (\"analysis rather than forecast\", \"not a prediction with a date attached\", \"our analysis of the direction, not a warning\", \"analysis, not prophecy\"). Labelling is a discipline, not a tic; four variants of the same disclaimer read as defensiveness. Keep it where the sentence genuinely needs it and delete it where the prose already signals judgment."
+    },
+    {
+      "role": "CIO",
+      "finding": "\"Many of the controls already exist inside Microsoft 365 and your identity platform\" is hand-waving to the person who would actually own this. Name the mechanisms — app consent settings, conditional access, sign-in and audit logs, the leaver step in the identity platform — and name the artifact that is missing (tool, owner, data class, approval date, review date). Without that, the post asserts the work is easy without showing why."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package treats AI governance purely as a sales asset and never states the risk being governed. The offboarding question is also imprecise: the dangerous tools are the ones signed up for with a work email on a personal account, which never appear in an offboarding checklist because they were never tied to corporate identity. One sentence of that precision raises the credibility of the whole piece."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The four questions are an inventory-and-access frame — 2024 thinking. The question large buyers increasingly put to suppliers is about output, not tooling: is any of what you deliver to us machine-generated, and does a human review it before it ships. Omitting that makes the list feel authoritative and incomplete at the same time."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "\"Takes an afternoon\" is glib and the reader will not believe it; worse, nothing says who inside a 70-person company owns this. Executives do not act on advice without an owner attached. Say that whoever answers vendor paperwork holds the page and IT supplies the facts, and drop the time estimate."
+    },
+    {
+      "role": "Cybersecurity Expert (second pass)",
+      "finding": "No weakness in the claims themselves — the package cites no statistic, incident, vulnerability, regulation or deadline, and the only ProLink fact used is F012. That part is clean."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The two X posts are a thread without progression; post one is an abstraction (\"enterprise AI policy stops at the company's own payroll\") that does not survive out of context in a feed. Also, checklist_items is empty — the five questions are the single most saveable object in the package and the field built to carry them was left blank."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The CTA furniture is generic: card_headline (\"Answering AI questions early can win you work\") and cta_label (\"See how we help\") could sit under any MSP's post. The brand-distinguishing move is specificity about the artifact — name the one page and its five fields. The 1999/Woodland Hills fact should support the close, not be the close."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Two defects. First, the IG takeaway slide opens consecutive sentences with \"You\" (\"You stop being... You become...\"), which the standards forbid. Second, the claims_audit references a \"firm-in-Burbank\" scenario that does not exist anywhere in the package — a stale audit line that would fail a trust review on its own."
+    },
+    {
+      "role": "Ultimate test (full board)",
+      "finding": "The draft could, with light rewriting, have been published by any competent MSP: the four questions are the standard list and the conclusion is the standard conclusion. The revision addresses this by inverting the frame to procurement advantage, adding the output/human-review question most supplier checklists omit, naming the specific identity-offboarding blind spot, and specifying the five-field page itself. That combination is not generic MSP output."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
