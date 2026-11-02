@@ -1,0 +1,167 @@
+{
+  "post": "Two companies lose billing on the same Tuesday. Both are back online in three hours. One has to re-enter a morning of work. The other has to re-enter four days, because nobody ever asked how often the data was captured — only how fast the system restarts.\n\nSame outage. Same recovery speed. Very different quarter.\n\nSo \"how fast can we be back\" is only half the question. The other half is how much work the company is willing to do twice. Those are two separate numbers, and they carry two separate prices.\n\nBoth answers belong to the people who run billing, scheduling and client files, not to IT. Ask them during planning, write the hours down, and read the technology budget against those hours instead of against headcount. Easier meeting to run. Far easier decision to defend a year later.",
+  "headline": "Your recovery numbers exist. Nobody signed them.",
+  "cta_label": "Review next year's plan",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-11-02-s145-card.png",
+  "image_file_jpg": "2026-11-02-s145-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S145",
+  "core_idea": "Most companies already own the better budget unit — recovery time and recovery point objectives — but IT wrote them and no one with a P&L ever signed them; meanwhile the per-seat unit is decaying as AI agents and service accounts detach both cost and exposure from headcount.",
+  "channels": {
+    "linkedin": "Most IT budgets are argued in dollars per seat — easy to compare, easy to approve, and increasingly disconnected from what the money buys.\n\nPer-seat pricing answers one question: what it costs to keep one person working. It answers none of the questions a CFO has to defend after something breaks. How long can we run with billing down? What comes back first?\n\nThe unit is also decaying. Analysis, not fact: a growing share of the bill attaches to things that are not people — metered compute, service accounts, AI agents that hold licenses and run on usage-based pricing, SaaS bought by a department. Those accounts carry credentials too. Headcount predicts less of your cost, and less of your exposure, each year.\n\nThe better unit already has names. Recovery time objective and recovery point objective: how fast back, how much work redone. In most companies both exist, buried in a backup appendix, written by IT, never ratified by anyone who owns a P&L. The defect is not absence. It is that the business never signed them.\n\nSo move the pen. Take the four or five processes that bring money in or keep you legal. Have the executive who owns each one name the hour an outage stops being painful and becomes irreversible — a missed filing, a customer who does not come back, penalty language that triggers.\n\nThen read every line against those hours. Most spend survives. A few get cut. Occasionally the cheapest item on the page is the reason the number is bad.\n\nOne caution: an untested recovery number is a forecast, not a constraint.\n\nCompare vendors in dollars per seat. Decide in hours.",
+    "facebook": "Two companies lose billing on the same Tuesday. Both are back online in three hours. One has to re-enter a morning of work. The other has to re-enter four days, because nobody ever asked how often the data was captured — only how fast the system restarts.\n\nSame outage. Same recovery speed. Very different quarter.\n\nSo \"how fast can we be back\" is only half the question. The other half is how much work the company is willing to do twice. Those are two separate numbers, and they carry two separate prices.\n\nBoth answers belong to the people who run billing, scheduling and client files, not to IT. Ask them during planning, write the hours down, and read the technology budget against those hours instead of against headcount. Easier meeting to run. Far easier decision to defend a year later.",
+    "gbp": "Ask your IT provider for the recovery time and recovery point objectives on your billing system. Then check who approved them. Often these numbers are set by whoever configured the backup rather than by the executive who answers for a missed filing or a penalty clause.\n\nBefore next year's budget locks, have the owner of each critical process state two things: the hour at which an outage stops being painful and becomes irreversible, and how much work the business is willing to redo. Then read the budget against those hours.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Bring the draft and we will read it with you.",
+    "x": [
+      "Cost per seat is a procurement number pretending to be a risk number. It prices one person working. It says nothing about how long the company survives with billing down.",
+      "The better unit already has a name, and you probably already own it: recovery time objective, recovery point objective. How fast back, how much work redone. The problem is rarely that they don't exist. It's that IT wrote them and nobody with a P&L ever signed them.",
+      "Analysis, not data: the seat is decaying as a unit. More of the bill attaches to things that aren't people — metered compute, service accounts, AI agents holding licenses. They carry credentials too. Headcount predicts less of your cost, and less of your exposure, each year.",
+      "One caution. A recovery number nobody has tested is a forecast, not a constraint. The moment you find out is never a good moment to find out."
+    ],
+    "instagram_caption": "Per-seat cost is a fine way to compare quotes and a poor way to decide what a business needs. It prices a person working, not a company surviving. And the seat is decaying as a unit, because more of the bill now attaches to metered compute, service accounts and AI agents that no headcount predicts. The better unit already has a name. Most companies already own recovery time and recovery point objectives — almost nobody has had an executive sign them. Fixing that takes an afternoon.\n\n#ITBudget #ITLeadership #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "split",
+    "format": "single_image",
+    "ground": "split",
+    "layout": "split",
+    "register": "seasonal",
+    "channels": {
+      "linkedin": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "facebook": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "gbp": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "instagram": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "x": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 92,
+      "originality": 96,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 94,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "DEFINITIONAL: recovery time objective and recovery point objective are standard, widely used business-continuity terms. Used only as definitions (time to running; work redone). No standard, framework or authority is cited as endorsing the argument around them.",
+    "ANALYSIS: per-seat pricing expresses the cost of keeping a user working and does not express the business's tolerance for outage",
+    "ANALYSIS (labelled in-copy on LinkedIn, X post 3 and IG slide 4): a growing share of IT spend and risk attaches to non-human consumers of technology — metered compute, service accounts, AI agents holding licenses — so headcount is a weakening proxy for both cost and exposure. Stated as observation. No figure, no growth rate, no source implied.",
+    "ANALYSIS: non-human accounts hold credentials and therefore carry exposure. Stated as a general property of service and agent identities, not as a measured finding.",
+    "OPINION: recovery objectives are a better budgeting unit than cost per seat",
+    "OPINION/ANALYSIS: in most organisations recovery objectives are authored by IT and never ratified by a business owner. Stated as an observation about common practice, with hedging language ('often', 'usually', 'in most companies'). No prevalence figure claimed.",
+    "OPINION: the tolerance number should be written by the executive who owns the process rather than by IT",
+    "OPINION: an untested recovery number should be treated as a forecast rather than a constraint",
+    "ANALYSIS: when budget lines are tested against recovery requirements most survive, some are cut, and some low-cost items prove to be the limiting factor (labelled as analysis on IG slide 7)",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP and IG CTA slide only)",
+    "NO STATISTICS USED. No industry, breach, downtime, cost or adoption figures appear in any channel. No client named or implied. No certification, partnership or capability claimed.",
+    "REMOVED IN ROUND 2: the implied claim that 'budget in hours of recovery' is a novel framework — now correctly attributed to existing RTO/RPO practice, with the original argument relocated to the ratification gap.",
+    "CARRIED FROM ROUND 1: seasonal/fiscal-calendar claim removed; replaced with lead-time framing."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is a competent budgeting-frame post, but nothing in it is specific to 2026 or to ProLink's point of view. Strip the logo and any MSP, bookkeeping firm, or BCP consultant could have shipped it. The package needs a second, harder leg that only someone watching current spend patterns would write — otherwise it is useful advice with no authorship."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is seven slides of the same visual unit: kicker, headline, paragraph. No progression in form, only in text. A carousel earns the swipe through structural change — at minimum one comparison slide and one timeline/diagram slide where the idea is carried by composition rather than prose."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No art direction is specified anywhere in the package, so the design is left to whatever the renderer defaults to. The hook slide in particular ('Cost per seat, or hours of downtime?') is a typographic opportunity being spent as a sentence. Slides need explicit visual notes or the visual standard is unenforceable."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The core instruction — list critical processes, write the maximum tolerable outage — is a business impact analysis, which has existed for thirty years. Presenting it as a reframe without acknowledging that, or without adding something the reader does not already have, risks reading as recycled consulting. Also, 'recovery time' is used as a single number when it is genuinely two: how fast back, and how much work is redone. Collapsing them produces budgets that fund the wrong half."
+    },
+    {
+      "role": "CIO",
+      "finding": "The exercise as written will produce fiction. If IT writes the tolerance numbers, they will be defensive; if nobody owns them, they will be aspirational. The draft must say who writes the number (the executive who owns the process) and what the number is anchored to (an irreversible event, not an annoyance threshold). It also never says the number must be tested — an untested recovery time is a forecast being presented as a constraint."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Outage is treated as the only failure mode. The dominant modern scenario is not a server going dark but systems that are intact and untrustworthy. The draft does not need to pivot to ransomware, but it must not imply that a recovery-hours budget is complete without the question of whether recovery has ever been demonstrated. One sentence of caution carries this; its absence is the credibility gap."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The package contains no 2026 texture at all, and I would rather have none than manufactured urgency. But there is a real, non-hype angle sitting right under the topic: the seat is decoupling from both spend and risk. Metered consumption, automation, service accounts and machine identities, SaaS acquired outside procurement — headcount predicts less of the bill and less of the attack surface every year. That is the argument that makes per-seat budgeting look dated rather than merely imprecise."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Late summer is early enough. December is not' assumes a calendar fiscal year, which a large share of the audience does not run. It dates the asset and quietly excludes readers. Replace the seasonal claim with a lead-time claim: the exercise is only useful before the numbers lock."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The first X post is a three-sentence paragraph where a thread opener needs to be a single landed blow. It also carries the whole argument, leaving post two as an appendix. Compress post one, and let the thread actually progress — per-seat fails, here is the better unit, here is why the seat itself is weakening, here is the caution."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Channel doctrine is breached in two places: 'Late summer is early enough to run this properly. December is not' appears verbatim in LinkedIn and on slide six, and 'the longest outage the business can absorb before the damage becomes permanent' appears near-verbatim across LinkedIn, GBP, X and the carousel. A core idea may recur; a core sentence may not. Also, checklist_items is empty while the post is built around a five-step exercise — that is a saveability asset left on the floor."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn runs to roughly 1,465 characters before line breaks and has no room for additions without breaching 1,600, so any expansion must be paid for by cuts. Watch the fragment runs: 'A missed filing. A customer who leaves. A penalty that triggers' would open three consecutive sentences with the same word, which the standards forbid. GBP sits near the top of its range and cannot absorb more."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The package invents a framing — 'budget in hours of recovery' — for something that already has standard, boardroom-legible names: recovery time objective and recovery point objective. A CIO reading this will immediately notice the omission and read it as a vendor rebranding a known discipline, which costs authority rather than building it. The sharper and more honest version names RTO/RPO, concedes that most companies already have them, and then locates the actual defect: they were written by whoever configured the backup and have never been ratified by anyone who owns a P&L. That turns a familiar idea into a specific, uncomfortable observation."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The 'seat is a weakening proxy' argument is the most 2026 thing in the package and it is the vaguest. 'Metered consumption, automation, service accounts' gestures at the real driver without naming it: AI agents and other non-human identities that hold licenses, run on usage-based compute, and carry credentials. Naming them does two jobs at once — it explains why cost is detaching from headcount, and it explains why exposure is detaching too, instead of asserting both and proving neither. Without that specificity the paragraph is a shrug."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three mechanical faults. LinkedIn runs roughly 1,620 characters against a 1,600 ceiling. Facebook and GBP converge on the same instructional expression — 'list four or five processes, have the owner name the hour' — which violates one-idea-per-channel-best-expression even though the words differ; Facebook should carry scenario, GBP should carry a concrete local ask. And 'Monday' appears in both Facebook and X post 1, which reads as template residue when the two are seen together."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

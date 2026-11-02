@@ -3079,6 +3079,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-02",
+      "idea_id": "S145",
+      "theme": "exec_strategy",
+      "format": "linkedin_analysis",
+      "title": "The IT budget conversation is happening in the wrong units",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal",
+        "channels": {
+          "linkedin": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "facebook": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "gbp": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "instagram": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "x": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          }
+        }
+      }
     }
   ]
 }
