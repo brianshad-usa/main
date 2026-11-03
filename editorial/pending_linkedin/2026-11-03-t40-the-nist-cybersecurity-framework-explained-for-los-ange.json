@@ -1,0 +1,7 @@
+{
+  "slug": "2026-11-03-t40-the-nist-cybersecurity-framework-explained-for-los-ange",
+  "url": "https://prolinksystems.com/blog/2026-11-03-t40-the-nist-cybersecurity-framework-explained-for-los-ange",
+  "title": "The NIST Function You Cannot Outsource",
+  "summary": "NIST CSF 2.0 added Govern, a function no IT provider can perform for you. Why that governance gap now surfaces in vendor reviews and insurance renewals.",
+  "caption": "Nobody is NIST compliant. No certification, no auditor, no seal.\n\nWhich is why the checkbox on your customer's vendor questionnaire rewards whoever is willing to tick it and penalizes whoever reads carefully.\n\nThe framework still matters, for a reason most owners have not registered. In 2024 NIST added a sixth function above the original five: Govern. It does not ask which security tools you bought. It asks who decided, on what basis, and who reviews the decision.\n\nProtect and Detect can be bought. Govern cannot. Delegation is fine; abdication shows — and it shows first in vendor reviews and insurance renewals that have drifted toward asking who decides rather than what you own. That is analysis, not a published finding.\n\nOur essay on what version 2.0 actually asks of a Los Angeles executive, and why the asset inventory most companies keep stopped being an inventory the moment AI agents and service accounts started holding standing access."
+}
