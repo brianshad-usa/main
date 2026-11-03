@@ -3137,6 +3137,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-03",
+      "idea_id": "S090",
+      "theme": "ransomware",
+      "format": "carousel",
+      "title": "The 200 days before the ransom note",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "x": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          }
+        }
+      }
     }
   ]
 }

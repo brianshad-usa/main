@@ -1,0 +1,154 @@
+{
+  "post": "A Tuesday that matters more than it looks: someone in accounting gets a login approval prompt she wasn't expecting, taps approve, and gets on with her day. Nothing breaks. For weeks, nothing breaks.\n\nThen one morning nothing opens.\n\nMost of the damage was decided during the quiet weeks, not the loud morning. That is also the encouraging part. During the quiet weeks, an odd login that somebody actually looks at is a password reset, not a shutdown.\n\nWorth asking your IT team this week: if something strange happens in our systems at 3 a.m. Saturday, who sees it — and what are they allowed to do about it before Monday?",
+  "headline": "Encryption is the last step, not the first",
+  "cta_label": "What 24/7 actually covers",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-11-03-s090-card.png",
+  "image_file_jpg": "2026-11-03-s090-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S090",
+  "core_idea": "Ransomware is slow long before it is fast. The decisive window is the quiet credentialed intrusion that precedes encryption, and most organizations fund the last five minutes — backups, insurance, retainers — while leaving the weeks before it unwatched and, more importantly, unauthorized to act.",
+  "channels": {
+    "linkedin": "The ransom note is not the start of an incident. It is the attacker's receipt.\n\nBy the time files lock, someone has usually been inside for weeks. Long enough to read the org chart, find where the backups live, learn which accounts carry privilege, and notice when finance goes home. Not every crew works this way — some move in hours. But the pattern that hurts mid-market companies most is the patient one, and it tends to run on valid credentials rather than malware.\n\nMost security spending is shaped around the five minutes after encryption. Backups, cyber insurance, an incident response retainer. All necessary. None of them operate during the stretch when the outcome is still open.\n\nThat stretch is where the economics flip. Early containment costs a password reset and an afternoon. Recovery after encryption costs a quarter.\n\nThe uncomfortable part — analysis, not data: most detection failures are not tooling failures. The signals usually exist. A service account authenticating at 3 a.m. A new mailbox forwarding rule. A remote access tool on a machine that never needed one. What is missing is someone awake, paid and authorized to act on a Sunday. An alert that reaches a person who needs approval before isolating a laptop is not detection. It is notification.\n\nSo the board question is not \"are we protected.\" Two narrower ones work better. What in our environment would notice a patient intruder using legitimate credentials? Who, by name, responds at 3 a.m., and what are they allowed to do without waking anyone?\n\nOne concrete ask at your next review: have your IT team walk you through the last three alerts investigated outside business hours. Who looked. How long it took. What they were permitted to do.\n\nIf that walkthrough is thin, the organization is buying recovery and calling it security.",
+    "facebook": "A Tuesday that matters more than it looks: someone in accounting gets a login approval prompt she wasn't expecting, taps approve, and gets on with her day. Nothing breaks. For weeks, nothing breaks.\n\nThen one morning nothing opens.\n\nMost of the damage was decided during the quiet weeks, not the loud morning. That is also the encouraging part. During the quiet weeks, an odd login that somebody actually looks at is a password reset, not a shutdown.\n\nWorth asking your IT team this week: if something strange happens in our systems at 3 a.m. Saturday, who sees it — and what are they allowed to do about it before Monday?",
+    "gbp": "Ransomware looks sudden from outside. From inside, it rarely is. Attackers usually spend a quiet stretch in a network first — mapping accounts, locating backups, learning how the business runs — and most of that work is done with credentials that already belong to someone on staff.\n\nFor a 40-person firm in Los Angeles, the practical version is unglamorous. Know who reviews security alerts outside business hours, and know what they are allowed to do without an approval chain. Make sure an unusual login gets looked at the same day, not next month.\n\nSeparately, make it easy for staff to report something odd the moment it happens. Our help desk is in-house, US-based and staffed 24/7, and calls are answered live by our team — no phone tree, no hold queue. Hesitation is what a quiet intrusion runs on.",
+    "x": [
+      "Ransomware doesn't start with encryption. Encryption is how the attacker tells you the work is finished.\n\nThe weeks before it are the only stretch where the outcome is still open, and the only stretch nobody staffs.\n\nWho at your company sees an odd 3 a.m. login — and what are they allowed to do about it?"
+    ],
+    "instagram_caption": "Encryption is the loud part. It is also the last part.\n\nBefore it there is usually a quiet period that runs on credentials that already belong to someone on staff: a login at an hour that makes no sense, a new forwarding rule, an admin tool on a machine that never needed one. That period is the only stretch where the outcome is still open, and it is the stretch almost nobody staffs.\n\nBackups, insurance and a recovery plan all activate after the decision has been made for you.\n\nTwo questions for your next IT review: what would notice a patient intruder using legitimate credentials, and who is authorized to act at 3 a.m. without waking anyone.\n\n#Ransomware #IdentitySecurity #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "centered",
+    "register": "insight",
+    "channels": {
+      "linkedin": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "facebook": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "gbp": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "instagram": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "x": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 93,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: ransomware intrusions commonly involve an extended quiet period before encryption, with explicit acknowledgement that dwell time varies and some crews move in hours — stated qualitatively, no figure cited",
+    "ANALYSIS: attackers use that period to locate backups, identify privileged accounts and learn business rhythms",
+    "ANALYSIS: much of this activity runs on legitimate credentials rather than malware — framed as pattern, not measurement",
+    "ANALYSIS: backups, cyber insurance and incident response retainers act after encryption, not during the intrusion window",
+    "OPINION: most detection failures are attention and authority failures rather than tooling failures — explicitly labeled analysis in the LinkedIn copy",
+    "ANALYSIS: an alert that cannot be acted on without an approval chain functions as notification rather than detection",
+    "ANALYSIS: common early indicators include off-hours service account logins, new mailbox forwarding rules, and unexpected remote access tooling — generic and non-numeric",
+    "OPINION: early containment costs materially less than post-encryption recovery — comparative only, no dollar figure, no reference to F009",
+    "FACT(F001): the Pro Link Systems help desk operates 24/7",
+    "FACT(F002): the help desk is in-house, not outsourced",
+    "FACT(F008): the help desk is US-based",
+    "FACT(F007): phone calls are answered live by the in-house team — no phone tree, no hold queue",
+    "FACT(F012): serving Los Angeles businesses since 1999 (final carousel slide footer)",
+    "GUARDRAIL: GBP copy deliberately separates 24/7 help desk reachability from security monitoring; no SOC, MDR, monitoring or detection capability is claimed anywhere in the package",
+    "GUARDRAIL: no dwell-time figure used despite the internal concept name; no client named or implied; F006, F009, F010, F011 not used"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package is strong editorially but under-built as a package: the Instagram asset is one orphan hook slide, checklist_items is empty, and the CTA label ('See our approach') is the most generic string in the file. Three of the five deliverables were not actually finished."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "No visual system is specified anywhere, so the carousel would default to whatever the renderer does. The idea has an obvious visual spine — a timeline where the loud event sits at the far right end and everything meaningful happens to its left — and that spine was never written down."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 1 has an empty body and footer with no typographic instruction. A hook slide whose only job is to earn the swipe needs an explicit hierarchy note, or it renders as a centered sentence on a plain field — indistinguishable from any template deck."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft states 'the intruder has usually been inside for a long, quiet while' as if it were universal. Dwell time varies sharply by crew; some run smash-and-grab in hours. Without acknowledging the variance, a knowledgeable reader can disqualify the whole argument on one sentence. Also, the concept title carries '200 days' — correctly absent from the copy, and it must stay absent since no source supports it."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft treats detection as a visibility problem. The harder operational truth is authority: most mid-market environments generate the alert and then stall because the person who sees it cannot isolate an endpoint or disable an account without an approval chain. That distinction is missing and it is the part a CIO would actually argue about."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Material risk in the GBP post: pairing 'who is watching between midnight and 6am' with 'our help desk is staffed 24/7' implies 24/7 security monitoring / SOC coverage, which is not in verified_facts. F001/F002/F007/F008 support a 24/7 reachable in-house help desk, nothing more. The adjacency must be broken. Second point: the entry vector in the Facebook scenario (an unexpected MFA approval prompt) is good and should be kept, but the early-indicator list should stay generic enough to be true without a cited source."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The post reads as if it could have been written in 2021. The 2026 version of this argument is that the quiet period now runs almost entirely on legitimate credentials — identity as the perimeter — and that the entry step has gotten cheaper and more convincing. One clause of that framing changes the whole register without inventing anything."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "LinkedIn ends on two rhetorical questions and nothing to do with them. An executive who agrees has no Monday action. Give one concrete, verifiable ask they can put to their IT team or provider."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Instagram caption carries zero hashtags where up to three are permitted and rewarded. The X post is sound as a single compression but ends on a statement rather than the one line a reader would quote or forward; a closing question raises reply rate without clickbait. A thread is not warranted here — compression is the point."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'See our approach' is a label any MSP would ship. The closing line 'buying recovery and calling it security' is the most ProLink sentence in the package and should carry more structural weight — it belongs in the takeaway slide, not buried mid-paragraph."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'in my read' breaks the publication register (institutional, not personal). '2am' should be '3 a.m.' styled consistently. 'Nothing breaks. For weeks, nothing breaks.' is fine, but 'Ransomware doesn't start with encryption. Encryption is how...' needs checking against the consecutive-opener rule — it passes. GBP runs past the 700-character ceiling. LinkedIn runs close to the 1,600 ceiling and should be trimmed for air."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
