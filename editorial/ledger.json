@@ -3195,6 +3195,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-04",
+      "idea_id": "S058",
+      "theme": "identity",
+      "format": "myth",
+      "title": "\"We have MFA, so we're covered\"",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to",
+        "channels": {
+          "linkedin": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "facebook": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "gbp": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "instagram": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "x": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          }
+        }
+      }
     }
   ]
 }

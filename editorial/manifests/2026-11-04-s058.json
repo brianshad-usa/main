@@ -1,0 +1,158 @@
+{
+  "post": "Run this one as a thought exercise. Someone in your accounts payable group signs in to Microsoft 365 on a Tuesday morning, approves the MFA prompt, and starts work. Nothing looks wrong, and nothing gets blocked.\n\nThat sign-in page was a copy. The session token the browser received on the way through was captured by whoever built it, and from that point the password and the phone are irrelevant — the attacker is inside a session your systems already trust.\n\nThree things that help:\n\nRequire a managed or compliant device, so a session replayed from unfamiliar hardware fails.\n\nShorten how long a session stays valid for finance, executive and admin accounts.\n\nConfirm someone can revoke active sessions tonight, not just reset a password.\n\nWorth knowing: passkeys prevent the capture in the first place. The three steps above limit the damage while you get there.\n\nKeep MFA. Treat it as the first step, not the finish line.",
+  "headline": "Your MFA worked. That was the point.",
+  "cta_label": "How we approach identity security",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/what-does-a-vcio-do",
+  "image_file": "2026-11-04-s058-card.png",
+  "image_file_jpg": "2026-11-04-s058-card.jpg",
+  "theme": "identity",
+  "idea_id": "S058",
+  "core_idea": "MFA defends the authentication event, not the session behind it — so the real work is device-bound access, short session life for high-value accounts, and rehearsed revocation, with phishing-resistant sign-in as the control that removes the opportunity altogether. Each move has a cost worth naming.",
+  "channels": {
+    "linkedin": "Your MFA prompt worked exactly as designed. The attacker was waiting for the moment after it.\n\nThe part rarely explained at board level: once you authenticate, your browser holds a session token — a credential telling every app you already proved who you are. An adversary-in-the-middle page sits between you and the real sign-in, passes your MFA through, and keeps the token that comes back. No password required from then on. Nothing prompts anyone again.\n\nGenerative AI did not invent that technique. It removed the last tell — the clumsy English and off-brand layout that awareness training taught people to spot.\n\nSo \"we have MFA\" is an incomplete board answer. Three moves, with the honest cost of each:\n\n1. Require a managed or compliant device through Conditional Access. A token replayed from unknown hardware fails where the policy covers the app. Cost: you need working device management first, and BYOD and contractor access break before they improve.\n\n2. Shorten session life where the money is — sign-in frequency and continuous access evaluation for finance, executives and administrators. Cost: those are the least patient people in the company. Scope it narrowly or it gets reverted within a month.\n\n3. Rehearse revocation. A password reset does not end a live session; revoking sessions and refresh tokens does. Decide now who holds that authority at 2am, and whether they need permission from anyone first.\n\nAnalysis, not prediction: phishing-resistant sign-in — passkeys, FIDO2 — is the control that removes the capture opportunity rather than shrinking its value. The three moves above are the mitigation you run while you get there.\n\nMFA is the door. Something still has to check the person already in the room.",
+    "facebook": "Run this one as a thought exercise. Someone in your accounts payable group signs in to Microsoft 365 on a Tuesday morning, approves the MFA prompt, and starts work. Nothing looks wrong, and nothing gets blocked.\n\nThat sign-in page was a copy. The session token the browser received on the way through was captured by whoever built it, and from that point the password and the phone are irrelevant — the attacker is inside a session your systems already trust.\n\nThree things that help:\n\nRequire a managed or compliant device, so a session replayed from unfamiliar hardware fails.\n\nShorten how long a session stays valid for finance, executive and admin accounts.\n\nConfirm someone can revoke active sessions tonight, not just reset a password.\n\nWorth knowing: passkeys prevent the capture in the first place. The three steps above limit the damage while you get there.\n\nKeep MFA. Treat it as the first step, not the finish line.",
+    "gbp": "A question worth putting to your IT team this week: if a Microsoft 365 account were compromised after a successful MFA prompt, what would we actually do in the first hour?\n\nStart with the answer most teams get wrong. A password reset does not end an active session — revoking sessions and refresh tokens does. Two settings make the scenario less likely to begin with: require a managed or compliant device through Conditional Access, and shorten sign-in lifetimes for finance, executive and administrator accounts.\n\nPro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. Our in-house help desk is staffed 24/7 if you want a second opinion on your identity configuration.",
+    "x": [
+      "MFA protects the login. The attack that matters happens after it. An adversary-in-the-middle page passes your MFA through to Microsoft and keeps the session token that comes back — the password and the phone never come up again.",
+      "Two settings that make a stolen token less useful: require a compliant device in Conditional Access, and tighten sign-in frequency for finance, exec and admin accounts. Passkeys are better — they remove the capture opportunity instead of shrinking its value.",
+      "The reason your password reset did not help: it does not end a live session. Revoking sessions and refresh tokens does. Decide who holds that authority at 2am before the night you need it."
+    ],
+    "instagram_caption": "MFA defends the login. The session behind it is the part most businesses have never configured.\n\nOnce a sign-in succeeds, the browser holds a token that says the proof already happened. Capture that, and the password and the second factor stop mattering. Three settings limit what a stolen token is worth — and one better option removes the opportunity altogether.\n\nWorth keeping for the next time someone says we're covered, we have MFA.\n\n#IdentitySecurity #Microsoft365 #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "tip_banner",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "banner",
+    "register": "how_to",
+    "channels": {
+      "linkedin": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "facebook": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "gbp": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "instagram": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "x": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 93,
+      "platform_fit": 96,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: MFA protects the authentication event, not the session that follows it.",
+    "ANALYSIS: after successful authentication a browser holds a session token that can be captured and replayed without the password or second factor.",
+    "ANALYSIS: adversary-in-the-middle sign-in pages relay a user's MFA to the real service while retaining the resulting token. Described as a mechanic; no claim is made about its prevalence, growth rate or share of incidents.",
+    "ANALYSIS: generative AI tooling removes the language and layout defects that awareness training uses as a heuristic. No claim about volume, effectiveness or attacker adoption rates.",
+    "ANALYSIS: Microsoft 365 Conditional Access can require a managed or compliant device as an access condition; the effect is scoped to the resources the policy covers, and this limit is stated in-copy.",
+    "ANALYSIS: continuous access evaluation and tighter sign-in frequency reduce how long a stolen session remains usable.",
+    "ANALYSIS: revoking sessions and refresh tokens, rather than resetting a password alone, is what terminates an active session.",
+    "ANALYSIS: phishing-resistant authentication (passkeys, FIDO2) addresses the capture opportunity rather than the value of a captured token.",
+    "OPINION: 'we have MFA' is an incomplete answer at board level; the stated costs of each control are editorial judgment, not measurement.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "FACT(F001): the Pro Link Systems help desk is staffed 24/7.",
+    "FACT(F002): the help desk is in-house.",
+    "No statistic, incident, vulnerability, regulation, deadline, research finding, certification, partnership or client reference is asserted in any channel. No number of any kind appears outside the verified facts file."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA label \"Learn how we help\" is the one piece of vendor language in an otherwise peer-to-peer package. It reframes a teaching asset as a pitch. Replaced with a restrained, topic-specific label. GBP also carried three ProLink facts stacked at the end; trimmed to a single compact credibility line."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram hook slide (\"How to close the gap behind your MFA\") is a how-to title, not a hook — it describes the deck instead of earning the swipe. Replaced with a consequential statement: the attacker is waiting for the prompt to succeed. The carousel also had no turn in it; every slide after the mechanic was a step. Added an insight slide (phishing-resistant sign-in removes the capture opportunity) so the deck has a genuine pivot rather than a list."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The package shipped with zero visual direction — empty kickers, empty footers, no system. Under our standard a viewer should recognize the carousel before the logo, and nothing here would make that true. Added a per-slide visual spec and a top-level visual system (typographic, diagrammatic, one accent colour, token-as-object motif) plus a specific diagram on the mechanic slide instead of decorative treatment."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "\"Attackers increasingly target the session token\" and \"modern phishing kits are built for that token\" are unsourced trend claims — statistics without the number, which our truth discipline treats the same way. Rewritten to describe the mechanic rather than assert prevalence. Also added the AI angle honestly: generative AI did not invent adversary-in-the-middle, it removed the spelling-and-layout tell. That is analysis, framed as such, not manufactured AI urgency."
+    },
+    {
+      "role": "CIO",
+      "finding": "The three recommendations were costless in the draft, which is the tell of marketing content. Requiring a compliant device presumes working device management and will break BYOD and contractor access before it improves anything; tightening sign-in frequency on executives and finance is exactly where friction gets escalated and reverted. Each move now carries its honest cost. Also sharpened the revocation question from \"who can do it\" to \"who holds that authority at 2am\" — the real failure is permission, not capability."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The strongest control was missing entirely. Compliant-device and short sessions reduce what a stolen token is worth; phishing-resistant authentication (passkeys/FIDO2) prevents the capture in the first place. Omitting it made the advice look complete when it was partial. Added, with the correct relationship between the controls. Also softened \"fails on its own\" to acknowledge the policy has to cover the resource — the original phrasing overclaimed a blanket outcome."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft sat entirely in 2019 identity mechanics with no 2026 register. The defensible AI link is narrow and real: the user-side heuristic we trained people on — bad grammar, wrong logo — no longer separates a real sign-in page from a copy. One sentence, no inflation, no claim about volume or capability."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The Facebook scenario assigned a gender and a job title to \"your controller,\" which reads close to a described customer and adds nothing. Made it explicitly a thought exercise and de-personalised. The LinkedIn close was also abstract — an executive finished it agreeing but without an owner for anything. The costs and the 2am authority question now give them something to assign."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post 3 crammed two separate steps into one post, which kills compression — the format's only advantage. Rebalanced to one idea per post and reordered so the mechanic leads, controls follow, revocation lands last as the sharpest line. Instagram caption's \"Save this\" prompt was generic; replaced with a reason to save it."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "checklist_items was empty while the asset's entire value is a three-item operational checklist — an internal inconsistency that would have shipped an incomplete card. Populated. Beyond that the package is on-register: no urgency theatre, no fear imagery, no invented numbers, which is the brand's distinguishing restraint."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "\"No password required afterward. No second prompt.\" opens consecutive sentences with the same word — a named violation. Fixed. Facebook had \"The sign-in page... The token...\" back to back; fixed. GBP ran roughly 720 characters, over the 300–700 ceiling; trimmed to under 700. LinkedIn now lands near 1,550, inside range."
+    },
+    {
+      "role": "Ultimate test",
+      "finding": "The draft could have been published by any competent MSP — it was a correct, friendly token-theft explainer. The revision could not: it names the cost of each recommendation, concedes that its own three steps are the weaker half of the answer compared with passkeys, and locates the real failure point in who holds revocation authority at 2am rather than in a product. MSP marketing does not undercut its own checklist."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
