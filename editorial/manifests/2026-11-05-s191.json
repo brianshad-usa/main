@@ -1,0 +1,162 @@
+{
+  "post": "Most people picture email fraud as a fake address with one letter swapped. The expensive version uses the real address.\n\nHere is the route. An employee signs in through a convincing phishing page that passes the login along to Microsoft. MFA succeeds. The attacker keeps the session.\n\nThen they read — searching for \"invoice\" and \"routing\", learning how your bookkeeper signs off and who approves payments. They add an inbox rule so anything containing \"fraud\" skips the inbox. Often they register their own authenticator, so a password change does not lock them out.\n\nThe fake payment request comes later, inside a real thread.\n\nIf the plan is \"change the password,\" it is half a plan. Revoke the sessions, check which authentication methods are registered, read the inbox rules. Then decide who is allowed to change bank details without a phone call.",
+  "headline": "Changing the password is one containment step out of five",
+  "cta_label": "Our approach to account security",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-11-05-s191-card.png",
+  "image_file_jpg": "2026-11-05-s191-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S191",
+  "core_idea": "The modern mailbox takeover does not defeat MFA, it inherits a session that already passed it — and what follows is a quiet day of reading, rule-setting, authentication-method registration and app consent, which is why a password reset is one step of five and why the control that actually stops the fraud is a finance process, not a security product.",
+  "channels": {
+    "linkedin": "\"We have MFA\" tends to end the executive conversation about email security. It should start one.\n\nThe usual way into a Microsoft 365 mailbox now is not a guessed password. It is a phishing page that sits between your employee and the real sign-in, relays both sides, and keeps the session cookie after MFA succeeds. The intruder never needs the second factor. They inherit a finished login.\n\nWhat follows is mostly reading. Mailbox search for wire, invoice, routing, remittance. Sent items, to learn how the controller writes — the greeting, the sign-off, who is copied on approvals. Where the mailbox is licensed for Copilot, that reconnaissance stops being manual.\n\nThen persistence. An inbox rule files anything containing \"fraud\" or \"verify\" where nobody looks. A new authentication method gets registered on the account, which is the step most executives have never been told about. After that, a password reset evicts no one.\n\nThe payment-change message arrives late in the day, from the real address, inside a thread that already exists. Nothing is forged. That is the problem.\n\nAnalysis, not an incident report: \"we had them change the password\" is half a containment. Revoke sessions and tokens. Audit registered authentication methods and devices. Read the mailbox rules and forwarding. Review app consents.\n\nOne question here belongs to the CFO rather than IT. Does changing bank details on a vendor record require a callback to a number you already had?",
+    "facebook": "Most people picture email fraud as a fake address with one letter swapped. The expensive version uses the real address.\n\nHere is the route. An employee signs in through a convincing phishing page that passes the login along to Microsoft. MFA succeeds. The attacker keeps the session.\n\nThen they read — searching for \"invoice\" and \"routing\", learning how your bookkeeper signs off and who approves payments. They add an inbox rule so anything containing \"fraud\" skips the inbox. Often they register their own authenticator, so a password change does not lock them out.\n\nThe fake payment request comes later, inside a real thread.\n\nIf the plan is \"change the password,\" it is half a plan. Revoke the sessions, check which authentication methods are registered, read the inbox rules. Then decide who is allowed to change bank details without a phone call.",
+    "gbp": "A mailbox takeover rarely announces itself. The intruder breaks nothing. They read, learn how your bookkeeper writes, add an inbox rule that hides the word \"fraud,\" and often register their own authenticator — so a password reset leaves them exactly where they were.\n\nTwo things worth checking this month: who reviews your Microsoft 365 sign-in activity and mailbox rules, and whether a bank-detail change requires a callback to a known number.\n\nWhen someone on your team suspects something, the clock matters. Our Woodland Hills help desk is in-house, US-based and staffed 24/7 — calls answered live, no phone tree, average ticket first-response time of 15 minutes.",
+    "x": [
+      "Most Microsoft 365 account takeovers no longer involve a stolen password. A phishing page relays the real sign-in, MFA succeeds, and the attacker keeps the session cookie. They inherit a finished login rather than defeating one.",
+      "What happens next is reading. Mailbox search: wire, invoice, routing, remittance. Sent items, to learn how the controller writes — greeting, sign-off, who approves. No malware. No alert. Nothing broken.",
+      "Then persistence. An inbox rule files anything containing \"fraud\" or \"verify\" where nobody looks. A new authentication method is registered on the account. From that point, a password reset evicts nobody.",
+      "The payload is one payment-change email inside a thread that already exists. Real address, real history, right moment. Nothing is forged, which is exactly why it works.",
+      "Containment is not a new password. Revoke sessions and tokens. Audit registered authentication methods and devices. Read mailbox rules and forwarding. Review app consents. Four of those five usually get skipped.",
+      "The control that actually stops this is not a security product. It is a finance rule: no bank-detail change without a callback to a number you already had."
+    ],
+    "instagram_caption": "MFA succeeded. That is not a contradiction — it is how the modern mailbox takeover works. The attacker relays the real sign-in through a phishing page and keeps the session, then spends a quiet workday reading: how your controller writes, who approves payments, which threads involve money. An inbox rule hides the warning words. A new authentication method is registered, so a password reset evicts nobody. The fraudulent email comes last, from the real address, inside a real thread. Analysis, not an incident report. Swipe for the full sequence and the five containment steps most teams reduce to one. #cybersecurity #microsoft365 #businessemailcompromise"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "stat",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "stat_hero",
+    "register": "stat_insight",
+    "channels": {
+      "linkedin": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "facebook": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "gbp": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "instagram": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "x": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 88,
+      "platform_fit": 97,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: the common entry route to a Microsoft 365 mailbox is an adversary-in-the-middle phishing page that relays the legitimate sign-in and captures the session cookie after MFA succeeds — described as attacker technique, no frequency statistic claimed, 'most' softened to 'usual/common' framing",
+    "ANALYSIS: a compromised mailbox is typically used for reconnaissance (search terms, sent-items review) before any fraudulent action",
+    "ANALYSIS: where a mailbox is licensed for Microsoft 365 Copilot, the assistant can summarize content the account can already access, which changes the effort required for reconnaissance — framed as exposure analysis, not an observed campaign",
+    "ANALYSIS: attackers create inbox rules that divert messages containing terms such as 'fraud' or 'verify'",
+    "ANALYSIS: an intruder with account access can register an additional authentication method, after which a password reset alone may not remove access",
+    "ANALYSIS: persistence may also involve OAuth application consent grants and registered devices, which a password reset and MFA audit do not address",
+    "ANALYSIS: BEC payloads are commonly sent from the legitimate address inside an existing thread, so no spoofing is present",
+    "OPINION: 'change the password' is an incomplete containment; the five listed steps are what end the access",
+    "OPINION: a callback to a previously known number before any bank-detail change is the single highest-value control for this fraud class",
+    "FRAMING: the narrative is explicitly labeled analysis, not an incident report, on LinkedIn and Instagram. No client is named, implied, or described anywhere",
+    "FACT(F003): average ticket first-response time is 15 minutes — metric named in full on both channels where it appears (GBP, Instagram CTA slide)",
+    "FACT(F001): the help desk operates 24/7 (GBP, Instagram CTA slide)",
+    "FACT(F002): the help desk is in-house (GBP, Instagram CTA slide)",
+    "FACT(F008): the help desk is US-based (GBP, Instagram CTA slide)",
+    "FACT(F007): calls answered live, no phone tree (GBP only)",
+    "FACT(F012): Woodland Hills, serving Los Angeles businesses since 1999 (GBP, Instagram footer)",
+    "No industry, breach-cost, downtime, frequency or threat-landscape statistic appears anywhere in the package. No certification, partnership or compliance claim is made. Blocked facts F006, F009, F010, F011 are not used",
+    "SERVICE PROOF CONCENTRATION: help-desk facts removed from LinkedIn, Facebook and X; retained only where the channel role justifies them"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The help-desk proof block (in-house, US-based, 24/7, 15-minute average first-response) appears in four of five channels in near-identical wording. One core idea per cycle is correct; one sales block repeated five times is not. It converts a genuinely strong editorial piece into a campaign for the help desk and breaks the 'authority over promotion' premise. Concentrate the service proof in GBP, where local service credibility is the channel's actual job, and let LinkedIn, Facebook and X end on the idea."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The package has no entry point. It opens at 'the attacker already has a working login' and never answers the first question an executive will ask, which is 'we have MFA, so how did they get in?' Without the adversary-in-the-middle session-cookie step, the whole narrative reads as a 2019 password story in 2026 clothing. That missing beat is also the most shareable idea in the piece."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Seven slides with kickers like 'Hour one' and 'Late afternoon' imply a timeline, but nothing in the deck structure makes the timeline a visual system — each slide is an independent text card. Specify a persistent horizontal progress rail that advances slide to slide, one accent colour reserved exclusively for the attacker's actions, and a hook slide that is type-only with no body copy. Slide bodies must stay under roughly 200 characters so the type can be set large."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The narrative is vivid enough to be mistaken for a case file, and the standards forbid implying a client. 'Picture a competent intruder' signals a hypothetical on LinkedIn, but Facebook, GBP and the carousel read as reportage. Add an explicit framing line ('analysis, not an incident report') so the register is unambiguous. Also, 'Analysis, not prediction' in the draft mislabels the sentence it introduces, which is an opinion about containment adequacy."
+    },
+    {
+      "role": "CIO",
+      "finding": "'How fast someone reports it is the only part of the timeline you control' is factually weak and self-serving. A CIO controls a great deal more: alerting on inbox rule creation, requiring a compliant device or trusted location for security-information registration via Conditional Access, continuous access evaluation, and sign-in log review. Claiming reporting speed is the only lever makes the post sound like it was reverse-engineered from the help-desk pitch, which it was."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The containment list is incomplete in a way practitioners will notice. Session revocation also needs refresh and access token revocation; attacker persistence routinely includes OAuth application consent grants and registered devices, neither of which a password reset or an MFA audit touches; and mailbox forwarding is a separate object from mailbox rules. A four-step list that omits consent grants would leave an intruder in place."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft has no 2026 signal beyond the words 'MFA' and 'Microsoft 365'. The sharpest available angle is unused: where the compromised mailbox is licensed for Copilot, the reconnaissance phase stops being manual search and becomes a summarisation request by whoever holds the session. That is a governance consequence of a tool the reader is currently rolling out, and it belongs in the piece."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "Every action item in the draft is something IT does after the compromise. There is nothing the reader personally owns. The single control that actually stops this class of fraud is a finance process rule — no bank-detail change without a callback to a number already on file — and it is absent from all five channels."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "X post one is a near-verbatim lift of the LinkedIn opening, which violates 'never the same text twice' and wastes the one post in the thread that has to stand alone in a feed. The thread also closes on a service line, which is the weakest possible quote-tweet surface. Close on the finance control instead."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "card_headline is a service metric rather than an idea, and checklist_items is empty while the post contains a natural, highly saveable five-item checklist. The card should carry the argument; the checklist field should carry the containment steps. As drafted, the two highest-utility assets in the package are a billboard and a blank."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "LinkedIn runs over the 1,600-character ceiling once line breaks are counted; Facebook sits at the top of its band. 'A stolen password is not the attack. It is the opening move' is a cousin of the banned 'it's not just X, it's Y' construction and is reused verbatim across two channels. 'Our average ticket first-response time is 15 minutes, in-house and 24/7' compresses three separate verified facts into one clause in a way that reads as a spec sheet rather than a sentence."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

@@ -3253,6 +3253,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-05",
+      "idea_id": "S191",
+      "theme": "creative_surprise",
+      "format": "scenario",
+      "title": "A day in the life of one compromised credential",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight",
+        "channels": {
+          "linkedin": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "facebook": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "gbp": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "instagram": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "x": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          }
+        }
+      }
     }
   ]
 }
