@@ -3311,6 +3311,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-06",
+      "idea_id": "S237",
+      "theme": "m365_security",
+      "format": "explainer",
+      "title": "Why your domain needs SPF, DKIM, and DMARC — in business terms",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          }
+        }
+      }
     }
   ]
 }

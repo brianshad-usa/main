@@ -1,0 +1,182 @@
+{
+  "post": "A customer calls about an invoice from your company. Right amount, right logo, wrong bank details. The email never came from you.\n\nThree DNS settings — SPF, DKIM and DMARC — let the receiving mail server check whether a message using your company name was actually sent by you. Configured properly, forgeries of your domain get rejected before delivery, and your own invoices stop getting filtered into junk.\n\nWhat they do not stop is a near-identical domain with one letter changed, or a free email account using your owner's name. So the records are step one. A standing rule that payment changes are confirmed by phone, to a number you already had, is step two.\n\nUseful side effect: the reports list every app and service sending mail in your company's name. Most owners find at least one they had forgotten about, and lately, one nobody approved.",
+  "headline": "DMARC decides where you get impersonated, not whether",
+  "cta_label": "Review your DMARC policy",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-06-s237-card.png",
+  "image_file_jpg": "2026-11-06-s237-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S237",
+  "core_idea": "DMARC enforcement does not end impersonation of your company — it decides where the impersonation happens. Forgeries of your exact domain stop; lookalikes and display-name spoofing move onto ground your filtering and your payment-callback rule can defend. The larger executive payoff is the reporting: DMARC aggregate reports are the only inventory most companies can produce of the machine identities — SaaS platforms, forgotten services, AI assistants wired to mailboxes — currently authorized to speak in the company's name.",
+  "channels": {
+    "linkedin": "Email authentication is sold as a way to stop people impersonating your company. Run it to enforcement and you learn what it actually does: it decides where the impersonation happens, not whether.\n\nSPF, DKIM and DMARC are DNS records. Together they let a receiving mail server answer one question — was this message, using your domain, authorized to use it? Set the policy to reject and the major providers discard the ones that fail.\n\nWhat survives is everything outside that check. A lookalike domain with one character changed. A free inbox carrying your CFO's display name. Authentication has nothing to say about either. The fight relocates onto ground your own filtering and your payment-verification rule can defend, which is where it belongs, because those are controls you own.\n\nThe part worth an executive's attention is the reporting.\n\nDMARC aggregate reports enumerate every service sending mail as your company. Not the ones IT provisioned — all of them. A marketing platform, a scheduling tool, an invoicing service nobody has logged into in two years, and an AI assistant a department connected to a mailbox because connecting it took four minutes.\n\nThat list is a machine identity inventory most organizations have no other way to produce. Identity is the security perimeter now, and a growing share of the identities acting in your name are not people. They do not appear in an access review. They show up here.\n\nThe failure mode is hardening the policy before authorizing the legitimate senders, then blocking your own payroll notices. Read the reports first. Move in stages.\n\nOne question for your next IT review: who reads ours?",
+    "facebook": "A customer calls about an invoice from your company. Right amount, right logo, wrong bank details. The email never came from you.\n\nThree DNS settings — SPF, DKIM and DMARC — let the receiving mail server check whether a message using your company name was actually sent by you. Configured properly, forgeries of your domain get rejected before delivery, and your own invoices stop getting filtered into junk.\n\nWhat they do not stop is a near-identical domain with one letter changed, or a free email account using your owner's name. So the records are step one. A standing rule that payment changes are confirmed by phone, to a number you already had, is step two.\n\nUseful side effect: the reports list every app and service sending mail in your company's name. Most owners find at least one they had forgotten about, and lately, one nobody approved.",
+    "gbp": "If your proposals keep landing in customers' junk folders, the writing is usually not the problem. Your domain is.\n\nSPF, DKIM and DMARC are DNS records that tell receiving mail servers which services may send email as your company. Tightened in stages, they get legitimate mail delivered and get forgeries of your exact domain rejected before anyone reads them. They do not stop lookalike domains, so keep a standing rule that payment changes are confirmed by phone to a known number.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Ask your IT team what your DMARC policy is set to today.",
+    "x": [
+      "DMARC aggregate reports are the closest thing most companies have to an inventory of machine identities. Every SaaS platform, every forgotten invoicing app, every AI assistant someone wired to a mailbox — all of it listed, because all of it is sending mail in your name.",
+      "Enforcement does not end impersonation of your company. It relocates it: to lookalike domains and free inboxes carrying an executive's display name. Still worth doing. It moves the attack onto ground your filtering and your payment-callback rule can actually defend.",
+      "Failure mode: jumping straight to a reject policy and blocking your own payroll notices. Authorize the legitimate senders first. Then none, then quarantine, then reject. The order matters more than the speed."
+    ],
+    "instagram_caption": "Authentication is sold as a way to stop impersonation. Enforcement teaches you something more precise: it decides where the impersonation happens, not whether.\n\nForgeries of your exact domain stop. Lookalike domains and free inboxes using your executives' names do not — which tells you exactly where the remaining work sits.\n\nThe byproduct is what justifies the project. DMARC reporting enumerates every service, and every AI assistant, already authorized to speak in your company's name.\n\n#EmailSecurity #MachineIdentity #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-11-06-s237-01.png",
+      "2026-11-06-s237-02.png",
+      "2026-11-06-s237-03.png",
+      "2026-11-06-s237-04.png",
+      "2026-11-06-s237-05.png",
+      "2026-11-06-s237-06.png",
+      "2026-11-06-s237-07.png"
+    ],
+    "jpg": [
+      "2026-11-06-s237-01.jpg",
+      "2026-11-06-s237-02.jpg",
+      "2026-11-06-s237-03.jpg",
+      "2026-11-06-s237-04.jpg",
+      "2026-11-06-s237-05.jpg",
+      "2026-11-06-s237-06.jpg",
+      "2026-11-06-s237-07.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photo_light",
+    "format": "carousel",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "client_value",
+    "channels": {
+      "linkedin": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "facebook": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "gbp": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "instagram": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "x": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 93,
+      "originality": 95,
+      "hook_strength": 96,
+      "educational_value": 97,
+      "technical_accuracy": 97,
+      "executive_value": 96,
+      "writing_quality": 96,
+      "visual_sophistication": 89,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: SPF, DKIM and DMARC are DNS records allowing receiving mail servers to verify that mail using a domain is authorized — standard, publicly documented protocol behavior.",
+    "ANALYSIS: A DMARC policy of reject instructs receiving servers to discard unauthenticated mail using the domain; phrased as 'the major providers discard' rather than as a guarantee, since honoring the policy is at the receiver's discretion.",
+    "ANALYSIS: DMARC alignment governs the visible From domain only; lookalike domains and display-name spoofing from third-party inboxes are not prevented. Stated explicitly on every channel.",
+    "ANALYSIS: Authentication is a precondition for inbox placement, not a cause of it. Deliverability is claimed only on Facebook and GBP, phrased as mail no longer being filtered to junk, not as guaranteed inbox placement.",
+    "ANALYSIS: DMARC aggregate reporting enumerates services sending on behalf of a domain, including SaaS platforms and any AI assistant connected to a mailbox. Characterizing that output as a machine identity inventory is analysis, not a vendor claim.",
+    "ANALYSIS: Moving to an enforcement policy before authorizing legitimate senders can block the organization's own mail. Staged rollout from none to quarantine to reject is documented operational practice.",
+    "OPINION: Enforcement is better understood as relocating impersonation to controls the business owns than as eliminating it.",
+    "OPINION: A growing share of the identities acting in a company's name are non-human. Stated as directional judgment, with no figure attached.",
+    "OPINION: Out-of-band phone verification of payment-detail changes is the control that actually closes the invoice-fraud scenario.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Used in GBP and the carousel footer only.",
+    "NO STATISTICS CITED: no industry, breach, fraud-loss, deliverability or threat-landscape numbers appear in any channel. No external organization, regulation, deadline or dated requirement is referenced.",
+    "NO CLIENT REFERENCE: no named, implied or described Pro Link Systems client appears in any channel. Facebook opener changed from 'A client calls' to 'A customer calls' to remove ambiguity.",
+    "URL: cta_url routed to the verified root domain; no path assumed."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft fails the final test outright: an SPF/DKIM/DMARC explainer with a deliverability benefit is the single most-published MSP blog topic of the last decade. Any MSP in Los Angeles could have posted this exact package verbatim. The concept needed replacing, not polishing — the only defensible version is one that says something most practitioners do not say out loud."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "No tension anywhere. Every slide and every paragraph agrees with the one before it, so there is no turn for the reader to experience. A seven-slide carousel that only accumulates benefits is a brochure with swipes. The revision introduces a genuine reversal at slide four — what authentication cannot do — which is what makes the sequence worth swiping through."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Seven near-identical kicker/headline/body blocks give the designer nothing to build a visual system from. The revised copy is written so that two slides carry structure rather than prose: slide 2 supports a three-gate diagram (SPF / DKIM / DMARC as sequential checks on one message) and slide 5 supports a sender-census table. Flagging a package limitation: this schema has no visual-direction field, so that art direction has to travel outside the JSON before the carousel renders."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft overstates the protection. 'Nobody else sends as you' is false as written — DMARC governs the visible From domain only. Lookalike domains and display-name spoofing from free inboxes are untouched, and the draft mentions the second in passing on LinkedIn only while the Instagram and GBP assets assert the strong version with no qualifier. That is a credibility hole in a package whose whole value is credibility."
+    },
+    {
+      "role": "CIO",
+      "finding": "No failure mode and no ownership question. The real-world outcome of this project going badly is an aggressive move to p=reject that silently blocks payroll notices, the CRM, or the e-signature platform. Also missing: who actually controls the DNS zone, which in a 20–500 seat business is frequently a web developer nobody has spoken to in six years."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Two accuracy softenings required. A DMARC policy of reject instructs receiving servers but does not compel them — 'the major providers honor it' is the honest phrasing. And authentication is a precondition for inbox placement, not a cause of it; reputation, content and engagement still decide. Both are now hedged. Added the control that actually stops the invoice-fraud scenario: out-of-band verification of payment-detail changes."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Zero 2026 content in the draft — this could have been written in 2017. There is a legitimate, non-hyped AI angle available: DMARC aggregate reports are the cheapest existing census of machine identities and SaaS sending on your behalf, and that list increasingly includes AI assistants and agents that a department connected to a mailbox without governance review. One mention, stated plainly, no manufactured urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Find out what your domain's DMARC policy says' is not an action an executive can take — they do not know who to ask or what a good answer sounds like. The revision gives a two-part question with a diagnostic built in: what is the policy set to, and who reads the reports. If nobody reads the reports, that is the finding."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The LinkedIn hook ('the quietest win...') is pleasant but unsurprising, and the X thread's second post is a footnote rather than an escalation. Replaced with a counterintuitive opener that works on every channel, and expanded X to three posts where each one is independently quotable."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Two issues. The cta_url points to /cybersecurity, a path this pipeline cannot verify exists — routed to the root domain instead. And the F012 line appeared in three channels, which reads as a signature block rather than credibility; it now appears in GBP and on the final carousel slide only."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Three things an executive actually notices once they are configured properly' is a dangling modifier — 'they' attaches to 'things', not the records. 'Quiet, permanent, and invisible' overclaims permanence for a configuration that drifts every time a new SaaS tool is added. Both removed. Checked the revision for banned phrasing, consecutive sentence-opening repeats, emoji, exclamation marks, and hashtag counts: clean."
+    },
+    {
+      "role": "Brand Director / Senior Technology Editor",
+      "finding": "The ultimate test still fails in round one. Strip the relocation sentence and what remains — 'SPF, DKIM and DMARC explained in business terms, tighten in stages, verify payment changes by phone' — is a post any MSP in Los Angeles could have published verbatim. The one genuinely 2026 idea in the package (DMARC aggregate reporting is the only unified inventory most companies can produce of the non-human identities authorized to speak as them) is buried as a 'byproduct' in the fifth paragraph of LinkedIn and the fifth slide of the carousel. Promote it to the thesis and connect it explicitly to identity-as-perimeter, shadow AI and machine identities; otherwise this is a 2019 hygiene post with a good opening line."
+    },
+    {
+      "role": "Art Director / Creative Director",
+      "finding": "Eight slides, six of which are a kicker plus a 200–250 character paragraph, is a scrolling document, not editorial design — it violates the density standard and leaves the designer nothing to build hierarchy from. Slides 3 and 4 ('what stops' / 'what does not') are a single comparison artificially split across two frames, which wastes the one slide in the deck that could carry a real typographic diagram. Cut to seven, merge the contrast into one split-composition slide, and shorten every body to a length that can be set large."
+    },
+    {
+      "role": "Copy Editor / Cybersecurity Expert",
+      "finding": "Three concrete defects. The X thread opens with a near-verbatim restatement of the LinkedIn opening line, which breaks the no-duplicate-expression rule and wastes the thread's first position. Facebook opens 'A client calls about an invoice from your company' — in a ProLink asset the word 'client' reads ambiguously against the no-client-reference rule and should be 'customer'. GBP runs over the 300–700 character ceiling and carries two closing asks (the locator line plus a two-part question), where doctrine permits one CTA."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
