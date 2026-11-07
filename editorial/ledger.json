@@ -3369,6 +3369,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-07",
+      "idea_id": "S171",
+      "theme": "productivity",
+      "format": "linkedin_analysis",
+      "title": "Measuring AI's return without fooling yourself",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question",
+        "channels": {
+          "linkedin": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "facebook": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "gbp": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "instagram": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "x": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          }
+        }
+      }
     }
   ]
 }

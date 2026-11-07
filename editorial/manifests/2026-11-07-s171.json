@@ -1,0 +1,150 @@
+{
+  "post": "An AI assistant takes the first pass at your weekly client emails. Forty minutes a day, back in someone's hands.\n\nThe question most pilots skip: what happened to the forty minutes?\n\nIf invoices now go out Tuesday instead of Friday, the tool earned its license fee. When the honest answer is a shrug, you bought a more pleasant workday. That has real value. It is not a return, and it will not survive a budget review.\n\nTime saved is an input. Value is something finishing that wasn't finishing before.\n\nSo pick one number before the pilot starts — quotes sent, tickets closed, days to close the books — write down where it sits today, and watch that instead of the clock.",
+  "headline": "Hours saved, or work actually finished?",
+  "cta_label": "Book a conversation",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-11-07-s171-card.png",
+  "image_file_jpg": "2026-11-07-s171-card.jpg",
+  "theme": "productivity",
+  "idea_id": "S171",
+  "core_idea": "Hours saved is an input that can rise while the business stands still; the only honest AI return is a named unit of output moving, measured against a ledger that also carries the cost side — review time, license sprawl, and data exposure — and that changes its unit again once agents finish work end to end.",
+  "channels": {
+    "linkedin": "Hours saved is the one AI metric that can rise while nothing about the business changes.\n\nThe arithmetic is seductive. Headcount, times minutes saved per day, times loaded salary cost, presented to the board as value created. Clean, fast, unfalsifiable.\n\nHarder question: where did the minutes go? Did a proposal go out that otherwise wouldn't have? Was the backlog shorter at quarter end? Or did the capacity redistribute into longer meetings and more internal messaging?\n\nTime saved is an input. Finished work is an output. Analysis rather than measured finding: most AI business cases fail in the gap between the two, because nobody decided in advance where the freed capacity was going.\n\nA sharper frame fits on one page. Name the output unit you expect to move — quotes issued, days to close the month, collections cycle time. Baseline it before anyone touches the tool. Say out loud what the freed hours are for. Re-measure the output, not the clock.\n\nThen the part most ROI models omit. Cost belongs in the same ledger: review time, license sprawl, and the data staff are pasting into tools nobody has inventoried. A benefit-side-only calculation is not a return.\n\nAnd when assistance becomes agents completing tasks end to end, the unit changes again. Count tasks closed without human handoff, with rework and escalation as the counterweight.\n\nIf the output doesn't move, you have learned something cheap and real. The constraint in that workflow was never drafting speed.\n\nThe question for your next leadership meeting isn't whether AI works. It's whether anyone would notice if it stopped.",
+    "facebook": "An AI assistant takes the first pass at your weekly client emails. Forty minutes a day, back in someone's hands.\n\nThe question most pilots skip: what happened to the forty minutes?\n\nIf invoices now go out Tuesday instead of Friday, the tool earned its license fee. When the honest answer is a shrug, you bought a more pleasant workday. That has real value. It is not a return, and it will not survive a budget review.\n\nTime saved is an input. Value is something finishing that wasn't finishing before.\n\nSo pick one number before the pilot starts — quotes sent, tickets closed, days to close the books — write down where it sits today, and watch that instead of the clock.",
+    "gbp": "A practical way to judge an AI tool before you renew it.\n\nHours saved is the easiest number to produce and the hardest to bank. It becomes money only when something finishes earlier: invoices out sooner, quotes answered same day, the month closed in three days instead of six.\n\nBefore the next pilot, pick one output you already track. Write down where it sits today. Decide what the freed hours are for. Re-check in sixty days — a suggested interval, not a benchmark.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Bring us your measurement plan and we will tell you what it is missing.",
+    "x": [
+      "The usual AI ROI model measures the wrong side of the ledger.\n\nMinutes saved is an input. A return is something finishing earlier than it used to: the month closed in three days instead of six.\n\nName the output unit before the pilot. Then stop watching the clock."
+    ],
+    "instagram_caption": "The AI business case that reaches the board tends to open with the same multiplication: headcount, times minutes saved, times loaded salary cost. It reads well and it banks nothing.\n\nFreed time is an input. A return looks like something finishing earlier than it used to — quotes out the same day, the month closed in three days instead of six.\n\nTwo things that model leaves out. Cost belongs in the same ledger: review time, license sprawl, the data staff paste into tools nobody inventoried. And once software completes tasks end to end rather than assisting, the unit becomes tasks closed without a human handoff, with rework as the counterweight.\n\nSwipe for the one-page frame. #AIgovernance #ITleadership #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "editorial_light",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "centered",
+    "register": "question",
+    "channels": {
+      "linkedin": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "facebook": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "gbp": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "instagram": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "x": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 93,
+      "hook_strength": 96,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 92,
+      "platform_fit": 96,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: hours saved is an input measure; a return requires a named unit of business output to move",
+    "ANALYSIS: freed capacity that is not assigned in advance tends to be reabsorbed into meetings and internal communication",
+    "ANALYSIS: the illustrative arithmetic (headcount x minutes x loaded salary) is a hypothetical example of common practice, not a measured figure, benchmark, or client result",
+    "ANALYSIS: the cost side of an AI ledger includes human review time, license sprawl, and data entered into uninventoried tools; a benefit-only calculation overstates return",
+    "ANALYSIS: if the output unit does not move after a pilot, the workflow constraint was not drafting speed",
+    "PREDICTION/ANALYSIS: as agentic workflows complete tasks end to end, the appropriate measurement unit shifts from time saved to tasks closed without human handoff, with rework and escalation as counterweights",
+    "OPINION: recommended method — name the output unit, baseline before rollout, assign the freed hours, re-measure the output",
+    "OPINION: sixty days is a suggested re-check interval, not a researched benchmark",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "NO EXTERNAL STATISTICS USED: no industry, breach, adoption, or productivity figures appear anywhere in this package; no named-source numbers were supplied in the brief",
+    "NO CLIENT REFERENCE: no client is named, implied, or described; the Facebook and GBP scenarios are generic hypotheticals"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is a good argument that any AI-literate consultant could sign. Nothing in it is ProLink-shaped except the sign-off. The package needs at least one turn — the cost side of the ledger, and the shift from assistance to agents — that an operator who actually runs environments would raise and a generalist would not."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The same sentence, 'Hours saved, or work actually finished?', is doing duty as the card headline, the Instagram hook slide, and the opening line of the X post. Channel doctrine forbids repeating text across channels; the repetition also wastes three separate chances to land three different entry points into one idea."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 2 and 5 carry 160–200 character bodies under long headlines, which collapses hierarchy and pushes toward paragraphs of small type. The footer field is used once and left empty seven times, so there is no consistent running element. Fix: short declarative headlines, body capped near one line of display copy, and one visual system — a two-column ledger motif (input column / output column) carried across slides 3, 5 and 6, with the hook and takeaway set as pure type on negative space."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Three unsourced prevalence claims pass as fact: 'the number that usually gets reported', 'Most businesses measure AI by hours saved', and 'almost nobody does it'. They are market assertions, not verified findings, and they are not labelled. Either soften to observation or label as analysis."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft assumes the only thing AI can move is throughput. Many real returns in a 20–500 seat business are error rate, cycle time, or risk reduction, and a quotes-issued counter will never show them. The frame needs to acknowledge counterweight metrics (rework, escalation) or it will mis-score the pilots that actually worked."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "There is no cost side of the ledger anywhere in the package. An ROI model that counts benefit only is the exact model that leaves review burden, license sprawl, and data pasted into uninventoried tools off the page. That omission is both the security point and the sharpest differentiator the piece has."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Every example is drafting assistance — correspondence, proposals, drafting speed. That is a 2023 picture of AI at work. In 2026 the measurement question changes when software completes tasks end to end: the unit becomes tasks closed without a human handoff, and throughput-per-person stops meaning anything."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn opening is a rhetorical question of the 'Did you...' shape, which reads as a marketing device rather than a peer talking. Lead with the observation instead; the observation is strong enough to carry the post without being dressed as a question."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram carousel runs the full eight-slide template with slide 6 ('the honest result') doing work slide 7 repeats. Saveability improves if one slide is replaced by the material no competitor will post — the two-sided ledger — rather than padding to the default shape."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "GBP paraphrases F012 as 'advised Los Angeles businesses on technology decisions', which quietly widens a verified fact about service and tenure into an advisory-practice claim. Verified facts get quoted in their verified shape. Separately, the closing line 'we're glad to talk it through' appears verbatim in both GBP and the Instagram CTA slide."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Licence' is British spelling in a US publication. Facebook opens two consecutive sentences with 'If', and the Instagram leak slide opens two consecutive sentences with 'The' — both break the repetition rule. 'checklist_items' is empty while the post's single most saveable asset is a four-step checklist."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
