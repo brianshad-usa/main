@@ -1,0 +1,174 @@
+{
+  "post": "Picture a 200-person company three weeks into an AI pilot. It works. Everyone is impressed.\n\nThen someone asks it a payroll question and gets an answer, drawn from a spreadsheet that was shared with the whole company years ago and never opened. Nothing was breached. The tool found exactly what the permissions allowed.\n\nThat is the build-versus-buy question at this size, and it is not a question about which model. A purchased tool arrives configured. Your permissions do not.\n\nSo before signing anything, two questions. Whose name is on AI governance once the pilot becomes a Tuesday habit? And what does year two cost, once someone is paid to check the output?\n\nBuy the capability if that is the right call. The governance stays yours either way.",
+  "headline": "Buy the capability. Insource the governance.",
+  "cta_label": "Book a conversation",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-11-08-s234-card.png",
+  "image_file_jpg": "2026-11-08-s234-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S234",
+  "core_idea": "At roughly 200 employees the AI build-versus-buy decision is not settled by capability — building now means supervising agents on someone else's platform, buying means inheriting a vendor's assumptions, and in both cases a tool that runs on existing permissions surfaces the oversharing a company already had. The durable split is to buy the capability and insource the governance.",
+  "channels": {
+    "linkedin": "Build or buy is the wrong first question about AI at 200 employees.\n\nThe better one: who carries this on a Tuesday in month fourteen?\n\nStart with what building now actually means. Almost nobody is training a model. Building means assembling agents on someone else's platform, which moves the hard part from engineering to supervision.\n\nSupervision costs arrive late. Evaluation nobody owns. Permissions that drift as people change roles. Rework after every change to the systems underneath.\n\nBuying has its own bill. A vendor's assumptions about what your data is for become yours, and so does its roadmap.\n\nThen there is the condition most companies are already in. Staff have been expensing AI tools for months. Choosing a platform does not retire the ones already in use.\n\nAn assistant that runs on a user's existing permissions does not create oversharing. It surfaces what was already there. A purchase order does not close that.\n\nFour checks before either path. Offered as analysis:\n\nName one accountable owner — a role with authority to stop the thing, not a committee.\n\nWrite down what it can reach, and give the agent its own identity instead of borrowing a person's.\n\nPrice year two, with output evaluation as a standing job rather than a launch task.\n\nDecide the shutdown path, who may invoke it, and whether you can reconstruct later what the tool did.\n\nBuy the capability. Insource the governance. The error is assuming the purchase covers the second half.",
+    "facebook": "Picture a 200-person company three weeks into an AI pilot. It works. Everyone is impressed.\n\nThen someone asks it a payroll question and gets an answer, drawn from a spreadsheet that was shared with the whole company years ago and never opened. Nothing was breached. The tool found exactly what the permissions allowed.\n\nThat is the build-versus-buy question at this size, and it is not a question about which model. A purchased tool arrives configured. Your permissions do not.\n\nSo before signing anything, two questions. Whose name is on AI governance once the pilot becomes a Tuesday habit? And what does year two cost, once someone is paid to check the output?\n\nBuy the capability if that is the right call. The governance stays yours either way.",
+    "gbp": "Most AI decisions at a 200-person company get argued as build versus buy. The harder questions sit underneath that one.\n\nWhen the tool answers using a file somebody over-shared years ago, whose name is on that? And what does year two cost, once evaluation and upkeep are counted rather than licensing alone?\n\nSettle those two, plus what the tool is allowed to reach and how it gets switched off, and the build-versus-buy conversation gets considerably shorter.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Glad to give an AI plan a second read before anything is signed.",
+    "x": [
+      "At 200 employees, build versus buy is not a capability question. Both work. What neither settles: an AI assistant running on a user's permissions does not create oversharing. It surfaces what was already there. Buy the capability. The governance is not transferable."
+    ],
+    "instagram_caption": "Both paths work at 200 employees, which is why capability is the wrong tiebreaker. What separates them is who maintains the thing after launch, and what it is allowed to reach in the meantime. Analysis, not prediction.\n\nPro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.\n\n#AIgovernance #ITleadership #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "checklist",
+    "format": "single_image",
+    "ground": "cream",
+    "layout": "checklist",
+    "register": "checklist",
+    "channels": {
+      "linkedin": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "facebook": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "gbp": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "instagram": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "x": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 98,
+      "timeliness": 96,
+      "originality": 94,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 95,
+      "platform_fit": 96,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 95,
+      "trust": 98,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: At roughly 200 employees, build-versus-buy for AI is decided more by ongoing supervision and governance than by model capability.",
+    "ANALYSIS: 'Building' in 2026 generally means assembling agents on a third-party platform rather than training a model, shifting the burden from engineering to supervision. No vendor, product, capability or roadmap is named or characterised.",
+    "ANALYSIS: Insourcing costs concentrate after launch — evaluation, permission drift, output monitoring, rework following changes to underlying systems.",
+    "ANALYSIS: Buying an AI capability means inheriting a vendor's assumptions about data use and its roadmap.",
+    "ANALYSIS: A tool operating under a user's existing permissions reveals pre-existing oversharing rather than creating new exposure. Stated as a general access-control principle, not as the documented behaviour of any named product.",
+    "ANALYSIS: At this company size, unmanaged AI tools are frequently already in use before a formal decision is made. No number, percentage or survey is cited.",
+    "OPINION: A single accountable owner for AI governance is better than a committee.",
+    "OPINION: A shutdown path and audit record are cheaper to design before launch than during an incident.",
+    "JUDGEMENT (labelled in-asset as analysis): Buying the capability while insourcing governance is the split that usually holds up. Labelled on LinkedIn ('Offered as analysis'), in the Instagram caption ('Analysis, not prediction') and on slide 7's footer. No first-person experience claim anywhere.",
+    "RHETORICAL DEVICE, NOT A MEASUREMENT: 'month fourteen' on LinkedIn means 'later than the budget assumed'. It appears only in narrative prose, never as a headline over a visual, and the X post and carousel no longer attach it to anything that could read as a measured interval.",
+    "ILLUSTRATIVE HYPOTHETICAL: The Facebook pilot scenario is framed with 'Picture a...' and names no company, client, sector or incident. It is not a client story and does not imply one.",
+    "FACT (F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills — used once in GBP and once in the Instagram caption. No other ProLink claim appears; F001–F008 are not relevant to this concept and were not padded in.",
+    "NO STATISTICS USED: no industry, breach, cost, adoption or threat-landscape figures anywhere. No blocked facts (F006, F009, F010, F011) referenced. One CTA per channel, and none on X or LinkedIn.",
+    "VISUAL CLAIMS AUDIT (new this round): the previously specified cost-curve chart and tool tally were removed. The art direction now bans any visual implying unverified quantity. The single remaining diagram (slide 4) depicts permission inheritance, a structural relationship, not a measurement.",
+    "MSP TEST: no. The permission-inheritance turn, the 'buy the capability, insource the governance' split, the refusal to use a single statistic, and an all-typographic editorial deck with a ban on synthetic charts are not what a generic MSP publishes about AI."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package is competent but the central frame — 'build vs buy, here are four checks' — is a frame any consultancy could run. Nothing in the draft is only sayable by someone who operates infrastructure daily. The revision needs at least one observation that comes from running systems, not from reasoning about them: the oversharing an AI tool surfaces, and the fact that at 200 seats the buying has usually already happened on expense cards."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel jumps from hook straight into a checklist. There is no 'what changed' and no 'why it matters' beat, so the swipe is driven by list mechanics rather than by an idea unfolding. Slides 2–5 are four parallel items with identical rhythm — visually and narratively flat. Needs a problem slide, a genuine insight turn, and the checklist compressed into one slide instead of four."
+    },
+    {
+      "role": "Art Director",
+      "finding": "No visual system is specified anywhere in the package, and every footer field is empty. Four identically structured 'Check one/two/three/four' slides would produce a template, not editorial design. The revision should carry an explicit art direction: a typographic system, slide numbering in the footer, and at least one genuine diagram — the cost curve where build cost falls and supervision cost rises is a real chart, not decoration."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'In my experience most companies at this scale end up buying the capability' is the weakest sentence in the package. It is an unsourced empirical claim dressed as reportage, and the first-person singular is wrong for a publication voice. Either label it as judgment or cut it. Also: 'offered as analysis rather than doctrine' is self-conscious hedging that calls attention to the disclosure instead of doing it cleanly."
+    },
+    {
+      "role": "CIO",
+      "finding": "The checklist omits the two things a CIO would actually ask first: whether the agent runs under its own identity with least privilege rather than borrowing a human account, and whether anyone owns evaluation of output quality as a standing job. 'Price year two' is also soft — the year-two line item that surprises people is not licensing, it is the person reviewing outputs."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The Facebook scenario blames 'someone adjusts a folder permission,' which is the 2018 version of the failure. The 2026 mechanic is permission inheritance: the tool surfaces content that was already over-shared and simply never read. Also missing from the off-switch check — auditability. Shutting something down is useless if you cannot reconstruct what it did while it was running."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "'Build versus buy' is stated as if building means building a model. At 200 employees in 2026 it does not; it means assembling agents on someone else's platform, which relocates the hard problem from engineering to supervision. Without that correction the post reads a cycle behind its own audience. Second gap: the decision is frequently moot on arrival because tools are already in the building unmanaged."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft tells me how to decide but not what to do if the honest answer is 'we already have six of these and no owner.' That is the situation most readers are actually in, and the draft has no slide or paragraph for it. 'A Tuesday in month fourteen' is the best line in the package and should survive the rewrite intact."
+    },
+    {
+      "role": "Cybersecurity Expert (second pass)",
+      "finding": "No fabricated statistics, no invented regulation, no implied client — the claims audit is clean on hard rules. The only residual risk is the Facebook scenario reading as a real incident; it needs an explicit hypothetical framing verb."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X 'thread' is a hook followed by a list dump; the second post adds no progression, only compression of the checklist, which belongs on Instagram. The Instagram caption also contains explicit save-bait ('Save this one for the next vendor meeting'), which undercuts the restrained register. Cut the instruction; a saveable post does not ask."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Voice drifts into first-person singular on LinkedIn, which is inconsistent with everything else in the package. Also, card_headline 'Before you build AI in-house' contradicts the core idea, which is explicitly path-neutral — the headline silently takes the build side."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Inconsistent rendering of the decision ('Build or buy', 'build-versus-buy'), four Instagram slides opening with identical 'Check' kickers, and empty footer fields throughout. GBP repeats the 'If you...' sentence construction at the top of two of its three paragraphs. No banned phrasing present; character counts all sit inside their channel bounds."
+    },
+    {
+      "role": "Final Test (MSP originality check)",
+      "finding": "Draft: yes, most MSPs could have published it — the checklist was generic governance advice. Revised: the permission-inheritance reframe, the 'building now means supervising agents, not training models' correction, and the 'some of the buying already happened' condition are specific enough that a generic MSP post would not contain them. Passes, narrowly."
+    },
+    {
+      "role": "Art Director / Senior Technology Editor",
+      "finding": "The copy obeyed truth discipline and the artwork broke it. Slide 3 specified two plotted lines over a 24-month axis crossing late, and slide 5 specified a tally of unmanaged tools 'rendered as plain counted rules'. Neither quantity exists in verified_facts.json or in any named source. A chart is read as data no matter what the caption says — an executive screenshotting slide 3 would be circulating a fabricated cost curve with ProLink's name on it. Every quantitative visual must come out, and the art direction must say so explicitly rather than leaving it to the designer."
+    },
+    {
+      "role": "Copy Editor / Executive Audience Representative",
+      "finding": "LinkedIn announces 'Two things make that size awkward' and then arrives at 'The third condition', so the reader is counting a list the writer abandoned. 'Those costs arrive late' has no antecedent — the preceding paragraph named supervision, not costs. Separately, Facebook re-serves LinkedIn's four-item checklist in lightly reworded form, which makes it a digest of the LinkedIn post rather than the best Facebook expression of the idea; its one genuine asset is the pilot scenario, and the list dilutes it."
+    },
+    {
+      "role": "Social Growth Strategist / Brand Director",
+      "finding": "The X entry is two unconnected one-liners presented as a pair — no progression, so it fails the thread test, and splitting the two sharpest sentences in the package halves the impact of both. Compress to one post. On Instagram, slide 8 is the only element in the whole package that any MSP could have shipped unchanged: a logo, a founding year and a soft offer. Ending on the takeaway is stronger and more in register; the restrained CTA belongs in the caption."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

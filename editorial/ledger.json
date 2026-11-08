@@ -3427,6 +3427,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-08",
+      "idea_id": "S234",
+      "theme": "exec_strategy",
+      "format": "comparison",
+      "title": "Insourcing AI vs buying it, for a 200-person company",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist",
+        "channels": {
+          "linkedin": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "facebook": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "gbp": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "instagram": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "x": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          }
+        }
+      }
     }
   ]
 }
