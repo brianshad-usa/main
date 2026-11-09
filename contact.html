@@ -618,7 +618,7 @@
             <span class="form-error">Please enter your first name.</span>
           </div>
           <div class="form-group" id="fg-last">
-            <label for="last_name">Last Name <span class="req">*</span></label>
+            <label for="last_name">Last Name</label>
             <input type="text" id="last_name" name="last_name" placeholder="Smith" autocomplete="family-name">
             <span class="form-error">Please enter your last name.</span>
           </div>
@@ -631,14 +631,14 @@
             <span class="form-error">Please enter a valid email address.</span>
           </div>
           <div class="form-group" id="fg-phone">
-            <label for="phone">Phone Number <span class="req">*</span></label>
+            <label for="phone">Phone Number <span style="font-weight:400;color:var(--text-muted)">(fastest way to reach you)</span></label>
             <input type="tel" id="phone" name="phone" placeholder="(818) 555-0100" autocomplete="tel">
             <span class="form-error">Please enter your phone number.</span>
           </div>
         </div>
 
         <div class="form-group" id="fg-company">
-          <label for="company">Company Name <span class="req">*</span></label>
+          <label for="company">Company Name</label>
           <input type="text" id="company" name="company" placeholder="Acme Corporation" autocomplete="organization">
           <span class="form-error">Please enter your company name.</span>
         </div>
@@ -659,7 +659,7 @@
         </div>
 
         <div class="form-group" id="fg-message">
-          <label for="message">Tell us about your situation <span class="req">*</span></label>
+          <label for="message">Tell us about your situation</label>
           <textarea id="message" name="message" placeholder="Briefly describe your current IT environment, your biggest challenge, or what prompted you to reach out&hellip;"></textarea>
           <span class="form-error">Please include a brief message.</span>
         </div>
@@ -907,13 +907,11 @@
 
   function validate() {
     var valid = true;
+    /* Only name + email are required (2026-11-09): every extra required field
+       costs leads, and an email is enough to follow up. */
     var fields = [
       { id: 'fg-first', input: 'first_name', test: function(v) { return v.trim().length > 0; } },
-      { id: 'fg-last',  input: 'last_name',  test: function(v) { return v.trim().length > 0; } },
-      { id: 'fg-email', input: 'email',      test: function(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); } },
-      { id: 'fg-phone', input: 'phone',      test: function(v) { return v.trim().length > 0; } },
-      { id: 'fg-company', input: 'company',  test: function(v) { return v.trim().length > 0; } },
-      { id: 'fg-message', input: 'message',  test: function(v) { return v.trim().length > 10; } }
+      { id: 'fg-email', input: 'email',      test: function(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); } }
     ];
     fields.forEach(function(f) {
       var fg = document.getElementById(f.id);
@@ -937,23 +935,62 @@
     });
   });
 
-  function fail(msg) {
+  /* First touch for this browser session (landing page, referrer, UTMs, click
+     ids) so the lead email says how the visitor found us. Same key as
+     contact-form.js. */
+  var FT_KEY = 'pls_first_touch';
+  function firstTouch() {
+    var ft = null;
+    try { ft = JSON.parse(sessionStorage.getItem(FT_KEY) || 'null'); } catch (e) {}
+    if (!ft) {
+      ft = { landing_page: location.pathname + location.search, first_referrer: document.referrer || '' };
+      try {
+        var q = new URLSearchParams(location.search);
+        ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','msclkid'].forEach(function(k) { if (q.get(k)) ft[k] = q.get(k); });
+      } catch (e) {}
+      try { sessionStorage.setItem(FT_KEY, JSON.stringify(ft)); } catch (e) {}
+    }
+    return ft;
+  }
+  firstTouch();
+  function track(name, params) { try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
+
+  function fail(msg, reason) {
     submitBtn.disabled = false;
     submitBtn.classList.remove('loading');
     if (window.turnstile) { try { turnstile.reset(); } catch (e) {} }
+    track('form_error', { form_page: 'contact', reason: reason || 'unknown' });
     alert(msg || 'There was a problem sending your message. Please call us at 1-800-890-6133 or email info@prolinksystems.com directly.');
+  }
+
+  /* The Turnstile widget may still be working when a fast visitor presses Send. */
+  function waitForToken(cb) {
+    var waited = 0;
+    (function poll() {
+      var el = form.querySelector('[name="cf-turnstile-response"]');
+      var tok = el && el.value;
+      if (tok || waited >= 8000) return cb(tok || '');
+      waited += 250; setTimeout(poll, 250);
+    })();
   }
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    if (!validate()) return;
+    track('form_submit_attempt', { form_page: 'contact' });
+    if (!validate()) { track('form_error', { form_page: 'contact', reason: 'validation' }); return; }
 
     var data = Object.fromEntries(new FormData(form));
-    if (!data['cf-turnstile-response']) { fail('Please complete the "I\'m not a robot" check, then send again.'); return; }
-
     submitBtn.disabled = true;
     submitBtn.classList.add('loading');
     var firstName = (data.first_name || '').trim();
+
+    waitForToken(function(token) {
+    if (!token) { fail('Please complete the "I\'m not a robot" check, then send again. (If it won\'t load, call 1-800-890-6133.)', 'turnstile_missing'); return; }
+    data['cf-turnstile-response'] = token;
+    var ft = firstTouch();
+    Object.keys(ft).forEach(function(k) { if (!data[k]) data[k] = ft[k]; });
+    data.page_url = location.origin + location.pathname;
+    data.referrer = document.referrer || '';
 
     /* Single server-side endpoint: verifies Turnstile, then sends the internal
        notification + the visitor confirmation from info@ via Microsoft Graph. */
@@ -962,7 +999,7 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data)
     })
-    .then(function(res) { return res.json().then(function(j) { return { ok: res.ok, json: j }; }); })
+    .then(function(res) { return res.json().then(function(j) { return { ok: res.ok, status: res.status, json: j }; }); })
     .then(function(r) {
       if (r.ok && r.json && r.json.success) {
         if (typeof gtag === 'function') {
@@ -987,7 +1024,7 @@
         }
         window.uetq = window.uetq || [];
         window.uetq.push('event', 'submit_lead_form', {});
-        if (typeof gtag === "function") { gtag("event", "generate_lead", { method: "contact_form" }); }
+        if (typeof gtag === "function") { gtag("event", "generate_lead", { method: "contact_form", form_page: "contact" }); }
         var nameEl = document.getElementById('success-name');
         if (nameEl && firstName) nameEl.textContent = firstName.split(' ')[0];
         var refEl = document.getElementById('success-ref');
@@ -997,10 +1034,11 @@
         formOk.classList.add('show');
         formOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
-        fail(r.json && r.json.message);
+        fail(r.json && r.json.message, 'server_' + (r.status || 'x'));
       }
     })
-    .catch(function() { fail(); });
+    .catch(function() { fail(null, 'network'); });
+    });
   });
 })();
 </script>
