@@ -227,6 +227,38 @@ bypass the guard; fix the content instead.
   be self-tested from a headless browser — confirm it with a real human submit or
   the UET Tag Helper. Base-tag `bat.js` load IS verifiable on any page load.
 
+## Lead forms — rules after the Sep–Nov 2026 lead drop (2026-11-09)
+
+Genuine form leads went 7 (Jul 27–Sep 17) → 0 for 7½ weeks with nobody noticing
+(diagnosis: `C:\Googleads\LEAD_DROP_FINDINGS_2026-11-09.md`). The forms are now
+fail-safe and measured; keep them that way:
+- **Only name + email are required** — in `functions/api/contact.js` (`REQUIRED`),
+  `contact-form.js` and `contact.html`'s inline `validate()`. Never re-add required
+  fields; every one costs leads (the contact page had six).
+- **Turnstile siteverify never sends `remoteip`** (an IP that differs between the
+  widget and the POST — iCloud Private Relay, mobile, corporate proxies — must not
+  cost a lead). No token / forged token (`invalid-input-response`) → rejected.
+  Stale token (`timeout-or-duplicate`), `internal-error`, or Cloudflare unreachable
+  → the lead still goes to info@ as **`[UNVERIFIED] New Contact Form Submission…`**
+  with NO visitor confirmation (keeps the path useless for relay abuse).
+- Every notification carries **"How they found us"** (channel, landing page, first
+  referrer, UTMs, gclid/msclkid, approx. location, device) from the session's first
+  touch (`sessionStorage.pls_first_touch`, written by both form scripts).
+- GA4 events: `form_submit_attempt`, `form_error` (`reason`: validation /
+  turnstile_missing / server_4xx|5xx / network), `generate_lead` (key event).
+  The SEO-intel collector stores `ga4.form_funnel_7d`; the engine raises
+  `LEADS-form-failing` when attempts ≥ 3 with 0 leads, or errors ≥ 3, in 7 days.
+- Function logs one JSON line per submission (`evt: "contact"`, outcome, reason/codes,
+  page, ref, channel) → Cloudflare Pages → Functions → real-time logs.
+- Both form scripts **wait up to 8 s for the Turnstile token** before complaining.
+- Any form/handler/Function change: test in a scratch copy, run `site_guard.py`,
+  then a **human** submit on mobile (cellular) + desktop, and confirm the info@
+  notification shows the attribution block.
+- Ads landing page (`/managed-it-services`) + home: Hotjar + Clarity load on the
+  first scroll/tap/key or after 6 s (main-thread time = Ads landing-page experience).
+  Keep `/managed-it-services` LA-focused — it is the Google + Microsoft Ads landing
+  page; the LA city page carries organic "managed IT services Los Angeles".
+
 ## SEO / local-search push (2026-10-14)
 
 - **City-page titles/H1s are dual-intent**: "Managed IT Services & IT Support {City} |
