@@ -234,7 +234,13 @@ Genuine form leads went 7 (Jul 27–Sep 17) → 0 for 7½ weeks with nobody noti
 fail-safe and measured; keep them that way:
 - **Only name + email are required** — in `functions/api/contact.js` (`REQUIRED`),
   `contact-form.js` and `contact.html`'s inline `validate()`. Never re-add required
-  fields; every one costs leads (the contact page had six).
+  fields; every one costs leads (the contact page had six). The **labels must match**:
+  only name/first-name/email carry `<span class="req">*</span>`; no other field gets an
+  asterisk or a `required` attribute (15 of 16 forms still showed phone/company/last-name
+  asterisks until the 2026-11-09 sweep). **Enforced by `site_guard.py` check 19.**
+- **Cache-buster:** pages load `/contact-form.js?v=YYYYMMDD`. Browsers keep the script
+  for 24 h + 7 d stale (`_headers`), so **bump `?v=` on all 15 pages whenever
+  `contact-form.js` changes** — an unversioned reference fails check 19.
 - **Turnstile siteverify never sends `remoteip`** (an IP that differs between the
   widget and the POST — iCloud Private Relay, mobile, corporate proxies — must not
   cost a lead). No token / forged token (`invalid-input-response`) → rejected.

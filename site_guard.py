@@ -340,6 +340,41 @@ else:
             V(18, name, f"indexable page missing from llms.txt (expected a link to {page_url(name)})")
 
 # --------------------------------------------------------------------------- #
+# 19: lead forms (2026-11-09, after genuine leads went 7 -> 0 for 7 weeks).
+#     Every form carrying a Turnstile widget marks ONLY name / first_name / email
+#     as required -- no asterisk (<span class="req"> or a trailing "*" in the
+#     label) and no `required` attribute on any other field: the Function and
+#     both form scripts accept everything else as optional, and a phone/company
+#     asterisk costs leads. Pages must load the shared handler with a ?v=
+#     cache-buster: browsers keep /contact-form.js for 24 h + 7 d stale, so an
+#     unversioned reference can keep serving yesterday's rules (bump it whenever
+#     contact-form.js changes).
+# --------------------------------------------------------------------------- #
+FORM_REQUIRED_OK = {"first_name", "name", "email"}
+SKIP_TYPES = {"hidden", "submit", "checkbox", "button"}
+for name, pg in pages.items():
+    for form in pg["soup"].find_all("form"):
+        if not form.find(class_="cf-turnstile"):
+            continue
+        seq = form.find_all(["label", "input", "select", "textarea"])
+        for i, el in enumerate(seq):
+            if el.name != "label":
+                continue
+            starred = el.find("span", class_="req") is not None or el.get_text().rstrip().endswith("*")
+            if not starred:
+                continue
+            field = next((x for x in seq[i + 1:] if x.name != "label" and x.get("name")
+                          and (x.get("type") or "").lower() not in SKIP_TYPES), None)
+            if field is not None and field.get("name") not in FORM_REQUIRED_OK:
+                V(19, name, f"form field '{field.get('name')}' is marked required (asterisk) -- only name/email may be")
+        for fld in form.find_all(["input", "select", "textarea"]):
+            if fld.has_attr("required") and fld.get("name") not in FORM_REQUIRED_OK:
+                V(19, name, f"form field '{fld.get('name')}' has a required attribute -- only name/email may")
+    for sc in pg["soup"].find_all("script", src=True):
+        if re.search(r"(^|/)contact-form\.js$", sc["src"]):
+            V(19, name, "contact-form.js referenced without a ?v= cache-buster (bump it whenever the script changes)")
+
+# --------------------------------------------------------------------------- #
 # Report
 # --------------------------------------------------------------------------- #
 advisory = "--fix-report" in sys.argv[1:]
