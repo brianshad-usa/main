@@ -62,7 +62,7 @@ SITEMAP = os.path.join(HERE, "sitemap.xml")
 SAFE_FALLBACKS = ["/services", "/"]
 SITE = "https://prolinksystems.com"
 
-MODEL = os.environ.get("EDITORIAL_MODEL", "claude-opus-5")
+MODEL = os.environ.get("EDITORIAL_MODEL", "claude-opus-5-5")
 TARGET = 95
 FLOOR = 90
 

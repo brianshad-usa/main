@@ -407,7 +407,7 @@ client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 # The blog now runs under the same editorial standards, verified-facts
 # discipline, review board, and quality gate as the social pipeline
 # (editorial/standards.md, editorial/verified_facts.json, content_studio.py).
-EDITORIAL_MODEL = os.environ.get("EDITORIAL_MODEL", "claude-opus-5")
+EDITORIAL_MODEL = os.environ.get("EDITORIAL_MODEL", "claude-opus-5-5")
 _HERE = os.path.dirname(os.path.abspath(__file__))
 
 

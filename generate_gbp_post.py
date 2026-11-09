@@ -251,7 +251,7 @@ def generate_post_text(theme):
     """Call Claude to generate the post text for the given theme."""
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     message = client.messages.create(
-        model="claude-opus-4-8",
+        model="claude-opus-5-5",
         max_tokens=512,
         messages=[{"role": "user", "content": theme["prompt"]}],
     )
