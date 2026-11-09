@@ -1,0 +1,7 @@
+{
+  "slug": "2026-11-09-t43-why-multi-factor-authentication-is-non-negotiable-for-l",
+  "url": "https://prolinksystems.com/blog/2026-11-09-t43-why-multi-factor-authentication-is-non-negotiable-for-l",
+  "title": "Phishable MFA Is the New Weak Password",
+  "summary": "Text codes and push approvals can be relayed by phishing kits. LA executives should require passkeys, enforce Conditional Access and harden MFA recovery.",
+  "caption": "A six-digit MFA code can be relayed to the real sign-in page while the user believes nothing unusual happened.\nFor Los Angeles executives in 2026, the question is no longer whether you have MFA. It is which kind, enforced where, and recoverable how.\nPasskeys and Conditional Access make phishing-resistant sign-in practical in many Microsoft 365 environments, which makes the password-reset call the next soft spot.\nOur new essay sets out four decisions worth making this quarter, and the one limit passkeys do not fix."
+}

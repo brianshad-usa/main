@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>Phishable MFA Is the New Weak Password | Pro Link Systems</title>
+<meta name="description" content="Text codes and push approvals can be relayed by phishing kits. LA executives should require passkeys, enforce Conditional Access and harden MFA recovery.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://prolinksystems.com/blog/2026-11-09-t43-why-multi-factor-authentication-is-non-negotiable-for-l">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://prolinksystems.com/blog/2026-11-09-t43-why-multi-factor-authentication-is-non-negotiable-for-l">
+<meta property="og:title" content="Phishable MFA Is the New Weak Password | Pro Link Systems">
+<meta property="og:description" content="Text codes and push approvals can be relayed by phishing kits. LA executives should require passkeys, enforce Conditional Access and harden MFA recovery.">
+<meta property="og:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ProLink_Systems">
+<meta name="twitter:image" content="https://prolinksystems.com/logo.png">
+<meta name="twitter:title" content="Phishable MFA Is the New Weak Password | Pro Link Systems">
+<meta name="twitter:description" content="Text codes and push approvals can be relayed by phishing kits. LA executives should require passkeys, enforce Conditional Access and harden MFA recovery.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Phishable MFA Is the New Weak Password",
+  "description": "Text codes and push approvals can be relayed by phishing kits. LA executives should require passkeys, enforce Conditional Access and harden MFA recovery.",
+  "author": {
+    "@type": "Person",
+    "name": "Brian Shad",
+    "jobTitle": "President",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pro Link Systems"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pro Link Systems",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://prolinksystems.com/logo.png"
+    }
+  },
+  "datePublished": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://prolinksystems.com/blog/2026-11-09-t43-why-multi-factor-authentication-is-non-negotiable-for-l"
+  },
+  "url": "https://prolinksystems.com/blog/2026-11-09-t43-why-multi-factor-authentication-is-non-negotiable-for-l"
+}
+</script>
+<link rel="stylesheet" href="/_shared.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-1068497497');
+gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
+</script>
+<!-- Microsoft UET tag (Bing Ads) — tag 97275167 -->
+<script>
+    (function(w, d, t, u, o) {
+        w[u] = w[u] || [], o.ts = (new Date).getTime();
+        var n = d.createElement(t);
+        n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");
+        n.async = 1, n.onload = n.onreadystatechange = function() {
+            var s = this.readyState;
+            s && "loaded" !== s && "complete" !== s ||
+            (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),
+            n.onload = n.onreadystatechange = null)
+    };
+        var i = d.getElementsByTagName(t)[0];
+        i.parentNode.insertBefore(n, i);
+    })(window, document, "script", "uetq", {
+        ti:"97275167",
+        enableAutoSpaTracking: true
+    });
+</script>
+<style>
+.blog-hero {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
+  padding: 60px 0 48px;
+  text-align: center;
+}
+.blog-hero .breadcrumb {
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 16px;
+}
+.blog-hero .breadcrumb a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+.blog-hero .breadcrumb a:hover { color: var(--gold); }
+.blog-hero .breadcrumb span { margin: 0 8px; }
+.blog-hero h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  max-width: 800px;
+  margin: 0 auto 16px;
+  padding: 0 24px;
+}
+.blog-hero .post-meta {
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+}
+.blog-hero .post-meta strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+.blog-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 24px 64px;
+}
+.blog-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -.02em;
+}
+.blog-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+.blog-body ul {
+  margin: 0 0 1.25rem 1.5rem;
+  padding: 0;
+}
+.blog-body li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.blog-body strong { font-weight: 700; color: var(--navy); }
+.blog-cta-box {
+  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 100%);
+  border: 1.5px solid rgba(23,98,168,.15);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--r-lg);
+  padding: 2rem 2rem 2rem 2.25rem;
+  margin: 3rem 0 0;
+}
+.blog-cta-box h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 .75rem;
+  letter-spacing: -.02em;
+}
+.blog-cta-box p {
+  font-size: .95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+.blog-cta-box .btn-group {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+</style>
+</head>
+<body>
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Pro Link Systems home">
+    <img src="/logo.png" alt="Pro Link Systems" width="160" height="44">
+  </a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/case-studies">Case Studies</a>
+    <a href="/about">About</a>
+    <a href="/blog/" class="active">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="tel:18008906133" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+  <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
+  <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+  <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
+  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
+</div>
+
+<div class="blog-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>/</span>
+    <a href="/blog/">Blog</a><span>/</span>
+    <span style="color:rgba(255,255,255,.7);">Article</span>
+  </div>
+  <h1>Phishable MFA Is the New Weak Password</h1>
+  <div class="post-meta">
+    By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; November 09, 2026
+  </div>
+</div>
+
+<article class="blog-body">
+<p>A finance director in Century City gets what looks like a routine account notice on a Tuesday afternoon, asking her to re-verify her sign-in. She clicks, lands on a page indistinguishable from the real one, types her password and approves the prompt on her phone, exactly as her training taught her. Within minutes someone else is reading her inbox through a valid, fully authenticated session. Nothing she did was careless.</p>
+<p>The scenario is illustrative, not drawn from any engagement, but the technique behind it is real and publicly documented. It changes the question Los Angeles executives should be asking in 2026. Whether your business uses multi-factor authentication is settled. Which kind, enforced where, and recoverable how: those three details decide whether MFA stops anyone.</p>
+<p>Our position, and this is opinion, is that MFA remains non-negotiable. The versions most companies deployed years ago, meaning text message codes, authenticator codes and tap-to-approve prompts, have quietly become the floor rather than the defense.</p>
+<h2>How a relay kit defeats a six-digit code</h2>
+<p>Older phishing stole passwords. MFA broke that model, because a stolen password was useless without the second factor. Attackers responded by moving into the middle of the conversation.</p>
+<p>Adversary-in-the-middle phishing kits sit between the user and the genuine sign-in service. The victim's browser talks to the attacker's server, which talks to Microsoft or Google. Each step the user takes, whether a password, a one-time code or an approved push, is relayed to the real service as it happens. When the real service issues a session token, the kit captures it. From then on the attacker needs neither the password nor the phone, because they hold proof that authentication already happened.</p>
+<p>That is a fact about how these tools work, and it has a direct implication: any factor a person can read off a screen and type, or approve with a tap, can be relayed. SMS codes, authenticator app codes and standard push approvals share that weakness. Number matching in Microsoft Authenticator blunts push fatigue, the cruder attack in which someone holding a stolen password sends prompts until a tired user approves. It does little against a relay, because the user is reading a genuine number off a fake page. In every variant, the human is the transport layer, and humans can be steered.</p>
+<h2>Why "we have MFA" is an incomplete answer for a board or insurer</h2>
+<p>Many cyber insurance applications ask whether MFA is enabled for email, remote access and administrative accounts. Answering yes is easy, and usually accurate. It is also incomplete in ways that matter.</p>
+<p>Three gaps tend to appear when MFA was rolled out as a project rather than designed as a control. This is analysis of how identity platforms are commonly configured, not a measured finding.</p>
+<ul>
+<li><strong>Coverage gaps.</strong> Legacy protocols, shared mailboxes, service accounts and emergency admin accounts get exempted, sometimes for good reason, and are then never revisited.</li>
+<li><strong>Factor strength.</strong> If any registered method is accepted, the least careful employee sets the organization's real security level.</li>
+<li><strong>Session trust.</strong> Once a user signs in, the session may be trusted from any device and location for as long as the token lives. A stolen token exploits exactly that trust.</li>
+</ul>
+<p>None of these gaps shows up as a "no" on a questionnaire. Each tends to surface after an incident, when someone asks whether the controls you attested to were actually in force. For a CFO or general counsel, the distance between attestation and configuration belongs on the governance agenda.</p>
+<h2>Passkeys made phishing resistance practical, within limits</h2>
+<p>Phishing-resistant MFA is not new. Hardware security keys built on the FIDO2 standard have existed for years, and CISA has published guidance urging organizations to adopt phishing-resistant methods. Cost and friction held keys back. They had to be bought, shipped, replaced and explained.</p>
+<p>Passkeys change that calculation. A passkey is a FIDO credential held on a device the user already carries, unlocked with a fingerprint, face or PIN. Its decisive property is that the credential is cryptographically bound to the legitimate site's domain, so the browser will not offer it to a lookalike page. There is no code to type into a fake site and nothing for a relay kit to forward.</p>
+<p>Microsoft, Google and Apple all support passkeys, and Microsoft Entra ID supports passkeys and other phishing-resistant methods for workforce sign-in. For Los Angeles businesses on <a href="/cloud-services">Microsoft 365</a>, the stronger option is often already inside the environment. Our view, as opinion, is that phishing-resistant authentication should be the 2026 requirement for executives, finance staff and anyone with administrative rights, with the wider workforce following in phases.</p>
+<p>Conditional Access completes the design. Policies in Entra can require a phishing-resistant method for specific users, applications or risk conditions, and can limit sign-ins to managed, compliant devices. One practical caveat applies: Conditional Access depends on Entra ID P1 licensing, which some Microsoft 365 plans include and others do not.</p>
+<p>Be clear about the limit, too. Passkeys stop a user from handing credentials to a fake page. They do not stop malware already running on a laptop from copying a session token after a legitimate sign-in. That is why device compliance and endpoint detection belong in the same conversation as authentication. Neither control is sufficient alone.</p>
+<h2>The password-reset call is the real second factor</h2>
+<p>Every MFA deployment has a back door, and it is a legitimate one. Someone loses a phone, replaces a laptop, or is locked out at LAX before a board meeting, and there has to be a way back in. A convincing call to an IT help desk can aim to get MFA reset and a new device registered, delivered with urgency, a plausible name and possibly a cloned voice. If that call succeeds, every control above is bypassed by policy. Our analysis is that the stronger sign-in becomes, the more attractive recovery becomes as the path of least resistance.</p>
+<p>Put a pointed question to whoever runs your <a href="/it-help-desk">help desk</a>: what does it take to reset an executive's MFA, and could a skilled caller meet that bar using only what is on LinkedIn? Verification should rest on something an impersonator cannot research or synthesize. Examples include a callback to a number already on file, approval from a named manager through a separate channel, or an in-person check for the highest-privilege accounts. Afterward, the user should re-register a strong method rather than fall back to SMS. In Entra, a time-limited Temporary Access Pass exists for exactly that purpose.</p>
+<p>Pro Link Systems runs an in-house, US-based help desk, so we see this question from the side that answers the phone. Our view is that whoever picks up is part of the authentication chain. That standard should apply to any provider you evaluate, including your own internal team.</p>
+<h2>Four decisions for Los Angeles executives this quarter</h2>
+<p>Nobody needs convincing that MFA matters. The harder point is that MFA comes in grades, and the grade you deploy determines what it can stop. For executives, it comes down to four commitments:</p>
+<ul>
+<li><strong>Require phishing-resistant methods</strong> for executives, finance, HR and administrators, and set a date to retire SMS codes for those groups.</li>
+<li><strong>Audit the exemptions.</strong> Ask for a written list of every account and protocol that can sign in without MFA, with a reason and an owner for each.</li>
+<li><strong>Bind sign-ins to trusted devices</strong> with Conditional Access, after confirming your licensing supports it, so a stolen session is worth less away from a managed machine.</li>
+<li><strong>Harden recovery</strong> so that resetting a factor is at least as hard as defeating it.</li>
+</ul>
+<p>For organizations already on Microsoft 365 with the right licensing, none of this requires a new platform. It requires decisions about who is held to which standard, and the discipline to enforce them when the CEO's phone breaks on a Friday night. In our judgment, that moment is where well-intentioned programs are most likely to give way. Any <a href="/managed-it-services">managed IT</a> arrangement, internal or external, should be tested against it. Phishable MFA now sits where passwords sat a decade ago: necessary, familiar and no longer enough.</p>
+<p>If you want an outside read on how your authentication and recovery controls would hold up against these techniques, our <a href="/cybersecurity-services">cybersecurity</a> team can walk through it with you.</p>
+
+<div class="blog-cta-box">
+  <h2>Ready to talk to a real IT engineer?</h2>
+  <p>Pro Link Systems has been protecting and managing IT for Los Angeles businesses since 1999. Book a free 15-minute discovery call &mdash; no pressure, no obligation, no scripts.</p>
+  <div class="btn-group">
+    <a href="/managed-it-services" class="btn btn-navy">Book a Free Discovery Call</a>
+    <a href="tel:18008906133" class="btn btn-outline-navy">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      1-800-890-6133
+    </a>
+  </div>
+</div>
+</article>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <a href="/managed-it-services">Managed IT Services</a>
+      <a href="/services#helpdesk">24/7 Help Desk</a>
+      <a href="/services#cybersecurity">Cybersecurity</a>
+      <a href="/services#cloud">Cloud &amp; Infrastructure</a>
+      <a href="/services#dr">Disaster Recovery</a>
+      <a href="/services#consulting">IT Consulting</a>
+      <a href="/services#remote">Remote Workplace</a>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/blog/">Blog</a>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/legal">Legal / Terms</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-areas">
+    <h3>Areas We Serve</h3>
+    <div class="footer-areas-links">
+      <a href="/managed-it-services-los-angeles">Los Angeles</a>
+      <a href="/managed-it-services-downtown-los-angeles">Downtown LA</a>
+      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
+      <a href="/managed-it-services-tarzana">Tarzana</a>
+      <a href="/managed-it-services-west-hills">West Hills</a>
+      <a href="/managed-it-services-chatsworth">Chatsworth</a>
+      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
+      <a href="/managed-it-services-century-city">Century City</a>
+      <a href="/managed-it-services-west-los-angeles">West Los Angeles</a>
+      <a href="/managed-it-services-pasadena">Pasadena</a>
+      <a href="/it-support-burbank">Burbank</a>
+      <a href="/managed-it-services-studio-city">Studio City</a>
+      <a href="/managed-it-services-north-hollywood">North Hollywood</a>
+      <a href="/managed-it-services-santa-monica">Santa Monica</a>
+      <a href="/managed-it-services-culver-city">Culver City</a>
+      <a href="/managed-it-services-glendale">Glendale</a>
+      <a href="/managed-it-services-calabasas">Calabasas</a>
+      <a href="/managed-it-services-agoura-hills">Agoura Hills</a>
+      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
+      <a href="/managed-it-services-simi-valley">Simi Valley</a>
+      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
+      <a href="/managed-it-services-van-nuys">Van Nuys</a>
+      <a href="/managed-it-services-northridge">Northridge</a>
+      <a href="/managed-it-services-santa-clarita">Santa Clarita</a>
+      <a href="/managed-it-services-encino">Encino</a>
+      <a href="/managed-it-services-torrance">Torrance</a>
+      <a href="/managed-it-services-el-segundo">El Segundo</a>
+      <a href="/managed-it-services-long-beach">Long Beach</a>
+      <a href="/managed-it-services-irvine">Irvine</a>
+      <a href="/managed-it-services-orange-county">Orange County</a>
+      <a href="/managed-it-services-playa-vista">Playa Vista</a>
+      <a href="/managed-it-services-hollywood">Hollywood</a>
+      <a href="/managed-it-services-koreatown">Koreatown</a>
+      <a href="/managed-it-services-hawthorne">Hawthorne</a>
+      <a href="/managed-it-services-manhattan-beach">Manhattan Beach</a>
+      <a href="/managed-it-services-sun-valley">Sun Valley</a>
+      <a href="/managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
+      <a href="/managed-it-services-camarillo">Camarillo</a>
+      <a href="/managed-it-services-malibu">Malibu</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
+    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
