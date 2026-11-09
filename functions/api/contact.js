@@ -180,7 +180,8 @@ ${banner}<table>${row("Name", f.first_name + " " + f.last_name)}${row("Company",
 <p style="margin:16px 0 4px;color:#666">Message</p>
 <div style="white-space:pre-wrap;background:#f6f8fb;border:1px solid #e2e8f0;border-radius:6px;padding:12px 14px">${esc(f.message)}</div>
 <p style="margin:16px 0 4px;color:#666">How they found us</p>
-<table>${row("Channel", a.channel || "unknown")}${a.landing_page ? row("Landed on", a.landing_page) : ""}${a.first_referrer ? row("Came from", a.first_referrer) : ""}${row("Form page", a.page_url || page || "")}${utm ? row("Campaign", utm) : ""}${a.gclid ? row("Google click id", "present") : ""}${a.location ? row("Location (approx.)", a.location) : ""}${row("Device", a.device || "")}</table>
+<table>${row("Channel", a.channel || "unknown")}${a.landing_page ? row("Landed on", a.landing_page) : ""}${a.first_referrer ? row("Came from", a.first_referrer) : ""}${row("Form page", a.page_url || page || "")}${utm ? row("Campaign", utm) : ""}${a.gclid ? row("Google click id (gclid)", a.gclid) : ""}${a.msclkid ? row("Microsoft click id (msclkid)", a.msclkid) : ""}${a.location ? row("Location (approx.)", a.location) : ""}${row("Device", a.device || "")}</table>
+${a.gclid ? `<p style="margin-top:10px;color:#666;font-size:12px">Ads lead-quality loop: if this lead qualifies (or becomes a client), tell Claude or add the gclid to the war room <em>ads/offline_conversions.csv</em> so Google Ads learns which clicks produce real business.</p>` : ""}
 <p style="margin-top:16px;color:#666;font-size:12px">Reply directly to reach the sender (${esc(f.email)}).</p></div>`;
 }
 
