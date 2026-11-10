@@ -3485,6 +3485,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-10",
+      "idea_id": "S047",
+      "theme": "ai_threats",
+      "format": "explainer",
+      "title": "QR codes moved phishing off the corporate device",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "facebook": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "gbp": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "instagram": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "x": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          }
+        }
+      }
     }
   ]
 }

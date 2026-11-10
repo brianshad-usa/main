@@ -1,0 +1,167 @@
+{
+  "post": "Picture an ordinary Tuesday. An email says your Microsoft password expires today and offers a QR code to keep the account active. Your laptop can't scan it, so you reach for your phone.\n\nThat reach is the trick. Work computers usually have protections checking where links lead. A personal phone often doesn't, and its small screen barely shows the address of the page that opens. The fake sign-in page looks exactly right.\n\nTelling people to be careful helps. A stronger fix is quieter: allow company sign-in only from approved devices, and move to passkeys, which won't work on a fake site. Then retire the old password option, or attackers will simply ask for that instead.\n\nUntil that's in place, one rule for your team: if an emailed code asks you to sign in or pay, skip the scan and open the site yourself.",
+  "headline": "The QR code was never meant for your laptop.",
+  "cta_label": "Contact our team",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-11-10-s047-card.png",
+  "image_file_jpg": "2026-11-10-s047-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S047",
+  "core_idea": "QR phishing is not mainly an inbox problem. The code relocates the sign-in to a phone outside the organization's controls, so the durable fix sits in identity policy rather than in asking people to be perfect. Required phishing-resistant sign-in, with no password fallback, plus a managed-device requirement make a scan on the wrong phone worth little to an attacker. Passkeys use QR codes safely, which shows the problem was never the code but what it is allowed to unlock.",
+  "channels": {
+    "linkedin": "Your email security inspected the message and let it through. Even if it decoded the QR code, the decisive moment happened where it could not follow: on a phone.\n\nThat is the real shift behind QR phishing. The code moves the sign-in from a managed work computer to whatever phone is nearest. Often it is personal, outside your browser and endpoint controls, on a screen too small to show the full address. A lookalike Microsoft sign-in looks exactly right at that size.\n\nTraining helps, but it asks people to be perfect on their worst day.\n\nOur view: the stronger answer sits in identity, not the inbox.\n\nRequire phishing-resistant sign-in. Passkeys only work on the real site's domain, so a lookalike page cannot collect one. But a passkey the user can skip is not a control. If the fake page simply asks for the password, the old method still works. Conditional Access can require phishing-resistant methods rather than merely offer them.\n\nRequire a managed, compliant device for Microsoft 365. Credentials entered on a fake page then cannot produce a working session on the attacker's machine.\n\nOne irony worth knowing: passkeys also use QR codes to sign in across devices. Those are safe because the browser verifies the site and the phone must be physically nearby. The code was never the problem. What it can unlock is.\n\nFor a CEO or CFO, the question for IT is not \"are we training people on QR codes?\" It is \"if someone scans one tomorrow, what does the attacker actually get?\"\n\nIf the honest answer is a working session, the gap is in policy, not people.",
+    "facebook": "Picture an ordinary Tuesday. An email says your Microsoft password expires today and offers a QR code to keep the account active. Your laptop can't scan it, so you reach for your phone.\n\nThat reach is the trick. Work computers usually have protections checking where links lead. A personal phone often doesn't, and its small screen barely shows the address of the page that opens. The fake sign-in page looks exactly right.\n\nTelling people to be careful helps. A stronger fix is quieter: allow company sign-in only from approved devices, and move to passkeys, which won't work on a fake site. Then retire the old password option, or attackers will simply ask for that instead.\n\nUntil that's in place, one rule for your team: if an emailed code asks you to sign in or pay, skip the scan and open the site yourself.",
+    "gbp": "A QR code in an email moves the sign-in from your protected work computer to a phone that often sits outside your company's security. Two practical steps for a Los Angeles business: limit Microsoft 365 sign-in to company-managed devices, and adopt passkeys with the password fallback switched off where your apps allow. Meanwhile, tell your team never to scan an emailed code that asks them to sign in or pay, and to open the site directly instead. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Our in-house, US-based help desk operates 24/7, and calls are answered live.",
+    "x": [
+      "The QR code in a phishing email was never meant for your laptop. It moves the sign-in to a phone outside your controls. The fix is identity: require passkeys with no password fallback, plus a managed device, so a scan on the wrong phone gives the attacker nothing usable."
+    ],
+    "instagram_caption": "The QR code in a phishing email was never meant for your laptop. It moves the sign-in to a phone that often sits outside your company's controls, where a fake Microsoft page looks exactly right. Awareness helps. The stronger fix makes a scan worth little: passkeys the user cannot skip, and sign-in limited to managed devices. Swipe for three questions worth asking your IT team this week. #Phishing #Passkeys #Microsoft365"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "photo",
+    "format": "single_image",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "behind_scenes",
+    "channels": {
+      "linkedin": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "facebook": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "gbp": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "instagram": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "x": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 89,
+      "originality": 93,
+      "hook_strength": 94,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 95,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 95,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "FACT(F002): the help desk is in-house (GBP only)",
+    "FACT(F008): the help desk is US-based (GBP only)",
+    "FACT(F001): the help desk operates 24/7 (GBP only, stated separately from F007)",
+    "FACT(F007): calls are answered live by the in-house team (GBP only, stated separately so it does not imply 24/7 live phone answering beyond what is confirmed)",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT (technical, general knowledge): passkeys are bound to the legitimate site's domain and cannot be used on a lookalike domain",
+    "FACT (technical, general knowledge): if a password remains an accepted sign-in method, a phishing page can request it instead of the passkey",
+    "FACT (technical, general knowledge): Microsoft Entra Conditional Access can require phishing-resistant authentication methods and can require a managed or compliant device for sign-in",
+    "FACT (technical, general knowledge): cross-device passkey sign-in uses a QR code, with the browser verifying the site and a Bluetooth proximity check requiring the phone to be physically nearby",
+    "ANALYSIS: a QR code in an email relocates the click and sign-in from a managed work computer to a phone, often personal and outside organizational controls",
+    "ANALYSIS: even when an email filter decodes the code, the sign-in occurs on a device the filter cannot follow",
+    "ANALYSIS: small phone screens show little of the URL, making lookalike sign-in pages harder to spot",
+    "ANALYSIS: with a compliant-device requirement, credentials entered on a fake page cannot produce a working session on the attacker's machine",
+    "OPINION (labeled 'Our view'): the stronger answer to QR phishing sits in identity policy, not the inbox",
+    "OPINION: awareness training helps but asks people to be perfect on their worst day",
+    "No statistics, incidents, client references, or invented help-desk anecdotes are used"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is a help-desk advertisement wearing a phishing topic. The 24/7, in-house, US-based, live-answer facts appear in every channel, and LinkedIn carries an advisory CTA plus a brand sign-off. That breaks the one-CTA rule and makes the content read as service promotion. Revision: the argument does the selling, help-desk facts appear only on GBP where local service credibility is the channel's job, and there is one restrained CTA."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept is S047, 'QR codes moved phishing off the corporate device', but the draft's actual idea is 'call us when unsure'. That is the 2016 'be careful' theme with a warmer tone. The device shift is the interesting part, and the draft never follows it to its consequence: if the sign-in happens off the managed device, the real defense is making that sign-in fail. The concept was rebuilt around that turn."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel spends two of six slides on a help-desk anecdote and has no slide that can carry a diagram. Slide bodies run to three sentences, which sets up paragraphs of small text. Revision: the slide sequence now includes a two-path comparison ('same scan, two outcomes') built for a clean editorial diagram, every body is two lines or fewer, and the hook is a single statement. The rendered design still has to be verified against the visual standard before publishing."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Email filters have less to inspect' is stated too flatly. Mainstream filters can decode QR images, so a knowledgeable reader will dismiss the claim. The defensible point is that even when the filter reads the code, the click and sign-in happen on a device the organization does not control. Revised to say exactly that."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft gives no control-level guidance. A CIO reading it learns nothing to change on Monday. The useful controls are missing: phishing-resistant authentication (passkeys, which are bound to the legitimate domain) and a Conditional Access policy requiring a managed or compliant device for Microsoft 365 sign-in. Both now anchor the revision, with an exposure-inventory step."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treats the threat as 'a fake page fools a person' and stops there. The real loss is a usable credential or session. Password plus push approval from any device is exactly what QR phishing harvests. The revision frames the executive question as 'what does the attacker actually get?' Claims were kept within what the controls genuinely do. A compliant-device requirement stops a captured password from opening a session on the attacker's machine. It does not claim to stop every token-theft technique."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no AI angle, and none should be forced. The standards forbid manufacturing urgency through AI. One weakness remains: the draft implies lookalike pages are rare or crude. The revision makes no unsourced claim about AI-generated phishing pages and instead argues from the device and identity mechanics, which hold regardless of how the page was built."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "As a CFO, I would scroll past 'our favorite help desk call'. It is about the vendor, not my risk. Worse, it generalizes about calls ProLink receives without any verified fact behind it, which drifts toward an implied client story. The revision opens on something I did not know: my email security can work perfectly and still lose. It hands me one precise question to put to IT."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Nothing in the draft is saveable. There is no checklist, no framework, and no question worth forwarding. checklist_items was empty. The revision adds three concrete questions for IT, used as the carousel's action slide and the card checklist. That is the element people screenshot and send to a colleague. The X post was also rewritten from a soft anecdote into a single compressed claim."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Ultimate test failed on the draft. Any MSP could publish 'pause and call our help desk before scanning a QR code', word for word. The revision's position is that QR phishing is an identity-policy gap rather than a people problem, closed by passkeys and managed-device Conditional Access. That position is specific, opinionated, and labeled as ProLink's view."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Several technical problems need fixing. 'Here is why it matters' is filler. LinkedIn runs consecutive sentences opening on 'A'. 'Our team answers calls live' restates F007 loosely. The GBP CTA was set to CALL while also carrying a URL, which is a field mismatch. The draft also claimed recurring QR calls with no verified basis. All fixed: consecutive-sentence openers were checked across every channel, the CTA type was aligned with the URL, and every channel was checked against its character range."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The prescription had a real technical gap. 'Move to passkeys' does not protect anyone while the password remains an accepted sign-in method, because the fake page simply asks for the password instead. The fix is to require phishing-resistant methods through Conditional Access, not just offer them. The managed-device line also implied that only passwords are stolen. Relay-style kits capture the session too. The revision covers both: compliance must be required, and the device rule blocks a relayed session as well as a captured password. The X post, Facebook, GBP, carousel and checklist were all updated so no channel recommends optional passkeys."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The GBP line 'our in-house, US-based help desk answers live, 24/7' fused F001 and F007 into a claim neither fact states: live phone answering around the clock. The revision states the two verified facts separately, so the help desk operates 24/7 and calls are answered live, without implying more."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "On the final test, an alert MSP could still have published most of this, because QR phishing coverage has been widespread for some time. The one insight competitors rarely make is that passkeys use QR codes themselves, safely, because the browser verifies the site and the phone must be physically nearby. That shows the problem was never the code but what it can unlock. The idea is now a LinkedIn paragraph and its own carousel slide. Combined with the 'a passkey you can skip is not a control' point, the package carries a perspective rather than a topic."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
