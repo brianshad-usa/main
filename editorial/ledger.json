@@ -3543,6 +3543,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-10",
+      "idea_id": "S070",
+      "theme": "identity",
+      "format": "thread",
+      "title": "Why your CFO should have the strictest sign-in policy",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive",
+        "channels": {
+          "linkedin": {
+            "style": "bright_accent",
+            "format": "carousel",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "facebook": {
+            "style": "bright_accent",
+            "format": "carousel",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "gbp": {
+            "style": "bright_accent",
+            "format": "carousel",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "instagram": {
+            "style": "bright_accent",
+            "format": "carousel",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          },
+          "x": {
+            "style": "bright_accent",
+            "format": "carousel",
+            "ground": "gold",
+            "layout": "left_block",
+            "register": "positive"
+          }
+        }
+      }
     }
   ]
 }

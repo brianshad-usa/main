@@ -1,0 +1,184 @@
+{
+  "post": "Picture two employees. One answers customer emails. The other can approve a payment to a vendor. A scammer who could break into only one of those accounts would pick the second every time.\n\nThe irony: the person who approves payments is often the one who asked to skip the extra login steps. Busy owners and executives get exceptions. That's exactly the gap a scammer hopes for.\n\nFlip it. Give the strongest sign-in to whoever handles money, plus any assistant who can open their email. Passkeys, which use the fingerprint, face, or PIN unlock on your phone or laptop, are quicker than a password and won't work on a fake login page. Limit those accounts to company devices.\n\nEveryone else keeps the usual extra login step, with no one excused. Hold on to one old habit, too: before changing a vendor's bank details, call them at a number you already know.",
+  "headline": "The strictest sign-in belongs to whoever can move money",
+  "cta_label": "Review your sign-in policy",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/identity-access-management",
+  "image_file": "2026-11-10-s070-card.png",
+  "image_file_jpg": "2026-11-10-s070-card.jpg",
+  "theme": "identity",
+  "idea_id": "S070",
+  "core_idea": "Sign-in exceptions tend to collect around the executives who can move money. Invert that: tier sign-in strength to what an account can do, require the phishing-resistant method itself rather than any MFA, close the side doors (delegates, recovery and help desk resets), and be explicit that vendor-side fraud still needs call-back verification.",
+  "channels": {
+    "linkedin": "Pull up the exceptions list in your sign-in policy and read the names.\n\nExceptions tend to collect at the top. Executives travel, switch devices, and ask for fewer prompts, and nobody wants to say no. The result is the profile an attacker wants most: maximum authority, minimum checks.\n\nInvert it. Tier sign-in by what an account can do.\n\nEveryone: multifactor authentication, no standing exceptions.\n\nAnyone who can move money, change vendor bank details, or grant access: passkeys or hardware security keys, company-managed devices only, and a fresh check before sensitive actions. Their assistants belong here too. A delegate on a weaker policy is a side door.\n\nAdministrators: the strict tier, plus separate accounts for admin work.\n\nWhy passkeys: a code typed into a convincing fake login page can be relayed to an attacker in real time. Passkeys only work on the genuine site.\n\nTwo details decide whether this holds. First, require the phishing-resistant method itself. In Microsoft 365 that means an authentication strength in Conditional Access, not just MFA switched on. If a text code still satisfies the policy, attackers will ask for one. Second, harden recovery. A call asking the help desk to reset the CFO's sign-in deserves your toughest verification, even if the voice sounds exactly right.\n\nOne honest limit: this protects your own finance mailboxes. It won't stop a compromised vendor from emailing new bank details, so call-back verification stays.\n\nConditional Access builds the tiers. The real work is a short leadership conversation about who belongs where. Start with finance.",
+    "facebook": "Picture two employees. One answers customer emails. The other can approve a payment to a vendor. A scammer who could break into only one of those accounts would pick the second every time.\n\nThe irony: the person who approves payments is often the one who asked to skip the extra login steps. Busy owners and executives get exceptions. That's exactly the gap a scammer hopes for.\n\nFlip it. Give the strongest sign-in to whoever handles money, plus any assistant who can open their email. Passkeys, which use the fingerprint, face, or PIN unlock on your phone or laptop, are quicker than a password and won't work on a fake login page. Limit those accounts to company devices.\n\nEveryone else keeps the usual extra login step, with no one excused. Hold on to one old habit, too: before changing a vendor's bank details, call them at a number you already know.",
+    "gbp": "For LA business owners: check who is excused from your company's extra sign-in steps. It is often the people who approve payments, which is backwards. Give owners, bookkeepers, and finance staff the strongest sign-in instead: passkeys or security keys, company devices only, and the same rules for any assistant with access to their email. A fake login page can't capture a passkey. Keep calling vendors back at a known number before changing bank details. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. If you want a second look at your Microsoft 365 sign-in settings, we're glad to help.",
+    "x": [
+      "Check who's exempt from your extra sign-in steps. If it's the person who can approve a wire, the policy is upside down. Strictest sign-in goes to whoever moves money, and their assistants: passkeys, company devices only. Everyone else: standard MFA, no exceptions."
+    ],
+    "instagram_caption": "Look at who is excused from your company's extra sign-in steps. Often it's the people with the most authority, which is exactly what an attacker hopes to find. Swipe for a three-tier approach that puts the strictest sign-in where the money moves, closes the side doors, and keeps everyone else on standard checks. #Passkeys #Microsoft365 #ConditionalAccess"
+  },
+  "carousel": {
+    "png": [
+      "2026-11-10-s070-01.png",
+      "2026-11-10-s070-02.png",
+      "2026-11-10-s070-03.png",
+      "2026-11-10-s070-04.png",
+      "2026-11-10-s070-05.png",
+      "2026-11-10-s070-06.png",
+      "2026-11-10-s070-07.png",
+      "2026-11-10-s070-08.png"
+    ],
+    "jpg": [
+      "2026-11-10-s070-01.jpg",
+      "2026-11-10-s070-02.jpg",
+      "2026-11-10-s070-03.jpg",
+      "2026-11-10-s070-04.jpg",
+      "2026-11-10-s070-05.jpg",
+      "2026-11-10-s070-06.jpg",
+      "2026-11-10-s070-07.jpg",
+      "2026-11-10-s070-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "ground": "gold",
+    "layout": "left_block",
+    "register": "positive",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 91,
+      "originality": 93,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 88,
+      "platform_fit": 95,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "OPINION: sign-in exceptions tend to collect around senior executives (framed as a tendency, no statistic)",
+    "ANALYSIS: executives with the most authority and fewest checks are the most attractive target profile",
+    "ANALYSIS: attackers concentrate on accounts where one compromise pays off (payment approvers, vendor bank detail changes, access granters)",
+    "ANALYSIS: a compromised internal finance mailbox can be used to send payment requests from inside the company",
+    "ANALYSIS: risk-based tiers match sign-in strength to what an account can do",
+    "ANALYSIS: one-time codes typed into a fake login page can be relayed to an attacker in real time (adversary-in-the-middle phishing, widely documented technique)",
+    "ANALYSIS: passkeys and hardware security keys are bound to the genuine site and will not authenticate on a fake login page (FIDO2/WebAuthn design property)",
+    "ANALYSIS: passkeys unlock with fingerprint, face, or PIN and are quicker than typing a password",
+    "ANALYSIS: Microsoft 365 Conditional Access supports authentication strengths that can require phishing-resistant methods; if a policy accepts any MFA method, an attacker can prompt for a weaker method such as a text code (downgrade technique)",
+    "ANALYSIS: delegates on a weaker policy create an alternate path into a protected mailbox",
+    "ANALYSIS: help desk reset requests are a recovery-path risk, including callers whose voice sounds convincing (voice cloning is a publicly known technique; no statistic cited)",
+    "ANALYSIS: strict internal sign-in does not prevent a compromised vendor from sending fraudulent bank details; call-back verification remains necessary",
+    "ANALYSIS: Microsoft 365 Conditional Access is the mechanism for building sign-in policy tiers, including device requirements and re-authentication",
+    "OPINION: deciding tier membership is the main work and a short leadership conversation; start with finance",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft's thesis is sound, but the package sells comfort ('peace of mind', 'quiet confidence') instead of insight. Nothing in it is ownable. The revision builds on a sharper, verifiable action, auditing who sits on the sign-in exceptions list, which gives readers something to do on Monday and something to forward."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The LinkedIn hook ('The most useful security change for many companies this year') is an unsupported superlative and could preface a dozen topics. The carousel hook states the conclusion before earning the swipe. Both now open on a concrete operational prompt: read the names on your exceptions list."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The tier slide crams three tiers into one body paragraph. On mobile that becomes the 'paragraphs of tiny text' the standard forbids. The revision keeps each tier to one short line so it can be set as a three-row diagram, and adds a dedicated 'side doors' slide so no slide carries two ideas. Visual execution is still unverifiable from copy alone."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "There is an internal contradiction. Tier 1 says 'MFA on managed devices', but managed-device-only access is supposed to be what distinguishes tier 2. 'A stolen password alone no longer opens their mailbox' also undersells tier 1, which already blocks password-only access. The real tier-2 gain is defeating relayed codes and fake login pages. Both are corrected."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft omits the three gaps that actually defeat strict sign-in in practice. Assistants with delegated mailbox access are left on a weaker policy. Weaker fallback methods stay registered, so an attacker simply requests SMS or app approval. Help desk reset requests bypass the whole scheme. All three are now named."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The package implies that hardening the CFO's sign-in addresses payment fraud broadly. It does not stop a compromised vendor mailbox from sending new bank details. The revision states that limit plainly and keeps call-back verification, which builds trust with a CFO who knows how BEC actually works. Admins were also given only separate accounts, without the phishing-resistant tier; that is fixed."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft has no 2026 dimension beyond passkeys. Voice cloning makes help desk impersonation of executives a realistic recovery-path attack. The revision addresses it in one restrained clause ('even if the voice sounds exactly right') without manufacturing AI urgency or citing unsourced numbers."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "As a CFO, I would read 'your CFO gains quiet confidence' as being marketed to. What I would value is learning that I am probably the exception on our own policy, and what I must not assume this fixes. The revision delivers both."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The draft has nothing saveable: checklist_items is empty, and the X post restates the thesis without a hook. The revision adds a five-item checklist and rebuilds the X post around the 'policy is upside down' observation, which is more quotable and shareable."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "On the final test, could any MSP have published the draft? Yes. Generic tiering advice with a Conditional Access mention is standard MSP fare. The revision is more distinctive because of the exceptions-list audit, delegates as side doors, fallback-method removal, recovery-path hardening, and an honest scope limit. Those details read as practitioner judgment, not a template."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The Facebook post (~880 chars) and GBP post (~690 chars) sat at the edge of their limits. 'My suggestion:' shifts to first person singular on a company voice. 'Peace of mind' is a cliché. The Instagram caption's #CyberSecurity is a generic tag. All are fixed. Consecutive-sentence openings were also checked across all revised copy."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The fallback-method advice was imprecise. The line 'attackers will just request those' described a downgrade attack without naming the control that prevents it. The real failure is a Conditional Access policy that accepts any MFA. If a text code still satisfies the policy, an adversary-in-the-middle page simply asks for the text code. The revision names the Microsoft 365 mechanism: an authentication strength that requires the phishing-resistant method. That is also the line that separates this post from generic passkey advice. Facebook said 'everyone else can keep a simpler setup' while LinkedIn said 'no standing exceptions.' That contradiction is now removed in every channel."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Instagram slide 5 opened two consecutive sentences with 'A' ('A code typed... A passkey only works...'), which breaks the house rule. LinkedIn sat close to the 1,600-character ceiling, so the tightened recovery paragraph had to absorb the new authentication-strength detail without growing the post. Both are fixed."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 4 carried the core idea as three stacked text lines. Every footer was empty, so the carousel had no recurring visual device. The revision gives the tier slide a diagram-ready structure (three labeled rows, strength rising with authority). It also adds a consistent footer strip that tracks the argument, so a viewer recognizes the system before the logo. Visual sophistication still depends on design execution that copy cannot guarantee."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
