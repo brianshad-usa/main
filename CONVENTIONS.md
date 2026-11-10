@@ -277,24 +277,28 @@ generator (blog, GBP posts, social, SEO engine).
   assistance"). Describe the IT side instead (encryption, access controls, MFA, patching,
   monitoring, documented environment, restore-tested backups). At most one honest line per
   page: "we work alongside your compliance advisor and handle the IT side". Informational
-  explanations of a regulation (blog, the LA cyber report) are fine. Whether Pro Link signs
-  BAAs is **unconfirmed** — do not state it either way until Brian confirms.
+  explanations of a regulation (blog, the LA cyber report) are fine. **Pro Link signs BAAs
+  with healthcare clients** (Brian, 2026-11-10; verified fact F015) — state it plainly as a
+  contractual fact (the healthcare page does), never as a compliance service or in ads.
 - **Claims come only from `editorial/verified_facts.json`** (master: war room
   `cmo/verified-facts.json`): F003 is always "average ticket first-response time: 15
   minutes" (never "under 15 minutes", "within 15 minutes", "&lt;15m"); no "500+", "99.9%
   uptime", "uptime SLA/guarantee", "guaranteed response", "Fortune 1000" (except the factual
   Cunico/BWX description), "month-to-month", "no contracts" (there is an MSA). Unsourced
-  industry statistics are removed or given a named, dated source. "Unlimited" support and
-  "same-day on-site" still appear on older pages pending Brian's confirmation — do not add
-  new instances, and keep them out of ads.
+  industry statistics are removed or given a named, dated source. **Confirmed 2026-11-10:**
+  unlimited support on managed plans (F016) and same-day on-site support when needed (F017;
+  say "when needed", not a promise for every request).
 - **Testimonials:** the anonymous "Los Angeles ___ Client" quotes came from
   `build_industries_1.py` template data (fabricated) and were replaced on 2026-11-09 by a
   verified "How our help desk performs" proof block (15 min / 90% / &lt;1 hr / 1999 + link to
-  /case-studies). Named real-client quotes are never edited. Cunico and CR&R are named on
-  the site while their mention permission is still "pending" in the CMO file — confirm.
+  /case-studies). Named real-client quotes are never edited — and a quote is only "real" if
+  it can be traced: the quote the site attributed to Alan B. Snitzer ("over 21 years") was
+  another client's 2018 Google review with the number changed; it was replaced on 2026-11-10
+  with Snitzer's own review text. Snitzer = **18-year client** (F011). Cunico and CR&R
+  mention permission granted by Brian 2026-11-10.
 - **No `aggregateRating`** anywhere (removed from 10 pages on 2026-11-09).
-- **Enforced by `site_guard.py` check 20** (compliance-status claims, "we sign a BAA",
-  response-time wording, 500+, 99.9% uptime, "no contracts", aggregateRating). Do not
+- **Enforced by `site_guard.py` check 20** (compliance-status claims, response-time wording,
+  500+, 99.9% uptime, "no contracts", aggregateRating; the BAA rule was dropped 2026-11-10). Do not
   weaken it to make a page pass — fix the copy.
 - Google Ads: compliance terms are campaign negatives; ads/callouts/sitelinks use verified
   facts only; campaign-level sitelinks only (ad-group sitelinks override the campaign set);
