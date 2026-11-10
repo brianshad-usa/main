@@ -124,7 +124,7 @@ Guidelines:
 Pasadena healthcare, San Fernando Valley manufacturers)
 - Mention something specific about LA IT challenges: traffic meaning slow on-site \
 response from distant vendors, earthquake/power-outage DR planning, \
-diverse compliance needs (HIPAA, entertainment, defense)
+industry systems (medical practice software, post-production storage, manufacturing ERP)
 - Position the company as the local expert with boots-on-the-ground presence
 - End with: "Local IT support — we're in your backyard."
 - Total length: 300–500 characters
@@ -133,29 +133,25 @@ diverse compliance needs (HIPAA, entertainment, defense)
 - Plain text only — no markdown, no bullets, no emojis""",
     },
     {
-        "key":      "compliance_corner",
-        "label":    "Compliance Corner",
+        # Replaced "Compliance Corner" 2026-11-09: the owner does not want compliance work
+        # advertised (Pro Link mostly outsources it). This theme uses verified facts F013/F014.
+        "key":      "backup_reality_check",
+        "label":    "Backup Reality Check",
         "cta_type": "LEARN_MORE",
-        "cta_url":  "https://prolinksystems.com/cybersecurity-services",
-        "prompt": """\
-Write a Google Business Profile post for a managed IT and cybersecurity company \
-in Woodland Hills, CA that has served Los Angeles businesses since 1999.
+        "cta_url":  "https://prolinksystems.com/backup-disaster-recovery",
+        "prompt": """Write a Google Business Profile post for a managed IT and cybersecurity company in Woodland Hills, CA that has served Los Angeles businesses since 1999.
 
-Theme: IT Compliance
-Goal: make a compliance requirement feel relevant and urgent to a non-technical \
-LA business owner.
+Theme: Backups you can actually restore
+Goal: make an LA business owner question whether their backups would really bring them back after ransomware, a failed server, or a fire.
 
 Guidelines:
-- Pick ONE regulation or requirement common in LA: \
-cyber insurance minimum controls, HIPAA for healthcare, CMMC for defense contractors, \
-CCPA/CPRA for California businesses, or SEC cybersecurity disclosure rules
-- Explain in plain English what it requires and the real consequence of ignoring it \
-(denied insurance claim, audit fine, contract loss)
-- Position the company as the guide that makes compliance straightforward
-- End with: "We make compliance simple — let's talk."
+- Make ONE point: a backup job that reports "success" is not proof you can recover; the only proof is a test restore
+- Say that Pro Link verifies client backups by restore testing, not by job reports (do not invent statistics, recovery times, or incidents)
+- Optionally mention that Pro Link publishes its incident-response playbook free and ungated at prolinksystems.com/incident-response-playbook
+- Never mention compliance, regulations, certifications, HIPAA, CMMC, SOC 2 or PCI
+- End with: "Ask us to test-restore your backups."
 - Total length: 300–500 characters
-- Add 2–3 hashtags: \
-#CyberInsurance #HIPAACompliance #CMCCCompliance #ITComplianceLA #CybersecurityLA
+- Add 2–3 hashtags: #BackupAndRecovery #DisasterRecoveryLA #ManagedITLA #LosAngelesBusiness
 - Plain text only — no markdown, no bullets, no emojis""",
     },
     {

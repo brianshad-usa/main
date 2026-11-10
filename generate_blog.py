@@ -209,14 +209,8 @@ other_topics = [
     "Endpoint security best practices for Los Angeles businesses in 2026",
     "Business email compromise how to protect your Los Angeles company",
     "IT budgeting guide for Los Angeles small and mid-size businesses",
-    # --- Compliance & regulations ---
-    "PCI DSS compliance for Los Angeles retail and e-commerce businesses",
-    "FTC Safeguards Rule compliance for Los Angeles auto dealers and finance companies",
-    "CMMC compliance guide for Los Angeles defense contractors",
-    "SOC 2 readiness for Los Angeles SaaS and technology companies",
-    "CCPA and CPRA data privacy compliance for California businesses",
+    # --- Risk & resilience (compliance topics removed 2026-11-09: not a Pro Link offer) ---
     "The NIST Cybersecurity Framework explained for Los Angeles small businesses",
-    "FINRA and SEC IT compliance for Los Angeles investment firms",
     "What Los Angeles businesses need to qualify for cyber insurance",
     # --- Security ---
     "Why multi-factor authentication is non-negotiable for Los Angeles businesses",
@@ -459,7 +453,7 @@ FORMAT_SPEC = """Structural requirements (the publishing pipeline depends on the
   - "cloud services" or "Microsoft 365" -> /cloud-services
   - "help desk" or "IT support" -> /it-help-desk
   - "disaster recovery" or "data backup" -> /backup-disaster-recovery
-  - "HIPAA compliance" or "healthcare IT" -> /healthcare-it-services
+  - "healthcare IT" or "medical office IT" -> /healthcare-it-services
 - Do not include DOCTYPE, html, head or body tags. No markdown - clean HTML only.
 - Mention "Pro Link Systems" and Los Angeles naturally; never keyword-stuff.
 
@@ -608,7 +602,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
       <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
-      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. 24/7 in-house, US-based help desk.</p>
     </div>
     <div class="footer-col">
       <h3>Services</h3>

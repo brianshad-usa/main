@@ -67,6 +67,9 @@ function normalize(f) {
   const extra = [];
   if (f.firm_size) extra.push("Firm size: " + f.firm_size);
   if (f.firm_type && f.firm_type !== f.interest) extra.push("Type: " + f.firm_type);
+  // "challenge" is the VISIBLE "Primary IT Challenge" dropdown on 13 industry pages; when the same form
+  // also has a firm-type dropdown, interest = firm_type and the challenge used to be dropped (fixed 2026-11-09).
+  if (f.challenge && f.challenge !== f.interest) extra.push("IT challenge: " + f.challenge);
   if (extra.length) f.message = (f.message ? f.message + "\n\n" : "") + extra.join(" · ");
   return f;
 }

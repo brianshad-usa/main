@@ -375,6 +375,41 @@ for name, pg in pages.items():
             V(19, name, "contact-form.js referenced without a ?v= cache-buster (bump it whenever the script changes)")
 
 # --------------------------------------------------------------------------- #
+# 20: verified claims only (2026-11-09). Brian: "I don't want to advertise any
+#     compliance work as we mostly outsource it." Pro Link copy may state only the
+#     owner-confirmed facts in editorial/verified_facts.json. These patterns catch
+#     the specific false/unverified claims removed site-wide on 2026-11-09 so the
+#     SEO engine, the blog/GBP generators or a hand edit can't reintroduce them.
+#     Informational text about a regulation is fine; claims about Pro Link are not.
+# --------------------------------------------------------------------------- #
+CLAIM_PATTERNS = [
+    (re.compile(r"(?i)\b(?:we are|we're|pro link(?: systems)? is)\s+(?:fully\s+)?(?:hipaa|soc ?2|pci|cmmc)[^.<\"]{0,40}\bcompliant\b"),
+     "compliance-status claim (owner: no compliance advertising)"),
+    (re.compile(r"(?i)\bhipaa[- ](?:compliant|ready)\s+(?:it|managed it|infrastructure|it services|it support|managed services|help desk|healthcare it)\b"),
+     "compliance-status claim (owner: no compliance advertising)"),
+    (re.compile(r"(?i)\b(?:hipaa|soc ?2)\s*(?:&amp;|&|and|,)\s*(?:soc ?2|hipaa|pci)[^.<\"]{0,20}\bcompliant\b"),
+     "compliance-status claim (owner: no compliance advertising)"),
+    (re.compile(r"(?i)\b(?:we|pro link(?: systems)?)\s+(?:will\s+|always\s+)?sign(?:s|ed)?\s+(?:a\s+)?(?:business associate agreement|baa)"),
+     "BAA-signing claim (unconfirmed; ask the owner before stating it)"),
+    (re.compile(r"(?i)under[- ]15[- ]min|&lt;15\s?m(?:in)?\b|<15\s?m\b|in under 15 minutes|(?:support|response|respond)[^.<\"]{0,40}within 15 minutes"),
+     "response-time wording; use 'average ticket first-response time: 15 minutes' (verified fact F003)"),
+    (re.compile(r"(?i)\b500\+\s*(?:organizations|clients|businesses|california|companies)"),
+     "unverified '500+' claim"),
+    (re.compile(r"(?i)99\.9\d*%\s*(?:uptime|network uptime|ehr)|uptime (?:sla|guarantee)"),
+     "unverified uptime claim"),
+    (re.compile(r"(?i)(?<!long-term )(?<!long term )(?<!long-term, )\bno contracts\b"),
+     "'no contracts' (there is an MSA); say 'no long-term contracts'"),
+    (re.compile(r'"aggregateRating"'),
+     "self-serving aggregateRating markup (Google ignores it on LocalBusiness/Organization)"),
+]
+for name, pg in pages.items():
+    src = pg["src"]
+    for rx, why in CLAIM_PATTERNS:
+        m = rx.search(src)
+        if m:
+            V(20, name, f"{why}: '{m.group(0)[:60]}'")
+
+# --------------------------------------------------------------------------- #
 # Report
 # --------------------------------------------------------------------------- #
 advisory = "--fix-report" in sys.argv[1:]
