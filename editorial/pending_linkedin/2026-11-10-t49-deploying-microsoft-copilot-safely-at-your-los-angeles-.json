@@ -1,0 +1,7 @@
+{
+  "slug": "2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-",
+  "url": "https://prolinksystems.com/blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-",
+  "title": "Copilot Will Find What You Overshared",
+  "summary": "Copilot doesn't leak data by itself. It surfaces what your permissions already expose, so a safe rollout starts with cleaning up access, not buying licenses.",
+  "caption": "The most sensitive file in your company probably isn't hidden. It's just hard to find, and Copilot is very good at finding things.\nCopilot works within each user's existing permissions. That sounds reassuring until you remember how those permissions accumulated.\nFor most mid-sized businesses, a safe rollout is a permissions cleanup that ends with a license purchase rather than one that starts there.\nAgents raise the stakes again, because the question shifts from what an assistant can read to what it can change.\nOur new essay lays out the sequence executives should settle before the first seat is assigned."
+}
