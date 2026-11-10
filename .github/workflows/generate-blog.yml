@@ -2,10 +2,10 @@ name: Generate Blog Post
 
 on:
   schedule:
-    # Every other day at 16:00 UTC = ~9 AM Los Angeles (8 AM PST / 9 AM PDT),
-    # a strong window for LinkedIn engagement. Temporary high-frequency cadence;
-    # revert to '0 16 1 * *' for once-a-month.
-    - cron: '0 16 */2 * *'
+    # Weekly, Tuesdays 16:00 UTC = ~8 AM PST / 9 AM PDT (changed 2026-11-09 from every
+    # other day: one deeper, locally grounded post a week instead of ~15 thin ones a
+    # month; lowers scaled-content risk). Owner-approved assessment recommendation.
+    - cron: '0 16 * * 2'
   workflow_dispatch:
     inputs:
       topic_index:

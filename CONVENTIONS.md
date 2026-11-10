@@ -81,7 +81,8 @@ bypass the guard; fix the content instead.
   by independent C3PAOs. Pro Link prepares and manages environments.
 - No fabricated statistics, clients, reviews, or testimonials, ever.
   Named testimonials require documented client permission.
-- One CTA per page/post (free discovery/assessment call → /contact).
+- One CTA per page/post (free discovery/assessment call → /contact). Ad landing pages and
+  industry pages may also embed the shared lead form (contact-form.js); buttons still go to /contact.
 
 ## Google Ads (`C:\Googleads` scripts)
 
@@ -264,6 +265,44 @@ fail-safe and measured; keep them that way:
   first scroll/tap/key or after 6 s (main-thread time = Ads landing-page experience).
   Keep `/managed-it-services` LA-focused — it is the Google + Microsoft Ads landing
   page; the LA city page carries organic "managed IT services Los Angeles".
+
+## No compliance advertising + verified claims only (2026-11-09)
+
+Owner (Brian, 2026-11-09): **"I don't want to advertise any compliance work as we mostly
+outsource it."** Applies to ads, landing pages, site copy, the Business Profile and every
+generator (blog, GBP posts, social, SEO engine).
+- **Never** claim a compliance status ("HIPAA-compliant/ready", "SOC 2 aligned", "HITECH
+  compliant", "Full compliance") or sell compliance delivery ("BAA included", "CMMC
+  documentation", "risk analysis", "we prepare you for audits/assessments", "compliance
+  assistance"). Describe the IT side instead (encryption, access controls, MFA, patching,
+  monitoring, documented environment, restore-tested backups). At most one honest line per
+  page: "we work alongside your compliance advisor and handle the IT side". Informational
+  explanations of a regulation (blog, the LA cyber report) are fine. Whether Pro Link signs
+  BAAs is **unconfirmed** — do not state it either way until Brian confirms.
+- **Claims come only from `editorial/verified_facts.json`** (master: war room
+  `cmo/verified-facts.json`): F003 is always "average ticket first-response time: 15
+  minutes" (never "under 15 minutes", "within 15 minutes", "&lt;15m"); no "500+", "99.9%
+  uptime", "uptime SLA/guarantee", "guaranteed response", "Fortune 1000" (except the factual
+  Cunico/BWX description), "month-to-month", "no contracts" (there is an MSA). Unsourced
+  industry statistics are removed or given a named, dated source. "Unlimited" support and
+  "same-day on-site" still appear on older pages pending Brian's confirmation — do not add
+  new instances, and keep them out of ads.
+- **Testimonials:** the anonymous "Los Angeles ___ Client" quotes came from
+  `build_industries_1.py` template data (fabricated) and were replaced on 2026-11-09 by a
+  verified "How our help desk performs" proof block (15 min / 90% / &lt;1 hr / 1999 + link to
+  /case-studies). Named real-client quotes are never edited. Cunico and CR&R are named on
+  the site while their mention permission is still "pending" in the CMO file — confirm.
+- **No `aggregateRating`** anywhere (removed from 10 pages on 2026-11-09).
+- **Enforced by `site_guard.py` check 20** (compliance-status claims, "we sign a BAA",
+  response-time wording, 500+, 99.9% uptime, "no contracts", aggregateRating). Do not
+  weaken it to make a page pass — fix the copy.
+- Google Ads: compliance terms are campaign negatives; ads/callouts/sitelinks use verified
+  facts only; campaign-level sitelinks only (ad-group sitelinks override the campaign set);
+  each ad group sets `final_url_suffix` with its own `utm_content`.
+- Generators: `generate_gbp_post.py` "Compliance Corner" → "Backup Reality Check";
+  `editorial/standards.md` carries the rule; `generate_blog.py` compliance topics removed and
+  the blog runs weekly (Tuesday 16:00 UTC); `llms.txt` service descriptions are claim-free;
+  the SEO engine's content-gap list no longer includes CMMC / NIST / ITAR / GCC High.
 
 ## SEO / local-search push (2026-10-14)
 

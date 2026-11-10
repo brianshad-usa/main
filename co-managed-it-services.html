@@ -50,20 +50,20 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <title>Co-Managed IT Services Los Angeles | Pro Link</title>
-  <meta name="description" content="Co-managed IT services for Los Angeles businesses with in-house IT. Pro Link augments your team — 24/7 help desk, SOC security, vCIO. Free discovery call.">
+  <meta name="description" content="Co-managed IT services for Los Angeles businesses with in-house IT. Your IT lead keeps control; we add 24/7 help desk, monitoring, security and projects.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://prolinksystems.com/co-managed-it-services">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://prolinksystems.com/co-managed-it-services">
   <meta property="og:title" content="Co-Managed IT Services Los Angeles | Pro Link">
-  <meta property="og:description" content="Co-managed IT support that augments your internal IT team — help desk overflow, 24/7 monitoring, SOC security, cloud, backup, and vCIO strategy for LA businesses.">
+  <meta property="og:description" content="Co-managed IT support that augments your internal IT team — help desk overflow, 24/7 monitoring, security, cloud, backup, and vCIO strategy for LA businesses.">
   <meta property="og:image" content="https://prolinksystems.com/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ProLink_Systems">
   <meta name="twitter:image" content="https://prolinksystems.com/logo.png">
   <meta name="twitter:title" content="Co-Managed IT Services Los Angeles | Pro Link">
-  <meta name="twitter:description" content="Co-managed IT that extends your in-house IT team, not replaces it — 24/7 help desk, SOC-backed security, cloud, backup, and vCIO strategy across Los Angeles.">
+  <meta name="twitter:description" content="Co-managed IT that extends your in-house IT team, not replaces it — 24/7 help desk, monitoring and security, cloud, backup, and vCIO strategy across Los Angeles.">
 
   <script type="application/ld+json">
   {
@@ -73,7 +73,7 @@
     "name": "Co-Managed IT Services Los Angeles",
     "serviceType": "Co-Managed IT Services",
     "alternateName": "Co-Managed IT Support",
-    "description": "Co-managed IT services for Los Angeles businesses with an internal IT person or team. Pro Link Systems augments — rather than replaces — your in-house IT with 24/7 help desk overflow and after-hours coverage, proactive monitoring, SentinelOne-based cybersecurity and SOC, cloud and Microsoft 365, tested backup and disaster recovery, vCIO strategy, and project support.",
+    "description": "Co-managed IT services for Los Angeles businesses with an internal IT person or team. Pro Link Systems augments — rather than replaces — your in-house IT with 24/7 help desk overflow and after-hours coverage, proactive monitoring, SentinelOne-based endpoint security, cloud and Microsoft 365, tested backup and disaster recovery, vCIO strategy, and project support.",
     "provider": {
       "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://prolinksystems.com/#business",
@@ -139,7 +139,7 @@
       {
         "@type": "Question",
         "name": "What is included in co-managed IT services?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Co-managed engagements are built to fit the gaps in your internal team. Common components include help desk overflow and after-hours or holiday coverage from our in-house, US-based 24/7 help desk; proactive monitoring and patching; cybersecurity with SentinelOne-based EDR and 24/7 SOC analysts; cloud and Microsoft 365 management; tested backup and disaster recovery; vCIO strategy, budgeting, and vendor management; and project support such as migrations, rollouts, and office moves. You choose which layers we own and which your team keeps." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Co-managed engagements are built to fit the gaps in your internal team. Common components include help desk overflow and after-hours or holiday coverage from our in-house, US-based 24/7 help desk; proactive monitoring and patching; cybersecurity with SentinelOne-based EDR, email security, and 24/7 monitoring; cloud and Microsoft 365 management; tested backup and disaster recovery; vCIO strategy, budgeting, and vendor management; and project support such as migrations, rollouts, and office moves. You choose which layers we own and which your team keeps." }
       },
       {
         "@type": "Question",
@@ -204,6 +204,54 @@
     .related-link { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px 18px; font-size: .9rem; font-weight: 700; color: var(--navy); text-decoration: none; transition: transform .2s, box-shadow .2s, border-color .2s; }
     .related-link:hover { transform: translateY(-3px); box-shadow: var(--sh-md); border-color: var(--navy-light); }
     .related-link svg { color: var(--navy-light); flex-shrink: 0; margin-left: auto; }
+
+    /* Lead form: the standard industry-page form (same markup + handler as nonprofit-it-services), placed right under the hero */
+    .lead-section { background: var(--off-white); padding: 72px 32px; border-bottom: 1px solid var(--border); scroll-margin-top: 84px; }
+    .lead-wrap { max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .lead-copy h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 800; color: var(--text); letter-spacing: -.02em; line-height: 1.25; margin-bottom: 14px; }
+    .lead-copy > p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; }
+    .lead-points { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; }
+    .lead-points li { display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--text); line-height: 1.55; }
+    .lead-points svg { color: var(--navy-light); flex-shrink: 0; margin-top: 3px; }
+    .lead-copy .lead-call { font-size: .92rem; margin-bottom: 0; }
+    .lead-call a { color: var(--navy); font-weight: 700; }
+    .form-card { background: #fff; border-radius: var(--r-xl); padding: 28px 26px; border: 1px solid var(--border); box-shadow: var(--sh-xl); }
+    .form-card-head { margin-bottom: 18px; }
+    .form-card-head h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); letter-spacing: -.02em; margin-bottom: 4px; }
+    .form-card-head p { font-size: .78rem; color: var(--text-muted); line-height: 1.5; }
+    .form-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(11,61,107,.06); border: 1px solid rgba(11,61,107,.18); color: var(--navy); font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .form-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+    .form-group label { font-size: .72rem; font-weight: 600; color: var(--text); letter-spacing: .02em; }
+    .form-group label .req { color: #dc2626; margin-left: 1px; }
+    .form-group input, .form-group select { font-family: 'Inter', sans-serif; font-size: .82rem; color: var(--text); background: var(--off-white); border: 1.5px solid var(--border); border-radius: var(--r-sm); padding: 9px 11px; transition: border-color .2s, box-shadow .2s; outline: none; width: 100%; }
+    .form-group input:focus, .form-group select:focus { border-color: var(--navy-light); box-shadow: 0 0 0 3px rgba(23,98,168,.12); background: var(--white); }
+    .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%235a6a80' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 11px center; padding-right: 28px; }
+    .form-error { font-size: .7rem; color: #dc2626; margin-top: 1px; display: none; }
+    .form-group.has-error input, .form-group.has-error select { border-color: #dc2626; }
+    .form-group.has-error .form-error { display: block; }
+    .submit-btn { width: 100%; padding: 12px 20px; border-radius: var(--r-md); background: var(--navy); color: #fff; font-family: 'Inter', sans-serif; font-size: .875rem; font-weight: 700; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background .2s, transform .15s; }
+    .submit-btn:hover:not(:disabled) { background: var(--navy-light); transform: translateY(-1px); }
+    .submit-btn:disabled { opacity: .7; cursor: not-allowed; }
+    .submit-btn .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .submit-btn.loading .btn-label, .submit-btn.loading .btn-arrow { display: none; }
+    .submit-btn.loading .spinner { display: block; }
+    .form-privacy { font-size: .68rem; color: var(--text-muted); text-align: center; margin-top: 8px; line-height: 1.4; }
+    .form-success { display: none; text-align: center; padding: 32px 16px 24px; animation: fsUp .45s ease; }
+    .form-success.show { display: block; }
+    .form-body.hide { display: none; }
+    @keyframes fsUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+    .success-orbit { width: 64px; height: 64px; background: linear-gradient(135deg, #0b3d6b, #1762a8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; animation: successPop .5s cubic-bezier(.34,1.56,.64,1); }
+    @keyframes successPop { from { transform:scale(0); opacity:0; } to { transform:scale(1); opacity:1; } }
+    .success-pill { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #86efac; color: #166534; font-size: .72rem; font-weight: 700; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .success-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; }
+    .form-success h3 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .form-success p { font-size: .82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
+    .success-cta-phone { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: #fff; font-size: .85rem; font-weight: 700; padding: 10px 22px; border-radius: var(--r-md); text-decoration: none; transition: background .2s; }
+    .success-cta-phone:hover { background: var(--navy-light); }
+    @media (max-width: 1024px) { .lead-wrap { grid-template-columns: 1fr; gap: 32px; } }
+    @media (max-width: 768px) { .lead-section { padding: 56px 20px; } .form-row { grid-template-columns: 1fr; } }
 
     @media (max-width: 1024px) { .features-grid { grid-template-columns: repeat(2, 1fr); } .stats-band-inner { grid-template-columns: repeat(2, 1fr); } .related-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) { .page-hero { padding: 56px 20px 52px; } .intro-section, .features-section, .layers-section, .faq-section, .related-section { padding: 56px 20px; } .features-grid { grid-template-columns: 1fr; } .related-grid { grid-template-columns: 1fr; } .hero-cta-group { flex-direction: column; align-items: center; } }
@@ -292,12 +340,12 @@
 <section class="page-hero" aria-label="Co-managed IT services">
   <div class="svc-badge">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-    Co-Managed IT &middot; Since 1999
+    Co-Managed IT &middot; Serving LA Since 1999
   </div>
   <h1>Co-Managed IT Services in<br><em>Los Angeles</em></h1>
   <p>You already have an IT person or team. Pro Link Systems backs them up — not out. Co-managed IT adds 24/7 coverage, specialized security and cloud skills, and extra hands for projects, so your internal staff keep what they do best and stop carrying what they shouldn't have to carry alone.</p>
   <div class="hero-cta-group">
-    <a href="contact" class="btn btn-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Talk to Our Team</a>
+    <a href="#talk-to-us" class="btn btn-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Talk to Our Team</a>
     <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
   </div>
 </section>
@@ -306,16 +354,133 @@
 <div class="trust-bar" role="complementary">
   <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>Augments Your Team — Never Replaces It</div>
   <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>24/7 US-Based In-House Help Desk</div>
-  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SentinelOne-Based Security &amp; SOC</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SentinelOne-Based Security &amp; 24/7 Monitoring</div>
   <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Flexible — No Long-Term Contracts</div>
 </div>
+
+<!-- LEAD FORM (standard industry-page form; handled by /contact-form.js + Turnstile) -->
+<section class="lead-section" id="talk-to-us" aria-labelledby="lead-heading">
+  <div class="lead-wrap">
+    <div class="lead-copy">
+      <span class="section-label">Free Discovery Call</span>
+      <h2 id="lead-heading">Talk to us about co-managed IT</h2>
+      <p>Tell us where your internal team is stretched. We'll map your current coverage and skills honestly, and recommend co-managed IT only where it actually helps.</p>
+      <ul class="lead-points">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Your IT lead keeps control. We add help desk, monitoring, security and project capacity.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>24/7 help desk, in-house and US-based. Calls are answered live, with no phone tree and no hold queue.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Average ticket first-response time: 15 minutes.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>No long-term contracts. The split flexes as your team changes.</li>
+      </ul>
+      <p class="lead-call">Prefer to talk now? <a href="tel:18008906133">Call 1-800-890-6133</a></p>
+    </div>
+    <div class="lead-form">
+      <div class="form-card">
+        <div class="form-card-head">
+          <div class="form-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            Free Discovery Call &middot; No Obligation
+          </div>
+          <h3>Request a free discovery call</h3>
+          <p>Tell us a little about your team and where you need backup. No pressure, no obligation.</p>
+        </div>
+        <div class="form-body" id="formBody">
+          <form method="post" id="cmForm" novalidate>
+            <div class="form-row">
+              <div class="form-group" id="fg-fname">
+                <label>First Name <span class="req">*</span></label>
+                <input type="text" name="first_name" placeholder="Alex" autocomplete="given-name">
+                <span class="form-error">Required</span>
+              </div>
+              <div class="form-group" id="fg-lname">
+                <label>Last Name</label>
+                <input type="text" name="last_name" placeholder="Rivera" autocomplete="family-name">
+                <span class="form-error">Required</span>
+              </div>
+            </div>
+            <div class="form-group" id="fg-company">
+              <label>Company Name</label>
+              <input type="text" name="firm_name" placeholder="Rivera Logistics" autocomplete="organization">
+              <span class="form-error">Required</span>
+            </div>
+            <div class="form-group" id="fg-email">
+              <label>Work Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="alex@example.com" autocomplete="email">
+              <span class="form-error">Valid email required</span>
+            </div>
+            <div class="form-group" id="fg-phone">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="(818) 555-0200" autocomplete="tel">
+              <span class="form-error">Required</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Internal IT</label>
+                <select name="firm_type">
+                  <option value="">Select&hellip;</option>
+                  <option>One IT Person</option>
+                  <option>Small IT Team (2–5)</option>
+                  <option>IT Department (6+)</option>
+                  <option>IT Manager / Director Only</option>
+                  <option>No Internal IT Yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>What You Need Most</label>
+                <select name="challenge">
+                  <option value="">Select&hellip;</option>
+                  <option>Help Desk Overflow</option>
+                  <option>After-Hours / 24/7 Coverage</option>
+                  <option>Monitoring &amp; Patching</option>
+                  <option>Cybersecurity</option>
+                  <option>Cloud / Microsoft 365</option>
+                  <option>Backup &amp; Disaster Recovery</option>
+                  <option>Projects &amp; Migrations</option>
+                  <option>vCIO / IT Strategy</option>
+                  <option>Not Sure — Let's Talk</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Number of Employees</label>
+              <select name="firm_size">
+                <option value="">Select&hellip;</option>
+                <option>Under 25</option>
+                <option>25–50</option>
+                <option>51–150</option>
+                <option>151–500</option>
+                <option>Over 500</option>
+              </select>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-label">Request My Free Discovery Call</span>
+              <svg class="btn-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <div class="spinner"></div>
+            </button>
+            <p class="form-privacy">Your information is never shared. We respond within one business day.</p>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-orbit"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="success-pill"><div class="success-pill-dot"></div>Request Received</div>
+          <h3>You're in good hands.</h3>
+          <p>A Pro Link engineer will reach out within one business day to schedule your free co-managed IT discovery call.</p>
+          <a href="tel:18008906133" class="success-cta-phone">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now: 1-800-890-6133
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- INTRO -->
 <section class="intro-section" aria-labelledby="intro-heading">
   <div class="intro-wrap">
     <span class="section-label">What It Is</span>
     <h2 id="intro-heading">Co-managed IT extends your internal team — it doesn't take it over</h2>
-    <p>Most growing Los Angeles businesses reach a point where their IT person or small team is good at the job but simply spread too thin. Tickets pile up during projects. Coverage stops at 6 PM, which means evenings, weekends, and vacations are exposed. Specialized work — serious cybersecurity, a cloud migration, a compliance deadline — needs depth that one or two generalists can't reasonably carry. Hiring another full-time engineer is expensive and slow, and it still doesn't solve the around-the-clock problem.</p>
+    <p>Most growing Los Angeles businesses reach a point where their IT person or small team is good at the job but simply spread too thin. Tickets pile up during projects. Coverage stops at 6 PM, which means evenings, weekends, and vacations are exposed. Specialized work — serious cybersecurity, a cloud migration, a network overhaul — needs depth that one or two generalists can't reasonably carry. Hiring another full-time engineer is expensive and slow, and it still doesn't solve the around-the-clock problem.</p>
     <p>Co-managed IT solves this differently. Pro Link Systems works <em>alongside</em> your internal staff, taking the layers that are hard to cover in-house while your team keeps ownership of the systems, applications, and relationships closest to your business. Your people hold the context no outside provider can buy — which systems the business can't lose, how approvals really work, who to call about what. We supply the capacity, the specialized skills, and the 24/7/365 coverage. Where that split lands is up to you, and it can change as your needs do.</p>
     <p>It's a practical middle ground between going it alone with a stretched internal team and handing everything to a provider. If you have no internal IT at all, our <a href="managed-it-services">managed IT services</a> and <a href="outsourced-it-services-los-angeles">outsourced IT</a> options are usually the better fit. If you have capable internal IT that needs backup, depth, and coverage, co-managed IT is built for exactly that.</p>
   </div>
@@ -352,8 +517,8 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Cybersecurity &amp; 24/7 SOC</h3>
-        <p>Enterprise-grade <a href="cybersecurity-services">cybersecurity</a> — SentinelOne-based EDR with 24/7 SOC analysts, email security, and continuous threat detection that a small internal team can't staff on its own.</p>
+        <h3>Cybersecurity &amp; 24/7 Monitoring</h3>
+        <p>Enterprise-grade <a href="cybersecurity-services">cybersecurity</a> — SentinelOne-based EDR, email security, and continuous threat detection, with 24/7 monitoring and alerting that a small internal team can't staff on its own.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg></div>
@@ -433,7 +598,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What is included in co-managed IT services?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">Co-managed engagements are built to fit the gaps in your internal team. Common components include help desk overflow and after-hours or holiday coverage from our in-house, US-based 24/7 help desk; proactive monitoring and patching; cybersecurity with SentinelOne-based EDR and 24/7 SOC analysts; cloud and Microsoft 365 management; tested backup and disaster recovery; vCIO strategy, budgeting, and vendor management; and project support such as migrations, rollouts, and office moves. You choose which layers we own and which your team keeps.</div>
+        <div class="faq-a">Co-managed engagements are built to fit the gaps in your internal team. Common components include help desk overflow and after-hours or holiday coverage from our in-house, US-based 24/7 help desk; proactive monitoring and patching; cybersecurity with SentinelOne-based EDR, email security, and 24/7 monitoring; cloud and Microsoft 365 management; tested backup and disaster recovery; vCIO strategy, budgeting, and vendor management; and project support such as migrations, rollouts, and office moves. You choose which layers we own and which your team keeps.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Is co-managed IT right for my business?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
@@ -467,7 +632,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <img src="logo.png" alt="Pro Link Systems" width="140" height="38">
-      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. Trusted by 500+ organizations across California.</p>
+      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. 24/7 in-house, US-based help desk.</p>
     </div>
     <div class="footer-col">
       <h3>Services</h3>
@@ -553,6 +718,8 @@
   </div>
 </footer>
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="/contact-form.js?v=20261109" defer></script>
 <script>
   document.querySelectorAll('.faq-q').forEach(function(btn) {
     btn.addEventListener('click', function() {

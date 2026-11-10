@@ -46,13 +46,21 @@ Access, Zero Trust, Microsoft 365 security, Copilot governance and data
 leakage, SaaS sprawl, cloud cost management, cyber insurance requirements,
 business email compromise, modern ransomware and data exfiltration,
 supply-chain and third-party risk, MDR/XDR/EDR, SOC operations, machine
-identities, API security, privileged access, backup immutability, CMMC and
-NIST, cyber resilience, human risk, AI-assisted IT operations, IT talent
+identities, API security, privileged access, backup immutability, cyber
+resilience, human risk, AI-assisted IT operations, IT talent
 shortage, technology debt, hybrid work security, executive and board-level
 cyber responsibility, technology consolidation, IT budgeting, and the changing
 role of both MSPs and internal IT teams.
 
 Do not manufacture urgency around a subject merely because it involves AI.
+
+## Compliance is not a Pro Link offer (owner, 2026-11-09)
+
+The owner does not want compliance work advertised: Pro Link mostly outsources it.
+Never position Pro Link as a HIPAA / CMMC / SOC 2 / PCI / NIST compliance provider and
+never claim a compliance status or certification. Content may explain a regulation as
+information; when it touches what Pro Link does, the most it says is that Pro Link
+handles the IT side alongside the client's compliance advisor.
 
 ## Truth discipline
 
