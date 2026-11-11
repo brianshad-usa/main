@@ -310,7 +310,13 @@ generator (blog, GBP posts, social, SEO engine).
   weaken it to make a page pass — fix the copy. **Added 2026-11-11:** "no annual contracts" (say
   "no long-term contracts") and unconditional same-business-day on-site claims ("technicians are
   dispatched the same business day") — 20 city pages, the Ads landing page and the city
-  generator said both; rewritten to F017 "same-day on-site support when needed".
+  generator said both; rewritten to F017 "same-day on-site support when needed". Also
+  compliance-alignment wording ("SEC/FINRA and GLBA-aligned", "SOC 2 aligned"), and **check 20 now
+  scans `llms.txt` too** (it still said "SEC/FINRA and GLBA-aligned IT" because only HTML was
+  checked). `llms.txt` carries a "Key Facts" block built only from `verified_facts.json` (citable
+  F001–F005, F007, F008, F012–F017) — keep it in sync when a fact changes. Self-test for the
+  patterns: they must flag the 11/11 claims and must NOT flag "no long-term contracts",
+  "same-day on-site support when needed" or "we work alongside your compliance advisor".
 - Google Ads: compliance terms are campaign negatives; ads/callouts/sitelinks use verified
   facts only; campaign-level sitelinks only (ad-group sitelinks override the campaign set);
   each ad group sets `final_url_suffix` with its own `utm_content`.
