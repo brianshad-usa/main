@@ -1,0 +1,164 @@
+{
+  "post": "Picture a familiar December task. Someone in accounts is reconciling the company card and finds a few AI subscriptions nobody mentioned: a note-taker, a writing assistant, an app that promises to tame the inbox.\n\nThe charges are small. What matters is what each tool can touch. A meeting assistant may sit in on client calls; an inbox app may read every message. Free tools never show up on a statement at all.\n\nOne more wrinkle: if someone signed up with a personal email, the recordings live in their account, not yours. Turning off their work login later does not bring those back.\n\nOur prediction: AI connections are the next thing businesses will wish they had tracked.\n\nThe fix is a short list: the tool, what it can reach, whose account it lives in, and who is responsible. Your Microsoft 365 or Google Workspace admin can pull the rest.",
+  "headline": "Year-end inventory: what can your AI tools read?",
+  "cta_label": "Talk it through",
+  "cta_type": "BOOK_APPOINTMENT",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-11-11-s199-card.png",
+  "image_file_jpg": "2026-11-11-s199-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S199",
+  "core_idea": "Year-end close is the natural moment to start an inventory of the AI tools connected to company mail, files, and calendars, and to decide whether employees may grant that access on their own. The sharper point: offboarding cuts off a departing employee's login, but not necessarily an app approved for the whole organization or an API key in a script. It never retrieves what a tool already copied, such as transcripts in a note-taker signed up on a personal email. Our labeled prediction is that AI connections are the next list businesses will wish they had started early, as they once did with laptops and SaaS subscriptions.",
+  "channels": {
+    "linkedin": "Every December, finance can tell you what the company owns. Very few companies can tell you what their AI tools can read.\n\nA prediction, labeled as one: next December, many leadership teams will wish they had started that list now.\n\nThe pattern is familiar. Laptops arrived before anyone tracked them. SaaS subscriptions landed on corporate cards before anyone owned them. Each inventory came later, often forced by an incident, an audit, or an insurance questionnaire.\n\nAI is following the same path, with one difference. A forgotten subscription mostly costs money. Forgotten connections hold access.\n\nOffboarding is where this shows. Disabling a departing employee's account generally ends access tied to their sign-in. It does not necessarily remove an app approved for the whole organization, or an API key left in a script.\n\nThe harder case: a meeting assistant signed up with a personal email and connected to a work calendar. Revoking it stops future reads. Transcripts already made stay in an account the company never controlled.\n\nFour columns are enough to start:\nTool, approved or not.\nReach: mail, files, calendar, CRM.\nAccount: company or personal.\nOwner, once its champion leaves.\n\nThen one leadership decision: may employees grant these permissions on their own? Microsoft 365 and Google Workspace both let administrators require review first.\n\nCard statements surface paid tools. The admin console shows granted apps, free ones included. API keys appear in neither; ask whoever owns each script.\n\nStarting now is a modest task. Reconstructing the list after an incident is not.",
+    "facebook": "Picture a familiar December task. Someone in accounts is reconciling the company card and finds a few AI subscriptions nobody mentioned: a note-taker, a writing assistant, an app that promises to tame the inbox.\n\nThe charges are small. What matters is what each tool can touch. A meeting assistant may sit in on client calls; an inbox app may read every message. Free tools never show up on a statement at all.\n\nOne more wrinkle: if someone signed up with a personal email, the recordings live in their account, not yours. Turning off their work login later does not bring those back.\n\nOur prediction: AI connections are the next thing businesses will wish they had tracked.\n\nThe fix is a short list: the tool, what it can reach, whose account it lives in, and who is responsible. Your Microsoft 365 or Google Workspace admin can pull the rest.",
+    "gbp": "Before the books close, add one list: the AI tools your team uses and what they can access. Card statements catch paid tools. Free ones need a look at third-party app access in your Microsoft 365 or Google Workspace admin console. For each tool, note who owns it and whether it was set up on a company or personal account, since recordings in a personal account stay with the employee. Remove what no one uses, and decide whether staff can approve new connections on their own. Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. If you want a second set of eyes on the list, book a time with our team.",
+    "x": [
+      "Disabling a departing employee's login generally cuts off the AI note-taker they connected to the work calendar. It doesn't retrieve the transcripts already in their personal account. Those leave with them. Worth knowing before you start a year-end AI inventory."
+    ],
+    "instagram_caption": "Year-end is when businesses count things. Our prediction for the year ahead: the list many teams will wish they had started is a list of AI connections.\n\nEarlier waves of technology were tracked late. Laptops and cloud subscriptions were inventoried after they spread. AI assistants are spreading the same way, and each one connected to mail, files, or calendars holds access. Revoking that access later stops future reads, but it does not retrieve what a tool already copied.\n\nClose season already has you reviewing card statements. Add four columns: the tool, what it can reach, whose account it sits in, and who owns it.\n\n#AIGovernance #ShadowAI #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "split",
+    "format": "single_image",
+    "ground": "split",
+    "layout": "split",
+    "register": "seasonal",
+    "channels": {
+      "linkedin": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "facebook": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "gbp": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "instagram": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "x": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 93,
+      "originality": 94,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 91,
+      "platform_fit": 95,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT: Microsoft 365 and Google Workspace admin consoles show which third-party apps have been granted access to organizational data (general product knowledge; no number)",
+    "FACT: Microsoft 365 (Entra ID user consent settings) and Google Workspace (API controls / app access control) let administrators restrict or require review of user consent to third-party apps (general product knowledge; no number)",
+    "FACT: Revoking a third-party app's access stops future access but does not delete data the app already stored on the vendor's side (general OAuth behavior; no number)",
+    "ANALYSIS: Disabling a departing user's account generally ends access tied to that user's sign-in, but does not necessarily revoke organization-wide admin-approved apps or API keys stored in scripts (hedged deliberately)",
+    "ANALYSIS: An AI tool signed up on a personal email stores its output in an account the company does not control, so that output stays with the employee after offboarding (framed as scenario, not incident)",
+    "ANALYSIS: API keys embedded in scripts do not appear on card statements or in the admin console's app-grant view",
+    "ANALYSIS: Laptops and SaaS subscriptions were each adopted before businesses inventoried them, often prompted by an incident, audit, or insurance questionnaire",
+    "ANALYSIS: Permissions granted to AI tools typically persist after use stops",
+    "ANALYSIS: A forgotten subscription mainly costs money, while a forgotten AI connection holds access to data",
+    "PREDICTION: AI connections will be the next thing businesses wish they had inventoried",
+    "OPINION: Starting the inventory now is a modest task compared with reconstructing it after an incident",
+    "OPINION: Year-end close is a good time to start the list"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "Concept S199 is a general shadow-AI inventory piece. Apart from the GBP sign-off, nothing in it shows ProLink's perspective, so another MSP could publish it largely unchanged. The revision adds a sharper operational insight: offboarding removes the person but not tenant-wide app approvals or keys stored in scripts. It also adds a leadership decision on user consent, which moves the post past 'make a list'. Both improve differentiation. Neither fully solves it."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The hook 'Year-end is when businesses count things' is pleasant but low-tension and could open many topics. The revision sets up a contrast: finance can say what the company owns, but almost no one can say what its AI tools can read."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Two slides crowd the hierarchy. Slide 4's headline runs about 75 characters as two parallel sentences. Slide 5 describes a three-column list in prose when it should read as a ledger. The revision shortens the slide 4 headline and rewrites the list slide as labeled columns (Tool / Reach / Owner) so it can be set as a table graphic. The schema still carries no visual direction, which limits how far visual sophistication can be scored."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Two sentences open consecutively with 'A' ('A forgotten subscription... A forgotten connection...') in both LinkedIn and slide 4, which violates the voice rule. The Facebook draft has the same pattern. All instances are fixed."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Card reconciliation will surface most of the subscriptions' overclaims. Free tiers and personal-account sign-ups never reach a statement, and those are the core of shadow AI. The revision says statements find the paid tools and the admin console finds the rest."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Whoever approved the connection may leave, and the access often stays behind' is imprecise. Disabling a departing user generally ends access the user granted personally. What survives is an app approved by an administrator for the whole organization, and API keys or service credentials stored in scripts. The revision names those specifically and hedges with 'not necessarily'. It also adds the real control: restricting user consent, which both Microsoft 365 and Google Workspace support."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft frames AI purely as a liability, which edges toward the urgency-because-AI pattern the standards warn against. The revision notes that the inventory also shows which tools are earning their place and deserve proper licensing. That makes it a governance exercise rather than a fear exercise."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft gives a task but no decision, and executives own decisions. The revision adds the leadership question: can employees grant these permissions on their own, or does someone review them first?"
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post was a loose summary with a sentence fragment and no quotable line. It now leads with 'Offboarding disables the person', which is compressed and shareable. checklist_items was empty, wasting a save-driving asset; it is now populated."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP 'give us a call' conflicted with the BOOK_APPOINTMENT CTA type and read as generic. It is aligned to 'book a time'. The F012 citation stays as the only ProLink claim. No compliance positioning or client references appear anywhere, which is correct."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Tokens outlive the enthusiasm' favors cleverness over clarity. 'The good news is that' in the Instagram caption is filler. Both are cut. 'Year-end' also assumes a calendar fiscal year, so LinkedIn now uses 'close season' and 'next year-end' consistently without implying a universal date."
+    },
+    {
+      "role": "Senior Technology Editor / Cybersecurity Expert",
+      "finding": "The offboarding point is the most original idea in the package, but it stops halfway. Disabling a user generally does cut off the delegated access that user granted, so the real gap is somewhere else: revoking access stops future reads but does not retrieve data a tool has already copied. That matters most when an employee signed up for a note-taker with a personal email, because the transcripts then sit in an account the company never controlled. Without this turn, the inventory argument is one any MSP could make. Revision adds the personal-account case to every channel and makes 'Account: company or personal' a fourth column."
+    },
+    {
+      "role": "CIO / Copy Editor",
+      "finding": "Three precision problems remain. First, 'usually forced by an incident' overstates an unsourced pattern; it now reads 'often.' Second, the draft implies the admin console finds everything, but it shows OAuth grants, not API keys in scripts, so the revision says keys appear in neither place and tells readers to ask each script's owner. Third, the claims audit cited 'proper licensing,' which never appears in the copy. The draft also exceeded the LinkedIn length band once expanded, so the LinkedIn post was tightened to fit."
+    },
+    {
+      "role": "Social Growth Strategist / Creative Director",
+      "finding": "X packed three ideas into one post, so it is rebuilt around a single scenario: the transcripts leave with the employee. On Instagram, slides 2 and 3 split one thought and are now merged. Slide 7's headline was too long for the type scale and has been shortened. The generic #Cybersecurity hashtag is replaced with #ShadowAI. The GBP post opened on a near-template line and now opens on the books closing, with a concrete personal-account check."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
