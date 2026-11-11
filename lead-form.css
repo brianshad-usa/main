@@ -1,0 +1,48 @@
+/* Shared lead form for city pages (2026-11-11). Same markup + handler as the industry pages:
+   /contact-form.js finds the form by its .cf-turnstile widget and toggles .form-body / .form-success. */
+.lead-section { background: var(--off-white); padding: 72px 32px; border-bottom: 1px solid var(--border); scroll-margin-top: 84px; }
+.lead-wrap { max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.lead-copy h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 800; color: var(--text); letter-spacing: -.02em; line-height: 1.25; margin-bottom: 14px; }
+.lead-copy > p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; }
+.lead-points { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 0 0 22px; padding: 0; }
+.lead-points li { display: flex; align-items: flex-start; gap: 10px; font-size: .92rem; color: var(--text); line-height: 1.55; }
+.lead-points svg { color: var(--navy-light); flex-shrink: 0; margin-top: 3px; }
+.lead-copy .lead-call { font-size: .92rem; margin-bottom: 0; }
+.lead-call a { color: var(--navy); font-weight: 700; }
+.form-card { background: #fff; border-radius: var(--r-xl); padding: 28px 26px; border: 1px solid var(--border); box-shadow: var(--sh-xl); }
+.form-card-head { margin-bottom: 18px; }
+.form-card-head h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); letter-spacing: -.02em; margin-bottom: 4px; }
+.form-card-head p { font-size: .78rem; color: var(--text-muted); line-height: 1.5; }
+.form-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(11,61,107,.06); border: 1px solid rgba(11,61,107,.18); color: var(--navy); font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.form-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+.form-group label { font-size: .72rem; font-weight: 600; color: var(--text); letter-spacing: .02em; }
+.form-group label .req { color: #dc2626; margin-left: 1px; }
+.form-group input, .form-group select { font-family: 'Inter', sans-serif; font-size: .82rem; color: var(--text); background: var(--off-white); border: 1.5px solid var(--border); border-radius: var(--r-sm); padding: 9px 11px; transition: border-color .2s, box-shadow .2s; outline: none; width: 100%; box-sizing: border-box; }
+.form-group input:focus, .form-group select:focus { border-color: var(--navy-light); box-shadow: 0 0 0 3px rgba(23,98,168,.12); background: var(--white); }
+.form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%235a6a80' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 11px center; padding-right: 28px; }
+.form-error { font-size: .7rem; color: #dc2626; margin-top: 1px; display: none; }
+.form-group.has-error input, .form-group.has-error select { border-color: #dc2626; }
+.form-group.has-error .form-error { display: block; }
+.submit-btn { width: 100%; padding: 12px 20px; border-radius: var(--r-md); background: var(--navy); color: #fff; font-family: 'Inter', sans-serif; font-size: .875rem; font-weight: 700; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background .2s, transform .15s; }
+.submit-btn:hover:not(:disabled) { background: var(--navy-light); transform: translateY(-1px); }
+.submit-btn:disabled { opacity: .7; cursor: not-allowed; }
+.submit-btn .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: leadSpin .7s linear infinite; display: none; }
+@keyframes leadSpin { to { transform: rotate(360deg); } }
+.submit-btn.loading .btn-label, .submit-btn.loading .btn-arrow { display: none; }
+.submit-btn.loading .spinner { display: block; }
+.form-privacy { font-size: .68rem; color: var(--text-muted); text-align: center; margin-top: 8px; line-height: 1.4; }
+.form-success { display: none; text-align: center; padding: 32px 16px 24px; animation: leadUp .45s ease; }
+.form-success.show { display: block; }
+.form-body.hide { display: none; }
+@keyframes leadUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.success-orbit { width: 64px; height: 64px; background: linear-gradient(135deg, #0b3d6b, #1762a8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; animation: leadPop .5s cubic-bezier(.34,1.56,.64,1); }
+@keyframes leadPop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.success-pill { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #86efac; color: #166534; font-size: .72rem; font-weight: 700; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+.success-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; }
+.form-success h3 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+.form-success p { font-size: .82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
+.success-cta-phone { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: #fff; font-size: .85rem; font-weight: 700; padding: 10px 22px; border-radius: var(--r-md); text-decoration: none; transition: background .2s; }
+.success-cta-phone:hover { background: var(--navy-light); }
+@media (max-width: 1024px) { .lead-wrap { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 768px) { .lead-section { padding: 56px 20px; } .form-row { grid-template-columns: 1fr; } }

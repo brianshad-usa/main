@@ -373,6 +373,14 @@ for name, pg in pages.items():
     for sc in pg["soup"].find_all("script", src=True):
         if re.search(r"(^|/)contact-form\.js$", sc["src"]):
             V(19, name, "contact-form.js referenced without a ?v= cache-buster (bump it whenever the script changes)")
+    # 2026-11-11: a Turnstile form without its handler silently POSTs to the page itself and the lead is lost.
+    # contact.html has its own inline handler; every other form page must load /contact-form.js + Turnstile.
+    if any(f.find(class_="cf-turnstile") for f in pg["soup"].find_all("form")):
+        srcs = [sc["src"] for sc in pg["soup"].find_all("script", src=True)]
+        if name != "contact.html" and not any(re.search(r"(^|/)contact-form\.js\?v=", x) for x in srcs):
+            V(19, name, "Turnstile form on a page that does not load /contact-form.js?v=... (submissions would be lost)")
+        if not any("challenges.cloudflare.com/turnstile/" in x for x in srcs):
+            V(19, name, "Turnstile form on a page that does not load the Turnstile api.js script")
 
 # --------------------------------------------------------------------------- #
 # 20: verified claims only (2026-11-09). Brian: "I don't want to advertise any
@@ -400,6 +408,12 @@ CLAIM_PATTERNS = [
      "'no contracts' (there is an MSA); say 'no long-term contracts'"),
     (re.compile(r'"aggregateRating"'),
      "self-serving aggregateRating markup (Google ignores it on LocalBusiness/Organization)"),
+    # 2026-11-11: city pages said "No annual contracts required" and "technicians are dispatched the same
+    # business day"; verified wording is "no long-term contracts" and F017 "same-day on-site support when needed".
+    (re.compile(r"(?i)no annual contracts?"),
+     "'no annual contracts' (unverified term); say 'no long-term contracts'"),
+    (re.compile(r"(?i)(?:dispatch(?:ed)?|technicians?|on-site)[^.<\"]{0,100}same business day"),
+     "unconditional same-business-day on-site claim; use F017 'same-day on-site support when needed'"),
 ]
 for name, pg in pages.items():
     src = pg["src"]

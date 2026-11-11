@@ -146,6 +146,7 @@
   </script>
 
   <link rel="stylesheet" href="_shared.css">
+  <link rel="stylesheet" href="lead-form.css?v=20261111">
   <style>
     .page-hero {
       background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
@@ -369,7 +370,7 @@
   <h1>Managed IT Services &amp; IT Support in<br><em>Van Nuys, CA</em></h1>
   <p>Reliable, flat-rate IT for Van Nuys businesses — 24/7 live help desk, enterprise cybersecurity, and cloud infrastructure managed by local engineers based minutes away in Woodland Hills.</p>
   <div class="hero-cta-group">
-    <a href="contact" class="btn btn-gold">
+    <a href="#talk-to-us" class="btn btn-gold">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       Get a Free IT Assessment
     </a>
@@ -591,6 +592,107 @@
 </div>
 
 <!-- FAQ -->
+<!-- LEAD FORM (shared form; handled by /contact-form.js + Turnstile) -->
+<section class="lead-section" id="talk-to-us" aria-labelledby="lead-heading">
+  <div class="lead-wrap">
+    <div class="lead-copy">
+      <span class="section-label">Free IT Assessment</span>
+      <h2 id="lead-heading">Talk to a local IT team about your Van Nuys office</h2>
+      <p>Tell us what is slowing your team down. We will look at your current setup and recommend what to fix first. No pressure, no obligation.</p>
+      <ul class="lead-points">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>24/7 help desk, in-house and US-based. Calls are answered live, with no phone tree and no hold queue.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Average ticket first-response time: 15 minutes.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Same-day on-site support when needed, from our Woodland Hills office.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Flat-rate pricing. No long-term contracts.</li>
+      </ul>
+      <p class="lead-call">Prefer to talk now? <a href="tel:18008906133">Call 1-800-890-6133</a></p>
+    </div>
+    <div class="lead-form">
+      <div class="form-card">
+        <div class="form-card-head">
+          <div class="form-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free IT Assessment &middot; No Obligation</div>
+          <h3>Request a free IT assessment</h3>
+          <p>Tell us a little about your business. A Pro Link engineer will follow up within one business day.</p>
+        </div>
+        <div class="form-body" id="formBody">
+          <form method="post" id="cityForm" novalidate>
+            <div class="form-row">
+              <div class="form-group" id="fg-fname">
+                <label>First Name <span class="req">*</span></label>
+                <input type="text" name="first_name" placeholder="Alex" autocomplete="given-name">
+                <span class="form-error">Required</span>
+              </div>
+              <div class="form-group" id="fg-lname">
+                <label>Last Name</label>
+                <input type="text" name="last_name" placeholder="Rivera" autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-group" id="fg-email">
+              <label>Work Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="alex@example.com" autocomplete="email">
+              <span class="form-error">Valid email required</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group" id="fg-company">
+                <label>Company Name</label>
+                <input type="text" name="firm_name" placeholder="Rivera Logistics" autocomplete="organization">
+              </div>
+              <div class="form-group" id="fg-phone">
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="(818) 555-0200" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Number of Employees</label>
+                <select name="firm_size">
+                  <option value="">Select&hellip;</option>
+                  <option>1&ndash;10</option>
+                  <option>11&ndash;25</option>
+                  <option>26&ndash;50</option>
+                  <option>51&ndash;150</option>
+                  <option>Over 150</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>What You Need Most</label>
+                <select name="challenge">
+                  <option value="">Select&hellip;</option>
+                  <option>Faster, More Reliable IT Support</option>
+                  <option>Switching IT Providers</option>
+                  <option>Network &amp; Wi-Fi Problems</option>
+                  <option>Cybersecurity &amp; Email Protection</option>
+                  <option>Microsoft 365 &amp; Cloud</option>
+                  <option>Backup &amp; Disaster Recovery</option>
+                  <option>New Office, Move or Setup</option>
+                  <option>Not Sure &mdash; Let's Talk</option>
+                </select>
+              </div>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-label">Request My Free IT Assessment</span>
+              <svg class="btn-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <div class="spinner"></div>
+            </button>
+            <p class="form-privacy">Your information is never shared. We respond within one business day.</p>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-orbit"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="success-pill"><div class="success-pill-dot"></div>Request Received</div>
+          <h3>You're in good hands.</h3>
+          <p>A Pro Link engineer will reach out within one business day to schedule your free IT assessment.</p>
+          <a href="tel:18008906133" class="success-cta-phone">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now: 1-800-890-6133
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="faq-section" aria-labelledby="faq-heading">
   <div class="container">
     <div class="centered" style="margin-bottom:48px;">
@@ -747,5 +849,7 @@
     });
   });
 </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/contact-form.js?v=20261109" defer></script>
 </body>
 </html>

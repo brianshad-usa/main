@@ -82,7 +82,7 @@ CITIES = [
   "intro_h2": "IT support from <em>right next door</em>",
   "intro_p1": "Tarzana sits directly east of our Woodland Hills headquarters along Ventura Boulevard — which makes it the closest community we serve. The neighborhood blends a dense medical corridor anchored by Providence Cedars-Sinai Tarzana Medical Center with professional practices, financial advisors, real estate offices, and the small and mid-size businesses that fill the Boulevard's office buildings.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, and Tarzana is quite literally our backyard. Our managed IT services cover the 91356 and 91357 zip codes — from the medical office buildings around Reseda Boulevard and Etiwanda Avenue to the professional suites along Ventura Boulevard and the businesses tucked into Tarzana Village.",
-  "intro_p3": "Every Tarzana client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
+  "intro_p3": "Every Tarzana client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
   "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, Tarzana is a short drive from our Woodland Hills office — often the fastest dispatch anywhere in our service area.",
   "point2_p": "Our in-house, US-based engineers support Tarzana's medical and dental practices, financial advisors, and legal offices with encryption, MFA, secure email, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Tarzana businesses",
@@ -104,11 +104,11 @@ CITIES = [
   "nearby": [("managed-it-services-woodland-hills","Woodland Hills"),("managed-it-services-encino","Encino"),("managed-it-services-sherman-oaks","Sherman Oaks"),("managed-it-services-van-nuys","Van Nuys")],
   "faq_h2": "Tarzana IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Tarzana?", "Yes. Tarzana is the closest community to our Woodland Hills office, and we serve businesses throughout the 91356 and 91357 zip codes. Our average ticket first-response time is 15 minutes, and on-site technicians can be dispatched to Tarzana faster than almost anywhere else in our service area — typically the same business day."),
+   ("Do you provide managed IT services in Tarzana?", "Yes. Tarzana is the closest community to our Woodland Hills office, and we serve businesses throughout the 91356 and 91357 zip codes. Our average ticket first-response time is 15 minutes, and Tarzana is one of the closest areas to our office, with same-day on-site support when needed."),
    ("Can you support medical practices near Providence Cedars-Sinai Tarzana?", "Absolutely. We support medical and dental practices throughout Greater Los Angeles with secure, always-on IT. Every healthcare engagement includes secure, well-documented infrastructure and support for EHR and practice-management platforms; for HIPAA risk assessments and policies, we work alongside your compliance advisor."),
    ("Do you help Tarzana real estate and escrow offices with wire-fraud protection?", "Yes. Wire fraud and business email compromise are the top threats to real estate transactions. We implement advanced email security, enforce multi-factor authentication, and run security awareness training so your staff recognize the impersonation attempts that target escrow and closing communications."),
    ("We are a small business in Tarzana — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Tarzana team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Tarzana location the same business day."),
+   ("How does remote support work for our Tarzana team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Tarzana location when needed."),
   ],
  },
  {
@@ -126,8 +126,8 @@ CITIES = [
   "intro_h2": "IT built for the <em>101 corridor's</em> corporate community",
   "intro_p1": "Agoura Hills and Westlake Village form one of Southern California's most concentrated corporate corridors. Office parks along the 101 Freeway house regional and national headquarters, biotechnology and life-science companies, financial services firms, and the professional practices that support them — an environment where IT reliability and security posture are board-level concerns, not back-office details.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, and the Conejo Valley is a short drive west on the 101 from our Woodland Hills headquarters. Our managed IT services cover Agoura Hills (91301, 91376) and Westlake Village (91361, 91362) — from the Agoura Road and Kanan Road business parks to the Westlake office campuses around Lindero Canyon and Via Colinas.",
-  "intro_p3": "Every Conejo Valley client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians to Agoura Hills and Westlake Village businesses the same business day.",
+  "intro_p3": "Every Conejo Valley client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Agoura Hills and Westlake Village when needed.",
   "point2_p": "Our in-house, US-based team supports the Conejo Valley's life-science companies, financial firms, and corporate offices with encryption, strict access controls, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Agoura Hills &amp; Westlake Village",
   "svc_sec": "essential for biotech companies and financial firms protecting intellectual property and client data",
@@ -148,11 +148,11 @@ CITIES = [
   "nearby": [("managed-it-services-calabasas","Calabasas"),("managed-it-services-thousand-oaks","Thousand Oaks"),("managed-it-services-woodland-hills","Woodland Hills"),("managed-it-services-west-hills","West Hills")],
   "faq_h2": "Agoura Hills &amp; Westlake Village IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Agoura Hills and Westlake Village?", "Yes. We serve businesses throughout Agoura Hills (91301, 91376) and Westlake Village (91361, 91362), including the Ventura County side of Westlake. Our Woodland Hills office is a short drive east on the 101; our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Agoura Hills and Westlake Village?", "Yes. We serve businesses throughout Agoura Hills (91301, 91376) and Westlake Village (91361, 91362), including the Ventura County side of Westlake. Our Woodland Hills office is a short drive east on the 101; our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support biotech and life-science companies in the Conejo Valley?", "Yes. We support research, lab, and corporate environments with secure data handling, tested backups, strict identity and access controls, and endpoint protection designed to safeguard intellectual property and research data."),
    ("Do you work with corporate headquarters that have multiple offices?", "Absolutely. Many Conejo Valley companies run a headquarters here with satellite offices elsewhere in California or nationally. We manage secure site-to-site connectivity, cloud-based collaboration, and consistent security policy across every location from one flat-rate agreement."),
    ("We are a small business in Agoura Hills — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Westlake Village team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Agoura Hills or Westlake Village location the same business day."),
+   ("How does remote support work for our Westlake Village team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Agoura Hills or Westlake Village location when needed."),
   ],
  },
  {
@@ -170,8 +170,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Studio City's creative economy</em>",
   "intro_p1": "Studio City is where the entertainment industry and the Valley's neighborhood business community meet. Production and post-production companies cluster around Radford Studio Center, talent managers and entertainment attorneys work from Ventura Boulevard offices, and medical, dental, and professional practices serve one of the most affluent residential areas in the San Fernando Valley.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including media and entertainment companies with the content-security and large-file workflows that define the industry. Our managed IT services cover Studio City's 91604 and 91614 zip codes — from the Radford and Laurel Canyon corridor to the Ventura Boulevard commercial strip and the offices around Tujunga Village.",
-  "intro_p3": "Every Studio City client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians to Studio City businesses the same business day.",
+  "intro_p3": "Every Studio City client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Studio City when needed.",
   "point2_p": "Our in-house, US-based engineers support Studio City's production companies, medical practices, and financial firms with secure file sharing, encryption, and strict access controls.",
   "services_h2": "Complete IT coverage for Studio City businesses",
   "svc_sec": "essential for production companies protecting pre-release content and medical practices handling patient data",
@@ -192,11 +192,11 @@ CITIES = [
   "nearby": [("managed-it-services-sherman-oaks","Sherman Oaks"),("managed-it-services-north-hollywood","North Hollywood"),("it-support-burbank","Burbank"),("managed-it-services-encino","Encino")],
   "faq_h2": "Studio City IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Studio City?", "Yes. We serve businesses throughout Studio City's 91604 and 91614 zip codes. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and we dispatch on-site technicians to Studio City for hardware or infrastructure needs — typically the same business day."),
+   ("Do you provide managed IT services in Studio City?", "Yes. We serve businesses throughout Studio City's 91604 and 91614 zip codes. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support for hardware or infrastructure in Studio City is available when needed."),
    ("Can you support production and post-production companies in Studio City?", "Yes. We understand the IT demands of production environments — high-speed shared storage, secure file transfer and review workflows, render and editing workstation support, and tight protection for unreleased content. We have supported media and entertainment businesses in Greater LA for over two decades."),
    ("Do you work with talent agencies and business management firms?", "Absolutely. Agencies, managers, and business-management CPAs handle contracts, financial records, and personal data for high-profile clients. We provide encrypted email, strict identity and access controls, secure document management, and the discretion the entertainment industry expects."),
    ("We are a small business in Studio City — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Studio City team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Studio City location the same business day."),
+   ("How does remote support work for our Studio City team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Studio City location when needed."),
   ],
  },
  {
@@ -214,8 +214,8 @@ CITIES = [
   "intro_h2": "IT built for <em>NoHo's working economy</em>",
   "intro_p1": "North Hollywood is one of the San Fernando Valley's most varied business districts. The NoHo Arts District around Lankershim Boulevard and the Metro B Line station has become a hub for theaters, creative agencies, and tech-enabled small businesses, while the industrial corridors along Vineland, Vanowen, and Sherman Way house equipment rental houses, production-support vendors, light manufacturers, and distributors that keep Burbank's studios and the wider region running.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999. Our managed IT services cover all of North Hollywood's 91601 through 91606 zip codes — from the Arts District and Valley Village to the industrial parks near the Burbank border and the medical offices along Riverside Drive and Magnolia Boulevard.",
-  "intro_p3": "Every North Hollywood client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians to North Hollywood businesses the same business day.",
+  "intro_p3": "Every North Hollywood client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in North Hollywood when needed.",
   "point2_p": "Our in-house, US-based engineers support North Hollywood's healthcare providers, manufacturers, and media vendors with encryption, access controls, secure file transfer, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for North Hollywood businesses",
   "svc_sec": "essential for media vendors handling studio content and healthcare providers protecting patient data",
@@ -236,11 +236,11 @@ CITIES = [
   "nearby": [("it-support-burbank","Burbank"),("managed-it-services-studio-city","Studio City"),("managed-it-services-van-nuys","Van Nuys"),("managed-it-services-sherman-oaks","Sherman Oaks")],
   "faq_h2": "North Hollywood IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in North Hollywood?", "Yes. We serve businesses throughout North Hollywood's 91601 through 91606 zip codes, including Valley Village and the NoHo Arts District. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in North Hollywood?", "Yes. We serve businesses throughout North Hollywood's 91601 through 91606 zip codes, including Valley Village and the NoHo Arts District. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support production vendors that work with the Burbank studios?", "Yes. Equipment houses, post facilities, and production-support companies handle studio content that has to stay locked down. We implement the access controls, network segmentation, encrypted transfer, and endpoint protection that keep it secure, and we have supported media businesses in Greater LA for over two decades."),
    ("Do you support manufacturers and distributors in North Hollywood's industrial areas?", "Absolutely. We support ERP and inventory systems, warehouse Wi-Fi, barcode and label printing, and the servers and networks behind them — plus the backup and security that keep a production floor from going dark."),
    ("We are a small business in North Hollywood — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our North Hollywood team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your North Hollywood location the same business day."),
+   ("How does remote support work for our North Hollywood team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your North Hollywood location when needed."),
   ],
  },
  {
@@ -258,8 +258,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Santa Clarita's manufacturing and growth economy</em>",
   "intro_p1": "Santa Clarita is one of Los Angeles County's fastest-growing business markets. The Valencia Industrial Center and Valencia Commerce Center host aerospace and defense suppliers, biomedical device manufacturers, and distribution operations, while healthcare, professional services, and corporate offices have followed the population boom across Valencia, Newhall, Saugus, Canyon Country, and Stevenson Ranch.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including manufacturers and defense contractors that need tightly secured networks and controlled access to technical data. Our managed IT services cover the Santa Clarita Valley's 91321, 91350, 91351, 91354, 91355, 91387, and 91390 zip codes — from the industrial parks along Avenue Stanford and Rye Canyon to the office corridors on Valencia Boulevard and Town Center Drive.",
-  "intro_p3": "Every Santa Clarita client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians up the 5 to Santa Clarita businesses the same business day.",
+  "intro_p3": "Every Santa Clarita client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Santa Clarita when needed.",
   "point2_p": "Our in-house, US-based engineers support Santa Clarita's aerospace suppliers, manufacturers, and healthcare providers with segmented networks, MFA, encryption, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Santa Clarita businesses",
   "svc_sec": "essential for aerospace suppliers handling controlled data and healthcare providers protecting patient records",
@@ -280,11 +280,11 @@ CITIES = [
   "nearby": [("managed-it-services-northridge","Northridge"),("managed-it-services-chatsworth","Chatsworth"),("it-support-burbank","Burbank"),("managed-it-services-woodland-hills","Woodland Hills")],
   "faq_h2": "Santa Clarita IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Santa Clarita?", "Yes. We serve businesses throughout the Santa Clarita Valley — Valencia, Newhall, Saugus, Canyon Country, and Stevenson Ranch (zip codes 91321 through 91390). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched up the 5 the same business day."),
+   ("Do you provide managed IT services in Santa Clarita?", "Yes. We serve businesses throughout the Santa Clarita Valley — Valencia, Newhall, Saugus, Canyon Country, and Stevenson Ranch (zip codes 91321 through 91390). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Do you work with aerospace and defense suppliers in Santa Clarita?", "Yes. Many aerospace suppliers and manufacturers along Crenshaw, Prairie, and Rosecrans have an engineer or office manager who handles IT. We can take over the help desk, monitoring, patching, and backups so they can focus on production systems and projects, or back them up with our 24/7 in-house, US-based help desk and on-site support when they need extra hands."),
    ("Do you support manufacturers in the Valencia Industrial Center?", "Absolutely. We support ERP and quality-management systems, shop-floor connectivity, industrial Wi-Fi, and the servers and backups behind them — along with the security controls that keep a production line from going down to ransomware."),
    ("We are a small business in Santa Clarita — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Santa Clarita team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Santa Clarita location the same business day."),
+   ("How does remote support work for our Santa Clarita team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Santa Clarita location when needed."),
   ],
  },
  {
@@ -302,8 +302,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Simi Valley's aerospace and manufacturing base</em>",
   "intro_p1": "Simi Valley has a long industrial heritage. Aerospace and defense contractors, precision machine shops, electronics manufacturers, and their suppliers cluster in the business parks along the 118 Freeway, Los Angeles Avenue, and Easy Street — many of them subject to strict, customer-driven security requirements. Around them, healthcare providers, financial firms, and professional practices serve a city of more than 120,000 residents.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including defense suppliers that must document and maintain a hardened IT environment. Our managed IT services cover Simi Valley's 93063 and 93065 zip codes — a straight shot west on the 118 from our Woodland Hills headquarters — from the industrial parks on the east side to the Madera Road and First Street commercial corridors.",
-  "intro_p3": "Every Simi Valley client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians west on the 118 to Simi Valley businesses the same business day.",
+  "intro_p3": "Every Simi Valley client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Simi Valley when needed.",
   "point2_p": "Our in-house, US-based engineers support Simi Valley's defense contractors, manufacturers, and healthcare providers with hardened networks, MFA, encryption, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Simi Valley businesses",
   "svc_sec": "essential for defense contractors handling controlled data and healthcare providers protecting patient records",
@@ -324,11 +324,11 @@ CITIES = [
   "nearby": [("managed-it-services-chatsworth","Chatsworth"),("managed-it-services-west-hills","West Hills"),("managed-it-services-thousand-oaks","Thousand Oaks"),("managed-it-services-northridge","Northridge")],
   "faq_h2": "Simi Valley IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Simi Valley?", "Yes. We serve businesses throughout Simi Valley's 93063 and 93065 zip codes. Our Woodland Hills office is a direct drive west on the 118; our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Simi Valley?", "Yes. We serve businesses throughout Simi Valley's 93063 and 93065 zip codes. Our Woodland Hills office is a direct drive west on the 118; our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Do you work with defense contractors and machine shops in Simi Valley?", "Yes. Many aerospace suppliers and manufacturers along Crenshaw, Prairie, and Rosecrans have an engineer or office manager who handles IT. We can take over the help desk, monitoring, patching, and backups so they can focus on production systems and projects, or back them up with our 24/7 in-house, US-based help desk and on-site support when they need extra hands."),
    ("Do you support manufacturers with production equipment on the network?", "Absolutely. We segment and secure operational technology from office networks, support ERP and CAD/CAM systems, manage industrial Wi-Fi, and maintain the backups and recovery plans that keep a production line from going dark to ransomware or hardware failure."),
    ("We are a small business in Simi Valley — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Simi Valley team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Simi Valley location the same business day."),
+   ("How does remote support work for our Simi Valley team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Simi Valley location when needed."),
   ],
  },
  {
@@ -346,8 +346,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Downtown's high-rise and high-growth economy</em>",
   "intro_p1": "Downtown Los Angeles is the densest professional market in Southern California. Law firms, banks, investment managers, and accounting practices fill the towers of Bunker Hill and the Financial District; architecture, media, and technology companies have transformed the Arts District; the Fashion District runs on wholesale and e-commerce; and hospitals, clinics, and civic organizations serve the region from the Civic Center south to the Figueroa Corridor.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, and Downtown has always been part of that footprint — our description of service has read \"from Woodland Hills to Downtown LA\" for years. Our managed IT services cover zip codes 90012 through 90017, 90021, and 90071 — high-rise suites with building-managed connectivity, converted warehouse offices, and everything in between.",
-  "intro_p3": "Every Downtown client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — critical in a high-rise where on-site access takes coordination. For hardware and on-site needs, we dispatch technicians to Downtown businesses the same business day.",
+  "intro_p3": "Every Downtown client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — critical in a high-rise where on-site access takes coordination. For hardware and on-site needs, we offer same-day on-site support in Downtown when needed.",
   "point2_p": "Our in-house, US-based team supports Downtown's law firms, financial companies, and healthcare providers with encryption, strict access controls, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Downtown Los Angeles businesses",
   "svc_sec": "essential for law firms and financial companies entrusted with privileged and regulated client data",
@@ -368,11 +368,11 @@ CITIES = [
   "nearby": [("managed-it-services-los-angeles","Los Angeles"),("managed-it-services-glendale","Glendale"),("managed-it-services-pasadena","Pasadena"),("managed-it-services-culver-city","Culver City")],
   "faq_h2": "Downtown Los Angeles IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Downtown Los Angeles?", "Yes. We serve businesses throughout Downtown LA — Bunker Hill, the Financial District, the Arts District, the Fashion District, Little Tokyo, Chinatown, and the Civic Center (zip codes 90012 through 90017, 90021, and 90071). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Downtown Los Angeles?", "Yes. We serve businesses throughout Downtown LA — Bunker Hill, the Financial District, the Arts District, the Fashion District, Little Tokyo, Chinatown, and the Civic Center (zip codes 90012 through 90017, 90021, and 90071). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support a law firm in a Downtown high-rise?", "Absolutely. We work within building-managed connectivity and security requirements, support document and practice-management platforms, deliver encrypted email and secure client portals, and provide the audit trails and access controls that law-firm clients and cyber-insurance carriers increasingly require."),
    ("Do you work with creative and technology companies in the Arts District?", "Yes. Converted warehouse offices bring their own challenges — Wi-Fi coverage in brick-and-timber buildings, large-file collaboration, and hybrid teams. We design the network, manage cloud storage and Microsoft 365 or Google Workspace, and lock down accounts and devices with MFA and endpoint protection without slowing creative work down."),
    ("We are a small business Downtown — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Downtown team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Downtown Los Angeles location the same business day."),
+   ("How does remote support work for our Downtown team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Downtown Los Angeles location when needed."),
   ],
  },
  {
@@ -390,8 +390,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the Westside's professional corridor</em>",
   "intro_p1": "West Los Angeles is the connective tissue of the Westside — the stretch between Santa Monica and Beverly Hills where Brentwood's financial and legal offices, Westwood's medical corridor, the entertainment and technology companies along Olympic and Pico Boulevards, and the Japanese-American business district of Sawtelle all share a few square miles of some of the most expensive commercial real estate in the country.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999. Our managed IT services cover West LA's 90025, 90064, 90049, and 90024 zip codes — from the medical office buildings near Wilshire and Westwood to the Brentwood offices along San Vicente, the creative and tech spaces on Olympic, and the professional suites along Santa Monica and Pico Boulevards.",
-  "intro_p3": "Every West LA client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians over the hill to West LA businesses the same business day.",
+  "intro_p3": "Every West LA client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in West LA when needed.",
   "point2_p": "Our in-house, US-based engineers support West LA's medical practices, law firms, and financial advisors with encryption, MFA, hardened email, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for West Los Angeles businesses",
   "svc_sec": "essential for medical practices and law firms handling protected and privileged data",
@@ -412,11 +412,11 @@ CITIES = [
   "nearby": [("managed-it-services-santa-monica","Santa Monica"),("managed-it-services-beverly-hills","Beverly Hills"),("managed-it-services-century-city","Century City"),("managed-it-services-culver-city","Culver City")],
   "faq_h2": "West Los Angeles IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in West Los Angeles?", "Yes. We serve businesses throughout West LA, Sawtelle, Brentwood, and Westwood (zip codes 90025, 90064, 90049, and 90024). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched over the hill the same business day."),
+   ("Do you provide managed IT services in West Los Angeles?", "Yes. We serve businesses throughout West LA, Sawtelle, Brentwood, and Westwood (zip codes 90025, 90064, 90049, and 90024). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support medical practices in the Westwood medical corridor?", "Absolutely. We specialize in secure, always-on IT for medical and specialty practices throughout Greater Los Angeles. Every healthcare engagement includes secure, well-documented infrastructure and support for EHR, imaging, and practice-management platforms; for HIPAA risk assessments and policies, we work alongside your compliance advisor."),
    ("Do you work with wealth managers and family offices in Brentwood?", "Yes. High-net-worth clients are prime targets for impersonation and wire fraud. We implement advanced email security, enforce multi-factor authentication, harden identity and access, and run security awareness training so your staff can spot impersonation attempts before money moves."),
    ("We are a small business in West LA — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our West LA team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your West Los Angeles location the same business day."),
+   ("How does remote support work for our West LA team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your West Los Angeles location when needed."),
   ],
  },
  # ---------------------------------------------------------------- batch 2 (2026-10-08)
@@ -435,8 +435,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Silicon Beach's growth companies</em>",
   "intro_p1": "Playa Vista is the center of Los Angeles's technology economy. Purpose-built campuses along Jefferson Boulevard house software companies, streaming and gaming studios, digital-advertising firms, and the venture-backed startups that orbit them, while Marina del Rey adds marine services, hospitality, and a dense professional community along Admiralty Way and Washington Boulevard. The common thread is speed: these companies hire fast, change fast, and expect their IT to keep up without becoming a bottleneck.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, and the technology sector's requirements — multi-factor authentication, single sign-on and identity governance, device management for hybrid teams, and cloud-first infrastructure — are core to how we work. Our managed IT services cover Playa Vista (90094), Marina del Rey (90292), and Playa del Rey (90293), from the Campus at Playa Vista to the Marina's waterfront offices.",
-  "intro_p3": "Every Silicon Beach client — regardless of size or stage — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable per-user fee that scales with headcount. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — the way distributed tech teams expect. For hardware, onboarding days, and on-site needs, we dispatch technicians to Playa Vista and Marina del Rey the same business day.",
+  "intro_p3": "Every Silicon Beach client — regardless of size or stage — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable per-user fee that scales with headcount. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — the way distributed tech teams expect. For hardware, onboarding days, and on-site needs, we offer same-day on-site support in Playa Vista and Marina del Rey when needed.",
   "point2_p": "Our in-house, US-based engineers support Silicon Beach's technology and media companies with the identity management, device security, and endpoint protection fast-growing teams depend on.",
   "services_h2": "Complete IT coverage for Playa Vista &amp; Marina del Rey",
   "svc_sec": "essential for technology companies whose customers and investors expect a well-documented security program",
@@ -457,11 +457,11 @@ CITIES = [
   "nearby": [("managed-it-services-culver-city","Culver City"),("managed-it-services-santa-monica","Santa Monica"),("managed-it-services-el-segundo","El Segundo"),("managed-it-services-west-los-angeles","West Los Angeles")],
   "faq_h2": "Playa Vista &amp; Marina del Rey IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Playa Vista and Marina del Rey?", "Yes. We serve businesses throughout Playa Vista (90094), Marina del Rey (90292), and Playa del Rey (90293). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched to Silicon Beach the same business day."),
+   ("Do you provide managed IT services in Playa Vista and Marina del Rey?", "Yes. We serve businesses throughout Playa Vista (90094), Marina del Rey (90292), and Playa del Rey (90293). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("We already have engineers — can you take IT off their plate?", "Yes. Many Silicon Beach companies have engineers who run their own product infrastructure but would rather not spend their time on laptops, accounts, and help desk tickets. We take over day-to-day IT — device management, identity and access, Microsoft 365 or Google Workspace, endpoint security, and the 24/7 help desk — and coordinate with your team or existing IT person wherever responsibilities overlap."),
    ("We hire fast — can you handle onboarding and laptop provisioning?", "Absolutely. We pre-stage laptops with your standard image, security agents, and SaaS access so new hires are productive on day one, and we offboard just as cleanly — revoking access everywhere the moment someone leaves. Our flat per-user rate scales up and down with your headcount."),
    ("We are a small company in Marina del Rey — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Playa Vista team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, SaaS access, Microsoft 365 or Google Workspace, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Playa Vista or Marina del Rey location the same business day."),
+   ("How does remote support work for our Playa Vista team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, SaaS access, Microsoft 365 or Google Workspace, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Playa Vista or Marina del Rey location when needed."),
   ],
  },
  {
@@ -479,8 +479,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the entertainment industry's home turf</em>",
   "intro_p1": "Hollywood and West Hollywood are where the entertainment business actually gets made. Production offices, post-production and VFX houses, music labels and recording studios, and talent and management agencies line Sunset and Santa Monica Boulevards, while the West Hollywood Design District along Melrose and Beverly adds showrooms, architecture and design studios, and a hospitality scene that never closes. Pre-release content, high-profile clients, and deadline-driven workflows make security and uptime non-negotiable.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including media and entertainment companies that handle pre-release content and high-profile client data. Our managed IT services cover Hollywood (90028, 90038, 90068, 90046) and West Hollywood (90069, 90048) — from the Sunset Strip and the Hollywood Media District to the Design District and the Fairfax corridor.",
-  "intro_p3": "Every Hollywood client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — before a session or a delivery deadline slips. For hardware and on-site needs, we dispatch technicians to Hollywood and West Hollywood the same business day.",
+  "intro_p3": "Every Hollywood client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — before a session or a delivery deadline slips. For hardware and on-site needs, we offer same-day on-site support in Hollywood and West Hollywood when needed.",
   "point2_p": "Our in-house, US-based team supports Hollywood's production, post, and media companies — and the clinics, hospitality groups, and law offices around them — with encrypted transfer, strict access controls, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Hollywood &amp; West Hollywood",
   "svc_sec": "essential for production and post houses protecting pre-release content and agencies protecting high-profile clients",
@@ -501,11 +501,11 @@ CITIES = [
   "nearby": [("managed-it-services-beverly-hills","Beverly Hills"),("managed-it-services-koreatown","Koreatown"),("it-support-burbank","Burbank"),("managed-it-services-studio-city","Studio City")],
   "faq_h2": "Hollywood &amp; West Hollywood IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Hollywood and West Hollywood?", "Yes. We serve businesses throughout Hollywood (90028, 90038, 90046, 90068) and West Hollywood (90048, 90069). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Hollywood and West Hollywood?", "Yes. We serve businesses throughout Hollywood (90028, 90038, 90046, 90068) and West Hollywood (90048, 90069). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Our post house has its own engineer — can you work with them?", "Yes. Many post houses, studios, and agencies along Sunset and Santa Monica Boulevards keep an in-house engineer for edit bays, storage, and pipeline work. We can handle the help desk, accounts, patching, endpoint protection, and backups so your engineer can stay focused on the workflow, and back them up with our 24/7 in-house, US-based help desk and on-site support in Hollywood and West Hollywood when they need extra hands. We have supported media and entertainment businesses in Greater LA for over two decades."),
    ("Do you work with talent agencies and management companies?", "Absolutely. Agencies and managers handle contracts, financial records, and personal data for high-profile clients. We provide encrypted email, strict identity and access controls, secure document management, and the discretion the entertainment industry expects."),
    ("We are a small company in West Hollywood — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Hollywood team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Hollywood or West Hollywood location the same business day."),
+   ("How does remote support work for our Hollywood team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Hollywood or West Hollywood location when needed."),
   ],
  },
  {
@@ -523,8 +523,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the Wilshire corridor's density</em>",
   "intro_p1": "Koreatown is the most densely populated neighborhood in Los Angeles County, and its business community matches that intensity. Office towers along Wilshire Boulevard hold law firms, banks, insurance and investment companies, and immigration and business-law practices; medical and dental offices fill the mid-rise buildings on Western, Vermont, and Olympic; and thousands of Korean-American owned businesses — from import/export and logistics to hospitality, media, and professional services — operate across the district. Mid-Wilshire adds Museum Row, advertising agencies, and corporate offices along the Miracle Mile.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999. Our managed IT services cover Koreatown (90005, 90006, 90010, 90020) and Mid-Wilshire (90036) — from the Wilshire and Western towers to the Olympic Boulevard commercial corridor and the Miracle Mile.",
-  "intro_p3": "Every Koreatown client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — important in high-rise suites where on-site access takes coordination. For hardware and on-site needs, we dispatch technicians to Koreatown and Mid-Wilshire the same business day.",
+  "intro_p3": "Every Koreatown client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — important in high-rise suites where on-site access takes coordination. For hardware and on-site needs, we offer same-day on-site support in Koreatown and Mid-Wilshire when needed.",
   "point2_p": "Our in-house, US-based team supports Koreatown's law firms, medical practices, and financial companies with encryption, strict access controls, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Koreatown &amp; Mid-Wilshire",
   "svc_sec": "essential for law firms, medical practices, and financial companies entrusted with privileged and regulated data",
@@ -545,11 +545,11 @@ CITIES = [
   "nearby": [("managed-it-services-downtown-los-angeles","Downtown LA"),("managed-it-services-hollywood","Hollywood"),("managed-it-services-beverly-hills","Beverly Hills"),("managed-it-services-los-angeles","Los Angeles")],
   "faq_h2": "Koreatown &amp; Mid-Wilshire IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Koreatown and Mid-Wilshire?", "Yes. We serve businesses throughout Koreatown (90005, 90006, 90010, 90020) and Mid-Wilshire (90036), including the Wilshire corridor towers and the Olympic and Western commercial districts. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Koreatown and Mid-Wilshire?", "Yes. We serve businesses throughout Koreatown (90005, 90006, 90010, 90020) and Mid-Wilshire (90036), including the Wilshire corridor towers and the Olympic and Western commercial districts. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support a law firm in a Wilshire Boulevard high-rise?", "Absolutely. We work within building-managed connectivity and security requirements, support document and practice-management platforms, deliver encrypted email and secure client portals, and provide the audit trails and access controls that clients and cyber-insurance carriers increasingly require."),
    ("Do you work with Korean-American owned businesses?", "Yes. Many of Koreatown's businesses operate across borders — trading companies, logistics firms, media, and professional practices with partners in Korea. We support multi-time-zone operations and secure international file transfer and communications, with the same flat-rate plan every client receives."),
    ("We are a small business in Koreatown — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Koreatown team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Koreatown or Mid-Wilshire location the same business day."),
+   ("How does remote support work for our Koreatown team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Koreatown or Mid-Wilshire location when needed."),
   ],
  },
  {
@@ -567,8 +567,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the aerospace supply chain</em>",
   "intro_p1": "Hawthorne sits at the center of Southern California's modern aerospace economy. Rocket and satellite manufacturing has drawn a dense supply chain of machine shops, composites and electronics manufacturers, engineering firms, and testing labs into the industrial corridors along Crenshaw, Prairie, and Rosecrans — most of them subject to CMMC, ITAR, or customer-flowed security requirements. Next door, Inglewood's stadium and entertainment district, LAX-adjacent logistics, and a growing healthcare and professional base round out one of the South Bay's most active business markets.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including aerospace and defense suppliers that depend on a hardened, tightly controlled IT environment. Our managed IT services cover Hawthorne (90250) and Inglewood (90301 through 90305) — from the aerospace corridor to the Century Boulevard hotel and logistics zone and Inglewood's downtown commercial district.",
-  "intro_p3": "Every Hawthorne client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians to Hawthorne and Inglewood businesses the same business day.",
+  "intro_p3": "Every Hawthorne client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Hawthorne and Inglewood when needed.",
   "point2_p": "Our in-house, US-based team supports the corridor's aerospace suppliers and manufacturers — and the clinics, hotels, and venues around them — with network segmentation, multi-factor authentication, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Hawthorne &amp; Inglewood",
   "svc_sec": "essential for aerospace suppliers handling controlled data and logistics operators who cannot afford downtime",
@@ -589,11 +589,11 @@ CITIES = [
   "nearby": [("managed-it-services-el-segundo","El Segundo"),("managed-it-services-torrance","Torrance"),("managed-it-services-manhattan-beach","Manhattan Beach"),("managed-it-services-culver-city","Culver City")],
   "faq_h2": "Hawthorne &amp; Inglewood IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Hawthorne and Inglewood?", "Yes. We serve businesses throughout Hawthorne (90250) and Inglewood (90301 through 90305). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched to the South Bay the same business day."),
+   ("Do you provide managed IT services in Hawthorne and Inglewood?", "Yes. We serve businesses throughout Hawthorne (90250) and Inglewood (90301 through 90305). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you work with our in-house IT person?", "Yes. Many aerospace suppliers and manufacturers along Crenshaw, Prairie, and Rosecrans have an engineer or office manager who handles IT. We can take over the help desk, monitoring, patching, and backups so they can focus on production systems and projects, or back them up with our 24/7 in-house, US-based help desk and on-site support when they need extra hands."),
    ("Do you support logistics companies that run 24/7 near LAX?", "Absolutely. Freight and cargo operations can't stop at 6 p.m., and neither does our help desk. We monitor WMS, EDI, and network infrastructure around the clock, keep warehouse Wi-Fi and scanning reliable, and maintain tested backups so an outage never becomes a missed shipment."),
    ("We are a small business in Hawthorne — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Inglewood team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Hawthorne or Inglewood location the same business day."),
+   ("How does remote support work for our Inglewood team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Hawthorne or Inglewood location when needed."),
   ],
  },
  {
@@ -611,8 +611,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the Beach Cities' professional community</em>",
   "intro_p1": "Manhattan Beach, Hermosa Beach, and Redondo Beach combine some of the most affluent residential communities in Los Angeles County with a serious professional economy. Financial advisors, family offices, and business managers serve high-net-worth clients from Sepulveda and Rosecrans offices; medical, dental, and specialty practices cluster around the Beach Cities medical corridor; and technology, media, and creative companies have spread south from Silicon Beach into the Rosecrans corridor and downtown Manhattan Beach.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999. Our managed IT services cover Manhattan Beach (90266), Hermosa Beach (90254), and Redondo Beach (90277, 90278) — from the Rosecrans and Sepulveda office corridors to the Riviera Village and downtown districts along the coast.",
-  "intro_p3": "Every Beach Cities client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians to Manhattan Beach, Hermosa Beach, and Redondo Beach the same business day.",
+  "intro_p3": "Every Beach Cities client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Manhattan Beach, Hermosa Beach, and Redondo Beach when needed.",
   "point2_p": "Our in-house, US-based team supports the Beach Cities' financial advisors, medical practices, and law firms with encryption, strict access controls, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for the Beach Cities",
   "svc_sec": "essential for wealth managers and medical practices whose clients are prime targets for impersonation and fraud",
@@ -633,11 +633,11 @@ CITIES = [
   "nearby": [("managed-it-services-el-segundo","El Segundo"),("managed-it-services-torrance","Torrance"),("managed-it-services-hawthorne","Hawthorne"),("managed-it-services-playa-vista","Playa Vista")],
   "faq_h2": "Beach Cities IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Manhattan Beach, Hermosa Beach, and Redondo Beach?", "Yes. We serve businesses throughout Manhattan Beach (90266), Hermosa Beach (90254), and Redondo Beach (90277, 90278). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched to the Beach Cities the same business day."),
+   ("Do you provide managed IT services in Manhattan Beach, Hermosa Beach, and Redondo Beach?", "Yes. We serve businesses throughout Manhattan Beach (90266), Hermosa Beach (90254), and Redondo Beach (90277, 90278). While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you protect our wealth-management firm's clients from wire fraud?", "Yes. Business email compromise targeting advisors and their clients is one of the most common and costly attacks we see. We implement advanced email security and impersonation detection, enforce multi-factor authentication everywhere, harden identity and access, and run security awareness training so staff can spot a fraudulent wire request before money moves."),
    ("Do you support medical and dental practices in the Beach Cities?", "Absolutely. We support medical and dental practices throughout Greater Los Angeles with secure, always-on IT. Every healthcare engagement includes secure, well-documented infrastructure and support for EHR, imaging, and practice-management platforms; for HIPAA risk assessments and policies, we work alongside your compliance advisor."),
    ("We are a small business in Redondo Beach — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Manhattan Beach team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Beach Cities location the same business day."),
+   ("How does remote support work for our Manhattan Beach team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Beach Cities location when needed."),
   ],
  },
  {
@@ -655,8 +655,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the Valley's industrial backbone</em>",
   "intro_p1": "Sun Valley and Pacoima are where the San Fernando Valley makes, moves, and recycles things. Industrial parks along San Fernando Road, Glenoaks Boulevard, and Tuxford Street house manufacturers, food processors, building-materials suppliers, distributors, and one of the region's largest concentrations of recycling and waste operations, with fleets of trucks and warehouse floors that run long hours. These are businesses where a network outage stops a production line, strands a dispatch board, or idles a scale house.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including manufacturers, logistics companies, and waste-management operations with the fleet, scale-house, and shop-floor systems that keep industrial businesses running. Our managed IT services cover Sun Valley (91352) and Pacoima (91331) — a short drive up the 170 or the 5 from our Woodland Hills headquarters.",
-  "intro_p3": "Every Sun Valley and Pacoima client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs — a dead switch in a warehouse, a scale-house workstation, a shop-floor PC — we dispatch technicians to Sun Valley and Pacoima the same business day.",
+  "intro_p3": "Every Sun Valley and Pacoima client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs — a dead switch in a warehouse, a scale-house workstation, a shop-floor PC — we offer same-day on-site support in Sun Valley and Pacoima when needed.",
   "point2_p": "Our in-house, US-based engineers support the northeast Valley's manufacturers, distributors, and waste operators with segmented OT/IT networks, secure payment systems, and the resilient backups industrial operations depend on.",
   "services_h2": "Complete IT coverage for Sun Valley &amp; Pacoima",
   "svc_sec": "essential for industrial operations where ransomware means a stopped production line or an idle fleet",
@@ -677,11 +677,11 @@ CITIES = [
   "nearby": [("it-support-burbank","Burbank"),("managed-it-services-north-hollywood","North Hollywood"),("managed-it-services-van-nuys","Van Nuys"),("managed-it-services-santa-clarita","Santa Clarita")],
   "faq_h2": "Sun Valley &amp; Pacoima IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Sun Valley and Pacoima?", "Yes. We serve businesses throughout Sun Valley (91352) and Pacoima (91331), including the industrial corridors along San Fernando Road, Glenoaks, and Tuxford. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Sun Valley and Pacoima?", "Yes. We serve businesses throughout Sun Valley (91352) and Pacoima (91331), including the industrial corridors along San Fernando Road, Glenoaks, and Tuxford. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support a recycling or waste operation with a scale house and a truck fleet?", "Yes. We support scale-house workstations and software, route and fleet-management platforms, camera and gate systems, and the office network and billing systems behind them — with 24/7 monitoring, segmented networks, and tested backups so an outage never idles the yard."),
    ("Do you support manufacturers with production equipment on the network?", "Absolutely. We segment and secure operational technology from office networks, support ERP, quality, and label-printing systems, manage industrial Wi-Fi, and maintain the backups and recovery plans that keep a production line from going dark to ransomware or hardware failure."),
    ("We are a small business in Pacoima — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Sun Valley team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Sun Valley or Pacoima location the same business day."),
+   ("How does remote support work for our Sun Valley team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Sun Valley or Pacoima location when needed."),
   ],
  },
  {
@@ -699,8 +699,8 @@ CITIES = [
   "intro_h2": "IT built for <em>the San Gabriel Valley's professional economy</em>",
   "intro_p1": "The western San Gabriel Valley is one of Los Angeles County's most economically active regions. Arcadia's hospital corridor anchors a dense cluster of medical and dental practices; Alhambra's Main Street and Valley Boulevard corridors hold banks, law offices, CPAs, and one of the largest Asian-American business communities in the country; and Monrovia's Huntington Drive business parks have become a hub for biotech, engineering, and technology companies. It is a market of established, growing businesses that expect professional-grade IT.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999. Our managed IT services cover Alhambra (91801, 91803), Arcadia (91006, 91007), and Monrovia (91016) — from the Arcadia medical corridor and Santa Anita business district to Alhambra's Valley Boulevard and Monrovia's Huntington Drive parks.",
-  "intro_p3": "Every San Gabriel Valley client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians to Alhambra, Arcadia, and Monrovia businesses the same business day.",
+  "intro_p3": "Every San Gabriel Valley client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Alhambra, Arcadia, and Monrovia when needed.",
   "point2_p": "Our in-house, US-based engineers support the San Gabriel Valley's medical practices, financial firms, and law offices with encryption, access controls, secure email, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for the San Gabriel Valley",
   "svc_sec": "essential for medical practices and financial firms entrusted with protected and regulated client data",
@@ -721,11 +721,11 @@ CITIES = [
   "nearby": [("managed-it-services-pasadena","Pasadena"),("managed-it-services-glendale","Glendale"),("managed-it-services-downtown-los-angeles","Downtown LA"),("managed-it-services-los-angeles","Los Angeles")],
   "faq_h2": "San Gabriel Valley IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Alhambra, Arcadia, and Monrovia?", "Yes. We serve businesses throughout the western San Gabriel Valley — Alhambra (91801, 91803), Arcadia (91006, 91007), and Monrovia (91016), as well as neighboring San Gabriel, Temple City, and Sierra Madre. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Alhambra, Arcadia, and Monrovia?", "Yes. We serve businesses throughout the western San Gabriel Valley — Alhambra (91801, 91803), Arcadia (91006, 91007), and Monrovia (91016), as well as neighboring San Gabriel, Temple City, and Sierra Madre. While our office is in Woodland Hills, our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("Can you support medical practices in the Arcadia hospital corridor?", "Absolutely. We support medical and dental practices throughout Greater Los Angeles with secure, always-on IT. Every healthcare engagement includes secure, well-documented infrastructure and support for EHR, imaging, and practice-management platforms; for HIPAA risk assessments and policies, we work alongside your compliance advisor."),
    ("Do you work with businesses that operate across the Pacific?", "Yes. Many San Gabriel Valley companies have partners, suppliers, or offices in Asia. We support multi-time-zone operations, secure international file transfer and communications, and cloud collaboration that works on both sides of the ocean — all under the same flat-rate plan."),
    ("We are a small business in Alhambra — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Monrovia team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your San Gabriel Valley location the same business day."),
+   ("How does remote support work for our Monrovia team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your San Gabriel Valley location when needed."),
   ],
  },
  {
@@ -743,8 +743,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Ventura County's business hub</em>",
   "intro_p1": "Camarillo is the business center of the Ventura County 101 corridor. The Mission Oaks and Camarillo Airport industrial parks host biotech and medical-device manufacturers, aerospace and electronics suppliers, and distribution operations, while the surrounding Oxnard Plain supports one of California's most productive agricultural economies — growers, packers, and ag-tech companies with real IT needs. Healthcare providers, financial firms, and corporate offices round out a market that expects professional-grade, secure IT.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, including the Conejo Valley and eastern Ventura County along the 101. Our managed IT services cover Camarillo's 93010 and 93012 zip codes — from the Mission Oaks business parks and the Camarillo Airport corridor to Old Town and the Las Posas commercial district.",
-  "intro_p3": "Every Camarillo client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we dispatch technicians west on the 101 to Camarillo businesses the same business day.",
+  "intro_p3": "Every Camarillo client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes. For hardware and on-site needs, we offer same-day on-site support in Camarillo when needed.",
   "point2_p": "Our in-house, US-based team supports Camarillo's biotech, aerospace, and healthcare companies with encryption, network segmentation for lab and production systems, and backups verified by restore testing.",
   "services_h2": "Complete IT coverage for Camarillo businesses",
   "svc_sec": "essential for life-science and aerospace companies protecting intellectual property and controlled data",
@@ -765,11 +765,11 @@ CITIES = [
   "nearby": [("managed-it-services-thousand-oaks","Thousand Oaks"),("managed-it-services-agoura-hills","Agoura Hills"),("managed-it-services-simi-valley","Simi Valley"),("managed-it-services-calabasas","Calabasas")],
   "faq_h2": "Camarillo IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Camarillo?", "Yes. We serve businesses throughout Camarillo's 93010 and 93012 zip codes, including the Mission Oaks and Camarillo Airport business parks. Our Woodland Hills office is a direct drive west on the 101; our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Camarillo?", "Yes. We serve businesses throughout Camarillo's 93010 and 93012 zip codes, including the Mission Oaks and Camarillo Airport business parks. Our Woodland Hills office is a direct drive west on the 101; our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("How does onboarding work for a Camarillo business?", "It starts with a free IT assessment. We review your network, devices, user accounts, and backups, document your environment, and then bring it under 24/7 monitoring, patching, endpoint protection, and managed backups that we verify with test restores. We coordinate the handoff with your current provider or IT contact, so your team — whether in the Mission Oaks parks or Old Town — keeps working while we take over."),
    ("Do you work with agricultural businesses on the Oxnard Plain?", "Absolutely. Growers, packers, and cold-storage operators depend on traceability, inventory, and sensor systems spread across fields, packing houses, and offices. We design resilient connectivity, secure the office and operational networks, and keep traceability and food-safety records backed up and recoverable."),
    ("We are a small business in Camarillo — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Camarillo team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Camarillo location the same business day."),
+   ("How does remote support work for our Camarillo team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Camarillo location when needed."),
   ],
  },
  {
@@ -787,8 +787,8 @@ CITIES = [
   "intro_h2": "IT built for <em>Malibu's high-value, high-exposure businesses</em>",
   "intro_p1": "Malibu's business community is small in number and exceptionally high in value. Family offices, wealth managers, and business managers serve some of the most targeted individuals in the country; production companies and entertainment executives run operations from the coast; hospitality, wellness, and real estate businesses along Pacific Coast Highway cater to a global clientele; and a growing number of founders and professionals run serious companies from Malibu offices and home offices. The common denominators are discretion, security, and the need for IT that keeps working when the coast's infrastructure doesn't.",
   "intro_p2": "Pro Link Systems has supported Greater Los Angeles businesses since 1999, and Malibu is a direct drive from our Woodland Hills headquarters over Malibu Canyon or Kanan. Our managed IT services cover the 90263, 90264, and 90265 zip codes — from the Civic Center and Cross Creek business district along PCH to Point Dume, Zuma, and the canyon communities — with particular attention to the connectivity resilience, cloud-first backup, and business-continuity planning that wildfire, power-shutoff, and PCH-closure risk demand.",
-  "intro_p3": "Every Malibu client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No annual contracts required.",
-  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — and for Malibu we design around it, so your business keeps running even when PCH or the canyons are closed. For hardware and on-site needs, we dispatch technicians to Malibu the same business day.",
+  "intro_p3": "Every Malibu client — regardless of size or industry — gets a flat-rate, all-inclusive managed IT plan. That means unlimited support, 24/7 monitoring, and enterprise cybersecurity for one predictable monthly fee. No per-ticket billing. No long-term contracts.",
+  "point1_p": "Remote support resolves most issues quickly: 90% are fixed on first contact, and our average ticket first-response time is 15 minutes — and for Malibu we design around it, so your business keeps running even when PCH or the canyons are closed. For hardware and on-site needs, we offer same-day on-site support in Malibu when needed.",
   "point2_p": "Our in-house, US-based team supports Malibu's family offices, production companies, and professional firms with encryption, strict access controls, and backups verified by restore testing — plus the discretion their clients expect.",
   "services_h2": "Complete IT coverage for Malibu businesses",
   "svc_sec": "essential for family offices and executives who are among the most targeted individuals for impersonation, wire fraud, and account takeover",
@@ -809,11 +809,11 @@ CITIES = [
   "nearby": [("managed-it-services-calabasas","Calabasas"),("managed-it-services-santa-monica","Santa Monica"),("managed-it-services-agoura-hills","Agoura Hills"),("managed-it-services-woodland-hills","Woodland Hills")],
   "faq_h2": "Malibu IT support — answered",
   "faqs": [
-   ("Do you provide managed IT services in Malibu?", "Yes. We serve businesses throughout Malibu's 90263, 90264, and 90265 zip codes — the Civic Center and Cross Creek business district, Point Dume, Zuma, and the canyon communities. Our Woodland Hills office is a direct drive over Malibu Canyon or Kanan Road; our average ticket first-response time is 15 minutes, and on-site technicians are dispatched the same business day."),
+   ("Do you provide managed IT services in Malibu?", "Yes. We serve businesses throughout Malibu's 90263, 90264, and 90265 zip codes — the Civic Center and Cross Creek business district, Point Dume, Zuma, and the canyon communities. Our Woodland Hills office is a direct drive over Malibu Canyon or Kanan Road; our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
    ("How do you keep a Malibu business running during a wildfire, power shutoff, or PCH closure?", "We design Malibu environments cloud-first: data and applications live in Microsoft 365, Azure, or other cloud platforms with tested, immutable backups, so your team can work securely from anywhere on any device. We also plan redundant connectivity — cellular or satellite failover alongside wired internet — and document a business-continuity plan so a road closure or evacuation interrupts your location, not your operations."),
    ("Can you protect a family office from targeted fraud and account takeover?", "Yes. Principals and their staff face impersonation, wire-fraud, SIM-swap, and account-takeover attempts far more often than typical businesses. We implement advanced email and impersonation protection, hardware-backed multi-factor authentication, device management across personal and corporate hardware, dark-web monitoring, and security awareness training — delivered with the discretion your clients expect."),
    ("We are a small business in Malibu — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
-   ("How does remote support work for our Malibu team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, we dispatch a technician to your Malibu location the same business day."),
+   ("How does remote support work for our Malibu team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Malibu location when needed."),
   ],
  },
 ]
@@ -842,7 +842,7 @@ def local_business_schema(c):
             '    "name": "Pro Link Systems",\n    "url": "https://prolinksystems.com",\n'
             '    "logo": "https://prolinksystems.com/logo.png",\n'
             '    "description": %s,\n    "telephone": "+18008906133",\n    "email": "info@prolinksystems.com",\n'
-            '    "address": {\n      "@type": "PostalAddress",\n      "streetAddress": "21241 Ventura Boulevard",\n'
+            '    "address": {\n      "@type": "PostalAddress",\n      "streetAddress": "21241 Ventura Blvd #193",\n'
             '      "addressLocality": "Woodland Hills",\n      "addressRegion": "CA",\n      "postalCode": "91364",\n'
             '      "addressCountry": "US"\n    },\n    "geo": {\n      "@type": "GeoCoordinates",\n'
             '      "latitude": 34.1684,\n      "longitude": -118.5997\n    },\n    "areaServed": [\n'
@@ -893,7 +893,7 @@ def body(c):
   <h1>Managed IT Services &amp; IT Support in<br><em>{c["h1_city"]}</em></h1>
   <p>{c["hero_p"]}</p>
   <div class="hero-cta-group">
-    <a href="contact" class="btn btn-gold">
+    <a href="#talk-to-us" class="btn btn-gold">
       {PHONE_SVG}
       Get a Free IT Assessment
     </a>
@@ -1085,13 +1085,114 @@ def body(c):
   <h2>Get a free IT assessment for your {city} business</h2>
   <p>No pressure, no commitment — just an honest look at your current IT and how we can make it better.</p>
   <div class="cta-buttons">
-    <a href="contact" class="btn btn-gold">
+    <a href="#talk-to-us" class="btn btn-gold">
       {PHONE_SVG}
       Schedule a Free Discovery Call
     </a>
     <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
   </div>
 </div>
+
+<!-- LEAD FORM (shared form; handled by /contact-form.js + Turnstile) -->
+<section class="lead-section" id="talk-to-us" aria-labelledby="lead-heading">
+  <div class="lead-wrap">
+    <div class="lead-copy">
+      <span class="section-label">Free IT Assessment</span>
+      <h2 id="lead-heading">Talk to a local IT team about your {city} office</h2>
+      <p>Tell us what is slowing your team down. We will look at your current setup and recommend what to fix first. No pressure, no obligation.</p>
+      <ul class="lead-points">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>24/7 help desk, in-house and US-based. Calls are answered live, with no phone tree and no hold queue.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Average ticket first-response time: 15 minutes.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Same-day on-site support when needed, from our Woodland Hills office.</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Flat-rate pricing. No long-term contracts.</li>
+      </ul>
+      <p class="lead-call">Prefer to talk now? <a href="tel:18008906133">Call 1-800-890-6133</a></p>
+    </div>
+    <div class="lead-form">
+      <div class="form-card">
+        <div class="form-card-head">
+          <div class="form-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free IT Assessment &middot; No Obligation</div>
+          <h3>Request a free IT assessment</h3>
+          <p>Tell us a little about your business. A Pro Link engineer will follow up within one business day.</p>
+        </div>
+        <div class="form-body" id="formBody">
+          <form method="post" id="cityForm" novalidate>
+            <div class="form-row">
+              <div class="form-group" id="fg-fname">
+                <label>First Name <span class="req">*</span></label>
+                <input type="text" name="first_name" placeholder="Alex" autocomplete="given-name">
+                <span class="form-error">Required</span>
+              </div>
+              <div class="form-group" id="fg-lname">
+                <label>Last Name</label>
+                <input type="text" name="last_name" placeholder="Rivera" autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-group" id="fg-email">
+              <label>Work Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="alex@example.com" autocomplete="email">
+              <span class="form-error">Valid email required</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group" id="fg-company">
+                <label>Company Name</label>
+                <input type="text" name="firm_name" placeholder="Rivera Logistics" autocomplete="organization">
+              </div>
+              <div class="form-group" id="fg-phone">
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="(818) 555-0200" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Number of Employees</label>
+                <select name="firm_size">
+                  <option value="">Select&hellip;</option>
+                  <option>1&ndash;10</option>
+                  <option>11&ndash;25</option>
+                  <option>26&ndash;50</option>
+                  <option>51&ndash;150</option>
+                  <option>Over 150</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>What You Need Most</label>
+                <select name="challenge">
+                  <option value="">Select&hellip;</option>
+                  <option>Faster, More Reliable IT Support</option>
+                  <option>Switching IT Providers</option>
+                  <option>Network &amp; Wi-Fi Problems</option>
+                  <option>Cybersecurity &amp; Email Protection</option>
+                  <option>Microsoft 365 &amp; Cloud</option>
+                  <option>Backup &amp; Disaster Recovery</option>
+                  <option>New Office, Move or Setup</option>
+                  <option>Not Sure &mdash; Let's Talk</option>
+                </select>
+              </div>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-label">Request My Free IT Assessment</span>
+              <svg class="btn-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <div class="spinner"></div>
+            </button>
+            <p class="form-privacy">Your information is never shared. We respond within one business day.</p>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-orbit"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="success-pill"><div class="success-pill-dot"></div>Request Received</div>
+          <h3>You're in good hands.</h3>
+          <p>A Pro Link engineer will reach out within one business day to schedule your free IT assessment.</p>
+          <a href="tel:18008906133" class="success-cta-phone">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now: 1-800-890-6133
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="faq-section" aria-labelledby="faq-heading">
   <div class="container">
