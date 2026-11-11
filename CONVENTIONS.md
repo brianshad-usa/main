@@ -265,6 +265,14 @@ fail-safe and measured; keep them that way:
   first scroll/tap/key or after 6 s (main-thread time = Ads landing-page experience).
   Keep `/managed-it-services` LA-focused — it is the Google + Microsoft Ads landing
   page; the LA city page carries organic "managed IT services Los Angeles".
+- **City pages carry the shared form (2026-11-11).** All 39 location pages
+  (`managed-it-services-*.html` + `it-support-burbank.html`) have the standard lead form in
+  a `#talk-to-us` section above the FAQ (styles in `/lead-form.css?v=…`, handler
+  `/contact-form.js?v=…` + Turnstile), and their hero / CTA-band "free assessment" buttons
+  scroll to it instead of sending people to /contact. `gen_location_pages.py` emits the same
+  section and anchors. **Check 19 now fails any page with a Turnstile form that does not load
+  `/contact-form.js?v=` and the Turnstile script** (contact.html excepted: it has its own
+  inline handler): without them the form POSTs to the page itself and the lead is lost.
 
 ## No compliance advertising + verified claims only (2026-11-09)
 
@@ -299,7 +307,10 @@ generator (blog, GBP posts, social, SEO engine).
 - **No `aggregateRating`** anywhere (removed from 10 pages on 2026-11-09).
 - **Enforced by `site_guard.py` check 20** (compliance-status claims, response-time wording,
   500+, 99.9% uptime, "no contracts", aggregateRating; the BAA rule was dropped 2026-11-10). Do not
-  weaken it to make a page pass — fix the copy.
+  weaken it to make a page pass — fix the copy. **Added 2026-11-11:** "no annual contracts" (say
+  "no long-term contracts") and unconditional same-business-day on-site claims ("technicians are
+  dispatched the same business day") — 20 city pages, the Ads landing page and the city
+  generator said both; rewritten to F017 "same-day on-site support when needed".
 - Google Ads: compliance terms are campaign negatives; ads/callouts/sitelinks use verified
   facts only; campaign-level sitelinks only (ad-group sitelinks override the campaign set);
   each ad group sets `final_url_suffix` with its own `utm_content`.
