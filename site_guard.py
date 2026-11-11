@@ -400,8 +400,11 @@ CLAIM_PATTERNS = [
      "compliance-status claim (owner: no compliance advertising)"),
     (re.compile(r"(?i)under[- ]15[- ]min|&lt;15\s?m(?:in)?\b|<15\s?m\b|in under 15 minutes|(?:support|response|respond)[^.<\"]{0,40}within 15 minutes"),
      "response-time wording; use 'average ticket first-response time: 15 minutes' (verified fact F003)"),
-    (re.compile(r"(?i)\b500\+\s*(?:organizations|clients|businesses|california|companies)"),
+    (re.compile(r"(?i)\b500\+\s*(?:\w+\s+)?(?:organizations|clients|businesses|california|companies)"),
      "unverified '500+' claim"),
+    # 2026-11-11: the home page counter animated to "98% Ticket Resolution Rate" (verified F004 is 90% first-contact).
+    (re.compile(r"(?i)\b98%\s*(?:ticket\s+)?resolution"),
+     "unverified 98% resolution claim; verified F004 is '90% first-contact resolution'"),
     (re.compile(r"(?i)99\.9\d*%\s*(?:uptime|network uptime|ehr)|uptime (?:sla|guarantee)"),
      "unverified uptime claim"),
     (re.compile(r"(?i)(?<!long-term )(?<!long term )(?<!long-term, )\bno contracts\b"),
