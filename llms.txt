@@ -2,19 +2,31 @@
 
 > Managed IT services, cybersecurity, and cloud solutions for Los Angeles businesses since 1999. Based in Woodland Hills, CA, with a 24/7 in-house, US-based help desk, serving organizations across healthcare, legal, finance, manufacturing, aerospace, and more.
 
-Pro Link Systems is a managed IT services provider (MSP) serving the greater Los Angeles area. Founded in 1999 by Brian Shad and headquartered in Woodland Hills, the company delivers flat-rate managed IT, cybersecurity, cloud infrastructure, backup and disaster recovery, AI automation, and a 24/7 help desk staffed by real engineers - with no long-term contracts.
+Pro Link Systems is a managed IT services provider (MSP) serving the greater Los Angeles area. Founded in 1999 by Brian Shad and headquartered in Woodland Hills, the company delivers flat-rate managed IT with unlimited support, cybersecurity, cloud infrastructure, backup and disaster recovery, AI automation, and a 24/7 help desk staffed by real engineers - with no long-term contracts.
 
-- Address: 21241 Ventura Boulevard, Woodland Hills, CA 91364
+- Address: 21241 Ventura Blvd #193, Woodland Hills, CA 91364
 - Phone: 1-800-890-6133
 - Email: info@prolinksystems.com
-- Hours: Monday-Friday, 9 AM - 6 PM PST (24/7 help desk for managed clients)
-- Founded: 1999 (family-owned, 25+ years in business)
-- Service area: Greater Los Angeles - San Fernando Valley, West LA, South Bay, and Orange County
+- Hours: Monday-Friday, 9 AM - 6 PM Pacific (24/7 help desk for managed clients)
+- Founded: 1999 (25+ years in business)
+- Service area: Greater Los Angeles - San Fernando Valley, West LA, the South Bay, the San Gabriel Valley, the Conejo Valley and Ventura County, and Orange County
 - YouTube: https://www.youtube.com/channel/UCm0_oUdW9jLC_HX7pxpIAWA
+
+## Key Facts
+
+- Help desk: 24/7, in-house and US-based. Phone calls are answered live by the in-house team - no phone tree, no hold queue.
+- Average ticket first-response time: 15 minutes.
+- First-contact resolution: 90%. Average resolution time: under one hour.
+- Managed IT plans include unlimited support at a flat monthly rate, with no long-term contracts.
+- Same-day on-site support when needed, from the Woodland Hills office.
+- Backups are verified by restore testing, not assumed from job reports.
+- Pro Link Systems signs a Business Associate Agreement (BAA) with its healthcare clients.
+- For compliance assessments and audits, Pro Link works alongside the client's compliance advisor and handles the IT side.
+- The incident-response playbook is published free and ungated (no form, no email required).
 
 ## Services
 
-- [Managed IT Services](https://prolinksystems.com/managed-it-services): Flat-rate managed IT for LA businesses - proactive monitoring, 24/7 help desk, no long-term contracts.
+- [Managed IT Services](https://prolinksystems.com/managed-it-services): Flat-rate managed IT for LA businesses - proactive monitoring, 24/7 help desk, unlimited support, same-day on-site support when needed, no long-term contracts.
 - [Cybersecurity Services](https://prolinksystems.com/cybersecurity-services): EDR, email security, 24/7 SOC monitoring, and ransomware and phishing defense.
 - [Cloud Services](https://prolinksystems.com/cloud-services): Microsoft 365, Azure, cloud migration, virtual desktops, and managed cloud infrastructure.
 - [Backup & Disaster Recovery](https://prolinksystems.com/backup-disaster-recovery): Automated backups, ransomware recovery, tested failover, and business continuity planning.
@@ -38,17 +50,17 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 
 ## Industries Served
 
-- [Healthcare IT](https://prolinksystems.com/healthcare-it-services): IT support for medical and dental practices: EHR uptime, secure devices and email, and restore-tested backups.
+- [Healthcare IT](https://prolinksystems.com/healthcare-it-services): IT support for medical and dental practices: EHR uptime, secure devices and email, and restore-tested backups. Pro Link signs a BAA with its healthcare clients.
 - [Law Firm IT](https://prolinksystems.com/law-firm-it-services-los-angeles): Secure document management, remote access, and 24/7 support for law firms.
-- [Financial Services IT](https://prolinksystems.com/financial-services-it): SEC/FINRA and GLBA-aligned IT for advisors, wealth managers, and finance firms.
+- [Financial Services IT](https://prolinksystems.com/financial-services-it): Managed IT for RIAs, wealth managers, CPAs, and insurers: BEC and wire-fraud defense, tested backups, and a 24/7 in-house help desk.
 - [Manufacturing IT](https://prolinksystems.com/manufacturing-it-services): OT/IT-integrated IT for manufacturers: plant networks, ERP uptime, and a 24/7 help desk.
 - [Aerospace & Defense IT](https://prolinksystems.com/aerospace-defense-it-services): IT support for aerospace and defense suppliers: engineering workstations and secure, segmented networks.
 - [Real Estate IT](https://prolinksystems.com/real-estate-it-services): Wire-fraud defense and IT for brokerages and property management.
 - [Professional Services IT](https://prolinksystems.com/professional-services-it): Scalable IT for consulting, accounting, and professional firms.
-- [Nonprofit IT](https://prolinksystems.com/nonprofit-it-services): Discounted IT for nonprofits and foundations, including Microsoft 365 nonprofit setup.
+- [Nonprofit IT](https://prolinksystems.com/nonprofit-it-services): Managed IT for nonprofits and foundations: Microsoft 365 Nonprofit setup, help accessing donated and discounted technology, donor-data security, and a 24/7 help desk.
 - [Technology & SaaS IT](https://prolinksystems.com/technology-it-services): Secure cloud, identity, and endpoint management for tech companies.
-- [Entertainment & Media IT](https://prolinksystems.com/entertainment-it-services): Content security (TPN) and post/VFX workstation support for media companies.
-- [Education IT](https://prolinksystems.com/education-it-services): CIPA filtering, FERPA student-data security, and E-Rate support for schools.
+- [Entertainment & Media IT](https://prolinksystems.com/entertainment-it-services): Content security, post-production workstation support, shared media storage, and backup for studios and media companies.
+- [Education IT](https://prolinksystems.com/education-it-services): School IT for private and charter schools: content filtering, student-data security, classroom technology, and campus Wi-Fi.
 - [Logistics IT](https://prolinksystems.com/logistics-it-services): WMS/TMS, warehouse Wi-Fi, and EDI support for logistics and warehousing.
 - [Waste Management IT](https://prolinksystems.com/waste-management-it-services): Fleet, scale-house, and critical-infrastructure IT for waste companies.
 
