@@ -421,8 +421,19 @@ CLAIM_PATTERNS = [
     (re.compile(r"(?i)\b(?:hipaa|soc ?2|pci(?: dss)?|cmmc|nist|finra|glba|sec/finra|ferpa)\b[^.<\"]{0,25}\baligned\b"),
      "compliance-alignment claim (owner: no compliance advertising)"),
 ]
+# Animated counters (<span data-target="500" data-suffix="+">0</span><div class="stat-label">CA Businesses
+# Served</div>) hide the number in attributes, so the 2026-11-09 sweep missed "500+ CA Businesses Served" and
+# "98% Ticket Resolution Rate" on the home and about pages until 2026-11-11. Render them as visitors see them.
+COUNTER = re.compile(r'<span(?=[^>]*\bdata-target="(\d+)")(?=(?:[^>]*\bdata-suffix="([^"]*)")?)[^>]*>[^<]*</span>'
+                     r'\s*(?:<[^>]+>\s*)*([^<]{0,80})')
+
+
+def rendered_counters(text):
+    return "\n".join(f"{m.group(1)}{m.group(2) or ''} {m.group(3).strip()}" for m in COUNTER.finditer(text))
+
+
 for name, pg in pages.items():
-    src = pg["src"]
+    src = pg["src"] + "\n" + rendered_counters(pg["src"])
     for rx, why in CLAIM_PATTERNS:
         m = rx.search(src)
         if m:

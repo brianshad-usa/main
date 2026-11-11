@@ -317,6 +317,10 @@ generator (blog, GBP posts, social, SEO engine).
   F001–F005, F007, F008, F012–F017) — keep it in sync when a fact changes. Self-test for the
   patterns: they must flag the 11/11 claims and must NOT flag "no long-term contracts",
   "same-day on-site support when needed" or "we work alongside your compliance advisor".
+  Check 20 also **renders animated counters** (`data-target` + `data-suffix` + the label after them)
+  before matching: the home and about pages counted up to "500+ CA Businesses Served" and "98% Ticket
+  Resolution Rate" until 2026-11-11 because the numbers lived in attributes. Counters now show only
+  verified facts and carry their final value in the HTML (crawlers and AI readers don't run the animation).
 - Google Ads: compliance terms are campaign negatives; ads/callouts/sitelinks use verified
   facts only; campaign-level sitelinks only (ad-group sitelinks override the campaign set);
   each ad group sets `final_url_suffix` with its own `utm_content`.
