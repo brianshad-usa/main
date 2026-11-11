@@ -410,10 +410,13 @@ CLAIM_PATTERNS = [
      "self-serving aggregateRating markup (Google ignores it on LocalBusiness/Organization)"),
     # 2026-11-11: city pages said "No annual contracts required" and "technicians are dispatched the same
     # business day"; verified wording is "no long-term contracts" and F017 "same-day on-site support when needed".
-    (re.compile(r"(?i)no annual contracts?"),
+    (re.compile(r"(?i)\bno annual contracts?\b"),
      "'no annual contracts' (unverified term); say 'no long-term contracts'"),
-    (re.compile(r"(?i)(?:dispatch(?:ed)?|technicians?|on-site)[^.<\"]{0,100}same business day"),
+    (re.compile(r"(?i)(?:dispatch(?:ed)?|technicians?|on-site)[^.<\"]{0,100}\bsame business day"),
      "unconditional same-business-day on-site claim; use F017 'same-day on-site support when needed'"),
+    # 2026-11-11: llms.txt still said "SEC/FINRA and GLBA-aligned IT" after the 11/9-11/10 cleanups.
+    (re.compile(r"(?i)\b(?:hipaa|soc ?2|pci(?: dss)?|cmmc|nist|finra|glba|sec/finra|ferpa)\b[^.<\"]{0,25}\baligned\b"),
+     "compliance-alignment claim (owner: no compliance advertising)"),
 ]
 for name, pg in pages.items():
     src = pg["src"]
@@ -421,6 +424,14 @@ for name, pg in pages.items():
         m = rx.search(src)
         if m:
             V(20, name, f"{why}: '{m.group(0)[:60]}'")
+# llms.txt is what AI assistants read about Pro Link: hold it to the same claim rules (2026-11-11;
+# until then only HTML pages were scanned).
+if os.path.exists(llms_path):
+    llms_text = read(llms_path)
+    for rx, why in CLAIM_PATTERNS:
+        m = rx.search(llms_text)
+        if m:
+            V(20, "llms.txt", f"{why}: '{m.group(0)[:60]}'")
 
 # --------------------------------------------------------------------------- #
 # Report
