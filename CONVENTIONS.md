@@ -293,7 +293,17 @@ fail-safe and measured; keep them that way:
   carry a logo watermark: fine for the Business Profile, avoid on the website.
 - **Readable sizes:** body/card copy ≥ 16px (`.card p` 1rem), form inputs 16px (smaller makes
   iPhones zoom the page on tap), labels ≥ .8rem. Bump `?v=` on `lead-form.css` /
-  `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale).
+  `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale). The 16px input size is
+  enforced site-wide by the last rule in `_shared.css` (`!important`, because many pages style
+  their forms inline after it loads) — industry pages were 13px and contact 14.4px before it.
+- **No sideways scroll on phones.** Every page must fit a 390px-wide screen. `_shared.css` stacks
+  inline two-column grids written `grid-template-columns:1fr 1fr;gap:4x/5x/6x` (the industry pages'
+  text + visual blocks) at ≤860px; it matches the inline style text, so write inline grids without
+  spaces, or better, use a class with its own media query. Pages that don't load `_shared.css`
+  carry their own rule (the Ads landing page: `.lp-section [style*=...]`; `case-studies.html`: a
+  ≤700px block). Never put `white-space:nowrap` on a sentence-length link. Check on 2026-11-12:
+  7 of 87 pages overflowed (case-studies 120px, manufacturing 157px, technology 101px,
+  financial 54px, healthcare 43px, law 32px, home 19px) → 0.
 - **Testimonial attribution:** a quote shown under a client's name must be traceable to that
   client (their Google review, their own words in their video, or a written approval). The Ads
   landing page video cards had "first ring… back up in under an hour" (Optical Zonu, "David R.")
