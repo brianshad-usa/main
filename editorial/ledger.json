@@ -3659,6 +3659,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-12",
+      "idea_id": "S238",
+      "theme": "m365_security",
+      "format": "scenario",
+      "title": "Your customers got a convincing invoice from your domain",
+      "excellence": 93,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "x": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          }
+        }
+      }
     }
   ]
 }

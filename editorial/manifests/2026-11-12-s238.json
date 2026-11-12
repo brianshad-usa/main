@@ -1,0 +1,166 @@
+{
+  "post": "A longtime customer emails to confirm the new bank details on your invoice before paying it. There are no new bank details. You never sent that invoice.\n\nSomeone forged an email that showed your company's own address. Your customer did nothing careless. The message carried your name, and that was nearly enough.\n\nEvery business domain can publish a short public setting called DMARC. It tells other email systems what to do with messages pretending to be you. Plenty of businesses leave it on 'watch only', which asks no one to stop the fakes. Some never set up the reports either, so nobody is actually watching.\n\nSwitching to enforcement takes care. Your billing, CRM and marketing tools all send email as you, and each must be set up correctly first, or your real invoices get blocked too. Decide now who calls a customer who reports a fake. Done properly, this is one of the most direct protections you can give the people who trust your name.",
+  "headline": "Your DMARC policy is public. Is it protecting anyone?",
+  "cta_label": "Review email security",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-11-12-s238-card.png",
+  "image_file_jpg": "2026-11-12-s238-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S238",
+  "core_idea": "When someone forges an invoice carrying your exact email domain, your customers carry the risk and your credibility absorbs the damage. Your DMARC policy is a public record anyone can read. Enforcing it, and planning the customer callback before you need it, is a control you run for the people who trust your name, not for your own inbox.",
+  "channels": {
+    "linkedin": "A customer calls your CFO to confirm the new bank details on your latest invoice before paying it.\n\nThere are no new bank details. You never sent that invoice. It still carried your exact domain in the From line.\n\nThat call is a customer-trust incident, not an IT ticket. They saw your name, and this time they asked first. The next customer may not.\n\nMost leadership teams file email authentication under inbox hygiene. In our view, that framing is backwards. Microsoft 365 filtering protects the mail you receive. DMARC, the record you publish alongside SPF and DKIM, tells your customers' mail systems what to do with forgeries that claim to be you. One guards your inbox. The other guards theirs.\n\nTwo details executives rarely hear:\n\nThe record is public. Anyone can look up your policy in seconds, including someone deciding whose name to borrow.\n\nA policy of p=none asks receivers to block nothing. It only requests reports, and with no reporting address listed, nobody is reading them.\n\nThree questions for your IT lead:\nIs our policy at quarantine or reject?\nHas every service that sends as us, including billing, CRM and marketing tools, been authenticated first?\nIf a customer reports a forged invoice tomorrow, who calls them back, and what do they say?\n\nThat last answer belongs in your incident-response plan, not improvised on the phone.\n\nThe honest limit: enforcement stops forgery of your exact domain. Lookalike domains and compromised mailboxes need their own controls.\n\nYour DMARC policy is a promise to the people who pay you. Keep it on purpose.",
+    "facebook": "A longtime customer emails to confirm the new bank details on your invoice before paying it. There are no new bank details. You never sent that invoice.\n\nSomeone forged an email that showed your company's own address. Your customer did nothing careless. The message carried your name, and that was nearly enough.\n\nEvery business domain can publish a short public setting called DMARC. It tells other email systems what to do with messages pretending to be you. Plenty of businesses leave it on 'watch only', which asks no one to stop the fakes. Some never set up the reports either, so nobody is actually watching.\n\nSwitching to enforcement takes care. Your billing, CRM and marketing tools all send email as you, and each must be set up correctly first, or your real invoices get blocked too. Decide now who calls a customer who reports a fake. Done properly, this is one of the most direct protections you can give the people who trust your name.",
+    "gbp": "A forged invoice carrying your company's exact email domain can cost your customers money and cost you their trust. Los Angeles business owners can check one setting this week: the DMARC policy on your domain. It is public, so anyone can look it up. At p=none, the policy asks receivers to block nothing. Moving to quarantine or reject protects customers, but only after billing, CRM and marketing tools are authenticated, or your real email gets blocked too. Also decide who calls a customer who reports a fake. Pro Link Systems has served LA businesses since 1999 from Woodland Hills, and our incident-response playbook is published free, no form required.",
+    "x": [
+      "Your DMARC policy is public. Anyone can look it up, including someone choosing whose name to put on a fake invoice. At p=none it asks receivers to block nothing. Enforcement is a control you run for your customers' inboxes, not your own."
+    ],
+    "instagram_caption": "A customer pays an invoice with new bank details. It carried your exact domain, and you never sent it.\n\nExact-domain forgery is a customer-trust incident before it is a technical one. Your DMARC policy is a public record anyone can look up. It tells receiving mail systems how to handle mail that fails authentication as you: monitor, send to junk, or refuse. At p=none, it asks them to block nothing.\n\nThe fix is careful work. Inventory every service that sends as you, authenticate each one, read the reports, then step up to enforcement. It will not stop lookalike domains or a compromised mailbox, so plan for those too, and decide in advance who calls the customer.\n\n#DMARC #EmailSecurity #BEC"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "centered",
+    "register": "insight",
+    "channels": {
+      "linkedin": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "facebook": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "gbp": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "instagram": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "x": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 93,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 88,
+      "originality": 92,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 97,
+      "executive_value": 95,
+      "writing_quality": 95,
+      "visual_sophistication": 89,
+      "platform_fit": 95,
+      "shareability": 93,
+      "saveability": 95,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F014): Pro Link Systems publishes its incident-response playbook publicly, free and ungated, no form required",
+    "ANALYSIS: DMARC records are published in public DNS at _dmarc.<domain> and can be looked up by anyone (standard protocol behavior)",
+    "ANALYSIS: a DMARC policy of p=none requests reports but does not ask receivers to block failing mail; receivers may still apply their own filtering (standard protocol behavior)",
+    "ANALYSIS: if no reporting (rua) address is published, no aggregate reports are sent to the domain owner (standard protocol behavior)",
+    "ANALYSIS: quarantine asks receivers to treat failing mail as suspicious, typically junk; reject asks receivers to refuse it; receivers apply policy at their discretion (standard protocol behavior)",
+    "ANALYSIS: DMARC passes only when SPF or DKIM passes and aligns with the From domain (standard protocol behavior)",
+    "ANALYSIS: without enforced authentication, a forger can place your domain in the From line and the message may still be delivered",
+    "ANALYSIS: moving to enforcement before authenticating all legitimate senders can cause real email to be blocked",
+    "ANALYSIS: DMARC enforcement does not stop lookalike domains or compromised mailboxes",
+    "ANALYSIS: Microsoft 365 inbound filtering protects mail you receive, while your published DMARC record governs how others treat mail claiming to be you",
+    "ANALYSIS (qualitative, no statistic): some businesses leave DMARC at p=none or publish no reporting address",
+    "OPINION: treating email authentication as only internal hygiene is backwards framing",
+    "OPINION: DMARC enforcement and the customer callback should be managed as a commitment to customers and planned within incident response",
+    "ANALYSIS: the invoice, CFO and customer scenarios are illustrative hypotheticals, not client stories"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft fails the 'could any MSP have published this' test. A DMARC explainer with a p=none warning is common MSP material. The customer-trust framing is the right differentiator but stays abstract. The revision adds two points most DMARC posts miss: the record is public, so anyone, including a forger, can read your posture, and p=none without a reporting address means nobody is watching at all. It also ties GBP to a ProLink-specific asset, the free, ungated incident-response playbook (F014), instead of a generic 'glad to review' offer."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The LinkedIn opening contradicts itself. The customer calls to ask why the bank details changed, which implies they have not paid, yet three sentences later 'they paid.' The scenario falls apart on a careful read. The revision makes it coherent: the customer calls to confirm before paying, this time. The next customer may not. That line also carries the stakes better than the original."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 4 and 5 are dense text blocks, and the carousel has no visual device of its own. Every slide is headline plus paragraph, which is the 'paragraphs of tiny text' failure in waiting. The revision gives the policy ladder its own slide, with 'p=none → quarantine → reject' as the headline so it can be set as a typographic diagram. The record location goes in the footer as a monospace detail. Remaining weakness: the schema carries no art direction, so execution quality depends on the template."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Your domain did' (send the invoice) is technically wrong: the forger's infrastructure sent it and only the From header carried the domain. Instagram slide 2 has the same error ('sent from your exact domain'). 'Authenticate each with SPF and DKIM' omits alignment, which is what DMARC actually evaluates; an SPF pass on a vendor's bounce domain does not satisfy DMARC. All three are corrected."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft never says who owns the fix. DMARC is a DNS record, and the people who control DNS are not always IT. The bigger practical gap is that p=none is often published with no reporting address, so it is not even monitoring. The revision says p=none blocks nothing and explains the missing-report problem plainly. Without client anecdotes it cannot claim how often that happens, so it states the mechanism, not a frequency."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "X says delivery 'depends on a policy you publish.' That overstates it: DMARC is a request that receivers honor at their discretion, and their filtering also matters. Quarantine is never explained (it typically routes to junk, while reject refuses the message). The exact-domain limit is honest and must stay, since many real invoice-redirection schemes use lookalike domains or a compromised vendor mailbox. The revision softens the delivery claim, explains the policy levels and keeps the limit on every channel with room for it."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no weakness to fix here, by design. The draft rightly avoids bolting on an AI-phishing angle. No sourced claim in the brief supports it, and the standards forbid manufacturing urgency because AI is involved. The concept holds on its own. Adding AI would weaken trust, not raise relevance."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The three questions are useful. The draft still misses the detail that would make me forward it: I can check our exposure myself, in public, today. Nothing tells the reader the record is visible to anyone. The revision puts that up front, because it turns an abstract control into something an executive can verify before the next meeting."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post is a compressed restatement of LinkedIn, not the sharpest single observation. 'Your DMARC policy is public' is the most surprising, shareable idea in the package, so the revision leads X with it. The Instagram hashtag #Microsoft365 also mismatches the topic. The revision uses #BEC, which matches the invoice-fraud subject."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "'The takeaway:' as a LinkedIn closer is a formula that edges toward the banned 'the bottom line?' pattern. The GBP CTA ('We are glad to review...') is the generic MSP close the brand should avoid. The revision ends LinkedIn on a plain declarative line. GBP closes on a verified, ProLink-specific fact (F014) rather than an offer."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The LinkedIn draft opens consecutive sentences with the same word ('Your Microsoft 365 protections... Your published DMARC record...'), which violates the voice rule. 'Picture this.' on Facebook is a stock opener. 'Many domains sit at p=none' is an unsupported frequency claim presented as fact. All three are fixed in the revision."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Several sentences overstated what DMARC does. 'p=none blocks nothing' implied receivers deliver everything, but receivers still run their own filtering and treat a published policy as a request. The Instagram caption said DMARC asks receivers 'whether to reject or deliver,' which misdescribes the none/quarantine/reject choices. Facebook's 'lets the fakes through' overclaimed in the same way. The revision rewrites these as what the policy asks receivers to do, and the ladder slide now says receivers decide."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The LinkedIn post ran past the 1,600-character ceiling, so the strongest material was competing for space. The revision cuts the redundant 'whose server relayed it' beat and tightens the framing paragraph, which brings the post to roughly 1,450 characters with the three-question block intact."
+    },
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "This was the originality gap and the 'could any MSP publish this' risk. DMARC explainers are common MSP content. The distinctive element is the customer-callback question, which treats the incident as a trust event rather than a DNS change, and it was under-developed. The revision makes the callback a planned step in the incident-response plan on LinkedIn and Instagram. In GBP it is tied to Pro Link's ungated incident-response playbook (F014), so the CTA follows from the argument instead of sitting beside it."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
