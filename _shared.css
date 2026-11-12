@@ -333,3 +333,13 @@ a { color: inherit; text-decoration: none; }
 form input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]),
 form select,
 form textarea { font-size: 16px !important; }
+
+/* 2026-11-12: the industry pages lay out "text + visual" blocks with INLINE two-column grids
+   (style="display:grid;grid-template-columns:1fr 1fr;gap:48px"), which no class rule can reach, so on
+   phones they pushed the page sideways (law 32px, manufacturing 157px). Stack the wide-gap ones;
+   the 2x2 stat-card grids (gap:16px) stay two-up. Keep inline grids written without spaces. */
+@media (max-width: 860px) {
+  [style*="grid-template-columns:1fr 1fr;gap:4"],
+  [style*="grid-template-columns:1fr 1fr;gap:5"],
+  [style*="grid-template-columns:1fr 1fr;gap:6"] { grid-template-columns: 1fr !important; gap: 32px !important; }
+}

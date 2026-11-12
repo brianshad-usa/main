@@ -66,8 +66,8 @@ header.hero h1{font-size:40px;font-weight:800;margin:10px 0 8px}
 header.hero p{font-size:18px;color:#cfe0ef;margin:0;max-width:640px}
 .toc{background:#fff;border-radius:12px;box-shadow:0 2px 14px rgba(0,40,80,.07);padding:24px 28px;margin:-28px auto 40px;position:relative}
 .toc h2{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#004878;margin:0 0 14px}
-.toc ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
-.toc a{color:#004878;text-decoration:none;font-weight:500;font-size:15px;display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eef2f6}
+.toc ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}
+.toc a{color:#004878;text-decoration:none;font-weight:500;font-size:15px;display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid #eef2f6}
 .toc a:hover{color:#F07818}
 .toc .tag{color:#8a97a6;font-size:12px;font-weight:400}
 article.cs{background:#fff;border-radius:12px;box-shadow:0 2px 14px rgba(0,40,80,.07);padding:36px 40px;margin:0 auto 28px}
@@ -83,6 +83,18 @@ article.cs li{margin:6px 0}
 .cs-foot{margin-top:26px;padding-top:16px;border-top:1px solid #eef2f6;font-size:12px;color:#7a8794}
 footer.page{text-align:center;color:#7a8794;font-size:13px;padding:30px 0 50px}
 .back{font-size:12px;color:#0090D8;text-decoration:none}
+/* 2026-11-12: phones. The two-column contents list used to push the page 120px sideways. */
+@media (max-width:700px){
+.wrap{padding:0 16px}
+header.hero{padding:40px 0 44px}
+header.hero h1{font-size:30px;line-height:1.2}
+header.hero p{font-size:16px}
+.toc{padding:20px 18px}
+.toc ul{grid-template-columns:1fr}
+.toc .tag{text-align:right}
+article.cs{padding:26px 20px}
+article.cs h2.cs-title{font-size:22px}
+}
 </style>  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
