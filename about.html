@@ -169,6 +169,9 @@
     }
     .story-body p:last-child { margin-bottom: 0; }
     .story-body strong { color: var(--text); font-weight: 600; }
+    .story-photo { margin: 0 0 40px; }
+    .story-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; box-shadow: 0 12px 32px rgba(0, 40, 80, .14); }
+    .story-photo figcaption { font-size: .85rem; color: var(--text-muted); margin-top: 10px; }
 
     /* ── TIMELINE ─────────────────────────────────────────── */
     .timeline { position: relative; padding-left: 32px; }
@@ -387,6 +390,13 @@
         <p>Twenty-five years in, we're still independently owned, still headquartered in Woodland Hills, and still operating on the same principle: <strong>technology should move your business forward, not hold it back.</strong></p>
       </div>
       <div>
+        <figure class="story-photo">
+          <img src="/assets/photos/web/deskside-support-1100.webp"
+               srcset="/assets/photos/web/deskside-support-720.webp 720w, /assets/photos/web/deskside-support-1100.webp 1100w"
+               sizes="(max-width: 900px) 92vw, 560px" width="1100" height="687" loading="lazy" decoding="async"
+               alt="A Pro Link Systems technician helping a user at their desk">
+          <figcaption>Deskside help from a Pro Link Systems technician.</figcaption>
+        </figure>
         <span class="section-label" style="margin-bottom:24px;display:block;">Company Timeline</span>
         <div class="timeline">
           <div class="tl-item">

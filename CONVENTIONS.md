@@ -290,7 +290,12 @@ fail-safe and measured; keep them that way:
 - **Real photos only.** People imagery comes from `assets/photos/` (the 2026 brand shoot,
   registered in `assets/variety_assets.json`) — never stock or AI images of "our team".
   Web copies go in `assets/photos/web/` as WebP with width/height set. `assets/gbp/` frames
-  carry a logo watermark: fine for the Business Profile, avoid on the website.
+  carry a logo watermark: fine for the Business Profile, avoid on the website. **Captions and
+  alt text describe only what is visible** (a technician in a Pro Link polo helping someone) —
+  never a location, team or role nobody has confirmed: some shoot frames (`lab_consult`,
+  `tech_workbench`) were clearly taken in a client's lab, so "our help desk team, Woodland Hills"
+  was replaced on 2026-11-12. In use: home why-us card (`team-dual-monitor.webp`), About story
+  (`deskside-support-{720,1100}.webp`, srcset).
 - **Readable sizes:** body/card copy ≥ 16px (`.card p` 1rem), form inputs 16px (smaller makes
   iPhones zoom the page on tap), labels ≥ .8rem. Bump `?v=` on `lead-form.css` /
   `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale). The 16px input size is
