@@ -298,7 +298,11 @@ fail-safe and measured; keep them that way:
   (`deskside-support-{720,1100}.webp`, srcset).
 - **Readable sizes:** body/card copy ≥ 16px (`.card p` 1rem), form inputs 16px (smaller makes
   iPhones zoom the page on tap), labels ≥ .8rem. Bump `?v=` on `lead-form.css` /
-  `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale). The 16px input size is
+  `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale). **`_shared.css` is versioned
+  too since 2026-11-12** — after changing it run `python bump_shared_css.py <yyyymmdd>` (rewrites the
+  `?v=` on all ~165 pages + `generate_blog.py`, byte-exact). Cloudflare's edge kept serving a
+  27-minute-old copy to the industry pages after a deploy (`cf-cache-status: HIT`); an
+  unversioned CSS/JS change can take up to 24 h to reach visitors. The 16px input size is
   enforced site-wide by the last rule in `_shared.css` (`!important`, because many pages style
   their forms inline after it loads) — industry pages were 13px and contact 14.4px before it.
 - **No sideways scroll on phones.** Every page must fit a 390px-wide screen. `_shared.css` stacks
