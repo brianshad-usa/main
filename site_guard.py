@@ -448,6 +448,48 @@ if os.path.exists(llms_path):
             V(20, "llms.txt", f"{why}: '{m.group(0)[:60]}'")
 
 # --------------------------------------------------------------------------- #
+# 21: inline JavaScript must parse (2026-11-12). A "/* ... */" note added inside
+#     an existing block comment closed it early; the home page's whole script
+#     block (video carousel, counters, scroll reveal) died with a SyntaxError for
+#     a day and every other check stayed green. Each classic inline <script> is
+#     compiled (never run) by one Node process; without Node the check is skipped
+#     with a notice, never silently passed.
+# --------------------------------------------------------------------------- #
+import shutil
+import subprocess
+import tempfile
+
+JS_TYPES = {"", "text/javascript", "application/javascript"}
+inline_js = []
+for name, pg in pages.items():
+    for k, sc in enumerate(pg["soup"].find_all("script")):
+        if sc.get("src") or (sc.get("type") or "").strip().lower() not in JS_TYPES:
+            continue
+        code = sc.string if sc.string is not None else sc.get_text()
+        if code and code.strip():
+            inline_js.append({"page": name, "n": k + 1, "code": code})
+node = shutil.which("node")
+if not node:
+    print("NOTE [21] node not found - inline JavaScript syntax not checked")
+elif inline_js:
+    checker = ("const fs=require('fs'),vm=require('vm');"
+               "const items=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));const bad=[];"
+               "for(const it of items){try{new vm.Script(it.code,{filename:it.page});}"
+               "catch(e){bad.push({page:it.page,n:it.n,msg:String(e.message).slice(0,140)});}}"
+               "process.stdout.write(JSON.stringify(bad));")
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tf:
+        json.dump(inline_js, tf)
+        tmp_path = tf.name
+    try:
+        out = subprocess.run([node, "-e", checker, tmp_path], capture_output=True, text=True, timeout=180)
+        for b in json.loads(out.stdout or "[]"):
+            V(21, b["page"], f"inline <script> #{b['n']} does not parse: {b['msg']}")
+        if out.returncode != 0 and not out.stdout:
+            V(21, "site_guard", f"node syntax checker failed: {out.stderr[:200]}")
+    finally:
+        os.unlink(tmp_path)
+
+# --------------------------------------------------------------------------- #
 # Report
 # --------------------------------------------------------------------------- #
 advisory = "--fix-report" in sys.argv[1:]

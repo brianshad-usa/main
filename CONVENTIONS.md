@@ -274,6 +274,36 @@ fail-safe and measured; keep them that way:
   `/contact-form.js?v=` and the Turnstile script** (contact.html excepted: it has its own
   inline handler): without them the form POSTs to the page itself and the lead is lost.
 
+## Home page, video and visual standards (2026-11-12)
+
+- **Hero = one message + one proof line + two actions + the form.** Eyebrow, H1, a one-sentence
+  verified-facts subhead, "Call 1-800-890-6133" + "Watch our story", and a proof row (4.9 on
+  Google · in-house US help desk · 90% first contact). No video, carousel or bullet grid in the
+  hero — the old video-first hero showed visitors a blank dark box until the video loaded.
+- **Videos live in `#see-us-work`** below the stats strip, every entry has a `poster`
+  (`/assets/video/<name>-poster.webp`, 1280×720 frames chosen from the video), the `<video>`
+  is `preload="none"`, and the first video only loads when the carousel is about to scroll into
+  view (IntersectionObserver) — it used to pull a 19 MB file on every home-page visit. Clicking
+  a list item or the poster starts that video with sound. New testimonial video: add an entry
+  to `VIDEOS` with `src`, `poster`, `title` (plain characters — titles are set as text, entities
+  show literally), `badge`, plus a button in `#see-us-list`.
+- **Real photos only.** People imagery comes from `assets/photos/` (the 2026 brand shoot,
+  registered in `assets/variety_assets.json`) — never stock or AI images of "our team".
+  Web copies go in `assets/photos/web/` as WebP with width/height set. `assets/gbp/` frames
+  carry a logo watermark: fine for the Business Profile, avoid on the website.
+- **Readable sizes:** body/card copy ≥ 16px (`.card p` 1rem), form inputs 16px (smaller makes
+  iPhones zoom the page on tap), labels ≥ .8rem. Bump `?v=` on `lead-form.css` /
+  `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale).
+- **Testimonial attribution:** a quote shown under a client's name must be traceable to that
+  client (their Google review, their own words in their video, or a written approval). The Ads
+  landing page video cards had "first ring… back up in under an hour" (Optical Zonu, "David R.")
+  and "a real engineer answers the phone" (Waverly, "Michael T.") with invented initials, and
+  Alan B. Snitzer's Google review under "LM" — fixed 2026-11-12 (captions for the videos, the
+  Snitzer review credited to him). Check the reviews with the GBP v4 API before quoting anyone.
+- **Check 21 (site_guard):** every classic inline `<script>` must parse (one Node process
+  compiles them; skipped with a NOTE if Node is missing). Added after a `/* … */` note written
+  inside an existing block comment broke the home page's whole script block for a day.
+
 ## No compliance advertising + verified claims only (2026-11-09)
 
 Owner (Brian, 2026-11-09): **"I don't want to advertise any compliance work as we mostly
