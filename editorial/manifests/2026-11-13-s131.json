@@ -1,0 +1,168 @@
+{
+  "post": "It's Monday morning and nobody can log in. Your IT team is already working the problem. Meanwhile, the front desk wants to know whether to reschedule clients, accounting wants to know if payroll still goes out, and nobody is sure who is allowed to decide. The group chat everyone would normally use runs on the same system that's down.\n\nThat moment is a business problem more than an IT one, and most of it can be settled in one afternoon:\n\nPick the few things the business can't pause for long, and agree how long each can wait.\nName who makes the calls when something breaks, plus a backup, and how you'll reach each other off the usual apps.\nWrite down the paper or phone workaround for each.\n\nWith those answers, IT can build recovery that fits. Without them, even a fast fix leaves people waiting for direction.",
+  "headline": "Continuity is a leadership decision before it is an IT project",
+  "cta_label": "Visit Pro Link",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-13-s131-card.png",
+  "image_file_jpg": "2026-11-13-s131-card.jpg",
+  "theme": "continuity",
+  "idea_id": "S131",
+  "core_idea": "A continuity plan built around servers answers an outdated question. The business now runs on Microsoft 365 and SaaS it doesn't host, and when a vendor's platform is down, no restore you run brings it back. What carries the business is a set of decisions only leadership can make in advance: what comes back first and how much recent work can be lost (RTO and RPO), who decides and how they reach each other when the usual channels fail, how urgent approvals get verified when a voice can be cloned, and how work continues by hand. IT's job is to price those answers, show the gap, and prove recovery meets them.",
+  "channels": {
+    "linkedin": "A continuity plan built around servers is answering a 2016 question.\n\nMany businesses now run on Microsoft 365 and a stack of SaaS tools they do not host. When the vendor's platform is down, no restore you run brings it back. What keeps the business moving is decisions, and only leadership can make them.\n\nOne leadership meeting covers the first pass.\n\n1. Rank processes, not systems. Billing, payroll, client intake, scheduling. For each, agree how long it can stop and how much recent work you could afford to re-create. IT calls these RTO and RPO; they set recovery speed and backup frequency.\n\n2. Name who decides. Someone declares the incident, approves emergency spending and speaks to clients. Give each role a backup, and agree how they reach one another if email and Teams are down or compromised. Settle now how an urgent approval gets verified. A crisis is when a cloned voice of \"the CEO\" is easiest to believe.\n\n3. Write the manual workaround. If the billing platform is gone for two days, how does an invoice go out? One page per critical process is enough to start.\n\nThen bring IT in. Their job is to price what your answers require, show where today's setup falls short, and prove recovery works. At Pro Link, proof means backups verified by restore testing, not assumed from job reports.\n\nMy view: the companies that recover well rarely have the most expensive infrastructure. They made these decisions before they needed them.\n\nIf you want a companion to this exercise, our incident-response playbook is public, free and ungated.",
+    "facebook": "It's Monday morning and nobody can log in. Your IT team is already working the problem. Meanwhile, the front desk wants to know whether to reschedule clients, accounting wants to know if payroll still goes out, and nobody is sure who is allowed to decide. The group chat everyone would normally use runs on the same system that's down.\n\nThat moment is a business problem more than an IT one, and most of it can be settled in one afternoon:\n\nPick the few things the business can't pause for long, and agree how long each can wait.\nName who makes the calls when something breaks, plus a backup, and how you'll reach each other off the usual apps.\nWrite down the paper or phone workaround for each.\n\nWith those answers, IT can build recovery that fits. Without them, even a fast fix leaves people waiting for direction.",
+    "gbp": "Continuity planning starts with decisions, not hardware. Whether the trigger is ransomware, a power outage or a wildfire evacuation, a first pass takes one meeting. Rank your key processes and agree how long each can stop and how much recent work you could re-create. Name who decides during an outage, with a backup, and how they reach each other if email is down. Write a simple manual workaround for anything critical. Your IT provider can then match recovery to those answers and prove it with restore tests. Pro Link Systems has served Los Angeles businesses since 1999 from Woodland Hills. Our incident-response playbook is free on our website.",
+    "x": [
+      "Many continuity plans still start in the server room, while the business runs on SaaS it doesn't host. When the vendor is down, no restore you run brings it back. What's left are decisions only leadership can make:",
+      "Rank processes, not systems. For billing, payroll, intake: how long can each stop, and how much recent work could you afford to redo? IT calls those RTO and RPO. They set recovery speed and backup frequency.",
+      "Name who decides: declaring the incident, approving emergency spend, talking to clients. Add a backup for each, a way to reach each other if email and Teams are down, and a rule for verifying urgent approvals. A cloned voice is most convincing mid-crisis.",
+      "Write the manual workaround, one page per critical process. It's what carries you through a vendor outage. Then ask IT what your answers cost to meet, and for proof: a restore test, not a job report."
+    ],
+    "instagram_caption": "When Microsoft 365 or a core SaaS tool goes down, no restore you run brings it back. What carries the business is a set of decisions made in advance: what comes back first, who decides, and how work continues by hand.\n\nSwipe for the three decisions, and the verification rule a crisis makes urgent.\n\nOur incident-response playbook is free and ungated on our website if you want a companion to this exercise.\n\n#BusinessContinuity #CyberResilience #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "tip_banner",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "banner",
+    "register": "how_to",
+    "channels": {
+      "linkedin": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "facebook": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "gbp": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "instagram": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "x": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 92,
+      "originality": 92,
+      "hook_strength": 91,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 95,
+      "visual_sophistication": 89,
+      "platform_fit": 95,
+      "shareability": 91,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "FACT(F013): Pro Link recovers from backups verified by restore testing, not assumed from job reports",
+    "FACT(F014): Pro Link publishes its incident-response playbook publicly, free and ungated",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999 from Woodland Hills",
+    "ANALYSIS: many businesses now run on Microsoft 365 and SaaS they do not host (general observation, deliberately not quantified)",
+    "ANALYSIS: when a SaaS vendor's platform itself is down, restores run by the customer cannot bring the service back; continuity during that window depends on manual workarounds (shared-responsibility reasoning, no statistic)",
+    "ANALYSIS: downtime tolerance (RTO) and data-loss tolerance (RPO) per process determine recovery speed and backup frequency (standard industry terminology)",
+    "ANALYSIS: during an incident, email and Teams may be unavailable or compromised, so leaders need an out-of-band way to coordinate",
+    "ANALYSIS: voice cloning makes executive impersonation requesting urgent payments more convincing, and a crisis is a high-risk moment for it, so approvals need a pre-agreed verification step (no statistic, no incident cited)",
+    "ANALYSIS: IT's role is to price what leadership's answers require, identify gaps in the current setup, and prove recovery works",
+    "ANALYSIS: outages can stem from ransomware, power outages or wildfire evacuations (general knowledge, no statistic)",
+    "OPINION: a continuity plan built around servers answers an outdated question",
+    "OPINION: organizations that recover well rarely have the most expensive infrastructure; they made these decisions in advance",
+    "OPINION: one meeting suffices for a first pass, and a one-page workaround per critical process is enough to start",
+    "OPERATIONAL NOTE: cta_url is the homepage, consistent with the copy's 'on our website' phrasing; swap in the direct playbook URL once confirmed, but publication is not blocked on it"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The CTA button says 'Read the playbook' but cta_url is the homepage, so the promise and the click don't match. No playbook URL is supplied, and inventing one is not allowed. Revised: the label now matches the destination ('Visit Pro Link'), and the copy points readers to the playbook on the website. A human should swap in the direct playbook URL before this ships."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept line is strong, but the execution is a textbook business-impact checklist that any MSP or consultant could publish. It has no tension and nothing that places it in 2026. Revised: the piece now opens on the real shift. Plans still start with servers while the business runs on Microsoft 365 and SaaS it doesn't host. It also adds two failure modes most plans miss: coordinating when the usual channels are down or compromised, and verifying approvals during a crisis."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Hook slide 1 is an 11-word 'How to...' headline that reads like a blog title, not a swipe-earning statement. The deck also leans entirely on text with no diagrammatic moment. Revised: the hook is now a seven-word provocation. The three steps keep a consistent kicker system so they can render as a numbered sequence. The separate CTA slide is cut, which brings the deck to 8 slides. The schema cannot carry visual direction, so Visual Sophistication is scored conservatively."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Step one captures only downtime tolerance (effectively RTO). It omits data-loss tolerance (RPO), the answer that actually sets backup frequency. A continuity exercise without it is technically incomplete. Revised: every channel now asks two questions per process, how long it can stop and how much recent work the business could afford to redo, and ties them to recovery speed and backup frequency."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Hand the results to IT' frames IT as an order-taker. In practice, IT's most valuable contribution is to come back with what the answers cost and where the current setup falls short, which turns the exercise into a budget conversation. Revised: IT's role is now to price the requirements, show the gap, and prove recovery."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The decision-authority step assumes leaders can reach each other. In an identity compromise or tenant-level incident, email and Teams may be unavailable or untrustworthy. Emergency spending approvals are also a prime target for impersonation. Revised: the plan now requires an out-of-band way to coordinate and a pre-agreed verification step for urgent approvals. This is analysis only, with no invented statistics."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft has no AI angle, which is correct; manufacturing one would violate the standards. The one legitimate link is voice-clone and deepfake impersonation during a crisis. It is now covered in a single restrained line about verifying urgent approvals, without hype or numbers."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Run this week' is vague about effort. An executive wants to know the cost in time. Revised: the exercise is framed as one leadership meeting for a first pass, with the one-page workaround as the deliverable. The added cost-and-gap step answers the question a CFO actually asks next."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram caption carries two CTAs ('Save it' plus the playbook slide), which breaks the one-CTA rule. The X opener ends on a colon without a sharp claim. Revised: the caption now has a single CTA. The X opener leads with a quotable observation (a server-built plan answers a 2016 question) before the thread pays it off."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The draft fails the 'could any MSP publish this' test. Its only distinctive elements were the tested-backup and public-playbook facts. Revised: the 2026 operating reality (SaaS, identity compromise, impersonation during incidents), the RTO/RPO pairing, and the IT-prices-the-gap framing make it more specific to a security-literate firm. The underlying exercise remains familiar, though, so Originality stays below target and is reflected in the verdict."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "In Facebook, 'It's Monday morning' followed by 'The IT team' reads awkwardly. 'Most continuity plans' and 'most businesses' imply quantities with no source. The card headline is generic. Revised: openings are varied. 'Most businesses' is softened to 'many businesses' wherever it asserts a market fact. The card headline is rewritten, consecutive-sentence openers are checked, and GBP is kept under 700 characters."
+    },
+    {
+      "role": "Senior Technology Editor / CIO",
+      "finding": "The draft says the business runs on SaaS it doesn't host, then never says why that matters. That point is what separates this from any MSP's 'make a DR plan' post. The revision adds it: when the vendor's platform is down, no restore you run brings it back, so the manual workaround becomes the plan. It also names RTO and RPO once, so leaders leave with the words IT will use when they hand the answers over. Both are stated as analysis, with no numbers."
+    },
+    {
+      "role": "Social Growth Strategist / Creative Director",
+      "finding": "LinkedIn, X and the Instagram caption all open with nearly the same '2016 question' sentence. That breaks the 'never the same text twice' doctrine. The carousel numbering also jumps from Decision 02 to 'The 2026 detail' to Decision 03, which breaks the sequence. Revision: LinkedIn and the hook slide keep the line, X opens on the server room versus SaaS tension, and the caption opens on the vendor-outage insight. The verification slide is relabelled 'Decision 02, continued', and the cloned-voice point is now explicit so it reads as a 2026 risk rather than generic fraud advice."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Ask IT what meeting your answers costs' appears in X post 4 and on Instagram slide 7. It is garbled and reads like a typo, the worst possible error in a post about discipline. It is rewritten as 'what your answers cost to meet'. The LinkedIn closing line ('public, free and ungated if you want a companion') was also restructured to read cleanly. LinkedIn was re-measured after the additions and trimmed to stay under 1,600 characters."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

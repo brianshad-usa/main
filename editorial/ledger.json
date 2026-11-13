@@ -3717,6 +3717,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-13",
+      "idea_id": "S131",
+      "theme": "continuity",
+      "format": "linkedin_analysis",
+      "title": "Continuity is an operations discipline that IT happens to enable",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to",
+        "channels": {
+          "linkedin": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "facebook": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "gbp": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "instagram": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "x": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          }
+        }
+      }
     }
   ]
 }
