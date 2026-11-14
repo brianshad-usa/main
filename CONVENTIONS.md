@@ -273,6 +273,12 @@ fail-safe and measured; keep them that way:
   section and anchors. **Check 19 now fails any page with a Turnstile form that does not load
   `/contact-form.js?v=` and the Turnstile script** (contact.html excepted: it has its own
   inline handler): without them the form POSTs to the page itself and the lead is lost.
+- **City pages are paid landing pages too (2026-11-14).** Google Ads city keywords
+  ("it support pasadena") now land on the matching city page instead of
+  `/managed-it-services`. Keep each city page's `#talk-to-us` form, `contact-form.js` and
+  Google tag intact, and never rename or delete a city page without updating the ad
+  destinations first (the ads team keeps the keyword → page list): a 301 would still
+  work but lowers the ads' landing-page score.
 
 ## Home page, video and visual standards (2026-11-12)
 
