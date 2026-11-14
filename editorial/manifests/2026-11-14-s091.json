@@ -1,0 +1,163 @@
+{
+  "post": "Picture a Saturday morning. Your office manager calls: files won't open, and a note on the screen demands payment. IT starts isolating systems and restoring from backups. Then a second message arrives. The attackers say they copied your files first and will publish them unless you pay.\n\nBackups can't fix that part. Someone has to decide, and it shouldn't be whoever happens to answer the phone.\n\nSettle four things on a calm Tuesday. Name who can approve or refuse a payment, plus a backup person. Agree how you'll reach each other if company email can't be trusted. Know which attorney you would call. Check what your cyber insurance policy expects you to report, and how quickly.\n\nTechnical response can start at any hour. The business decision is yours, and it is far easier made in advance.",
+  "headline": "Backups don't answer the ransom question. Leadership does.",
+  "cta_label": "Learn more",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/legal",
+  "image_file": "2026-11-14-s091-card.png",
+  "image_file_jpg": "2026-11-14-s091-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S091",
+  "core_idea": "Tested backups recover encrypted systems but do nothing about data an attacker copied first, so even a well-prepared company can face the ransom question. Leadership must settle four decisions, and document them on one page, before an incident: who can approve or refuse payment and how that person is verified, where leadership will talk if company email is compromised, which counsel to call, and what the insurer requires.",
+  "channels": {
+    "linkedin": "Good backups answer one ransomware question. They do not answer the one that lands on the CEO's desk.\n\nRestoring from tested backups solves encryption. Many ransomware crews now copy data out before encrypting, then demand payment to keep it unpublished. Clean restores do nothing about that second demand.\n\nWhen it arrives, four decisions tend to get improvised.\n\nWho can approve or refuse a payment? The CEO alone, the CEO with the CFO, the board? Write the names down, and agree how each will be verified. A crisis is exactly when a convincing voice on the phone gets believed.\n\nWhere will that conversation happen? If attackers are inside your email or Teams, they may be reading your deliberations. Set up an out-of-band channel now.\n\nWhich outside counsel do you call first? Counsel shapes what gets documented. Treasury's Office of Foreign Assets Control has also warned that ransom payments to sanctioned parties can violate U.S. sanctions, one more reason a lawyer belongs in the room before money moves.\n\nWhat does your cyber policy require? Many policies set notification windows and expect insurer involvement before costs are incurred. Read yours now.\n\nMy view: the ransom question is a governance decision that arrives through IT. Give it what any material decision gets: a named owner, a second signer, a written rationale. Refusing to pay is also a decision, and it deserves the same rigor.\n\nOne meeting and one page cover it. Our incident-response playbook is public, free, and ungated if you want a starting draft.",
+    "facebook": "Picture a Saturday morning. Your office manager calls: files won't open, and a note on the screen demands payment. IT starts isolating systems and restoring from backups. Then a second message arrives. The attackers say they copied your files first and will publish them unless you pay.\n\nBackups can't fix that part. Someone has to decide, and it shouldn't be whoever happens to answer the phone.\n\nSettle four things on a calm Tuesday. Name who can approve or refuse a payment, plus a backup person. Agree how you'll reach each other if company email can't be trusted. Know which attorney you would call. Check what your cyber insurance policy expects you to report, and how quickly.\n\nTechnical response can start at any hour. The business decision is yours, and it is far easier made in advance.",
+    "gbp": "For Los Angeles business owners: a ransomware incident runs on two tracks. Isolating systems and recovering from tested backups is the technical track. Yours is the other one, and backups don't settle it when attackers have also copied data. Decide now who can approve or refuse a payment, how you would confirm a call really comes from them, which attorney you will call, and what your cyber insurance policy requires you to report and when. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999.",
+    "x": [
+      "Your backups can restore every server and still leave you facing a ransom. The second demand is about the data attackers copied, not the files they locked. Decide now who can say yes or no, and how you'd confirm it's really them on the phone."
+    ],
+    "instagram_caption": "Tested backups recover encrypted systems. They do nothing about data an attacker copied first, which is why the ransom question can still reach a well-prepared company. When it does, it lands on leadership: who can approve or refuse payment, how you verify that person, where you talk if email is compromised, which attorney to call, and what the insurer needs to hear and when. Settle those on one page before you are asked.\n\n#Ransomware #CyberResilience #IncidentResponse"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "stat",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "stat_hero",
+    "register": "stat_insight",
+    "channels": {
+      "linkedin": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "facebook": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "gbp": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "instagram": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "x": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 92,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 88,
+      "originality": 91,
+      "hook_strength": 93,
+      "educational_value": 95,
+      "technical_accuracy": 94,
+      "executive_value": 96,
+      "writing_quality": 94,
+      "visual_sophistication": 90,
+      "platform_fit": 95,
+      "shareability": 92,
+      "saveability": 95,
+      "brand_authority": 94,
+      "trust": 93,
+      "strategic_value": 93
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP)",
+    "FACT(F014): Pro Link publishes its incident-response playbook publicly, free and ungated, with no form or email required (LinkedIn, Instagram)",
+    "FACT (U.S. Treasury, Office of Foreign Assets Control ransomware advisories): ransom payments to sanctioned parties can violate U.S. sanctions. Stated without dates, figures, or legal conclusions. Issuer named precisely; no paraphrase beyond the advisory's core warning.",
+    "ANALYSIS: many ransomware operations copy data before encrypting and then extort payment to prevent publication; restores do not address that demand",
+    "ANALYSIS: leadership teams often have not assigned in advance who can approve or refuse a ransom payment (qualitative, no statistic)",
+    "ANALYSIS: if attackers have access to company email or collaboration tools, leadership deliberations there may be visible to them, so an out-of-band channel should be arranged in advance",
+    "ANALYSIS: a crisis is a high-risk moment for voice impersonation of an approver, so verification should be agreed in advance",
+    "ANALYSIS: many cyber insurance policies set notification windows and expect insurer involvement before costs are incurred; readers should check their own policy",
+    "ANALYSIS: outside counsel shapes what gets documented during an incident",
+    "OPINION: the ransom decision is a governance decision that arrives through IT and should have a named owner, a second signer, and a written rationale; refusing is also a decision",
+    "OPINION: settling these decisions requires one meeting and one page, not a purchase",
+    "SCENARIO (hypothetical, not a client story): Saturday-morning ransomware note; approver unavailable on a flight; a call in the approver's voice"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The core idea is built around our 24/7 help desk, and LinkedIn opens with 'Our help desk answers 24/7.' That puts the vendor first and the reader's problem second. The strongest idea here is about governance, not staffing. Revision moves the service facts to GBP, where local service credibility belongs, and leads everywhere else with the reader's dilemma."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The draft never answers why a well-prepared company would face the ransom question at all, so a reader with good backups dismisses it. The missing turn is that tested backups solve encryption but not data an attacker copied out first. That second demand is what forces the payment decision. The revision makes this the central insight across every channel."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel has no Reality slide and no visual system beyond text cards. The revision adds a scenario slide ('Saturday, 7 a.m. The approver is on a flight.') and moves the CTA to its own closing slide. Production should render slide 2 as a two-column comparison (what restores fix / what they don't) in the house typographic system, not as body copy."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Slide 2 states 'Most companies never decide this in advance.' That is a quantitative claim with no source. The card headline 'Our help desk never closes' also rewords F001 ('operates 24/7') into a stronger absolute. Both were removed. The insurer line was already hedged ('many policies') and labelled as analysis. That is retained."
+    },
+    {
+      "role": "CIO",
+      "finding": "Listing 'restore' among the immediate technical steps implies restoration ends the incident. In a data-theft extortion case, recovery and the extortion demand are separate problems. The revision draws that line explicitly, which is the distinction a CIO would make to a CEO."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft omits the legal hazard that makes counsel non-optional. The U.S. Treasury has warned that paying certain threat actors can create sanctions exposure. The revision adds this as a fact, with no date or number attached to avoid overspecifying. It is framed as one more reason counsel joins before money moves, not as legal advice."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no AI angle, and forcing one would violate the standard against manufactured AI urgency. One concrete gap is relevant, though. A crisis is exactly when an impersonated or cloned voice claiming to be the approver gets believed. The revision adds 'agree how each signer will be verified' as a single restrained line, not a theme."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "As a CEO, I would ask: what if the named approver is unreachable? The draft names a second signer only on LinkedIn and never presents it as a scenario. The revision adds the unavailable-approver scenario to Instagram, puts a backup person on Facebook, and adds 'refusing is also a decision' so the page covers both outcomes."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post is a compressed checklist with no sharp observation, so it gives readers nothing to repost. The revision leads with the counterintuitive line 'Tested backups fix encryption. They don't fix stolen data being held over you.' The Instagram caption and takeaway slide both carried the playbook CTA, which doubles it. The CTA now lives only on the final slide."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "cta_label 'Read the playbook' points to /cybersecurity, which is not confirmed to be the playbook. A promise-link mismatch damages trust. The playbook URL is not in the brief, and inventing one is not allowed. The label is changed to 'Learn more' until a human supplies the playbook URL."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Repeated sentence openers need fixing in the revised drafts: 'Your office manager... Your IT team' on Facebook, 'The technical track... The other track' on GBP, and 'The technical response... The business decision' in the Facebook close. All were rewritten. No banned phrases, emoji, or exclamation marks were found. LinkedIn stays within 900 to 1,600 characters, X within 280, Facebook and GBP within their ranges."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The 'which attorney' and 'how is the approver verified' items left out the decision executives most often miss: where the deliberation happens. If attackers are inside company email or Teams, leadership may be negotiating in front of them. The revision adds an out-of-band channel as a fourth decision in every long-form asset. This also partly answers the 'could any MSP have published this' test: few generic posts make this point, and fewer tie the approver question to voice impersonation. Residual risk: a determined MSP could still approximate the post, so originality stays short of 95."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The Treasury line was vague ('certain threat actors') and carried a 'human reviewer should confirm' flag, which an automated pipeline cannot honor. The revision names the issuer precisely (Treasury's Office of Foreign Assets Control) and limits the claim to what OFAC's ransomware advisories actually say: ransom payments to sanctioned parties can violate U.S. sanctions. It adds no date, figure, or legal conclusion. The brief still did not supply this as a dated primary source, which keeps technical_accuracy and trust just under the gate."
+    },
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "Three channel problems are fixed. GBP pointed readers to the free playbook while its LEARN_MORE button went to /cybersecurity, a mismatch that reads as bait. GBP also placed the 24/7 help-desk claim beside incident recovery, which implies an incident-response capability that is not in verified facts. The X post was a four-item checklist, not one sharp observation. The revised GBP drops the playbook reference and uses F012 for local credibility. The revised X post compresses to a single idea: the ransom is about the copied data, so decide in advance who can say yes or no and how you would know it is really them."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

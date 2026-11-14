@@ -3775,6 +3775,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-14",
+      "idea_id": "S091",
+      "theme": "ransomware",
+      "format": "framework",
+      "title": "Decide who can say yes to a ransom before you're asked",
+      "excellence": 92,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight",
+        "channels": {
+          "linkedin": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "facebook": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "gbp": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "instagram": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "x": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          }
+        }
+      }
     }
   ]
 }
