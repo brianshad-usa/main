@@ -1,0 +1,184 @@
+{
+  "post": "Picture a Monday morning. Your office manager cannot open the shared drive, so she submits a ticket. Within seconds an automatic email arrives: we have received your request. By Wednesday she is still emailing files to herself just to get through the day.\n\nDepending on how the contract defines a response, that provider may well have met its target. In practice, nothing was fixed.\n\nWhat you actually want from IT support is simple. A person picks up, understands the problem, fixes it, ideally on that same call, and it does not come back next month.\n\nThat is how we measure our own help desk. First-contact resolution is 90%, and average resolution time is under an hour. Calls are answered live by our in-house, US-based team, with no phone tree and no hold queue.\n\nOne question worth asking any provider: which problems keep coming back, and why?",
+  "headline": "A fast reply is not a fix",
+  "cta_label": "How our help desk works",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/managed-it-services",
+  "image_file": "2026-11-15-s162-card.png",
+  "image_file_jpg": "2026-11-15-s162-card.jpg",
+  "theme": "msp_change",
+  "idea_id": "S162",
+  "core_idea": "Any help desk can now acknowledge a ticket in seconds, because auto-responders and AI assistants do it at almost no cost. Depending on how a contract defines 'response', that acknowledgement may be all a response target requires. Response time has therefore stopped separating good support from bad. What a business actually experiences is resolution: the problem fixed on first contact, fixed safely, and fixed for good.",
+  "channels": {
+    "linkedin": "Any help desk can now reply to a ticket in seconds. An auto-responder or an AI assistant does it at almost no cost.\n\nThat empties response time, the number support agreements tend to lead with, of most of its meaning. Check how your contract defines \"response\": if an automated acknowledgement counts, the target can be met while nothing is fixed. A ticket acknowledged Monday and fixed Wednesday still cost someone two days.\n\nTwo numbers tell you more.\n\nResolution: how often the problem is solved on first contact, and how long a real fix takes. This is what your employee feels.\n\nRecurrence: how often the same issue returns. A sign-in or VPN ticket closed every month is a root cause nobody owns. Repeat tickets are where technology debt hides.\n\nOne caution. First-contact resolution can be gamed by closing tickets early, so read it with reopen and repeat data. Speed has a security edge too: a fast password reset is only safe if the caller's identity was verified first. Help desks that reset credentials on request are an impersonation target, voice-cloned callers included.\n\nOur own help desk, in the order we think matters: first-contact resolution is 90%, average resolution time is under an hour, and average ticket first-response time is 15 minutes. We list that last on purpose.\n\nIf you are reviewing a provider or an internal team this year, ask three things. How is \"response\" defined? What share of issues are fixed on first contact? Which ticket types repeated most over the past year? That last answer says more than any SLA.",
+    "facebook": "Picture a Monday morning. Your office manager cannot open the shared drive, so she submits a ticket. Within seconds an automatic email arrives: we have received your request. By Wednesday she is still emailing files to herself just to get through the day.\n\nDepending on how the contract defines a response, that provider may well have met its target. In practice, nothing was fixed.\n\nWhat you actually want from IT support is simple. A person picks up, understands the problem, fixes it, ideally on that same call, and it does not come back next month.\n\nThat is how we measure our own help desk. First-contact resolution is 90%, and average resolution time is under an hour. Calls are answered live by our in-house, US-based team, with no phone tree and no hold queue.\n\nOne question worth asking any provider: which problems keep coming back, and why?",
+    "gbp": "For Los Angeles businesses comparing IT support: look past response time. If your contract counts an automatic reply as a response, the target can be met while a locked account stays broken. Ask instead how often problems are fixed on first contact, how long a real fix takes, and which issues keep coming back. At Pro Link Systems, first-contact resolution is 90% and average resolution time is under an hour, from an in-house, US-based help desk that runs 24/7. We have served LA businesses from Woodland Hills since 1999. Glad to walk through how your current support measures up.",
+    "x": [
+      "Check how your support contract defines \"response.\" If an auto-reply counts, the target is met in seconds while nothing gets fixed. Ask for first-contact resolution and repeat-ticket data instead."
+    ],
+    "instagram_caption": "IT support agreements tend to lead with response time. If the contract lets an automatic email, or now an AI assistant, count as a response, that promise is kept in seconds while the actual problem waits.\n\nWhat your team experiences is resolution: the call that ends with the problem fixed, and the issue that does not return next month. Those are the numbers worth asking any provider for.\n\nOurs, in the order we think matters: first-contact resolution of 90%, average resolution time under an hour, and live answers from an in-house, US-based team.\n\n#HelpDesk #ITLeadership #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-11-15-s162-01.png",
+      "2026-11-15-s162-02.png",
+      "2026-11-15-s162-03.png",
+      "2026-11-15-s162-04.png",
+      "2026-11-15-s162-05.png",
+      "2026-11-15-s162-06.png",
+      "2026-11-15-s162-07.png"
+    ],
+    "jpg": [
+      "2026-11-15-s162-01.jpg",
+      "2026-11-15-s162-02.jpg",
+      "2026-11-15-s162-03.jpg",
+      "2026-11-15-s162-04.jpg",
+      "2026-11-15-s162-05.jpg",
+      "2026-11-15-s162-06.jpg",
+      "2026-11-15-s162-07.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photo_light",
+    "format": "carousel",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "client_value",
+    "channels": {
+      "linkedin": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "facebook": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "gbp": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "instagram": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "x": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 92,
+      "originality": 90,
+      "hook_strength": 94,
+      "educational_value": 95,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 89,
+      "platform_fit": 95,
+      "shareability": 92,
+      "saveability": 94,
+      "brand_authority": 95,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "FACT(F004): first-contact resolution is 90% (LinkedIn, Facebook, GBP, Instagram caption, slide 6)",
+    "FACT(F005): average resolution time is under an hour, phrased as a bound (LinkedIn, Facebook, GBP, Instagram caption, slide 6)",
+    "FACT(F003): average ticket first-response time is 15 minutes, metric named in full (LinkedIn, slide 6)",
+    "FACT(F007): calls answered live by the in-house team, no phone tree, no hold queue (Facebook, Instagram caption)",
+    "FACT(F002)+FACT(F008): help desk is in-house and US-based, always paired (Facebook, GBP, Instagram caption)",
+    "FACT(F001): help desk operates 24/7 (GBP)",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills (GBP)",
+    "ANALYSIS: auto-responders and AI assistants can acknowledge a ticket in seconds at negligible cost, weakening response time as a quality signal (LinkedIn, X, Instagram caption, slide 3)",
+    "ANALYSIS: contracts define 'response' differently; where an automated acknowledgement counts, a response target can be met with nothing fixed. Stated conditionally, not as universal (LinkedIn, Facebook, GBP, X, Instagram caption, slides 2 and 7)",
+    "ANALYSIS: IT support agreements tend to lead with response time; observation, no quantity claimed (LinkedIn, Instagram caption, slide 2)",
+    "ANALYSIS: repeat tickets indicate an unaddressed root cause and are where technology debt hides (LinkedIn, slide 5)",
+    "ANALYSIS: first-contact resolution alone can be gamed by early ticket closure and should be read with reopen and repeat data (LinkedIn, slide 5)",
+    "ANALYSIS: help desks that reset credentials on request are an impersonation target, including voice-cloned callers; no incident or statistic claimed (LinkedIn)",
+    "OPINION: resolution and recurrence are better measures of support than response time (all channels)",
+    "OPINION: most-repeated ticket types reveal more than any SLA (LinkedIn)",
+    "ANALYSIS: the Monday shared-drive scenario is an illustrative hypothetical, not a client story (Facebook)",
+    "REMOVED: implied commitment that Pro Link supplies repeat-ticket reports on request; not in verified facts"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft argues that response time is the wrong metric but never addresses why that matters now. The resolution-versus-response argument has circulated in MSP marketing for a decade. Without a 2026 trigger, the post reads as a well-executed version of a familiar pitch. Revision: anchor the piece in the fact that auto-responders and AI assistants now acknowledge a ticket in seconds at no cost. That makes response time effectively meaningless as a differentiator."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram hook slide ('Good IT support is measured by what gets fixed') is a mild truism that does not earn the swipe. The card headline ('Most problems fixed on the very first call') is a sales line, not an idea. Revision: open the carousel on the uncomfortable contract reality ('Your IT provider can hit its SLA without fixing anything'). Use 'A fast reply is not a fix' as the card headline."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 3 ('What you feel') and slide 4 ('Fixed first time') make the same point twice, which costs a slide and flattens the progression. Slide 6 is the one place a data visualization belongs: three metrics in a deliberately ordered list, response time visually de-emphasized last. Revision: replace the redundant slide with a 'What changed' slide on AI acknowledgement. Keep slide 6 as a ranked data panel with the metric labels set at full length."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Most IT service agreements still lead with response time' (LinkedIn) and 'Most IT agreements promise a fast response' (Instagram) are unsourced quantitative claims about the industry. Hard rules bar these without a primary source. Revision: reframe as analysis ('tend to lead with'). Also, the claims audit references 'slides 2', a typo, and miscredits slide coverage."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft treats first-contact resolution as an unambiguous good. Any CIO knows it can be gamed by closing tickets early or reclassifying them. Recommending one metric without naming its failure mode undercuts executive credibility. Revision: state plainly that first-contact resolution must be read alongside reopen and repeat-ticket data."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "A post praising fast first-contact fixes, with sign-in tickets as the example, says nothing about identity verification. Help desk credential resets are a standing impersonation target, and voice cloning makes caller verification harder. Speed without verification is a liability, not a virtue. Revision: add one sentence making clear that a fast reset is only good if identity was verified first. This also ties the piece to the identity-as-perimeter agenda."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft misses the most relevant 2026 development: AI triage and auto-acknowledgement have reduced the cost of a 'response' to zero. Revision: introduce that point as analysis, not urgency. The post does not claim AI is a threat here, only that it removes the meaning from a metric anyone can now hit for free."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn piece asks me to demand recurrence data from providers, then publishes ProLink's own resolution numbers without offering the same scrutiny. That asymmetry reads as a sales move. Revision: explicitly invite the reader to put the same request to ProLink, as the Instagram caption already does. Also, 'is being paid not to solve it' reads as an accusation. Reframe it as a root cause nobody owns."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post buries its sharpest line at the end and has no timely angle, so it compresses the draft rather than standing alone. The Facebook closing question is generic. Revision: lead X with the AI-acknowledgement observation. End Facebook with the more provocative and saveable question: which problems keep coming back."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP post uses 'unlock', which is on the banned list even in a literal sense. The CTA label 'See how we support' is grammatically incomplete and reads as filler. Revision: remove 'unlock' and rename the CTA 'How our help desk works'. On the final test, the revised package is not something any MSP could publish verbatim. It rests on owner-verified metrics deliberately ordered against the post's own argument, a self-audit invitation, and a security caveat most help-desk marketing omits."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The LinkedIn line 'ask for three things. Request the first-contact resolution rate and the typical time to an actual fix. Then ask...' blurs how many things are being requested. Facebook's 'Within minutes' undersells the auto-reply point; 'seconds' is the accurate register. The card headline's 'very first call' slightly overreaches F004, which measures first contact, not calls. Revision: restructure the ask into a clean three-item list, tighten Facebook, and align the card copy with the verified metric wording."
+    },
+    {
+      "role": "Senior Technology Editor / CIO",
+      "finding": "The central claim overreached. Several assets said an automatic email 'can meet' a response target as if that were always true. Many support contracts define response as a technician engaging, not an auto-acknowledgement. A CIO who knows their own contract would stop trusting the post at that line. The revision makes the claim conditional on how the contract defines 'response'. That conditional is also more useful: it gives the reader a specific clause to check, which most response-versus-resolution posts never do."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "F002 (in-house) appeared without F008 (US-based) on Facebook and in the Instagram caption. The verified-facts note says neither carries the differentiator alone. The revision pairs them wherever the help desk team is described."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Put the same request to us', 'including us', and 'the most useful document in the conversation' imply that Pro Link will hand over a repeat-ticket report on request. That is an unverified service commitment. If a prospect asks and the report does not exist in that form, trust breaks at the first meeting. The revision keeps the questions but removes any implied deliverable. Pro Link's credibility now rests only on the three verified metrics."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
