@@ -293,6 +293,18 @@ fail-safe and measured; keep them that way:
   a list item or the poster starts that video with sound. New testimonial video: add an entry
   to `VIDEOS` with `src`, `poster`, `title` (plain characters — titles are set as text, entities
   show literally), `badge`, plus a button in `#see-us-list`.
+- **Phones always get a moving video or a play button (2026-11-16).** The poster + play button
+  (`#vid-placeholder`, role=button) stay up until the video is actually PLAYING (`playing` or
+  advancing `timeupdate`) and come back on any `pause` or refused `play()`; a paused video keeps
+  its own frame, dimmed (`.frame-paused`). Never hide the poster on `canplay`/`canplaythrough`:
+  that left phones with a still frame and no button whenever autoplay was refused (iPhone Low
+  Power Mode, data saver) or slow on cellular. Every tap path (poster, "Tap for sound", list
+  items, dots, arrows, "Watch our story") calls `play()` synchronously inside the tap — iOS
+  refuses play/sound from a timer.
+- **Contact page = form + phone only (2026-11-16).** The Calendly "book a discovery call" option
+  was removed (0 client bookings in 5½ months; the subscription is cancelled) and `/thank-you`,
+  which only existed as its booking redirect, 301s to `/contact`. Don't reintroduce a
+  third-party booking widget without a reason; Microsoft Bookings comes with Microsoft 365.
 - **Real photos only.** People imagery comes from `assets/photos/` (the 2026 brand shoot,
   registered in `assets/variety_assets.json`) — never stock or AI images of "our team".
   Web copies go in `assets/photos/web/` as WebP with width/height set. `assets/gbp/` frames
