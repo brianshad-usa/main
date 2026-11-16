@@ -139,6 +139,46 @@ def post_update(summary, cta_type="LEARN_MORE", cta_url=None, image_url=None):
         raise RuntimeError(f"GBP API {e.code}: {detail}") from None
 
 
+def list_posts(max_pages=50):
+    """
+    Read-only: every local post on the location, as dicts
+    {"name", "createTime", "cta_url"}. Used by gbp_backfill.py to check what is
+    ALREADY live before posting, so a lost ledger can never cause re-posts
+    (2026-10-15..11-15 it did: ~140 duplicates). Raises RuntimeError on any API
+    failure -- callers must then refuse to post rather than post blind.
+    """
+    account_id  = os.environ.get("GBP_ACCOUNT_ID",  "").strip()
+    location_id = os.environ.get("GBP_LOCATION_ID", "").strip()
+    if not account_id or not location_id:
+        raise RuntimeError("GBP_ACCOUNT_ID and GBP_LOCATION_ID must be set.")
+    token = _resolve_access_token()
+    posts, page = [], ""
+    for _ in range(max_pages):
+        endpoint = (
+            f"{GBP_API_BASE}/accounts/{account_id}"
+            f"/locations/{location_id}/localPosts?pageSize=100"
+        )
+        if page:
+            endpoint += "&pageToken=" + urllib.parse.quote(page)
+        req = urllib.request.Request(endpoint, headers={"Authorization": f"Bearer {token}"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "replace")
+            raise RuntimeError(f"GBP list API {e.code}: {detail[:300]}") from None
+        for p in data.get("localPosts", []):
+            posts.append({
+                "name":       p.get("name", ""),
+                "createTime": p.get("createTime", ""),
+                "cta_url":    (p.get("callToAction") or {}).get("url", "") or "",
+            })
+        page = data.get("nextPageToken", "")
+        if not page:
+            return posts
+    raise RuntimeError(f"GBP list API: more than {max_pages} pages; refusing to guess.")
+
+
 def maybe_post(summary, cta_type="LEARN_MORE", cta_url=None, image_url=None):
     """
     Safe wrapper for the automation pipeline. Never raises.

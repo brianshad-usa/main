@@ -19,9 +19,16 @@ SOURCE OF TRUTH:
   to pull the title, summary and representative image.
 
 STATE / LEDGER:
-  gbp_backfill_log.json in the repo root records every URL already posted, with
-  the returned localPost resource name and a UTC timestamp. Resuming is just
-  "skip anything already in the log".
+  gbp_backfill_log.json records every URL already posted, with the returned
+  localPost resource name and a UTC timestamp. Resuming is just "skip anything
+  already in the log".
+  2026-11-16: the LIVE profile is now the source of truth. Before posting, every
+  run lists the posts already on GBP and records any published blog URL it finds
+  there (reconcile_with_gbp), so a ledger that failed to save can never cause a
+  re-post again -- from 2026-10-15 to 11-15 the ledger commit to main was blocked
+  by branch protection and the same 5 articles went out daily (~140 duplicates).
+  If the profile can't be listed, the run refuses to post. The workflow keeps the
+  ledger on the unprotected 'social-state' branch.
 
 USAGE:
   python gbp_backfill.py --check          # show progress, post nothing
