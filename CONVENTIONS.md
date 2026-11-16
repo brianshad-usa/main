@@ -202,6 +202,13 @@ bypass the guard; fix the content instead.
   `gbp_apply_batch1.py` / `gbp_apply_batch2.py` (validate-first, backup JSON
   before any write), `gbp_reviews.py` (fetch unreplied -> draft -> post).
   Primary-category changes are made manually in the dashboard, solo.
+- **GBP blog backfill never posts blind (2026-11-16).** `gbp_backfill.py` lists the posts
+  already live on the profile (`gbp_post.list_posts`) and skips any blog URL that is there,
+  refusing to post at all if the profile can't be listed; its ledger lives on the
+  `social-state` branch (the Actions bot can't push to main). From 10/15 to 11/15 a silently
+  failed ledger commit made it re-post the same 5 articles daily (~140 duplicates, deleted
+  11/16). Any job that writes state must save it somewhere it can push, and fail loudly
+  when it can't.
 
 ## Microsoft UET tag / Bing Ads conversions (2026-10-12)
 
