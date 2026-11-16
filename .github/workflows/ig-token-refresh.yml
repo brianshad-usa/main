@@ -51,6 +51,9 @@ jobs:
           IG_APP_ID:       ${{ secrets.IG_APP_ID }}
           IG_APP_SECRET:   ${{ secrets.IG_APP_SECRET }}
           # PAT with "Secrets: Read and write" on this repo (create per PART C).
-          GH_PAT:          ${{ secrets.GH_PAT }}
+          # 2026-11-16: prefer a DEDICATED secret IG_REFRESH_PAT. GH_PAT is shared with
+          # generate-blog.yml (needs Pull requests), and swapping it to fix the blog on 11/10
+          # broke this job on 11/15 (403 on the secrets public key). Falls back to GH_PAT.
+          GH_PAT:          ${{ secrets.IG_REFRESH_PAT || secrets.GH_PAT }}
           # GITHUB_REPOSITORY is auto-provided as owner/repo by Actions.
         run: python ig_refresh_and_store.py
