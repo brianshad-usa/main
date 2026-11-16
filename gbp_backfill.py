@@ -181,6 +181,45 @@ def remaining(log):
     return [u for u in blog_urls_from_sitemap() if u not in done]
 
 
+def _norm(url):
+    """Compare links loosely: no query/fragment, no trailing slash, no .html, lower-case."""
+    u = (url or "").split("#")[0].split("?")[0].strip().rstrip("/").lower()
+    return u[:-5] if u.endswith(".html") else u
+
+
+def reconcile_with_gbp(log):
+    """Record every published blog URL that is ALREADY live on the profile, so it is
+    never posted again even if an earlier run's ledger was lost. Read-only on GBP.
+    Returns the number of URLs added to the ledger. Raises if the profile can't be
+    listed -- run() then refuses to post."""
+    live = {}
+    for p in gbp_post.list_posts():
+        u = _norm(p["cta_url"])
+        if "/blog/" in u:
+            live.setdefault(u, []).append(p)
+    added = 0
+    for url in blog_urls_from_sitemap():
+        if url in log["posted"]:
+            continue
+        hits = live.get(_norm(url))
+        if hits:
+            first = min(hits, key=lambda p: p["createTime"])
+            log["posted"][url] = {
+                "name": first["name"],
+                "title": "",
+                "posted_at": first["createTime"],
+                "reconciled_from_gbp": True,
+            }
+            added += 1
+    dupes = {u: len(v) for u, v in live.items() if len(v) > 1}
+    if dupes:
+        _log(f"WARNING: {len(dupes)} blog link(s) have more than one post on GBP: "
+             + ", ".join(f"{_slug_of(u)} x{n}" for u, n in sorted(dupes.items())[:5]))
+    _log(f"live GBP check: {sum(len(v) for v in live.values())} blog post(s) on the profile, "
+         f"{added} missing from the ledger (now recorded)")
+    return added
+
+
 def cmd_check():
     log = load_log()
     all_urls = blog_urls_from_sitemap()
@@ -195,6 +234,18 @@ def cmd_check():
 
 def run(cli_max=None, dry_run=False):
     log = load_log()
+    # Source of truth = the live profile: never post anything that is already up.
+    try:
+        added = reconcile_with_gbp(log)
+    except Exception as e:
+        if not dry_run:
+            _log(f"ERROR: could not list the live GBP posts to check for duplicates ({e}). "
+                 "Refusing to post blind.")
+            return 1
+        _log(f"WARNING: could not list live GBP posts ({e}); dry run continues on the ledger alone.")
+        added = 0
+    if added and not dry_run:
+        save_log(log)
     todo = remaining(log)
     per_run = pick_per_run(cli_max)
     batch = todo[:per_run]
