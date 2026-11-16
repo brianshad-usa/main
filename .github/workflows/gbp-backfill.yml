@@ -7,12 +7,14 @@ name: GBP Blog Backfill (Paced)
 # gbp_backfill_log.json (committed each run) so it resumes cleanly and never
 # double-posts.
 
+# PAUSED 2026-11-16: the ledger commit has been blocked by the main-protection ruleset since
+# 2026-10-14 (the push loop fails silently), so every daily run re-read the stale ledger and
+# re-posted the SAME 5 blog posts (~140 duplicate GBP posts, 10/15-11/15). Do not re-enable the
+# schedule until the ledger is persisted somewhere the Actions bot can push (e.g. the
+# social-state branch) or GitHub Actions is on the ruleset's bypass list.
 on:
-  schedule:
-    # Daily at 15:00 UTC = 8 AM Los Angeles (PDT) / 7 AM (PST).
-    # Deliberately offset from generate-blog (16:00) and social-3x-week (17:00)
-    # so the three jobs never contend for a push.
-    - cron: '0 15 * * *'
+  # schedule:
+  #   - cron: '0 15 * * *'   # was: daily at 15:00 UTC
   workflow_dispatch:
     inputs:
       max:
