@@ -232,6 +232,24 @@ def cmd_check():
     return 0
 
 
+def cmd_merge_ledger(path):
+    """Union another copy of the ledger (e.g. the one saved on the social-state
+    branch) into ours. The ledger is append-only, so nothing is ever dropped."""
+    log = load_log()
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            other = json.load(fh)
+    except Exception as e:
+        _log(f"merge: could not read {path} ({e}); keeping ours ({len(log['posted'])} entries).")
+        return 0
+    before = len(log["posted"])
+    for url, entry in (other.get("posted") or {}).items():
+        log["posted"].setdefault(url, entry)
+    save_log(log)
+    _log(f"merge: ours {before} + saved copy {len(other.get('posted') or {})} -> {len(log['posted'])} entries")
+    return 0
+
+
 def run(cli_max=None, dry_run=False):
     log = load_log()
     # Source of truth = the live profile: never post anything that is already up.
@@ -307,6 +325,8 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if args and args[0] in ("--check", "-c", "check"):
         sys.exit(cmd_check())
+    if args and args[0] == "--merge-ledger" and len(args) > 1:
+        sys.exit(cmd_merge_ledger(args[1]))
     dry = False
     cli_max = None
     i = 0
