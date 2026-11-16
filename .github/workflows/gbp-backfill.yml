@@ -3,18 +3,25 @@ name: GBP Blog Backfill (Paced)
 # Drips already-published blog posts onto the Google Business Profile as
 # "What's new" local posts, a FEW per day, until the archive is backfilled.
 # Paced on purpose: a burst of posts trips Google's spam heuristics and GBP
-# posts age out after ~6 months, so slow and steady wins. State lives in
-# gbp_backfill_log.json (committed each run) so it resumes cleanly and never
-# double-posts.
+# posts age out after ~6 months, so slow and steady wins.
+#
+# DUPLICATE GUARD (rebuilt 2026-11-16): from 2026-10-15 to 11-15 this job re-posted
+# the same 5 articles every day (~140 duplicates, cleaned up 11/16) because its
+# ledger commit to main was blocked by the main-protection ruleset and the push
+# loop failed silently. Now:
+#   1. gbp_backfill.py lists the posts ALREADY LIVE on the profile before posting
+#      and never posts a blog URL that is already there (refuses to post at all if
+#      the profile can't be listed). The live profile is the source of truth.
+#   2. The ledger is kept on the unprotected 'social-state' branch (restored and
+#      merged before the run, saved after it), like the daily social job's state.
+#      A failed save is a visible warning, not a silent loss -- and thanks to (1)
+#      it can no longer cause duplicates.
 
-# PAUSED 2026-11-16: the ledger commit has been blocked by the main-protection ruleset since
-# 2026-10-14 (the push loop fails silently), so every daily run re-read the stale ledger and
-# re-posted the SAME 5 blog posts (~140 duplicate GBP posts, 10/15-11/15). Do not re-enable the
-# schedule until the ledger is persisted somewhere the Actions bot can push (e.g. the
-# social-state branch) or GitHub Actions is on the ruleset's bypass list.
 on:
-  # schedule:
-  #   - cron: '0 15 * * *'   # was: daily at 15:00 UTC
+  schedule:
+    # Daily at 15:00 UTC = 8 AM Los Angeles (PDT) / 7 AM (PST). GitHub often
+    # starts scheduled runs hours late; the pace is still one batch per day.
+    - cron: '0 15 * * *'
   workflow_dispatch:
     inputs:
       max:
@@ -29,14 +36,14 @@ on:
 permissions:
   contents: write
 
-# Never let two backfill runs post at once (would risk duplicate posts before
-# the ledger commit lands).
+# Never let two backfill runs post at once.
 concurrency:
   group: gbp-backfill
   cancel-in-progress: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  STATE_BRANCH: social-state
 
 jobs:
   backfill:
@@ -52,6 +59,18 @@ jobs:
         with:
           python-version: '3.11'
 
+      # Merge the ledger saved on social-state into the repo copy (append-only
+      # union, so neither copy can lose an entry).
+      - name: Restore ledger from social-state
+        run: |
+          if git fetch --quiet origin "$STATE_BRANCH" \
+             && git cat-file -e "FETCH_HEAD:gbp_backfill_log.json" 2>/dev/null; then
+            git show "FETCH_HEAD:gbp_backfill_log.json" > /tmp/saved_ledger.json
+            python gbp_backfill.py --merge-ledger /tmp/saved_ledger.json
+          else
+            echo "No ledger saved on $STATE_BRANCH yet - using the repo copy."
+          fi
+
       - name: Post the next paced batch to GBP
         env:
           GBP_CLIENT_ID:     ${{ secrets.GBP_CLIENT_ID }}
@@ -60,7 +79,7 @@ jobs:
           GBP_ACCOUNT_ID:    ${{ secrets.GBP_ACCOUNT_ID }}
           GBP_LOCATION_ID:   ${{ secrets.GBP_LOCATION_ID }}
           # Daily pace. Set the repo Actions VARIABLE GBP_BACKFILL_PER_RUN to
-          # change it (defaults to 2 inside gbp_backfill.py if unset).
+          # change it (defaults to 5 inside gbp_backfill.py if unset; hard cap 10).
           GBP_BACKFILL_PER_RUN: ${{ vars.GBP_BACKFILL_PER_RUN }}
         run: |
           ARGS=""
@@ -75,24 +94,34 @@ jobs:
           python gbp_backfill.py $ARGS
           echo "Progress after:"; python gbp_backfill.py --check
 
-      - name: Commit updated backfill ledger
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+      # Save the ledger to social-state (the Actions bot can push there; main is
+      # protected). Retries on a race with the social job, then warns loudly.
+      - name: Save ledger to social-state
+        if: ${{ always() && github.event.inputs.dry_run != 'true' }}
         run: |
-          if [ ! -f gbp_backfill_log.json ]; then
-            echo "No ledger file yet (nothing was posted this run) -- skipping commit."
-            exit 0
-          fi
-          git config user.name "ProLink GBP Bot"
+          git config user.name  "ProLink GBP Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add gbp_backfill_log.json
-          if git diff --cached --quiet; then
-            echo "No ledger changes to commit."
-          else
-            git commit -m "GBP backfill: $(date -u +%F) batch"
-            for attempt in 1 2 3; do
-              if git pull --rebase --autostash origin main && git push origin HEAD:main; then
-                echo "Pushed on attempt $attempt."; break
+          cp gbp_backfill_log.json /tmp/ledger_to_save.json
+          saved=0
+          for attempt in 1 2 3; do
+            git worktree remove --force /tmp/state 2>/dev/null || true
+            rm -rf /tmp/state; git worktree prune
+            if git fetch --quiet origin "$STATE_BRANCH" \
+               && git worktree add --quiet --detach /tmp/state FETCH_HEAD; then
+              cp /tmp/ledger_to_save.json /tmp/state/gbp_backfill_log.json
+              cd /tmp/state
+              git add gbp_backfill_log.json
+              if git diff --cached --quiet; then
+                echo "Ledger on $STATE_BRANCH already up to date."; saved=1
+              elif git commit -q -m "state: GBP backfill ledger $(date -u +%F)" \
+                   && git push -q origin "HEAD:$STATE_BRANCH"; then
+                echo "Ledger saved to $STATE_BRANCH (attempt $attempt)."; saved=1
               fi
-              echo "Push attempt $attempt failed; retrying..."; sleep 5
-            done
+              cd "$GITHUB_WORKSPACE"
+            fi
+            [ "$saved" = 1 ] && break
+            echo "Save attempt $attempt failed; retrying in 5s..."; sleep 5
+          done
+          if [ "$saved" != 1 ]; then
+            echo "::warning::Could not save the GBP backfill ledger to $STATE_BRANCH. No duplicates can result (every run re-checks the live profile first), but the saved record is behind."
           fi
