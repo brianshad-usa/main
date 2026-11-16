@@ -491,6 +491,10 @@
     .see-us-list .kind { margin-left: auto; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--gold); }
     .see-us-media { display: flex; flex-direction: column; gap: 14px; }
     .video-carousel { box-shadow: 0 30px 70px rgba(0,0,0,.35); background-size: cover; background-position: center; }
+    /* 2026-11-14: the spinner sits above the poster overlay (z-index 2) with a light tint, and a paused
+       video keeps its own frame (dimmed) under the play button instead of the poster */
+    .vid-loading { z-index: 3; background: rgba(7,32,64,.35); }
+    #vid-placeholder.frame-paused { background: rgba(7,32,64,.35) !important; }
     .vid-poster-play {
       width: 76px; height: 76px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
@@ -1890,7 +1894,7 @@
       btn.className = 'vid-dot' + (i === 0 ? ' active' : '');
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-label', 'Video ' + (i + 1));
-      btn.addEventListener('click', function () { goTo(i); });
+      btn.addEventListener('click', function () { goTo(i, true); });
       dotsWrap.appendChild(btn);
       dots.push(btn);
     });
@@ -1911,25 +1915,76 @@
     nextBtn.disabled = (idx === VIDEOS.length - 1);
   }
 
-  /* ── Load and play a video by index ── */
-  function goTo(idx) {
-    if (idx < 0 || idx >= VIDEOS.length || idx === current) return;
+  /* ── Playback state (2026-11-14) ──
+     The poster and play button stay up until the video is actually PLAYING and come back whenever
+     it stops, so a phone always shows either a moving video or a play button. Phones refuse
+     autoplay in iPhone Low Power Mode or with data saver, and a big file can take a while on
+     cellular; the old code hid the poster 5 s after "canplay" even when nothing was playing,
+     which left a still frame with no button, and a tap on it did nothing. */
+  var started  = false;   /* a source has been loaded into the video element */
+  var revealed = false;   /* the current video has shown moving frames */
+  var playIcon = placeholder.querySelector('.vid-poster-play');
+
+  function showOverlay(withButton) {
+    /* after a video has played, dim its paused frame instead of covering it with the poster */
+    placeholder.classList.toggle('frame-paused', revealed);
+    placeholder.style.opacity = '1';
+    placeholder.style.pointerEvents = 'auto';
+    playIcon.style.visibility = withButton ? 'visible' : 'hidden';
+  }
+  function hideOverlay() {
+    placeholder.style.opacity = '0';
+    placeholder.style.pointerEvents = 'none';
+  }
+  function setMuted(m) {
+    vid.muted = m;
+    muteIcon.style.display  = m ? '' : 'none';
+    soundIcon.style.display = m ? 'none' : '';
+    unmuteLabel.textContent = m ? 'Tap for sound' : 'Mute';
+  }
+  /* play() returns a promise that rejects when the browser refuses (autoplay blocked): show the button */
+  function tryPlay() {
+    var p = vid.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(function () {
+        loading.classList.remove('show');
+        showOverlay(true);
+      });
+    }
+  }
+  function loadCurrent() {
+    started = true;
+    revealed = false;
+    vid.src = VIDEOS[current].src;
+    vid.load();
+  }
+  /* A tap on the poster, the play button or "Tap for sound". iOS only allows play() (and sound)
+     when it is called inside the tap handler itself, so nothing here waits on a timer. */
+  function userPlay() {
+    if (!started) loadCurrent();
+    setMuted(false);
+    loading.classList.add('show');
+    showOverlay(false);
+    tryPlay();
+  }
+
+  /* ── Load and play a video by index ──
+     fromUser: a tap or click asked for it, so swap and play right away (inside the tap). */
+  function goTo(idx, fromUser) {
+    if (idx < 0 || idx >= VIDEOS.length) return;
+    if (idx === current && started) { if (fromUser && vid.paused) userPlay(); return; }
     current = idx;
     updateUI(idx);
 
     /* Fade out, swap, fade in */
-    revealed = false;   /* reset so revealVideo fires again for new video */
+    revealed = false;
     vid.classList.add('fading');
     vid.style.opacity = '0';
-    loading.classList.add('show');
-
     setPoster(idx);
-    setTimeout(function () {
-      vid.pause();
-      vid.src = VIDEOS[idx].src;
-      vid.load();
-      vid.play().catch(function () {});
-    }, 300);
+    loading.classList.add('show');
+    showOverlay(false);
+    function swap() { vid.pause(); loadCurrent(); tryPlay(); }
+    if (fromUser) swap(); else setTimeout(swap, 300);
   }
 
   /* ── Video event handlers ── */
@@ -1954,47 +2009,40 @@
     if (genuinelyStuck) {
       vid.load();   /* safe &mdash; position is at or near 0, user won't notice */
     }
-    vid.play().catch(function () {});
+    tryPlay();
   }
 
-  var revealed = false;
-  var revealFallback;
-
+  /* Reveal the video only once frames are really moving (never on canplay alone). */
   function revealVideo() {
-    if (revealed) return;
-    revealed = true;
-    clearTimeout(revealFallback);
-    placeholder.style.opacity = '0';
-    placeholder.style.pointerEvents = 'none';
-    vid.style.opacity = '1';
-    vid.classList.remove('fading');
+    if (!revealed) {
+      revealed = true;
+      vid.style.opacity = '1';
+      vid.classList.remove('fading');
+    }
+    hideOverlay();
     loading.classList.remove('show');
     clearStallTimer();
   }
-
-  /* Ideal: enough data buffered to play without stopping */
-  vid.addEventListener('canplaythrough', revealVideo);
-
-  /* Fallback: reveal after 5 s on canplay so slow connections don't stall forever */
-  vid.addEventListener('canplay', function () {
-    revealFallback = setTimeout(revealVideo, 5000);
-  });
 
   vid.addEventListener('playing', function () {
-    loading.classList.remove('show');
-    clearStallTimer();
     stallAtTime = -1;
-    if (!revealed) revealVideo(); /* catch cases where canplaythrough was missed */
+    revealVideo();
   });
 
   /* iOS does not reliably fire `playing` after rebuffering &mdash; it resumes
-     straight into timeupdate. Hide the spinner as soon as position advances. */
+     straight into timeupdate. Reveal / hide the spinner as soon as position advances. */
   vid.addEventListener('timeupdate', function () {
-    if (loading.classList.contains('show') && !vid.paused) {
-      loading.classList.remove('show');
-      clearStallTimer();
+    if (!vid.paused && vid.currentTime > 0 &&
+        (!revealed || loading.classList.contains('show') || placeholder.style.opacity !== '0')) {
       stallAtTime = -1;
+      revealVideo();
     }
+  });
+
+  /* Stopped for any reason other than a swap in progress (iOS pausing it, a refused resume):
+     put the play button back. */
+  vid.addEventListener('pause', function () {
+    if (!vid.ended && !loading.classList.contains('show')) showOverlay(true);
   });
 
   /* `waiting` fires when the video has run out of buffered data mid-play.
@@ -2026,26 +2074,26 @@
   /* iOS suspends video on screen lock, tab switch, or Low Power Mode.
      Resume as soon as the page becomes visible again. */
   document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && vid.paused && !vid.ended) {
-      vid.play().catch(function () {});
+    if (!document.hidden && started && vid.paused && !vid.ended) {
+      tryPlay();
     }
   });
 
   vid.addEventListener('ended', function () {
     var next = (current + 1) % VIDEOS.length;
-    if (next === current) { vid.play(); return; }
+    if (next === current) { tryPlay(); return; }
     goTo(next);
   });
 
   /* ── Arrow navigation ── */
-  prevBtn.addEventListener('click', function () { goTo(current - 1); });
-  nextBtn.addEventListener('click', function () { goTo(current + 1); });
+  prevBtn.addEventListener('click', function () { goTo(current - 1, true); });
+  nextBtn.addEventListener('click', function () { goTo(current + 1, true); });
 
   /* ── Keyboard navigation ── */
   document.getElementById('video-carousel').setAttribute('tabindex', '0');
   document.getElementById('video-carousel').addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1, true); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1, true); }
   });
 
   /* ── Touch swipe navigation ── */
@@ -2059,47 +2107,46 @@
     var dx = e.changedTouches[0].clientX - swipeStartX;
     swipeStartX = null;
     if (Math.abs(dx) < 40) return; /* ignore small taps */
-    if (dx < 0) goTo(current + 1); /* swipe left → next */
-    else         goTo(current - 1); /* swipe right → prev */
+    if (dx < 0) goTo(current + 1, true); /* swipe left → next */
+    else         goTo(current - 1, true); /* swipe right → prev */
   }, { passive: true });
 
-  /* ── Unmute toggle ── */
+  /* ── Unmute toggle ── (nothing playing yet, e.g. autoplay refused: a tap here plays) */
   unmuteBtn.addEventListener('click', function () {
-    vid.muted = !vid.muted;
-    if (vid.muted) {
-      muteIcon.style.display  = '';
-      soundIcon.style.display = 'none';
-      unmuteLabel.textContent = 'Tap for sound';
-    } else {
-      muteIcon.style.display  = 'none';
-      soundIcon.style.display = '';
-      unmuteLabel.textContent = 'Mute';
-    }
+    if (vid.paused) { userPlay(); return; }
+    setMuted(!vid.muted);
   });
 
   /* ── Init ──
      The carousel sits below the fold (#see-us-work), so the first video only loads once it is
-     about to scroll into view; until then the poster shows. Clicking the poster or a list item starts it. */
-  var started = false;
+     about to scroll into view. That first try is a muted autoplay; if the phone refuses it, the
+     poster keeps its play button and a tap plays the video with sound. */
   function start() {
     if (started) return;
-    started = true;
-    vid.src = VIDEOS[current].src;
-    vid.load();
-    vid.play().catch(function () {});
+    loadCurrent();
+    loading.classList.add('show');
+    showOverlay(false);
+    tryPlay();
   }
   buildDots();
   updateUI(0);
   setPoster(0);
-  placeholder.addEventListener('click', start);
+  placeholder.setAttribute('role', 'button');
+  placeholder.setAttribute('tabindex', '0');
+  placeholder.setAttribute('aria-label', 'Play video');
+  placeholder.addEventListener('click', userPlay);
+  placeholder.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); userPlay(); }
+  });
   listBtns.forEach(function (b) {
     b.addEventListener('click', function () {
-      var i = +b.getAttribute('data-vid');
-      if (!started) { current = i; updateUI(i); setPoster(i); start(); }
-      else { goTo(i); }
-      if (vid.muted) { unmuteBtn.click(); }
+      setMuted(false);   /* picking a video from the list means they want to watch it, with sound */
+      goTo(+b.getAttribute('data-vid'), true);
     });
   });
+  /* "Watch our story" in the hero: start it (with sound) while the page scrolls down to it */
+  var watchLink = document.querySelector('.hero-watch');
+  if (watchLink) watchLink.addEventListener('click', userPlay);
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (entries, obs) {
       if (entries[0].isIntersecting) { start(); obs.disconnect(); }

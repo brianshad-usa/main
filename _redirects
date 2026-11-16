@@ -26,7 +26,9 @@
 /about.html                                /about                               301
 /contact.html                              /contact                             301
 /legal.html                                /legal                               301
-/thank-you.html                            /thank-you                           301
+# /thank-you existed only as the Calendly booking redirect; Calendly was removed 2026-11-16.
+/thank-you.html                            /contact                             301
+/thank-you                                 /contact                             301
 
 # ---- Managed IT — city pages ----
 /managed-it-services.html                  /managed-it-services                 301

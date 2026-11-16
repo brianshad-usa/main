@@ -50,11 +50,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <title>Contact Pro Link Systems | IT Support Los Angeles</title>
-  <meta name="description" content="Contact Pro Link Systems for managed IT, cybersecurity, and cloud services in Los Angeles. Call 1-800-890-6133 or schedule a free discovery call online.">
+  <meta name="description" content="Contact Pro Link Systems for managed IT, cybersecurity, and cloud services in Los Angeles. Call 1-800-890-6133 or request a free discovery call online.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://prolinksystems.com/contact">
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://prolinksystems.com/contact">
@@ -65,7 +64,7 @@
   <meta name="twitter:site" content="@ProLink_Systems">
   <meta name="twitter:image" content="https://prolinksystems.com/logo.png">
   <meta name="twitter:title" content="Contact Pro Link Systems | IT Support Los Angeles">
-  <meta name="twitter:description" content="Contact Pro Link Systems for managed IT, cybersecurity, and cloud services in Los Angeles. Call 1-800-890-6133 or schedule a free discovery call online.">
+  <meta name="twitter:description" content="Contact Pro Link Systems for managed IT, cybersecurity, and cloud services in Los Angeles. Call 1-800-890-6133 or request a free discovery call online.">
 
   <script type="application/ld+json">
   {
@@ -343,48 +342,12 @@
     .success-urgent { font-size: .875rem; color: var(--text-muted); }
     .success-urgent a { color: var(--navy); font-weight: 700; }
 
-    /* ── CALENDLY OPTION ─────────────────────────────────── */
-    .contact-options-head { margin-bottom: 28px; }
+    /* ── FORM HEADING (2026-11-16: the online booking option was removed; form + phone only) ── */
+    .contact-options-head { margin-bottom: 24px; }
     .contact-options-head h2 {
       font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -.02em; margin-bottom: 8px;
     }
-    .contact-options-head p { font-size: .9rem; color: var(--text-muted); line-height: 1.6; }
-
-    .option-label {
-      font-size: .72rem; font-weight: 800; text-transform: uppercase;
-      letter-spacing: .1em; color: var(--navy); margin-bottom: 10px;
-      display: flex; align-items: center; gap: 8px;
-    }
-    .option-label::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
-
-    .cly-btn {
-      width: 100%; padding: 16px 22px;
-      background: var(--navy); color: #fff;
-      font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700;
-      border: none; border-radius: var(--r-md); cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      box-shadow: 0 4px 14px rgba(7,32,64,.25);
-      transition: background .2s, transform .15s, box-shadow .2s;
-    }
-    .cly-btn:hover { background: var(--navy-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(7,32,64,.3); }
-    .cly-sub {
-      font-size: .78rem; color: var(--text-muted); text-align: center;
-      margin-top: 10px; line-height: 1.5;
-    }
-    .cly-sub span { margin: 0 4px; }
-
-    .or-divider {
-      display: flex; align-items: center; gap: 14px; margin: 28px 0 24px;
-    }
-    .or-divider::before, .or-divider::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
-    .or-divider span {
-      font-size: .72rem; font-weight: 700; color: var(--text-muted);
-      text-transform: uppercase; letter-spacing: .1em; white-space: nowrap;
-    }
+    .contact-options-head p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
 
     /* ── CONTACT CHANNELS ─────────────────────────────────── */
     .channels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -576,40 +539,17 @@
     </div>
   </div>
 
-  <!-- RIGHT: FORM + CALENDLY -->
+  <!-- RIGHT: FORM -->
   <div class="form-card">
     <div class="form-body" id="form-body">
       <div class="contact-options-head">
         <h2>Let&rsquo;s Start the Conversation</h2>
-        <p>Choose the option that works best for you &mdash; book a time directly on our calendar, or leave your details and we&rsquo;ll reach out to you.</p>
-      </div>
-
-      <!-- OPTION 1: Book via Calendly -->
-      <div class="option-label">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Book a Discovery Call
-      </div>
-      <button class="cly-btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/prolinksystems-info/30min'});return false;">
-        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        See Our Calendar &amp; Pick a Time
-      </button>
-      <p class="cly-sub">
-        <span>&#10003;&nbsp;Pick your date &amp; time</span>&nbsp;&middot;&nbsp;<span>&#10003;&nbsp;30 minutes</span>&nbsp;&middot;&nbsp;<span>&#10003;&nbsp;Free &amp; no commitment</span>
-      </p>
-
-      <!-- OR DIVIDER -->
-      <div class="or-divider"><span>or</span></div>
-
-      <!-- OPTION 2: Form -->
-      <div class="option-label">
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Have Us Contact You
+        <p>Fill in your details below and a Pro Link engineer will call you within one business day to schedule a time that works for you.</p>
       </div>
 
       <form method="post" id="contact-form" novalidate>
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
         <input type="hidden" name="source_page" value="contact">
-        <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:18px;line-height:1.6;">Fill in your details below and a Pro Link engineer will call you within one business day to schedule a time that works for you.</p>
 
         <div class="form-row">
           <div class="form-group" id="fg-first">
@@ -889,15 +829,6 @@
   </div>
 </footer>
 
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script>
-  /* Redirect to thank-you page when a Calendly appointment is booked */
-  window.addEventListener('message', function(e) {
-    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
-      window.location.href = '/thank-you';
-    }
-  });
-</script>
 <script>
 (function () {
   var form = document.getElementById('contact-form');
