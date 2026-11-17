@@ -2,10 +2,11 @@
   "version": 1,
   "ingested": {
     "176e3a4a1c11b48835aa87cc2398d48fb4958d14": {
-      "dest": "assets/photos/server_rack.jpg",
+      "dest": null,
       "src": "Screenshot 2026-06-04 090958.png",
       "added": null,
-      "seed": true
+      "seed": true,
+      "removed": "2026-11-17: shows a client's name and IP labels; pulled from rotation, source moved to hold"
     },
     "462fdf1baf7dff22e656cec50dcc32b576b268f2": {
       "dest": "assets/photos/team_brand_polo.jpg",
