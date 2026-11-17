@@ -13,6 +13,11 @@ the folder; within a few hours they appear in the rotation.
   never re-processed or duplicated (rename-proof). It also holds the one-time
   baseline of the 14 frames present at deployment, so only files added *later*
   get auto-ingested.
+- **Held files:** ledger entries with a `held` note were reviewed and are NOT
+  approved for auto-ingest (2026-11-17: the 36 files added to the folder on
+  2026-10-12). The sync skips them. To release one Brian approves, delete its
+  entry and run the sync. Files that should never be published can also live in
+  a subfolder, because the sync only scans the folder's top level.
 - **Filters (skips non-photos):** too small (`min side < 600` or `width < 900`),
   extreme aspect (`>2.6` or `<0.42`), and near-solid / logo-slate frames
   (`>60%` near-white, or very low detail). Brand slides won't get pulled in.
