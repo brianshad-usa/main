@@ -1,0 +1,167 @@
+{
+  "post": "It's late on a Friday. An email arrives from a vendor you pay every month. It comes from their real address, as a reply in the thread you've used all year, with a polite note that their bank details have changed before the next payment.\n\nNothing looks wrong, because the account is real. Someone got into your vendor's email, read the history, and waited for the hour when nobody wants to make a phone call.\n\nChecking the sender won't help here. What works is a habit: confirm any change to payment details by calling a number from your original contract or vendor setup. Never use one that arrived by email. Replying to the thread only reaches whoever is inside that mailbox.\n\nA single phone call is cheaper than chasing a wire transfer you may never get back.",
+  "headline": "Before anyone acts on a payment change",
+  "cta_label": "Learn more",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-11-17-s193-card.png",
+  "image_file_jpg": "2026-11-17-s193-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S193",
+  "core_idea": "A phishing email is built from three parts, and each is stopped by a different owner. IT handles lookalike infrastructure. People face the borrowed pretext. Leadership owns the timing pressure, because only policy holds against it. The costliest version comes from a real, compromised vendor mailbox that passes authentication. The usual answer is a callback rule, and it has a hole most companies miss: the number on file is only as trustworthy as the channel it arrived through. Closing that hole, and giving staff written permission to delay a payment, are leadership decisions.",
+  "channels": {
+    "linkedin": "The phishing email most likely to cost your company money can pass every authentication check you own.\n\nThat follows from how phishing is built. A convincing one has three parts, and each is stopped by a different owner.\n\nInfrastructure is where the email comes from. A lookalike domain one character off from a real vendor is a technical problem. Domain authentication, lookalike monitoring, and external-sender warnings catch much of it. That part belongs to IT.\n\nThe harder variant is a real vendor mailbox that has been compromised. Here the message arrives from the correct address, often as a reply in a live thread. Authentication passes because the mail is authentic.\n\nPretext is the reason to act, borrowed from your actual business: a supplier you pay, a deal in progress, a name from your website. Fluent writing now costs an attacker nothing, so polish proves nothing.\n\nTiming is picked for when checking is inconvenient. Late Friday. Quarter close. The week the CFO is traveling. Only policy holds against that pressure, so the owner is leadership.\n\nMy view: most companies leave that seat empty. A callback rule for payment changes works only if two things are true. The number you call came from a verified channel, not from an email that may have planted it. And whoever pays the bills has written permission to delay a payment, even one a senior executive is pushing.\n\nIT can enforce that rule. Only leadership can make it stick.",
+    "facebook": "It's late on a Friday. An email arrives from a vendor you pay every month. It comes from their real address, as a reply in the thread you've used all year, with a polite note that their bank details have changed before the next payment.\n\nNothing looks wrong, because the account is real. Someone got into your vendor's email, read the history, and waited for the hour when nobody wants to make a phone call.\n\nChecking the sender won't help here. What works is a habit: confirm any change to payment details by calling a number from your original contract or vendor setup. Never use one that arrived by email. Replying to the thread only reaches whoever is inside that mailbox.\n\nA single phone call is cheaper than chasing a wire transfer you may never get back.",
+    "gbp": "One of the hardest phishing emails to catch comes from a vendor's real account after it has been compromised. The address is right, the thread is familiar, and authentication checks pass.\n\nA rule catches it: confirm every payment or banking change by calling a number already on file. Then check how numbers get onto that file. If a vendor's contact details can be updated by email, an attacker may have changed them first.\n\nPro Link Systems has served Los Angeles businesses from Woodland Hills since 1999, and publishes its incident-response playbook free, with no form required.",
+    "x": [
+      "Most callback rules for payment changes have a quiet hole. The number on file is only as trustworthy as the way it got there. If vendor contact details can be updated by email, an attacker inside the vendor's mailbox may have updated them first."
+    ],
+    "instagram_caption": "Phishing used to give itself away with clumsy writing. Fluent text now costs an attacker nothing.\n\nWhat remains is construction: a sender someone set up or took over, a story borrowed from your real business, and a moment picked for when checking is a hassle. Each part has a different owner. The hardest version, a real vendor mailbox that has been compromised, passes authentication outright. That leaves policy as the control that holds, and policy has a hole most companies miss.\n\nWorth sending to whoever approves payments at your company.\n\n#Phishing #BEC #EmailSecurity"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "checklist",
+    "format": "single_image",
+    "ground": "cream",
+    "layout": "checklist",
+    "register": "checklist",
+    "channels": {
+      "linkedin": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "facebook": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "gbp": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "instagram": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "x": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 93,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 91,
+      "originality": 93,
+      "hook_strength": 92,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 88,
+      "platform_fit": 95,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F014): Pro Link Systems publishes its incident-response playbook publicly, free and ungated, with no form required",
+    "ANALYSIS: phishing emails are constructed from sending infrastructure, a pretext, and deliberate timing",
+    "ANALYSIS: generative AI makes fluent, error-free writing effectively free for attackers, so judging polish or tone is a weak control",
+    "ANALYSIS: phishing infrastructure commonly uses lookalike domains one character off from a real vendor, or legitimate mailboxes that have been compromised",
+    "ANALYSIS: domain authentication, lookalike-domain monitoring, and external-sender warnings address much of the lookalike-domain case",
+    "ANALYSIS: mail sent from a compromised legitimate mailbox through its real mail system passes email authentication checks because the mail is authentic; most filters have little basis to flag it (hedged, since anomaly-based detection sometimes does)",
+    "ANALYSIS: attackers with access to a compromised mailbox often reply within existing threads, so replying to confirm a request can reach the attacker",
+    "ANALYSIS: pretexts borrow real business context such as actual suppliers, active deals, and names from public websites",
+    "ANALYSIS: attackers time requests for moments when verification is inconvenient (late Friday, quarter close, executive travel)",
+    "ANALYSIS: confirming payment or banking changes through an independently sourced phone number counters payment-redirect fraud whether the email comes from a lookalike or a genuine compromised mailbox",
+    "ANALYSIS: if vendor contact or banking details can be updated by email, an attacker controlling the vendor's mailbox can alter the number on file before requesting payment, which defeats a callback rule that relies on that number",
+    "ANALYSIS: wire transfers can be difficult or impossible to recover once sent",
+    "ANALYSIS (hedged, no statistic): the compromised-mailbox payment scenario is among the hardest phishing cases to catch",
+    "OPINION: infrastructure is IT's responsibility, pretext falls to people, and timing pressure is owned by leadership through policy",
+    "OPINION: payment-verification policy, including written permission for staff to delay payments under executive pressure, is a leadership decision that IT enforces"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft fails the final test. 'Check the sender, call a known number' is advice any MSP could publish. The three-part anatomy is a good frame, but it stops at description. The revision answers the executive's real question: which part is caught by whom. Infrastructure is caught by IT controls, pretext by people, timing by policy. The sharpest case, a compromised real vendor mailbox, slips past all technical controls. That makes the piece a leadership argument rather than awareness content."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The strongest idea in the draft sits in one subordinate sentence: a familiar sender proves nothing because the mailbox may be genuinely compromised. Every asset buries it. The revision promotes that case to the hook on LinkedIn, X, GBP and Instagram, and builds the Facebook scenario around it. A lookalike domain is the easy case. Leading with it undersold the concept."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The draft slides have empty footers and no recurring visual device, so nothing makes the carousel recognizable before the logo. The revision uses footers as a consistent ownership label: 'Owner: IT', 'Owner: people', 'Owner: process', 'Technical controls: blind'. These are meant to drive a three-column anatomy diagram that repeats across slides, with the active part highlighted. Design must render this as a typographic diagram, not icons, padlocks or envelope clip-art."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft says the callback rule 'defeats all three parts at once.' That overclaims. A payment callback does nothing about credential-harvesting phishing, which uses the same construction. The revision scopes the rule to payment and banking changes. It also adds a step the draft omitted and is widely missed: never confirm by replying in the thread, because the thread itself may be attacker-controlled."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft never says what IT can actually do about infrastructure, so readers cannot tell what is already covered and what is not. The revision names the technical layer: domain authentication, lookalike monitoring and external-sender warnings. It then states plainly that this layer is blind to a compromised legitimate mailbox. That boundary between IT's job and leadership's job is the most useful thing a CIO can hand a CEO."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft's own checklist undermines its point. 'Read the sender's actual domain' fails in exactly the compromised-mailbox scenario the draft raises. 'Check where links really go' is unreliable on mobile and irrelevant to payment-redirect fraud. The revision keeps the domain check for the lookalike case and explicitly tells readers it does not cover the hard case. It replaces the link item with 'never confirm by replying to the thread.' The claim that authentication passes for mail sent from a compromised legitimate account is technically accurate and is now in the claims audit."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The AI point is correctly kept proportionate. It explains why the grammar tell disappeared without becoming the subject, which honors the rule against manufacturing urgency around AI. One weakness: the draft states the effect of generative AI as flat fact in several places with no source. The revision softens it to 'largely' and 'mostly' and logs it as analysis, not fact."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "In the draft, the leadership takeaway arrives in the last two lines of LinkedIn and nowhere else. A CFO skimming Instagram or X would never learn that the decisive control is theirs to mandate. The revision carries the ownership framing into the Instagram takeaway footer ('The callback rule is a leadership decision') and makes the X post end on the rule itself."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram caption asks for two actions, save and share, which dilutes both. The hashtag #CyberAwareness is generic and attracts the wrong audience. The revision keeps a single forwarding prompt aimed at payment approvers, which is the strongest share motive for this topic. #CyberAwareness is replaced with #BEC, which reaches finance and operations readers."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP close, 'we are glad to help' with a 'second look at how your team handles suspicious email', implies an unverified service offering and reads as generic MSP filler. The revision replaces it with a verified, distinctive fact (F014): Pro Link publishes its incident-response playbook free, with no form required. That signals confidence instead of soliciting. F012 is retained."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'A phishing email is not written. It is assembled.' and the X post's 'isn't written. It's assembled' both sit too close to the banned 'it's not just X, it's Y' construction. The revision removes them. The Facebook close 'a wire transfer you can't get back' overstates certainty and becomes 'may never get back'. Consecutive same-word sentence openings ('The harder case... The message...') were checked and eliminated. LinkedIn stays under 1,600 characters, and the X post is 269 characters."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft overclaimed in two places and left a real gap. 'Filters see nothing wrong,' 'Nothing in the stack has a reason to flag it,' and the slide footer 'Technical controls: blind' are too absolute, because behavioral and anomaly-based mail detection sometimes flags compromised-vendor messages. The callback rule was also presented as complete. It is not: if vendor contact details can be updated by email, an attacker inside the vendor's mailbox can plant the 'number on file' before the payment request arrives. Revision: hedge the filter language to 'authentication passes, and most filters have little reason to object.' Name the vendor master file as the asset to protect."
+    },
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft fails the any-MSP test. 'Call a number already on file' is standard public guidance, and most MSPs have posted it. The draft's own checklist also led with 'Read the full sender domain,' which contradicts its central point that the costliest variant comes from the correct address. Revision: make the hole in the callback rule (where the number came from) and written permission for staff to delay a payment under executive pressure the ownable insight across every channel. Drop the sender-domain check from the action list."
+    },
+    {
+      "role": "Senior Technology Editor / Copy Editor",
+      "finding": "The three-owner frame was inconsistent and the copy broke house rules. Timing's owner was 'process' on Instagram and an unnamed 'third owner' on LinkedIn, so the argument blurred at the payoff. Revision: timing is owned by leadership, consistently, because only policy holds against pressure. Rule breaks fixed: slide 2 opened consecutive sentences with 'Judging'; LinkedIn's 'That is not an indictment... It is a description...' mirrored the banned not-X-it's-Y construction; and LinkedIn and X each had consecutive sentences opening with 'The'."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

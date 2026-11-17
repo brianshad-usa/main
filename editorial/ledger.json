@@ -3949,6 +3949,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-17",
+      "idea_id": "S193",
+      "theme": "creative_surprise",
+      "format": "explainer",
+      "title": "How a phishing email is actually built",
+      "excellence": 93,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist",
+        "channels": {
+          "linkedin": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "facebook": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "gbp": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "instagram": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "x": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          }
+        }
+      }
     }
   ]
 }
