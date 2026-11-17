@@ -743,7 +743,7 @@ html = f"""<!DOCTYPE html>
   "url": "https://prolinksystems.com/blog/{slug}"
 }}
 </script>
-<link rel="stylesheet" href="/_shared.css?v=20261117">
+<link rel="stylesheet" href="/_shared.css?v=20261117b">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -970,7 +970,7 @@ index_html = f"""<!DOCTYPE html>
 <meta name="description" content="Expert IT advice, cybersecurity tips, and managed IT insights for Los Angeles businesses from Pro Link Systems &mdash; proudly serving LA companies since 1999.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://prolinksystems.com/blog/">
-<link rel="stylesheet" href="/_shared.css?v=20261117">
+<link rel="stylesheet" href="/_shared.css?v=20261117b">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
