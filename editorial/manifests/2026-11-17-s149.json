@@ -1,0 +1,164 @@
+{
+  "post": "Picture an office with one company for email, another for backup, a third for antivirus and a fourth for the firewall. When someone leaves, their access has to be shut off in four places. Miss one, and that forgotten login stays open for anyone who finds it.\n\nMoving to fewer providers closes many of those gaps. Offboarding happens in one place, and fewer outside companies hold keys to your systems.\n\nThere is a catch. If the same login that runs your email can also delete your backups, one stolen password can take out your data and your way back at the same time.\n\nSo the goal is not simply fewer vendors. Bring the everyday tools together. Then set backups up so they can be restored but not erased by anyone, your IT company included, until their retention period runs out. And check them the only way that counts: by actually restoring from them.",
+  "headline": "Count control planes, not vendors.",
+  "cta_label": "See our approach",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/cybersecurity-services",
+  "image_file": "2026-11-17-s149-card.png",
+  "image_file_jpg": "2026-11-17-s149-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S149",
+  "core_idea": "Vendor consolidation is a security decision before it is a cost decision, and vendor count is the wrong measure. Count control planes instead: the accounts and tools whose compromise reaches everything. Consolidate where shared visibility is itself the control. Then separate the power to restore backups from the power to delete them, so that no single credential, your IT provider's included, can erase your way back.",
+  "channels": {
+    "linkedin": "Should we run identity, email, security and backup through fewer vendors?\n\nMost leadership teams treat that as a cost question. It is a security question first, and counting vendors is the wrong way to answer it.\n\nConsolidation has a real case. Failures live in the seams between tools: an alert one system raised that another never saw, an account disabled in one app and left active in three others. Every vendor with admin access is also a third party you must trust. Fewer vendors, fewer seams, fewer outside hands.\n\nThe risk does not vanish, though. It moves. If one set of admin credentials controls identity, email, files and backups, a single compromise reaches all of it.\n\nMy view, offered as opinion: count control planes, not vendors. Four products whose admin consoles all sit behind one sign-on account, or one remote management tool, are one point of failure. A single suite whose backups cannot be deleted by any of its everyday admin accounts is not.\n\nIn practice:\nConsolidate where integration is the control. Identity, endpoint protection and monitoring work better when one team sees all three.\nSeparate restoring from deleting. Whoever runs recovery needs to restore. Nobody, on a single credential, should be able to delete backups or shorten how long they are kept.\n\nThat includes your IT provider. Ours too. Ask who could erase your backups today. The best answer is nobody, not before the retention period ends.\n\nConsolidation should shrink what you have to watch, not what an attacker has to break.",
+    "facebook": "Picture an office with one company for email, another for backup, a third for antivirus and a fourth for the firewall. When someone leaves, their access has to be shut off in four places. Miss one, and that forgotten login stays open for anyone who finds it.\n\nMoving to fewer providers closes many of those gaps. Offboarding happens in one place, and fewer outside companies hold keys to your systems.\n\nThere is a catch. If the same login that runs your email can also delete your backups, one stolen password can take out your data and your way back at the same time.\n\nSo the goal is not simply fewer vendors. Bring the everyday tools together. Then set backups up so they can be restored but not erased by anyone, your IT company included, until their retention period runs out. And check them the only way that counts: by actually restoring from them.",
+    "gbp": "Cutting the number of IT and security vendors your business pays can make you safer: fewer gaps between tools, and one place to remove a departing employee's access. Concentration has a cost, though. If one admin login controls email, files and backups, a single stolen password reaches all of them. A practical rule for LA business owners: consolidate the tools your team uses every day, and set backups up so no single login can delete them. Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999, and we recover from tested backups, verified by restore testing rather than assumed from job reports.",
+    "x": [
+      "Ask your IT provider one question: who could delete our backups today? The right answer is nobody, not before retention runs out. Restoring and deleting should never sit behind the same credential. Count control planes, not vendors."
+    ],
+    "instagram_caption": "Fewer IT vendors sounds like a cost decision. It is a security decision, and vendor count is the wrong way to measure it.\n\nConsolidation closes the seams between tools: missed alerts, forgotten accounts, outside parties holding admin access. It also concentrates risk. When one admin login controls identity, email, files and backups, one compromise reaches everything.\n\nThe better measure is control planes. Bring visibility together. Separate the power to restore backups from the power to delete them, and know exactly who could erase them today, your IT provider included.\n\nSave this for your next vendor review.\n\n#CyberResilience #ITStrategy #LosAngeles"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "editorial_light",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "centered",
+    "register": "question",
+    "channels": {
+      "linkedin": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "facebook": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "gbp": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "instagram": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "x": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 89,
+      "originality": 95,
+      "hook_strength": 92,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 89,
+      "platform_fit": 95,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: vendor consolidation is a security decision before it is a cost decision",
+    "ANALYSIS: failures tend to occur in the seams between tools (missed alerts, accounts left active after offboarding)",
+    "ANALYSIS: every vendor with admin access is a third party the business must trust; fewer vendors reduces outside access",
+    "ANALYSIS: consolidation moves concentration risk rather than eliminating it",
+    "ANALYSIS: if one set of admin credentials controls identity, email, files and backups, a single compromise reaches all of it",
+    "ANALYSIS: a single sign-on account fronting several admin consoles, or a remote management tool holding credentials to them, joins separate products into one control plane",
+    "OPINION: count control planes, not vendors",
+    "OPINION: consolidate identity, endpoint protection and monitoring where integration is itself the control",
+    "ANALYSIS: immutable backups with a locked retention period cannot be deleted or shortened by a single credential before retention ends; restore access and delete access can be separated",
+    "OPINION: the IT provider, Pro Link included, belongs on the list of parties who could delete backups, and the best answer is nobody before retention ends (no claim made about Pro Link's own backup configuration)",
+    "ANALYSIS: backups should be verified by actually restoring from them",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999",
+    "FACT(F013): Pro Link Systems recovers from tested backups, verified by restore testing rather than assumed from job reports"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The GBP post ends with a text CTA ('we are glad to walk through your current setup') while the package also carries a LEARN_MORE button. That is two CTAs, which breaks the one-CTA rule. The draft also never uses a verified fact that sets Pro Link apart. Revision: the text CTA is removed and the GBP close now uses F013 (recovers from tested backups), which supports the post's own argument."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept is sound but its central idea is generic. 'Consolidation concentrates risk' is a point any MSP or vendor blog makes. The draft has no sharper unit of measure. Revision: the package is reframed around 'count control planes, not vendors'. Three vendors run through one admin login are one point of failure. One suite with backups behind separate credentials is not."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 2 and 3 repeat 'one compromised admin account' almost word for word. Slide 4's headline runs two lines with a long question, which weakens hierarchy. No slide works as a visual turn. Revision: the repetition is removed. The insight now sits in a short headline ('Count control planes, not vendors.') suited to a simple two-column diagram treatment. A closing question slide ('Who could delete your backups?') gives the deck a typographic payoff. The schema still carries no visual direction, so design execution remains a dependency."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Several lines overclaim. 'Your tools can see each other' (Facebook) is not something consolidation guarantees. 'Consolidation removes the seams' (X) states absolutely what is only a reduction. 'A renewal nobody owned' is an operational seam, not a security one. Revision: the claims are qualified, and the renewal example is replaced with third-party admin access, which is a genuine security seam."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft treats 'vendor' as the unit of risk. In practice the unit is the administrative plane. A separate backup vendor administered through the same SSO admin account offers almost no independence. Revision: the guidance is now 'keep backups behind credentials nothing else can use' rather than simply 'with a different vendor'."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The recovery guidance omits immutability and credential separation. Those are the controls that actually decide whether an attacker holding admin rights can destroy backups. The supply-chain angle is also missing: every vendor holding admin access is a third-party risk, which is a real argument for consolidation. Revision: both are added. Break-glass accounts are framed as needing their own path, with no claims about specific products."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no AI angle, and that is mostly correct: the standards forbid manufacturing urgency through AI. A line on assistants inheriting suite-wide permissions was drafted for LinkedIn but cut. It pushed the post past the length limit and would have diluted a single clear idea. Recommendation: hold the Copilot-permissions angle for its own cycle."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft leaves a CEO with a framework but nothing to do on Monday. Revision: one concrete, answerable question is added across channels: who outside the company could delete our backups? Pro Link explicitly includes itself ('Ours too' / 'Ours included'). That candor builds trust with a reader who is tired of being marketed to."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post is five compressed LinkedIn sentences opening with a padding question ('Fewer vendors or more?'). It is not one sharp observation. Revision: the post is rebuilt around the control-plane line as the lead, at 257 characters, ending on 'your IT provider included'. That ending is the most quotable and shareable element."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "On the final test, could any MSP have published the draft? Yes. It was a balanced pros-and-cons piece with a generic close. Revision: three elements now distinguish it. The control-plane framing, an MSP naming itself as part of the concentration risk, and the GBP's verified tested-backup fact together make this a post most MSPs would not publish. The generic '#Cybersecurity' hashtag is replaced with '#CyberResilience'."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Several sentence pairs open with the same word: 'Done well... / Done carelessly...' (LinkedIn), 'It can make you safer... / It can also...' (GBP), and 'An alert... / An account...' in the revised slide copy. The GBP and Facebook posts also open with rhetorical-question padding. Revision: all pairs are restructured, the questions are converted to statements, and LinkedIn is held to about 1,450 characters."
+    },
+    {
+      "role": "Cybersecurity Expert (with CIO concurring)",
+      "finding": "The draft contradicted itself. The core idea said recovery should sit behind credentials 'nothing else can reach, your IT provider included,' but the GBP post says Pro Link recovers clients' backups. An IT provider cannot restore from backups it cannot reach. The accurate control is narrower and more useful: separate the power to restore from the power to delete. Backups should be immutable for a set retention period, so no single credential, the provider's included, can erase them or shorten retention. The revision applies this distinction across every channel and resolves the contradiction. It also sharpens the self-inclusion. Most MSPs would never tell a client that the right answer to 'could your provider delete our backups?' is 'nobody.' That is what keeps this from being a post any MSP could have published."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Three vendors run through one admin login' was too abstract for a technically literate non-practitioner. Different vendors do not share a login unless something joins them. The revision names the two real mechanisms: a single sign-on account sitting in front of several admin consoles, and a remote management tool holding credentials to all of them. Naming the remote management tool is also more candid, because that tool is usually the IT provider's own."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post restated the LinkedIn thesis instead of finding the most shareable expression. The strongest standalone line is a question an executive can forward to their provider today, followed by a non-obvious right answer ('nobody, not before retention runs out'). The X post, the Instagram question slide and the checklist were rebuilt around that test. That raises shareability and saveability without adding urgency or hype."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
