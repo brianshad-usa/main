@@ -343,3 +343,22 @@ form textarea { font-size: 16px !important; }
   [style*="grid-template-columns:1fr 1fr;gap:5"],
   [style*="grid-template-columns:1fr 1fr;gap:6"] { grid-template-columns: 1fr !important; gap: 32px !important; }
 }
+
+/* 2026-11-17: real photos in page flow (2026 brand shoot + client-site stills, approved by Brian).
+   Web copies live in assets/photos/web as WebP with width/height set; captions and alt text
+   describe only what is visible. --wide caps a photo in a full-width container; --top sits
+   above a block (e.g. the stat cards on the industry pages). */
+.page-photo { margin: 40px 0 0; }
+.page-photo img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 32px rgba(0, 40, 80, .14); }
+.page-photo figcaption { font-size: .85rem; line-height: 1.5; color: #5b6b7f; margin-top: 10px; }
+.page-photo--wide { max-width: 960px; margin-left: auto; margin-right: auto; }
+.page-photo--top { margin: 0 0 24px; }
+@media (max-width: 700px) {
+  .page-photo { margin-top: 28px; }
+  .page-photo--top { margin-top: 0; }
+  .page-photo img { border-radius: 10px; }
+}
+
+/* Blog byline headshot (generate_blog.py writes it; dark hero, so a light ring) */
+.post-meta .post-avatar { display: inline-block; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; vertical-align: middle; margin-right: 10px; border: 2px solid rgba(255, 255, 255, .7); }
+@media (max-width: 520px) { .post-meta .post-avatar { display: block; margin: 0 auto 8px; } }

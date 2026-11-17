@@ -743,7 +743,7 @@ html = f"""<!DOCTYPE html>
   "url": "https://prolinksystems.com/blog/{slug}"
 }}
 </script>
-<link rel="stylesheet" href="/_shared.css?v=20261112">
+<link rel="stylesheet" href="/_shared.css?v=20261117">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -872,7 +872,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
   <h1>{title}</h1>
   <div class="post-meta">
-    By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; {date_str}
+    <img class="post-avatar" src="/assets/photos/web/brian-shad-avatar-160.webp" width="40" height="40" alt="Brian Shad" decoding="async">By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; {date_str}
   </div>
 </div>
 
@@ -970,7 +970,7 @@ index_html = f"""<!DOCTYPE html>
 <meta name="description" content="Expert IT advice, cybersecurity tips, and managed IT insights for Los Angeles businesses from Pro Link Systems &mdash; proudly serving LA companies since 1999.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://prolinksystems.com/blog/">
-<link rel="stylesheet" href="/_shared.css?v=20261112">
+<link rel="stylesheet" href="/_shared.css?v=20261117">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];

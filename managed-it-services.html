@@ -865,7 +865,13 @@
     @media (max-width: 1024px) {
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
-  </style>
+  
+    /* 2026-11-17: real photo in page flow (same look as .page-photo in the shared stylesheet, which this LP doesn't load) */
+    .page-photo { margin: 40px 0 0; }
+    .page-photo img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 32px rgba(0, 40, 80, .14); }
+    .page-photo figcaption { font-size: .85rem; line-height: 1.5; color: #5b6b7f; margin-top: 10px; }
+    @media (max-width: 700px) { .page-photo img { border-radius: 10px; } }
+</style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ProLink_Systems">
 <meta name="twitter:title" content="Managed IT Services Los Angeles | 24/7 IT Support Since 1999">
@@ -1674,6 +1680,13 @@
         Managed IT keeps your technology running day to day. Deciding where that technology should go &mdash; the planning, budgeting, security strategy and roadmap &mdash; is the work of a <a href="/virtual-cio" style="color:#0b3d6b;font-weight:700;text-decoration:none;">virtual CIO (vCIO)</a>. Growing businesses usually need both: operations from managed IT and direction from a vCIO. See <a href="/vcio-vs-break-fix-vs-managed-it" style="color:#0b3d6b;font-weight:700;text-decoration:none;">vCIO vs. break-fix vs. managed IT</a> for how they fit together.
       </p>
       <p style="font-size:1rem;line-height:1.8;margin-bottom:0;"><a href="managed-it-services-pricing-los-angeles" style="color:#0b3d6b;font-weight:700;text-decoration:none;">&rarr; Read our 2026 Los Angeles managed IT pricing guide</a></p>
+      <figure class="page-photo" style="margin:36px 0 44px;">
+        <img src="/assets/photos/web/onsite-assistance-1024.webp"
+             srcset="/assets/photos/web/onsite-assistance-720.webp 720w, /assets/photos/web/onsite-assistance-1024.webp 1024w"
+             sizes="(max-width: 860px) 92vw, 800px" width="1024" height="720" loading="lazy" decoding="async"
+             alt="A Pro Link Systems technician in a branded polo helping a staff member at their desk">
+        <figcaption>A Pro Link Systems technician working through an issue with a staff member.</figcaption>
+      </figure>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">

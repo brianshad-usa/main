@@ -321,6 +321,17 @@ fail-safe and measured; keep them that way:
   `tech_workbench`) were clearly taken in a client's lab, so "our help desk team, Woodland Hills"
   was replaced on 2026-11-12. In use: home why-us card (`team-dual-monitor.webp`), About story
   (`deskside-support-{720,1100}.webp`, srcset).
+  **2026-11-17 photo pass (Brian reviewed the folder; he is the man in the portraits and the
+  light-blue-shirt video frames; Snitzer, Waverly and Optical Zonu OK'd stills; the Woodland Hills
+  building is our office).** In-flow photos use `<figure class="page-photo">` (+ `--wide` in full
+  containers, `--top` above the law/manufacturing stat cards); `managed-it-services.html` and
+  `case-studies.html` don't load `_shared.css`, so they carry the same rules inline (`.cs-photo`).
+  Placed: About (`brian-shad-cto`), help desk, backup & DR, why-us, vCIO, managed IT, law firm,
+  manufacturing, education, nonprofit, contact (building) and three case studies. Blog bylines
+  carry `post-avatar` (generate_blog.py writes it). Brand-video frames have a logo bug top-left —
+  crop it; the old site ("one-stop shop") shows on some wall screens — blur or crop it. Never use
+  the AI-generated group PNGs, frames with children, or anything showing client labels/IPs or
+  security-camera feeds (those sit in the Dropbox `hold` subfolder). City pages: no photos yet.
 - **Readable sizes:** body/card copy ≥ 16px (`.card p` 1rem), form inputs 16px (smaller makes
   iPhones zoom the page on tap), labels ≥ .8rem. Bump `?v=` on `lead-form.css` /
   `contact-form.js` when they change (CSS/JS cache 24 h + 7 d stale). **`_shared.css` is versioned
