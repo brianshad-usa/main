@@ -312,6 +312,11 @@ fail-safe and measured; keep them that way:
   was removed (0 client bookings in 5½ months; the subscription is cancelled) and `/thank-you`,
   which only existed as its booking redirect, 301s to `/contact`. Don't reintroduce a
   third-party booking widget without a reason; Microsoft Bookings comes with Microsoft 365.
+- **Home reviews carousel = real, current Google reviews.** Rebuilt 2026-11-17 from the Google Business
+  Profile API (newest 2026 reviews, 4-5 stars). Every card must match a review on the live profile (on
+  11/17, 9 of the 15 old cards didn't). Quote the reviewer's own sentences only; mark cuts with an ellipsis;
+  show month + year, never "2 years ago". Skip reviews whose specific claims we can't verify. Refresh
+  tooling lives in the private war-room repo (`tools/google-reviews`), not here.
 - **Real photos only.** People imagery comes from `assets/photos/` (the 2026 brand shoot,
   registered in `assets/variety_assets.json`) — never stock or AI images of "our team".
   Web copies go in `assets/photos/web/` as WebP with width/height set. `assets/gbp/` frames
