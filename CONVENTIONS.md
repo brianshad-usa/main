@@ -319,7 +319,8 @@ fail-safe and measured; keep them that way:
   alt text describe only what is visible** (a technician in a Pro Link polo helping someone) —
   never a location, team or role nobody has confirmed: some shoot frames (`lab_consult`,
   `tech_workbench`) were clearly taken in a client's lab, so "our help desk team, Woodland Hills"
-  was replaced on 2026-11-12. In use: home why-us card (`brian-shad-home-{720,1002}.webp` since 2026-11-17, replacing `team-dual-monitor`), About story top-right
+  was replaced on 2026-11-12. In use: home why-us card (`brian-shad-portrait-{720,1100}.webp` = portrait #7, since 2026-11-17; Brian rejected
+  `team-dual-monitor` and the mid-sentence interview still `brian-shad-home-*`), About story top-right
   (`office-woodland-hills-{720,1005}.webp` since 2026-11-17 — Brian didn't like the deskside shot there;
   `deskside-support-*.webp` is now unused).
   **2026-11-17 photo pass (Brian reviewed the folder; he is the man in the portraits and the
