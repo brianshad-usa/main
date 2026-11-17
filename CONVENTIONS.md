@@ -319,8 +319,9 @@ fail-safe and measured; keep them that way:
   alt text describe only what is visible** (a technician in a Pro Link polo helping someone) —
   never a location, team or role nobody has confirmed: some shoot frames (`lab_consult`,
   `tech_workbench`) were clearly taken in a client's lab, so "our help desk team, Woodland Hills"
-  was replaced on 2026-11-12. In use: home why-us card (`team-dual-monitor.webp`), About story
-  (`deskside-support-{720,1100}.webp`, srcset).
+  was replaced on 2026-11-12. In use: home why-us card (`team-dual-monitor.webp`), About story top-right
+  (`office-woodland-hills-{720,1005}.webp` since 2026-11-17 — Brian didn't like the deskside shot there;
+  `deskside-support-*.webp` is now unused).
   **2026-11-17 photo pass (Brian reviewed the folder; he is the man in the portraits and the
   light-blue-shirt video frames; Snitzer, Waverly and Optical Zonu OK'd stills; the Woodland Hills
   building is our office).** In-flow photos use `<figure class="page-photo">` (+ `--wide` in full
