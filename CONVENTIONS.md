@@ -319,7 +319,7 @@ fail-safe and measured; keep them that way:
   alt text describe only what is visible** (a technician in a Pro Link polo helping someone) —
   never a location, team or role nobody has confirmed: some shoot frames (`lab_consult`,
   `tech_workbench`) were clearly taken in a client's lab, so "our help desk team, Woodland Hills"
-  was replaced on 2026-11-12. In use: home why-us card (`team-dual-monitor.webp`), About story top-right
+  was replaced on 2026-11-12. In use: home why-us card (`brian-shad-home-{720,1002}.webp` since 2026-11-17, replacing `team-dual-monitor`), About story top-right
   (`office-woodland-hills-{720,1005}.webp` since 2026-11-17 — Brian didn't like the deskside shot there;
   `deskside-support-*.webp` is now unused).
   **2026-11-17 photo pass (Brian reviewed the folder; he is the man in the portraits and the
@@ -329,7 +329,8 @@ fail-safe and measured; keep them that way:
   `case-studies.html` don't load `_shared.css`, so they carry the same rules inline (`.cs-photo`).
   Placed: About (`brian-shad-cto`), help desk, backup & DR, why-us, vCIO, managed IT, law firm,
   manufacturing, education, nonprofit, contact (building) and three case studies. Blog bylines
-  carry `post-avatar` (generate_blog.py writes it). Brand-video frames have a logo bug top-left —
+  carry `post-avatar` = `brian-shad-byline-160.webp` (top square of portrait #4 so the whole face fits
+  the circle; generate_blog.py writes it). Brand-video frames have a logo bug top-left —
   crop it; the old site ("one-stop shop") shows on some wall screens — blur or crop it. Never use
   the AI-generated group PNGs, frames with children, or anything showing client labels/IPs or
   security-camera feeds (those sit in the Dropbox `hold` subfolder). City pages: no photos yet.
