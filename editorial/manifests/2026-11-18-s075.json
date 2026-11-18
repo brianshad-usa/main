@@ -1,0 +1,174 @@
+{
+  "post": "Picture a Monday. Your accounts payable lead gets a reply in a real thread with a long-time vendor, asking to update their bank details. The history is accurate because the sender has read it. Weeks earlier, a stolen password let someone set a rule quietly copying your AP lead's mailbox to an outside address. This message comes from a lookalike domain, one letter off.\n\nThat scenario is hypothetical, but every step is realistic. Unglamorous Microsoft 365 settings break the chain: a second sign-in step for everyone, external forwarding blocked, fewer admin accounts, sharing limited to specific people. One habit no setting replaces: confirm any bank change by calling a number you already have.\n\nMost of this needs no new software. What it needs is an hour to check, and someone willing to ask whose workflow depends on the old way.",
+  "headline": "Ten Microsoft 365 checks, in the order an attacker meets them",
+  "cta_label": "Talk to our team",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-18-s075-card.png",
+  "image_file_jpg": "2026-11-18-s075-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S075",
+  "core_idea": "Many Microsoft 365 tenants are not missing their security settings. They were set at migration and later reversed by someone whose workflow broke. The most valuable hour is spent checking for that drift, along the path an attacker would take from one stolen password to a wired payment.",
+  "channels": {
+    "linkedin": "The Microsoft 365 setting most worth worrying about is the one someone switched off last spring.\n\nMost tenants are not missing their protections. They were configured at migration, and a few were quietly reversed when they broke someone's workflow.\n\nSo the best hour you can spend in 365 this quarter builds nothing. It checks for drift. Here are ten settings, in our team's judgment, ordered the way an attacker meets them.\n\nGetting in\n1. Phishing-resistant MFA for admins, MFA for everyone else.\n2. Separate admin accounts, and fewer of them.\n3. Conditional Access for risky sign-ins and unmanaged devices, where licensed.\n4. Safe Links and Safe Attachments on, where licensed.\n\nStaying in\n5. External auto-forwarding blocked, exceptions reviewed.\n6. Third-party app consent routed through approval.\n\nPosing as you\n7. DMARC at enforcement, so receiving servers reject mail forged as your exact domain.\n\nReaching data\n8. Sharing defaulted to specific people, with expiring links.\n9. Permissions cleaned up before Copilot, which surfaces whatever a user can already reach.\n\nFinding out\n10. Audit logging confirmed on, with a retention period someone has read.\n\nFor a CFO, this chain is the distance between one stolen password and a wired payment.\n\nExpect the hour to find gaps, not close them. DMARC and sharing changes take weeks and a conversation with the people affected. Skip that conversation and the setting flips back.\n\nIf you run IT internally, take the list. Our incident-response playbook is public too, with no form.",
+    "facebook": "Picture a Monday. Your accounts payable lead gets a reply in a real thread with a long-time vendor, asking to update their bank details. The history is accurate because the sender has read it. Weeks earlier, a stolen password let someone set a rule quietly copying your AP lead's mailbox to an outside address. This message comes from a lookalike domain, one letter off.\n\nThat scenario is hypothetical, but every step is realistic. Unglamorous Microsoft 365 settings break the chain: a second sign-in step for everyone, external forwarding blocked, fewer admin accounts, sharing limited to specific people. One habit no setting replaces: confirm any bank change by calling a number you already have.\n\nMost of this needs no new software. What it needs is an hour to check, and someone willing to ask whose workflow depends on the old way.",
+    "gbp": "From our Woodland Hills team, a practical hour for any Los Angeles business on Microsoft 365. The goal is to check, not rebuild. Verify multi-factor sign-in is required for everyone, with stronger methods for admins. Confirm email cannot auto-forward to outside addresses, and review any exceptions. Count your admin accounts and cut the extras. Set file sharing to specific people with expiring links. Before turning on Copilot, review who can open what. Anything that fails a check deserves a conversation with the people it affects before you change it. If you want a second opinion, our in-house, US-based team answers calls live.",
+    "x": [
+      "The Microsoft 365 setting most worth checking is the one someone switched off because it broke their workflow. Most tenants are not missing protections. They drifted. Audit for reversal, not absence."
+    ],
+    "instagram_caption": "The Microsoft 365 setting most worth checking is the one someone switched off. Most checklists assume your protections are missing. Often they were set once and reversed later, by someone whose workflow broke.\n\nThese ten checks follow the path an attacker takes: getting in, staying in, posing as you, reaching data, and finding out what happened. Use an hour to find the gaps. Fixing them, especially DMARC and sharing, takes longer and a conversation with the people affected.\n\nSave it for your next IT meeting, or send it to whoever runs your tenant.\n\n#Microsoft365 #M365Security #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "photo",
+    "format": "single_image",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "behind_scenes",
+    "channels": {
+      "linkedin": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "facebook": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "gbp": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "instagram": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "x": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 93,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 93,
+      "originality": 90,
+      "hook_strength": 93,
+      "educational_value": 96,
+      "technical_accuracy": 95,
+      "executive_value": 95,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 95,
+      "shareability": 93,
+      "saveability": 97,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "OPINION: the ten listed settings are our team's judgment of where an hour of checking in Microsoft 365 pays back most (no internal survey implied)",
+    "ANALYSIS: many Microsoft 365 tenants are configured at migration and not revisited as the business changes (no quantity claimed)",
+    "ANALYSIS: security settings are often reversed when they disrupt a workflow, which is why change needs a conversation with affected users",
+    "ANALYSIS: 'switched off last spring' is illustrative phrasing, not a reported incident",
+    "ANALYSIS: the settings map to stages of an attack path: initial access, persistence, impersonation, data exposure, investigation",
+    "ANALYSIS: Conditional Access and Safe Links/Safe Attachments depend on licensing tiers (consistent with Microsoft public documentation; no dated source in brief; stated only as 'where licensed')",
+    "ANALYSIS: Conditional Access can evaluate sign-in risk and device state (consistent with Microsoft public documentation; risk-based policies stated only as 'where licensed')",
+    "ANALYSIS: DMARC enforcement instructs receiving servers to reject or quarantine mail forged as your exact domain, and does not stop lookalike domains (consistent with the DMARC standard; no absolute claim made)",
+    "ANALYSIS: blocking external auto-forwarding prevents rule-based copying of a mailbox to outside addresses",
+    "ANALYSIS: Copilot surfaces content a user already has permission to access (consistent with Microsoft public documentation; no dated source in brief)",
+    "ANALYSIS: DMARC enforcement and sharing changes typically require staged rollout over weeks rather than a single session (no figure cited)",
+    "ANALYSIS: callback verification of bank-detail changes through a known number is a process control no tenant setting replaces",
+    "ANALYSIS: most of these checks require no new software (licensing caveats stated where they apply)",
+    "ANALYSIS (explicitly labeled hypothetical, not a client story): AP mailbox compromise, outbound forwarding rule, lookalike-domain bank-change request",
+    "FACT(F012): Pro Link Systems serves Los Angeles businesses from Woodland Hills (location used in GBP only)",
+    "FACT(F014): Pro Link Systems publishes its incident-response playbook publicly, free and ungated",
+    "FACT(F002): team is in-house",
+    "FACT(F008): team is US-based",
+    "FACT(F007): calls are answered live"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The concept is a ten-item settings list, a format many MSPs publish. The draft's only distinctive idea, that good settings get quietly reversed, is buried near the end of the LinkedIn post. The revision makes drift and reversal the lead, so the post is not just another checklist."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The list was grouped by product area (sign-ins, email, files), which reads like an admin console menu. The revision orders all ten settings along the path an attacker takes: getting in, staying in, posing as you, reaching data, finding out. That gives the carousel a real progression and the reader a mental model they can keep."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The hook slide repeated the kicker's idea in a soft headline. Content slides packed three dense instructions into each body. The revision tightens bodies and adds a consistent footer marker ('Path 2 of 5') so a progress diagram can run through the deck as the recurring visual system. The draft also ended on a help-desk sales slide that broke the editorial register. It is removed."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Three truth-discipline problems. First, 'Ask our engineers... the answers barely vary' and 'We asked our engineers a simple question' imply an internal survey that is not on record, which is an invented research finding. Second, 'Most tenants are configured once' is an unsourced quantitative generalization. Third, the Facebook line 'Scenarios like this come up often when our team talks shop' implies client incidents. All three are reframed as plainly labeled opinion and hypothetical."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Mostly free' and 'almost entirely free to implement' are inaccurate. Conditional Access requires Entra ID P1-level licensing, and Safe Links and Safe Attachments require Defender for Office 365. The 'one hour' promise is also unrealistic for remediation: DMARC enforcement and sharing changes take weeks of staged rollout. The revision reframes the hour as an hour to find gaps, not fix them, and flags licensing wherever it applies."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The core idea claimed every setting closes a path from a stolen password, but it does not hold for every item. DMARC protects others from spoofing of your exact domain, not your own sign-ins, and it does nothing against lookalike domains. The Facebook scenario was also internally muddled about whose mailbox was compromised. The revision corrects DMARC's scope, rebuilds the scenario so the attacker reads your AP mailbox and replies from a lookalike domain, and adds out-of-band callback verification, the control no setting replaces."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The Copilot item is accurate and well-scoped, since Copilot surfaces content a user already has permission to reach. It was placed last, as an afterthought. The revision puts it under 'reaching data' alongside sharing, which is where its business risk belongs. Copilot is not overhyped anywhere, which is correct."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The CEO/CFO translation was one abstract sentence. The revision ties the whole chain to one consequence an executive feels: the distance between one stolen password and a wired payment. It also tells the executive what the hour actually buys, a list of gaps, so they can budget the follow-through honestly."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post was a compressed summary of the list, which is weak on X and unlikely to be shared. It is replaced with a single sharp observation about drift versus absence. The checklist_items field was empty even though this concept is built to be saved. It is now populated so the card asset can be saved as a working checklist."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The Instagram CTA slide and the GBP close pushed the help desk at readers who are not clients, which undercuts the generous 'take this list' stance. The revision drops the carousel CTA slide entirely. GBP keeps one restrained line of verified facts (F002, F007, F008). The Facebook 'since 1999' sign-off is removed because the scenario does the brand work better."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Our engineers' favorite hour' is cute rather than sharp. 'The thread looks real because it is real' was followed by an ambiguous referent. The phrase 'a person will pick up' slightly loosens F007's exact wording. The revision fixes all three and checks for consecutive same-word sentence openings. The original GBP draft would have repeated 'Confirm', and the revised Facebook draft had back-to-back 'The' openings. Channel lengths were checked: LinkedIn is about 1,550 characters, Facebook about 780, GBP about 600, and X is under 280."
+    },
+    {
+      "role": "Brand Director (MSP test)",
+      "finding": "With the draft framing, any MSP could have published this post. The revision's ownable elements are the drift-not-absence thesis, the attacker-path ordering, honest licensing and timeline caveats, and openly giving the list to internal IT. These make it more distinctive, but the underlying ten settings remain common knowledge, which caps originality."
+    },
+    {
+      "role": "Senior Technology Editor / Cybersecurity Expert",
+      "finding": "Three technical claims overreached or were dated. 'DMARC at enforcement, so nobody can send mail as your exact domain' is absolute. Enforcement tells receiving servers to reject or quarantine forged mail; it does not make spoofing impossible. 'Conditional Access blocking legacy authentication' leads with a 2019-era control that Microsoft has largely retired in Exchange Online, which undercuts the 2026 framing. Revised: DMARC now reads 'receiving servers reject mail forged as your exact domain.' Conditional Access is now framed around risky sign-ins and unmanaged devices."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The draft broke the house rule against opening consecutive sentences with the same word in two places: LinkedIn ('The business moved on. The settings did not') and Instagram slide 2 ('A forwarding block... A sharing default...'). The LinkedIn post also ran at or just over the 1,600-character ceiling. The Facebook scenario was ambiguous about whose mailbox was compromised. All four are fixed: LinkedIn is trimmed to roughly 1,500 characters, and Facebook now names the AP lead's mailbox."
+    },
+    {
+      "role": "Brand Director / CMO",
+      "finding": "This was the weakest dimension from round one. A ten-item Microsoft 365 checklist is a genre any MSP could publish, and the hook ('configured for the company that existed on migration day') was observational rather than sharp. Revisions: (1) The hook now leads with the counterintuitive claim: the setting most worth worrying about is the one someone switched off. (2) The 'Finding out' stage, the tenth step, now connects to a verified, distinctive ProLink fact (F014): the incident-response playbook is public and ungated. That gives the piece something only ProLink can say, without a second CTA. Residual risk: the list format itself remains familiar."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
