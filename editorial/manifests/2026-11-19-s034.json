@@ -1,0 +1,181 @@
+{
+  "post": "It's Friday at 4:40. Your bookkeeper's phone rings, and it's you. Same voice, same way of saying her name. A new vendor needs paying before the weekend, and you're about to board a flight.\n\nExcept it isn't you. Cloned voices are now good enough that she can't reliably tell by ear, and she shouldn't have to.\n\nShe says \"I'll call you right back,\" hangs up, and dials your cell from her own contacts. You answer from your desk, confused. Nothing gets paid.\n\nThat habit is the defense: any request to move money, change bank details, or reset a login gets confirmed on a second channel, using contact info you already had. One detail matters. If someone emails asking to update a vendor's phone number, treat that as a sensitive request too, or the callback goes to the attacker.\n\nTell your team now that a callback will never annoy you. Then mean it.",
+  "headline": "You don't have to spot a deepfake to stop one",
+  "cta_label": "Talk to our team",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-19-s034-card.png",
+  "image_file_jpg": "2026-11-19-s034-card.jpg",
+  "theme": "ai_threats",
+  "idea_id": "S034",
+  "core_idea": "You don't have to detect a convincing impersonation to defeat it. You need a rule that no single channel can complete a sensitive request. That rule only holds if 'independent' means a different path of compromise, and if the records you call back from are protected as carefully as the payment itself. It also has to cover the door executives forget: the IT help desk that can reset a login.",
+  "channels": {
+    "linkedin": "You do not need to spot a deepfake to defeat one.\n\nDetection is a contest the attacker practices for. Process is a contest where you write the rules. The rule that matters: no single channel can complete a sensitive request on its own.\n\nAn emailed wire request is confirmed by a call you place, to a number already on file. Vendor banking changes are confirmed through the contact you onboarded them with. When a \"CEO\" calls for urgent access, the request is confirmed somewhere the caller did not choose.\n\nTwo details decide whether it holds.\n\nFirst, independence is about how a channel gets compromised, not which app it uses. Email and Teams from the same hijacked Microsoft 365 account are one channel. Caller ID can be spoofed, so a call you receive proves nothing; the call you place is what counts.\n\nSecond, the callback is only as good as the number you dial. If one email can update a vendor's contact record, the attacker edits the record first and answers your verification call. Record edits are sensitive requests too.\n\nOne channel executives rarely examine: the IT help desk. A caller who sounds like your CFO asking for an MFA reset is the same attack aimed at a different door. Ask your provider how a reset gets verified, and expect a specific answer. The same logic covers AI agents: a model reading an inbox is still one channel.\n\nMy view: this is among the cheapest controls a company can run, and better fakes do not weaken it. Leadership has to say, in advance, that urgency never waives the step. Then nobody chooses between the policy and the boss.",
+    "facebook": "It's Friday at 4:40. Your bookkeeper's phone rings, and it's you. Same voice, same way of saying her name. A new vendor needs paying before the weekend, and you're about to board a flight.\n\nExcept it isn't you. Cloned voices are now good enough that she can't reliably tell by ear, and she shouldn't have to.\n\nShe says \"I'll call you right back,\" hangs up, and dials your cell from her own contacts. You answer from your desk, confused. Nothing gets paid.\n\nThat habit is the defense: any request to move money, change bank details, or reset a login gets confirmed on a second channel, using contact info you already had. One detail matters. If someone emails asking to update a vendor's phone number, treat that as a sensitive request too, or the callback goes to the attacker.\n\nTell your team now that a callback will never annoy you. Then mean it.",
+    "gbp": "Before your team resets a password or pays a changed invoice, ask one question: could a single email or phone call have made this happen? If yes, an impersonator can make it happen too. Cloned voices and hijacked inboxes are convincing enough that staff shouldn't be asked to judge by ear. Instead, confirm payments, bank-detail changes, and login resets on a second channel, using contact details already in your records, and treat edits to those records as sensitive too. Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. Talk to us if you'd like help putting a verification step in writing.",
+    "x": [
+      "Detection is the wrong goal for voice-clone fraud. Make sure no single call or email can move money or reset a login: confirm on a second channel, from contact details already on file. And guard that file. A callback to a number the attacker edited verifies nothing."
+    ],
+    "instagram_caption": "Most advice about deepfake and voice-clone fraud asks staff to become lie detectors. That is a losing assignment. The stronger defense is a design rule: no single channel can complete a payment, a bank-detail change, or a login reset. Confirm on a second channel using contact details already in your records. Two details decide whether it holds, and most callback policies miss the second one: the records you call back from are an attack surface too. So is the IT help desk that can reset a login. Save this for your next finance and operations review.\n\n#Deepfakes #BusinessEmailCompromise #VoiceCloning"
+  },
+  "carousel": {
+    "png": [
+      "2026-11-19-s034-01.png",
+      "2026-11-19-s034-02.png",
+      "2026-11-19-s034-03.png",
+      "2026-11-19-s034-04.png",
+      "2026-11-19-s034-05.png",
+      "2026-11-19-s034-06.png",
+      "2026-11-19-s034-07.png",
+      "2026-11-19-s034-08.png"
+    ],
+    "jpg": [
+      "2026-11-19-s034-01.jpg",
+      "2026-11-19-s034-02.jpg",
+      "2026-11-19-s034-03.jpg",
+      "2026-11-19-s034-04.jpg",
+      "2026-11-19-s034-05.jpg",
+      "2026-11-19-s034-06.jpg",
+      "2026-11-19-s034-07.jpg",
+      "2026-11-19-s034-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "bright_accent",
+    "format": "carousel",
+    "ground": "gold",
+    "layout": "left_block",
+    "register": "positive",
+    "channels": {
+      "linkedin": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "facebook": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "gbp": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "instagram": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      },
+      "x": {
+        "style": "bright_accent",
+        "format": "carousel",
+        "ground": "gold",
+        "layout": "left_block",
+        "register": "positive"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 94,
+      "originality": 93,
+      "hook_strength": 94,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 95,
+      "writing_quality": 95,
+      "visual_sophistication": 89,
+      "platform_fit": 94,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 93,
+      "trust": 97,
+      "strategic_value": 93
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: cloned voices and deepfake video can imitate a person convincingly enough that staff cannot reliably detect them by ear or sight (qualitative; no statistic used)",
+    "ANALYSIS: requiring confirmation on a second, independent channel means one compromised channel cannot complete a sensitive request",
+    "ANALYSIS: channel independence depends on the path of compromise; email and Teams messages from the same compromised Microsoft 365 account represent one channel",
+    "FACT (general, well established): inbound caller ID can be spoofed, so a received call does not verify identity; a call placed to a known number is a far stronger check (in-person or separately authenticated channels also qualify)",
+    "ANALYSIS: if contact or banking records can be edited through an unverified request, an attacker can redirect the verification callback; record edits must themselves be verified",
+    "ANALYSIS: payments, banking changes, password and MFA resets, and new access grants are the requests impersonators typically target",
+    "ANALYSIS: IT help desk password and MFA reset requests are a target for impersonation; framed as a question for the reader to ask their provider, with no claim about Pro Link's own reset procedure",
+    "ANALYSIS: AI agents operating on an inbox constitute a single channel and are subject to the same rule (conditional framing; no adoption claim made)",
+    "OPINION: this is among the cheapest controls a company can run, and improved impersonation quality does not weaken it because it does not depend on detection",
+    "OPINION: leadership should state in advance that urgency never waives verification and that callbacks are always welcome",
+    "ANALYSIS: the Friday bookkeeper call is an illustrative hypothetical scenario, not a real incident or client story",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The core advice, a callback to a known number, is something any MSP could post, so the draft fails the final test. Only the GBP mentions Pro Link. Fix: lead with expertise few posts cover. Channel independence is defined by how a channel gets compromised, and the callback directory is itself an attack surface. No new Pro Link claims are needed."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The same hook ('you don't have to spot/detect the fake') runs on LinkedIn, Instagram, X and the card headline. One core idea per cycle is correct, but each channel needs its own expression. X and Instagram now open differently, and the LinkedIn line is kept as the anchor."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 6 packs three rules into one paragraph of small text, and slides 5 and 7 carry long bodies. That breaks the no-paragraphs standard. No slide lends itself to a diagram. Revised slides cap bodies at about two short lines. Slide 7 is a scannable four-item headline. Slides 5 and 6 are built for a simple two-path channel diagram."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Several overclaims: 'keeps working no matter how good the fake gets' (LinkedIn), '\"I'll call you right back\" is a complete defense' (slide 5), and 'beats voice-clone fraud' (card). The control fails if the attacker has already edited the number on file. Claims were narrowed to what is true: the control does not depend on detection, so better fakes do not weaken it, provided the records are protected."
+    },
+    {
+      "role": "CIO",
+      "finding": "The draft treats the callback number as trustworthy by default. In practice, vendor master files and HR contact records are often editable through the same email channel being verified. Added the rule that edits to contact and banking records are sensitive requests in their own right."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Second channel' is underspecified, and the misunderstanding is common. Email and Teams from one hijacked Microsoft 365 identity are a single channel. Inbound caller ID can be spoofed, so only an outbound callback verifies. Both points were added; they are accurate and they separate this post from generic advice."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treats AI only as the attacker's tool. It misses the 2026 angle that companies are wiring AI agents into finance workflows, which can rebuild the single-channel weakness. One conditional sentence was added without inventing urgency or adoption figures."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn piece explains the principle but not what separates a policy that holds from one that only exists on paper. Executives already know 'call back.' The two refinements (independence, record integrity) and the leadership commitment are the parts worth forwarding to a CFO."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "checklist_items is empty even though the content is a natural save-and-share checklist. The Instagram caption also has two CTAs ('tell your team' and 'Save this'). Populated the checklist and reduced the caption to a single save prompt. Replaced #SmallBusiness, which mismatches a 20–500 seat executive audience, with #BusinessEmailCompromise."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The tone leans toward reassurance repeated across channels: 'encouraging,' 'reassuring,' 'Good news,' 'Now the happy ending.' That reads softer and more promotional than a peer with context. Replaced with plain, confident framing."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The LinkedIn piece switches from 'CEO' to 'CFO' within a few paragraphs. The GBP opens with a generic line that could preface any topic. In the revised LinkedIn, consecutive sentences 'A vendor's...' / 'A \"CEO\"...' would have started with the same word, so they were restructured. The draft caption's 'Swipe through the three rules' no longer matches the slide structure and was rewritten."
+    },
+    {
+      "role": "Brand Director / Chief Marketing Officer",
+      "finding": "The package still fails the final test: any MSP could have published it. The argument is excellent, but nothing in it draws on what an IT provider sees from its own side. The missing angle is that the IT help desk is itself a channel impersonators target, since a convincing caller asking for an MFA reset is the same attack aimed at a different door. Revision: add the help desk as a named channel in LinkedIn, Instagram, and the checklist, and give the executive one sharp question to put to their own provider. It is framed as advice, not as a claim about Pro Link's procedures, because no such capability is in verified facts."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "'Only the outbound callback counts' (Instagram slide 5, LinkedIn, claims audit) overstates the case. In-person confirmation or a separately authenticated vendor portal are also valid second channels. The real distinction is between a call you receive and a call you place. Revision: rephrase everywhere as 'the call you place counts; the call you receive doesn't' and soften the claims-audit wording accordingly. A SIM-swap caveat was considered and left out because it would overload short-form copy."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slide 7 put a four-item list in the headline slot, which breaks the type hierarchy the rest of the carousel holds. The generic #Cybersecurity hashtag also undercuts the editorial register. Slide 4 should read as a typographic flow diagram rather than a sentence. Revision: give slide 7 a short headline with the list in the body, set slide 4's headline as a four-step arrow sequence, keep footers empty except a single quiet brand mark on the takeaway slide, and replace the generic hashtag with a specific one. Remaining limitation: this schema cannot carry art direction, so visual quality still depends on the renderer."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
