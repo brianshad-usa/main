@@ -613,6 +613,7 @@ FOOTER = f'''<footer class="site-footer" role="contentinfo">
       <a href="/services#dr">Disaster Recovery</a>
       <a href="/services#consulting">IT Consulting</a>
       <a href="/services#remote">Remote Workplace</a>
+      <a href="/self-service">Self-Service Assessments</a>
     </div>
     <div class="footer-col">
       <h3>Company</h3>
