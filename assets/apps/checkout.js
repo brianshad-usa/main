@@ -122,6 +122,20 @@
       if (e.target && e.target.getAttribute("aria-invalid") === "true") e.target.removeAttribute("aria-invalid");
     });
 
+    // Billing name defaults to the contact's name (still editable).
+    var contactName = form.querySelector('[name="contact_name"]');
+    var billFirst = form.querySelector('[name="bill_first_name"]');
+    var billLast = form.querySelector('[name="bill_last_name"]');
+    if (contactName && billFirst && billLast) {
+      contactName.addEventListener("change", function () {
+        if (billFirst.value || billLast.value) return;
+        var parts = contactName.value.trim().split(/\s+/);
+        if (parts.length < 2) return;
+        billLast.value = parts.pop();
+        billFirst.value = parts.join(" ");
+      });
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (busy) return;
@@ -178,7 +192,7 @@
       root.innerHTML =
         '<div class="pay-step-head"><h2 id="pay-step-title" tabindex="-1">Payment</h2>' +
         '<p class="pay-step-lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Secure payment by Authorize.net</p></div>' +
-        '<p class="pay-step-note">Enter your card details below. They go straight to Authorize.net; Pro Link never sees them.</p>' +
+        '<p class="pay-step-note">Enter your card below. Card details go straight to Authorize.net; Pro Link never sees them.</p>' +
         '<div class="checkout-alert checkout-alert--info" data-pay-expired hidden>This payment session has timed out. If you already paid, your confirmation opens in a moment. Otherwise, <button type="button" class="pay-link pay-link--inline" data-pay-restart>start again</button>.</div>' +
         '<div class="pay-frame-wrap"><div class="pay-frame-loading" data-pay-loading><span class="app-spinner" aria-hidden="true"></span><span data-pay-loading-text>Loading the secure payment form&hellip;</span></div>' +
         '<iframe class="pay-frame" name="pls-anet-payment" title="Secure card payment form from Authorize.net"></iframe></div>' +
@@ -208,7 +222,7 @@
           var m = parseMsg(str);
           if (m.action === "resizeWindow") {
             var h = parseInt(m.height, 10);
-            if (h > 0 && h < 5000) step.frame.style.height = Math.max(h, 360) + "px";
+            if (h > 0 && h < 5000) step.frame.style.height = Math.max(h, 280) + "px";
           } else if (m.action === "cancel") {
             ga("event", "checkout_cancel", { product: product });
             closePayment(true);

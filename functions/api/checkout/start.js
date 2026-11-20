@@ -9,7 +9,7 @@
  * Setup and secrets: functions/_lib/checkout/core.js header.
  */
 import {
-  json, log, nowIso, newOrderId, clientIp, verifyTurnstile, anetConfig,
+  json, log, nowIso, newOrderId, clientIp, verifyTurnstile, anetConfig, billingFromInput, cleanLine,
   hostedPaymentToken, getOrder, putOrder, sendAlert, KV_TTL_PENDING, UNAVAILABLE,
 } from "../../_lib/checkout/core.js";
 import { productById } from "../../_lib/checkout/products.js";
@@ -52,12 +52,17 @@ export async function onRequestPost({ request, env }) {
     log({ outcome: "rejected", reason: "validation", field: res.field, errors: res.errors, product: product.id });
     return json(400, { ok: false, field: res.field, message: res.message });
   }
+  const bill = billingFromInput(input);           // every app: billing address for Authorize.net (not stored)
+  if (!bill.ok) {
+    log({ outcome: "rejected", reason: "validation", field: bill.field, product: product.id });
+    return json(400, { ok: false, field: bill.field, message: bill.message });
+  }
 
   const origin = new URL(request.url).origin;
   let pay;
   try {
     pay = await hostedPaymentToken(env, anet, {
-      product, orderId, email: res.email, ip, origin,
+      product, orderId, email: res.email, ip, origin, billTo: bill.billTo, company: cleanLine(input.company_name, 50),
     });
   } catch (e) {
     pay = { ok: false, codes: ["unreachable"] };

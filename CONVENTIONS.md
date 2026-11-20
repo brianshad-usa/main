@@ -516,7 +516,13 @@ that I would like to host on our site similarly". Every app follows this one pat
   iframe (token posted into it), the order summary stays beside it. Authorize.net only lets us set
   its accent color, button text and merchant name (no logo), hence the iframe. It talks back through
   the same-origin relay page `/assets/apps/anet-communicator` (URL sent in every token as
-  `hostedPaymentIFrameCommunicatorUrl`; never move it): resize and cancel. The step polls
+  `hostedPaymentIFrameCommunicatorUrl`; never move it): resize and cancel. Brian found the first
+  version (Authorize.net's full form in a bordered 640 px frame) ugly, so the box is kept SMALL: the
+  billing name/address is collected on OUR form (`bill_first_name`, `bill_last_name`, `bill_address`,
+  `bill_city`, `bill_state`, `bill_zip`; required by `start` for every app; sent as `billTo`, never
+  stored) and the hosted form shows only card number, expiry, code and Pay (billing block, order
+  summary and Cancel button turned off); the iframe is borderless, default 560 px (640 px on phones)
+  and then exactly the height Authorize.net reports. The step polls
   `/api/checkout/status` and goes to the thank-you page once the webhook has verified the payment;
   the receipt's "Continue" (or "Cancel") page loaded inside the iframe lifts itself to the top window
   (top of checkout.js). Fallback link "Open it full-window" posts the same token to Authorize.net's

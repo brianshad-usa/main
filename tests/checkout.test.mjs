@@ -86,6 +86,7 @@ const formInput = (over = {}) => Object.assign({
   tech_name: "Sam Lee", tech_email: "it@northwinddental.com",
   pre_call: false, notes: "",
   auth_accepted: true, auth_name: "Dana Rivera", auth_title: "Office Manager",
+  bill_first_name: "Dana", bill_last_name: "Rivera", bill_address: "123 Main St", bill_city: "Woodland Hills", bill_state: "CA", bill_zip: "91364",
   source: { page: "/m365-security-assessment?utm_source=google", utm_source: "google", utm_medium: "cpc", gclid: "abc" },
 }, over);
 
@@ -164,14 +165,18 @@ test("start: happy path (sandbox) stores a pending order and returns a hosted to
   assert.equal(anetCall.url, "https://apitest.authorize.net/xml/v1/request.api");
   const req = JSON.parse(anetCall.body).getHostedPaymentPageRequest;
   assert.deepEqual(Object.keys(req), ["merchantAuthentication", "refId", "transactionRequest", "hostedPaymentSettings"]);
-  assert.deepEqual(Object.keys(req.transactionRequest), ["transactionType", "amount", "order", "customer", "customerIP"]);
+  assert.deepEqual(Object.keys(req.transactionRequest), ["transactionType", "amount", "order", "customer", "billTo", "customerIP"]);
+  assert.deepEqual(req.transactionRequest.billTo, { firstName: "Dana", lastName: "Rivera", company: "Northwind Dental Group",
+    address: "123 Main St", city: "Woodland Hills", state: "CA", zip: "91364", country: "US" });
   assert.equal(req.transactionRequest.amount, "2500.00");
   assert.equal(req.transactionRequest.order.invoiceNumber, body.order_id);
   assert.ok(body.order_id.length <= 20);
   assert.equal(req.transactionRequest.customer.email, "dana@northwinddental.com");
   const settings = Object.fromEntries(req.hostedPaymentSettings.setting.map((x) => [x.settingName, JSON.parse(x.settingValue)]));
   assert.equal(settings.hostedPaymentReturnOptions.url, `https://prolinksystems.com/m365-security-assessment/thank-you?order=${body.order_id}`);
-  assert.equal(settings.hostedPaymentReturnOptions.cancelUrl, "https://prolinksystems.com/m365-security-assessment/order?cancelled=1");
+  assert.equal("cancelUrl" in settings.hostedPaymentReturnOptions, false, "no Cancel button inside the embedded form");
+  assert.equal(settings.hostedPaymentBillingAddressOptions.show, false, "billing address comes from our own form");
+  assert.equal(settings.hostedPaymentOrderOptions.show, false, "no duplicate order summary inside the form");
   assert.equal(settings.hostedPaymentButtonOptions.text, "Pay $2,500.00");
   assert.equal(settings.hostedPaymentSecurityOptions.captcha, true);
   assert.equal(settings.hostedPaymentIFrameCommunicatorUrl.url, "https://prolinksystems.com/assets/apps/anet-communicator");
@@ -213,6 +218,10 @@ test("start: field validation", async () => {
     [{ auth_name: " " }, "auth_name"],
     [{ employees: "12" }, "employees"],
     [{ notes: "x".repeat(1001) }, "notes"],
+    [{ bill_first_name: " " }, "bill_first_name"],
+    [{ bill_address: "" }, "bill_address"],
+    [{ bill_state: "" }, "bill_state"],
+    [{ bill_zip: "!" }, "bill_zip"],
   ]) {
     resetWorld();
     const { status: s, body } = await placeOrder(makeEnv(), formInput(over));

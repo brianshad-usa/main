@@ -64,7 +64,7 @@
   </script>
 
   <link rel="stylesheet" href="/_shared.css?v=20261117b">
-  <link rel="stylesheet" href="/assets/apps/apps.css?v=20261120">
+  <link rel="stylesheet" href="/assets/apps/apps.css?v=20261120b">
 </head>
 <body>
 
@@ -179,6 +179,39 @@
         </fieldset>
 
         <fieldset>
+          <legend>Billing address</legend>
+          <p class="field-help" style="margin:-6px 0 14px;">The name and address for the card you'll pay with. You enter the card itself in the next step.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="bill_first_name">First name <span class="req">*</span></label>
+              <input type="text" id="bill_first_name" name="bill_first_name" maxlength="50" autocomplete="billing given-name" required>
+            </div>
+            <div class="field">
+              <label for="bill_last_name">Last name <span class="req">*</span></label>
+              <input type="text" id="bill_last_name" name="bill_last_name" maxlength="50" autocomplete="billing family-name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="bill_address">Street address <span class="req">*</span></label>
+            <input type="text" id="bill_address" name="bill_address" maxlength="60" autocomplete="billing address-line1" required>
+          </div>
+          <div class="field-row field-row--3">
+            <div class="field">
+              <label for="bill_city">City <span class="req">*</span></label>
+              <input type="text" id="bill_city" name="bill_city" maxlength="40" autocomplete="billing address-level2" required>
+            </div>
+            <div class="field">
+              <label for="bill_state">State <span class="req">*</span></label>
+              <input type="text" id="bill_state" name="bill_state" maxlength="40" autocomplete="billing address-level1" required>
+            </div>
+            <div class="field">
+              <label for="bill_zip">ZIP code <span class="req">*</span></label>
+              <input type="text" id="bill_zip" name="bill_zip" maxlength="10" autocomplete="billing postal-code" inputmode="numeric" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
           <legend>Authorization</legend>
           <!-- Wording approved by Brian Shad 2026-11-19 = terms_version 2026-11 (product module). Any change to
                this text needs a new terms_version so every order records which wording was accepted. -->
@@ -231,6 +264,6 @@
 </footer>
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<script src="/assets/apps/checkout.js?v=20261120" defer></script>
+<script src="/assets/apps/checkout.js?v=20261120b" defer></script>
 </body>
 </html>

@@ -102,6 +102,29 @@ export function normDomain(v) {
   return d;
 }
 
+/**
+ * Billing name + address from the order form (bill_* fields, every app). Collected on OUR page so the
+ * embedded Authorize.net form only has to ask for the card; sent to Authorize.net as billTo (AVS) and
+ * not stored anywhere. US addresses (country "US").
+ */
+const BILL_ZIP_RE = /^[A-Za-z0-9][A-Za-z0-9 -]{1,9}$/;
+export function billingFromInput(input) {
+  const b = {
+    firstName: cleanLine(input.bill_first_name, 50),
+    lastName: cleanLine(input.bill_last_name, 50),
+    address: cleanLine(input.bill_address, 60),
+    city: cleanLine(input.bill_city, 40),
+    state: cleanLine(input.bill_state, 40),
+    zip: cleanLine(input.bill_zip, 20),
+  };
+  for (const [field, v, label] of [["bill_first_name", b.firstName, "first name"], ["bill_last_name", b.lastName, "last name"],
+    ["bill_address", b.address, "street address"], ["bill_city", b.city, "city"], ["bill_state", b.state, "state"]]) {
+    if (!v) return { ok: false, field, message: `Please enter the billing ${label}.` };
+  }
+  if (!BILL_ZIP_RE.test(b.zip)) return { ok: false, field: "bill_zip", message: "Please enter the billing ZIP code." };
+  return { ok: true, billTo: b };
+}
+
 export function clientIp(request) {
   const ip = (request.headers.get("CF-Connecting-IP") || "").trim();
   return /^[0-9a-fA-F:.]{2,45}$/.test(ip) ? ip : "";
@@ -218,8 +241,10 @@ export const IFRAME_COMMUNICATOR_PATH = "/assets/apps/anet-communicator";
 
 /** Accept Hosted token for one order. settingValue entries are JSON strings (Authorize.net's format).
  *  The same token serves the embedded form (iframe) and the full-window fallback: the receipt's
- *  "Continue" leads to the thank-you page either way (checkout.js lifts it out of the iframe). */
-export async function hostedPaymentToken(env, anet, { product, orderId, email, ip, origin }) {
+ *  "Continue" leads to the thank-you page either way (checkout.js lifts it out of the iframe).
+ *  The billing address comes from our own form (billTo), so the hosted form shows only the card
+ *  fields and the Pay button: no billing block, no order summary, no Cancel button. */
+export async function hostedPaymentToken(env, anet, { product, orderId, email, ip, origin, billTo, company }) {
   const s = (settingName, value) => ({ settingName, settingValue: JSON.stringify(value) });
   const transactionRequest = {
     transactionType: "authCaptureTransaction",
@@ -227,6 +252,12 @@ export async function hostedPaymentToken(env, anet, { product, orderId, email, i
     order: { invoiceNumber: orderId, description: product.name.slice(0, 255) },
     customer: { email },
   };
+  if (billTo) {                                   // element order = Authorize.net's customerAddressType
+    const b = { firstName: billTo.firstName, lastName: billTo.lastName };
+    if (company) b.company = Array.from(String(company)).slice(0, 50).join("");
+    Object.assign(b, { address: billTo.address, city: billTo.city, state: billTo.state, zip: billTo.zip, country: "US" });
+    transactionRequest.billTo = b;
+  }
   if (ip) transactionRequest.customerIP = ip;
   const body = {
     getHostedPaymentPageRequest: {
@@ -239,17 +270,15 @@ export async function hostedPaymentToken(env, anet, { product, orderId, email, i
             showReceipt: true,
             url: `${origin}${product.pages.thankYou}?order=${encodeURIComponent(orderId)}`,
             urlText: "Continue",
-            cancelUrl: `${origin}${product.pages.order}?cancelled=1`,
-            cancelUrlText: "Cancel",
           }),
           s("hostedPaymentButtonOptions", { text: `Pay $${Number(product.amount).toLocaleString("en-US", { minimumFractionDigits: 2 })}` }),
           s("hostedPaymentStyleOptions", { bgColor: "#0b3d6b" }),
           s("hostedPaymentPaymentOptions", { cardCodeRequired: true, showCreditCard: true, showBankAccount: false }),
           s("hostedPaymentSecurityOptions", { captcha: true }),
           s("hostedPaymentShippingAddressOptions", { show: false, required: false }),
-          s("hostedPaymentBillingAddressOptions", { show: true, required: true }),
+          s("hostedPaymentBillingAddressOptions", { show: false, required: false }),
           s("hostedPaymentCustomerOptions", { showEmail: false, requiredEmail: false, addPaymentProfile: false }),
-          s("hostedPaymentOrderOptions", { show: true, merchantName: "Pro Link Systems" }),
+          s("hostedPaymentOrderOptions", { show: false, merchantName: "Pro Link Systems" }),
           s("hostedPaymentIFrameCommunicatorUrl", { url: `${origin}${IFRAME_COMMUNICATOR_PATH}` }),
         ],
       },
