@@ -195,7 +195,7 @@
         '<p class="pay-step-note">Enter your card below. Card details go straight to Authorize.net; Pro Link never sees them.</p>' +
         '<div class="checkout-alert checkout-alert--info" data-pay-expired hidden>This payment session has timed out. If you already paid, your confirmation opens in a moment. Otherwise, <button type="button" class="pay-link pay-link--inline" data-pay-restart>start again</button>.</div>' +
         '<div class="pay-frame-wrap"><div class="pay-frame-loading" data-pay-loading><span class="app-spinner" aria-hidden="true"></span><span data-pay-loading-text>Loading the secure payment form&hellip;</span></div>' +
-        '<iframe class="pay-frame" name="pls-anet-payment" title="Secure card payment form from Authorize.net"></iframe></div>' +
+        '<iframe class="pay-frame" name="pls-anet-payment" title="Secure card payment form from Authorize.net" scrolling="no"></iframe></div>' +
         '<div class="pay-step-actions"><button type="button" class="pay-link" data-pay-back>&larr; Back to your details</button>' +
         '<button type="button" class="pay-link" data-pay-full>Payment form not loading? Open it full-window</button></div>';
       form.parentNode.insertBefore(root, form.nextSibling);
@@ -208,21 +208,47 @@
         expired: root.querySelector("[data-pay-expired]"),
         posted: false
       };
+      // The iframe never scrolls (scrolling="no", like Authorize.net's sample app): it takes the height
+      // the form reports in resizeWindow messages. If none arrives within 6 s of the form loading, it
+      // grows to a height the whole card form fits in, so nothing is ever cut off.
       // The empty iframe's own first "load" fires now, long before any token is posted.
-      step.frame.addEventListener("load", function () { if (step.posted) step.loading.hidden = true; });
+      step.frame.addEventListener("load", function () {
+        if (!step.posted) return;
+        step.loading.hidden = true;
+        var p = pay;
+        if (p && !p.resized) {
+          clearTimeout(p.noResize);
+          p.noResize = setTimeout(function () {
+            if (pay !== p || p.resized || p.done) return;
+            step.frame.style.height = (window.innerWidth < 700 ? 1100 : 900) + "px";
+            try { console.info("[checkout] no size message from the payment form; using the fallback height"); } catch (e) {}
+            ga("event", "checkout_frame_noresize", { product: product });
+          }, 6000);
+        }
+      });
       root.querySelector("[data-pay-back]").addEventListener("click", function () { closePayment(false); });
       root.querySelector("[data-pay-restart]").addEventListener("click", function () { closePayment(false); });
       root.querySelector("[data-pay-full]").addEventListener("click", fullWindow);
 
-      // Messages from Authorize.net, relayed by /assets/apps/anet-communicator (UI hints only: the
-      // webhook + status poll decide whether an order is paid).
+      // Messages from Authorize.net, relayed by /assets/apps/anet-communicator or (fallback) posted
+      // straight to this page. UI hints only: the webhook + status poll decide whether an order is paid.
+      window.addEventListener("message", function (e) {
+        if (!e || !/^https:\/\/(accept|test)\.authorize\.net$/.test(e.origin)) return;
+        if (typeof e.data === "string" && e.data.indexOf("action=") === 0) window.AuthorizeNetIFrame.onReceiveCommunication(e.data);
+      });
       window.AuthorizeNetIFrame = {
         onReceiveCommunication: function (str) {
           if (!pay) return;
           var m = parseMsg(str);
+          step.root.setAttribute("data-frame-messages", String((Number(step.root.getAttribute("data-frame-messages")) || 0) + 1));
           if (m.action === "resizeWindow") {
             var h = parseInt(m.height, 10);
-            if (h > 0 && h < 5000) step.frame.style.height = Math.max(h, 280) + "px";
+            if (h > 0 && h < 5000) {
+              pay.resized = true;
+              clearTimeout(pay.noResize);
+              step.frame.style.height = Math.max(h + 16, 300) + "px";        // a little room: no clipping
+              try { console.info("[checkout] payment form size " + m.width + "x" + h); } catch (e) {}
+            }
           } else if (m.action === "cancel") {
             ga("event", "checkout_cancel", { product: product });
             closePayment(true);
@@ -237,11 +263,12 @@
     function openPayment(j) {
       pay = {
         id: j.order_id, returnUrl: j.return_url || "", token: j.token, postUrl: j.post_url,
-        started: Date.now(), timer: null, expiry: null, slow: null, done: false
+        started: Date.now(), timer: null, expiry: null, slow: null, noResize: null, resized: false, done: false
       };
       form.hidden = true;
       if (cancelled) cancelled.hidden = true;
       ui.expired.hidden = true;
+      ui.root.removeAttribute("data-frame-messages");
       ui.loading.hidden = false;
       ui.loadingText.innerHTML = "Loading the secure payment form&hellip;";
       ui.frame.style.height = "";
@@ -281,7 +308,7 @@
       clearTimeout(pay.timer);
       pollPaid();
     }
-    function clearTimers(p) { clearTimeout(p.timer); clearTimeout(p.expiry); clearTimeout(p.slow); }
+    function clearTimers(p) { clearTimeout(p.timer); clearTimeout(p.expiry); clearTimeout(p.slow); clearTimeout(p.noResize); }
 
     function closePayment(showCancelled) {
       if (pay) { pay.done = true; clearTimers(pay); }

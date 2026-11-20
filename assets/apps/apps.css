@@ -128,10 +128,12 @@
 .pay-step h2:focus { outline: none; }
 .pay-step-lock { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; font-weight: 700; color: #1e7e34; margin: 0; }
 .pay-step-note { font-size: .95rem; color: var(--text-muted); line-height: 1.55; margin: 0 0 14px; }
-/* No border: Authorize.net's compact card form (card fields + Pay button only) sits directly in our card.
-   Its height follows Authorize.net's resize messages; the default fits the compact form if they never come. */
+/* No border, no scroll bars: Authorize.net's compact card form (card fields + Pay button only) sits
+   directly in our card. The iframe has scrolling="no" and takes the height Authorize.net reports
+   (checkout.js); this default only covers the first moments (and a 900/1100 px fallback kicks in
+   if no size message ever arrives). */
 .pay-frame-wrap { position: relative; margin: 0 -8px; }
-.pay-frame { display: block; width: 100%; height: 560px; border: 0; background: transparent; }
+.pay-frame { display: block; width: 100%; height: 600px; border: 0; background: transparent; overflow: hidden; }
 .pay-frame-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; font-size: .95rem; line-height: 1.5; color: var(--text-muted); background: #fff; }
 .pay-frame-loading[hidden] { display: none; }
 .pay-step-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 18px; margin: 14px 0 0; }
@@ -178,7 +180,7 @@
   .pay-step { padding: 20px 12px 14px; }
   .pay-step-head, .pay-step-note { padding: 0 6px; }
   .app-steps, .app-areas, .app-samples, .field-row, .field-row--3 { grid-template-columns: minmax(0, 1fr); }
-  .pay-frame { height: 640px; }
+  .pay-frame { height: 720px; }
   .pay-frame-wrap { margin: 0 -4px; }
   .app-samples { max-width: 420px; margin-left: auto; margin-right: auto; }
   .app-cta { flex-direction: column; align-items: stretch; }
