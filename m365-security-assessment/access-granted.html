@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-1068497497');
+    gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Access setup: Microsoft 365 Security Assessment | Pro Link Systems</title>
+  <meta name="description" content="Setup step for Pro Link's read-only Microsoft 365 Security Assessment.">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- This URL is registered as the redirect URI of Pro Link's Microsoft Entra app: never move or rename it. -->
+  <link rel="canonical" href="https://prolinksystems.com/m365-security-assessment/access-granted">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://prolinksystems.com/m365-security-assessment/access-granted#webpage",
+    "url": "https://prolinksystems.com/m365-security-assessment/access-granted",
+    "name": "Access setup: Microsoft 365 Security Assessment"
+  }
+  </script>
+
+  <link rel="stylesheet" href="/_shared.css?v=20261117b">
+  <link rel="stylesheet" href="/assets/apps/apps.css?v=20261119">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Pro Link Systems home"><img src="/logo.png" alt="Pro Link Systems" width="160" height="44"></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/contact">Contact</a>
+    <a href="tel:18008906133" class="nav-cta">1-800-890-6133</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
+</div>
+
+<main class="checkout">
+  <div class="app-status">
+    <h1>Microsoft 365 access setup</h1>
+
+    <div id="state-success" hidden>
+      <p class="step-done">Step 1 of 2 done: read-only access approved<span id="order-line"></span>.</p>
+      <div class="step-box">
+        <p class="step-label">Step 2 of 2 &middot; Assign the Global Reader role</p>
+        <p style="margin:0;">Global Reader is Microsoft's built-in <strong>view-only</strong> role. It lets the assessment read your Exchange Online, Teams and Purview settings.</p>
+        <ol>
+          <li>Open <a href="https://entra.microsoft.com" target="_blank" rel="noopener">entra.microsoft.com</a> and go to <strong>Roles &amp; admins</strong>.</li>
+          <li>Search for <strong>Global Reader</strong> and open it.</li>
+          <li>Click <strong>Add assignments</strong>, choose <strong>Select member(s)</strong> and search for <strong>Pro Link Security Assessment</strong>.</li>
+          <li>Select it and click <strong>Next</strong>. Choose <strong>Active</strong> and <strong>Permanently assigned</strong>, then click <strong>Assign</strong>. If you're asked for a justification, enter &ldquo;Pro Link read-only security assessment&rdquo;.</li>
+        </ol>
+      </div>
+      <p>That's all. We detect the access automatically and email you when the assessment is underway.</p>
+    </div>
+
+    <div id="state-error" hidden>
+      <p><strong>The approval didn't go through.</strong> It was cancelled, or the account used isn't a Global Administrator of your Microsoft 365 tenant.</p>
+      <p>Please try again from the link in your setup email, signed in as a Global Administrator. If it still doesn't work, call <a href="tel:18008906133">1-800-890-6133</a> or email <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a> and we'll help.</p>
+      <p class="app-note" id="error-code"></p>
+    </div>
+
+    <div id="state-none">
+      <p>This page is part of the setup for a <a href="/m365-security-assessment">Microsoft 365 Security Assessment</a>. To start, use the &ldquo;Approve read-only access&rdquo; link in your setup email.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="checkout-footer" role="contentinfo">
+  <div class="checkout-footer-inner">
+    <span>&copy; 2026 Pro Link Systems, Inc. &middot; 21241 Ventura Blvd #193, Woodland Hills, CA 91364</span>
+    <span><a href="tel:18008906133">1-800-890-6133</a> &middot; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a> &middot; <a href="/legal">Terms</a> &middot; <a href="/privacy">Privacy</a></span>
+  </div>
+</footer>
+
+<script>
+  // Microsoft returns here after the admin-consent step with either
+  //   ?admin_consent=True&tenant=<guid>&state=<order_id>   or   ?error=...&error_description=...&state=<order_id>
+  // No API call is needed: the assessment agent detects the access by itself.
+  (function () {
+    var q;
+    try { q = new URLSearchParams(location.search); } catch (e) { return; }
+    var consent = (q.get('admin_consent') || '').toLowerCase() === 'true';
+    var error = q.get('error') || '';
+    var state = (q.get('state') || '').toUpperCase();
+    var show = function (id) {
+      ['state-success', 'state-error', 'state-none'].forEach(function (s) {
+        document.getElementById(s).hidden = s !== id;
+      });
+    };
+    if (consent && !error) {
+      if (/^[A-Z0-9]{2,8}-[0-9]{6}-[A-Z0-9]{4}$/.test(state)) {
+        document.getElementById('order-line').textContent = ' for order ' + state;
+      }
+      show('state-success');
+      if (typeof gtag === 'function') gtag('event', 'm365_access_approved', { product: 'm365-security-assessment' });
+    } else if (error) {
+      var code = error.replace(/[^a-z0-9_]/gi, '').slice(0, 60);
+      if (code) document.getElementById('error-code').textContent = 'Microsoft reported: ' + code;
+      show('state-error');
+      if (typeof gtag === 'function') gtag('event', 'm365_access_error', { product: 'm365-security-assessment', reason: code });
+    }
+  })();
+</script>
+</body>
+</html>

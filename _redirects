@@ -111,6 +111,10 @@
 /nonprofit-it-services.html                /nonprofit-it-services               301
 /waste-management-it-services.html         /waste-management-it-services        301
 
+# ---- Self-service apps: hub + one product page per app (CONVENTIONS "Self-service apps") ----
+/self-service.html                         /self-service                        301
+/m365-security-assessment.html             /m365-security-assessment            301
+
 # ---- Duplicate blog post -> canonical (t5) version ----
 /blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html   301
 

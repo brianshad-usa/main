@@ -489,3 +489,73 @@ generator (blog, GBP posts, social, SEO engine).
   the commit to revert (rollback = revert PR).
 - Daily audits run on the local checkout (complete, quota-free); `site_guard.py`
   remains the invariant gate and must not be weakened to make an engine fix pass.
+
+## Self-service apps: online ordering + checkout (2026-11-19)
+
+Brian: the Microsoft 365 Security Assessment ($2,500) is "our first app of a series of such apps
+that I would like to host on our site similarly". Every app follows this one pattern:
+- **Pages per app.** `/<slug>` = the product page: a ROOT `.html` file, indexed, in `sitemap.xml`,
+  `llms.txt` and `_redirects` (`.html` -> clean), full site nav + footer, scanned by the guard.
+  `/<slug>/order` and `/<slug>/thank-you` (plus app-specific pages) live in a `<slug>/` folder:
+  `noindex`, not in the sitemap, slim checkout footer (no city list, so nothing drifts). The guard
+  only scans root + `blog/`, so check sub-pages by hand to the same rules (one h1, apex canonical,
+  valid JSON-LD, alt text, check-20 claims, inline JS parses). Check 19 (lead forms: only
+  name/email required) does NOT apply to order forms: a purchase legitimately requires what its
+  order contract requires.
+- **Hub.** `/self-service` lists every app (a card + an `ItemList` entry). The site links the hub,
+  never the individual apps: footer Services column (`update_site_links.py` step 6 adds it to every
+  root page, blog post and the blog template, idempotent; `ai-automation-services.html` and
+  `case-studies.html` have custom footers and need a hand edit) and the `services.html` "More
+  services" grid. Adding an app = a hub card, never a site-wide edit.
+- **Shared front end.** `/assets/apps/apps.css` + `/assets/apps/checkout.js` (versioned `?v=`, bump
+  on change). The order form is `<form data-checkout-product="<slug>" data-value data-currency>` with
+  Turnstile; the thank-you page is `[data-checkout-thankyou]` with `[data-state]` panels. The script
+  records first touch exactly like `contact-form.js` (`sessionStorage.pls_first_touch`).
+- **One checkout for every app.** Routes `functions/api/checkout/{start,anet-webhook,status}.js`;
+  shared code (not routes) in `functions/_lib/checkout/`: `core.js`, `github.js`, `products.js`
+  (registry), `products/<slug>.js`, `schemas/`. Payment = Authorize.net Accept Hosted: the site
+  never sees card data. ONE webhook for all apps (event `net.authorize.payment.authcapture.created`
+  -> `https://prolinksystems.com/api/checkout/anet-webhook`), routed by order-id prefix
+  (`PREFIX-YYMMDD-XXXX`, unique prefix per app); it fires for every capture on the account and
+  ignores anything that isn't a pending website order.
+- **Secrets / bindings** live only in Cloudflare Pages (entered by Brian; never in source, chat or a
+  briefing): `ORDERS` (KV binding), `ANET_ENV` (`production`|`sandbox`; anything else = checkout off),
+  `ANET_API_LOGIN_ID`, `ANET_TRANSACTION_KEY`, `ANET_SIGNATURE_KEY`, and each app's hand-off
+  credential (M365: `GITHUB_ORDERS_TOKEN`, fine-grained, `brianshad-usa/m365-security-agent` only,
+  Issues read/write only). Reuses `TURNSTILE_SECRET_KEY` and the contact form's `MS_*`/`SEND_FROM`
+  for failure alerts (one email per problem per 6 h). Authorize.net's **Transaction Details API must
+  be enabled** (Merchant Interface > Account > Settings) or no payment can be verified.
+- **Rules that keep money and data safe:** Turnstile is strict on `start` (no stale-token pass);
+  the price comes only from the product module; the webhook checks the HMAC, then re-reads the
+  transaction (approved, exact amount, invoice = a pending order) before any hand-off; hand-offs
+  are idempotent (paid flag + KV lock + existing-issue check; the M365 agent also closes a second issue
+  for an order_id it already has, and blocks concurrent duplicates, without registering or emailing
+  anything; agent spec updated to these endpoints in commit ed90fac); the GitHub hand-off refuses to post
+  customer details unless the repo is private; sandbox orders carry `"test": true` and never fire
+  conversions; customer text is escaped so it can't break the issue's ```json block.
+- **Tracking:** GA4 `begin_checkout` (order page) and `purchase` (thank-you; `transaction_id` = order
+  id, value, currency) + UET `purchase` (`revenue_value`). The thank-you page fires them only after
+  `/api/checkout/status` reports the webhook-verified payment, once per order. A Google Ads purchase
+  conversion fires when `data-ads-send-to` on the thank-you page holds a conversion action's
+  `AW-1068497497/<label>` (empty until that action exists).
+- **App #1, M365 Security Assessment** (spec: private repo `brianshad-usa/m365-security-agent`,
+  `docs/website-integration.md`). `/m365-security-assessment/access-granted` is the redirect URI of
+  Pro Link's Microsoft Entra app: never move or rename it. The order JSON must satisfy the agent's
+  schema, copied VERBATIM into `functions/_lib/checkout/schemas/m365-assessment-order-v1.js` (keep
+  in sync; unknown fields make the agent reject an order). `terms_version` 2026-11 = the
+  authorization wording on the order page, approved by Brian 2026-11-19; changing that text
+  requires a new `terms_version` (so each order records the wording it accepted). Copy rules: the report lists findings by severity and
+  has NO remediation steps; the review call is free with no prices given; remediation pricing never
+  appears on the site; calls before ordering are welcome but optional (links marked
+  `data-bookings-link="<slug>"`, opening Brian's private Bookings meeting type "Microsoft 365 Security
+  Assessment: questions" in a new tab; write the URL's `@` as `%40` so Cloudflare Email Address Obfuscation
+  can't rewrite it; clicks = GA4 `book_call_click`); Pro Link approves every engagement (full refund if declined); access is
+  read-only by app consent only; never suggest giving us an account or a password. Numbers quoted
+  from the sample report are labelled sample data.
+- **Adding app #2+:** (1) `functions/_lib/checkout/products/<slug>.js` (id, name, amount,
+  orderPrefix, pages, intake, buildOrder, schema, handoff) + register it in `products.js`;
+  (2) `<slug>.html` + `<slug>/order.html` + `<slug>/thank-you.html` from the M365 pages; (3) a hub
+  card + `ItemList` entry on `self-service.html`; (4) sitemap, `llms.txt`, `_redirects`; (5) extend
+  `tests/checkout.test.mjs` (run `node --test tests/checkout.test.mjs`; 22 checks for app #1:
+  validation, signatures, idempotency, privacy guard, alerts), `site_guard.py`, then an
+  Authorize.net SANDBOX order end to end before production.

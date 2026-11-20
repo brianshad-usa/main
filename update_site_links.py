@@ -155,4 +155,52 @@ for fname, adds in NEARBY_ADD.items():
     rw(os.path.join(HERE, fname), fn)
 print("[nearby] synced")
 
+
+# 6) footer "Services" column -> the self-service apps hub ------------------
+#    (2026-11-19) Self-service apps (first: /m365-security-assessment) are all listed
+#    on ONE hub page, /self-service, so every footer links to the hub once and a new
+#    app never needs a site-wide edit. Appends the link as the last item of the
+#    footer's Services column, in the file's own href style (relative or "/") and
+#    layout (one link per line, or all on one line); files that already link the hub
+#    are left alone. The column is the LAST "Services" heading in the footer up to
+#    its own </div>; a footer without one (ai-automation-services, case-studies) or
+#    with nested markup there is skipped and listed for a manual look.
+HUB_SLUG, HUB_LABEL = "self-service", "Self-Service Assessments"
+SERVICES_H_RE = re.compile(r'<h([23])>Services</h\1>')
+LINK_RE = re.compile(r'<a href="(/?)[^"]*"[^>]*>[^<]*</a>')
+hub_skipped = []
+
+
+def sync_hub_link(src, name=""):
+    start = src.find("<footer")
+    end = src.find("</footer>", start) if start >= 0 else -1
+    if start < 0 or end < 0:
+        return src
+    heads = list(SERVICES_H_RE.finditer(src, start, end))
+    if not heads:
+        hub_skipped.append(name)
+        return src
+    body_start = heads[-1].end()
+    close = src.find("</div>", body_start, end)
+    body = src[body_start:close] if close >= 0 else ""
+    if re.search(r'href="/?' + HUB_SLUG + r'"', body):
+        return src
+    links = list(LINK_RE.finditer(body))
+    if close < 0 or "<div" in body or "<h" in body or not links:
+        hub_skipped.append(name)
+        return src
+    last = links[-1]
+    nl = body.rfind("\n", 0, last.start())
+    lead = body[nl + 1:last.start()] if nl >= 0 else None
+    link = f'<a href="{last.group(1)}{HUB_SLUG}">{HUB_LABEL}</a>'
+    ins = f"\n{lead}{link}" if lead is not None and lead.strip() == "" else link
+    at = body_start + last.end()
+    return src[:at] + ins + src[at:]
+
+
+n_hub = sum(rw(p, lambda s, p=p: sync_hub_link(s, os.path.relpath(p, HERE))) for p in targets)
+n_hub_gen = rw(os.path.join(HERE, "generate_blog.py"), lambda s: sync_hub_link(s, "generate_blog.py"))
+print(f"[footer hub link] added to {n_hub} html files; generate_blog.py template updated: {bool(n_hub_gen)}"
+      + (f"; skipped (check by hand): {', '.join(hub_skipped)}" if hub_skipped else ""))
+
 print(f"\n{len(changed)} file(s) changed.")
