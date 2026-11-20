@@ -1,0 +1,167 @@
+{
+  "post": "Picture the Friday before Christmas. Half the office is out, and the main file server won't come back after a power blip. Your backup is fine. Whoever knows how to restore it is on a ski lift in Big Bear, and the admin login sends its security code only to their phone.\n\nA practice run catches that kind of surprise. They are rarely dramatic: a login only one person can use, a program that needs a server nobody remembered, steps that live in one person's head.\n\nThe login fix is simple: make sure key admin accounts have a second way to verify, not just one person's phone.\n\nThen try a rehearsal in November, while people are around. Restore one important system somewhere separate from your live setup, and ask someone other than your usual IT person to follow the written steps. Wherever they get stuck is your to-do list before the holidays.",
+  "headline": "A restore can fail at the login screen. Test sign-in before the holidays.",
+  "cta_label": "Visit Pro Link Systems",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-20-s132-card.png",
+  "image_file_jpg": "2026-11-20-s132-card.jpg",
+  "theme": "continuity",
+  "idea_id": "S132",
+  "core_idea": "A restore can fail before it starts: at the login screen. Every recovery plan rests on an unwritten assumption that someone can sign in. A November rehearsal tests that assumption, along with undocumented dependencies and single-person knowledge. It does so while the people who can fix those gaps, including adding a second sign-in method and a reachable emergency credential, are still at their desks, rather than leaving a holiday-thinned team to discover them during a real outage.",
+  "channels": {
+    "linkedin": "A restore can fail before it starts: at the login screen.\n\nRecovery plans rarely write down their first assumption, that someone will be able to sign in. Then the admin account sends its MFA prompt to the phone of someone on a plane, and the plan stops at step one.\n\nA rehearsal finds that kind of gap on a calm Tuesday in November instead of during an outage. It also tends to surface:\n\nAn application that depends on a license server or DNS record no one listed.\nA restore order that lives in one person's head, though identity and network usually come back first.\nAn emergency access account nobody has signed into since setup.\n\nNone of these appear in a backup job report. They appear when someone actually tries.\n\nThe access fix is specific. Every admin who matters to recovery needs a second registered sign-in method. The emergency account needs a phishing-resistant credential, such as a hardware security key, kept where more than one person can reach it, and a sign-in test on the calendar.\n\nWhy November: from Thanksgiving through New Year's, teams thin out, vendors run holiday hours, and recovery depends on the fewest people.\n\nThree questions for your IT lead before the break:\nWhen did we last restore something, rather than just back it up?\nWho besides you can sign in and run the recovery?\nWhen was the emergency account last tested?\n\nPro Link recovers from tested backups, verified by restore testing rather than assumed from job reports. Our incident-response playbook is public and ungated.",
+    "facebook": "Picture the Friday before Christmas. Half the office is out, and the main file server won't come back after a power blip. Your backup is fine. Whoever knows how to restore it is on a ski lift in Big Bear, and the admin login sends its security code only to their phone.\n\nA practice run catches that kind of surprise. They are rarely dramatic: a login only one person can use, a program that needs a server nobody remembered, steps that live in one person's head.\n\nThe login fix is simple: make sure key admin accounts have a second way to verify, not just one person's phone.\n\nThen try a rehearsal in November, while people are around. Restore one important system somewhere separate from your live setup, and ask someone other than your usual IT person to follow the written steps. Wherever they get stuck is your to-do list before the holidays.",
+    "gbp": "Year-end staffing thins from Thanksgiving on, so November is the practical month for an LA business to rehearse a recovery. Restore one critical system to an isolated test location and have someone other than your usual IT contact follow the written steps, admin sign-in included. If that sign-in depends on one person's phone, add a second verification method now. Then fix every undocumented dependency and one-person step before the break. Pro Link Systems has supported LA businesses from Woodland Hills since 1999, and we recover from restore-tested backups. Our incident-response playbook is free to read, no form required.",
+    "x": [
+      "A restore can fail at the login screen. If the admin account's MFA prompt reaches one phone, your recovery plan has one point of failure. Add a second sign-in method and test the emergency account before the holidays thin the team."
+    ],
+    "instagram_caption": "Every recovery plan assumes someone can sign in. From Thanksgiving to New Year's, most offices run on fewer people, and so does any recovery. That makes November the practical month to test the assumption. Restore one critical system to an isolated test location, hand the written plan to someone who doesn't usually run it, and watch where they stop. Expect small things: an MFA prompt that only reaches one phone, a dependency no one documented, a step only one colleague knew. Give key admin accounts a second sign-in method, and keep the emergency account's hardware key where more than one person can reach it. Fixing these now is easy. Finding them on December 23rd is not.\n\n#BusinessContinuity #ITLeadership #LosAngeles"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "split",
+    "format": "single_image",
+    "ground": "split",
+    "layout": "split",
+    "register": "seasonal",
+    "channels": {
+      "linkedin": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "facebook": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "gbp": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "instagram": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      },
+      "x": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 95,
+      "originality": 91,
+      "hook_strength": 93,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 95,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 95,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 93
+    }
+  },
+  "claims_audit": [
+    "FACT(F013): Pro Link Systems recovers from tested backups, verified by restore testing rather than assumed from job reports",
+    "FACT(F014): Pro Link Systems publishes its incident-response playbook publicly, free and ungated, no form or email required",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "ANALYSIS: every recovery plan depends on someone being able to sign in; MFA bound to a single person's device can block a recovery",
+    "ANALYSIS: recovery-critical admin accounts should have more than one registered sign-in method (stated as our recommendation, not attributed to any vendor mandate or date)",
+    "ANALYSIS: emergency access accounts benefit from a phishing-resistant credential such as a hardware security key, stored where more than one authorized person can reach it, with periodic sign-in tests (our recommendation, no attributed source)",
+    "ANALYSIS: emergency access accounts often exist but go untested (stated qualitatively, no statistic)",
+    "ANALYSIS: identity and network services usually must be restored before applications",
+    "ANALYSIS: test restores should be isolated from production to avoid hostname, IP, and licensing conflicts",
+    "ANALYSIS: rehearsals commonly surface access gaps, undocumented dependencies, and single-person knowledge that backup job reports do not show",
+    "ANALYSIS: staffing thins and vendors run holiday hours from Thanksgiving through New Year's (general seasonal observation, stated qualitatively)",
+    "OPINION: November is the practical month for an LA business to rehearse a recovery",
+    "OPINION: fixing gaps before the holidays is far easier than discovering them during an outage",
+    "ILLUSTRATION: the LinkedIn plane example, the Facebook Friday-before-Christmas and Big Bear scenario, and the December 23rd reference are hypothetical, not client stories or incidents",
+    "REMOVED (prior round): the unsupported claim that gaps 'tend to appear in the first hour of a rehearsal'",
+    "OPEN ITEM: cta_url points to the homepage and cta_label now honestly reads 'Visit Pro Link Systems'; replace both with the playbook deep link and a 'Read the playbook' label once the owner supplies the URL"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "Pre-holiday recovery testing is a theme every MSP recycles each November, and it sits next to the demoted 'remember to back up your files' territory. The draft's insight (rehearsals find quiet gaps) is sound but not distinctive enough to justify the slot. Revision sharpens the core idea around a less common, 2026-relevant point: every recovery plan assumes someone can sign in, and identity is where rehearsals most often stall."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram hook 'Rehearse your recovery while everyone is still here' is an instruction, not a reason to swipe. The LinkedIn opener 'the worst time to discover...' is serviceable but interchangeable. Both now open on the sign-in assumption, which is a concrete idea rather than a seasonal reminder."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Slides 3 to 5 are three parallel 'gap' slides with no visual system tying them together, and the package carries no art direction. Revision adds 'Gap 1 of 3' through 'Gap 3 of 3' footers so the sequence can be designed as one numbered system. The strongest visual opportunity is a restore-order diagram (identity and network first, applications after), and it still needs a design spec. Visual sophistication cannot be verified from copy alone."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Every one of them tends to appear in the first hour of a rehearsal' is an unsupported timing claim presented as fact, so it is removed. 'An admin credential that expired months ago, stored in a vault nobody else can open' fused two separate failures into one awkward line. These are now split into an untested emergency access account and an MFA prompt bound to one person's phone."
+    },
+    {
+      "role": "CIO",
+      "finding": "Two technical gaps. First, 'restore to a test location' omitted isolation: restoring a server onto a network where production is running risks hostname, IP, and licensing conflicts. 'Isolated' is now specified. Second, the draft never said what restore order usually looks like. The revision notes that identity and network usually come back first, which is the substance of the single-person-knowledge problem."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treated credentials as an expired-password problem, which is 2016 framing. In 2026 the realistic blocker is identity: MFA tied to one person's device, and emergency access (break-glass) accounts that exist but have never been tested. That is now the lead insight. The revision deliberately avoids asserting that attackers target holidays, because no sourced brief supports that behavioral claim."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no AI angle, and that is correct under the standard against manufacturing AI urgency. Adding voice-clone pretexting during an incident was considered and rejected because it would split the one core idea. The only weakness found is in a neighboring area: a follow-up cycle could cover verifying identity on urgent reset requests during an incident."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The draft LinkedIn piece says 'for a CEO or CFO, the seasonal argument is simple', which tells the executive what to think rather than giving them a decision. The three questions are the most valuable part. The third is sharpened to 'Has anyone tested the emergency access account this year?', which an executive can ask without being technical and which an IT lead cannot answer vaguely."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The Instagram caption and the final slide both pushed the playbook, which is effectively a double CTA. The caption CTA is removed so slide 8 carries it alone. The X post contained two separate thoughts; it is now one compressed observation built on the sign-in assumption."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Ultimate test. The draft could have been published by any competent MSP. The revision is more specific: it leads with the identity assumption, rests the Pro Link claims on F013 (restore-tested backups) and F014 (public, ungated playbook), and uses no generic urgency. It still lives in a common seasonal category, which is why originality is scored below target. The cta_label 'Read the playbook' pointed to the homepage, a broken promise. The label is changed to 'Learn more' until the playbook deep link is supplied."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'The order systems must come back up' was clumsy. 'The seasonal argument is simple' is filler. 'Quietly' and 'silently' recurred across channels. A first pass of the Facebook revision produced consecutive sentences opening with 'The' ('The backup is fine. The person...'), which is fixed. The revised LinkedIn post is trimmed to stay under 1,600 characters."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft diagnoses the single-phone MFA trap but never prescribes the fix. That leaves its strongest, most 2026-specific idea as a warning with no remedy, which weakens executive and save value. Revision: every channel now names the specific fix. Recovery-critical admins get a second registered sign-in method. The emergency access account gets a phishing-resistant credential, such as a hardware security key, stored where more than one person can reach it, plus a scheduled sign-in test. This is framed as our analysis, with no attributed vendor mandate or date."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Three mechanical problems. LinkedIn had consecutive sentences opening with 'A' ('A recovery in that stretch... A rehearsal this month...'). LinkedIn sat near the 1,600-character ceiling, so the new fix would have pushed it over. Facebook ran slightly past 900 characters. Revision: LinkedIn is rebuilt to roughly 1,500 characters with the repetition removed, Facebook is cut to about 830, and every list and sentence sequence was rechecked for repeated openers."
+    },
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "Two issues. First, the generic 'Learn more' label points at the homepage while the copy promotes the playbook, which makes the CTA feel mismatched. Second, the 'test your backups before the holidays' genre is crowded, so the post only passes the any-MSP test if the identity angle leads everywhere. Revision: the label now honestly says 'Visit Pro Link Systems', and the playbook deep link stays an open item. The login screen is now the hook on LinkedIn, X and the card, so the post reads as an identity-perimeter argument rather than a backup reminder."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

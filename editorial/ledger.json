@@ -4123,6 +4123,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-20",
+      "idea_id": "S132",
+      "theme": "continuity",
+      "format": "carousel",
+      "title": "The rehearsal that found the problem",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "split",
+        "format": "single_image",
+        "ground": "split",
+        "layout": "split",
+        "register": "seasonal",
+        "channels": {
+          "linkedin": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "facebook": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "gbp": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "instagram": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          },
+          "x": {
+            "style": "split",
+            "format": "single_image",
+            "ground": "split",
+            "layout": "split",
+            "register": "seasonal"
+          }
+        }
+      }
     }
   ]
 }
