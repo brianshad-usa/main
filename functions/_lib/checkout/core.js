@@ -7,10 +7,11 @@
  * order builder, hand-off). First app: the Microsoft 365 Security Assessment.
  *
  * Flow: order form -> POST /api/checkout/start (Turnstile + validation, pending
- * order saved in Workers KV, Authorize.net Accept Hosted token) -> the browser
- * posts the token to Authorize.net's hosted page (the site never sees card
- * data) -> Authorize.net webhook -> POST /api/checkout/anet-webhook (HMAC check,
- * transaction re-read with getTransactionDetails, then the product's hand-off).
+ * order saved in Workers KV, Authorize.net Accept Hosted token) -> the order page
+ * shows Authorize.net's hosted payment form in an iframe (token posted into it;
+ * full-window fallback; the site never sees card data) -> Authorize.net webhook ->
+ * POST /api/checkout/anet-webhook (HMAC check, transaction re-read with
+ * getTransactionDetails, then the product's hand-off).
  *
  * Bindings and variables (Cloudflare Pages -> Settings; entered by Pro Link in
  * the dashboard, never committed, never pasted into chat or a briefing):
@@ -211,7 +212,13 @@ export async function anetRequest(anet, body) {
   };
 }
 
-/** Accept Hosted token for one order. settingValue entries are JSON strings (Authorize.net's format). */
+/** Same-origin relay page that passes Authorize.net's iframe messages (resize, cancel) to the order
+ *  page (assets/apps/anet-communicator.html, served without ".html"). Never move it. */
+export const IFRAME_COMMUNICATOR_PATH = "/assets/apps/anet-communicator";
+
+/** Accept Hosted token for one order. settingValue entries are JSON strings (Authorize.net's format).
+ *  The same token serves the embedded form (iframe) and the full-window fallback: the receipt's
+ *  "Continue" leads to the thank-you page either way (checkout.js lifts it out of the iframe). */
 export async function hostedPaymentToken(env, anet, { product, orderId, email, ip, origin }) {
   const s = (settingName, value) => ({ settingName, settingValue: JSON.stringify(value) });
   const transactionRequest = {
@@ -243,6 +250,7 @@ export async function hostedPaymentToken(env, anet, { product, orderId, email, i
           s("hostedPaymentBillingAddressOptions", { show: true, required: true }),
           s("hostedPaymentCustomerOptions", { showEmail: false, requiredEmail: false, addPaymentProfile: false }),
           s("hostedPaymentOrderOptions", { show: true, merchantName: "Pro Link Systems" }),
+          s("hostedPaymentIFrameCommunicatorUrl", { url: `${origin}${IFRAME_COMMUNICATOR_PATH}` }),
         ],
       },
     },
@@ -253,6 +261,25 @@ export async function hostedPaymentToken(env, anet, { product, orderId, email, i
 
 export async function transactionDetails(env, anet, transId) {
   return anetRequest(anet, { getTransactionDetailsRequest: { merchantAuthentication: merchantAuth(env), transId } });
+}
+
+/**
+ * What a getTransactionDetails transaction means for an order, by its CURRENT status:
+ *   "paid"       captured (incl. a payment approved after a fraud-filter review: responseCode
+ *                stays 4, the status becomes capturedPendingSettlement)
+ *   "held"       held by the Fraud Detection Suite, waiting for Pro Link to approve or decline
+ *   "declined"   the card was declined
+ *   "error"      processing error (e.g. a duplicate submission); the customer saw it on the form
+ *   "unexpected" anything else (voided, refunded, ...): a person should look
+ */
+export function paymentState(tx) {
+  const s = String((tx && tx.transactionStatus) || "");
+  const rc = Number(tx && tx.responseCode);
+  if (s === "capturedPendingSettlement" || s === "settledSuccessfully" || (!s && rc === 1)) return "paid";
+  if (s === "FDSPendingReview" || s === "FDSAuthorizedPendingReview" || (!s && rc === 4)) return "held";
+  if (s === "declined" || (!s && rc === 2)) return "declined";
+  if (rc === 3 || s === "generalError" || s === "communicationError") return "error";
+  return "unexpected";
 }
 
 // --------------------------------------------------------------------------

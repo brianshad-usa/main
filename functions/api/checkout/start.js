@@ -53,10 +53,11 @@ export async function onRequestPost({ request, env }) {
     return json(400, { ok: false, field: res.field, message: res.message });
   }
 
+  const origin = new URL(request.url).origin;
   let pay;
   try {
     pay = await hostedPaymentToken(env, anet, {
-      product, orderId, email: res.email, ip, origin: new URL(request.url).origin,
+      product, orderId, email: res.email, ip, origin,
     });
   } catch (e) {
     pay = { ok: false, codes: ["unreachable"] };
@@ -80,7 +81,10 @@ export async function onRequestPost({ request, env }) {
   }
 
   log({ outcome: "token", product: product.id, order: orderId, mode: anet.mode });
-  return json(200, { ok: true, order_id: orderId, token: pay.token, post_url: anet.hosted });
+  return json(200, {
+    ok: true, order_id: orderId, token: pay.token, post_url: anet.hosted,
+    return_url: `${origin}${product.pages.thankYou}?order=${encodeURIComponent(orderId)}`,
+  });
 }
 
 export async function onRequest(context) {

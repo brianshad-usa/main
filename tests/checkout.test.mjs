@@ -101,8 +101,10 @@ function webhookReq(payload, { key = SIG_KEY, hexKey = false, sig } = {}) {
     method: "POST", headers: { "Content-Type": "application/json", "X-ANET-Signature": mac }, body: raw,
   });
 }
-const evt = (transId) => ({ notificationId: "n1", eventType: "net.authorize.payment.authcapture.created", eventDate: "2026-11-19T20:16:00Z", webhookId: "w1",
+const evt = (transId, eventType = "net.authorize.payment.authcapture.created") => ({ notificationId: "n1", eventType, eventDate: "2026-11-19T20:16:00Z", webhookId: "w1",
   payload: { responseCode: 1, authCode: "ABC", avsResponse: "Y", authAmount: 2500.0, entityName: "transaction", id: transId } });
+const mails = () => calls.filter((c) => c.url.includes("/sendMail")).map((c) => JSON.parse(c.body).message);
+const issuePosts = () => calls.filter((c) => c.method === "POST" && c.url.endsWith("/issues"));
 
 async function placeOrder(env, input) {
   const r = await start.onRequestPost({ request: startReq(input || formInput()), env });
@@ -172,6 +174,8 @@ test("start: happy path (sandbox) stores a pending order and returns a hosted to
   assert.equal(settings.hostedPaymentReturnOptions.cancelUrl, "https://prolinksystems.com/m365-security-assessment/order?cancelled=1");
   assert.equal(settings.hostedPaymentButtonOptions.text, "Pay $2,500.00");
   assert.equal(settings.hostedPaymentSecurityOptions.captcha, true);
+  assert.equal(settings.hostedPaymentIFrameCommunicatorUrl.url, "https://prolinksystems.com/assets/apps/anet-communicator");
+  assert.equal(body.return_url, `https://prolinksystems.com/m365-security-assessment/thank-you?order=${body.order_id}`);
 
   const rec = await env.ORDERS.get(`order:${body.order_id}`, "json");
   assert.equal(rec.status, "pending");
@@ -333,15 +337,89 @@ test("webhook: Authorize.net 'record not found' (Test webhook button) -> 200 ign
   assert.equal((await r.json()).ignored, "transaction-not-found");
 });
 
-test("webhook: wrong amount or declined -> no hand-off, alert", async () => {
-  for (const txOver of [{ authAmount: 25.0 }, { responseCode: 2 }]) {
+test("paymentState: Authorize.net statuses -> paid / held / declined / error / unexpected", () => {
+  const ps = core.paymentState;
+  assert.equal(ps({ responseCode: 1, transactionStatus: "capturedPendingSettlement" }), "paid");
+  assert.equal(ps({ responseCode: 1, transactionStatus: "settledSuccessfully" }), "paid");
+  assert.equal(ps({ responseCode: 4, transactionStatus: "capturedPendingSettlement" }), "paid", "approved after review");
+  assert.equal(ps({ responseCode: 4, transactionStatus: "FDSPendingReview" }), "held");
+  assert.equal(ps({ responseCode: 4, transactionStatus: "FDSAuthorizedPendingReview" }), "held");
+  assert.equal(ps({ responseCode: 2, transactionStatus: "declined" }), "declined");
+  assert.equal(ps({ responseCode: 3, transactionStatus: "generalError" }), "error");
+  assert.equal(ps({ responseCode: 1, transactionStatus: "voided" }), "unexpected");
+  assert.equal(ps({ responseCode: 1 }), "paid");
+  assert.equal(ps({}), "unexpected");
+});
+
+test("webhook: wrong amount or unexpected status -> no hand-off, 'needs a look' alert", async () => {
+  for (const txOver of [{ authAmount: 25.0 }, { transactionStatus: "voided" }]) {
     const { env, orderId } = await paidScenario({}, txOver);
     const r = await hook.onRequestPost({ request: webhookReq(evt("60212345678")), env });
     assert.equal(r.status, 200);
-    assert.ok(!calls.some((c) => c.method === "POST" && c.url.endsWith("/issues")));
-    assert.ok(calls.some((c) => c.url.startsWith("https://graph.microsoft.com/")), "alerted");
+    assert.equal(issuePosts().length, 0);
+    assert.ok(mails().some((m) => m.subject.includes("needs a look")), JSON.stringify(txOver));
     assert.equal((await env.ORDERS.get(`order:${orderId}`, "json")).status, "pending");
   }
+});
+
+test("webhook: declined card -> plain 'card declined' note naming the customer, no hand-off", async () => {
+  const { env, orderId } = await paidScenario({}, { responseCode: 2, transactionStatus: "declined", responseReasonDescription: "This transaction has been declined." });
+  const r = await hook.onRequestPost({ request: webhookReq(evt("60212345678")), env });
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).ignored, "declined");
+  assert.equal(issuePosts().length, 0);
+  const m = mails();
+  assert.equal(m.length, 1);
+  assert.match(m[0].subject, new RegExp(`Card declined for order ${orderId} \\(test\\)`));
+  assert.ok(!m[0].subject.includes("needs a look"));
+  assert.ok(m[0].body.content.includes("dana@northwinddental.com"), "contact included for follow-up");
+  assert.equal((await env.ORDERS.get(`order:${orderId}`, "json")).status, "pending");
+});
+
+test("webhook: processing error (e.g. duplicate submission) -> logged only", async () => {
+  const { env } = await paidScenario({}, { responseCode: 3, transactionStatus: "generalError" });
+  const r = await hook.onRequestPost({ request: webhookReq(evt("60212345678")), env });
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).ignored, "payment-error");
+  assert.equal(mails().length, 0);
+  assert.equal(issuePosts().length, 0);
+});
+
+test("webhook: held for review -> alert; once approved (fraud.approved) the order is handed off", async () => {
+  const { env, orderId } = await paidScenario({}, { responseCode: 4, transactionStatus: "FDSPendingReview" });
+  const r = await hook.onRequestPost({ request: webhookReq(evt("60212345678")), env });
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).ignored, "held");
+  assert.ok(mails().some((m) => m.subject.includes("held for review")));
+  assert.equal(issuePosts().length, 0);
+  assert.equal((await env.ORDERS.get(`order:${orderId}`, "json")).status, "pending");
+
+  world.tx = Object.assign({}, world.tx, { transactionStatus: "capturedPendingSettlement" });   // Pro Link approved it
+  calls = [];
+  const r2 = await hook.onRequestPost({ request: webhookReq(evt("60212345678", "net.authorize.payment.fraud.approved")), env });
+  assert.equal(r2.status, 200, await r2.clone().text());
+  assert.equal(issuePosts().length, 1);
+  assert.equal((await env.ORDERS.get(`order:${orderId}`, "json")).status, "paid");
+});
+
+test("webhook: a second, different payment for a paid order -> refund alert, no second issue", async () => {
+  const { env } = await paidScenario();
+  assert.equal((await hook.onRequestPost({ request: webhookReq(evt("60212345678")), env })).status, 200);
+  world.tx = Object.assign({}, world.tx, { transId: "60299990000" });
+  calls = [];
+  const r = await hook.onRequestPost({ request: webhookReq(evt("60299990000")), env });
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).ignored, "second-payment");
+  assert.ok(mails().some((m) => m.subject.includes("Second payment")));
+  assert.ok(!calls.some((c) => c.url.includes("github.com")));
+});
+
+test("webhook: other event types are ignored before any lookup", async () => {
+  const { env } = await paidScenario();
+  const r = await hook.onRequestPost({ request: webhookReq(evt("60212345678", "net.authorize.payment.void.created")), env });
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).ignored, "event");
+  assert.equal(calls.length, 0);
 });
 
 test("webhook: GitHub down -> 503 (Authorize.net retries), alert, still pending, lock released", async () => {

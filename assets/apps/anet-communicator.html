@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Payment relay</title>
+<!-- Authorize.net Accept Hosted "iframe communicator" for the self-service checkout (CONVENTIONS.md,
+     "Self-service apps"). Authorize.net's payment form, embedded on an app's order page, loads this
+     page invisibly inside itself and hands it messages (resizeWindow, cancel, ...). This page passes
+     them to the order page (window.parent.parent, same origin), whose checkout.js defines
+     window.AuthorizeNetIFrame. Messages are UI hints only: whether an order is paid is decided
+     server-side by the webhook. Its URL (without ".html") goes into every payment token
+     (functions/_lib/checkout/core.js IFRAME_COMMUNICATOR_PATH): never move or rename it. No analytics. -->
+<script>
+(function () {
+  var FROM = /^https:\/\/(accept|test)\.authorize\.net$/;
+  function relay(str) {
+    try {
+      var host = window.parent && window.parent.parent;
+      if (str && host && host !== window && host.AuthorizeNetIFrame &&
+          typeof host.AuthorizeNetIFrame.onReceiveCommunication === "function") {
+        host.AuthorizeNetIFrame.onReceiveCommunication(String(str));
+      }
+    } catch (e) { /* not inside our own order page: nothing to do */ }
+  }
+  window.addEventListener("message", function (e) {
+    if (e && FROM.test(e.origin) && typeof e.data === "string") relay(e.data);
+  }, false);
+  function fromHash() { if (location.hash && location.hash.length > 1) relay(location.hash.slice(1)); }
+  window.addEventListener("hashchange", fromHash, false);
+  fromHash();
+})();
+</script>
+</head>
+<body></body>
+</html>

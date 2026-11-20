@@ -1,17 +1,27 @@
 /**
  * POST /api/checkout/anet-webhook  --  Authorize.net webhook (all self-service apps)
  * -----------------------------------------------------------------------------
- * Subscribe ONE webhook in the Authorize.net Merchant Interface to the event
- * net.authorize.payment.authcapture.created, URL https://prolinksystems.com/api/checkout/anet-webhook.
- * It fires for EVERY card capture on the account (including payments that have nothing
- * to do with the website), so only transactions whose invoice number is a pending
- * self-service order are acted on.
+ * Subscribe ONE webhook in the Authorize.net Merchant Interface, URL
+ * https://prolinksystems.com/api/checkout/anet-webhook, to TWO events:
+ *   net.authorize.payment.authcapture.created  every card payment (approved, declined or held)
+ *   net.authorize.payment.fraud.approved       Pro Link approved a payment the Fraud Detection
+ *                                              Suite had held for review
+ * They fire for EVERY transaction on the account (including payments that have nothing to do
+ * with the website), so only transactions whose invoice number is a pending self-service order
+ * are acted on.
  *
  * 1. X-ANET-Signature must match HMAC-SHA512(Signature Key, raw body)        -> else 401
- * 2. getTransactionDetails(transId): approved (responseCode 1), the app's exact amount,
- *    invoiceNumber = a pending order in KV                                    -> else 200 + ignore/alert
- * 3. Idempotent: an order already marked paid -> 200; a short KV lock keeps Authorize.net's
- *    parallel retries from handing off twice
+ * 2. getTransactionDetails(transId); invoiceNumber must be a pending order in KV. Then, by the
+ *    transaction's CURRENT status (core.paymentState):
+ *      paid, the app's exact amount -> step 3
+ *      held for review              -> 200 + email Pro Link to approve or decline it (approving
+ *                                      sends fraud.approved, which arrives here as "paid")
+ *      declined                     -> 200 + a plain "card declined" note (who tried, for follow-up)
+ *      processing error             -> 200, log only (the customer saw the error on the form)
+ *      anything else / wrong amount -> 200 + "needs a look" email
+ * 3. Idempotent: an order already marked paid -> 200 (a SECOND, different payment for it emails
+ *    Pro Link to refund one); a short KV lock keeps Authorize.net's parallel retries from
+ *    handing off twice
  * 4. Build the app's order, validate it against the app's schema, run its hand-off
  *    (GitHub issue for the M365 assessment), mark the order paid               -> 200
  * Transient hand-off failures answer 503 so Authorize.net retries (3 x 3 min, 3 x 8 h,
@@ -19,13 +29,25 @@
  * Permanent problems answer 200 (retrying can't help) and email Pro Link.
  */
 import {
-  json, log, nowIso, anetConfig, transactionDetails, verifyAnetSignature, validate,
+  json, log, nowIso, anetConfig, transactionDetails, verifyAnetSignature, validate, paymentState,
   getOrder, putOrder, sendAlert, KV_TTL_PAID,
 } from "../../_lib/checkout/core.js";
 import { productByOrderId } from "../../_lib/checkout/products.js";
 import { githubIssueHandoff } from "../../_lib/checkout/github.js";
 
 const HANDOFFS = { "github-issue": githubIssueHandoff };
+const EVENTS = new Set(["net.authorize.payment.authcapture.created", "net.authorize.payment.fraud.approved"]);
+
+/** Who placed the order, for Pro Link's own emails (never logged). */
+function orderWho(rec) {
+  const r = (rec && rec.record) || {};
+  const c = r.company || {};
+  const p = r.contact || {};
+  const out = [];
+  if (c.name || c.domain) out.push(`Company: ${[c.name, c.domain].filter(Boolean).join(", ")}`);
+  if (p.name || p.email || p.phone) out.push(`Contact: ${[p.name, p.email, p.phone].filter(Boolean).join(", ")}`);
+  return out;
+}
 
 export async function onRequestPost({ request, env }) {
   const raw = new Uint8Array(await request.arrayBuffer());
@@ -45,7 +67,7 @@ export async function onRequestPost({ request, env }) {
   } catch (e) {
     return json(400, { ok: false });
   }
-  if (evt.eventType !== "net.authorize.payment.authcapture.created") {
+  if (!EVENTS.has(evt.eventType)) {
     return json(200, { ok: true, ignored: "event" });
   }
   const transId = String((evt.payload && evt.payload.id) || "");
@@ -75,7 +97,7 @@ export async function onRequestPost({ request, env }) {
     log({ outcome: "error", reason: "anet-details", codes: det.codes, trans: transId });
     await sendAlert(env, `webhook-details-${det.codes.join("-") || "unknown"}`, "Can't verify payments with Authorize.net",
       [`getTransactionDetails failed for transaction ${transId} (codes: ${det.codes.join(", ") || "none"}; mode: ${anet.mode}).`,
-        "Check the API keys and that the Transaction Details API is enabled (Merchant Interface > Account > Settings > Transaction Details API). Paid orders wait until this is fixed; Authorize.net keeps retrying."]);
+        "Check ANET_API_LOGIN_ID / ANET_TRANSACTION_KEY / ANET_ENV in Cloudflare Pages. If the Authorize.net account shows a \"Transaction Details API\" setting (Account > Settings), it must be enabled; newer accounts have it on with no setting. Paid orders wait until this is fixed; Authorize.net keeps retrying."]);
     return json(500, { ok: false });
   }
 
@@ -92,14 +114,49 @@ export async function onRequestPost({ request, env }) {
         "Look the payment up in Authorize.net and contact the customer; the order was NOT handed off."]);
     return json(200, { ok: true, ignored: "order-not-found" });
   }
-  if (rec.status === "paid") return json(200, { ok: true, duplicate: true });
+
+  const state = paymentState(tx);
+  const who = orderWho(rec);
+  const test = rec.mode === "sandbox" ? " (test)" : "";
+
+  if (rec.status === "paid") {
+    if (state === "paid" && rec.transaction_id && String(rec.transaction_id) !== transId) {
+      log({ outcome: "error", reason: "second-payment", order: invoice, trans: transId, first: rec.transaction_id });
+      await sendAlert(env, `second-payment-${transId}`, `Second payment for order ${invoice}${test}`,
+        [`Order ${invoice} was already paid (transaction ${rec.transaction_id}), and another payment for it just went through (transaction ${transId}, ${tx.authAmount}).`,
+          "The order was handed off once. Refund one of the two payments in Authorize.net.", ...who]);
+      return json(200, { ok: true, ignored: "second-payment" });
+    }
+    return json(200, { ok: true, duplicate: true });
+  }
+
+  if (state === "declined") {
+    log({ outcome: "declined", product: product.id, order: invoice, trans: transId });
+    const why = tx.responseReasonDescription ? ` (Authorize.net: ${String(tx.responseReasonDescription).slice(0, 160)})` : "";
+    await sendAlert(env, `declined-${invoice}`, `Card declined for order ${invoice}${test}`,
+      [`Someone tried to pay for the ${product.name} and the card was declined${why}.`,
+        "Nothing is broken and the order stays unpaid. They can try again with another card, or you may want to reach out:", ...who]);
+    return json(200, { ok: true, ignored: "declined" });
+  }
+  if (state === "held") {
+    log({ outcome: "held", product: product.id, order: invoice, trans: transId });
+    await sendAlert(env, `held-${invoice}`, `Payment held for review: order ${invoice}${test}`,
+      [`Authorize.net's Fraud Detection Suite held transaction ${transId} (${tx.authAmount}) for review, so the order has NOT moved on yet.`,
+        "Approve or decline it in Authorize.net under Suspicious Transactions (new design: Payments > Manage Transactions > Suspicious Transactions; classic view: Tools > Fraud Detection Suite).",
+        "Once you approve it, the order continues automatically (the webhook must include the \"Fraud approved\" event). If you decline it, the customer isn't charged.", ...who]);
+    return json(200, { ok: true, ignored: "held" });
+  }
+  if (state === "error") {
+    log({ outcome: "ignored", reason: "payment-error", order: invoice, trans: transId, code: tx.responseCode });
+    return json(200, { ok: true, ignored: "payment-error" });
+  }
 
   const amount = Number(tx.authAmount);
-  if (Number(tx.responseCode) !== 1 || !Number.isFinite(amount) || amount.toFixed(2) !== product.amount) {
-    log({ outcome: "error", reason: "payment-mismatch", order: invoice, trans: transId, code: tx.responseCode, amount: tx.authAmount });
+  if (state !== "paid" || !Number.isFinite(amount) || amount.toFixed(2) !== product.amount) {
+    log({ outcome: "error", reason: "payment-mismatch", order: invoice, trans: transId, code: tx.responseCode, status: tx.transactionStatus, amount: tx.authAmount });
     await sendAlert(env, `webhook-mismatch-${invoice}`, `Payment for ${invoice} needs a look`,
-      [`Transaction ${transId}: response code ${tx.responseCode}, amount ${tx.authAmount} (expected approved, ${product.amount}).`,
-        "The order was NOT handed off. Check the transaction in Authorize.net."]);
+      [`Transaction ${transId}: status ${tx.transactionStatus || "?"}, response code ${tx.responseCode}, amount ${tx.authAmount} (expected captured, ${product.amount}).`,
+        "The order was NOT handed off. Check the transaction in Authorize.net.", ...who]);
     return json(200, { ok: true, ignored: "payment-mismatch" });
   }
 
@@ -143,7 +200,7 @@ export async function onRequestPost({ request, env }) {
       // The hand-off happened; don't make Authorize.net retry (the duplicate check would catch it anyway).
       log({ outcome: "warn", reason: "kv-mark-paid-failed", order: invoice });
     }
-    log({ outcome: "paid", product: product.id, order: invoice, trans: transId, handoff: h.ref, existing: !!h.existing, mode: anet.mode });
+    log({ outcome: "paid", product: product.id, order: invoice, trans: transId, handoff: h.ref, existing: !!h.existing, mode: anet.mode, event: evt.eventType });
     return json(200, { ok: true });
   } finally {
     try { await env.ORDERS.delete(lockKey); } catch (e) { /* expires in 2 min anyway */ }

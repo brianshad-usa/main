@@ -120,6 +120,22 @@
 .checkout-summary p { font-size: .95rem; line-height: 1.55; color: var(--text-muted); margin: 12px 0 0; }
 .checkout-summary a { color: var(--navy-light); font-weight: 600; }
 
+/* ---------- embedded payment step (Authorize.net Accept Hosted in an iframe; built by checkout.js) ---------- */
+.pay-step { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 26px 24px 18px; }
+.pay-step-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin: 0 0 6px; }
+.pay-step h2 { font-size: 1.25rem; font-weight: 800; color: var(--text); margin: 0; }
+.pay-step h2:focus { outline: none; }
+.pay-step-lock { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; font-weight: 700; color: #1e7e34; margin: 0; }
+.pay-step-note { font-size: .95rem; color: var(--text-muted); line-height: 1.55; margin: 0 0 14px; }
+.pay-frame-wrap { position: relative; border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; background: #fff; }
+.pay-frame { display: block; width: 100%; height: 640px; border: 0; background: #fff; }
+.pay-frame-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; font-size: .95rem; line-height: 1.5; color: var(--text-muted); background: #fff; }
+.pay-frame-loading[hidden] { display: none; }
+.pay-step-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 18px; margin: 14px 0 0; }
+.pay-link { background: none; border: 0; padding: 6px 0; font: inherit; font-size: .92rem; font-weight: 600; color: var(--navy-light); cursor: pointer; text-align: left; }
+.pay-link:hover, .pay-link:focus-visible { text-decoration: underline; }
+.pay-link--inline { padding: 0; font-size: inherit; color: inherit; text-decoration: underline; }
+
 /* ---------- thank-you / setup pages ---------- */
 .app-status { max-width: 760px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 36px 32px; }
 .app-status h1 { font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -.02em; color: var(--text); margin: 0 0 14px; line-height: 1.2; }
@@ -156,6 +172,8 @@
   .app-section { padding: 52px 20px; }
   .checkout { padding: 32px 16px 56px; }
   .checkout-form, .app-status { padding: 24px 18px; }
+  .pay-step { padding: 20px 12px 14px; }
+  .pay-step-head, .pay-step-note { padding: 0 6px; }
   .app-steps, .app-areas, .app-samples, .field-row { grid-template-columns: minmax(0, 1fr); }
   .app-samples { max-width: 420px; margin-left: auto; margin-right: auto; }
   .app-cta { flex-direction: column; align-items: stretch; }

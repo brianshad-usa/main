@@ -511,23 +511,51 @@ that I would like to host on our site similarly". Every app follows this one pat
   on change). The order form is `<form data-checkout-product="<slug>" data-value data-currency>` with
   Turnstile; the thank-you page is `[data-checkout-thankyou]` with `[data-state]` panels. The script
   records first touch exactly like `contact-form.js` (`sessionStorage.pls_first_touch`).
+- **Payment is embedded (2026-11-20, Brian: keep customers on our branded page).** After `start`,
+  checkout.js hides the form and shows a "Payment" step below it: Authorize.net's hosted form in an
+  iframe (token posted into it), the order summary stays beside it. Authorize.net only lets us set
+  its accent color, button text and merchant name (no logo), hence the iframe. It talks back through
+  the same-origin relay page `/assets/apps/anet-communicator` (URL sent in every token as
+  `hostedPaymentIFrameCommunicatorUrl`; never move it): resize and cancel. The step polls
+  `/api/checkout/status` and goes to the thank-you page once the webhook has verified the payment;
+  the receipt's "Continue" (or "Cancel") page loaded inside the iframe lifts itself to the top window
+  (top of checkout.js). Fallback link "Open it full-window" posts the same token to Authorize.net's
+  page; `data-checkout-display="redirect"` on a form skips the iframe entirely. The site sends no
+  X-Frame-Options/CSP, so no header changes were needed; if a CSP is ever added, allow
+  `frame-src https://accept.authorize.net https://test.authorize.net` and let Authorize.net frame the
+  relay page.
 - **One checkout for every app.** Routes `functions/api/checkout/{start,anet-webhook,status}.js`;
   shared code (not routes) in `functions/_lib/checkout/`: `core.js`, `github.js`, `products.js`
   (registry), `products/<slug>.js`, `schemas/`. Payment = Authorize.net Accept Hosted: the site
-  never sees card data. ONE webhook for all apps (event `net.authorize.payment.authcapture.created`
-  -> `https://prolinksystems.com/api/checkout/anet-webhook`), routed by order-id prefix
-  (`PREFIX-YYMMDD-XXXX`, unique prefix per app); it fires for every capture on the account and
-  ignores anything that isn't a pending website order.
+  never sees card data. ONE webhook for all apps -> `https://prolinksystems.com/api/checkout/anet-webhook`,
+  subscribed to TWO events: `net.authorize.payment.authcapture.created` and
+  `net.authorize.payment.fraud.approved`; routed by order-id prefix (`PREFIX-YYMMDD-XXXX`, unique
+  prefix per app). It fires for every transaction on the account and ignores anything that isn't a
+  pending website order.
 - **Secrets / bindings** live only in Cloudflare Pages (entered by Brian; never in source, chat or a
   briefing): `ORDERS` (KV binding), `ANET_ENV` (`production`|`sandbox`; anything else = checkout off),
   `ANET_API_LOGIN_ID`, `ANET_TRANSACTION_KEY`, `ANET_SIGNATURE_KEY`, and each app's hand-off
   credential (M365: `GITHUB_ORDERS_TOKEN`, fine-grained, `brianshad-usa/m365-security-agent` only,
   Issues read/write only). Reuses `TURNSTILE_SECRET_KEY` and the contact form's `MS_*`/`SEND_FROM`
-  for failure alerts (one email per problem per 6 h). Authorize.net's **Transaction Details API must
-  be enabled** (Merchant Interface > Account > Settings) or no payment can be verified.
+  for failure alerts (one email per problem per 6 h). The webhook verifies every payment with
+  getTransactionDetails: newer Authorize.net accounts have the Transaction Details API on with no
+  setting (the 2026-11 sandbox shows none in either UI); if an account shows a "Transaction Details
+  API" setting under Account > Settings, it must be enabled.
+- **Authorize.net account settings that matter:** "Transaction Processing Mode" Enabled (the old
+  Test Mode OFF), or payments get no transaction id and no webhook. Fraud Detection Suite >
+  **Amount Filter** applies to every card payment on the account: it must not "decline" an app's
+  price (and "hold for review" means each order waits for Pro Link's approval). The sandbox default
+  is Upper Limit 1,000.00 + "process as normal and report" (an email per order). Sandbox test
+  card 4111 1111 1111 1111; billing ZIP 46282 forces a decline; retrying the same card/amount/order
+  within ~2 minutes = "duplicate transaction".
 - **Rules that keep money and data safe:** Turnstile is strict on `start` (no stale-token pass);
   the price comes only from the product module; the webhook checks the HMAC, then re-reads the
-  transaction (approved, exact amount, invoice = a pending order) before any hand-off; hand-offs
+  transaction (captured, exact amount, invoice = a pending order) before any hand-off. By the
+  transaction's current status (`core.paymentState`): declined -> a plain "Card declined" email
+  naming the customer (sales follow-up; no alarm); held by a fraud filter -> an email to approve or
+  decline it in Authorize.net, and approving it (event `fraud.approved`) hands the order off
+  automatically; processing error -> log only; anything else or a wrong amount -> "needs a look"
+  email; a SECOND, different payment for an already-paid order -> "refund one" email. Hand-offs
   are idempotent (paid flag + KV lock + existing-issue check; the M365 agent also closes a second issue
   for an order_id it already has, and blocks concurrent duplicates, without registering or emailing
   anything; agent spec updated to these endpoints in commit ed90fac); the GitHub hand-off refuses to post
@@ -556,6 +584,8 @@ that I would like to host on our site similarly". Every app follows this one pat
   orderPrefix, pages, intake, buildOrder, schema, handoff) + register it in `products.js`;
   (2) `<slug>.html` + `<slug>/order.html` + `<slug>/thank-you.html` from the M365 pages; (3) a hub
   card + `ItemList` entry on `self-service.html`; (4) sitemap, `llms.txt`, `_redirects`; (5) extend
-  `tests/checkout.test.mjs` (run `node --test tests/checkout.test.mjs`; 22 checks for app #1:
-  validation, signatures, idempotency, privacy guard, alerts), `site_guard.py`, then an
-  Authorize.net SANDBOX order end to end before production.
+  `tests/checkout.test.mjs` (run `node --test tests/checkout.test.mjs`; 28 checks for app #1:
+  validation, signatures, idempotency, payment states, privacy guard, alerts), `site_guard.py`, then
+  an Authorize.net SANDBOX order end to end before production (Cloudflare Pages project `plsmain`:
+  a pushed branch previews at `https://<branch>.plsmain.pages.dev` with the Preview variables; the
+  sandbox webhook points there; the Turnstile widget allows `plsmain.pages.dev`).
