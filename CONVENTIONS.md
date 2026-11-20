@@ -521,8 +521,12 @@ that I would like to host on our site similarly". Every app follows this one pat
   billing name/address is collected on OUR form (`bill_first_name`, `bill_last_name`, `bill_address`,
   `bill_city`, `bill_state`, `bill_zip`; required by `start` for every app; sent as `billTo`, never
   stored) and the hosted form shows only card number, expiry, code and Pay (billing block, order
-  summary and Cancel button turned off); the iframe is borderless, default 560 px (640 px on phones)
-  and then exactly the height Authorize.net reports. The step polls
+  summary and Cancel button turned off); the iframe is borderless with `scrolling="no"` (as in
+  Authorize.net's sample app) and takes exactly the height Authorize.net reports (6 s no-message
+  fallback 900/1100 px). The embedded session has NO Authorize.net receipt (it was clipped in the
+  frame): on `transactResponse` success the page goes straight to our thank-you page. `start`
+  therefore returns two tokens per order: `token` (embedded, `showReceipt:false`, relay page) and
+  `full_token` (full-window fallback / redirect mode, with receipt). The step polls
   `/api/checkout/status` and goes to the thank-you page once the webhook has verified the payment;
   the receipt's "Continue" (or "Cancel") page loaded inside the iframe lifts itself to the top window
   (top of checkout.js). Fallback link "Open it full-window" posts the same token to Authorize.net's

@@ -240,11 +240,14 @@ export async function anetRequest(anet, body) {
 export const IFRAME_COMMUNICATOR_PATH = "/assets/apps/anet-communicator";
 
 /** Accept Hosted token for one order. settingValue entries are JSON strings (Authorize.net's format).
- *  The same token serves the embedded form (iframe) and the full-window fallback: the receipt's
- *  "Continue" leads to the thank-you page either way (checkout.js lifts it out of the iframe).
+ *  display "embedded" (the order page's iframe): NO Authorize.net receipt (it would be clipped in the
+ *  non-scrolling frame); the form reports the result through the relay page (transactResponse) and
+ *  checkout.js moves on to our own thank-you page. display "full" (the full-window fallback): the
+ *  receipt shows, and its "Continue" leads to the same thank-you page.
  *  The billing address comes from our own form (billTo), so the hosted form shows only the card
  *  fields and the Pay button: no billing block, no order summary, no Cancel button. */
-export async function hostedPaymentToken(env, anet, { product, orderId, email, ip, origin, billTo, company }) {
+export async function hostedPaymentToken(env, anet, { product, orderId, email, ip, origin, billTo, company, display = "embedded" }) {
+  const embedded = display !== "full";
   const s = (settingName, value) => ({ settingName, settingValue: JSON.stringify(value) });
   const transactionRequest = {
     transactionType: "authCaptureTransaction",
@@ -267,7 +270,7 @@ export async function hostedPaymentToken(env, anet, { product, orderId, email, i
       hostedPaymentSettings: {
         setting: [
           s("hostedPaymentReturnOptions", {
-            showReceipt: true,
+            showReceipt: !embedded,
             url: `${origin}${product.pages.thankYou}?order=${encodeURIComponent(orderId)}`,
             urlText: "Continue",
           }),
@@ -279,11 +282,14 @@ export async function hostedPaymentToken(env, anet, { product, orderId, email, i
           s("hostedPaymentBillingAddressOptions", { show: false, required: false }),
           s("hostedPaymentCustomerOptions", { showEmail: false, requiredEmail: false, addPaymentProfile: false }),
           s("hostedPaymentOrderOptions", { show: false, merchantName: "Pro Link Systems" }),
-          s("hostedPaymentIFrameCommunicatorUrl", { url: `${origin}${IFRAME_COMMUNICATOR_PATH}` }),
         ],
       },
     },
   };
+  if (embedded) {
+    body.getHostedPaymentPageRequest.hostedPaymentSettings.setting.push(
+      s("hostedPaymentIFrameCommunicatorUrl", { url: `${origin}${IFRAME_COMMUNICATOR_PATH}` }));
+  }
   const res = await anetRequest(anet, body);
   return { ok: res.ok && typeof res.data.token === "string" && res.data.token.length > 0, token: res.data.token, codes: res.codes };
 }

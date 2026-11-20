@@ -166,7 +166,7 @@
               currency: currency, value: value,
               items: [{ item_id: product, price: value, quantity: 1 }]
             });
-            if (ui) openPayment(j); else postToken(j.post_url, j.token);
+            if (ui) openPayment(j); else postToken(j.post_url, j.full_token || j.token);
             return;
           }
           resetTurnstile();      // tokens are single-use; the next attempt needs a new one
@@ -253,7 +253,15 @@
             ga("event", "checkout_cancel", { product: product });
             closePayment(true);
           } else if (m.action === "transactResponse") {
-            pollNow();
+            // The embedded form shows no receipt: on success go straight to our thank-you page, which
+            // waits for the webhook-verified status. Declines stay in the form (it shows the error).
+            var r = null;
+            var at = String(str).indexOf("response=");         // the JSON is the last parameter
+            var raw = at >= 0 ? String(str).slice(at + 9) : "";
+            try { raw = decodeURIComponent(raw); } catch (e) {}
+            try { r = JSON.parse(raw || "null"); } catch (e) {}
+            if (r && String(r.responseCode) === "1") goToThankYou(pay);
+            else pollNow();
           }
         }
       };
@@ -262,7 +270,7 @@
 
     function openPayment(j) {
       pay = {
-        id: j.order_id, returnUrl: j.return_url || "", token: j.token, postUrl: j.post_url,
+        id: j.order_id, returnUrl: j.return_url || "", token: j.token, fullToken: j.full_token || "", postUrl: j.post_url,
         started: Date.now(), timer: null, expiry: null, slow: null, noResize: null, resized: false, done: false
       };
       form.hidden = true;
@@ -293,15 +301,16 @@
         .then(function (r) { return r.json(); })
         .then(function (s) {
           if (pay !== p || p.done) return;
-          if (s && s.status === "paid") {
-            p.done = true;
-            clearTimers(p);
-            location.href = p.returnUrl || ("/" + product + "/thank-you?order=" + encodeURIComponent(p.id));
-            return;
-          }
+          if (s && s.status === "paid") { goToThankYou(p); return; }
           p.timer = setTimeout(pollPaid, 4000);
         })
         .catch(function () { if (pay === p && !p.done) p.timer = setTimeout(pollPaid, 6000); });
+    }
+    function goToThankYou(p) {
+      if (!p || p.done) return;
+      p.done = true;
+      clearTimers(p);
+      location.href = p.returnUrl || ("/" + product + "/thank-you?order=" + encodeURIComponent(p.id));
     }
     function pollNow() {
       if (!pay || pay.done) return;
@@ -331,7 +340,7 @@
       p.done = true;
       clearTimers(p);
       ga("event", "checkout_fullwindow", { product: product });
-      postToken(p.postUrl, p.token);
+      postToken(p.postUrl, p.fullToken || p.token);            // the full-window session shows a receipt
     }
 
     function parseMsg(str) {

@@ -161,9 +161,17 @@ test("start: happy path (sandbox) stores a pending order and returns a hosted to
   assert.equal(body.token, "TOKEN123");
   assert.equal(body.post_url, "https://test.authorize.net/payment/payment");
 
-  const anetCall = calls.find((c) => c.url.includes("request.api"));
+  const anetCalls = calls.filter((c) => c.url.includes("request.api"));
+  assert.equal(anetCalls.length, 2, "embedded + full-window payment sessions");
+  const anetCall = anetCalls[0];
   assert.equal(anetCall.url, "https://apitest.authorize.net/xml/v1/request.api");
   const req = JSON.parse(anetCall.body).getHostedPaymentPageRequest;
+  const fullReq = JSON.parse(anetCalls[1].body).getHostedPaymentPageRequest;
+  const fullSettings = Object.fromEntries(fullReq.hostedPaymentSettings.setting.map((x) => [x.settingName, JSON.parse(x.settingValue)]));
+  assert.equal(fullSettings.hostedPaymentReturnOptions.showReceipt, true, "full-window fallback keeps Authorize.net's receipt");
+  assert.equal("hostedPaymentIFrameCommunicatorUrl" in fullSettings, false);
+  assert.deepEqual(fullReq.transactionRequest, req.transactionRequest, "same order, amount and billing");
+  assert.equal(body.full_token, "TOKEN123");
   assert.deepEqual(Object.keys(req), ["merchantAuthentication", "refId", "transactionRequest", "hostedPaymentSettings"]);
   assert.deepEqual(Object.keys(req.transactionRequest), ["transactionType", "amount", "order", "customer", "billTo", "customerIP"]);
   assert.deepEqual(req.transactionRequest.billTo, { firstName: "Dana", lastName: "Rivera", company: "Northwind Dental Group",
@@ -180,6 +188,7 @@ test("start: happy path (sandbox) stores a pending order and returns a hosted to
   assert.equal(settings.hostedPaymentButtonOptions.text, "Pay $2,500.00");
   assert.equal(settings.hostedPaymentSecurityOptions.captcha, true);
   assert.equal(settings.hostedPaymentIFrameCommunicatorUrl.url, "https://prolinksystems.com/assets/apps/anet-communicator");
+  assert.equal(settings.hostedPaymentReturnOptions.showReceipt, false, "embedded form: no clipped receipt; we show our own page");
   assert.equal(body.return_url, `https://prolinksystems.com/m365-security-assessment/thank-you?order=${body.order_id}`);
 
   const rec = await env.ORDERS.get(`order:${body.order_id}`, "json");

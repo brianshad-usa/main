@@ -58,12 +58,19 @@ export async function onRequestPost({ request, env }) {
     return json(400, { ok: false, field: bill.field, message: bill.message });
   }
 
+  // Two payment sessions for the same order: the embedded form (no Authorize.net receipt) and the
+  // full-window fallback (with receipt). Paying twice is blocked by Authorize.net's duplicate window
+  // and, beyond it, flagged by the webhook ("second payment").
   const origin = new URL(request.url).origin;
+  const tokenArgs = { product, orderId, email: res.email, ip, origin, billTo: bill.billTo, company: cleanLine(input.company_name, 50) };
   let pay;
+  let full;
   try {
-    pay = await hostedPaymentToken(env, anet, {
-      product, orderId, email: res.email, ip, origin, billTo: bill.billTo, company: cleanLine(input.company_name, 50),
-    });
+    [pay, full] = await Promise.all([
+      hostedPaymentToken(env, anet, Object.assign({ display: "embedded" }, tokenArgs)),
+      hostedPaymentToken(env, anet, Object.assign({ display: "full" }, tokenArgs)),
+    ]);
+    if (pay.ok && !full.ok) pay = full;           // surface the refusal below
   } catch (e) {
     pay = { ok: false, codes: ["unreachable"] };
   }
@@ -87,7 +94,7 @@ export async function onRequestPost({ request, env }) {
 
   log({ outcome: "token", product: product.id, order: orderId, mode: anet.mode });
   return json(200, {
-    ok: true, order_id: orderId, token: pay.token, post_url: anet.hosted,
+    ok: true, order_id: orderId, token: pay.token, full_token: full.token, post_url: anet.hosted,
     return_url: `${origin}${product.pages.thankYou}?order=${encodeURIComponent(orderId)}`,
   });
 }
