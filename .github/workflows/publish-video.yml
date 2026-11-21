@@ -1,8 +1,10 @@
 name: Publish Video
 
 on:
-  # Auto-publish when a new video is pushed into videos/.
+  # Auto-publish when a new video is pushed into videos/ ON MAIN ONLY (2026-11-20: without the branch filter a
+  # push of any branch, or a tag, that touched videos/ would have posted to the social channels).
   push:
+    branches: [main]
     paths:
       - 'videos/*.mp4'
       - 'videos/*.mov'
