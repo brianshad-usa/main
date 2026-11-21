@@ -575,6 +575,7 @@ NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/services">Services</a>
+    <a href="/self-service">Assessments</a>
     <a href="/case-studies">Case Studies</a>
     <a href="/about">About</a>
     <a href="/blog/" class="active">Blog</a>
@@ -591,6 +592,7 @@ NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
 <div class="mobile-menu" id="mobile-menu">
   <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
   <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/self-service" onclick="document.getElementById('mobile-menu').classList.remove('open')">Assessments</a>
   <a href="/case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
   <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
   <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
@@ -744,7 +746,7 @@ html = f"""<!DOCTYPE html>
   "url": "https://prolinksystems.com/blog/{slug}"
 }}
 </script>
-<link rel="stylesheet" href="/_shared.css?v=20261117b">
+<link rel="stylesheet" href="/_shared.css?v=20261120">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -971,7 +973,7 @@ index_html = f"""<!DOCTYPE html>
 <meta name="description" content="Expert IT advice, cybersecurity tips, and managed IT insights for Los Angeles businesses from Pro Link Systems &mdash; proudly serving LA companies since 1999.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://prolinksystems.com/blog/">
-<link rel="stylesheet" href="/_shared.css?v=20261117b">
+<link rel="stylesheet" href="/_shared.css?v=20261120">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];

@@ -50,7 +50,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <title>Self-Service IT Assessments | Pro Link Systems</title>
   <meta name="description" content="Order Pro Link's IT assessments online: pay securely, approve read-only access, and get results reviewed by our team. Managed IT since 1999.">
-  <meta name="robots" content="index, follow">
+  <!-- noindex + out of the sitemap while _redirects sends /self-service to the only app (302). Restore
+       "index, follow", sitemap.xml and llms.txt when app #2 launches (CONVENTIONS "Self-service apps"). -->
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://prolinksystems.com/self-service">
 
   <meta property="og:type" content="website">
@@ -118,8 +120,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/_shared.css?v=20261117b">
-  <link rel="stylesheet" href="/assets/apps/apps.css?v=20261120d">
+  <link rel="stylesheet" href="/_shared.css?v=20261120">
+  <link rel="stylesheet" href="/assets/apps/apps.css?v=20261120e">
 </head>
 <body>
 
@@ -128,7 +130,8 @@
   <a href="/" class="nav-logo" aria-label="Pro Link Systems home"><img src="/logo.png" alt="Pro Link Systems" width="160" height="44"></a>
   <div class="nav-links">
     <a href="/">Home</a>
-    <a href="/services" class="active">Services</a>
+    <a href="/services">Services</a>
+    <a href="/self-service" class="active">Assessments</a>
     <a href="/case-studies">Case Studies</a>
     <a href="/about">About</a>
     <a href="/blog/">Blog</a>
@@ -140,6 +143,7 @@
 <div class="mobile-menu" id="mobile-menu">
   <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
   <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="/self-service" class="active" onclick="document.getElementById('mobile-menu').classList.remove('open')">Assessments</a>
   <a href="/case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
   <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
   <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>

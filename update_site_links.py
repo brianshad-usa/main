@@ -203,4 +203,55 @@ n_hub_gen = rw(os.path.join(HERE, "generate_blog.py"), lambda s: sync_hub_link(s
 print(f"[footer hub link] added to {n_hub} html files; generate_blog.py template updated: {bool(n_hub_gen)}"
       + (f"; skipped (check by hand): {', '.join(hub_skipped)}" if hub_skipped else ""))
 
+
+# 7) top menu -> "Assessments" (the self-service apps hub) -------------------
+#    (2026-11-20) Brian: put the self-service assessments in the main menu. One item,
+#    "Assessments" -> /self-service (the hub; while it has a single app, _redirects
+#    sends it straight to that app), right after "Services" in the desktop menu
+#    (div.nav-links) and the mobile menu (#mobile-menu / #mobileMenu), in each file's
+#    own href style and with the Services link's own attributes (onclick etc.). The
+#    app pages themselves (hub + every app folder) mark "Assessments" as the active
+#    item. case-studies.html's custom top bar gets the same link. Pages without a
+#    menu (the Ads landing page managed-it-services.html, utility pages) are skipped.
+NAV_LABEL = "Assessments"
+NAV_BLOCK_RES = [
+    re.compile(r'(<div class="nav-links">)(.*?)(</div>)', re.S),
+    re.compile(r'(<div class="mobile-menu" id="(?:mobile-menu|mobileMenu)">)(.*?)(</div>)', re.S),
+    re.compile(r'(<nav style="background:#003057[^"]*">)(.*?)(</nav>)', re.S),       # case-studies.html
+]
+SERVICES_A_RE = re.compile(r'<a href="(?P<pre>[^"]*?)services"(?P<attrs>[^>]*)>Services</a>')
+app_dirs = {os.path.dirname(p) for p in glob.glob(os.path.join(HERE, "*", "order.html"))}
+app_pages = {os.path.join(HERE, f"{HUB_SLUG}.html")} | {p for d in app_dirs for p in glob.glob(os.path.join(d, "*.html"))}
+app_pages |= {os.path.join(HERE, os.path.basename(d) + ".html") for d in app_dirs}   # each app's product page
+
+
+def add_nav_item(block, active):
+    if re.search(r'href="[^"]*' + HUB_SLUG + r'"', block):
+        return block
+    m = SERVICES_A_RE.search(block)
+    if not m:
+        return block
+    attrs = m.group("attrs").replace(' class="active"', "")
+    services = m.group(0)
+    if active:                                    # the app pages: Assessments is the current section
+        services = services.replace(' class="active"', "")
+        attrs = ' class="active"' + attrs
+    nl = block.rfind("\n", 0, m.start())
+    lead = block[nl + 1:m.start()] if nl >= 0 else ""
+    sep = ("\n" + lead) if lead.strip() == "" else " "
+    item = f'<a href="{m.group("pre")}{HUB_SLUG}"{attrs}>{NAV_LABEL}</a>'
+    return block[:m.start()] + services + sep + item + block[m.end():]
+
+
+def sync_nav_item(src, active=False):
+    for rx in NAV_BLOCK_RES:
+        src = rx.sub(lambda m: m.group(1) + add_nav_item(m.group(2), active) + m.group(3), src)
+    return src
+
+
+nav_targets = sorted(set(targets) | app_pages)
+n_nav = sum(rw(p, lambda s, p=p: sync_nav_item(s, p in app_pages)) for p in nav_targets if os.path.exists(p))
+n_nav_gen = rw(os.path.join(HERE, "generate_blog.py"), sync_nav_item)
+print(f"[top menu] '{NAV_LABEL}' added to {n_nav} html files; generate_blog.py template updated: {bool(n_nav_gen)}")
+
 print(f"\n{len(changed)} file(s) changed.")

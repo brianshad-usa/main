@@ -68,7 +68,8 @@
 .app-faq .answer p { margin: 0; }
 
 /* ---------- hub ---------- */
-.app-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 24px; }
+/* Cards keep a fixed width and the row is centred, so one or two cards sit under the centred heading. */
+.app-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 380px)); justify-content: center; gap: 24px; }
 .app-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 30px 28px; display: flex; flex-direction: column; box-shadow: var(--sh-sm); }
 .app-card .tag { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 10px; }
 .app-card h2, .app-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--text); margin: 0 0 10px; line-height: 1.3; }

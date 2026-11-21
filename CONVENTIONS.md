@@ -502,11 +502,31 @@ that I would like to host on our site similarly". Every app follows this one pat
   valid JSON-LD, alt text, check-20 claims, inline JS parses). Check 19 (lead forms: only
   name/email required) does NOT apply to order forms: a purchase legitimately requires what its
   order contract requires.
-- **Hub.** `/self-service` lists every app (a card + an `ItemList` entry). The site links the hub,
-  never the individual apps: footer Services column (`update_site_links.py` step 6 adds it to every
-  root page, blog post and the blog template, idempotent; `ai-automation-services.html` and
-  `case-studies.html` have custom footers and need a hand edit) and the `services.html` "More
+- **Hub.** `/self-service` lists every app (a card + an `ItemList` entry). Site-wide links go to the
+  hub, never to an individual app: the top menu item **"Assessments"** right after Services
+  (`update_site_links.py` step 7: desktop + mobile menus of every page, the app pages mark it active,
+  blog template too; `case-studies.html`'s custom bar included; the Ads landing page
+  `managed-it-services.html` has no menu on purpose), the footer Services column (step 6;
+  `ai-automation-services.html` and `case-studies.html` hand-edited) and the `services.html` "More
   services" grid. Adding an app = a hub card, never a site-wide edit.
+- **One app = no hub (Brian 2026-11-20).** While there is a single app, `_redirects` sends
+  `/self-service` to it with a **302** (temporary; never 301, browsers cache those for good), the hub
+  page is `noindex` and out of `sitemap.xml` + `llms.txt`, and the app's BreadcrumbList uses Home ›
+  Services. When app #2 launches: delete that `_redirects` line, set the hub back to `index, follow`,
+  re-add it to the sitemap and `llms.txt`, and point the breadcrumbs at the hub again. Hub cards are
+  fixed-width and centred (one card used to sit left of the centred heading).
+- **Top menu fit.** With 8 items the desktop menu needs ~1,100px, so `_shared.css` tightens it below
+  1200px, hides "Home" below 1040px (the logo is the home link) and shows the ☰ menu below 920px
+  (measured on home, services, industry and blog pages: no overflow or wrapping at any width).
+  Re-measure before adding another menu item; `bump_shared_css.py <date>` after any `_shared.css` change.
+- **Where the M365 assessment is promoted (2026-11-20):** the home page band after the stats ("New ·
+  Order online"), and the shared `.assess-callout` box (styles in `_shared.css`) above the CTA band
+  on `cybersecurity-services`, `email-security-services` and `identity-access-management`, and above
+  the CTA box in the Microsoft 365 / Copilot blog posts (t4 Microsoft 365 vs Google, t89 tenant prep,
+  t90 Copilot data governance, t106 OAuth app grants, t49 Copilot safely). Every claim matches the
+  product page (about 80 controls, 13 areas, read-only, findings by severity, review call, $2,500).
+  Note the CTA bands on several pages still offer a "free cybersecurity/IT assessment" (the free
+  discovery call); keep the two clearly distinct in copy.
 - **Shared front end.** `/assets/apps/apps.css` + `/assets/apps/checkout.js` (versioned `?v=`, bump
   on change). The order form is `<form data-checkout-product="<slug>" data-value data-currency>` with
   Turnstile; the thank-you page is `[data-checkout-thankyou]` with `[data-state]` panels. The script
@@ -593,7 +613,8 @@ that I would like to host on our site similarly". Every app follows this one pat
 - **Adding app #2+:** (1) `functions/_lib/checkout/products/<slug>.js` (id, name, amount,
   orderPrefix, pages, intake, buildOrder, schema, handoff) + register it in `products.js`;
   (2) `<slug>.html` + `<slug>/order.html` + `<slug>/thank-you.html` from the M365 pages; (3) a hub
-  card + `ItemList` entry on `self-service.html`; (4) sitemap, `llms.txt`, `_redirects`; (5) extend
+  card + `ItemList` entry on `self-service.html`, and for the SECOND app undo "One app = no hub"
+  above; (4) sitemap, `llms.txt`, `_redirects`; (5) extend
   `tests/checkout.test.mjs` (run `node --test tests/checkout.test.mjs`; 28 checks for app #1:
   validation, signatures, idempotency, payment states, privacy guard, alerts), `site_guard.py`, then
   an Authorize.net SANDBOX order end to end before production (Cloudflare Pages project `plsmain`:

@@ -290,7 +290,7 @@
 
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="/contact-form.js?v=20261109" defer></script>
-  <link rel="stylesheet" href="_shared.css?v=20261117b">
+  <link rel="stylesheet" href="_shared.css?v=20261120">
   <style>
     /* ============================================================
        HERO &mdash; video carousel + form, full viewport
@@ -806,6 +806,19 @@
     .vid-arrow, .vid-dot, .unmute-btn, .submit-btn, .nav-hamburger {
       touch-action: manipulation;
     }
+    /* "New: order online" band for the self-service assessment (2026-11-20) */
+    .home-assess { background: var(--off-white); padding-top: 40px; padding-bottom: 40px; }
+    .home-assess-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; background: var(--white); border: 1px solid var(--border); border-left: 5px solid var(--gold); border-radius: var(--r-lg); padding: 26px 30px; box-shadow: var(--sh-sm); }
+    .home-assess-badge { display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--navy); background: rgba(245,166,35,.18); border-radius: 100px; padding: 5px 12px; margin: 0 0 10px; }
+    .home-assess h2 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-weight: 800; color: var(--text); margin: 0 0 8px; line-height: 1.3; }
+    .home-assess p { font-size: 1rem; line-height: 1.65; color: var(--text-muted); margin: 0; max-width: 760px; }
+    .home-assess-cta { flex: 0 0 auto; text-align: center; }
+    .home-assess-price { display: block; font-size: 1.5rem; font-weight: 800; color: var(--navy); margin: 0 0 10px; letter-spacing: -.02em; }
+    @media (max-width: 760px) {
+      .home-assess { padding: 32px 16px; }
+      .home-assess-inner { flex-direction: column; align-items: flex-start; padding: 22px 20px; }
+      .home-assess-cta { text-align: left; }
+    }
   </style>
 <script type="application/ld+json">
 {
@@ -884,6 +897,7 @@
   <div class="nav-links">
     <a href="/" class="active">Home</a>
     <a href="services">Services</a>
+    <a href="self-service">Assessments</a>
     <a href="case-studies">Case Studies</a>
     <a href="about">About</a>
     <a href="blog/">Blog</a>
@@ -900,6 +914,7 @@
 <div class="mobile-menu" id="mobile-menu">
   <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
   <a href="services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+  <a href="self-service" onclick="document.getElementById('mobile-menu').classList.remove('open')">Assessments</a>
   <a href="case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
   <a href="about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
   <a href="blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
@@ -1082,6 +1097,21 @@
     <div class="stat-label">Avg. Ticket First Response</div>
   </div>
 </div>
+
+<!-- NEW: SELF-SERVICE ASSESSMENT (2026-11-20, Brian: make the M365 assessment visible; facts = the product page) -->
+<section class="section-sm home-assess" aria-labelledby="home-assess-heading">
+  <div class="container home-assess-inner">
+    <div>
+      <span class="home-assess-badge">New &middot; Order online</span>
+      <h2 id="home-assess-heading">Microsoft 365 Security Assessment</h2>
+      <p>A one-time, read-only review of about 80 security controls in your Microsoft 365. You get a findings report sorted by severity, checked by our team, and a complimentary review call. We never change a setting.</p>
+    </div>
+    <div class="home-assess-cta">
+      <span class="home-assess-price">$2,500</span>
+      <a href="/m365-security-assessment" class="btn btn-navy">See how it works</a>
+    </div>
+  </div>
+</section>
 
 <!-- SEE US AT WORK: the video carousel (moved out of the hero 2026-11-12; posters + starts when scrolled into view) -->
 <section class="section section-dark" id="see-us-work" aria-labelledby="see-us-heading">

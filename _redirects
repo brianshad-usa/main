@@ -114,6 +114,10 @@
 # ---- Self-service apps: hub + one product page per app (CONVENTIONS "Self-service apps") ----
 /self-service.html                         /self-service                        301
 /m365-security-assessment.html             /m365-security-assessment            301
+# While there is only ONE app (Brian 2026-11-20), the hub sends visitors straight to it. TEMPORARY (302,
+# never 301: browsers cache 301s for good). When app #2 launches, delete this line, remove the hub's
+# noindex and put /self-service back in sitemap.xml + llms.txt.
+/self-service                              /m365-security-assessment            302
 
 # ---- Duplicate blog post -> canonical (t5) version ----
 /blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html   301
