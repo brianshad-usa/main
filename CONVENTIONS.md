@@ -593,9 +593,15 @@ that I would like to host on our site similarly". Every app follows this one pat
   conversions; customer text is escaped so it can't break the issue's ```json block.
 - **Tracking:** GA4 `begin_checkout` (order page) and `purchase` (thank-you; `transaction_id` = order
   id, value, currency) + UET `purchase` (`revenue_value`). The thank-you page fires them only after
-  `/api/checkout/status` reports the webhook-verified payment, once per order. A Google Ads purchase
-  conversion fires when `data-ads-send-to` on the thank-you page holds a conversion action's
-  `AW-1068497497/<label>` (empty until that action exists).
+  `/api/checkout/status` reports the webhook-verified payment, once per order. The Google Ads purchase
+  conversion fires from `data-ads-send-to` on the thank-you page: M365 = conversion action "Purchase -
+  M365 Security Assessment" (id 7911721395, Purchase, value from the tag, every conversion, deduped by
+  transaction_id) = `AW-1068497497/ySHlCLOTzbwdENn0v_0D` (2026-11-20). A new app gets its own action.
+- **Google Ads (2026-11-20, Brian):** campaign "ProLink M365 Security Assessment US 2026" (id
+  24528974813): Search only, US presence, English, Manual CPC max $10, $10/day, 16 exact/phrase
+  keywords, 40 negatives (the account's compliance list + DIY/jobs/training), one RSA with product-page
+  facts only, suffix `utm_campaign=m365_assessment&utm_content=m365_assessment`. Google's planner:
+  ~100 US searches/month, top-of-page bids $16.50-$50, so $10/day buys at most ~1 click/day.
 - **App #1, M365 Security Assessment** (spec: private repo `brianshad-usa/m365-security-agent`,
   `docs/website-integration.md`). `/m365-security-assessment/access-granted` is the redirect URI of
   Pro Link's Microsoft Entra app: never move or rename it. The order JSON must satisfy the agent's
