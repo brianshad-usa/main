@@ -632,11 +632,12 @@ that I would like to host on our site similarly". Every app follows this one pat
 
 ## Redesign 2026 (branch `redesign-2026`, staging only until Brian approves go-live)
 
-- **Staging:** `https://redesign-2026.plsmain.pages.dev` (Cloudflare Pages preview of this branch). Locked by
-  `functions/_middleware.js`: Basic auth (user `prolink`, password = the Preview variable `STAGING_PASSWORD`,
-  set by Brian, never in code; no password = everything refused), disallow-all robots + noindex, the lead form
-  and checkout APIs answered by the middleware (nothing sent, charged or ordered), tracking tags stripped behind
-  no-op stubs. The middleware does nothing on `prolinksystems.com`. **Delete it before the merge.**
+- **Staging:** `https://redesign-2026.plsmain.pages.dev` (Cloudflare Pages preview of this branch), guarded by
+  `functions/_middleware.js`: disallow-all robots + noindex, the lead form and checkout APIs answered by the
+  middleware (nothing sent, charged or ordered), tracking tags stripped behind no-op stubs. No login since
+  2026-11-21 (Brian's request): `REQUIRE_LOGIN = false`; set it to `true` to require Basic auth again (user
+  `prolink`, password = the Preview secret `STAGING_PASSWORD`, set by Brian, never in code; no password =
+  everything refused). The middleware does nothing on `prolinksystems.com`. **Delete it before the merge.**
 - **Rollback:** production `main` is untouched by this branch. Backups: local tag `pre-redesign-2026-11-20`
   (= `de7b063`, not pushed) and a zip of that commit outside the repo; Cloudflare keeps every production
   deployment for one-click rollback.

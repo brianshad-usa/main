@@ -4,9 +4,10 @@
  *
  * On prolinksystems.com / www.prolinksystems.com it does nothing (straight pass-through).
  * On every other host (the *.pages.dev staging/preview addresses) it:
- *   1. requires HTTP Basic auth: user "prolink", password = STAGING_PASSWORD (Cloudflare Pages > Settings >
- *      Variables and Secrets > Preview, set by Brian; never in code). No password configured = everything is
- *      refused (fail closed).
+ *   1. when REQUIRE_LOGIN is true: requires HTTP Basic auth, user "prolink", password = STAGING_PASSWORD
+ *      (Cloudflare Pages > Settings > Variables and Secrets > Preview, set by Brian; never in code); no password
+ *      configured = everything is refused (fail closed). 2026-11-21: Brian asked to remove the login, so
+ *      REQUIRE_LOGIN is false and staging is viewable by anyone with the link (still never indexed).
  *   2. keeps search engines out: robots.txt disallows everything, every response gets X-Robots-Tag: noindex,
  *      and HTML pages get a robots noindex meta tag.
  *   3. answers the lead form and the checkout APIs itself: no email to the inbox, no payment session, no order
@@ -16,6 +17,7 @@
  *      visits never reach production analytics or ad conversions. Adds a small "STAGING" label.
  */
 const PROD_HOSTS = new Set(["prolinksystems.com", "www.prolinksystems.com"]);
+const REQUIRE_LOGIN = false;   // 2026-11-21 Brian: no login on staging; set true to require the password again
 const USER = "prolink";
 const TRACKING_SRC = /googletagmanager\.com|google-analytics\.com|bat\.bing\.net|clarity\.ms|hotjar\.com/i;
 const TRACKING_INLINE = /googletagmanager\.com|bat\.bing\.net|clarity\.ms|static\.hotjar\.com|hotjar|gtag\(\s*['"](?:js|config)['"]/i;
@@ -79,10 +81,12 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   if (PROD_HOSTS.has(url.hostname)) return next();
 
-  const password = env.STAGING_PASSWORD;
-  if (!password) return plain(503, "The Pro Link staging site is locked: no STAGING_PASSWORD is configured.");
-  if (!authorized(request.headers.get("Authorization"), password)) {
-    return plain(401, "Authentication required.", { "WWW-Authenticate": 'Basic realm="Pro Link staging", charset="UTF-8"' });
+  if (REQUIRE_LOGIN) {
+    const password = env.STAGING_PASSWORD;
+    if (!password) return plain(503, "The Pro Link staging site is locked: no STAGING_PASSWORD is configured.");
+    if (!authorized(request.headers.get("Authorization"), password)) {
+      return plain(401, "Authentication required.", { "WWW-Authenticate": 'Basic realm="Pro Link staging", charset="UTF-8"' });
+    }
   }
 
   if (url.pathname === "/robots.txt") return plain(200, "User-agent: *\nDisallow: /\n");
