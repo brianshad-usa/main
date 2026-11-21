@@ -4181,6 +4181,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-21",
+      "idea_id": "S062",
+      "theme": "identity",
+      "format": "checklist",
+      "title": "The offboarding step almost everyone misses",
+      "excellence": 91,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight",
+        "channels": {
+          "linkedin": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "facebook": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "gbp": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "instagram": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          },
+          "x": {
+            "style": "quote",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "centered",
+            "register": "insight"
+          }
+        }
+      }
     }
   ]
 }

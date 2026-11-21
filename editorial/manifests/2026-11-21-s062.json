@@ -1,0 +1,163 @@
+{
+  "post": "Picture a Friday resignation. IT disables your sales manager's account at 5 p.m., and everyone moves on.\n\nOn Monday, her phone still holds weeks of company email, synced before the switch. An AI note-taking app she signed up for with her work email still lets her in, because it never ran through your main login, and it kept copies of meeting notes. Her mailbox is still receiving customer email, and an old forwarding rule may still be acting on it, depending on your email settings.\n\nNobody did anything wrong. The checklist simply stopped one step too early.\n\nTurning off an account blocks new sign-ins. Ending open sessions, removing forwarding, clearing company data from personal phones, closing outside accounts, and changing shared passwords are separate jobs. Put each one on your offboarding list with a name next to it.",
+  "headline": "A disabled account still receives mail",
+  "cta_label": "Call our team",
+  "cta_type": "CALL",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-21-s062-card.png",
+  "image_file_jpg": "2026-11-21-s062-card.jpg",
+  "theme": "identity",
+  "idea_id": "S062",
+  "core_idea": "Disabling a departing employee's account blocks new sign-ins and nothing more. The mailbox keeps receiving mail and its rules keep running, data already on devices stays put, granted sessions may persist until they expire, and AI and SaaS tools joined with a work email keep their own logins. Shared credentials also stay valid. Offboarding is finished only when each is revoked with evidence.",
+  "channels": {
+    "linkedin": "The account was disabled at 5 p.m. Its mailbox was still receiving mail at 5:01.\n\nThat is normal. Disabling an account blocks new sign-ins. It does not close the mailbox, and an inbox rule the person created while employed keeps running until someone removes it. Whether it can reach an outside address depends on a tenant setting few executives have seen.\n\nForwarding is one of several things the disable button does not reach:\n\nData already on a device. Mail and files synced to a personal phone stay there.\nSessions already granted. Some Microsoft services react to a disable quickly; others honor access until it expires.\nAccounts outside single sign-on. An AI assistant or project tool joined with a work email has its own login and its own copy of company data.\nShared secrets. Admin passwords and vault entries the person knew still work.\nSync delay. In hybrid environments, an on-premises disable reaches the cloud only at the next sync.\n\nFor a CEO or CFO, the exposure is quiet. Nobody has to hack anything.\n\nThe fix is a sequence with named owners. Revoke sessions alongside the disable. Remove forwarding and delegated access. Wipe company data from personal phones, which works only if those phones were under app protection or device management before anyone resigned. Close outside accounts. Rotate every shared credential the person could have known.\n\nMy view: offboarding is an identity control, proven by evidence rather than a checked box. Ask your IT lead this week: for our last departure, what did we actually revoke, and how do we know?",
+    "facebook": "Picture a Friday resignation. IT disables your sales manager's account at 5 p.m., and everyone moves on.\n\nOn Monday, her phone still holds weeks of company email, synced before the switch. An AI note-taking app she signed up for with her work email still lets her in, because it never ran through your main login, and it kept copies of meeting notes. Her mailbox is still receiving customer email, and an old forwarding rule may still be acting on it, depending on your email settings.\n\nNobody did anything wrong. The checklist simply stopped one step too early.\n\nTurning off an account blocks new sign-ins. Ending open sessions, removing forwarding, clearing company data from personal phones, closing outside accounts, and changing shared passwords are separate jobs. Put each one on your offboarding list with a name next to it.",
+    "gbp": "An offboarding check for Los Angeles business owners: after you disable a departing employee's account, look for what it did not stop. The mailbox keeps receiving mail, and old forwarding rules may act on it if your settings allow. Company data stays on personal phones. Apps and AI tools joined with a work email keep their own logins. Add five items to your checklist: revoke open sessions, remove forwarding and delegated access, clear company data from personal devices, close outside accounts, and change shared passwords. Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills. For a second look at your offboarding process, call our team.",
+    "x": [
+      "Disabled at 5 p.m. Still receiving mail at 5:01. The disable blocks new sign-ins. It doesn't close the mailbox or delete the forwarding rule someone set up months ago. Offboarding ends when access is revoked, not when the account turns gray."
+    ],
+    "instagram_caption": "Disabling an account blocks new sign-ins. That is all it promises. The mailbox keeps receiving mail, forwarding rules keep running until removed, synced data stays on personal phones, and AI and SaaS tools joined with a work email keep their own logins. Offboarding is a sequence: revoke, remove, wipe, close, rotate. Save this and compare it against your last departure. #Offboarding #IdentitySecurity #Microsoft365"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "quote",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "centered",
+    "register": "insight",
+    "channels": {
+      "linkedin": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "facebook": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "gbp": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "instagram": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      },
+      "x": {
+        "style": "quote",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "centered",
+        "register": "insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 91,
+    "scores": {
+      "topic_relevance": 94,
+      "timeliness": 88,
+      "originality": 88,
+      "hook_strength": 93,
+      "educational_value": 95,
+      "technical_accuracy": 95,
+      "executive_value": 92,
+      "writing_quality": 94,
+      "visual_sophistication": 86,
+      "platform_fit": 94,
+      "shareability": 90,
+      "saveability": 95,
+      "brand_authority": 91,
+      "trust": 96,
+      "strategic_value": 90
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Disabling an account blocks new sign-ins; it does not by itself remove data already on devices or accounts outside the identity provider (documented platform behavior, no figures)",
+    "ANALYSIS: A disabled Exchange Online mailbox continues to receive mail, and inbox rules continue to run until removed. External reach depends on tenant settings, because Exchange Online blocks automatic external forwarding by default unless an admin allows it. Stated conditionally wherever external forwarding is implied",
+    "ANALYSIS: Some Microsoft services (those supporting Continuous Access Evaluation) react to an account disable quickly; other apps may honor already-granted access until it expires. Stated without timing figures",
+    "ANALYSIS: In Microsoft 365, blocking sign-in and signing a user out of all sessions are separate administrative actions",
+    "ANALYSIS: In hybrid environments, an on-premises account disable reaches the cloud directory at the next synchronization",
+    "ANALYSIS: SaaS and AI tools joined with a work email outside single sign-on are not affected by disabling the identity-provider account and can retain copies of company data",
+    "ANALYSIS: Selective wipe of company data from personal devices depends on app protection policies or device management being in place beforehand",
+    "ANALYSIS: Shared credentials, admin passwords, and vault entries known to the departing person remain valid until rotated",
+    "OPINION: Offboarding is an identity control and is proven by evidence, not by a checked box",
+    "ANALYSIS: If you cannot list every system a person could reach, you cannot prove their access has been removed",
+    "ANALYSIS: The 5 p.m. / 5:01 timestamps and the Facebook Friday-to-Monday scenario (including the AI note-taker) are illustrative hypotheticals, not client stories or real incidents",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft explains a real gap, but its distinguishing material (separate revoke action, app protection) appears in most identity checklists. Any MSP could have published it. The GBP CTA was also the generic 'give our team a call.' Fix: lead with a less-known, verifiable mechanism. A disabled account's mailbox keeps receiving mail, and server-side forwarding rules can keep acting on it. That gives ProLink an angle a generic MSP post would not have."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The Instagram hook 'Are they actually out?' leans on a rhetorical question, and 'Disabling an account feels like the end of offboarding' could preface any offboarding post. Replaced both with a concrete, slightly unsettling scenario: 'The account is disabled. Its mailbox is still forwarding.' It is specific, true, and pays off immediately."
+    },
+    {
+      "role": "Art Director",
+      "finding": "All six slides are text-on-text with no visual system cue. Nothing in the story uses a diagram, even though the core idea is a two-column split: what the disable button stops versus what it does not reach. Revised with a dedicated 'ledger' slide built for a two-column typographic diagram. The sequence slide was rewritten as five single-verb beats that can set as a typographic rhythm. Copy alone cannot guarantee render quality. Design direction must accompany the slides."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft overstates the claim that disabling 'does not immediately end' sessions. Microsoft services that support Continuous Access Evaluation can react to an account disable quickly. The accurate claim is narrower: some apps do not check back and keep honoring access already granted until it expires. Data already on a device is untouched regardless. Two other gaps: hybrid environments, where an on-premises disable reaches the cloud only at the next sync, and Exchange Online blocking automatic external forwarding by default unless an admin allowed it. The forwarding claim therefore needs the 'if your tenant permits it' qualifier."
+    },
+    {
+      "role": "CIO",
+      "finding": "The sequence has no owners and no timing. It also omits the step that most often stays open longest: rotating shared credentials, admin passwords, and password-vault entries the departing person knew. Revised to require named owners, to revoke sessions alongside the disable, and to add credential rotation."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft lists mail forwarding rules only as a review item. It misses why they matter: they act on new mail after the person is gone, with no sign-in required. That is the most consequential detail in the topic, so the revision promotes it to the hook. Shared secrets and privileged credentials were absent and are now included."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "No AI angle, which is correct. The standards forbid manufacturing one. There is one genuine and timely link: AI assistants and chat tools joined with a work email sit outside single sign-on and hold conversation history containing company data. Added as one example among outside accounts, not as the subject."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Most offboarding checklists list only the first' is an unsupported generalization presented as fact. It was removed. The closing question was good but could be answered with 'we disabled it.' Revised to 'what did we actually revoke, and how do we know?' This forces an evidence answer, which is the executive's real need."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post buried its strongest idea. The carousel lacked a save-worthy reference slide. checklist_items was empty despite the topic being inherently checklist-shaped. Revised: X now opens on the forwarding mechanism, the carousel has a ledger slide and a five-beat sequence slide, and checklist_items is populated for the card asset."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP post's only differentiator was a founding-date line, which is permitted (F012) but does not show expertise. The GBP copy now names the specific things to check, so local credibility comes from the advice itself. No unverified ProLink claims appear anywhere. Facts F003 through F017 are not relevant to this topic and were correctly left unused."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The revised LinkedIn opener initially began two consecutive sentences with 'The'. It was corrected to 'The account is disabled. Its mailbox is still forwarding.' The draft Facebook scenario said 'her phone still shows the company inbox' without saying why, which invited a technical objection. It now specifies mail downloaded before the switch. All channel lengths are within limits: LinkedIn about 1,450, Facebook about 760, GBP about 640, and X under 260 characters."
+    },
+    {
+      "role": "Senior Technology Editor / Cybersecurity Expert",
+      "finding": "Two accuracy gaps remained. First, the Instagram hook ('Its mailbox is still forwarding') stated forwarding unconditionally. Exchange Online blocks automatic external forwarding by default, so the claim was qualified in the body but not in the swipe-earning line. Second, 'selective wipe is possible only if app protection was configured' overstated the dependency, because enrolled personal devices can also be retired. Fixed: the hook now leads with the certain behavior (the mailbox keeps receiving mail). Forwarding is framed as a rule that keeps running until removed, with external reach depending on a tenant setting. Wipe is now conditional on app protection or device management."
+    },
+    {
+      "role": "Art Director / Creative Director",
+      "finding": "Visual sophistication was the weakest dimension. The ledger slide was a run-on list paragraph, and the sequence slide repeated it as prose, giving the designer no structure to work with. Fixed: the ledger slide is now a two-part Stops / Doesn't stop comparison that maps to a split-panel diagram. The sequence slide is a numbered five-step timeline, and the hook is a timestamp contrast (5 p.m. / 5:01) suited to large-type editorial treatment. Remaining limit: the schema carries no art direction, so the rendered result cannot be verified from text alone."
+    },
+    {
+      "role": "CMO / Brand Director (MSP test)",
+      "finding": "Originality and the 'could any MSP publish this' test were still borderline. Offboarding is a perennial MSP checklist topic, and the 2026 element (AI tools outside single sign-on) appeared only as a passing line on LinkedIn. It was absent from Facebook and Instagram. GBP also said 'four items' while the checklist had five. Fixed: a dedicated Instagram slide now covers unsanctioned AI tools holding company data outside single sign-on, and the Facebook scenario uses an AI note-taker. The timestamp hook and the evidence question also distinguish the piece. GBP now lists five items, matching the checklist. Verdict on the test: a generic MSP would publish 'offboarding checklist'. It is less likely to publish the tenant-setting nuance, the hybrid sync delay, and the 'prove it with evidence' framing, but the topic itself still caps originality."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
