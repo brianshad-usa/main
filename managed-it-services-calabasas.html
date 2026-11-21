@@ -146,6 +146,8 @@
   }
   </script>
 
+  <link rel="preload" href="/assets/fonts/SourceSerif4-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="_shared.css?v=20261120">
   <link rel="stylesheet" href="lead-form.css?v=20261112">
   <style>
@@ -325,37 +327,213 @@
 </head>
 <body>
 
-<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo" aria-label="Pro Link Systems home">
-    <img src="logo.png" alt="Pro Link Systems" width="160" height="44">
-  </a>
-  <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="services">Services</a>
-    <a href="self-service">Assessments</a>
-    <a href="case-studies">Case Studies</a>
-    <a href="about">About</a>
-    <a href="blog/">Blog</a>
-    <a href="contact">Contact</a>
-    <a href="contact" class="nav-cta">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      Free Consultation
-    </a>
+<!-- PL:HEADER -->
+<a class="pl-skip" href="#pl-main">Skip to content</a>
+<div class="pl-utility">
+  <div class="pl-wrap">
+    <a href="/m365-security-assessment">Microsoft 365 Security Assessment</a>
+    <a href="/support" class="pl-support">Client Support</a>
+    <a href="tel:18008906133">1-800-890-6133</a>
   </div>
-  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobile-menu">
-  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
-  <a href="services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
-  <a href="self-service" onclick="document.getElementById('mobile-menu').classList.remove('open')">Assessments</a>
-  <a href="case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
-  <a href="about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
-  <a href="blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
-  <a href="contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
-  <a href="contact" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">📞 Free Consultation</a>
 </div>
+<header class="pl-header" id="pl-header">
+  <div class="pl-wrap">
+    <a href="/" class="pl-logo" aria-label="Pro Link Systems home"><img src="/logo.png" alt="Pro Link Systems" width="157" height="40"></a>
+    <nav class="pl-nav" aria-label="Main">
+      <ul>
+        <li><button type="button" class="pl-nav-trigger" data-nav="solutions" aria-expanded="false" aria-controls="pl-panel-solutions">Solutions</button></li>
+        <li><button type="button" class="pl-nav-trigger" data-nav="industries" aria-expanded="false" aria-controls="pl-panel-industries">Industries</button></li>
+        <li><a class="pl-nav-link" data-nav="success" href="/case-studies">Client Success</a></li>
+        <li><button type="button" class="pl-nav-trigger" data-nav="insights" aria-expanded="false" aria-controls="pl-panel-insights">Insights</button></li>
+        <li><button type="button" class="pl-nav-trigger is-current" data-nav="about" aria-expanded="false" aria-controls="pl-panel-about">About</button></li>
+      </ul>
+      <a href="/contact" class="btn btn-primary pl-header-cta">Speak With an Expert</a>
+    </nav>
+    <button type="button" class="pl-burger" aria-label="Open menu" aria-expanded="false" aria-controls="pl-drawer"><span></span><span></span><span></span></button>
+  </div>
+
+  <div class="pl-panel" id="pl-panel-solutions">
+    <div class="pl-panel-inner">
+      <div class="pl-panel-intro">
+        <p class="pl-eyebrow">Solutions</p>
+        <p class="pl-h3">Technology, run and secured as one discipline.</p>
+        <p>Fully managed or co-managed IT, cybersecurity, cloud and strategic leadership, delivered by one accountable team.</p>
+        <a class="pl-arrow" href="/services">All solutions</a>
+      </div>
+      <div class="pl-panel-cols">
+        <div class="pl-panel-group">
+          <h3>Managed Technology</h3>
+          <a class="pl-panel-link" href="/services#managed-it"><strong>Fully Managed IT</strong><span>Your complete IT function, run by our team</span></a>
+          <a class="pl-panel-link" href="/co-managed-it-services"><strong>Co-Managed IT</strong><span>Depth and capacity for your internal IT team</span></a>
+          <a class="pl-panel-link" href="/it-help-desk"><strong>24/7 Help Desk</strong><span>Answered live by our in-house, US-based team</span></a>
+          <a class="pl-panel-link" href="/microsoft-365-support-los-angeles"><strong>Microsoft 365</strong><span>Tenant management, licensing and support</span></a>
+          <a class="pl-panel-link" href="/network-support-los-angeles"><strong>Network Management</strong><span>Design, monitoring and maintenance</span></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Cybersecurity &amp; Risk</h3>
+          <a class="pl-panel-link" href="/cybersecurity-services"><strong>Cybersecurity Program</strong><span>Layered protection, monitoring and response</span></a>
+          <a class="pl-panel-link" href="/identity-access-management"><strong>Identity &amp; Access</strong><span>MFA, conditional access and access reviews</span></a>
+          <a class="pl-panel-link" href="/endpoint-security-services"><strong>Endpoint Security</strong><span>Protection for every managed device</span></a>
+          <a class="pl-panel-link" href="/email-security-services"><strong>Email Security</strong><span>Phishing, impersonation and wire-fraud defense</span></a>
+          <a class="pl-panel-link" href="/governance-risk-compliance"><strong>Governance &amp; Risk</strong><span>Policies, documentation and risk reporting</span></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Strategy, Cloud &amp; Innovation</h3>
+          <a class="pl-panel-link" href="/virtual-cio"><strong>Strategic Consulting &amp; vCIO</strong><span>Technology leadership for your executive team</span></a>
+          <a class="pl-panel-link" href="/cloud-services"><strong>Cloud &amp; Infrastructure</strong><span>Microsoft 365, Azure and hybrid environments</span></a>
+          <a class="pl-panel-link" href="/backup-disaster-recovery"><strong>Business Continuity &amp; DR</strong><span>Restore-tested backups and recovery planning</span></a>
+          <a class="pl-panel-link" href="/ai-automation-services"><strong>AI &amp; Automation</strong><span>Private AI assistants and workflow automation</span></a>
+          <div class="pl-panel-feature">
+            <strong><a href="/m365-security-assessment">Microsoft 365 Security Assessment</a></strong>
+            <span>A fixed-scope review of about 80 controls. Ordered online.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pl-panel" id="pl-panel-industries">
+    <div class="pl-panel-inner">
+      <div class="pl-panel-intro">
+        <p class="pl-eyebrow">Industries</p>
+        <p class="pl-h3">Experience in the sectors where downtime is expensive.</p>
+        <p>From precision manufacturing to legal and independent schools, we build environments around how each sector works.</p>
+        <a class="pl-arrow" href="/case-studies">Client success stories</a>
+      </div>
+      <div class="pl-panel-cols is-industries">
+        <div class="pl-panel-group">
+          <h3>Industrial</h3>
+          <a class="pl-panel-link" href="/manufacturing-it-services"><strong>Manufacturing</strong></a>
+          <a class="pl-panel-link" href="/aerospace-defense-it-services"><strong>Aerospace &amp; Defense</strong></a>
+          <a class="pl-panel-link" href="/logistics-it-services"><strong>Logistics</strong></a>
+          <a class="pl-panel-link" href="/waste-management-it-services"><strong>Waste &amp; Recycling</strong></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Professional</h3>
+          <a class="pl-panel-link" href="/law-firm-it-services-los-angeles"><strong>Law Firms</strong></a>
+          <a class="pl-panel-link" href="/financial-services-it"><strong>Financial Services</strong></a>
+          <a class="pl-panel-link" href="/professional-services-it"><strong>Professional Services</strong></a>
+          <a class="pl-panel-link" href="/real-estate-it-services"><strong>Real Estate</strong></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Institutions &amp; Media</h3>
+          <a class="pl-panel-link" href="/healthcare-it-services"><strong>Healthcare</strong></a>
+          <a class="pl-panel-link" href="/education-it-services"><strong>Education</strong></a>
+          <a class="pl-panel-link" href="/nonprofit-it-services"><strong>Nonprofits</strong></a>
+          <a class="pl-panel-link" href="/technology-it-services"><strong>Technology</strong></a>
+          <a class="pl-panel-link" href="/entertainment-it-services"><strong>Entertainment &amp; Media</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pl-panel" id="pl-panel-insights">
+    <div class="pl-panel-inner">
+      <div class="pl-panel-intro">
+        <p class="pl-eyebrow">Insights</p>
+        <p class="pl-h3">Perspective for leaders who own technology risk.</p>
+        <p>Articles, guides and reports on security, strategy and operations.</p>
+        <a class="pl-arrow" href="/blog/">All articles</a>
+      </div>
+      <div class="pl-panel-cols">
+        <div class="pl-panel-group">
+          <h3>Guides</h3>
+          <a class="pl-panel-link" href="/how-to-choose-managed-it-provider-los-angeles"><strong>Choosing a Managed IT Provider</strong></a>
+          <a class="pl-panel-link" href="/managed-it-services-pricing-los-angeles"><strong>Managed IT Pricing Guide</strong></a>
+          <a class="pl-panel-link" href="/vcio-vs-break-fix-vs-managed-it"><strong>vCIO vs. Break-Fix vs. Managed IT</strong></a>
+          <a class="pl-panel-link" href="/what-does-a-vcio-do"><strong>What Does a vCIO Do?</strong></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Reports &amp; Playbooks</h3>
+          <a class="pl-panel-link" href="/la-business-cybersecurity-report-2026"><strong>LA Business Cybersecurity Report 2026</strong></a>
+          <a class="pl-panel-link" href="/incident-response-playbook"><strong>Incident Response Playbook</strong></a>
+          <a class="pl-panel-link" href="/continuity-checklist"><strong>Business Continuity Checklist</strong></a>
+          <a class="pl-panel-link" href="/technology-plan"><strong>Next Year&rsquo;s Technology Plan</strong></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Leadership</h3>
+          <a class="pl-panel-link" href="/when-your-business-needs-a-vcio"><strong>When You Need a vCIO</strong></a>
+          <a class="pl-panel-link" href="/blog/"><strong>Latest Articles</strong><span>Security, Microsoft 365, AI and IT strategy</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pl-panel" id="pl-panel-about">
+    <div class="pl-panel-inner">
+      <div class="pl-panel-intro">
+        <p class="pl-eyebrow">About</p>
+        <p class="pl-h3">An established technology partner since 1999.</p>
+        <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
+        <a class="pl-arrow" href="/about">About Pro Link</a>
+      </div>
+      <div class="pl-panel-cols">
+        <div class="pl-panel-group">
+          <h3>Company</h3>
+          <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
+        </div>
+        <div class="pl-panel-group">
+          <h3>Reach Us</h3>
+          <a class="pl-panel-link" href="/contact"><strong>Contact</strong><span>Schedule a technology consultation</span></a>
+          <a class="pl-panel-link" href="/about#areas"><strong>Service Areas</strong><span>Greater Los Angeles, Ventura and Orange County</span></a>
+          <a class="pl-panel-link" href="/support"><strong>Client Support</strong><span>For current clients: reach the help desk</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="pl-drawer" id="pl-drawer">
+  <details><summary>Solutions</summary>
+    <a href="/services">All solutions</a>
+    <a href="/services#managed-it">Fully Managed IT</a>
+    <a href="/co-managed-it-services">Co-Managed IT</a>
+    <a href="/it-help-desk">24/7 Help Desk</a>
+    <a href="/cybersecurity-services">Cybersecurity</a>
+    <a href="/cloud-services">Cloud &amp; Infrastructure</a>
+    <a href="/backup-disaster-recovery">Business Continuity &amp; DR</a>
+    <a href="/virtual-cio">Strategic Consulting &amp; vCIO</a>
+    <a href="/ai-automation-services">AI &amp; Automation</a>
+    <a href="/m365-security-assessment">Microsoft 365 Security Assessment</a>
+  </details>
+  <details><summary>Industries</summary>
+    <a href="/manufacturing-it-services">Manufacturing</a>
+    <a href="/aerospace-defense-it-services">Aerospace &amp; Defense</a>
+    <a href="/law-firm-it-services-los-angeles">Law Firms</a>
+    <a href="/financial-services-it">Financial Services</a>
+    <a href="/healthcare-it-services">Healthcare</a>
+    <a href="/education-it-services">Education</a>
+    <a href="/professional-services-it">Professional Services</a>
+    <a href="/real-estate-it-services">Real Estate</a>
+    <a href="/nonprofit-it-services">Nonprofits</a>
+    <a href="/technology-it-services">Technology</a>
+    <a href="/entertainment-it-services">Entertainment &amp; Media</a>
+    <a href="/logistics-it-services">Logistics</a>
+    <a href="/waste-management-it-services">Waste &amp; Recycling</a>
+  </details>
+  <a href="/case-studies">Client Success</a>
+  <details><summary>Insights</summary>
+    <a href="/blog/">All articles</a>
+    <a href="/how-to-choose-managed-it-provider-los-angeles">Choosing a Managed IT Provider</a>
+    <a href="/managed-it-services-pricing-los-angeles">Managed IT Pricing Guide</a>
+    <a href="/la-business-cybersecurity-report-2026">LA Business Cybersecurity Report 2026</a>
+    <a href="/incident-response-playbook">Incident Response Playbook</a>
+  </details>
+  <details><summary>About</summary>
+    <a href="/about">Our Company</a>
+    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/about#areas">Service Areas</a>
+  </details>
+  <a href="/contact">Contact</a>
+  <div class="pl-drawer-meta">
+    <a href="/contact" class="btn btn-primary">Speak With an Expert</a>
+    <a href="tel:18008906133">Call 1-800-890-6133</a>
+    <a href="/support">Client Support</a>
+  </div>
+</div>
+<span id="pl-main" tabindex="-1"></span>
+<!-- /PL:HEADER -->
 
 <section class="page-hero" aria-label="Calabasas managed IT services">
   <div class="local-badge">
@@ -744,96 +922,104 @@
   </div>
 </section>
 
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="logo.png" alt="Pro Link Systems" width="140" height="38">
-      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. 24/7 in-house, US-based help desk.</p>
+<!-- PL:FOOTER -->
+<footer class="pl-footer" role="contentinfo">
+  <div class="pl-footer-top">
+    <div class="pl-footer-brand">
+      <img src="/logo.png" alt="Pro Link Systems" width="141" height="36" loading="lazy" decoding="async">
+      <p>Technology management, cybersecurity and strategic IT leadership. Headquartered in Woodland Hills, California, since 1999.</p>
+      <a href="/contact" class="btn btn-light">Speak With an Expert</a>
     </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <a href="managed-it-services">Managed IT Services</a>
-      <a href="services#helpdesk">24/7 Help Desk</a>
-      <a href="services#cybersecurity">Cybersecurity</a>
-      <a href="services#cloud">Cloud &amp; Infrastructure</a>
-      <a href="services#dr">Disaster Recovery</a>
-      <a href="services#consulting">IT Consulting</a>
-      <a href="self-service">Self-Service Assessments</a>
+    <div class="pl-footer-col">
+      <h2>Solutions</h2>
+      <a href="/managed-it-services">Fully Managed IT</a>
+      <a href="/co-managed-it-services">Co-Managed IT</a>
+      <a href="/it-help-desk">24/7 Help Desk</a>
+      <a href="/cybersecurity-services">Cybersecurity</a>
+      <a href="/cloud-services">Cloud &amp; Infrastructure</a>
+      <a href="/backup-disaster-recovery">Business Continuity &amp; DR</a>
+      <a href="/virtual-cio">Strategic Consulting &amp; vCIO</a>
+      <a href="/ai-automation-services">AI &amp; Automation</a>
     </div>
-    <div class="footer-col">
-      <h3>Company</h3>
-      <a href="/">Home</a>
-      <a href="about">About Us</a>
-      <a href="blog/">Blog</a>
-    <a href="contact">Contact</a>
-      <a href="case-studies">Case Studies</a>
-      <a href="legal">Legal / Terms</a>
+    <div class="pl-footer-col">
+      <h2>Industries</h2>
+      <a href="/manufacturing-it-services">Manufacturing</a>
+      <a href="/aerospace-defense-it-services">Aerospace &amp; Defense</a>
+      <a href="/law-firm-it-services-los-angeles">Law Firms</a>
+      <a href="/financial-services-it">Financial Services</a>
+      <a href="/healthcare-it-services">Healthcare</a>
+      <a href="/education-it-services">Education</a>
+      <a href="/professional-services-it">Professional Services</a>
+      <a href="/nonprofit-it-services">Nonprofits</a>
     </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
-      </div>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
-      </div>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</span>
-      </div>
+    <div class="pl-footer-col">
+      <h2>Company</h2>
+      <a href="/about">About Pro Link</a>
+      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/case-studies">Client Success</a>
+      <a href="/blog/">Insights</a>
+      <a href="/m365-security-assessment">M365 Security Assessment</a>
+      <a href="/contact">Contact</a>
+      <a href="/support">Client Support</a>
     </div>
-  </div>
-  <div class="footer-areas">
-    <h3>Other Areas We Serve</h3>
-    <div class="footer-areas-links">
-      <a href="managed-it-services-los-angeles">Los Angeles</a>
-      <a href="managed-it-services-downtown-los-angeles">Downtown LA</a>
-      <a href="managed-it-services-woodland-hills">Woodland Hills</a>
-      <a href="managed-it-services-tarzana">Tarzana</a>
-      <a href="managed-it-services-west-hills">West Hills</a>
-      <a href="managed-it-services-chatsworth">Chatsworth</a>
-      <a href="managed-it-services-beverly-hills">Beverly Hills</a>
-      <a href="managed-it-services-century-city">Century City</a>
-      <a href="managed-it-services-west-los-angeles">West Los Angeles</a>
-      <a href="managed-it-services-pasadena">Pasadena</a>
-      <a href="it-support-burbank">Burbank</a>
-      <a href="managed-it-services-studio-city">Studio City</a>
-      <a href="managed-it-services-north-hollywood">North Hollywood</a>
-      <a href="managed-it-services-santa-monica">Santa Monica</a>
-      <a href="managed-it-services-culver-city">Culver City</a>
-      <a href="managed-it-services-glendale">Glendale</a>
-      <a href="managed-it-services-calabasas">Calabasas</a>
-      <a href="managed-it-services-agoura-hills">Agoura Hills</a>
-      <a href="managed-it-services-thousand-oaks">Thousand Oaks</a>
-      <a href="managed-it-services-simi-valley">Simi Valley</a>
-      <a href="managed-it-services-sherman-oaks">Sherman Oaks</a>
-      <a href="managed-it-services-van-nuys">Van Nuys</a>
-      <a href="managed-it-services-northridge">Northridge</a>
-      <a href="managed-it-services-santa-clarita">Santa Clarita</a>
-      <a href="managed-it-services-encino">Encino</a>
-      <a href="managed-it-services-torrance">Torrance</a>
-      <a href="managed-it-services-el-segundo">El Segundo</a>
-      <a href="managed-it-services-long-beach">Long Beach</a>
-      <a href="managed-it-services-irvine">Irvine</a>
-      <a href="managed-it-services-orange-county">Orange County</a>
-      <a href="managed-it-services-playa-vista">Playa Vista</a>
-      <a href="managed-it-services-hollywood">Hollywood</a>
-      <a href="managed-it-services-koreatown">Koreatown</a>
-      <a href="managed-it-services-hawthorne">Hawthorne</a>
-      <a href="managed-it-services-manhattan-beach">Manhattan Beach</a>
-      <a href="managed-it-services-sun-valley">Sun Valley</a>
-      <a href="managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
-      <a href="managed-it-services-camarillo">Camarillo</a>
-      <a href="managed-it-services-malibu">Malibu</a>
+    <div class="pl-footer-col">
+      <h2>Contact</h2>
+      <a href="tel:18008906133">1-800-890-6133</a>
+      <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+      <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
+      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="pl-footer-areas">
+    <p><strong>Areas we serve</strong><br>Organizations across Greater Los Angeles, Ventura County and Orange County.</p>
+    <nav class="pl-footer-areas-links" aria-label="Areas we serve">
+      <a href="/managed-it-services-los-angeles">Los Angeles</a>
+      <a href="/managed-it-services-downtown-los-angeles">Downtown LA</a>
+      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
+      <a href="/managed-it-services-tarzana">Tarzana</a>
+      <a href="/managed-it-services-west-hills">West Hills</a>
+      <a href="/managed-it-services-chatsworth">Chatsworth</a>
+      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
+      <a href="/managed-it-services-century-city">Century City</a>
+      <a href="/managed-it-services-west-los-angeles">West Los Angeles</a>
+      <a href="/managed-it-services-pasadena">Pasadena</a>
+      <a href="/it-support-burbank">Burbank</a>
+      <a href="/managed-it-services-studio-city">Studio City</a>
+      <a href="/managed-it-services-north-hollywood">North Hollywood</a>
+      <a href="/managed-it-services-santa-monica">Santa Monica</a>
+      <a href="/managed-it-services-culver-city">Culver City</a>
+      <a href="/managed-it-services-glendale">Glendale</a>
+      <a href="/managed-it-services-calabasas">Calabasas</a>
+      <a href="/managed-it-services-agoura-hills">Agoura Hills</a>
+      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
+      <a href="/managed-it-services-simi-valley">Simi Valley</a>
+      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
+      <a href="/managed-it-services-van-nuys">Van Nuys</a>
+      <a href="/managed-it-services-northridge">Northridge</a>
+      <a href="/managed-it-services-santa-clarita">Santa Clarita</a>
+      <a href="/managed-it-services-encino">Encino</a>
+      <a href="/managed-it-services-torrance">Torrance</a>
+      <a href="/managed-it-services-el-segundo">El Segundo</a>
+      <a href="/managed-it-services-long-beach">Long Beach</a>
+      <a href="/managed-it-services-irvine">Irvine</a>
+      <a href="/managed-it-services-orange-county">Orange County</a>
+      <a href="/managed-it-services-playa-vista">Playa Vista</a>
+      <a href="/managed-it-services-hollywood">Hollywood</a>
+      <a href="/managed-it-services-koreatown">Koreatown</a>
+      <a href="/managed-it-services-hawthorne">Hawthorne</a>
+      <a href="/managed-it-services-manhattan-beach">Manhattan Beach</a>
+      <a href="/managed-it-services-sun-valley">Sun Valley</a>
+      <a href="/managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
+      <a href="/managed-it-services-camarillo">Camarillo</a>
+      <a href="/managed-it-services-malibu">Malibu</a>
+    </nav>
+  </div>
+  <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
   </div>
 </footer>
+<!-- /PL:FOOTER -->
 
 <script>
   document.querySelectorAll('.faq-q').forEach(function(btn) {
@@ -847,6 +1033,7 @@
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="/contact-form.js?v=20261109" defer></script>
+<script src="/assets/js/pl.js?v=20261120" defer></script>
 </body>
 </html>
 

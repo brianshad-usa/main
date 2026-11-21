@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+"""
+chrome/apply_chrome.py -- put the shared 2026 header + footer on every page (redesign-2026).
+
+The header and footer live in ONE place each: chrome/header.html and chrome/footer.html. This script writes
+them into every page between markers, so a menu or footer change is: edit the partial, run this script.
+
+    python chrome/apply_chrome.py            # apply to all pages (writes only files that change)
+    python chrome/apply_chrome.py --check    # report what would change; exit 1 if anything is out of date
+
+Per page it:
+  1. replaces the header: the <!-- PL:HEADER --> block, or on first run the legacy
+     <nav class="site-nav">...</nav> + <div class="mobile-menu" id="mobile-menu|mobileMenu">...</div> pair;
+  2. replaces the footer: the <!-- PL:FOOTER --> block, or the legacy <footer class="site-footer">...</footer>
+     (checkout pages keep their small checkout footer);
+  3. marks the current menu section (Solutions / Industries / Client Success / Insights / About);
+  4. makes old menu code null-safe: getElementById('hamburger'|'mobileMenu'|'mobile-menu') no longer throws
+     once those elements are gone (industry pages wire their old hamburger in a script);
+  5. preloads the two self-hosted fonts before _shared.css and drops Google Fonts preconnects;
+  6. loads /assets/js/pl.js (menus, mobile drawer, reveal-on-scroll) before </body>.
+Pages without the legacy header and without markers are skipped and listed (the Ads landing page
+managed-it-services.html is skipped on purpose: it has its own conversion-focused layout).
+Byte-safe: files are read and written as UTF-8 and keep their original newline style.
+"""
+import os
+import re
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PL_JS_VERSION = "20261120"
+SKIP_FILES = {"managed-it-services.html"}              # Ads landing page: own layout, no site menu
+SKIP_DIRS = {".git", ".github", "chrome", "editorial", "functions", "node_modules", "tools", "apps", "videos"}
+
+SOLUTIONS = {
+    "services", "co-managed-it-services", "it-help-desk", "cybersecurity-services", "cloud-services",
+    "backup-disaster-recovery", "email-security-services", "endpoint-security-services",
+    "governance-risk-compliance", "identity-access-management", "network-security-services",
+    "security-awareness-training", "virtual-cio", "ai-automation-services", "microsoft-365-support-los-angeles",
+    "network-support-los-angeles", "outsourced-it-services-los-angeles", "m365-security-assessment", "self-service",
+}
+INDUSTRIES = {
+    "aerospace-defense-it-services", "education-it-services", "entertainment-it-services", "financial-services-it",
+    "healthcare-it-services", "law-firm-it-services-los-angeles", "logistics-it-services",
+    "manufacturing-it-services", "nonprofit-it-services", "professional-services-it", "real-estate-it-services",
+    "technology-it-services", "waste-management-it-services",
+}
+INSIGHTS = {
+    "how-to-choose-managed-it-provider-los-angeles", "managed-it-services-pricing-los-angeles",
+    "vcio-vs-break-fix-vs-managed-it", "what-does-a-vcio-do", "when-your-business-needs-a-vcio",
+    "la-business-cybersecurity-report-2026", "incident-response-playbook", "continuity-checklist",
+    "pos-holiday-checklist", "technology-plan",
+}
+ABOUT = {"about", "why-pro-link-systems", "contact", "support", "it-support-burbank"}
+
+FONT_PRELOAD = (
+    '<link rel="preload" href="/assets/fonts/SourceSerif4-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
+    '  <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n  '
+)
+PL_JS_TAG = '<script src="/assets/js/pl.js?v=%s" defer></script>' % PL_JS_VERSION
+
+RE_HEADER_MARKED = re.compile(r"<!-- PL:HEADER -->.*?<!-- /PL:HEADER -->", re.S)
+RE_FOOTER_MARKED = re.compile(r"<!-- PL:FOOTER -->.*?<!-- /PL:FOOTER -->", re.S)
+RE_FOOTER_LEGACY = re.compile(r'<footer class="site-footer"[^>]*>.*?</footer>', re.S)
+# (?!...) keeps the patch idempotent: an already-wrapped call is never wrapped again
+RE_NULLSAFE = re.compile(r"""document\.getElementById\((['"])(hamburger|mobileMenu|mobile-menu)\1\)(?!\|\|document\.createElement)""")
+RE_SHARED_CSS = re.compile(r'<link rel="stylesheet" href="/?_shared\.css[^"]*">')
+RE_GFONTS_PRECONNECT = re.compile(r'[ \t]*<link rel="preconnect" href="https://fonts\.(?:googleapis|gstatic)\.com"[^>]*>\r?\n?')
+RE_PL_JS = re.compile(r'<script src="/assets/js/pl\.js[^"]*" defer></script>')
+
+
+def section_for(rel):
+    base = os.path.splitext(os.path.basename(rel))[0]
+    if rel.replace("\\", "/").startswith("blog/") or base in INSIGHTS:
+        return "insights"
+    if base == "case-studies" or rel.replace("\\", "/").startswith("case-studies/"):
+        return "success"
+    if base in INDUSTRIES:
+        return "industries"
+    if base in SOLUTIONS or rel.replace("\\", "/").startswith("m365-security-assessment/"):
+        return "solutions"
+    if base in ABOUT or (base.startswith("managed-it-services-") and base != "managed-it-services-pricing-los-angeles"):
+        return "about"
+    return None
+
+
+def header_for(partial, section):
+    h = partial
+    if section == "success":
+        h = h.replace('class="pl-nav-link" data-nav="success"', 'class="pl-nav-link" data-nav="success" aria-current="page"')
+    elif section:
+        h = h.replace('class="pl-nav-trigger" data-nav="%s"' % section,
+                      'class="pl-nav-trigger is-current" data-nav="%s"' % section)
+    return "<!-- PL:HEADER -->\n" + h.strip("\n") + "\n<!-- /PL:HEADER -->"
+
+
+def find_legacy_header(text):
+    """Return (start, end) of the legacy nav + mobile-menu pair, or None."""
+    s = text.find('<nav class="site-nav"')
+    if s < 0:
+        return None
+    e_nav = text.find("</nav>", s)
+    if e_nav < 0:
+        return None
+    e_nav += len("</nav>")
+    m = re.compile(r'\s*<div class="mobile-menu" id="(?:mobile-menu|mobileMenu)">').match(text, e_nav)
+    if not m:
+        return None
+    e_menu = text.find("</div>", m.end())
+    if e_menu < 0 or "<div" in text[m.end():e_menu]:
+        return None
+    return s, e_menu + len("</div>")
+
+
+def process(path, header_partial, footer_partial):
+    rel = os.path.relpath(path, ROOT)
+    with open(path, "rb") as fh:
+        raw = fh.read()
+    text = raw.decode("utf-8")
+    crlf = "\r\n" in text
+    t = text.replace("\r\n", "\n")
+    notes = []
+
+    header = header_for(header_partial, section_for(rel))
+    if RE_HEADER_MARKED.search(t):
+        t = RE_HEADER_MARKED.sub(lambda _m: header, t, count=1)
+    else:
+        span = find_legacy_header(t)
+        if not span:
+            return None, ["no header found"]
+        t = t[:span[0]] + header + t[span[1]:]
+
+    footer = "<!-- PL:FOOTER -->\n" + footer_partial.strip("\n") + "\n<!-- /PL:FOOTER -->"
+    if RE_FOOTER_MARKED.search(t):
+        t = RE_FOOTER_MARKED.sub(lambda _m: footer, t, count=1)
+    elif RE_FOOTER_LEGACY.search(t):
+        t = RE_FOOTER_LEGACY.sub(lambda _m: footer, t, count=1)
+    else:
+        notes.append("kept own footer")
+
+    t = RE_NULLSAFE.sub(lambda m: "(document.getElementById('%s')||document.createElement('i'))" % m.group(2), t)
+
+    if "/assets/fonts/SourceSerif4-normal-latin.woff2" not in t:
+        m = RE_SHARED_CSS.search(t)
+        if m:
+            t = t[:m.start()] + FONT_PRELOAD + t[m.start():]
+    t = RE_GFONTS_PRECONNECT.sub("", t)
+
+    if RE_PL_JS.search(t):
+        t = RE_PL_JS.sub(PL_JS_TAG, t)
+    else:
+        i = t.rfind("</body>")
+        if i < 0:
+            return None, ["no </body>"]
+        t = t[:i] + PL_JS_TAG + "\n" + t[i:]
+
+    if crlf:
+        t = t.replace("\n", "\r\n")
+    return (t if t != text else None), notes
+
+
+def main():
+    check = "--check" in sys.argv
+    with open(os.path.join(ROOT, "chrome", "header.html"), encoding="utf-8") as fh:
+        header_partial = fh.read().replace("\r\n", "\n")
+    with open(os.path.join(ROOT, "chrome", "footer.html"), encoding="utf-8") as fh:
+        footer_partial = fh.read().replace("\r\n", "\n")
+
+    changed, skipped, kept_footer = [], [], []
+    for dirpath, dirnames, filenames in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        for name in filenames:
+            if not name.endswith(".html"):
+                continue
+            path = os.path.join(dirpath, name)
+            rel = os.path.relpath(path, ROOT)
+            if rel in SKIP_FILES:
+                skipped.append(rel + " (skipped on purpose)")
+                continue
+            new, notes = process(path, header_partial, footer_partial)
+            if "kept own footer" in notes:
+                kept_footer.append(rel)
+            if new is None:
+                if notes and notes != ["kept own footer"]:
+                    skipped.append("%s (%s)" % (rel, ", ".join(notes)))
+                continue
+            changed.append(rel)
+            if not check:
+                with open(path, "wb") as fh:
+                    fh.write(new.encode("utf-8"))
+
+    verb = "would change" if check else "changed"
+    print("%s %d page(s)" % (verb, len(changed)))
+    if kept_footer:
+        print("kept their own footer: " + ", ".join(sorted(kept_footer)))
+    if skipped:
+        print("skipped:\n  " + "\n  ".join(sorted(skipped)))
+    if check and changed:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

@@ -629,3 +629,38 @@ that I would like to host on our site similarly". Every app follows this one pat
   an Authorize.net SANDBOX order end to end before production (Cloudflare Pages project `plsmain`:
   a pushed branch previews at `https://<branch>.plsmain.pages.dev` with the Preview variables; the
   sandbox webhook points there; the Turnstile widget allows `plsmain.pages.dev`).
+
+## Redesign 2026 (branch `redesign-2026`, staging only until Brian approves go-live)
+
+- **Staging:** `https://redesign-2026.plsmain.pages.dev` (Cloudflare Pages preview of this branch). Locked by
+  `functions/_middleware.js`: Basic auth (user `prolink`, password = the Preview variable `STAGING_PASSWORD`,
+  set by Brian, never in code; no password = everything refused), disallow-all robots + noindex, the lead form
+  and checkout APIs answered by the middleware (nothing sent, charged or ordered), tracking tags stripped behind
+  no-op stubs. The middleware does nothing on `prolinksystems.com`. **Delete it before the merge.**
+- **Rollback:** production `main` is untouched by this branch. Backups: local tag `pre-redesign-2026-11-20`
+  (= `de7b063`, not pushed) and a zip of that commit outside the repo; Cloudflare keeps every production
+  deployment for one-click rollback.
+- **Design system:** `_shared.css` (sections 1-8). Fonts are self-hosted (`assets/fonts/*.woff2`, Inter for
+  text, Source Serif 4 for headings; no Google Fonts). New components use the `pl-` prefix; the legacy class
+  names are restyled in section 6 so unconverted pages still look consistent. Flat surfaces, square corners,
+  thin rules; navy primary, amber only as a thin accent.
+- **Header + footer = one place each:** `chrome/header.html` and `chrome/footer.html`. Every page carries them
+  between `<!-- PL:HEADER -->` / `<!-- PL:FOOTER -->` markers, written by `python chrome/apply_chrome.py`
+  (idempotent; `--check` reports drift). It also marks the current menu section, preloads the fonts, loads
+  `/assets/js/pl.js` (menus, mobile drawer, reveal-on-scroll) and makes old `getElementById('hamburger' |
+  'mobileMenu' | 'mobile-menu')` calls null-safe. The Ads landing page `managed-it-services.html` keeps its
+  own layout on purpose. After merging `main` into this branch, re-run the script.
+- **Rebuilt pages so far:** home, `services` (Solutions), `about`, `case-studies` (Client Success),
+  `contact` (the lead form markup, IDs, Turnstile and handler are unchanged), new `support` (Client Support,
+  noindex). Their `<head>` metadata, canonicals, tracking and JSON-LD are kept; FAQ JSON-LD always matches
+  the visible FAQ. `HOME_BLOG` markers stay on the home page (generate_blog.py rewrites the cards).
+- **No URL changes.** Every existing URL, anchor (`services#helpdesk`, `#cybersecurity`, `#cloud`, `#dr`,
+  `#consulting`, `#remote`, `#ai`, new `#managed-it`) and the 39 location links (footer + About `#areas`)
+  are kept. A URL change needs a full 301 map and Brian's approval first.
+- **`Review R#` markers** (`<span class="pl-flag">`) mark copy that waits for Brian's decision; the details
+  are in his private review document, never in this public repo.
+- **Before go-live (checklist):** `python chrome/golive_check.py` must pass: no `pl-flag` left, no
+  `functions/_middleware.js`, a new `_shared.css?v=` (run `bump_shared_css.py`, then fix the
+  `m365-security-assessment/` pages it does not cover), and `generate_blog.py` / `gen_location_pages.py` /
+  `update_site_links.py` emitting the new header/footer markers. Then a PR to `main`, merged only on Brian's
+  explicit approval.
