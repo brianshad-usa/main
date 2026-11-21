@@ -79,7 +79,33 @@
     if (drawer && drawer.classList.contains('is-open')) { setDrawer(false); if (burger) burger.focus(); }
   });
 
-  /* ---- reveal on scroll (content already in view is never hidden) ------------------------------ */
+  /* ---- tabs (practice areas): plain stacked sections become tabs; without JS every panel shows ---- */
+  [].slice.call(d.querySelectorAll('[data-tabs]')).forEach(function (box) {
+    var tabs = [].slice.call(box.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return d.getElementById(t.getAttribute('aria-controls')); });
+    if (!tabs.length || panels.some(function (p) { return !p; })) return;
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        panels[j].classList.toggle('is-active', on);
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i, false); });
+      t.addEventListener('keydown', function (e) {
+        var n = tabs.length, k = e.key;
+        var j = (k === 'ArrowDown' || k === 'ArrowRight') ? (i + 1) % n : (k === 'ArrowUp' || k === 'ArrowLeft') ? (i - 1 + n) % n : k === 'Home' ? 0 : k === 'End' ? n - 1 : -1;
+        if (j >= 0) { e.preventDefault(); select(j, true); }
+      });
+    });
+    box.classList.add('is-enhanced');
+    select(0, false);
+  });
+
+  /* ---- reveal on scroll (content is never hidden; arriving blocks only rise a few pixels) -------- */
   var els = [].slice.call(d.querySelectorAll('.pl-reveal'));
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!els.length || reduce || !('IntersectionObserver' in window)) {

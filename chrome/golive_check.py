@@ -57,6 +57,15 @@ else:
     except Exception as e:  # no git / no origin: report, do not pass silently
         problems.append("4 could not compare with origin/main: %s" % e)
 
+home = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+if "data-hero=" in home:
+    problems.append("6 homepage still carries both hero visuals (data-hero): keep the chosen one, delete the other")
+css = open(os.path.join(ROOT, "_shared.css"), encoding="utf-8").read()
+if '[data-type="sans"]' in css:
+    problems.append("7 _shared.css still has both typography options: make the chosen one the default, remove the other + its font")
+if os.path.exists(os.path.join(ROOT, "case-studies", "crr.html")):
+    problems.append("8 case-studies/crr.html exists: CR&R ships only with Brian's separate, explicit approval")
+
 for gen in ("generate_blog.py", "gen_location_pages.py", "update_site_links.py"):
     path = os.path.join(ROOT, gen)
     if os.path.exists(path) and "PL:HEADER" not in open(path, encoding="utf-8").read():

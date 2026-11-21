@@ -27,6 +27,84 @@ const RIBBON = '<div aria-hidden="true" style="position:fixed;left:12px;bottom:1
   'background:#9b1c1c;color:#fff;font:700 11px/1 system-ui,sans-serif;letter-spacing:.12em;padding:7px 9px;' +
   'pointer-events:none">STAGING</div>';
 
+// Design review (staging only, removed with this file): picks typography option A/B before first paint, and a
+// small panel switches typography, the homepage headline and the hero visual. Choices persist per browser.
+const REVIEW_HEAD = '<script>(function(){var d=document.documentElement,t="sans";try{var q=new URLSearchParams(location.search);' +
+  't=q.get("type")||localStorage.getItem("pl-type")||"sans";if(q.get("type"))localStorage.setItem("pl-type",t);}catch(e){}' +
+  'd.setAttribute("data-type",t==="serif"?"serif":"sans");})();</script>';
+const REVIEW_PANEL = `
+<div id="plr" class="plr">
+  <button type="button" class="plr-toggle" aria-expanded="false" aria-controls="plr-body">Design review</button>
+  <div class="plr-body" id="plr-body" hidden>
+    <p class="plr-h">Typography</p>
+    <div class="plr-seg" data-key="type"><button type="button" data-val="serif">A &middot; Editorial serif</button><button type="button" data-val="sans">B &middot; Contemporary sans</button></div>
+    <div class="plr-home" hidden>
+      <p class="plr-h">Homepage headline</p>
+      <div class="plr-seg plr-seg--4" data-key="headline"><button type="button" data-val="1">1</button><button type="button" data-val="2">2</button><button type="button" data-val="3">3</button><button type="button" data-val="4">4</button></div>
+      <p class="plr-h">Hero visual</p>
+      <div class="plr-seg" data-key="hero"><button type="button" data-val="architecture">Architecture</button><button type="button" data-val="headquarters">Headquarters</button></div>
+    </div>
+    <p class="plr-links"><a data-v1 href="https://redesign-2026-v1.plsmain.pages.dev/">Compare with version 1</a> &middot; <a href="https://claude.ai/artifact/2ZvGhFzcjrKx5M8gR2wMLN" target="_blank" rel="noopener">Review notes</a></p>
+  </div>
+</div>
+<style>
+.plr{position:fixed;right:16px;bottom:16px;z-index:2147483646;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#0b1a2b}
+.plr-toggle{display:block;margin-left:auto;background:#0b1a2b;color:#fff;border:1px solid rgba(255,255,255,.3);padding:10px 14px;font:600 11px/1 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.plr-body{width:300px;max-width:calc(100vw - 32px);margin-top:8px;background:#fff;border:1px solid #dde3ea;box-shadow:0 18px 48px rgba(11,26,43,.22);padding:16px}
+.plr-h{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4b6580;margin:14px 0 8px}
+.plr-body>.plr-h:first-child{margin-top:0}
+.plr-seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid #c7d0db}
+.plr-seg--4{grid-template-columns:repeat(4,1fr)}
+.plr-seg button{background:#fff;border:0;border-left:1px solid #c7d0db;padding:9px 6px;font:600 12px/1.2 system-ui,sans-serif;color:#0b1a2b;cursor:pointer}
+.plr-seg button:first-child{border-left:0}
+.plr-seg button[aria-pressed="true"]{background:#0b3d6b;color:#fff}
+.plr-links{margin-top:14px;padding-top:12px;border-top:1px solid #dde3ea;font-size:12px}
+.plr-links a{color:#0b3d6b;text-decoration:underline}
+</style>
+<script>
+(function () {
+  var d = document, root = d.documentElement, box = d.getElementById('plr');
+  if (!box) return;
+  var HL = {
+    "1": ["Technology leadership for an increasingly complex world.", "Enterprise-grade technology management, cybersecurity and digital transformation, delivered by one accountable team. Trusted by organizations since 1999."],
+    "2": ["Engineering the technology complex organizations depend on.", "Managed technology, cybersecurity, cloud engineering and strategy for organizations that cannot afford downtime. Independent since 1999."],
+    "3": ["Independent technology leadership, built on 27 years of engineering.", "One accountable partner to run, secure and modernize your technology, from day-to-day operations to the leadership roadmap."],
+    "4": ["Strategy, security and engineering for organizations that run on technology.", "Managed and co-managed IT, cybersecurity, cloud and AI, delivered through one accountable framework. Independent since 1999."]
+  };
+  function get(k, def) { try { return localStorage.getItem('pl-' + k) || def; } catch (e) { return def; } }
+  function set(k, v) { try { localStorage.setItem('pl-' + k, v); } catch (e) {} }
+  var h1 = d.getElementById('home-h1'), lead = d.getElementById('home-lead');
+  var heroes = [].slice.call(d.querySelectorAll('[data-hero]'));
+  if (h1 || heroes.length) box.querySelector('.plr-home').hidden = false;
+  function apply(key, val) {
+    if (key === 'type') root.setAttribute('data-type', val === 'serif' ? 'serif' : 'sans');
+    if (key === 'headline' && h1 && HL[val]) { h1.textContent = HL[val][0]; if (lead) lead.textContent = HL[val][1]; }
+    if (key === 'hero') heroes.forEach(function (el) { el.hidden = el.getAttribute('data-hero') !== val; });
+    [].slice.call(box.querySelectorAll('[data-key="' + key + '"] button')).forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-val') === val ? 'true' : 'false');
+    });
+  }
+  apply('type', root.getAttribute('data-type') || 'sans');
+  if (h1) apply('headline', get('headline', '1'));
+  if (heroes.length) apply('hero', get('hero', 'architecture'));
+  var v1 = box.querySelector('[data-v1]');
+  if (v1) v1.href = 'https://redesign-2026-v1.plsmain.pages.dev' + location.pathname;
+  var toggle = box.querySelector('.plr-toggle'), body = d.getElementById('plr-body');
+  function open(on) { toggle.setAttribute('aria-expanded', on ? 'true' : 'false'); body.hidden = !on; set('panel', on ? '1' : '0'); }
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('button') : null;
+    if (!b) return;
+    if (b === toggle) { open(toggle.getAttribute('aria-expanded') !== 'true'); return; }
+    var seg = b.closest('[data-key]');
+    if (!seg) return;
+    var key = seg.getAttribute('data-key'), val = b.getAttribute('data-val');
+    if (key === 'type') set('type', val); else set(key, val);
+    apply(key, val);
+  });
+  open(get('panel', '1') === '1');
+})();
+</script>`;
+
 function plain(status, text, extra = {}) {
   return new Response(text, {
     status,
@@ -102,7 +180,7 @@ export async function onRequest(context) {
   if (!(headers.get("Content-Type") || "").includes("text/html")) return out;
   return new HTMLRewriter()
     .on("script", new ScriptFilter())
-    .on("head", { element(el) { el.prepend(STUB, { html: true }); } })
-    .on("body", { element(el) { el.append(RIBBON, { html: true }); } })
+    .on("head", { element(el) { el.prepend(STUB + REVIEW_HEAD, { html: true }); } })
+    .on("body", { element(el) { el.append(RIBBON + REVIEW_PANEL, { html: true }); } })
     .transform(out);
 }

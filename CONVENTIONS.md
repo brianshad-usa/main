@@ -660,6 +660,14 @@ that I would like to host on our site similarly". Every app follows this one pat
   are kept. A URL change needs a full 301 map and Brian's approval first.
 - **`Review R#` markers** (`<span class="pl-flag">`) mark copy that waits for Brian's decision; the details
   are in his private review document, never in this public repo.
+- **Iteration 2 (2026-11-21):** branch `redesign-2026-v1` (preview `https://redesign-2026-v1.plsmain.pages.dev`)
+  freezes iteration 1 for comparison and revert. Typography options live side by side: A = serif display
+  (default when `html` has no `data-type`), B = Manrope (`html[data-type="sans"]`); the staging-only "Design
+  review" panel (injected by the middleware, so it never ships) switches typography, the homepage headline
+  (4 options) and the hero visual (architecture illustration vs headquarters photo; both in `index.html` as
+  `data-hero`). Case studies: `python chrome/build_case_pages.py` builds `/case-studies/<slug>` pages and the
+  hub `<main>` from its CASES data and adds indexable pages to `sitemap.xml`; `case-studies/crr.html` is
+  noindex and ships only with Brian's separate approval. Scroll motion never hides content (transform only).
 - **Before go-live (checklist):** `python chrome/golive_check.py` must pass: no `pl-flag` left, no
   `functions/_middleware.js`, a new `_shared.css?v=` (run `bump_shared_css.py`, then fix the
   `m365-security-assessment/` pages it does not cover), and `generate_blog.py` / `gen_location_pages.py` /
