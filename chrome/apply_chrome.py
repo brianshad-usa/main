@@ -53,7 +53,7 @@ INSIGHTS = {
 ABOUT = {"about", "why-pro-link-systems", "contact", "support", "it-support-burbank"}
 
 FONT_PRELOAD = (
-    '<link rel="preload" href="/assets/fonts/SourceSerif4-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
+    '<link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
     '  <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n  '
 )
 PL_JS_TAG = '<script src="/assets/js/pl.js?v=%s" defer></script>' % PL_JS_VERSION
@@ -139,7 +139,7 @@ def process(path, header_partial, footer_partial):
 
     t = RE_NULLSAFE.sub(lambda m: "(document.getElementById('%s')||document.createElement('i'))" % m.group(2), t)
 
-    if "/assets/fonts/SourceSerif4-normal-latin.woff2" not in t:
+    if "/assets/fonts/Manrope-normal-latin.woff2" not in t:
         m = RE_SHARED_CSS.search(t)
         if m:
             t = t[:m.start()] + FONT_PRELOAD + t[m.start():]

@@ -17,11 +17,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Source Serif 4'; font-style: normal; font-weight: 400 700; font-display: swap;
-  src: url('/assets/fonts/SourceSerif4-normal-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
   font-family: 'Manrope'; font-style: normal; font-weight: 200 800; font-display: swap;
   src: url('/assets/fonts/Manrope-normal-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -51,8 +46,8 @@
   --sh-sm: none; --sh-md: 0 1px 2px rgba(11,26,43,.06); --sh-xl: 0 18px 48px rgba(11,26,43,.14);
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --font-display: var(--font-serif);   /* H1/H2, quotes, big figures (typography option A; option B = Manrope) */
-  --font-title: var(--font-sans);      /* H3-level titles */
+  --font-display: 'Manrope', var(--font-sans);   /* headings, quotes, big figures (Brian chose option B, 2026-11-21) */
+  --font-title: 'Manrope', var(--font-sans);     /* H3-level titles */
   --wrap: 1240px;
   --gutter: 32px;
   --header-h: 76px;
@@ -713,26 +708,24 @@ form input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([
   .post-meta .post-avatar { display: block; margin: 0 auto 8px; }
 }
 
-/* 9. TYPOGRAPHY OPTIONS -------------------------------------------------------------------------------
-   Option A (default): editorial serif for display headings (H1/H2, quotes, big figures), sans for H3-level
-   titles. Option B: Manrope for every heading. Staging switches html[data-type="serif"|"sans"]; production
-   keeps only the option Brian chooses. */
-:root[data-type="sans"] { --font-display: 'Manrope', var(--font-sans); --font-title: 'Manrope', var(--font-sans); }
+/* 9. TYPOGRAPHY --------------------------------------------------------------------------------------
+   Brian chose the contemporary sans direction (2026-11-21): Manrope for every heading, Inter for text.
+   Titles share one weight; large display text gets heavier weight and tighter tracking. */
 .pl-h3, .pl-cap h3, .pl-tile h3, .pl-case h3, .pl-steps h3, .pl-post h3, .pl-timeline h3, .pl-video-list button,
 .pl-faq summary, .home-blog-card h3, .pl-study-client, .card h3, .assess-callout .assess-title, .pl-table td:first-child,
 .pl-client-list li, .pl-offer-side strong, .pl-support-big, .pl-practice-nav button, .pl-practice h3, .pl-wall-name,
 .pl-fw-step h3, .pl-fcase h3, .pl-ccard h3, .film-feature h2 {
   font-family: var(--font-title); font-weight: 600; letter-spacing: -.012em;
 }
-:root[data-type="sans"] .pl-h1, :root[data-type="sans"] .pl-h2, :root[data-type="sans"] .section-heading,
-:root[data-type="sans"] .cta-band h2, :root[data-type="sans"] .pl-figure strong, :root[data-type="sans"] .pl-scale-num,
-:root[data-type="sans"] .stat-number, :root[data-type="sans"] .pl-rating strong, :root[data-type="sans"] .pl-fcase-metric,
-:root[data-type="sans"] .pl-ccard-metric, :root[data-type="sans"] .pl-cmetric strong, :root[data-type="sans"] .pl-hero2 .pl-h1 {
+.pl-h1, .pl-h2, .section-heading,
+.cta-band h2, .pl-figure strong, .pl-scale-num,
+.stat-number, .pl-rating strong, .pl-fcase-metric,
+.pl-ccard-metric, .pl-cmetric strong, .pl-hero2 .pl-h1 {
   font-weight: 650; letter-spacing: -.032em;
 }
-:root[data-type="sans"] .pl-quote blockquote, :root[data-type="sans"] .pl-persp-quote blockquote { font-weight: 500; letter-spacing: -.018em; }
-:root[data-type="sans"] .pl-h1 { line-height: 1.04; }
-:root[data-type="sans"] .pl-hero2 .pl-h1 { font-size: clamp(2.2rem, 4.1vw, 3.45rem); max-width: 16em; }
+.pl-quote blockquote, .pl-persp-quote blockquote { font-weight: 500; letter-spacing: -.018em; }
+.pl-h1 { line-height: 1.04; }
+.pl-hero2 .pl-h1 { font-size: clamp(2.2rem, 4.1vw, 3.45rem); max-width: 16em; }
 
 /* 10. HOMEPAGE + CASE STUDIES, ITERATION 2 ----------------------------------------------------------- */
 .pl-hide { display: none !important; }
@@ -886,6 +879,54 @@ a.pl-fcase:hover h3, a.pl-fcase-main:hover h3 { text-decoration: underline; text
 @media (max-width: 1024px) { .pl-tech { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .pl-tech { grid-template-columns: 1fr; } }
 
+/* iteration 3: hero facts, clean client row, visible practice grid, brighter illustration labels */
+.pl-hero2-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); }
+.pl-arch text { font-size: 13px; font-weight: 600; letter-spacing: .15em; fill: rgba(255,255,255,.86); }
+@media (min-width: 1180px) {
+  .pl-hero2 .pl-actions { flex-wrap: nowrap; }
+  .pl-hero2 .pl-actions .btn { padding: 16px 22px; white-space: nowrap; }
+}
+.pl-hero2-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 48px 0 0; border-top: 1px solid var(--line-dark); max-width: 36rem; }
+.pl-hero2-facts > div { padding: 18px 20px 0 0; }
+.pl-hero2-facts > div + div { padding-left: 20px; border-left: 1px solid var(--line-dark); }
+.pl-hero2-facts dt { font-family: var(--font-display); font-weight: 650; font-size: 1.15rem; letter-spacing: -.01em; color: #fff; }
+.pl-hero2-facts dd { margin-top: 4px; font-size: .84rem; line-height: 1.45; color: rgba(255,255,255,.66); }
+.pl-hero2-facts a { color: rgba(255,255,255,.8); border-bottom: 1px solid rgba(255,255,255,.3); }
+.pl-hero2-facts a:hover { color: #fff; border-bottom-color: #fff; }
+.pl-wall .pl-wrap { display: block; }
+.pl-wall-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 22px; }
+.pl-wall-head .pl-arrow { font-size: .88rem; }
+.pl-wall-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); border: 0; }
+.pl-wall-grid li { min-height: 0; padding: 2px 18px; border: 0; border-left: 1px solid var(--line); justify-content: flex-start; }
+.pl-wall-grid li:first-child { padding-left: 0; border-left: 0; }
+.pl-wall-name { font-size: 1rem; }
+.pl-practice-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.pl-pcell { display: flex; flex-direction: column; padding: 32px 32px 34px 0; border-bottom: 1px solid var(--line); }
+.pl-pcell:not(:nth-child(3n+1)) { padding-left: 32px; border-left: 1px solid var(--line); }
+.pl-pcell h3 { font-family: var(--font-title); font-weight: 650; font-size: 1.3rem; line-height: 1.25; letter-spacing: -.015em; color: var(--ink); margin-bottom: 10px; }
+.pl-pcell > p { font-size: .97rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 18px; }
+.pl-pcell .pl-practice-links { margin-top: auto; }
+.pl-pcell .pl-practice-links a { font-size: .9rem; }
+@media (max-width: 1180px) {
+  .pl-wall-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 18px; }
+  .pl-wall-grid li:nth-child(4n+1) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 1024px) {
+  .pl-practice-grid { grid-template-columns: 1fr 1fr; }
+  .pl-pcell:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .pl-pcell:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--line); }
+}
+@media (max-width: 768px) {
+  .pl-hero2-facts { grid-template-columns: 1fr; }
+  .pl-hero2-facts > div, .pl-hero2-facts > div + div { padding: 14px 0; border-left: 0; border-bottom: 1px solid var(--line-dark); }
+  .pl-wall-head { flex-direction: column; gap: 8px; }
+  .pl-wall-grid { grid-template-columns: 1fr 1fr; }
+  .pl-wall-grid li, .pl-wall-grid li:nth-child(4n+1) { padding: 2px 14px; border-left: 1px solid var(--line); }
+  .pl-wall-grid li:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .pl-practice-grid { grid-template-columns: 1fr; }
+  .pl-pcell, .pl-pcell:nth-child(even) { padding: 28px 0; border-left: 0; }
+}
+
 /* homepage rhythm: a little tighter than inner pages */
 .pl-home .pl-section { padding: 96px 0; }
 .pl-home .pl-head { margin-bottom: 52px; }
@@ -997,4 +1038,96 @@ a.pl-ccard:hover h3 { text-decoration: underline; text-underline-offset: 4px; te
 @media (max-width: 480px) {
   .pl-wall-grid { grid-template-columns: 1fr; }
   .pl-wall-grid li { min-height: 0; }
+}
+
+/* 12. LEGACY PAGE TEMPLATES -> 2026 DESIGN (service, industry, city and guide pages) ------------------
+   These pages keep their own inline CSS, which loads after this file. Selectors therefore start with
+   `html body` (beats a single class) and visual resets use !important. Structure and content are untouched. */
+html body .page-hero, html body section.hero {
+  background: var(--ink) !important; text-align: left !important;
+  padding-top: 96px !important; padding-bottom: 84px !important;
+  padding-left: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))) !important;
+  padding-right: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))) !important;
+}
+html body .page-hero::before, html body section.hero::before {
+  background: none !important;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) !important;
+  background-size: 96px 96px !important;
+}
+html body section.hero .hero-inner { max-width: none !important; padding: 0 !important; gap: 56px !important; align-items: center !important; }
+html body .page-hero h1, html body .hero-title, html body section.hero h1 {
+  font-family: var(--font-display) !important; font-weight: 650 !important; letter-spacing: -.03em !important;
+  line-height: 1.08 !important; color: #fff !important; max-width: 19em; margin-left: 0 !important; margin-right: 0 !important;
+}
+html body .page-hero h1 em, html body .hero-title em, html body section.hero h1 em,
+html body .page-hero h1 span, html body section.hero h1 span { color: #fff !important; font-style: normal !important; }
+html body .page-hero p, html body .hero-subtitle { color: rgba(255,255,255,.8) !important; margin-left: 0 !important; margin-right: 0 !important; text-align: left !important; }
+html body .page-hero [class$="-badge"], html body section.hero [class$="-badge"], html body .page-hero .local-badge, html body .page-hero .svc-badge {
+  display: inline-flex !important; align-items: center; gap: 12px; background: transparent !important; border: 0 !important;
+  border-radius: 0 !important; padding: 0 !important; color: rgba(255,255,255,.74) !important;
+  font: 600 .76rem/1.3 var(--font-sans) !important; letter-spacing: .16em !important; text-transform: uppercase;
+}
+html body .page-hero [class$="-badge"]::before, html body section.hero [class$="-badge"]::before { content: ""; width: 28px; height: 2px; background: var(--accent); }
+html body .page-hero [class$="-badge"] svg, html body section.hero [class$="-badge"] svg { display: none !important; }
+html body .hero-cta-group { justify-content: flex-start !important; }
+html body .page-hero a[href^="tel:"], html body section.hero a[href^="tel:"], html body .cta-band a[href^="tel:"] {
+  background: transparent !important; color: #fff !important; border: 1px solid rgba(255,255,255,.5) !important; box-shadow: none !important;
+}
+html body .value-item { background: transparent !important; border: 0 !important; border-top: 1px solid rgba(255,255,255,.2) !important; border-radius: 0 !important; padding: 14px 0 0 !important; }
+html body .comp-item svg, html body .value-item svg, html body .value-icon { display: none !important; }
+
+html body .trust-bar {
+  background: var(--ink-2) !important; justify-content: flex-start !important; gap: 12px 40px !important;
+  padding-left: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))) !important;
+  padding-right: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))) !important;
+}
+html body .trust-item { color: rgba(255,255,255,.78) !important; font-size: .84rem !important; }
+html body .trust-item svg { display: none !important; }
+
+html body .svc-card, html body .feature-card, html body .service-card, html body .industry-card, html body .challenge-item,
+html body .intro-point, html body .trust-pillar, html body .feature-card-link {
+  background: transparent !important; border: 0 !important; border-top: 1px solid var(--ink) !important; border-radius: 0 !important;
+  box-shadow: none !important; padding: 22px 0 0 !important; transform: none !important;
+}
+html body .svc-card:hover, html body .feature-card:hover, html body .service-card:hover, html body .industry-card:hover,
+html body .challenge-item:hover, html body .feature-card-link:hover { transform: none !important; box-shadow: none !important; }
+html body .svc-icon, html body .feature-icon, html body .service-card-icon, html body .industry-icon, html body .intro-point-icon,
+html body .challenge-icon, html body .trust-pillar-icon { display: none !important; }
+html body .svc-card h3, html body .feature-card h3, html body .service-card h3, html body .industry-card h3, html body .challenge-item h3,
+html body .intro-point-body h3, html body .trust-pillar-title {
+  font-family: var(--font-title) !important; font-weight: 650 !important; font-size: 1.12rem !important; letter-spacing: -.012em !important; color: var(--ink) !important;
+}
+html body .svc-card p, html body .feature-card p, html body .service-card p, html body .industry-card p, html body .challenge-item p,
+html body .intro-point-body p { font-size: .97rem !important; line-height: 1.65 !important; }
+html body .svc-card ul li::before { width: 10px !important; height: 1.5px !important; border-radius: 0 !important; background: var(--accent) !important; }
+
+html body .stats-strip, html body .stats-band { background: var(--ink) !important; background-image: none !important; }
+html body .stat-number, html body .trust-stat-num { font-family: var(--font-display) !important; font-weight: 650 !important; letter-spacing: -.03em !important; color: #fff; }
+
+html body .cta-band { background: var(--navy-dark) !important; background-image: none !important; }
+html body .cta-band h2 { font-family: var(--font-display) !important; font-weight: 650 !important; letter-spacing: -.028em !important; }
+
+html body .form-card { border-radius: 0 !important; box-shadow: none !important; border: 1px solid var(--line) !important; border-top: 3px solid var(--navy) !important; background: #fff !important; }
+html body .form-card .form-badge { background: transparent !important; border: 0 !important; padding: 0 !important; color: var(--accent-ink) !important; letter-spacing: .14em; text-transform: uppercase; font-size: .7rem !important; }
+html body .form-card .form-card-head h2, html body .form-card .form-card-head h3 { font-family: var(--font-title) !important; font-weight: 650 !important; font-size: 1.3rem !important; letter-spacing: -.015em !important; }
+html body .form-card input, html body .form-card select, html body .form-card textarea { border-radius: 2px !important; }
+html body .form-card .submit-btn { background: var(--navy) !important; border-radius: 2px !important; box-shadow: none !important; color: #fff !important; }
+html body .form-card .submit-btn:hover { background: var(--ink) !important; }
+
+html body .faq-list { gap: 0 !important; border-top: 1px solid var(--line); }
+html body .faq-item { background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--line) !important; border-radius: 0 !important; box-shadow: none !important; }
+html body .faq-q, html body .faq-question { font-family: var(--font-title) !important; font-weight: 600 !important; font-size: 1.05rem !important; padding: 20px 0 !important; background: none !important; color: var(--ink) !important; }
+html body .faq-a, html body .faq-answer { padding-left: 0 !important; padding-right: 0 !important; }
+
+html body .section-heading { font-weight: 650 !important; letter-spacing: -.028em !important; }
+html body .btn { border-radius: 2px !important; box-shadow: none !important; }
+html body .btn-gold { background: var(--navy) !important; color: #fff !important; border-color: var(--navy) !important; }
+html body .btn-gold:hover { background: var(--ink) !important; border-color: var(--ink) !important; }
+html body .page-hero .btn-gold, html body section.hero .btn-gold, html body .cta-band .btn-gold, html body .section-dark .btn-gold,
+html body .stats-strip .btn-gold { background: #fff !important; color: var(--ink) !important; border-color: #fff !important; }
+html body .btn-outline-navy { border-color: rgba(11,26,43,.35) !important; color: var(--ink) !important; background: transparent !important; }
+
+@media (max-width: 768px) {
+  html body .page-hero, html body section.hero { padding-top: 64px !important; padding-bottom: 56px !important; }
+  html body section.hero .hero-inner { gap: 36px !important; }
 }
