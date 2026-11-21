@@ -70,7 +70,8 @@ bypass the guard; fix the content instead.
   failure the post is not written and the run exits non-zero. History: the model
   emitted `</hh2>`; a legacy footer template left stray `</div>`s in 9 posts.
 - New posts are **answer-first**: direct 2–3 sentence answer in the first 40 words,
-  Key Takeaways box, question-phrased H2/H3s.
+  question-phrased H2/H3s. The Key Takeaways box comes from the post's registry entry
+  (`takeaways`, 3-5 bullets), not from the body (redesign-2026: see "Redesign 2026" below).
 - Topic queue focuses on **core managed IT services** (M365, cloud, migrations,
   cybersecurity, network, IT management for 10+ employee companies).
   CMMC/compliance is a secondary vertical, not the lead.
@@ -641,8 +642,8 @@ that I would like to host on our site similarly". Every app follows this one pat
 - **Rollback:** production `main` is untouched by this branch. Backups: local tag `pre-redesign-2026-11-20`
   (= `de7b063`, not pushed) and a zip of that commit outside the repo; Cloudflare keeps every production
   deployment for one-click rollback.
-- **Design system:** `_shared.css` (sections 1-8). Fonts are self-hosted (`assets/fonts/*.woff2`, Inter for
-  text, Source Serif 4 for headings; no Google Fonts). New components use the `pl-` prefix; the legacy class
+- **Design system:** `_shared.css` (sections 1-13). Fonts are self-hosted (`assets/fonts/*.woff2`, Inter for
+  text, Manrope for headings; no Google Fonts). New components use the `pl-` prefix; the legacy class
   names are restyled in section 6 so unconverted pages still look consistent. Flat surfaces, square corners,
   thin rules; navy primary, amber only as a thin accent.
 - **Header + footer = one place each:** `chrome/header.html` and `chrome/footer.html`. Every page carries them
@@ -668,8 +669,33 @@ that I would like to host on our site similarly". Every app follows this one pat
   `data-hero`). Case studies: `python chrome/build_case_pages.py` builds `/case-studies/<slug>` pages and the
   hub `<main>` from its CASES data and adds indexable pages to `sitemap.xml`; `case-studies/crr.html` is
   noindex and ships only with Brian's separate approval. Scroll motion never hides content (transform only).
+- **Iteration 3 (2026-11-21):** branch `redesign-2026-v2` freezes iteration 2. Typography B (Manrope headings,
+  Inter text) is the only option now. **Insights** is one system:
+  - `editorial/blog_registry.json` is the single source of truth: the 7 categories, the practice each maps to,
+    authors, the featured lead + 3-4 picks (chosen by hand, not by date), the CTA copy, and one entry per post
+    (title, summary, dates, category, local/executive, author, `approved_by`, reviewers, takeaways, overrides).
+  - `chrome/insights.py` renders every post, `/blog/` (featured, latest with topic filter + search +
+    load-more via `assets/js/insights.js`, archive by topic) and the home cards (max 4), plus profile pages
+    (`leadership/brian-shad`). `python chrome/insights.py --rebuild` re-renders everything after a template
+    or registry change; `--check` validates the registry. Existing posts keep their head byte-for-byte except
+    the BlogPosting author node, the breadcrumb label ("Insights") and the old inline blog `<style>`; the body
+    between `<!-- PL:BODY -->` markers is never rewritten. Illustrations are generated SVGs
+    (`chrome/insight_art.py` -> `assets/insights/<slug>.svg`); og:image stays `/logo.png` (GBP backfill posts
+    og:image as a photo, so it must stay raster).
+  - **Attribution rule (Brian):** a post shows Brian Shad as author only when its entry has `"author":
+    "brian-shad"` AND `approved_by`; everything else is published under the organization. New posts default to
+    the organization.
+  - `generate_blog.py` asks the model for CATEGORY and TAKEAWAYS (falls back to `insights.guess_category`),
+    adds the registry entry, renders the post with the shared chrome, and rebuilds `/blog/` and the home cards.
+    The workflow commits `editorial/blog_registry.json` and `assets/insights/` too. Filters/search never create
+    URLs; `/category/*` and `/author/*` still 301 to `/blog`.
 - **Before go-live (checklist):** `python chrome/golive_check.py` must pass: no `pl-flag` left, no
-  `functions/_middleware.js`, a new `_shared.css?v=` (run `bump_shared_css.py`, then fix the
-  `m365-security-assessment/` pages it does not cover), and `generate_blog.py` / `gen_location_pages.py` /
-  `update_site_links.py` emitting the new header/footer markers. Then a PR to `main`, merged only on Brian's
-  explicit approval.
+  `functions/_middleware.js`, a new `_shared.css?v=` (`bump_shared_css.py` now covers `case-studies/`,
+  `leadership/` and `m365-security-assessment/`), and `gen_location_pages.py` / `update_site_links.py`
+  emitting the new header/footer markers (`generate_blog.py` does). Merge `main` into this branch first, then
+  run `python chrome/build_blog_registry.py <classification.json>` only for posts published since (or add their
+  registry entries by hand) and `python chrome/insights.py --rebuild`, because Tuesday posts arrive in the old
+  design. SEO engine (`C:\Googleads\seo`) prerequisites: `audit.py` must know subdirectory pages
+  (`/case-studies/*`, `/leadership/*`) or it reverts change-sets for "broken" links; strip the new header from
+  word counts; rename its breadcrumb label to "Insights". Ship the generator and the migration together, not on
+  a Tuesday. Then a PR to `main`, merged only on Brian's explicit approval.

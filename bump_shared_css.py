@@ -1,4 +1,5 @@
-"""Bump the ?v= on every link to _shared.css (root pages, blog/ pages, generate_blog.py).
+"""Bump the ?v= on every link to _shared.css (root, blog/, case-studies/, leadership/ and
+m365-security-assessment/ pages, plus the page builders that carry a literal copy).
 
 Run this whenever _shared.css changes:  python bump_shared_css.py 20261112
 (any 8-digit date, optionally + one letter for a second bump the same day, e.g. 20261112b)
@@ -22,7 +23,10 @@ def main() -> int:
         print(__doc__)
         return 2
     version = sys.argv[1]
-    targets = sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("blog/*.html")) + [ROOT / "generate_blog.py"]
+    # chrome/insights.py (posts, the /blog/ index, profiles) reads the version from index.html, so it carries no copy.
+    targets = (sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("blog/*.html")) + sorted(ROOT.glob("case-studies/*.html"))
+               + sorted(ROOT.glob("leadership/*.html")) + sorted(ROOT.glob("m365-security-assessment/*.html"))
+               + [ROOT / "generate_blog.py", ROOT / "chrome" / "build_case_pages.py"])
     changed = refs = 0
     for path in targets:
         text = path.read_bytes().decode("utf-8")

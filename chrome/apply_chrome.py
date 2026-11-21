@@ -78,7 +78,8 @@ def section_for(rel):
         return "industries"
     if base in SOLUTIONS or rel.replace("\\", "/").startswith("m365-security-assessment/"):
         return "solutions"
-    if base in ABOUT or (base.startswith("managed-it-services-") and base != "managed-it-services-pricing-los-angeles"):
+    if base in ABOUT or rel.replace("\\", "/").startswith("leadership/") or (
+            base.startswith("managed-it-services-") and base != "managed-it-services-pricing-los-angeles"):
         return "about"
     return None
 
@@ -111,11 +112,39 @@ def find_legacy_header(text):
     return s, e_menu + len("</div>")
 
 
+_PARTIALS = []
+
+
+def partials():
+    """(header, footer) partial text, read once."""
+    if not _PARTIALS:
+        for name in ("header.html", "footer.html"):
+            with open(os.path.join(ROOT, "chrome", name), encoding="utf-8") as fh:
+                _PARTIALS.append(fh.read().replace("\r\n", "\n"))
+    return _PARTIALS[0], _PARTIALS[1]
+
+
+def process_text(text, rel):
+    """Chrome for a page held in memory (used by chrome/insights.py and generate_blog.py). Raises if the page
+    has neither markers nor a legacy header."""
+    header_partial, footer_partial = partials()
+    new, notes = transform(text, rel, header_partial, footer_partial)
+    if new is None:
+        raise ValueError("apply_chrome: %s (%s)" % (rel, ", ".join(notes)))
+    return new
+
+
 def process(path, header_partial, footer_partial):
     rel = os.path.relpath(path, ROOT)
     with open(path, "rb") as fh:
         raw = fh.read()
     text = raw.decode("utf-8")
+    t, notes = transform(text, rel, header_partial, footer_partial)
+    return (t if t is not None and t != text else None), notes
+
+
+def transform(text, rel, header_partial, footer_partial):
+    """Return (page text with current chrome, notes); the text is None when no header can be placed."""
     crlf = "\r\n" in text
     t = text.replace("\r\n", "\n")
     notes = []
@@ -155,7 +184,7 @@ def process(path, header_partial, footer_partial):
 
     if crlf:
         t = t.replace("\n", "\r\n")
-    return (t if t != text else None), notes
+    return t, notes
 
 
 def main():

@@ -27,13 +27,10 @@
   "headline": "Power Shutoff Continuity Checklist for LA",
   "description": "Public safety power shutoffs are scheduled, not sudden. Three checks that turn a Southern California continuity plan from written into tested.",
   "author": {
-    "@type": "Person",
-    "name": "Brian Shad",
-    "jobTitle": "President",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Pro Link Systems"
-    }
+    "@type": "Organization",
+    "@id": "https://prolinksystems.com/#organization",
+    "name": "Pro Link Systems",
+    "url": "https://prolinksystems.com/"
   },
   "publisher": {
     "@type": "Organization",
@@ -74,7 +71,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261120">
+  <link rel="stylesheet" href="/_shared.css?v=20261121">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -103,117 +100,6 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         enableAutoSpaTracking: true
     });
 </script>
-<style>
-.blog-hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
-  padding: 60px 0 48px;
-  text-align: center;
-}
-.blog-hero .breadcrumb {
-  font-size: .8rem;
-  color: rgba(255,255,255,.5);
-  margin-bottom: 16px;
-}
-.blog-hero .breadcrumb a {
-  color: rgba(255,255,255,.5);
-  text-decoration: none;
-}
-.blog-hero .breadcrumb a:hover { color: var(--gold); }
-.blog-hero .breadcrumb span { margin: 0 8px; }
-.blog-hero h1 {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.25;
-  letter-spacing: -.025em;
-  max-width: 800px;
-  margin: 0 auto 16px;
-  padding: 0 24px;
-}
-.blog-hero .post-meta {
-  font-size: .85rem;
-  color: rgba(255,255,255,.55);
-}
-.blog-hero .post-meta strong {
-  color: var(--gold);
-  font-weight: 600;
-}
-.blog-body {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 52px 24px 64px;
-}
-.blog-body h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin: 2.5rem 0 1rem;
-  letter-spacing: -.02em;
-}
-.blog-body p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 1.25rem;
-}
-.blog-body ul {
-  margin: 0 0 1.25rem 1.5rem;
-  padding: 0;
-}
-.blog-body li {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--text);
-  margin-bottom: .5rem;
-}
-.blog-body strong { font-weight: 700; color: var(--navy); }
-.blog-video {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: 1.75rem 0 .75rem;
-  border-radius: var(--r-md);
-  overflow: hidden;
-  background: var(--navy-dark);
-  box-shadow: var(--sh-md);
-}
-.blog-video iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.blog-body p.blog-video-cap {
-  font-size: .9rem;
-  color: var(--text-muted);
-  margin-bottom: 2.25rem;
-}
-.blog-cta-box {
-  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 100%);
-  border: 1.5px solid rgba(23,98,168,.15);
-  border-left: 4px solid var(--navy);
-  border-radius: var(--r-lg);
-  padding: 2rem 2rem 2rem 2.25rem;
-  margin: 3rem 0 0;
-}
-.blog-cta-box h2 {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--navy);
-  margin: 0 0 .75rem;
-  letter-spacing: -.02em;
-}
-.blog-cta-box p {
-  font-size: .95rem;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
-  line-height: 1.65;
-}
-.blog-cta-box .btn-group {
-  display: flex; gap: 12px; flex-wrap: wrap;
-}
-</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -265,7 +151,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Blog",
+      "name": "Insights",
       "item": "https://prolinksystems.com/blog/"
     },
     {
@@ -502,19 +388,24 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<div class="blog-hero">
-  <div class="breadcrumb">
-    <a href="/">Home</a><span>/</span>
-    <a href="/blog/">Blog</a><span>/</span>
-    <span style="color:rgba(255,255,255,.7);">Article</span>
+<main id="pl-main" class="pl-art">
+<header class="pl-arthead">
+  <div class="pl-wrap">
+    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+    <div class="pl-arthead-inner">
+      <p class="pl-cat"><a href="/blog/#business-continuity">Business Continuity</a></p>
+      <h1>Power Shutoff Continuity Checklist for LA</h1>
+      <p class="pl-dek">Public safety power shutoffs are scheduled, not sudden. Three checks that turn a Southern California continuity plan from written into tested.</p>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-08-07">August 7, 2026</time><br>4 min read</div></div>
+    </div>
   </div>
-  <h1>Power Shutoff Continuity Checklist for LA</h1>
-  <div class="post-meta">
-    <img class="post-avatar" src="/assets/photos/web/brian-shad-byline-160.webp" width="40" height="40" alt="Brian Shad" decoding="async">By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; August 07, 2026
-  </div>
-</div>
-
-<article class="blog-body">
+</header>
+<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-08-07-t20-wildfire-season-power-shutoff-continuity-checklist-la.svg" width="1200" height="675" alt="Abstract illustration of a recovery arc returning to its baseline" fetchpriority="high" decoding="async"></div></figure>
+<div class="pl-wrap">
+<div class="pl-art-layout">
+<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#a-power-shutoff-is-not-an-emergency">A Power Shutoff Is Not an Emergency</a></li><li><a href="#what-tested-actually-means">What "Tested" Actually Means</a></li><li><a href="#1-sequence-what-comes-back-first">1. Sequence: What Comes Back First?</a></li><li><a href="#2-location-where-does-the-copy-live">2. Location: Where Does the Copy Live?</a></li><li><a href="#3-rehearsal-has-anyone-actually-run-it">3. Rehearsal: Has Anyone Actually Run It?</a></li><li><a href="#why-an-afternoon-is-worth-it">Why an Afternoon Is Worth It</a></li><li><a href="#who-we-are">Who We Are</a></li></ol></nav>
+<article class="pl-art-body">
+<!-- PL:BODY -->
 <p>Most Southern California businesses have a continuity plan. Very few have ever run it &mdash; and those are not the same thing. If you want to be ready for power shutoff season, you do not need a bigger plan. You need a tested one, and testing it takes an afternoon.</p>
 
 <div class="blog-video">
@@ -522,7 +413,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 </div>
 <p class="blog-video-cap">Ninety seconds on the three checks. Watch it on <a href="https://youtu.be/pczg10Fp0Wo">YouTube</a>, or take the written version with you &mdash; the <a href="/continuity-checklist">SoCal Business Continuity Checklist</a> is free and needs no email address.</p>
 
-<h2>A Power Shutoff Is Not an Emergency</h2>
+<h2 id="a-power-shutoff-is-not-an-emergency">A Power Shutoff Is Not an Emergency</h2>
 
 <p>This distinction matters more than it sounds, because it changes what you should be preparing for.</p>
 
@@ -532,11 +423,11 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>Nothing about that morning is dramatic. It is simply an expensive, avoidable day.</p>
 
-<h2>What "Tested" Actually Means</h2>
+<h2 id="what-tested-actually-means">What "Tested" Actually Means</h2>
 
 <p>When we say a plan has been tested, we do not mean somebody read it. We mean the organization has answered three questions out loud, with names attached, on a day when it did not matter.</p>
 
-<h2>1. Sequence: What Comes Back First?</h2>
+<h2 id="1-sequence-what-comes-back-first">1. Sequence: What Comes Back First?</h2>
 
 <p>Not everything has to come back at once. This is the part most plans get wrong: restoration gets imagined as a single event, so it gets written as a single event, and then on the day it turns out half the systems depend on the other half and nobody wrote down the order.</p>
 
@@ -551,7 +442,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>Your order may look different, and that is fine. The point is that an order exists, it is written down, and it is not being invented at 7am in a dark office.</p>
 
-<h2>2. Location: Where Does the Copy Live?</h2>
+<h2 id="2-location-where-does-the-copy-live">2. Location: Where Does the Copy Live?</h2>
 
 <p>A backup that shares a failure domain with the thing it is backing up is not a backup. It is a second copy of the same risk.</p>
 
@@ -559,7 +450,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>This is rarely an expensive problem to solve. It is very often an unexamined one, because the <a href="/backup-disaster-recovery">backup job</a> runs, it reports success every night, and success reports are reassuring right up to the moment they become irrelevant.</p>
 
-<h2>3. Rehearsal: Has Anyone Actually Run It?</h2>
+<h2 id="3-rehearsal-has-anyone-actually-run-it">3. Rehearsal: Has Anyone Actually Run It?</h2>
 
 <p>Here is the uncomfortable one, and the step almost everyone skips.</p>
 
@@ -578,7 +469,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>Those are not IT problems. They are the reason an IT plan does not survive contact with a real outage.</p>
 
-<h2>Why an Afternoon Is Worth It</h2>
+<h2 id="why-an-afternoon-is-worth-it">Why an Afternoon Is Worth It</h2>
 
 <p>The businesses that come through a shutoff week well are almost never the ones with the most sophisticated infrastructure. They are the ones where somebody spent an afternoon, once, being slightly bored in a conference room, arguing about what comes back first.</p>
 
@@ -586,23 +477,37 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>If you want the broader picture beyond shutoff season, our <a href="/blog/2026-07-17-t8-it-disaster-recovery-planning-for-los-angeles-businesse">disaster recovery planning guide</a> covers how the same thinking applies to outages, hardware failure and ransomware.</p>
 
-<h2>Who We Are</h2>
+<h2 id="who-we-are">Who We Are</h2>
 
 <p>Pro Link Systems has provided managed IT, cybersecurity, cloud and disaster recovery to Los Angeles businesses since 1999, from Woodland Hills. Our help desk is <strong>in-house, US-based and staffed 24/7</strong> &mdash; when you call, a person answers. There is no phone tree and no hold queue.</p>
-
-<div class="blog-cta-box">
-  <h2>Get the SoCal Business Continuity Checklist</h2>
-  <p>It is the same checklist we walk our own clients through &mdash; sequence, location and rehearsal, with the questions we actually ask. It is free, there is no form and no email required, and the full checklist is on the page as well as in the PDF.</p>
-  <div class="btn-group">
-    <a href="/continuity-checklist" class="btn btn-navy">Download the checklist</a>
-    <a href="/contact" class="btn btn-outline-navy">Book a 15-minute continuity review</a>
-    <a href="tel:18008906133" class="btn btn-outline-navy">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      1-800-890-6133
-    </a>
-  </div>
-</div>
+<!-- /PL:BODY -->
+<aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cloud &amp; Infrastructure Engineering</strong><p>Microsoft 365, Azure, AWS and hybrid environments, with continuity designed in from the start.</p><a class="pl-arrow" href="/backup-disaster-recovery">Explore business continuity and disaster recovery</a></div></aside>
+<section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
 </article>
+</div>
+</div>
+<section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
+  <div class="pl-wrap">
+    <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="business-continuity" data-text="break-glass access nobody tested emergency admin access fails quietly, and passwordless removed the fallback. why identity lockout is now a board-level decision, not an it hygiene checkbox. business continuity break glass accounts planning for the day your identity"><a href="/blog/2026-09-15-t107-break-glass-accounts-planning-for-the-day-your-identity"><img class="pl-art-img" src="/assets/insights/2026-09-15-t107-break-glass-accounts-planning-for-the-day-your-identity.svg" width="1200" height="675" alt="Abstract illustration of a recovery arc returning to its baseline" loading="lazy" decoding="async"><span class="pl-cat">Business Continuity</span><h3>Break-Glass Access Nobody Tested</h3><p>Emergency admin access fails quietly, and passwordless removed the fallback. Why identity lockout is now a board-level decision, not an IT hygiene checkbox.</p><span class="pl-meta"><time datetime="2026-09-15">September 15, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="business-continuity" data-text="backups that survive your own admins immutable backups fail the moment an administrator can shorten retention. the 2026 recovery question is who holds the delete path, not where copies live. business continuity immutable backups recovery that survives a compromised "><a href="/blog/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-"><img class="pl-art-img" src="/assets/insights/2026-09-07-t103-immutable-backups-recovery-that-survives-a-compromised-.svg" width="1200" height="675" alt="Abstract illustration of a recovery arc returning to its baseline" loading="lazy" decoding="async"><span class="pl-cat">Business Continuity</span><h3>Backups That Survive Your Own Admins</h3><p>Immutable backups fail the moment an administrator can shorten retention. The 2026 recovery question is who holds the delete path, not where copies live.</p><span class="pl-meta"><time datetime="2026-09-07">September 7, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="business-continuity" data-text="it disaster recovery planning guide for la protect your los angeles business with comprehensive it disaster recovery planning. learn essential strategies from pro link systems&#x27; managed it experts. business continuity it disaster recovery planning for los angeles businesse"><a href="/blog/2026-07-17-t8-it-disaster-recovery-planning-for-los-angeles-businesse"><img class="pl-art-img" src="/assets/insights/2026-07-17-t8-it-disaster-recovery-planning-for-los-angeles-businesse.svg" width="1200" height="675" alt="Abstract illustration of a recovery arc returning to its baseline" loading="lazy" decoding="async"><span class="pl-cat">Business Continuity</span><h3>IT Disaster Recovery Planning Guide for LA</h3><p>Protect your Los Angeles business with comprehensive IT disaster recovery planning. Learn essential strategies from Pro Link Systems' managed IT experts.</p><span class="pl-meta"><time datetime="2026-07-17">July 17, 2026</time><span>4 min read</span></span></a></li></ul>
+  </div>
+</section>
+<section class="pl-cta" aria-labelledby="cta-heading">
+  <div class="pl-wrap">
+    <div>
+      <p class="pl-eyebrow">Next step</p>
+      <h2 class="pl-h2" id="cta-heading">Discuss Your Technology Strategy</h2>
+    </div>
+    <div>
+      <p>Connect with our advisory team to explore how Pro Link Systems can help your organization strengthen its technology infrastructure, reduce risk, and advance its business objectives.</p>
+      <div class="pl-actions">
+        <a href="/contact" class="btn btn-light">Schedule a Continuity Consultation</a>
+        <a href="/continuity-checklist" class="btn btn-outline-white">Get the continuity checklist</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
 <!-- PL:FOOTER -->
 <footer class="pl-footer" role="contentinfo">

@@ -10,6 +10,12 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup
 
+# Insights pages (posts, the /blog/ index and the home page cards) are rendered by ONE module shared with the
+# migration of existing posts: chrome/insights.py, driven by editorial/blog_registry.json. It writes every page
+# with the shared site chrome between the <!-- PL:HEADER --> and <!-- PL:FOOTER --> markers (redesign-2026).
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "chrome"))
+import insights  # noqa: E402
+
 
 # ---------------------------------------------------------------------------
 # Model-output hardening
@@ -444,8 +450,8 @@ FORMAT_SPEC = """Structural requirements (the publishing pipeline depends on the
 - Structure: an opening that earns attention (per the standards - no banned openings),
   3-5 sections with H2 headings whose wording is specific rather than generic,
   a closing section that lands the executive takeaway before any CTA
-- One restrained CTA at the end directing readers to prolinksystems.com/managed-it-services
-  (or a more specific service page if the subject clearly belongs to one)
+- No closing sales pitch or call to action in the body: the page template already adds a
+  related-practice link and a consultation prompt after the article
 - Write in HTML using only these tags: p, h2, ul, li, strong, a
 - Include 3-5 natural internal links using these anchor/URL pairs:
   - "managed IT services" or "managed IT" -> /managed-it-services
@@ -462,6 +468,9 @@ Also provide:
   " | Pro Link Systems" appended). Specific beats clever; no colon-cliches.
 - META: a meta description of 150-160 characters that states the article's
   actual argument, not a generic promise.
+- CATEGORY: exactly one of: """ + " | ".join(c["name"] for c in insights.load()["categories"]) + """
+- TAKEAWAYS: three short lines, each starting with "- ", that restate the essay's own
+  conclusions for an executive reader. No new claims and no numbers that are not in the essay.
 - LINKEDIN: the company-page caption for this article. 3-5 short lines; first
   line is a real hook per the standards. Plain text only - no parentheses,
   brackets, markdown, emojis, and NO hashtags (LinkedIn doctrine). Do not
@@ -470,6 +479,11 @@ Also provide:
 Return EXACTLY this format:
 TITLE: ...
 META: ...
+CATEGORY: ...
+TAKEAWAYS:
+- ...
+- ...
+- ...
 LINKEDIN:
 ...(may span lines)
 CONTENT:
@@ -525,9 +539,11 @@ response = review_response[_t:]
 lines = response.strip().split('\n')
 title = ""
 meta = ""
+category_raw = ""
+takeaways = []
 caption_lines = []
 content_lines = []
-state = None  # None | "linkedin" | "content"
+state = None  # None | "takeaways" | "linkedin" | "content"
 
 for line in lines:
     if line.startswith("TITLE:"):
@@ -536,6 +552,11 @@ for line in lines:
     elif line.startswith("META:"):
         meta = line.split("META:", 1)[1].strip()
         state = None
+    elif line.startswith("CATEGORY:"):
+        category_raw = line.split("CATEGORY:", 1)[1].strip()
+        state = None
+    elif line.startswith("TAKEAWAYS:"):
+        state = "takeaways"
     elif line.startswith("LINKEDIN:"):
         first = line.split("LINKEDIN:", 1)[1].strip()
         if first:
@@ -547,6 +568,8 @@ for line in lines:
         content_lines.append(line)
     elif state == "linkedin":
         caption_lines.append(line)
+    elif state == "takeaways" and line.strip().startswith("- "):
+        takeaways.append(line.strip()[2:].strip())
 
 caption = '\n'.join(caption_lines).strip()
 content = '\n'.join(content_lines).strip()
@@ -566,338 +589,27 @@ seo_title = _full_title if len(html_lib.unescape(_full_title)) <= 60 else title
 # for validate_post_html to reject (CONVENTIONS.md: <=160, target 120-155).
 meta = fit_meta_description(normalize_apex_links(meta.strip()))
 
-year = datetime.now().year
-
-NAV = '''<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <a href="/" class="nav-logo" aria-label="Pro Link Systems home">
-    <img src="/logo.png" alt="Pro Link Systems" width="160" height="44">
-  </a>
-  <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/services">Services</a>
-    <a href="/self-service">Assessments</a>
-    <a href="/case-studies">Case Studies</a>
-    <a href="/about">About</a>
-    <a href="/blog/" class="active">Blog</a>
-    <a href="/contact">Contact</a>
-    <a href="tel:18008906133" class="nav-cta">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      1-800-890-6133
-    </a>
-  </div>
-  <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobile-menu">
-  <a href="/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
-  <a href="/services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
-  <a href="/self-service" onclick="document.getElementById('mobile-menu').classList.remove('open')">Assessments</a>
-  <a href="/case-studies" onclick="document.getElementById('mobile-menu').classList.remove('open')">Case Studies</a>
-  <a href="/about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
-  <a href="/blog/" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
-  <a href="/contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
-  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;" onclick="document.getElementById('mobile-menu').classList.remove('open')">&#128222; 1-800-890-6133</a>
-</div>'''
-
-FOOTER = f'''<footer class="site-footer" role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="/logo.png" alt="Pro Link Systems" width="140" height="38">
-      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. 24/7 in-house, US-based help desk.</p>
-    </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <a href="/managed-it-services">Managed IT Services</a>
-      <a href="/services#helpdesk">24/7 Help Desk</a>
-      <a href="/services#cybersecurity">Cybersecurity</a>
-      <a href="/services#cloud">Cloud &amp; Infrastructure</a>
-      <a href="/services#dr">Disaster Recovery</a>
-      <a href="/services#consulting">IT Consulting</a>
-      <a href="/services#remote">Remote Workplace</a>
-      <a href="/self-service">Self-Service Assessments</a>
-    </div>
-    <div class="footer-col">
-      <h3>Company</h3>
-      <a href="/">Home</a>
-      <a href="/about">About Us</a>
-      <a href="/contact">Contact</a>
-      <a href="/blog/">Blog</a>
-      <a href="/case-studies">Case Studies</a>
-      <a href="/legal">Legal / Terms</a>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
-      </div>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
-      </div>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</span>
-      </div>
-    </div>
-  </div>
-  <div class="footer-areas">
-    <h3>Areas We Serve</h3>
-    <div class="footer-areas-links">
-      <a href="/managed-it-services-los-angeles">Los Angeles</a>
-      <a href="/managed-it-services-downtown-los-angeles">Downtown LA</a>
-      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
-      <a href="/managed-it-services-tarzana">Tarzana</a>
-      <a href="/managed-it-services-west-hills">West Hills</a>
-      <a href="/managed-it-services-chatsworth">Chatsworth</a>
-      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
-      <a href="/managed-it-services-century-city">Century City</a>
-      <a href="/managed-it-services-west-los-angeles">West Los Angeles</a>
-      <a href="/managed-it-services-pasadena">Pasadena</a>
-      <a href="/it-support-burbank">Burbank</a>
-      <a href="/managed-it-services-studio-city">Studio City</a>
-      <a href="/managed-it-services-north-hollywood">North Hollywood</a>
-      <a href="/managed-it-services-santa-monica">Santa Monica</a>
-      <a href="/managed-it-services-culver-city">Culver City</a>
-      <a href="/managed-it-services-glendale">Glendale</a>
-      <a href="/managed-it-services-calabasas">Calabasas</a>
-      <a href="/managed-it-services-agoura-hills">Agoura Hills</a>
-      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
-      <a href="/managed-it-services-simi-valley">Simi Valley</a>
-      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
-      <a href="/managed-it-services-van-nuys">Van Nuys</a>
-      <a href="/managed-it-services-northridge">Northridge</a>
-      <a href="/managed-it-services-santa-clarita">Santa Clarita</a>
-      <a href="/managed-it-services-encino">Encino</a>
-      <a href="/managed-it-services-torrance">Torrance</a>
-      <a href="/managed-it-services-el-segundo">El Segundo</a>
-      <a href="/managed-it-services-long-beach">Long Beach</a>
-      <a href="/managed-it-services-irvine">Irvine</a>
-      <a href="/managed-it-services-orange-county">Orange County</a>
-      <a href="/managed-it-services-playa-vista">Playa Vista</a>
-      <a href="/managed-it-services-hollywood">Hollywood</a>
-      <a href="/managed-it-services-koreatown">Koreatown</a>
-      <a href="/managed-it-services-hawthorne">Hawthorne</a>
-      <a href="/managed-it-services-manhattan-beach">Manhattan Beach</a>
-      <a href="/managed-it-services-sun-valley">Sun Valley</a>
-      <a href="/managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
-      <a href="/managed-it-services-camarillo">Camarillo</a>
-      <a href="/managed-it-services-malibu">Malibu</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; {year} Pro Link Systems, Inc. All rights reserved.</span>
-    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
-  </div>
-</footer>'''
-
-html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>{seo_title}</title>
-<meta name="description" content="{meta}">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://prolinksystems.com/blog/{slug}">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://prolinksystems.com/blog/{slug}">
-<meta property="og:title" content="{seo_title}">
-<meta property="og:description" content="{meta}">
-<meta property="og:image" content="https://prolinksystems.com/logo.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@ProLink_Systems">
-<meta name="twitter:image" content="https://prolinksystems.com/logo.png">
-<meta name="twitter:title" content="{seo_title}">
-<meta name="twitter:description" content="{meta}">
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{title}",
-  "description": "{meta}",
-  "author": {{
-    "@type": "Person",
-    "name": "Brian Shad",
-    "jobTitle": "President",
-    "worksFor": {{
-      "@type": "Organization",
-      "name": "Pro Link Systems"
-    }}
-  }},
-  "publisher": {{
-    "@type": "Organization",
-    "name": "Pro Link Systems",
-    "logo": {{
-      "@type": "ImageObject",
-      "url": "https://prolinksystems.com/logo.png"
-    }}
-  }},
-  "datePublished": "{date_iso}",
-  "dateModified": "{date_iso}",
-  "mainEntityOfPage": {{
-    "@type": "WebPage",
-    "@id": "https://prolinksystems.com/blog/{slug}"
-  }},
-  "url": "https://prolinksystems.com/blog/{slug}"
-}}
-</script>
-<link rel="stylesheet" href="/_shared.css?v=20261120">
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-gtag('config', 'AW-1068497497');
-gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
-</script>
-<!-- Microsoft UET tag (Bing Ads) — tag 97275167 -->
-<script>
-    (function(w, d, t, u, o) {{
-        w[u] = w[u] || [], o.ts = (new Date).getTime();
-        var n = d.createElement(t);
-        n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");
-        n.async = 1, n.onload = n.onreadystatechange = function() {{
-            var s = this.readyState;
-            s && "loaded" !== s && "complete" !== s ||
-            (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),
-            n.onload = n.onreadystatechange = null)
-    }};
-        var i = d.getElementsByTagName(t)[0];
-        i.parentNode.insertBefore(n, i);
-    }})(window, document, "script", "uetq", {{
-        ti:"97275167",
-        enableAutoSpaTracking: true
-    }});
-</script>
-<style>
-.blog-hero {{
-  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
-  padding: 60px 0 48px;
-  text-align: center;
-}}
-.blog-hero .breadcrumb {{
-  font-size: .8rem;
-  color: rgba(255,255,255,.5);
-  margin-bottom: 16px;
-}}
-.blog-hero .breadcrumb a {{
-  color: rgba(255,255,255,.5);
-  text-decoration: none;
-}}
-.blog-hero .breadcrumb a:hover {{ color: var(--gold); }}
-.blog-hero .breadcrumb span {{ margin: 0 8px; }}
-.blog-hero h1 {{
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.25;
-  letter-spacing: -.025em;
-  max-width: 800px;
-  margin: 0 auto 16px;
-  padding: 0 24px;
-}}
-.blog-hero .post-meta {{
-  font-size: .85rem;
-  color: rgba(255,255,255,.55);
-}}
-.blog-hero .post-meta strong {{
-  color: var(--gold);
-  font-weight: 600;
-}}
-.blog-body {{
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 52px 24px 64px;
-}}
-.blog-body h2 {{
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin: 2.5rem 0 1rem;
-  letter-spacing: -.02em;
-}}
-.blog-body p {{
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 1.25rem;
-}}
-.blog-body ul {{
-  margin: 0 0 1.25rem 1.5rem;
-  padding: 0;
-}}
-.blog-body li {{
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--text);
-  margin-bottom: .5rem;
-}}
-.blog-body strong {{ font-weight: 700; color: var(--navy); }}
-.blog-cta-box {{
-  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 100%);
-  border: 1.5px solid rgba(23,98,168,.15);
-  border-left: 4px solid var(--navy);
-  border-radius: var(--r-lg);
-  padding: 2rem 2rem 2rem 2.25rem;
-  margin: 3rem 0 0;
-}}
-.blog-cta-box h2 {{
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--navy);
-  margin: 0 0 .75rem;
-  letter-spacing: -.02em;
-}}
-.blog-cta-box p {{
-  font-size: .95rem;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
-  line-height: 1.65;
-}}
-.blog-cta-box .btn-group {{
-  display: flex; gap: 12px; flex-wrap: wrap;
-}}
-</style>
-</head>
-<body>
-{NAV}
-
-<div class="blog-hero">
-  <div class="breadcrumb">
-    <a href="/">Home</a><span>/</span>
-    <a href="/blog/">Blog</a><span>/</span>
-    <span style="color:rgba(255,255,255,.7);">Article</span>
-  </div>
-  <h1>{title}</h1>
-  <div class="post-meta">
-    <img class="post-avatar" src="/assets/photos/web/brian-shad-byline-160.webp" width="40" height="40" alt="Brian Shad" decoding="async">By <strong>Brian Shad</strong> &nbsp;&middot;&nbsp; Pro Link Systems &nbsp;&middot;&nbsp; {date_str}
-  </div>
-</div>
-
-<article class="blog-body">
-{content}
-
-<div class="blog-cta-box">
-  <h2>Ready to talk to a real IT engineer?</h2>
-  <p>Pro Link Systems has been protecting and managing IT for Los Angeles businesses since 1999. Book a free 15-minute discovery call &mdash; no pressure, no obligation, no scripts.</p>
-  <div class="btn-group">
-    <a href="/managed-it-services" class="btn btn-navy">Book a Free Discovery Call</a>
-    <a href="tel:18008906133" class="btn btn-outline-navy">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      1-800-890-6133
-    </a>
-  </div>
-</div>
-</article>
-
-{FOOTER}
-</body>
-</html>"""
+# --- Render the post with the shared Insights template -----------------------
+# The registry entry carries everything the template shows (category, author,
+# takeaways, illustration); chrome/insights.py renders this page, the /blog/
+# index and the home page cards from it. New posts are published under the
+# organization: Brian is named only on posts he has authored or approved, which
+# is recorded in editorial/blog_registry.json (Brian, 2026-11-21).
+reg = insights.load()
+_cat = next((c["name"] for c in reg["categories"] if c["name"].lower() == category_raw.strip().lower()), None) \
+    or insights.guess_category(f"{topic} {title}")
+_local = insights.is_local(title)
+reg["posts"][slug] = {
+    "title": html_lib.unescape(title), "summary": html_lib.unescape(meta),
+    "date_published": date_iso, "date_modified": date_iso, "noindex": False,
+    "canonical": f"https://prolinksystems.com/blog/{slug}", "words": insights.word_count(content),
+    "category": _cat, "local": _local, "executive": not _local,
+    "author": reg["default_author"], "reviewers": [],
+    "takeaways": takeaways[:5] if len(takeaways) >= 3 else [],
+    "illustration": "/" + insights.art_rel(slug), "_body": content,
+}
+insights.ensure_art(reg, slug)
+html = insights.new_post_page(reg, slug, seo_title, meta)
 
 os.makedirs("blog", exist_ok=True)
 filepath = f"blog/{slug}.html"
@@ -906,11 +618,14 @@ filepath = f"blog/{slug}.html"
 # non-zero on failure so the Actions run goes red instead of publishing.
 validate_post_html(html, filepath)
 
-with open(filepath, 'w') as f:
+with open(filepath, "w", encoding="utf-8", newline="\n") as f:
     f.write(html)
+insights.save(reg)
 
 print(f"Generated: {filepath}")
 print(f"Title: {title}")
+print(f"[insights] category: {_cat}; takeaways: {len(reg['posts'][slug]['takeaways'])}; "
+      f"illustration: {insights.art_rel(slug)}")
 
 # Record this topic so it is never selected again. The workflow commits
 # used_topics.json, so the record persists across runs.
@@ -919,189 +634,10 @@ with open(USED_TOPICS_FILE, "w", encoding="utf-8") as f:
     json.dump(used_topics, f, indent=2, ensure_ascii=False)
 print(f"[topics] Recorded topic; {len(used_topics)}/{len(topics)} topics now used")
 
-# Update blog index
-def _post_date_key(path):
-    """Sort key from the slug so the newest posts come first. Handles the new
-    YYYY-MM-DD-... slugs and older YYYY-MM-... slugs (day defaults to 0 so older
-    undated posts fall below same-month dated ones)."""
-    fn = os.path.basename(path)
-    m = re.match(r'(\d{4})-(\d{2})-(\d{2})-', fn)
-    if m:
-        return (int(m.group(1)), int(m.group(2)), int(m.group(3)), fn)
-    m = re.match(r'(\d{4})-(\d{2})-', fn)
-    if m:
-        return (int(m.group(1)), int(m.group(2)), 0, fn)
-    return (0, 0, 0, fn)
-
-
-posts = []
-for fp in sorted(glob.glob("blog/*.html"), key=_post_date_key, reverse=True):
-    fname = os.path.basename(fp)
-    if fname == "index.html":
-        continue
-    s = fname.replace(".html", "")
-    with open(fp, 'r') as f:
-        c = f.read()
-    if re.search(r'<meta name="robots" content="noindex', c):
-        continue  # keep noindexed / de-duplicated posts out of the listing
-    t_match = re.search(r'<h1[^>]*>(.*?)</h1>', c, re.DOTALL)
-    d_match = re.search(r'class="post-meta"[^>]*>.*?<\/strong>\s*&nbsp;&middot;&nbsp;\s*([^<]+)', c, re.DOTALL)
-    t = t_match.group(1).strip() if t_match else s
-    d = d_match.group(1).strip() if d_match else ""
-    posts.append((s, t, d))
-
-post_cards = ""
-for s, t, d in posts:
-    post_cards += f"""
-<article class="blog-card">
-  <div class="blog-card-meta">{d}</div>
-  <h2 class="blog-card-title"><a href="/blog/{s}">{t}</a></h2>
-  <a href="/blog/{s}" class="blog-card-link">Read article
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  </a>
-</article>"""
-
-index_html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<title>IT Blog for Los Angeles Businesses | Pro Link Systems</title>
-<meta name="description" content="Expert IT advice, cybersecurity tips, and managed IT insights for Los Angeles businesses from Pro Link Systems &mdash; proudly serving LA companies since 1999.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://prolinksystems.com/blog/">
-<link rel="stylesheet" href="/_shared.css?v=20261120">
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-gtag('config', 'AW-1068497497');
-gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
-</script>
-<!-- Microsoft UET tag (Bing Ads) — tag 97275167 -->
-<script>
-    (function(w, d, t, u, o) {{
-        w[u] = w[u] || [], o.ts = (new Date).getTime();
-        var n = d.createElement(t);
-        n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : "");
-        n.async = 1, n.onload = n.onreadystatechange = function() {{
-            var s = this.readyState;
-            s && "loaded" !== s && "complete" !== s ||
-            (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),
-            n.onload = n.onreadystatechange = null)
-    }};
-        var i = d.getElementsByTagName(t)[0];
-        i.parentNode.insertBefore(n, i);
-    }})(window, document, "script", "uetq", {{
-        ti:"97275167",
-        enableAutoSpaTracking: true
-    }});
-</script>
-<style>
-.blog-index-hero {{
-  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%);
-  padding: 64px 0 52px;
-  text-align: center;
-}}
-.blog-index-hero h1 {{
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -.03em;
-  margin: 0 0 12px;
-}}
-.blog-index-hero p {{
-  font-size: 1rem;
-  color: rgba(255,255,255,.65);
-  max-width: 560px;
-  margin: 0 auto;
-  line-height: 1.6;
-}}
-.blog-grid {{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 52px 24px 72px;
-}}
-.blog-card {{
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 1.75rem;
-  box-shadow: var(--sh-sm);
-  transition: box-shadow .2s, transform .2s;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}}
-.blog-card:hover {{
-  box-shadow: var(--sh-md);
-  transform: translateY(-2px);
-}}
-.blog-card-meta {{
-  font-size: .8rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}}
-.blog-card-title {{
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 0;
-  flex: 1;
-}}
-.blog-card-title a {{
-  color: var(--navy);
-  text-decoration: none;
-  transition: color .2s;
-}}
-.blog-card-title a:hover {{ color: var(--navy-light); }}
-.blog-card-link {{
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: .85rem;
-  font-weight: 600;
-  color: var(--navy-light);
-  text-decoration: none;
-  transition: gap .2s;
-}}
-.blog-card-link:hover {{ gap: 10px; }}
-</style>
-</head>
-<body>
-{NAV}
-
-<div class="blog-index-hero">
-  <div class="container">
-    <h1>IT Insights for Los Angeles Businesses</h1>
-    <p>Expert advice on managed IT, cybersecurity, and technology strategy from Pro Link Systems &mdash; serving LA since 1999.</p>
-  </div>
-</div>
-
-<div class="blog-intro" style="max-width:820px;margin:0 auto;padding:44px 24px 4px;">
-  <p style="font-size:1rem;color:var(--text-muted);line-height:1.8;margin-bottom:16px;">Welcome to the Pro Link Systems blog &mdash; straightforward technology guidance for Los Angeles businesses. For more than 25 years we've helped LA-area organizations across healthcare, legal, finance, manufacturing, and dozens of other industries get more from their technology while staying secure and compliant. These articles share what we've learned along the way.</p>
-  <p style="font-size:1rem;color:var(--text-muted);line-height:1.8;margin:0;">Here you'll find practical answers to the questions business owners actually ask: how to choose a managed IT provider, what managed IT really costs, how to defend against the cybersecurity threats targeting Southern California, when it makes sense to move to the cloud, and how to tell when you've outgrown your current IT support. Browse the latest articles below, or call us at <a href="tel:18008906133" style="color:var(--navy);font-weight:600;">1-800-890-6133</a> to talk through your situation with a real engineer.</p>
-</div>
-
-<div class="blog-grid">
-{post_cards}
-</div>
-
-{FOOTER}
-</body>
-</html>"""
-
-with open("blog/index.html", 'w') as f:
-    f.write(index_html)
-
-print(f"Blog index updated with {len(posts)} posts")
+# Update the Insights index (/blog/): rebuilt from the registry on every run, so
+# the featured selection, topic filter, search and archive always include the new post.
+insights.write("blog/index.html", insights.index_page(reg))
+print(f"Blog index updated with {len(insights.listed(reg))} posts")
 
 # --- Add this post to sitemap.xml ------------------------------------------
 # Idempotent: if the URL is already present (e.g. a re-run), do nothing.
@@ -1133,41 +669,12 @@ try:
 except Exception as e:
     print(f"[sitemap] WARNING: sitemap update skipped: {e}")
 
-# --- Update the home page "From the Pro Link blog" section -----------------
-# Replaces the cards between the HOME_BLOG markers with the latest posts so the
-# home page never goes stale. Safe: never blocks publishing.
+# --- Update the home page Insights cards (never more than four) -------------
+# Newest executive post plus the curated features, between the HOME_BLOG markers.
+# Safe: never blocks publishing.
 try:
-    home_path = "index.html"
-    if not os.path.exists(home_path):
-        print("[home] index.html not found; skipped.")
-    else:
-        with open(home_path, "r", encoding="utf-8") as f:
-            home = f.read()
-        if "<!-- HOME_BLOG_START -->" not in home or "<!-- HOME_BLOG_END -->" not in home:
-            print("[home] Markers not found; skipped home page update.")
-        else:
-            _arrow = ('<svg width="13" height="13" viewBox="0 0 24 24" fill="none" '
-                      'stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" '
-                      'x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>')
-            home_cards = ""
-            for s, t, d in posts[:8]:
-                home_cards += (
-                    f'      <a class="home-blog-card" href="/blog/{s}">\n'
-                    f'        <div class="hb-meta">{d}</div>\n'
-                    f'        <h3>{t}</h3>\n'
-                    f'        <span class="hb-read">Read article {_arrow}</span>\n'
-                    f'      </a>\n'
-                )
-            new_block = "<!-- HOME_BLOG_START -->\n" + home_cards + "      <!-- HOME_BLOG_END -->"
-            home = re.sub(
-                r"<!-- HOME_BLOG_START -->.*?<!-- HOME_BLOG_END -->",
-                lambda _m: new_block,
-                home,
-                flags=re.DOTALL,
-            )
-            with open(home_path, "w", encoding="utf-8") as f:
-                f.write(home)
-            print(f"[home] Updated home page with latest {min(8, len(posts))} posts")
+    if insights.write_home(reg):
+        print("[home] Updated the home page Insights cards")
 except Exception as e:
     print(f"[home] WARNING: home page update skipped: {e}")
 
