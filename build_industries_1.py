@@ -547,7 +547,7 @@ def build_page(d):
         '    <a href="https://prolinksystems.com/about">About</a>\n'
         '    <a href="https://prolinksystems.com/contact" class="nav-cta">\n'
         '      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">' + PHONE_PATH + '</svg>\n'
-        '      Free IT Assessment\n'
+        '      Free IT Consultation\n'
         '    </a>\n'
         '  </div>\n'
         '  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>\n'
@@ -556,7 +556,7 @@ def build_page(d):
         '  <a href="https://prolinksystems.com/">Home</a>\n'
         '  <a href="https://prolinksystems.com/services">Services</a>\n'
         '  <a href="https://prolinksystems.com/about">About</a>\n'
-        '  <a href="https://prolinksystems.com/contact">Free IT Assessment</a>\n'
+        '  <a href="https://prolinksystems.com/contact">Free IT Consultation</a>\n'
         '  <a href="tel:18008906133" style="color:var(--gold);font-weight:700;">1-800-890-6133</a>\n'
         '</div>\n\n'
         '<!-- HERO -->\n'
@@ -628,7 +628,7 @@ def build_page(d):
         '          <div class="success-orbit"><svg width="28" height="28" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>\n'
         '          <div class="success-pill"><div class="success-pill-dot"></div>Inquiry Confirmed</div>\n'
         '          <h3>You\'re in good hands.</h3>\n'
-        '          <p>Thank you, <strong id="successName"></strong>. We\'ll reach out within 1 business day to schedule your free IT assessment.</p>\n'
+        '          <p>Thank you, <strong id="successName"></strong>. We\'ll reach out within 1 business day to schedule your free IT consultation.</p>\n'
         '          <a href="tel:18008906133" class="success-cta-phone"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">' + PHONE_PATH + '</svg>Call Now: 1-800-890-6133</a>\n'
         '        </div>\n'
         '      </div>\n'
@@ -740,7 +740,7 @@ def build_page(d):
         '  <h2>' + d['cta_h2'] + '</h2>\n'
         '  <p>' + d['cta_p'] + '</p>\n'
         '  <div class="cta-buttons">\n'
-        '    <a href="https://prolinksystems.com/contact" class="btn btn-gold">Schedule Free Assessment ' + ARROW_R.replace('class="btn-arrow" ', '') + '</a>\n'
+        '    <a href="https://prolinksystems.com/contact" class="btn btn-gold">Schedule Free Consultation ' + ARROW_R.replace('class="btn-arrow" ', '') + '</a>\n'
         '    <a href="tel:18008906133" class="btn btn-outline-white"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">' + PHONE_PATH + '</svg>1-800-890-6133</a>\n'
         '  </div>\n'
         '</div>\n\n'
@@ -908,7 +908,7 @@ INDUSTRIES = [
   'ch_opts':     ['SEC/FINRA Compliance','Cybersecurity / Data Security','Trading Platform Support','Secure Remote Work','Business Continuity / DR','Cloud Migration','General IT Management'],
   'ta_placeholder': 'e.g. We manage $200M in AUM, run on Pershing, and need help with SEC exam prep and our cybersecurity posture…',
   'form_service':   'Financial Services IT Assessment Request',
-  'submit_label':   'Request Free Assessment',
+  'submit_label':   'Request Free Consultation',
   'privacy_text':   'Secure &amp; confidential. We never share your information. Response within 1 business day.',
   'compliance': [
     ('shield','SEC &amp; FINRA Regulations'),
@@ -1040,7 +1040,7 @@ INDUSTRIES = [
   'ch_opts':     ['Wire Fraud / Transaction Security','MLS / CRM Reliability','Cybersecurity / Data Security','Agent Mobility / Remote Work','Cloud &amp; Collaboration Tools','Business Continuity / DR','General IT Management'],
   'ta_placeholder': 'e.g. We have 40 agents across 3 offices, our CRM keeps going down during busy periods, and we&rsquo;re worried about wire fraud targeting our transactions…',
   'form_service':   'Real Estate IT Assessment Request',
-  'submit_label':   'Request Free Assessment',
+  'submit_label':   'Request Free Consultation',
   'privacy_text':   'Secure &amp; confidential. We never share your information. Response within 1 business day.',
   'compliance': [
     ('shield','CCPA Compliant'),

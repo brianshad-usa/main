@@ -12,7 +12,7 @@ and publishes it to your GBP listing automatically, cycling through 8 themes:
 | 4 | Compliance Corner (HIPAA / cyber insurance) |
 | 5 | 24/7 Help Desk |
 | 6 | Backup & Disaster Recovery |
-| 7 | Free IT Assessment Offer |
+| 7 | Free IT Consultation Offer |
 
 You only need to do **Steps 1–5 once**. After that it runs itself indefinitely
 (Google refresh tokens don't expire as long as the app is used at least once

@@ -28,7 +28,7 @@ SOCIAL_DIR = os.path.join(HERE, "social")
 MANIFEST = os.path.join(HERE, "pending.json")
 
 DEFAULT_CTA_LABEL = {
-    "BOOK_APPOINTMENT": "Book a free assessment",
+    "BOOK_APPOINTMENT": "Book a free consultation",
     "CALL": "Call us today",
     "LEARN_MORE": "Learn more",
     "SIGN_UP": "Get started",
@@ -56,7 +56,7 @@ no code fences) with exactly these keys:
   "post":      the full post text exactly per the guidelines above, including hashtags
   "headline":  a punchy 4-8 word hook for a graphic card - no hashtags, no quotation
                marks, sentence case (e.g. "Is your LA business ransomware-ready?")
-  "cta_label": a short 2-4 word call-to-action button label (e.g. "Book a free assessment")
+  "cta_label": a short 2-4 word call-to-action button label (e.g. "Book a free consultation")
 """
     msg = client.messages.create(
         model="claude-opus-4-8",

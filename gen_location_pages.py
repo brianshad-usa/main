@@ -766,7 +766,7 @@ CITIES = [
   "faq_h2": "Camarillo IT support — answered",
   "faqs": [
    ("Do you provide managed IT services in Camarillo?", "Yes. We serve businesses throughout Camarillo's 93010 and 93012 zip codes, including the Mission Oaks and Camarillo Airport business parks. Our Woodland Hills office is a direct drive west on the 101; our average ticket first-response time is 15 minutes, and same-day on-site support is available when needed."),
-   ("How does onboarding work for a Camarillo business?", "It starts with a free IT assessment. We review your network, devices, user accounts, and backups, document your environment, and then bring it under 24/7 monitoring, patching, endpoint protection, and managed backups that we verify with test restores. We coordinate the handoff with your current provider or IT contact, so your team — whether in the Mission Oaks parks or Old Town — keeps working while we take over."),
+   ("How does onboarding work for a Camarillo business?", "It starts with a free IT consultation. We review your network, devices, user accounts, and backups, document your environment, and then bring it under 24/7 monitoring, patching, endpoint protection, and managed backups that we verify with test restores. We coordinate the handoff with your current provider or IT contact, so your team — whether in the Mission Oaks parks or Old Town — keeps working while we take over."),
    ("Do you work with agricultural businesses on the Oxnard Plain?", "Absolutely. Growers, packers, and cold-storage operators depend on traceability, inventory, and sensor systems spread across fields, packing houses, and offices. We design resilient connectivity, secure the office and operational networks, and keep traceability and food-safety records backed up and recoverable."),
    ("We are a small business in Camarillo — do you have a minimum size requirement?", "No minimum. Our flat-rate plans work for businesses of any size. Whether you have 5 employees or 150, you get the same per-user rate and the same level of attentive, responsive service. No minimums, no tiered support levels based on headcount."),
    ("How does remote support work for our Camarillo team?", "Our in-house help desk answers calls live, 24/7/365, and our average ticket first-response time is 15 minutes. Our engineers resolve the vast majority of issues remotely — software problems, network configuration, Microsoft 365, cloud access, VPN, and more. For hardware or on-site needs, same-day on-site support is available at your Camarillo location when needed."),
@@ -895,7 +895,7 @@ def body(c):
   <div class="hero-cta-group">
     <a href="#talk-to-us" class="btn btn-gold">
       {PHONE_SVG}
-      Get a Free IT Assessment
+      Get a Free IT Consultation
     </a>
     <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
   </div>
@@ -1082,7 +1082,7 @@ def body(c):
 
 <div class="cta-band" role="complementary">
   <span class="section-label" style="display:block;margin-bottom:12px;">Ready to Get Started?</span>
-  <h2>Get a free IT assessment for your {city} business</h2>
+  <h2>Get a free IT consultation for your {city} business</h2>
   <p>No pressure, no commitment — just an honest look at your current IT and how we can make it better.</p>
   <div class="cta-buttons">
     <a href="#talk-to-us" class="btn btn-gold">
@@ -1097,7 +1097,7 @@ def body(c):
 <section class="lead-section" id="talk-to-us" aria-labelledby="lead-heading">
   <div class="lead-wrap">
     <div class="lead-copy">
-      <span class="section-label">Free IT Assessment</span>
+      <span class="section-label">Free IT Consultation</span>
       <h2 id="lead-heading">Talk to a local IT team about your {city} office</h2>
       <p>Tell us what is slowing your team down. We will look at your current setup and recommend what to fix first. No pressure, no obligation.</p>
       <ul class="lead-points">
@@ -1111,8 +1111,8 @@ def body(c):
     <div class="lead-form">
       <div class="form-card">
         <div class="form-card-head">
-          <div class="form-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free IT Assessment &middot; No Obligation</div>
-          <h3>Request a free IT assessment</h3>
+          <div class="form-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free IT Consultation &middot; No Obligation</div>
+          <h3>Request a free IT consultation</h3>
           <p>Tell us a little about your business. A Pro Link engineer will follow up within one business day.</p>
         </div>
         <div class="form-body" id="formBody">
@@ -1172,7 +1172,7 @@ def body(c):
             </div>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
             <button type="submit" class="submit-btn" id="submitBtn">
-              <span class="btn-label">Request My Free IT Assessment</span>
+              <span class="btn-label">Request My Free IT Consultation</span>
               <svg class="btn-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
             </button>
@@ -1183,7 +1183,7 @@ def body(c):
           <div class="success-orbit"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div class="success-pill"><div class="success-pill-dot"></div>Request Received</div>
           <h3>You're in good hands.</h3>
-          <p>A Pro Link engineer will reach out within one business day to schedule your free IT assessment.</p>
+          <p>A Pro Link engineer will reach out within one business day to schedule your free IT consultation.</p>
           <a href="tel:18008906133" class="success-cta-phone">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             Call Now: 1-800-890-6133

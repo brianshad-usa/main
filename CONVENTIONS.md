@@ -525,8 +525,11 @@ that I would like to host on our site similarly". Every app follows this one pat
   the CTA box in the Microsoft 365 / Copilot blog posts (t4 Microsoft 365 vs Google, t89 tenant prep,
   t90 Copilot data governance, t106 OAuth app grants, t49 Copilot safely). Every claim matches the
   product page (about 80 controls, 13 areas, read-only, findings by severity, review call, $2,500).
-  Note the CTA bands on several pages still offer a "free cybersecurity/IT assessment" (the free
-  discovery call); keep the two clearly distinct in copy.
+  **Naming rule (Brian 2026-11-20):** "assessment" means the PAID product only. The free discovery
+  offer is the "Free IT Consultation" (or "free security/cloud/network consultation"): renamed from
+  "free ... assessment" on 70 pages, the generators (gen_location_pages, generate_gbp_post,
+  social_render, social_graphic, build_industries_1) and the Google Ads copy. Never reintroduce
+  "free assessment" wording.
 - **Shared front end.** `/assets/apps/apps.css` + `/assets/apps/checkout.js` (versioned `?v=`, bump
   on change). The order form is `<form data-checkout-product="<slug>" data-value data-currency>` with
   Turnstile; the thank-you page is `[data-checkout-thankyou]` with `[data-state]` panels. The script

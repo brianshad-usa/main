@@ -654,7 +654,7 @@ if __name__ == "__main__":
     headline = sys.argv[1] if len(sys.argv) > 1 else \
         "IT support that answers on the first ring."
     kicker = sys.argv[2] if len(sys.argv) > 2 else "US-Based Help Desk"
-    cta = sys.argv[3] if len(sys.argv) > 3 else "Book a free assessment"
+    cta = sys.argv[3] if len(sys.argv) > 3 else "Book a free consultation"
     style = sys.argv[4] if len(sys.argv) > 4 else "bold_type"
     out = sys.argv[5] if len(sys.argv) > 5 else os.path.join(HERE, "scratch", "_card_preview.png")
     os.makedirs(os.path.dirname(out), exist_ok=True)

@@ -207,14 +207,14 @@ recovery scenario, or an LA earthquake/power event angle
     },
     {
         "key":      "free_assessment",
-        "label":    "Free IT Assessment Offer",
+        "label":    "Free IT Consultation Offer",
         "cta_type": "BOOK_APPOINTMENT",
         "cta_url":  "https://prolinksystems.com/contact",
         "prompt": """\
 Write a Google Business Profile post for a managed IT company in Woodland Hills, CA \
 that has served Los Angeles businesses since 1999.
 
-Theme: Free IT Assessment offer (direct CTA post)
+Theme: Free IT Consultation offer (direct CTA post)
 Goal: convert a reader into a booked discovery call with a no-pressure, \
 high-value offer.
 
@@ -225,7 +225,7 @@ a clear picture of security gaps, a cost comparison vs their current setup, \
 a plain-English IT roadmap
 - Emphasize no sales pressure, no obligation, no jargon
 - Include the phone number: 1-800-890-6133
-- End with: "Book your free assessment — spots fill fast."
+- End with: "Book your free consultation — spots fill fast."
 - Total length: 300–500 characters
 - Add 2–3 hashtags: \
 #FreeITAssessment #ManagedITLA #LosAngelesBusiness #WoodlandHillsIT
