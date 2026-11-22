@@ -354,6 +354,14 @@ a.pl-case:hover h3 { color: var(--navy); }
 .pl-quote figcaption strong { color: var(--ink); font-weight: 600; }
 .pl-dark .pl-quote figcaption { color: var(--text-inv); }
 .pl-dark .pl-quote figcaption strong { color: #fff; }
+/* a client quote beside or below other content (reading size, thin accent rule) */
+.pl-quote.pl-quote--side { padding: 4px 0 4px 32px; }
+.pl-quote.pl-quote--side blockquote { font-size: clamp(1.12rem, 1.5vw, 1.3rem); line-height: 1.6; letter-spacing: -.008em; }
+.pl-split .pl-quote--side { margin: 0; }
+.pl-split h2 + .pl-quote--side { margin-top: 30px; }
+.pl-quotes-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; margin-top: 64px; }
+.pl-quotes-2 .pl-quote--side { margin: 0; }
+@media (max-width: 768px) { .pl-quotes-2 { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: 48px; } .pl-quote.pl-quote--side { padding-left: 22px; } }
 .pl-reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .pl-review { border-top: 1px solid var(--line); padding-top: 22px; margin: 0; display: flex; flex-direction: column; }
 .pl-review blockquote p { font-size: 1rem; line-height: 1.7; color: var(--text); }

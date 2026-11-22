@@ -67,6 +67,10 @@ if '[data-type="sans"]' in css:
     problems.append("7 _shared.css still has both typography options: make the chosen one the default, remove the other + its font")
 if os.path.exists(os.path.join(ROOT, "case-studies", "crr.html")):
     problems.append("8 case-studies/crr.html exists: CR&R ships only with Brian's separate, explicit approval")
+for p in pages():
+    rel = os.path.relpath(p, ROOT).replace("\\", "/")
+    if rel != "case-studies/crr.html" and re.search(r"CR(?:&amp;|&#38;|&)R(?![a-z])", open(p, encoding="utf-8").read()):
+        problems.append("8 %s names CR&R: same approval" % rel)
 
 for script, what in (("company_name.py", "the company is always Pro Link Systems"), ("insights.py", "Insights registry and assets"),
                      ("link_check.py", "internal links and fragments"), ("form_labels.py", "form labels"), ("refine_wording.py", "corporate wording")):
