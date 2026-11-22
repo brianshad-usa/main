@@ -155,7 +155,7 @@ CTA_OVERRIDES = {
     "2026-11-20-what-a-microsoft-365-security-assessment-checks": {
         "secondary": {"label": "See the Microsoft 365 Security Assessment", "href": "/m365-security-assessment"}},
 }
-KEEP = ("category", "author", "approved_by", "approved_on", "reviewers", "takeaways", "summary", "practice", "related",
+KEEP = ("category", "author", "approved_by", "approved_on", "reviewers", "takeaways", "summary", "dek", "practice", "related",
         "cta", "local", "executive")
 
 

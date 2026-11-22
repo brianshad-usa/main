@@ -5,8 +5,8 @@
      2. Tokens                                           6. Legacy classes, restyled to the new language
      3. Base + typography                                7. Utilities kept from 2026-11 (forms, photos, film)
      4. Header, navigation, footer                       8. Responsive (9-15: redesign iterations)
-   Language: flat surfaces, square corners, thin rules, generous whitespace, a serif display face for
-   headlines, brand navy as the primary colour and the brand amber as a sparing accent. No gradients,
+   Language: flat surfaces, square corners, thin rules, generous whitespace, Manrope headlines and Inter text,
+   brand navy as the primary colour and the brand amber as a sparing accent. No gradients,
    no rounded cards, no decorative icons, no bouncing counters.
    ============================================================================ */
 
@@ -46,7 +46,6 @@
   --r-sm: 2px; --r-md: 2px; --r-lg: 3px; --r-xl: 3px;
   --sh-sm: none; --sh-md: 0 1px 2px rgba(11,26,43,.06); --sh-xl: 0 18px 48px rgba(11,26,43,.14);
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --font-display: 'Manrope', var(--font-sans);   /* headings, quotes, big figures (Brian chose option B, 2026-11-21) */
   --font-title: 'Manrope', var(--font-sans);     /* H3-level titles */
   --wrap: 1240px;

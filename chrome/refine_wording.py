@@ -40,6 +40,16 @@ RULES = [
     (re.compile(r"Los Angeles(?:'|’|&rsquo;)s top-tier business community"), "Los Angeles’s professional and financial community"),
     (re.compile(r"\bone call away\b"), "available by phone"),
     (re.compile(r"Ready to Stop Worrying About IT\?"), "Considering outsourced IT?"),
+    # sales lines shared by the city pages (second pass, 2026-11-21)
+    (re.compile(r"under one flat monthly rate\s*(?:&mdash;|—|-)\s*no (?:à|&agrave;) la carte surprises"), "under one flat monthly rate"),
+    (re.compile(r"Everything your team needs\s*(?:&mdash;|—|-)\s*one flat monthly rate, no (?:à|&agrave;) la carte surprises"), "Everything your team needs, under one flat monthly rate"),
+    (re.compile(r"on-site visits\s*(?:&mdash;|—|-)\s*no (?:à|&agrave;) la carte surprises on your invoice"), "on-site visits"),
+    (re.compile(r"\s*(?:&mdash;|—)\s*(?:not|never) (?:an? |outsourced to an? )?(?:overseas |remote )?(?:script-read(?:er|ing)[^.<\"]*|call center script)(?=[.<\"])"), ""),
+    (re.compile(r"Just an honest conversation about (?:your current setup|where your IT stands|your cloud)[^.<]*\."), "A conversation about your current environment and where it can improve."),
+    (re.compile(r"we(?:'|’|&rsquo;)re minutes away, not hours\.(?: This is our home, and most of our clients are neighbors\.)?"), "our engineers are minutes away."),
+    (re.compile(r"Real Engineers, No Call Centers"), "Answered by Our Own Engineers"),
+    (re.compile(r"You(?:'|’|&rsquo;|&#39;)re in good hands\."), "Thank you for contacting us."),
+    (re.compile(r"so technology stops being something you worry about"), "so that technology supports the business"),
 ]
 
 
