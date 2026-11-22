@@ -58,6 +58,26 @@ def sync_footer(src):
     return src[:m.start(2)] + links + src[m.end(2):]
 
 
+# Redesign 2026: the areas list lives once, in chrome/footer.html, and apply_chrome.py writes it into every page between
+# the PL:HEADER / PL:FOOTER markers. Pages that still carry the old footer are synced below as before.
+FOOT = os.path.join(HERE, "chrome", "footer.html")
+PL_AREAS_RE = re.compile(r'(<nav class="pl-footer-areas-links"[^>]*>\n)(.*?)(\n\s*</nav>)', re.S)
+
+
+def sync_pl_footer(src):
+    m = PL_AREAS_RE.search(src)
+    if not m:
+        return src
+    indent = re.match(r"\s*", m.group(2)).group(0) or "      "
+    links = "\n".join(f'{indent}<a href="/{s}">{n}</a>' for s, n in FOOTER_AREAS)
+    return src[:m.start(2)] + links + src[m.end(2):]
+
+
+if os.path.exists(FOOT) and rw(FOOT, sync_pl_footer):
+    import subprocess
+    import sys
+    subprocess.run([sys.executable, os.path.join(HERE, "chrome", "apply_chrome.py")], check=True)
+
 targets = glob.glob(os.path.join(HERE, "*.html")) + glob.glob(os.path.join(HERE, "blog", "*.html"))
 n_footer = sum(rw(p, sync_footer) for p in targets)
 n_gen = rw(os.path.join(HERE, "generate_blog.py"), sync_footer)

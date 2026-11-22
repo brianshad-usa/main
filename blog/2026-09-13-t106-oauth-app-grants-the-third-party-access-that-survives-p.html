@@ -7,25 +7,25 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <title>The Access That Survives a Password Reset | Pro Link Systems</title>
-<meta name="description" content="A password reset invalidates a key, not the consent behind it. Why third-party and AI app grants are the least governed access in a Microsoft 365 tenant.">
+<meta name="description" content="A password reset can end a token but not the consent behind it. How to inventory, own and revoke third-party and AI app grants in Microsoft 365.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://prolinksystems.com/blog/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://prolinksystems.com/blog/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p">
 <meta property="og:title" content="The Access That Survives a Password Reset | Pro Link Systems">
-<meta property="og:description" content="A password reset invalidates a key, not the consent behind it. Why third-party and AI app grants are the least governed access in a Microsoft 365 tenant.">
+<meta property="og:description" content="A password reset can end a token but not the consent behind it. How to inventory, own and revoke third-party and AI app grants in Microsoft 365.">
 <meta property="og:image" content="https://prolinksystems.com/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ProLink_Systems">
 <meta name="twitter:image" content="https://prolinksystems.com/logo.png">
 <meta name="twitter:title" content="The Access That Survives a Password Reset | Pro Link Systems">
-<meta name="twitter:description" content="A password reset invalidates a key, not the consent behind it. Why third-party and AI app grants are the least governed access in a Microsoft 365 tenant.">
+<meta name="twitter:description" content="A password reset can end a token but not the consent behind it. How to inventory, own and revoke third-party and AI app grants in Microsoft 365.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "The Access That Survives a Password Reset",
-  "description": "A password reset invalidates a key, not the consent behind it. Why third-party and AI app grants are the least governed access in a Microsoft 365 tenant.",
+  "description": "A password reset can end a token but not the consent behind it. How to inventory, own and revoke third-party and AI app grants in Microsoft 365.",
   "author": {
     "@type": "Organization",
     "@id": "https://prolinksystems.com/#organization",
@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-09-13",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,74 +331,87 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>The Access That Survives a Password Reset</h1>
-      <p class="pl-dek">A password reset invalidates a key, not the consent behind it. Why third-party and AI app grants are the least governed access in a Microsoft 365 tenant.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-13">September 13, 2026</time><br>6 min read</div></div>
+      <p class="pl-dek">A password reset can end a token but not the consent behind it. How to inventory, own and revoke third-party and AI app grants in Microsoft 365.</p>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-13">September 13, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>8 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p.svg" width="1200" height="675" alt="A broken key beside an application that still holds a consent link to company data" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#what-a-password-reset-retires-and-what-it-leaves-on-file">What a password reset retires, and what it leaves on file</a></li><li><a href="#the-consent-screen-is-a-procurement-decision-nobody-trea">The consent screen is a procurement decision nobody treats as procurement</a></li><li><a href="#ai-assistants-widened-the-permission-request">AI assistants widened the permission request</a></li><li><a href="#what-a-defensible-grant-register-looks-like">What a defensible grant register looks like</a></li><li><a href="#the-question-worth-asking-at-your-next-it-review">The question worth asking at your next IT review</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#what-a-password-reset-retires-and-what-it-leaves-on-file">What a password reset retires, and what it leaves on file</a></li><li><a href="#the-consent-screen-is-a-procurement-decision-nobody-trea">The consent screen is a procurement decision nobody treats as procurement</a></li><li><a href="#ai-assistants-widened-the-permission-request">AI assistants widened the permission request</a></li><li><a href="#what-a-defensible-grant-register-looks-like">What a defensible grant register looks like</a></li><li><a href="#the-question-worth-asking-at-your-next-it-review">The question worth asking at your next IT review</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
 <p>Reset the password. Revoke the sessions. Collect the laptop. Close the offboarding ticket.</p>
 
-<p>That sequence is correct, and for one entire category of access it is beside the point. Their credentials are gone. The permissions they granted to third-party software on the company's behalf are still sitting in the tenant, still valid, still reading mail or files on a schedule nobody remembers approving.</p>
+<p>That sequence is correct, and for one entire category of access it is beside the point. The person's credentials are gone. The software an administrator once approved on the company's behalf still has its own identity in the tenant, still holds its permissions, and is still reading mail or files on a schedule nobody remembers approving.</p>
 
-<p>These are OAuth application grants. They are the connective tissue of a modern <a href="/cloud-services">Microsoft 365</a> environment — the mechanism by which a scheduling tool reads calendars, a CRM syncs contacts, a backup product touches SharePoint, and an AI assistant learns enough about a business to be worth its subscription. They are also, in our assessment, the least governed form of standing access in the average mid-sized company.</p>
+<p>These are OAuth application grants. They are the connective tissue of a modern <a href="/cloud-services">Microsoft 365</a> environment, the mechanism by which a scheduling tool reads calendars, a CRM syncs contacts, a backup product touches SharePoint, and an AI assistant learns enough about a business to be worth its subscription. They are also, in our assessment, the least governed form of standing access in the average mid-sized company. For the executive who answers for access and the IT lead who inherits it, the decision is whether each grant gets an owner and an end date.</p>
 
 <h2 id="what-a-password-reset-retires-and-what-it-leaves-on-file">What a password reset retires, and what it leaves on file</h2>
 
-<p>Access to a cloud tenant is not password-based at the moment of use. It is token-based. A user authenticates once, a token is issued, and software presents that token rather than re-authenticating a human every time it needs something. That is a property of the protocol, not a configuration choice.</p>
+<p>Access to a cloud tenant is token-based at the moment of use. A user authenticates once, a token is issued, and software presents that token rather than re-authenticating a human every time it needs something. That is a property of the protocol, not a configuration choice.</p>
 
-<p>Precision matters here, because the common assumption is wrong in an instructive way. Resetting a password can invalidate the refresh tokens an application currently holds for that user. What it invalidates is the key, not the agreement. The consent record stays exactly where it was, and the moment that account signs in again, the application is entitled to a fresh token. Permission was interrupted, never withdrawn.</p>
+<p>Precision matters here, because the common assumption is wrong in an instructive way. When a user changes their own password, <a href="https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens">tokens held by a server-side application stay alive</a>. When an administrator resets it from the Entra or Microsoft 365 admin center, those tokens are revoked. In neither case does the agreement change. The consent record stays exactly where it was, and the next time the user signs in to that application it receives a fresh token with no new prompt. Permission was interrupted, never withdrawn. The FBI said the same of malicious apps in September 2026: <a href="https://www.ic3.gov/PSA/2026/PSA260901">changing the password does not revoke the token</a>, and the app itself has to be removed.</p>
+
+<figure class="pl-flow"><ol><li><b>Consent</b>A user or an administrator accepts the permissions once.</li><li><b>Grant</b>The tenant stores the agreement, separate from any password.</li><li><b>Tokens</b>The application works without a person present.</li><li><b>Offboarding</b>Password reset, sessions revoked, account disabled.</li><li class="is-hot"><b>Grant remains</b>Until someone removes the consent or the application.</li></ol><figcaption>The life of an application grant, and the step an offboarding checklist can leave out.</figcaption></figure>
 
 <p>Grants come in two shapes, and the difference governs how an executive should reason about the risk.</p>
 
 <ul>
-<li><strong>Delegated permissions.</strong> The application acts on behalf of a specific user and can reach only what that user can reach. Tied to a person, and therefore at least theoretically constrained by that person's lifecycle.</li>
-<li><strong>Application permissions.</strong> The application acts as itself, through its own identity in the directory, with its own credentials. No user sits behind it. No password. No MFA prompt. No human whose departure would ever trigger a review.</li>
+<li><strong>Delegated permissions.</strong> The application acts on behalf of a specific user and can reach only what that user can reach. <a href="https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants">Disabling the account cuts off the application's access to it</a>, so this kind is constrained by the person's lifecycle, provided the account is actually disabled.</li>
+<li><strong>Application permissions.</strong> The application acts as itself, through its own identity in the directory, with its own credentials. No user sits behind it. No password. No multi-factor prompt. No human whose departure would ever trigger a review.</li>
 </ul>
 
-<p>Revoking sessions is one administrative action. Removing an application's consent is a different one, in a different part of the admin center, and it is the only step that reliably ends the relationship. Most offboarding checklists perform the first, sometimes the second, almost never the third.</p>
+<table class="pl-compare"><caption>What each response step ends, and what it leaves</caption><thead><tr><th scope="col">Step</th><th scope="col">Ends</th><th scope="col">Leaves in place</th></tr></thead><tbody>
+<tr><td>User changes their own password</td><td>Tokens from password sign-ins</td><td>Server-side app tokens, the consent record, app-only access</td></tr>
+<tr><td>Administrator resets the password in the admin center</td><td>Those, plus app tokens held for that user</td><td>The consent record, app-only access</td></tr>
+<tr><td>Revoke all sessions</td><td>Every refresh token for that user</td><td>The consent record, app-only access</td></tr>
+<tr><td>Disable the account</td><td>Delegated access for that user</td><td>The consent record, app-only access</td></tr>
+<tr><td>Revoke the delegated grant</td><td>That application's delegated access</td><td>The user's ability to consent again, unless policy blocks it</td></tr>
+<tr><td>Remove the application permission, or disable the application</td><td>What the application could do as itself</td><td>Access tokens already issued, until they expire</td></tr>
+</tbody></table>
 
-<p>Application permissions are the sharper edge. Because such an app holds its own identity, the Conditional Access policies written for people generally do not apply to it — protecting non-human identities requires deliberate, separate policy. Offered as analysis rather than alarm: an attacker who obtains an application credential inherits access that never looks like a suspicious sign-in, because it is not a sign-in at all. It looks like the integration the finance team asked for in March.</p>
+<p>Revoking sessions is one administrative action. Removing an application's consent is a different one, in a different part of the admin center, and it is the only step that reliably ends the relationship. For consent given by individual users, Microsoft's portal shows the grant but <a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-application-permissions">removing it takes Graph or PowerShell</a>. Find out whether your offboarding checklist, usually run from the <a href="/it-help-desk">help desk</a>, performs both actions or only the first.</p>
+
+<p>Application permissions are the sharper edge. Because such an app holds its own identity, the Conditional Access policies written for people do not apply to it. Microsoft offers a separate Conditional Access for workload identities, but it <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity">covers only single-tenant applications registered in your own directory</a>; third-party and multi-tenant software is out of scope. For a vendor's application, the permission itself is the control. Offered as analysis rather than alarm: an attacker who obtains a vendor's application credential inherits access that never appears in the user sign-in log most teams watch. It is recorded separately, as a service principal sign-in, and it looks like the integration the finance team asked for in March.</p>
 
 <h2 id="the-consent-screen-is-a-procurement-decision-nobody-trea">The consent screen is a procurement decision nobody treats as procurement</h2>
 
 <p>A department head evaluates a promising tool. The trial opens with a dialog box requesting permission to read mail, read all files the user can access, maintain access to data it has been given access to, and sign in on the user's behalf. Accept. The pilot proceeds. The vendor is never selected, the project dies quietly, and the grant remains.</p>
 
-<p>Weigh the asymmetry honestly. Most organizations have a purchasing process for a software contract of any meaningful size — quotes, security questionnaires, perhaps legal review. The same organization allows a manager to hand an unvetted vendor persistent programmatic read access to executive mailboxes, at no cost, in a single click, with no record generated that anyone outside IT would ever see. Nothing malicious is happening. The imbalance is architectural, which is why it is worth fixing at the policy layer rather than by asking people to be more careful.</p>
+<p>Whether that click still works depends on a setting. Microsoft's managed consent policy, the default for new tenants, now <a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-app-consent-policies">requires an administrator for mail, calendar, file and Teams chat permissions</a>, apart from a short list of popular mail clients. Tenants with older or custom settings may still allow it, and tightening the setting does nothing to grants already made.</p>
+
+<p>Weigh the asymmetry honestly. Most organizations have a purchasing process for a software contract of any meaningful size: quotes, security questionnaires, perhaps legal review. The same organization may let a manager, or a hurried administrator, hand an unvetted vendor persistent programmatic read access to executive mailboxes at no cost, in a single click, with a record that nobody outside IT would ever see. Nothing malicious is happening. The imbalance is architectural, which is why it is worth fixing at the policy layer rather than by asking people to be more careful.</p>
 
 <p>App consent is best treated as a <a href="/cybersecurity-services">cybersecurity</a> control and a third-party risk control at the same time. A grant is a contract. It simply is not filed anywhere a CFO would think to look.</p>
 
 <h2 id="ai-assistants-widened-the-permission-request">AI assistants widened the permission request</h2>
 
-<p>The genuinely new pressure in 2026 — again, analysis rather than prophecy — is that an assistant's usefulness scales with the breadth of what it can read. A tool that sees one folder is a novelty. A tool that sees the mailbox, the drive, the meeting history and the chat archive becomes the thing people refuse to work without. Vendors understand this, so requested scopes have widened, and requests for offline access — the ability to keep working while nobody is signed in — read as standard rather than exceptional.</p>
+<p>The genuinely new pressure in 2026, again as analysis rather than prophecy, is that an assistant's usefulness scales with the breadth of what it can read. A tool that sees one folder is a novelty. A tool that sees the mailbox, the drive, the meeting history and the chat archive becomes the thing people refuse to work without. Vendors understand this, so requested scopes have widened, and requests for offline access, the ability to keep working while nobody is signed in, read as standard rather than exceptional.</p>
 
-<p>Agentic tools push further still. An agent that files expenses, drafts replies or updates records needs write permission and needs to act unattended. That profile deserves a named owner, a review date and a documented business justification. Typically it arrives through the same one-click dialog box as a calendar plug-in.</p>
+<p>Agentic tools push further still. An agent that files expenses, drafts replies or updates records needs write permission and needs to act unattended. That profile deserves a named owner, a review date and a documented business justification. Too often it arrives through the same dialog box as a calendar plug-in.</p>
 
-<p>Shadow AI is usually framed as a data-leakage problem: staff pasting confidential material into consumer chatbots. That framing is incomplete. The more durable exposure is the grant left behind — an application nobody uses anymore that still holds standing permission to read everything, with a client secret sitting on a server operated by a company whose security posture was never assessed and whose acquisition you will not hear about.</p>
+<p>Shadow AI is usually framed as a data-leakage problem: staff pasting confidential material into consumer chatbots. That framing is incomplete. The more durable exposure is the grant left behind: an application nobody uses anymore that still holds standing permission to read everything, with a client secret sitting on a server operated by a company whose security posture was never assessed and whose acquisition you will not hear about.</p>
 
 <h2 id="what-a-defensible-grant-register-looks-like">What a defensible grant register looks like</h2>
 
 <p>None of this requires an expensive platform. It requires treating grants as inventory. For Los Angeles companies in the twenty-to-five-hundred-seat range, the work is narrow and finite:</p>
 
 <ul>
-<li><strong>Turn off unrestricted user consent</strong> and route requests through an admin consent workflow. People can still ask. Someone accountable answers.</li>
-<li><strong>Enumerate every enterprise application in the tenant</strong> and separate those holding application permissions from those acting for a user. The first list is short and deserves real scrutiny.</li>
+<li><strong>Restrict user consent</strong> and route requests through an admin consent workflow. People can still ask. Someone accountable answers.</li>
+<li><strong>Enumerate every enterprise application in the tenant</strong> and separate those holding application permissions from those acting for a user. The first list is usually shorter and deserves real scrutiny.</li>
 <li><strong>Assign a human owner and a review date to each retained grant.</strong> An application with no owner is an application to remove.</li>
-<li><strong>Track credential expiry</strong> for app secrets and certificates, so integrations fail during business hours rather than at two in the morning.</li>
-<li><strong>Revoke deliberately, not in bulk.</strong> Some of these grants are load-bearing. Confirm the owner and the dependency before cutting, or a cleanup becomes an outage.</li>
-<li><strong>Add grant revocation to two runbooks</strong> — employee offboarding and vendor offboarding. Ending a contract should end the access.</li>
+<li><strong>Track credential expiry</strong> for app secrets and certificates you manage, so integrations fail during business hours rather than at two in the morning.</li>
+<li><strong>Revoke deliberately, not in bulk.</strong> Some of these grants are load-bearing. Disable sign-in for the application first, because that can be undone, then follow a <a href="/blog/2026-09-03-t101-saas-sprawl-the-subscription-audit-that-is-also-a-secur">disconnect sequence</a> once you know what broke.</li>
+<li><strong>Add grant revocation to two runbooks:</strong> employee offboarding and vendor offboarding. Ending a contract should end the access.</li>
 <li><strong>Include app-only access in identity-compromise response.</strong> If an account is breached, revoking sessions is insufficient when the attacker registered a grant first.</li>
 </ul>
 
@@ -406,11 +419,9 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <h2 id="the-question-worth-asking-at-your-next-it-review">The question worth asking at your next IT review</h2>
 
-<p>Ask your IT leader or provider for a list of every third-party application holding standing permission in the tenant, sorted by the breadth of what it can read, with an owner named beside each entry. The list itself is the deliverable. If it cannot be produced quickly, that gap is the finding, and it is more useful than another debate about password policy.</p>
+<p>Ask your IT leader or <a href="/managed-it-services">managed IT provider</a> for a list of every third-party application holding standing permission in the tenant, sorted by the breadth of what it can read, with an owner named beside each entry. The list itself is the deliverable. If it cannot be produced quickly, that gap is the finding, and it is more useful than another debate about password policy.</p>
 
-<p>The executive point is narrow and should outlive this article. Identity is the perimeter, and that perimeter now includes software that never sleeps, never leaves the company and never forgets what it was once allowed to do. Governing people is table stakes. Governing the grants those people issue is the part most organizations have not started.</p>
-
-<p>Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999, with a 24/7 in-house, US-based <a href="/it-help-desk">help desk</a> behind the work. If you want that inventory produced for your own tenant, our <a href="/managed-it-services">managed IT services</a> team can build it.</p>
+<p>The executive point is narrow and should outlive this article. Identity is the perimeter, and that perimeter now includes software that never sleeps, never leaves the company and never forgets what it was once allowed to do. Governing people is table stakes. Governing the grants those people issue is the part that still needs an owner.</p>
 
 <aside class="assess-callout" aria-label="Microsoft 365 Security Assessment">
   <div>
@@ -420,6 +431,16 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
   <a class="btn btn-navy" href="/m365-security-assessment">See how it works</a>
 </aside>
+
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens">Refresh tokens in the Microsoft identity platform</a>, Microsoft Learn.</li>
+<li><a href="https://www.ic3.gov/PSA/2026/PSA260901">Malicious Cyber Actors Gain Access to Victim Accounts Through Consent Phishing</a>, FBI Internet Crime Complaint Center.</li>
+<li><a href="https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants">Detect and remediate illicit consent grants</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-application-permissions">Review permissions granted to enterprise applications</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity">Conditional Access for workload identities</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-app-consent-policies">Manage app consent policies</a>, Microsoft Learn.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -429,7 +450,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -481,8 +502,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -494,7 +515,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -547,6 +568,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

@@ -650,8 +650,8 @@ that I would like to host on our site similarly". Every app follows this one pat
   between `<!-- PL:HEADER -->` / `<!-- PL:FOOTER -->` markers, written by `python chrome/apply_chrome.py`
   (idempotent; `--check` reports drift). It also marks the current menu section, preloads the fonts, loads
   `/assets/js/pl.js` (menus, mobile drawer, reveal-on-scroll) and makes old `getElementById('hamburger' |
-  'mobileMenu' | 'mobile-menu')` calls null-safe. The Ads landing page `managed-it-services.html` keeps its
-  own layout on purpose. After merging `main` into this branch, re-run the script.
+  'mobileMenu' | 'mobile-menu')` calls null-safe. The Ads landing page `managed-it-services.html` has
+  the new look with its own short header (logo and phone, no menu on purpose); the script only refreshes its footer. After merging `main` into this branch, re-run the script.
 - **Rebuilt pages so far:** home, `services` (Solutions), `about`, `case-studies` (Client Success),
   `contact` (the lead form markup, IDs, Turnstile and handler are unchanged), new `support` (Client Support,
   noindex). Their `<head>` metadata, canonicals, tracking and JSON-LD are kept; FAQ JSON-LD always matches
@@ -689,6 +689,42 @@ that I would like to host on our site similarly". Every app follows this one pat
     adds the registry entry, renders the post with the shared chrome, and rebuilds `/blog/` and the home cards.
     The workflow commits `editorial/blog_registry.json` and `assets/insights/` too. Filters/search never create
     URLs; `/category/*` and `/author/*` still 301 to `/blog`.
+- **Iteration 4 (2026-11-21):** branch `redesign-2026-v3` freezes iteration 3 (preview
+  `https://redesign-2026-v3.plsmain.pages.dev`). What is permanent from it:
+  - **Illustrations:** every article has its own line-art scene in `chrome/art_scenes/` (registered per slug with an alt
+    text; style guide in that package's docstring), built from `chrome/art_kit.py`. `python chrome/art_preview.py --out DIR
+    [slug ...]` renders contact sheets. New posts without a scene get a category motif until a scene is added.
+  - **Insights page:** compact hero, one lead analysis + four picks (chosen in the registry), Latest (9 shown, up to 24) and
+    a **Library** with every article by topic in `<details>` sections, keyword search and topic filter
+    (`assets/js/insights.js`). No category URLs; everything is in the HTML without JavaScript.
+  - **Article page:** headline beside a 3:2 illustration, contents list with reading position (`assets/js/article.js`),
+    takeaways first, and components usable in any article body: `table.pl-compare`, `ul.pl-checklist`, `ol.pl-process`,
+    `div.pl-framework`, `div.pl-callout`, `figure.pl-flow` and a `References` list (`h2.pl-refs-h` + `ul.pl-refs`).
+  - **Editorial bar:** no sales copy in article bodies (the template adds the CTA), no statistic without a primary source
+    that was opened, references to primary sources only, "Pro Link Systems" at most once per article, no
+    compliance-service claims, stale years corrected. Original publication dates never change; a substantive revision sets
+    `date_modified` in the registry, which shows "Updated ..." on the page and updates `dateModified` and the sitemap.
+    `dek` (registry) is the standfirst shown on the page; the meta description tag is not edited by that.
+  - **Name:** the company is always "Pro Link Systems" (`python chrome/company_name.py`); only titles that would pass 60
+    characters keep the short brand. Verbatim reviews are never edited. **Business hours:** Mon-Fri 9 AM-5 PM PT
+    (footer, contact page, structured data); the 24/7 help desk is for managed-service clients under contract.
+  - **Landmarks:** `apply_chrome.py` gives every page without its own `<main>` one (opened at the end of the header block,
+    closed at the start of the footer block). Do not add a second `<main>` to those pages.
+  - **Ads landing page (`/managed-it-services`):** rebuilt on `_shared.css` (about 55 KB lighter, no Google Fonts). Unchanged:
+    every head tag and tracking call, the form fields and ids (`lpForm`, `fi-*`, `formBody`, `formSuccess`, `successName`,
+    `successRef`), Turnstile, `contact-form.js`, title, meta, H1 wording, FAQ and structured data. On phones the headline
+    now comes before the form.
+  - **Pages rebuilt on verified facts:** `why-pro-link-systems` (seven questions to ask any provider; no competitor claims),
+    `ai-automation-services`, `la-business-cybersecurity-report-2026` (figures from Verizon's 2026 DBIR and the FBI's 2025
+    IC3 report; update it from the primary PDFs each year). Section 15 of `_shared.css` carries the older templates
+    (resource pages, vCIO guides, legal pages, `.cmp` / `.sev-table` tables, `.trust-panel`).
+  - **Quotes:** only verbatim Google reviews, a client's own video, or text with written approval may be quoted. Reference
+    claims on industry pages match the approved case-study notes.
+  - **Authorship:** the three guide pages (report, how-to-choose, pricing) name the organization as author in their
+    structured data until Brian records an approval (A1).
+  - **Offer wording:** "assessment" means the paid Microsoft 365 product only, also in form confirmation messages.
+  - **Site checks:** `chrome/link_check.py`, `form_labels.py`, `refine_wording.py`, `company_name.py --check` and
+    `insights.py --check` are part of `golive_check.py`.
 - **Before go-live (checklist):** `python chrome/golive_check.py` must pass: no `pl-flag` left, no
   `functions/_middleware.js`, a new `_shared.css?v=` (`bump_shared_css.py` now covers `case-studies/`,
   `leadership/` and `m365-security-assessment/`), and `gen_location_pages.py` / `update_site_links.py`

@@ -136,7 +136,7 @@
 
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261121">
+  <link rel="stylesheet" href="_shared.css?v=20261122">
   <style>
     /* -- INDUSTRY HERO ------------------------------------------------- */
     .hero {
@@ -612,13 +612,13 @@
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -669,7 +669,7 @@
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -679,7 +679,7 @@
     <a href="/support">Client Support</a>
   </div>
 </div>
-<span id="pl-main" tabindex="-1"></span>
+<main id="pl-main" tabindex="-1">
 <!-- /PL:HEADER -->
 
 <!-- HERO -->
@@ -780,35 +780,35 @@
           <form method="post" id="techForm" novalidate>
             <div class="form-row">
               <div class="form-group" id="fg-fname">
-                <label>First Name <span class="req">*</span></label>
-                <input type="text" name="first_name" placeholder="Alex" autocomplete="given-name">
+                <label for="lead-first-name">First Name <span class="req">*</span></label>
+                <input id="lead-first-name" type="text" name="first_name" placeholder="Alex" autocomplete="given-name">
                 <span class="form-error">Required</span>
               </div>
               <div class="form-group" id="fg-lname">
-                <label>Last Name</label>
-                <input type="text" name="last_name" placeholder="Chen" autocomplete="family-name">
+                <label for="lead-last-name">Last Name</label>
+                <input id="lead-last-name" type="text" name="last_name" placeholder="Chen" autocomplete="family-name">
                 <span class="form-error">Required</span>
               </div>
             </div>
             <div class="form-group" id="fg-company">
-              <label>Company Name</label>
-              <input type="text" name="firm_name" placeholder="Acme Technologies" autocomplete="organization">
+              <label for="lead-firm-name">Company Name</label>
+              <input id="lead-firm-name" type="text" name="firm_name" placeholder="Acme Technologies" autocomplete="organization">
               <span class="form-error">Required</span>
             </div>
             <div class="form-group" id="fg-email">
-              <label>Work Email <span class="req">*</span></label>
-              <input type="email" name="email" placeholder="alex@acmetech.com" autocomplete="email">
+              <label for="lead-email">Work Email <span class="req">*</span></label>
+              <input id="lead-email" type="email" name="email" placeholder="alex@acmetech.com" autocomplete="email">
               <span class="form-error">Valid email required</span>
             </div>
             <div class="form-group" id="fg-phone">
-              <label>Phone</label>
-              <input type="tel" name="phone" placeholder="(818) 555-0200" autocomplete="tel">
+              <label for="lead-phone">Phone</label>
+              <input id="lead-phone" type="tel" name="phone" placeholder="(818) 555-0200" autocomplete="tel">
               <span class="form-error">Required</span>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Company Type</label>
-                <select name="firm_type">
+                <label for="lead-firm-type">Company Type</label>
+                <select id="lead-firm-type" name="firm_type">
                   <option value="">Select&hellip;</option>
                   <option>SaaS / Software Company</option>
                   <option>Hardware / Electronics</option>
@@ -822,8 +822,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>Primary IT Challenge</label>
-                <select name="challenge">
+                <label for="lead-challenge">Primary IT Challenge</label>
+                <select id="lead-challenge" name="challenge">
                   <option value="">Select&hellip;</option>
                   <option>Cloud Infrastructure</option>
                   <option>Backups &amp; Recovery</option>
@@ -837,8 +837,8 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Team Size</label>
-              <select name="team_size">
+              <label for="lead-team-size">Team Size</label>
+              <select id="lead-team-size" name="team_size">
                 <option value="">Select&hellip;</option>
                 <option>1–10 employees</option>
                 <option>11–25 employees</option>
@@ -862,7 +862,7 @@
           </div>
           <div class="success-pill"><div class="success-pill-dot"></div>Request Received</div>
           <h3>You're in good hands.</h3>
-          <p>A Pro Link engineer will reach out within one business day to schedule your free technology IT assessment.</p>
+          <p>A Pro Link Systems engineer will reach out within one business day to schedule your technology consultation.</p>
           <a href="tel:18008906133" class="success-cta-phone">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             Call 1-800-890-6133
@@ -1081,7 +1081,7 @@
 </section>
 
 <!-- STATS STRIP -->
-<div class="stats-strip" role="region" aria-label="Pro Link by the numbers">
+<div class="stats-strip" role="region" aria-label="Pro Link Systems by the numbers">
   <div class="stat-item">
     <span class="stat-number">25+</span>
     <div class="stat-label">Years serving<br>Los Angeles businesses</div>
@@ -1100,32 +1100,19 @@
   </div>
 </div>
 
-<!-- TESTIMONIAL -->
-<section class="section" style="background:var(--off-white);" aria-labelledby="testimonial-heading">
-  <div class="container">
-    <div class="testimonial-block">
-      <div>
-        <div class="testimonial-stars">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="testimonial-quote">Pro Link has been our IT partner for years and they've grown with us every step of the way. When we scaled our team rapidly, they had provisioning and onboarding down to a science. When a vendor asked us for our security posture documentation, Pro Link had everything ready. They understand technology companies — they don't treat us like a typical SMB.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">OZ</div>
-          <div>
-            <div class="testimonial-name">Optical Zonu</div>
-            <div class="testimonial-role">Technology Company &middot; Long-Term IT Partnership &middot; Greater Los Angeles</div>
-          </div>
-        </div>
-      </div>
-      <div style="border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/9;background:#000;">
-        <video autoplay muted playsinline loop preload="metadata" style="width:100%;height:100%;object-fit:cover;">
-          <source src="https://videos.prolinksystems.com/oz.mp4" type="video/mp4">
-        </video>
-      </div>
+<!-- CLIENT PERSPECTIVE (the client's own video) -->
+<section class="pl-section pl-mist" aria-labelledby="testimonial-heading">
+  <div class="pl-wrap pl-split">
+    <div>
+      <p class="pl-eyebrow">Client perspective</p>
+      <h2 class="pl-h2" id="testimonial-heading">Optical Zonu, on video.</h2>
+      <p class="pl-lead">What working with Pro Link Systems is like, in the client&rsquo;s own words.</p>
+      <p style="margin-top:22px"><a class="pl-arrow" href="/case-studies">Client success stories</a></p>
+    </div>
+    <div class="pl-video-frame">
+      <video controls playsinline preload="none" poster="/assets/video/oz-poster.webp" aria-label="Optical Zonu client video">
+        <source src="https://videos.prolinksystems.com/oz.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
@@ -1137,7 +1124,7 @@
       <div>
         <span class="section-label">Why Pro Link Systems</span>
         <h2 class="section-heading" id="why-heading">In-House, US-Based Support.<br>Built for LA Tech Companies.</h2>
-        <p class="section-sub" style="margin-bottom:28px;">Pro Link has served Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house and US-based, so the people who answer when you call work for us and know your environment — not an outsourced call center reading from a script.</p>
+        <p class="section-sub" style="margin-bottom:28px;">Pro Link Systems has served Los Angeles businesses from Woodland Hills since 1999. Our help desk is in-house and US-based, so the people who answer when you call work for us and know your environment — not an outsourced call center reading from a script.</p>
         <div style="display:flex;flex-direction:column;gap:14px;">
           <div style="display:flex;align-items:center;gap:12px;">
             <svg width="20" height="20" fill="none" stroke="var(--green)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1246,6 +1233,7 @@
 
 <!-- FOOTER -->
 <!-- PL:FOOTER -->
+</main>
 <footer class="pl-footer" role="contentinfo">
   <div class="pl-footer-top">
     <div class="pl-footer-brand">
@@ -1277,8 +1265,8 @@
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -1290,7 +1278,7 @@
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -1410,7 +1398,7 @@
 
   })();
 </script>
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
 </body>
 </html>
 

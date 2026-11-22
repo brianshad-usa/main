@@ -23,13 +23,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://prolinksystems.com"
 E = lambda s: html.escape(s, quote=False)
 A = lambda s: html.escape(s, quote=True)
+# the site-wide ?v= of _shared.css, read from the home page so this builder never carries its own copy
+CSS_V = re.search(r'_shared\.css\?v=([^"]+)"', io.open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()).group(1)
 FLAG = lambda r: '<span class="pl-flag">Review %s</span>' % r
 
 CASES = [
     {
         "slug": "global-holdings", "client": "Global Holdings", "sector": "Healthcare imaging", "current": False,
         "status": "Past engagement, 12+ years to 2021", "flags": ["R4"],
-        "title": "Global Holdings Case Study: Imaging Network | Pro Link",
+        "title": "Global Holdings: Imaging Network | Pro Link Systems",
         "meta": "How Pro Link Systems designed and ran the network, AWS imaging platform and patient portal behind 19 diagnostic imaging facilities for 12+ years.",
         "h1": "A secure imaging backbone for 19 facilities and hundreds of partner sites.",
         "card": "Network, AWS imaging platform and secure portal for a regional diagnostic imaging provider.",
@@ -46,7 +48,7 @@ CASES = [
         "complexity": "This was protected health information, in an industry that has seen repeated, high-profile breaches. Patient records and imaging data needed airtight security and privacy, while referring doctors and patients needed convenient, appropriate access to studies. Sites averaged about five imaging modalities each.",
         "approach": ["A network designed from the ground up across all 19 owned facilities",
                      "DICOM ingestion from every modality at every location",
-                     "A cloud environment on AWS, architected and managed by Pro Link, consolidating imagery for processing and access",
+                     "A cloud environment on AWS, architected and managed by Pro Link Systems, consolidating imagery for processing and access",
                      "Image transfer from hundreds of joint-venture and referral facilities into the same environment",
                      "A secure, access-controlled patient portal for referring doctors and patients",
                      "A security-and-privacy-first posture throughout the engagement"],
@@ -59,7 +61,7 @@ CASES = [
     {
         "slug": "cunico", "client": "Cunico Corp.", "sector": "Precision manufacturing", "current": True,
         "status": "Current client since 2012", "flags": ["R1"],
-        "title": "Cunico Case Study: 13-Year IT Partnership | Pro Link",
+        "title": "Cunico Case Study: 13-Year IT Partnership | Pro Link Systems",
         "meta": "How Pro Link Systems has run and secured Cunico's multi-site technology since 2012, through growth and its 2022 acquisition by BWX Technologies.",
         "h1": "Thirteen years of technology governance, through growth and an acquisition.",
         "card": "Multi-site environments, hardened security and support through an acquisition by BWX Technologies.",
@@ -83,39 +85,39 @@ CASES = [
     {
         "slug": "lisi-aerospace", "client": "LISI Aerospace", "sector": "Aerospace manufacturing", "current": False,
         "status": "Past engagement, 2019–2021", "flags": ["R2"],
-        "title": "LISI Aerospace Case Study: IT Stabilized | Pro Link",
+        "title": "LISI Aerospace Case Study: IT Stabilized | Pro Link Systems",
         "meta": "How Pro Link Systems took ownership of LISI Aerospace's IT administration and stabilized operations within 90 days, through the move to remote work.",
         "h1": "Bringing order to a multinational manufacturer’s IT within 90 days.",
         "card": "IT administration taken over and stabilized within 90 days, then carried through the move to remote work.",
         "plate": ("90 days", "to stabilized IT operations"),
         "summary": "From October 2019 to August 2021, Pro Link Systems took ownership of IT administration for LISI Aerospace, a 700-person aerospace fastener manufacturer with its main plant in Torrance and facilities across North America. Operations stabilized within 90 days, and the environment stayed resilient through the move to remote work.",
-        "metrics": [("90 days", "to stabilized operations"), ("700", "employees"), ("3 sites", "in Southern California managed by Pro Link")],
+        "metrics": [("90 days", "to stabilized operations"), ("700", "employees"), ("3 sites", "in Southern California managed by Pro Link Systems")],
         "snapshot": [("Industry", "Aerospace manufacturing: fasteners and precision components"),
                      ("Location", "Main plant in Torrance, California, with facilities in Canada, Mexico and elsewhere in North America"),
                      ("Size", "700 employees"), ("Relationship", None),
                      ("Scope", "IT administration, network modernization, security agents, remote work")],
         "relationship": "October 2019 – August 2021",
-        "challenge": "LISI Aerospace asked Pro Link to bring order to a disordered IT environment spanning its Torrance main plant and facilities across North America, and to take ownership of its IT administrative infrastructure: hosts, virtual machines, communication systems (voice, email and messaging) and security policies. The engagement would soon include the operational pressures of the COVID-19 pandemic.",
+        "challenge": "LISI Aerospace asked Pro Link Systems to bring order to a disordered IT environment spanning its Torrance main plant and facilities across North America, and to take ownership of its IT administrative infrastructure: hosts, virtual machines, communication systems (voice, email and messaging) and security policies. The engagement would soon include the operational pressures of the COVID-19 pandemic.",
         "approach": ["A comprehensive IT management system", "A modernized network topology",
                      "Security agents deployed across the environment",
                      "Additional IT staff onboarded across California and eventually Canada",
                      "A transition to remote-work solutions during the pandemic"],
         "outcomes": ["Operations stabilized within 90 days of the engagement",
-                     "Three Southern California sites managed by Pro Link",
+                     "Three Southern California sites managed by Pro Link Systems",
                      "Continuity maintained through the move to remote work"],
         "value": "A comprehensive IT management system that carried a multinational manufacturer through the operational shock of 2020 without losing continuity.",
     },
     {
         "slug": "snitzer-law", "client": "Law Offices of Alan B. Snitzer", "sector": "Legal", "current": True,
         "status": "Current client for 18 years", "flags": [],
-        "title": "Law Firm Case Study: 18 Years, Azure Cloud | Pro Link",
+        "title": "Law Firm Case Study: 18 Years, Azure | Pro Link Systems",
         "meta": "How Pro Link Systems moved the Law Offices of Alan B. Snitzer from an on-premises data center to Microsoft Azure over an 18-year partnership.",
         "h1": "From an on-premises data center to Azure, across 18 years of growth.",
         "card": "From a data center in the firm’s own office to Microsoft Azure, with every office move handled.",
         "plate": ("90%+", "of the firm’s environment now on Microsoft Azure"),
         "summary": "For 18 years, Pro Link Systems has been the only IT company for the Law Offices of Alan B. Snitzer in Pasadena. We have carried the firm from a data center in its own office to the cloud, where over 90% of its environment now runs on Microsoft Azure, and handled the infrastructure for its office moves along the way.",
         "metrics": [("18 yrs", "partnership that continues today"), ("90%+", "of the environment on Microsoft Azure"),
-                    ("Multiple", "office relocations, infrastructure moved by Pro Link")],
+                    ("Multiple", "office relocations, infrastructure moved by Pro Link Systems")],
         "snapshot": [("Industry", "Legal"), ("Location", "Pasadena, California"), ("Relationship", None),
                      ("Scope", "Managed IT, cloud migration to Microsoft Azure, security, office relocations")],
         "relationship": "Client for 18 years",
@@ -125,7 +127,7 @@ CASES = [
                      "A premium security umbrella around the firm’s data, appropriate to a law practice’s confidentiality obligations",
                      "The infrastructure move handled for each office relocation"],
         "outcomes": ["Over 90% of the environment running on Azure",
-                     "Multiple office relocations completed with Pro Link managing the infrastructure",
+                     "Multiple office relocations completed with Pro Link Systems managing the infrastructure",
                      "An 18-year relationship that continues today"],
         "value": "A practice that grew from a single on-premises data center to a modern, cloud-based firm without changing technology partners, under a premium security posture around client data.",
         "quote": ("ProLink has been our only IT company for almost 2 decades now, and they continue to excel in providing us with the highest level of safety, security, and service! I can’t recommend them highly enough! As our firm has steadily grown to almost 30 people, Prolink has adapted and grown, too, to meet our ever-increasing challenges!",
@@ -136,7 +138,7 @@ CASES = [
     {
         "slug": "waverly-school", "client": "The Waverly School", "sector": "Independent K–12 education", "current": True,
         "status": "Current client for about 23 years", "flags": [],
-        "title": "The Waverly School Case Study: 23 Years | Pro Link",
+        "title": "The Waverly School Case Study: 23 Years | Pro Link Systems",
         "meta": "How Pro Link Systems has served as The Waverly School's outsourced IT department for about 23 years, including Google Workspace for staff and students.",
         "h1": "Twenty-three years as a school’s outsourced IT department.",
         "card": "The school’s outsourced IT department, including Google Workspace for staff and student accounts.",
@@ -147,9 +149,9 @@ CASES = [
                      ("Relationship", None), ("Scope", "Outsourced IT department, Google Workspace management")],
         "relationship": "Client for about 23 years",
         "challenge": "A school’s technology has to serve two very different populations at once: staff who depend on reliable administrative systems, and students who hold their own accounts. The environment has to be secure, easy to administer and dependable across the school year, without a large in-house IT team to run it.",
-        "approach": ["Pro Link acts as The Waverly School’s outsourced IT department",
+        "approach": ["Pro Link Systems acts as The Waverly School’s outsourced IT department",
                      "Management and support of the school’s Google Workspace environment, covering both staff and student accounts"],
-        "outcomes": ["A relationship of about 23 years, among Pro Link’s longest-tenured"],
+        "outcomes": ["A relationship of about 23 years, among Pro Link Systems’ longest-tenured"],
         "value": "A dependable technology environment for staff and students, run by the same outside partner for more than two decades.",
         "photo": ("/assets/photos/web/school-outdoor-meeting-1100.webp", "/assets/photos/web/school-outdoor-meeting-720.webp 720w, /assets/photos/web/school-outdoor-meeting-1100.webp 1100w", 1100, 619,
                   "Four people talking on a school lawn"),
@@ -157,7 +159,7 @@ CASES = [
     {
         "slug": "cookes-crating", "client": "Cooke’s Crating", "sector": "Fine-art logistics", "current": True,
         "status": "Current client for 3+ years", "flags": ["R6"],
-        "title": "Cooke's Crating Case Study: 5-Day Migration | Pro Link",
+        "title": "Cooke's Crating: 5-Day Migration | Pro Link Systems",
         "meta": "How Pro Link Systems moved Cooke's Crating off a former provider's locked infrastructure in five days, with zero downtime, and modernized it.",
         "h1": "Regaining control of a locked-out business in five days, with zero downtime.",
         "card": "An emergency migration off a former provider’s locked infrastructure, completed in five days.",
@@ -167,8 +169,8 @@ CASES = [
         "snapshot": [("Industry", "Fine-art crating, shipping and logistics"), ("Location", "Los Angeles, California"),
                      ("Size", "33 employees"), ("Relationship", None), ("Scope", "Emergency migration, infrastructure modernization, security")],
         "relationship": "Client for more than 3 years",
-        "challenge": "Cooke’s Crating came to Pro Link in a worst-case situation. A dispute with its previous IT provider had escalated until that provider locked the company out of its entire infrastructure, down to its phone management. It needed to regain control fast, without operations grinding to a halt.",
-        "approach": ["An emergency migration of the entire environment onto new infrastructure designed by Pro Link",
+        "challenge": "Cooke’s Crating came to Pro Link Systems in a worst-case situation. A dispute with its previous IT provider had escalated until that provider locked the company out of its entire infrastructure, down to its phone management. It needed to regain control fast, without operations grinding to a halt.",
+        "approach": ["An emergency migration of the entire environment onto new infrastructure designed by Pro Link Systems",
                      "A full modernization of aging infrastructure, including an upgraded FileMaker environment",
                      "Current security frameworks rolled out across the new environment",
                      "Control regained over every system, including phone management"],
@@ -194,7 +196,7 @@ CASES = [
         "approach": ["Advanced cybersecurity deployment, including SentinelOne SOC and SIEM monitoring",
                      "Microsoft 365 and Azure integration, with a secure cloud migration", "Network architecture across divisions",
                      "Disaster-recovery automation", "Strategic vendor alignment across subsidiaries", "Ongoing systems administration"],
-        "outcomes": ["One of Pro Link’s most comprehensive technology transformations",
+        "outcomes": ["One of Pro Link Systems’ most comprehensive technology transformations",
                      "Greater efficiency, visibility and resilience across the company"],
         "value": "Consistent standards across divisions that had grown apart, delivered through a single accountable technology leader.",
     },
@@ -339,7 +341,7 @@ def hub_main():
   <div class="pl-wrap">
     <div class="pl-head">
       <div><p class="pl-eyebrow">More engagements</p><h2 class="pl-h2" id="more-h">Other organizations we support and have supported.</h2></div>
-      <p class="pl-lead">Optical Zonu, a photonics manufacturer, relies on Pro Link as its primary IT management team, including domain and DNS management. <span class="pl-flag">Review R10</span></p>
+      <p class="pl-lead">Optical Zonu, a photonics manufacturer, relies on Pro Link Systems as its primary IT management team, including domain and DNS management. <span class="pl-flag">Review R10</span></p>
     </div>
     <div class="pl-ccards" style="margin-bottom:56px">
 %s
@@ -407,7 +409,7 @@ def main():
     for c in CASES:
         assert len(html.unescape(c["title"])) <= 60, ("title too long", c["slug"])
         assert len(c["meta"]) <= 160, ("meta too long", c["slug"], len(c["meta"]))
-        page = head_for(c, tracking) + ("<body>\n\n<!-- PL:HEADER -->\n<!-- /PL:HEADER -->\n\n" + detail_main(c) +
+        page = head_for(c, tracking).replace("_shared.css?v=20261120", "_shared.css?v=" + CSS_V) + ("<body>\n\n<!-- PL:HEADER -->\n<!-- /PL:HEADER -->\n\n" + detail_main(c) +
                                         "\n\n<!-- PL:FOOTER -->\n<!-- /PL:FOOTER -->\n\n</body>\n</html>\n")
         path = os.path.join(ROOT, "case-studies", c["slug"] + ".html")
         old = io.open(path, encoding="utf-8").read() if os.path.exists(path) else None

@@ -452,7 +452,10 @@ FORMAT_SPEC = """Structural requirements (the publishing pipeline depends on the
   a closing section that lands the executive takeaway before any CTA
 - No closing sales pitch or call to action in the body: the page template already adds a
   related-practice link and a consultation prompt after the article
-- Write in HTML using only these tags: p, h2, ul, li, strong, a
+- Write in HTML using only these tags: p, h2, ul, li, strong, a, plus AT MOST ONE of these components where it carries
+  real information: <table class="pl-compare"> (with <caption>, <thead>, <tbody>, <th scope="col">), <ul class="pl-checklist">
+  or <ol class="pl-process">. No styles, ids, images or scripts. Do not add a references list or cite outside sources you
+  cannot verify: the pipeline cannot open web pages, so every claim must stand without a citation.
 - Include 3-5 natural internal links using these anchor/URL pairs:
   - "managed IT services" or "managed IT" -> /managed-it-services
   - "cybersecurity" or "IT security" -> /cybersecurity-services
@@ -461,7 +464,8 @@ FORMAT_SPEC = """Structural requirements (the publishing pipeline depends on the
   - "disaster recovery" or "data backup" -> /backup-disaster-recovery
   - "healthcare IT" or "medical office IT" -> /healthcare-it-services
 - Do not include DOCTYPE, html, head or body tags. No markdown - clean HTML only.
-- Mention "Pro Link Systems" and Los Angeles naturally; never keyword-stuff.
+- Mention "Pro Link Systems" at most once, always as those three words, and only where it adds information. Use Los Angeles
+  only where the place changes the advice; never keyword-stuff. No sales language, hype words or generic openings.
 
 Also provide:
 - TITLE: an H1 title UNDER 42 characters (so the SEO title stays under 60 with

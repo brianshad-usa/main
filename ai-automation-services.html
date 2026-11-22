@@ -120,22 +120,22 @@
       {
         "@type": "Question",
         "name": "Does our data leave our environment when using AI tools?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Not with the solutions we build. Our private RAG and AI assistant implementations run within your own Microsoft Azure or on-premises environment. Your documents, policies, and business data are never sent to public AI services. We use isolated deployments of large language models or Microsoft's enterprise AI stack, which keeps your data fully under your control." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Private assistants are designed so that it does not. We deploy private RAG and AI assistants within your own Microsoft Azure tenant or on-premises environment, using isolated deployments of large language models or Microsoft's enterprise AI services, so your documents, policies and business data stay under your control rather than going to public AI services." }
       },
       {
         "@type": "Question",
         "name": "What is a RAG system and why does my business need one?",
-        "acceptedAnswer": { "@type": "Answer", "text": "RAG stands for Retrieval-Augmented Generation. It is an AI approach that lets your team ask questions in plain English and get accurate answers drawn directly from your own documents, policies, manuals, and data — rather than from the public internet. Instead of your staff searching through SharePoint folders or emailing HR for policy questions, they ask your private AI assistant and get the right answer instantly. We build these inside your environment so no data ever leaves." }
+        "acceptedAnswer": { "@type": "Answer", "text": "RAG stands for Retrieval-Augmented Generation. It is an AI approach that lets your team ask questions in plain English and get answers drawn from your own documents, policies, manuals and data rather than from the public internet. Instead of searching SharePoint folders or emailing HR for a policy, staff ask a private assistant and see the answer with its source. We build these inside your environment." }
       },
       {
         "@type": "Question",
         "name": "What kinds of workflows can you automate?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Any repetitive, rule-based task that consumes staff time is a candidate for automation. Common examples include document intake and routing, invoice processing, onboarding checklists, IT ticket triage, report generation, data extraction from PDFs and emails, approval workflows, and CRM data entry. We audit your workflows first to identify the highest-ROI automation opportunities before building anything." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Any repetitive, rule-based task that consumes staff time is a candidate for automation. Common examples include document intake and routing, invoice processing, onboarding checklists, IT ticket triage, report generation, data extraction from PDFs and emails, approval workflows, and CRM data entry. We audit your workflows first to identify the highest-value opportunities before building anything." }
       },
       {
         "@type": "Question",
         "name": "How does Microsoft Copilot deployment work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Microsoft 365 Copilot requires an eligible Microsoft 365 business or enterprise plan plus a Copilot license, proper security configuration, and permissions cleanup before it goes live. We handle the licensing assessment, identity and access review, SharePoint permissions audit, security hardening, pilot rollout, and user training. Without this preparation, Copilot can surface sensitive files to the wrong people — we make sure it doesn't." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Microsoft 365 Copilot requires an eligible Microsoft 365 business or enterprise plan plus a Copilot license, proper security configuration, and permissions cleanup before it goes live. We handle the licensing review, identity and access review, SharePoint permissions audit, security hardening, pilot rollout and user training. Without this preparation, Copilot can surface sensitive files to people who should not see them." }
       },
       {
         "@type": "Question",
@@ -148,203 +148,12 @@
 
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261121">
+  <link rel="stylesheet" href="_shared.css?v=20261122">
   <style>
-    /* ── AI ACCENT VARIABLES ─────────────────────────────────── */
-    :root {
-      --ai-purple:    #7c3aed;
-      --ai-purple-lt: #9f67f5;
-      --ai-teal:      #0d9488;
-      --ai-teal-lt:   #14b8a6;
-      --ai-grad:      linear-gradient(135deg, #7c3aed 0%, #0d9488 100%);
-      --ai-grad-soft: linear-gradient(135deg, rgba(124,58,237,.12) 0%, rgba(13,148,136,.08) 100%);
-    }
-
-    /* ── HERO ─────────────────────────────────────────────────── */
-    .ai-hero {
-      background: linear-gradient(135deg, #08041a 0%, #0d0728 50%, #060f1a 100%);
-      padding: 88px 32px 80px;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .ai-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
-    }
-    /* Ambient glow orbs */
-    .ai-hero::after {
-      content: '';
-      position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
-      width: 800px; height: 400px; border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(124,58,237,.18) 0%, rgba(13,148,136,.1) 50%, transparent 70%);
-      pointer-events: none;
-    }
-    .ai-hero-inner { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
-    .ai-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(124,58,237,.15); border: 1px solid rgba(124,58,237,.4);
-      color: #c4b5fd; font-size: .72rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .1em;
-      padding: 5px 16px; border-radius: 100px; margin-bottom: 24px;
-    }
-    .ai-badge-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--ai-grad); flex-shrink: 0;
-    }
-    .ai-hero h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800;
-      color: #fff; letter-spacing: -.04em; line-height: 1.12; margin-bottom: 22px;
-    }
-    .ai-hero h1 em { font-style: normal; background: var(--ai-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .ai-hero p {
-      font-size: 1.1rem; color: rgba(255,255,255,.7); line-height: 1.75;
-      max-width: 640px; margin: 0 auto 36px;
-    }
-    .ai-hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-ai {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: var(--ai-grad); color: #fff;
-      font-size: .95rem; font-weight: 700; padding: 14px 28px;
-      border-radius: var(--r-md); text-decoration: none;
-      box-shadow: 0 4px 24px rgba(124,58,237,.35);
-      transition: opacity .2s, transform .15s;
-    }
-    .btn-ai:hover { opacity: .92; transform: translateY(-2px); }
-
-    /* ── TRUST STRIP ─────────────────────────────────────────── */
-    .ai-strip {
-      background: #040210; border-top: 1px solid rgba(124,58,237,.2);
-      border-bottom: 1px solid rgba(124,58,237,.2);
-      padding: 16px 32px;
-      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 36px;
-    }
-    .ai-strip-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: .8rem; font-weight: 600; color: rgba(255,255,255,.75);
-    }
-    .ai-strip-item svg { flex-shrink: 0; }
-
-    /* ── SERVICES GRID ───────────────────────────────────────── */
-    .ai-services { padding: 80px 32px; background: var(--off-white); }
-    .ai-services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-      max-width: 1200px; margin: 0 auto;
-    }
-    .ai-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r-lg); padding: 32px 28px;
-      display: flex; flex-direction: column; gap: 14px;
-      transition: transform .2s, box-shadow .2s, border-color .2s;
-    }
-    .ai-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); border-color: rgba(124,58,237,.25); }
-    .ai-card-icon {
-      width: 52px; height: 52px; border-radius: var(--r-sm); flex-shrink: 0;
-      background: var(--ai-grad-soft); border: 1px solid rgba(124,58,237,.15);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .ai-card-icon svg { color: var(--ai-purple); }
-    .ai-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); letter-spacing: -.01em; }
-    .ai-card p { font-size: .875rem; color: var(--text-muted); line-height: 1.7; flex: 1; }
-    .ai-card-tag {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: rgba(124,58,237,.07); border: 1px solid rgba(124,58,237,.15);
-      color: var(--ai-purple); font-size: .7rem; font-weight: 700;
-      letter-spacing: .05em; padding: 3px 10px; border-radius: 100px;
-      align-self: flex-start; text-transform: uppercase;
-    }
-
-    /* ── HOW IT WORKS ────────────────────────────────────────── */
-    .ai-how { padding: 80px 32px; }
-    .ai-how-grid {
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
-    }
-    .ai-how h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--text); letter-spacing: -.025em; margin-bottom: 20px; line-height: 1.2; }
-    .ai-how h2 em { font-style: normal; color: var(--ai-purple); }
-    .ai-how p { font-size: .975rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
-    .ai-steps { display: flex; flex-direction: column; gap: 0; }
-    .ai-step {
-      display: flex; align-items: flex-start; gap: 18px;
-      padding: 20px 0; border-bottom: 1px solid var(--border);
-    }
-    .ai-step:last-child { border-bottom: none; }
-    .ai-step-num {
-      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
-      background: var(--ai-grad); color: #fff;
-      font-size: .85rem; font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .ai-step-body h3 { font-size: .92rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .ai-step-body p { font-size: .83rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
-
-    /* ── DIFFERENTIATOR SECTION ─────────────────────────────── */
-    .ai-trust {
-      padding: 80px 32px;
-      background: linear-gradient(135deg, #08041a 0%, #0d0728 100%);
-      position: relative; overflow: hidden;
-    }
-    .ai-trust::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(124,58,237,.15) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .ai-trust-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
-    .ai-trust-headline {
-      text-align: center; margin-bottom: 60px;
-    }
-    .ai-trust-headline h2 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800;
-      color: #fff; letter-spacing: -.03em; line-height: 1.2; margin-bottom: 14px;
-    }
-    .ai-trust-headline p { font-size: 1rem; color: rgba(255,255,255,.65); max-width: 560px; margin: 0 auto; line-height: 1.7; }
-    .ai-trust-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .ai-trust-card {
-      background: rgba(255,255,255,.05); border: 1px solid rgba(124,58,237,.2);
-      border-radius: var(--r-lg); padding: 32px 28px;
-      display: flex; flex-direction: column; gap: 16px;
-    }
-    .ai-trust-icon {
-      width: 52px; height: 52px; border-radius: var(--r-sm);
-      background: rgba(124,58,237,.15); display: flex; align-items: center; justify-content: center;
-    }
-    .ai-trust-icon svg { color: #c4b5fd; }
-    .ai-trust-card h3 { font-size: 1rem; font-weight: 700; color: #fff; }
-    .ai-trust-card p { font-size: .875rem; color: rgba(255,255,255,.6); line-height: 1.7; }
-
-    /* ── FAQ ─────────────────────────────────────────────────── */
-    .ai-faq { padding: 80px 32px; background: var(--off-white); }
-    .ai-faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-    .ai-faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; }
-    .ai-faq-q {
-      width: 100%; text-align: left; padding: 20px 24px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      font-family: 'Inter', sans-serif; font-size: .95rem; font-weight: 700;
-      color: var(--text); background: none; border: none; cursor: pointer;
-      transition: background .15s;
-    }
-    .ai-faq-q:hover { background: rgba(124,58,237,.03); }
-    .ai-faq-q svg { flex-shrink: 0; transition: transform .25s; color: var(--ai-purple); }
-    .ai-faq-item.open .ai-faq-q svg { transform: rotate(180deg); }
-    .ai-faq-a { display: none; padding: 0 24px 20px; font-size: .9rem; color: var(--text-muted); line-height: 1.75; }
-    .ai-faq-item.open .ai-faq-a { display: block; }
-
-    /* ── RESPONSIVE ──────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .ai-services-grid { grid-template-columns: repeat(2, 1fr); }
-      .ai-trust-grid { grid-template-columns: 1fr 1fr; }
-      .ai-how-grid { grid-template-columns: 1fr; gap: 40px; }
-    }
-    @media (max-width: 768px) {
-      .ai-hero { padding: 64px 20px 56px; }
-      .ai-services, .ai-how, .ai-trust, .ai-faq { padding: 56px 20px; }
-      .ai-services-grid { grid-template-columns: 1fr; }
-      .ai-trust-grid { grid-template-columns: 1fr; }
-      .ai-strip { gap: 20px; padding: 14px 20px; }
-      .ai-hero-cta { flex-direction: column; align-items: center; }
-    }
+    .ai-quote { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--line-dark); }
+    .ai-quote blockquote { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+    .ai-faqs { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; }
+    @media (max-width: 1024px) { .ai-faqs { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -540,13 +349,13 @@
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -597,7 +406,7 @@
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -607,266 +416,135 @@
     <a href="/support">Client Support</a>
   </div>
 </div>
-<span id="pl-main" tabindex="-1"></span>
+<main id="pl-main" tabindex="-1">
 <!-- /PL:HEADER -->
-
-<!-- HERO -->
-<section class="ai-hero" aria-label="AI and automation services">
-  <div class="ai-hero-inner">
-    <div class="ai-badge">
-      <div class="ai-badge-dot"></div>
-      Emerging Technology &middot; Pro Link Systems
-    </div>
-    <h1>AI &amp; Automation Services<br>for <em>Los Angeles Businesses</em></h1>
-    <p>We help companies harness AI to streamline workflows, automate repetitive tasks, and unlock insights from their own data &mdash; securely, within your existing environment.</p>
-    <div class="ai-hero-cta">
-      <a href="contact" class="btn-ai">
-        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Schedule a Technology Consultation
-      </a>
-      <a href="tel:18008906133" class="btn btn-outline-white">
-        Call 1-800-890-6133
-      </a>
+<section class="pl-pagehead" aria-labelledby="page-h1">
+  <div class="pl-wrap">
+    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/services">Solutions</a><span>/</span>AI &amp; Automation</nav>
+    <h1 class="pl-h1" id="page-h1">AI &amp; Automation Services for Los Angeles Businesses</h1>
+    <p class="pl-lead">Private knowledge assistants, workflow automation and Microsoft Copilot, deployed inside your existing environment with the security, permissions and training that adoption depends on.</p>
+    <div class="pl-actions">
+      <a href="/contact" class="btn btn-light">Schedule a Technology Consultation</a>
+      <a href="/blog/#ai-automation" class="btn btn-outline-white">Insights on AI</a>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
-<div class="ai-strip" role="complementary">
-  <div class="ai-strip-item">
-    <svg width="16" height="16" fill="none" stroke="#c4b5fd" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-    Your data never leaves your environment
-  </div>
-  <div class="ai-strip-item">
-    <svg width="16" height="16" fill="none" stroke="#c4b5fd" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-    Practical AI that delivers measurable ROI
-  </div>
-  <div class="ai-strip-item">
-    <svg width="16" height="16" fill="none" stroke="#c4b5fd" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-    Integrated with Microsoft 365, Azure &amp; your existing tools
-  </div>
-  <div class="ai-strip-item">
-    <svg width="16" height="16" fill="none" stroke="#c4b5fd" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    Backed by our 24/7 in-house, US-based help desk
-  </div>
-</div>
-
-<!-- SERVICES GRID -->
-<section class="ai-services" aria-labelledby="ai-services-heading">
-  <div class="container">
-    <div class="centered" style="margin-bottom:52px;">
-      <span class="section-label">What We Build &amp; Deploy</span>
-      <h2 class="section-heading" id="ai-services-heading">AI Services Built for<br>Real Business Problems</h2>
-      <p class="section-sub">Not demos. Not pilot programs that die after 90 days. AI and automation that integrates with your existing environment and gets used every day.</p>
-    </div>
-    <div class="ai-services-grid">
-
-      <!-- 1. RAG -->
-      <div class="ai-card">
-        <div class="ai-card-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="13" y2="14"/></svg>
-        </div>
-        <div class="ai-card-tag">Private AI</div>
-        <h3>AI-Powered Knowledge Assistants</h3>
-        <p>Private RAG (Retrieval-Augmented Generation) systems that let your team ask questions in plain English and get accurate answers drawn directly from your own internal documents, policies, manuals, and data. No information ever reaches a public AI model. Deployed inside your Azure or on-premises environment.</p>
-      </div>
-
-      <!-- 2. Workflow Automation -->
-      <div class="ai-card">
-        <div class="ai-card-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 17.5m-2 0a2 2 0 104 0 2 2 0 00-4 0"/><path d="M10 6.5h4M6.5 10v4M17.5 10v4.5"/></svg>
-        </div>
-        <div class="ai-card-tag">Automation</div>
-        <h3>Workflow Automation</h3>
-        <p>Identify and eliminate the repetitive manual tasks consuming your team's time — using AI agents and automation pipelines integrated with your existing tools. From Microsoft 365 and SharePoint to your CRM, ERP, and line-of-business applications. We audit your workflows, find the highest-ROI opportunities, and build the automations that stick.</p>
-      </div>
-
-      <!-- 3. Custom AI -->
-      <div class="ai-card">
-        <div class="ai-card-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        </div>
-        <div class="ai-card-tag">Custom Build</div>
-        <h3>Custom AI Solutions</h3>
-        <p>Tailored AI applications built around your specific business needs — document processing and data extraction, automated report generation, customer-facing chatbots trained on your own content, internal copilots for HR and operations, and intelligent classification systems. Built to fit your workflow, not the other way around.</p>
-      </div>
-
-      <!-- 4. AI Security & Governance -->
-      <div class="ai-card">
-        <div class="ai-card-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
-        <div class="ai-card-tag">Governance</div>
-        <h3>AI Security &amp; Governance</h3>
-        <p>Responsible AI deployment with the security controls to match. Data privacy architecture, role-based access management for AI tools, audit logging, and sensitive data detection, so your AI adoption doesn't open new security gaps.</p>
-      </div>
-
-      <!-- 5. AI Strategy -->
-      <div class="ai-card">
-        <div class="ai-card-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-5h4v5"/></svg>
-        </div>
-        <div class="ai-card-tag">Strategy</div>
-        <h3>AI Strategy Consulting</h3>
-        <p>Not sure where to start? We assess your current workflows, identify the highest-value automation opportunities, evaluate your data readiness, and build a realistic AI roadmap aligned with your actual business goals and budget. No buzzwords — just a clear plan with concrete next steps your team can execute.</p>
-      </div>
-
-      <!-- 6. Copilot -->
-      <div class="ai-card">
-        <div class="ai-card-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M8 10h8M8 13h5"/></svg>
-        </div>
-        <div class="ai-card-tag">Microsoft 365</div>
-        <h3>Microsoft Copilot Deployment</h3>
-        <p>Deploy and configure Microsoft 365 Copilot across your organization with the licensing, security hardening, and SharePoint permissions cleanup it requires before going live. Without proper preparation, Copilot surfaces sensitive files to the wrong people. We make sure it doesn't — then train your team to actually use it.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="ai-how" aria-labelledby="how-heading">
-  <div class="container">
-    <div class="ai-how-grid">
+<!-- WHAT WE BUILD -->
+<section class="pl-section" aria-labelledby="ai-services-heading">
+  <div class="pl-wrap">
+    <div class="pl-head">
       <div>
-        <span class="section-label">Our Approach</span>
-        <h2 id="how-heading">We don't sell AI hype.<br>We build <em>things that work.</em></h2>
-        <p>Too many AI projects stall because they start with the technology instead of the problem. We start with your actual workflows, find the real bottlenecks, and build AI that solves them — securely, inside your environment, and adopted by your team.</p>
-        <p>Every engagement includes change management and user training. Because even the best AI assistant is worthless if nobody uses it.</p>
-        <a href="contact" class="btn-ai" style="margin-top:8px;">Schedule a Technology Consultation</a>
+        <p class="pl-eyebrow">What we build and deploy</p>
+        <h2 class="pl-h2" id="ai-services-heading">AI services built for real business problems.</h2>
       </div>
-      <div class="ai-steps">
-        <div class="ai-step">
-          <div class="ai-step-num">1</div>
-          <div class="ai-step-body">
-            <h3>Workflow Audit &amp; Opportunity Assessment</h3>
-            <p>We map your current workflows, identify manual bottlenecks, and score each opportunity by ROI, complexity, and time-to-value. You get a prioritized roadmap before any code is written.</p>
-          </div>
-        </div>
-        <div class="ai-step">
-          <div class="ai-step-num">2</div>
-          <div class="ai-step-body">
-            <h3>Security &amp; Privacy Architecture</h3>
-            <p>Every AI deployment is designed with security from the start — data residency, access controls, audit logging, and privacy boundaries built in, not bolted on.</p>
-          </div>
-        </div>
-        <div class="ai-step">
-          <div class="ai-step-num">3</div>
-          <div class="ai-step-body">
-            <h3>Build, Integrate &amp; Test</h3>
-            <p>We build inside your existing environment — Azure, Microsoft 365, your CRM, your ERP. No new SaaS subscriptions for their own sake. Tested with real data before rollout.</p>
-          </div>
-        </div>
-        <div class="ai-step">
-          <div class="ai-step-num">4</div>
-          <div class="ai-step-body">
-            <h3>Training, Adoption &amp; Ongoing Support</h3>
-            <p>Staff training, documentation, and a feedback loop to improve the system over time. We stay engaged after launch — because AI that nobody uses isn't AI that works.</p>
-          </div>
-        </div>
+      <p class="pl-lead">Each system integrates with the tools your organization already uses and is managed alongside the rest of your technology.</p>
+    </div>
+    <div class="pl-grid pl-grid-3">
+      <div class="pl-tile"><span class="pl-tile-num">Private AI</span><h3>Knowledge assistants</h3><p>Retrieval-augmented generation (RAG) systems that answer questions in plain English from your own documents, policies and manuals, deployed in your Azure tenant or on-premises environment.</p></div>
+      <div class="pl-tile"><span class="pl-tile-num">Automation</span><h3>Workflow automation</h3><p>AI agents and automation pipelines for repetitive work across Microsoft 365, SharePoint, your CRM, your ERP and line-of-business applications, starting with the highest-value opportunities.</p></div>
+      <div class="pl-tile"><span class="pl-tile-num">Custom build</span><h3>Custom AI solutions</h3><p>Document processing and data extraction, report generation, assistants trained on your own content, internal copilots for HR and operations, and classification systems.</p></div>
+      <div class="pl-tile"><span class="pl-tile-num">Governance</span><h3>AI security and governance</h3><p>Data privacy architecture, role-based access for AI tools, audit logging and sensitive-data detection, so that adopting AI does not open new security gaps.</p></div>
+      <div class="pl-tile"><span class="pl-tile-num">Strategy</span><h3>AI strategy consulting</h3><p>A review of your workflows and data readiness, the opportunities worth pursuing first, and a realistic roadmap aligned with your goals and budget.</p></div>
+      <div class="pl-tile"><span class="pl-tile-num">Microsoft 365</span><h3>Microsoft Copilot deployment</h3><p>Licensing, security hardening and SharePoint permissions cleanup before Copilot goes live, followed by a pilot and training for the people who will use it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="pl-section pl-mist" aria-labelledby="how-heading">
+  <div class="pl-wrap">
+    <div class="pl-head">
+      <div>
+        <p class="pl-eyebrow">Our approach</p>
+        <h2 class="pl-h2" id="how-heading">Start with the workflow, not the tool.</h2>
+      </div>
+      <p class="pl-lead">Many AI projects stall because they begin with the technology instead of the problem. Ours begin with the work, and include the change management that gets a system used.</p>
+    </div>
+    <ol class="pl-steps">
+      <li><h3>Audit and prioritize</h3><p>We map current workflows, identify manual bottlenecks and rank each opportunity by value, complexity and time to benefit. You receive a prioritized roadmap before anything is built.</p></li>
+      <li><h3>Security and privacy</h3><p>Data residency, access controls, audit logging and privacy boundaries are designed at the start of the deployment.</p></li>
+      <li><h3>Build and test</h3><p>We build inside your existing environment, including Azure, Microsoft 365, your CRM and your ERP, and test with real data before rollout.</p></li>
+      <li><h3>Train and support</h3><p>Staff training, documentation and a feedback loop that improves the system over time, with our team engaged after launch.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="pl-section pl-dark" aria-labelledby="trust-heading">
+  <div class="pl-wrap">
+    <div class="pl-head pl-head--stack">
+      <p class="pl-eyebrow">Why Pro Link Systems</p>
+      <h2 class="pl-h2" id="trust-heading">AI that works inside your environment.</h2>
+    </div>
+    <div class="pl-grid pl-grid-3">
+      <div class="pl-tile"><h3>Private by design</h3><p>Private assistants and automation pipelines are deployed in your own Azure tenant or on-premises environment, so your documents and customer data stay under your control.</p></div>
+      <div class="pl-tile"><h3>Designed for adoption</h3><p>We begin with problems your team already has, agree how value will be measured, and report results in terms your leadership can use.</p></div>
+      <div class="pl-tile"><h3>Integrated with your IT</h3><p>Each deployment connects to your Microsoft 365, SharePoint, directory and line-of-business systems, and is managed by the same team that runs the rest of your technology.</p></div>
+    </div>
+    <figure class="pl-quote ai-quote">
+      <blockquote>&ldquo;Prolink helped set up a complete AI-based order processing system for our business that captures and manages communications according to our protocols and workflow. &hellip;&rdquo;</blockquote>
+      <figcaption><strong>Nasimis</strong> &middot; Google review &middot; Jun 2026</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- RELATED INSIGHTS -->
+<section class="pl-section pl-section--tight" aria-labelledby="rel-heading">
+  <div class="pl-wrap">
+    <div class="pl-head">
+      <div>
+        <p class="pl-eyebrow">Insights</p>
+        <h2 class="pl-h3" id="rel-heading">Perspectives on AI and automation.</h2>
+      </div>
+      <p><a class="pl-arrow" href="/blog/#ai-automation">All AI perspectives</a></p>
+    </div>
+    <nav class="pl-linklist" aria-label="AI perspectives">
+      <a href="/blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-">Copilot Will Find What You Overshared</a>
+      <a href="/blog/2026-08-29-t98-an-ai-acceptable-use-policy-your-los-angeles-employees-">AI Policy Should Govern Data, Not Tools</a>
+      <a href="/blog/2026-10-07-t26-custom-ai-solutions-vs-off-the-shelf-tools-for-los-ange">Custom AI Is a Permissions Project</a>
+      <a href="/blog/2026-09-01-t100-ai-meeting-assistants-and-note-takers-the-retention-pro">Who Can Search Your Meeting Transcripts</a>
+      <a href="/blog/2026-08-31-t99-choosing-ai-vendors-the-security-questions-that-actuall">Your AI Vendor Holds a Key to Your Data</a>
+      <a href="/blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-">Copilot Reads Your Permissions Aloud</a>
+    </nav>
+  </div>
+</section>
+
+<!-- FAQ (same text as the FAQPage structured data) -->
+<section class="pl-section pl-mist" aria-labelledby="faq-heading">
+  <div class="pl-wrap ai-faqs">
+    <div>
+      <p class="pl-eyebrow">Common questions</p>
+      <h2 class="pl-h2" id="faq-heading">AI and automation, answered.</h2>
+    </div>
+    <div class="pl-faq">
+      <details><summary>Does our data leave our environment when using AI tools?</summary><p>Private assistants are designed so that it does not. We deploy private RAG and AI assistants within your own Microsoft Azure tenant or on-premises environment, using isolated deployments of large language models or Microsoft's enterprise AI services, so your documents, policies and business data stay under your control rather than going to public AI services.</p></details>
+      <details><summary>What is a RAG system and why does my business need one?</summary><p>RAG stands for Retrieval-Augmented Generation. It is an AI approach that lets your team ask questions in plain English and get answers drawn from your own documents, policies, manuals and data rather than from the public internet. Instead of searching SharePoint folders or emailing HR for a policy, staff ask a private assistant and see the answer with its source. We build these inside your environment.</p></details>
+      <details><summary>What kinds of workflows can you automate?</summary><p>Any repetitive, rule-based task that consumes staff time is a candidate for automation. Common examples include document intake and routing, invoice processing, onboarding checklists, IT ticket triage, report generation, data extraction from PDFs and emails, approval workflows, and CRM data entry. We audit your workflows first to identify the highest-value opportunities before building anything.</p></details>
+      <details><summary>How does Microsoft Copilot deployment work?</summary><p>Microsoft 365 Copilot requires an eligible Microsoft 365 business or enterprise plan plus a Copilot license, proper security configuration, and permissions cleanup before it goes live. We handle the licensing review, identity and access review, SharePoint permissions audit, security hardening, pilot rollout and user training. Without this preparation, Copilot can surface sensitive files to people who should not see them.</p></details>
+      <details><summary>How do you keep AI tools from exposing sensitive data?</summary><p>We start with permissions, because an AI assistant can surface anything a user already has access to. Before anything goes live, we clean up SharePoint and file-share permissions, enforce MFA and role-based access, turn on audit logging, and set up sensitive data detection. Private deployments run inside your own Azure tenant or on-premises environment. If your business is regulated, we work alongside your compliance advisor and handle the IT side.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="pl-cta" aria-labelledby="cta-h">
+  <div class="pl-wrap">
+    <div>
+      <p class="pl-eyebrow">Next step</p>
+      <h2 class="pl-h2" id="cta-h">Start with an AI readiness conversation.</h2>
+    </div>
+    <div>
+      <p>We will ask about your current workflows, identify two or three automation opportunities, and tell you plainly whether AI is the right move now and what it would take.</p>
+      <div class="pl-actions">
+        <a href="/contact" class="btn btn-light">Schedule a Technology Consultation</a>
+        <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST / DIFFERENTIATOR -->
-<section class="ai-trust" aria-labelledby="trust-heading">
-  <div class="ai-trust-inner">
-    <div class="ai-trust-headline">
-      <span class="section-label" style="color:rgba(196,181,253,.8);">Why Pro Link</span>
-      <h2 id="trust-heading">We build AI that works<br>inside your environment — not against it.</h2>
-      <p>Your data stays yours. Your infrastructure stays yours. Your team stays in control.</p>
-    </div>
-    <div class="ai-trust-grid">
-      <div class="ai-trust-card">
-        <div class="ai-trust-icon">
-          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        </div>
-        <h3>Private &amp; Secure by Default</h3>
-        <p>No data is sent to public AI models. Every RAG system, knowledge assistant, and automation pipeline runs within your own Azure tenant or on-premises environment. Your intellectual property, your customer data, and your business documents stay entirely under your control.</p>
-      </div>
-      <div class="ai-trust-card">
-        <div class="ai-trust-icon">
-          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h3>Built for Real Businesses, Not Demos</h3>
-        <p>We've seen too many AI pilots that look impressive in a presentation and collect dust six months later. We design for adoption from day one — starting with problems your team actually has, building things they'll actually use, and measuring ROI you can actually show your leadership.</p>
-      </div>
-      <div class="ai-trust-card">
-        <div class="ai-trust-icon">
-          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
-        </div>
-        <h3>Integrated with Your Existing IT</h3>
-        <p>We don't introduce disconnected tools that create new IT headaches. Every AI deployment is integrated into your existing Microsoft 365 environment, SharePoint, Active Directory, and line-of-business applications — managed alongside the rest of your infrastructure by the same team that keeps your IT running.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<div class="cta-band" role="complementary">
-  <span class="section-label" style="display:block;margin-bottom:12px;">Ready to Explore AI for Your Business?</span>
-  <h2>Start with an AI readiness conversation</h2>
-  <p> We'll ask about your current workflows, identify 2–3 automation opportunities, and tell you honestly whether AI is the right move right now — and what it would take.</p>
-  <div class="cta-buttons">
-    <a href="contact" class="btn-ai" style="font-size:.95rem;">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      Schedule a Technology Consultation
-    </a>
-    <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
-  </div>
-</div>
-
-<!-- FAQ -->
-<section class="ai-faq" aria-labelledby="faq-heading">
-  <div class="container">
-    <div class="centered" style="margin-bottom:48px;">
-      <span class="section-label">Common Questions</span>
-      <h2 class="section-heading" id="faq-heading">AI &amp; Automation — Answered</h2>
-    </div>
-    <div class="ai-faq-list">
-      <div class="ai-faq-item">
-        <button class="ai-faq-q" aria-expanded="false" onclick="toggleAiFaq(this)">
-          Does our data leave our environment when using AI tools?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="ai-faq-a">Not with the solutions we build. Our private RAG and AI assistant implementations run within your own Microsoft Azure or on-premises environment. Your documents, policies, and business data are never sent to public AI services. We use isolated deployments of large language models or Microsoft's enterprise AI stack, which keeps your data fully under your control.</div>
-      </div>
-      <div class="ai-faq-item">
-        <button class="ai-faq-q" aria-expanded="false" onclick="toggleAiFaq(this)">
-          What is a RAG system and why does my business need one?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="ai-faq-a">RAG stands for Retrieval-Augmented Generation. It's an AI approach that lets your team ask questions in plain English and get accurate answers drawn directly from your own documents, policies, manuals, and data — rather than from the public internet. Instead of your staff searching through SharePoint folders or emailing HR for policy questions, they ask your private AI assistant and get the right answer instantly. We build these inside your environment so no data ever leaves.</div>
-      </div>
-      <div class="ai-faq-item">
-        <button class="ai-faq-q" aria-expanded="false" onclick="toggleAiFaq(this)">
-          What kinds of workflows can you automate?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="ai-faq-a">Any repetitive, rule-based task that consumes staff time is a candidate for automation. Common examples include document intake and routing, invoice processing, onboarding checklists, IT ticket triage, report generation, data extraction from PDFs and emails, approval workflows, and CRM data entry. We audit your workflows first to identify the highest-ROI automation opportunities before building anything.</div>
-      </div>
-      <div class="ai-faq-item">
-        <button class="ai-faq-q" aria-expanded="false" onclick="toggleAiFaq(this)">
-          How does Microsoft Copilot deployment work?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="ai-faq-a">Microsoft 365 Copilot requires an eligible Microsoft 365 business or enterprise plan plus a Copilot license, proper security configuration, and permissions cleanup before it goes live. We handle the licensing assessment, identity and access review, SharePoint permissions audit, security hardening, pilot rollout, and user training. Without this preparation, Copilot can surface sensitive files to the wrong people — we make sure it doesn't.</div>
-      </div>
-      <div class="ai-faq-item">
-        <button class="ai-faq-q" aria-expanded="false" onclick="toggleAiFaq(this)">
-          How do you keep AI tools from exposing sensitive data?
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="ai-faq-a">We start with permissions, because an AI assistant can surface anything a user already has access to. Before anything goes live, we clean up SharePoint and file-share permissions, enforce MFA and role-based access, turn on audit logging, and set up sensitive data detection. Private deployments run inside your own Azure tenant or on-premises environment. If your business is regulated, we work alongside your compliance advisor and handle the IT side.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <!-- PL:FOOTER -->
+</main>
 <footer class="pl-footer" role="contentinfo">
   <div class="pl-footer-top">
     <div class="pl-footer-brand">
@@ -898,8 +576,8 @@
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -911,7 +589,7 @@
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -964,21 +642,6 @@
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-
-<script>
-  function toggleAiFaq(btn) {
-    var item = btn.closest('.ai-faq-item');
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.ai-faq-item.open').forEach(function(el) {
-      el.classList.remove('open');
-      el.querySelector('.ai-faq-q').setAttribute('aria-expanded', 'false');
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  }
-</script>
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
 </body>
 </html>

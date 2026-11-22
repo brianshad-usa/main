@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-08-23",
-  "dateModified": "2026-08-23",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-08-23-t95-mfa-fatigue-attacks-and-number-matching-closing-the-app"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,70 +331,81 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>Where MFA Fatigue Attacks Went Next</h1>
-      <p class="pl-dek">Number matching killed blind push spam. Attackers moved to proxy phishing and MFA enrollment resets — the approval prompt was never the control that mattered.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-08-23">August 23, 2026</time><br>5 min read</div></div>
+      <p class="pl-dek">Number matching ended blind push spam. Attackers moved to proxy phishing, device codes, app consents and enrollment resets, where the prompt is not the control.</p>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-08-23">August 23, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>7 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-08-23-t95-mfa-fatigue-attacks-and-number-matching-closing-the-app.svg" width="1200" height="675" alt="A phone receiving a stack of prompts while one path goes around it" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-08-23-t95-mfa-fatigue-attacks-and-number-matching-closing-the-app.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#what-number-matching-proves-and-what-it-does-not">What number matching proves, and what it does not</a></li><li><a href="#the-authentication-paths-that-never-ring-your-phone">The authentication paths that never ring your phone</a></li><li><a href="#enrollment-is-now-your-highest-privilege-operation">Enrollment is now your highest-privilege operation</a></li><li><a href="#the-decisions-worth-making-this-quarter">The decisions worth making this quarter</a></li><li><a href="#the-prompt-was-never-the-control">The prompt was never the control</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#what-number-matching-proves-and-what-it-does-not">What number matching proves, and what it does not</a></li><li><a href="#the-authentication-paths-that-number-matching-never-touc">The authentication paths that number matching never touches</a></li><li><a href="#enrollment-is-now-your-highest-privilege-operation">Enrollment is now your highest-privilege operation</a></li><li><a href="#the-decisions-worth-making-this-quarter">The decisions worth making this quarter</a></li><li><a href="#the-prompt-was-never-the-control">The prompt was never the control</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
-<p>Number matching worked. That is the part most security programs never absorbed, because a control that succeeds quietly never gets a retrospective.</p>
+<p>Number matching worked. Security programs rarely absorb that part, because a control that succeeds quietly never gets a retrospective.</p>
 
-<p>The attack it defeated — push bombing, MFA fatigue, whatever your vendor called it — was the cheapest intrusion technique of the last decade. An attacker holding a password from a credential dump fired approval prompts at a phone until the owner tapped Approve to make the buzzing stop. No malware. No exploit. Just attrition against a tired person at eleven at night. Then the approval prompt started demanding that the user read a two-digit number off the screen that initiated the sign-in, and reflexive approval stopped being possible.</p>
+<p>The attack it defeated, known as push bombing or multi-factor authentication (MFA) fatigue, was a cheap one. An attacker holding a password from a credential dump fired approval prompts at a phone until the owner tapped Approve to make the buzzing stop. No malware. No exploit. Just attrition against a tired person at eleven at night. Then the approval prompt started demanding a number shown on the screen that initiated the sign-in, and reflexive approval stopped being possible. Microsoft now applies number matching to <a href="https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-number-match">every Authenticator push notification, with no opt-out for users</a>.</p>
 
-<p>So the money moved. That is the only dependable law in this field, and it is the actual subject here.</p>
+<p>So the money moved. That is the most dependable law in this field, and it is the actual subject here. For the IT leader who owns MFA and the executive who funds it, the question is which of the remaining paths to close first.</p>
 
 <h2 id="what-number-matching-proves-and-what-it-does-not">What number matching proves, and what it does not</h2>
 
-<p>The control does one thing well. It establishes that the person approving a sign-in is looking at the same screen that started it. A user can no longer consent to an authentication they know nothing about.</p>
+<p>The control does one thing well. It requires whoever approves a sign-in to know the number displayed where the sign-in started. A user can no longer consent by reflex to an authentication they know nothing about.</p>
 
-<p>Notice the boundary of that guarantee. Number matching validates <strong>presence</strong>. It does not validate <strong>destination</strong>. If the sign-in page the user is reading happens to be a proxy operated by an attacker, the number on screen is the real number, relayed from the real identity provider a fraction of a second earlier. The victim types it correctly. Authentication succeeds legitimately. Meanwhile the attacker in the middle collects the session cookie and walks away with an authenticated session.</p>
+<p>Notice the boundary of that guarantee. Number matching proves <strong>knowledge of a number</strong>. It does not prove <strong>destination</strong>, and it does not prove who supplied the number. If the sign-in page the user is reading happens to be a proxy operated by an attacker, the number on screen is the real number, relayed from the real identity provider a fraction of a second earlier. The victim types it correctly. Authentication succeeds legitimately. Meanwhile the attacker in the middle collects the session cookie and walks away with an authenticated session. A caller posing as IT support can get a similar result by reading the number aloud.</p>
 
-<p>Phishing kits that proxy a genuine sign-in page rather than imitate one are no longer bespoke work — that is analysis, not a claim about volume. Against that technique, number matching is not a defense. Neither is a longer password, nor awareness training that teaches people to hunt for misspelled domains. The user did everything correctly and still lost the session.</p>
+<p>The Cybersecurity and Infrastructure Security Agency (CISA) says the same thing in one line of its ranking of MFA methods: push with number matching is <a href="https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf">resistant to push bombing and vulnerable to phishing</a>. Phishing kits that proxy a genuine sign-in page rather than imitate one are no longer bespoke work; that is analysis, not a claim about volume. Against that technique, neither number matching nor a longer password is a defense, and neither is awareness training that teaches people to hunt for misspelled domains. The user did everything correctly and still lost the session.</p>
 
-<h2 id="the-authentication-paths-that-never-ring-your-phone">The authentication paths that never ring your phone</h2>
+<p>Check your exceptions as well. The Network Policy Server extension, which some companies still use to add MFA to a VPN or a Remote Desktop gateway, can present plain Approve and Deny depending on its version and configuration. If that is how your remote access works, the original attack may still be open there.</p>
+
+<h2 id="the-authentication-paths-that-number-matching-never-touc">The authentication paths that number matching never touches</h2>
 
 <p>Four routes deserve a line on an executive risk register.</p>
 
 <ul>
-<li><strong>Session and token theft.</strong> A stolen cookie replays as an already-authenticated user. No prompt, no number, no fatigue to exploit. The countermeasures live in device compliance, token binding, and continuous access evaluation — not in the authenticator app.</li>
-<li><strong>Consent phishing.</strong> A user is asked to grant an application permission to read mail or files. The grant is legitimate OAuth, issued by a legitimately authenticated person. Resetting the password changes nothing; the application keeps its access until somebody goes looking for it.</li>
-<li><strong>Device code and cross-device flows.</strong> Sign-in flows built for televisions and conference room displays make effective lures, because the victim is asked to enter a code on a genuine Microsoft page. Everything looks correct because everything is correct.</li>
-<li><strong>Machine and legacy identities.</strong> Service accounts, API keys, and app registrations that were never in scope for MFA to begin with. Few organizations can produce a current list of them, and fewer review that list on a schedule.</li>
+<li><strong>Session and token theft.</strong> A stolen cookie replays as an already-authenticated user. No prompt, no number, no fatigue to exploit. The countermeasures live in endpoint protection, device requirements, sign-in frequency and token binding. Binding has limits today: Microsoft's <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-token-protection">Token Protection</a> covers native apps on Windows and Apple platforms, while browser support is a preview limited to web apps that access Azure Resource Manager.</li>
+<li><strong>Consent phishing.</strong> A user is asked to grant an application permission to read mail or files. The grant is legitimate OAuth, issued by a legitimately authenticated person. The FBI's September 2026 notice is plain that <a href="https://www.ic3.gov/PSA/2026/PSA260901">changing the password does not revoke the app's token</a>; access continues until somebody goes looking for it.</li>
+<li><strong>Device code and cross-device flows.</strong> Sign-in flows built for televisions and conference room displays make effective lures, because the victim is asked to enter a code on a genuine Microsoft page. In May 2026 the FBI described <a href="https://www.ic3.gov/PSA/2026/PSA260521">a phishing-as-a-service kit built on this flow</a> and advised blocking it by policy, with documented exceptions. Everything looks correct because everything is correct.</li>
+<li><strong>Machine and legacy identities.</strong> Service accounts, API keys, and app registrations that were never in scope for MFA to begin with. Ask for the current list and the date it was last reviewed. The pause before the answer is informative.</li>
 </ul>
 
-<p>None of this is exotic. All of it shares one property: the human approval step, the thing number matching hardened so effectively, is not in the path at all.</p>
+<p>None of this is exotic. All of it shares one property: the push prompt that number matching hardened is either absent or answered correctly by someone who has been deceived about what it approves.</p>
+
+<table class="pl-compare"><caption>Which control answers which route</caption><thead><tr><th scope="col">Route</th><th scope="col">Does number matching stop it?</th><th scope="col">What does</th></tr></thead><tbody>
+<tr><td>Blind push spam</td><td>Yes, where it is enforced</td><td>Number matching; find the exceptions</td></tr>
+<tr><td>Proxy phishing page</td><td>No</td><td>Passkeys, FIDO2 keys or certificate sign-in; a managed-device requirement</td></tr>
+<tr><td>Cookie taken from an infected device</td><td>No</td><td>Endpoint protection, token binding where supported, rehearsed session revocation</td></tr>
+<tr><td>Device code lure</td><td>No</td><td>Conditional Access policy that blocks the flow</td></tr>
+<tr><td>Malicious app consent</td><td>No</td><td>Restricted user consent; revoking the grant itself</td></tr>
+<tr><td>Reset by phone call</td><td>No</td><td>A written verification standard with a second approver</td></tr>
+</tbody></table>
 
 <h2 id="enrollment-is-now-your-highest-privilege-operation">Enrollment is now your highest-privilege operation</h2>
 
 <p>Here is the exposure that belongs in front of a board, and the one that tends to be reasoned about least clearly.</p>
 
-<p>Every strong authentication system needs a recovery path. Phones get lost. Employees swap hardware. Someone flies to a conference and leaves the authenticator in a drawer in <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>. That recovery path — re-enrolling an MFA method — is functionally the ability to mint a new credential for an account. It carries more power than a password reset, and in a great many organizations it is protected by less process.</p>
+<p>Every strong authentication system needs a recovery path. Phones get lost. Employees swap hardware. Someone flies to a conference and leaves the authenticator in a drawer in <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>. That recovery path, re-enrolling an MFA method, is functionally the ability to mint a new credential for an account. It carries more power than a password reset, and it is often protected by less process.</p>
 
-<p>Attackers understand the arithmetic. The call comes in late on a Friday from someone who sounds exactly like the controller, who is boarding a flight, who cannot reach email, who needs the authenticator reset right now. Synthetic voice has moved from research demonstration to ordinary tooling, and a usable sample can come from a recorded webinar or a voicemail greeting. That is an observation about capability, not a claim about any specific incident.</p>
+<p>Attackers understand the arithmetic. The call comes in late on a Friday from someone who sounds exactly like the controller, who is boarding a flight, who cannot reach email, who needs the authenticator reset right now. CISA and the FBI have <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a">documented callers persuading help desks to transfer MFA</a> to devices the caller controls. Synthetic voice has moved from research demonstration to ordinary tooling, and a usable sample can come from a recorded webinar or a voicemail greeting.</p>
 
-<p>The defense here is procedural rather than technical. Enrollment and reset requests should be verified out-of-band against something a caller cannot talk their way past: a manager approval, a callback to a number already on file, a video check against a record. Whoever answers your <a href="/it-help-desk">help desk</a> is holding the last line of your identity policy, and most companies have never written down what that person is supposed to do when the voice on the phone is urgent and familiar.</p>
+<p>The defense here is procedural rather than technical. Enrollment and reset requests should be verified out-of-band against something a caller cannot talk their way past: a manager approval, a callback to a number already on file, an in-person check for privileged accounts. A face on a video call is no longer in that category. Whoever answers your <a href="/it-help-desk">help desk</a> is holding the last line of your identity policy. If nobody has written down what that person is supposed to do when the voice on the phone is urgent and familiar, that page is the first deliverable.</p>
 
 <h2 id="the-decisions-worth-making-this-quarter">The decisions worth making this quarter</h2>
 
-<p>If number matching is enabled across your tenant, you have closed the loophole that mattered in 2022. The 2026 decision is a different one, and it is as much a budgeting question as a security question.</p>
+<p>Number matching answered the loophole CISA was warning about in 2022. The 2026 decision is a different one, and it is as much a budgeting question as a security question.</p>
 
-<p>Move the accounts that matter to phishing-resistant credentials. Passkeys and FIDO2 security keys are bound cryptographically to the origin that issued them, so a proxy sign-in page cannot use them — the credential simply refuses to operate on the wrong domain. That is a property of the protocol, not a vendor promise. Begin with executives, finance, IT administrators, and anyone who can move money or change permissions.</p>
+<p>Move the accounts that matter to phishing-resistant credentials. Passkeys and FIDO2 security keys are bound cryptographically to the domain they were registered with, so a proxy sign-in page cannot use them; the credential simply refuses to operate on the wrong domain. That is a property of the protocol, not a vendor promise. Begin with executives, finance, IT administrators, and anyone who can move money or change permissions.</p>
 
-<p>Pair identity with device next. A stolen token loses most of its value when <a href="/cybersecurity-services">IT security</a> policy requires a compliant, managed device before granting access to <a href="/cloud-services">Microsoft 365</a>. Conditional Access remains the largest unrealized gain available to mid-market organizations, and it usually runs on licensing already purchased.</p>
+<p>Pair identity with device next. When <a href="/cybersecurity-services">IT security</a> policy requires a compliant, managed device before granting access to <a href="/cloud-services">Microsoft 365</a>, a sign-in relayed through an attacker's machine fails. The check happens when tokens are issued and refreshed, so a token copied from a compliant device is a separate problem, which is why revocation and binding sit beside it. Conditional Access needs Entra ID P1 licensing; find out whether your plan already includes it before buying anything. In my assessment it remains the most underused control in mid-market tenants.</p>
 
-<p>Three more items deserve a calendar entry: an inventory of OAuth application consents, a written list of who may approve an MFA reset, and a verification script the service desk actually follows. None of it is glamorous. All of it is cheaper than the alternative.</p>
+<p>Three more items deserve a calendar entry: an inventory of OAuth application consents, a written list of who may approve an MFA reset, and a verification script the service desk actually follows. None of it is glamorous, and most of it is process work.</p>
 
 <h2 id="the-prompt-was-never-the-control">The prompt was never the control</h2>
 
@@ -402,7 +413,15 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>Organizations that handle the next few years well will be the ones that stopped asking whether MFA is turned on and started asking which of their authentication paths still rests on a human judgment call made under pressure.</p>
 
-<p>Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999, with an in-house, US-based help desk that answers live — no phone tree, no hold queue — and an average ticket first-response time of 15 minutes. If you want an unsentimental review of your identity controls and where the remaining approval gaps sit, our <a href="/managed-it-services">managed IT services</a> team is a reasonable place to begin.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-number-match">How number matching works in MFA push notifications for Authenticator</a>, Microsoft Learn.</li>
+<li><a href="https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf">Implementing Phishing-Resistant MFA</a>, CISA.</li>
+<li><a href="https://www.ic3.gov/PSA/2026/PSA260521">Kali365 Phishing-as-a-Service Kit Hijacks Microsoft 365 Access Tokens</a>, FBI Internet Crime Complaint Center.</li>
+<li><a href="https://www.ic3.gov/PSA/2026/PSA260901">Malicious Cyber Actors Gain Access to Victim Accounts Through Consent Phishing</a>, FBI Internet Crime Complaint Center.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-token-protection">Token Protection in Conditional Access</a>, Microsoft Learn.</li>
+<li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a">Scattered Spider, advisory AA23-320A</a>, CISA and FBI.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -412,7 +431,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -464,8 +483,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -477,7 +496,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -530,6 +549,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

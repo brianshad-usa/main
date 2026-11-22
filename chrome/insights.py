@@ -45,8 +45,9 @@ import insight_art   # noqa: E402
 SITE = "https://prolinksystems.com"
 REGISTRY = os.path.join(ROOT, "editorial", "blog_registry.json")
 ART_DIR = "assets/insights"
-JS_VERSION = "20261121"
-PAGE_SIZE = 12            # cards shown before "Show more articles" (all are in the HTML)
+JS_VERSION = "20261122"
+PAGE_SIZE = 9             # cards shown before "Show more articles"
+LATEST_MAX = 24           # cards available in the Latest section (the Library lists every article)
 WORDS_PER_MINUTE = 230
 TOC_MIN_SECTIONS = 4      # a table of contents appears when an article has at least this many H2 sections
 HOME_CARDS = 4            # Brian: the home page features no more than four articles
@@ -228,10 +229,16 @@ def ensure_art(reg, slug):
 
 
 def art_img(reg, slug, eager=False):
+    """The article's illustration. Its alt text describes the drawing (chrome/art_scenes) when the article has its own."""
     cat = category(reg, reg["posts"][slug]["category"])
     load_attr = 'fetchpriority="high"' if eager else 'loading="lazy"'
     return ('<img class="pl-art-img" src="/%s" width="1200" height="675" alt="%s" %s decoding="async">'
-            % (art_rel(slug), A(cat["alt"]), load_attr))
+            % (art_rel(slug), A(insight_art.scene_alt(slug) or cat["alt"]), load_attr))
+
+
+def dek(p):
+    """The standfirst shown on the page (editorial `dek` when set, else the meta description)."""
+    return p.get("dek") or p["summary"]
 
 
 def time_tag(iso):
@@ -260,11 +267,11 @@ def card(reg, slug, level="h3"):
     p = reg["posts"][slug]
     cat = category(reg, p["category"])
     topic = re.sub(r"^\d{4}-\d{2}(?:-\d{2})?-(?:t\d+-)?", "", slug).replace("-", " ")   # the original topic wording
-    text = " ".join([p["title"], p["summary"], cat["name"], topic]).lower()
+    text = " ".join([p["title"], dek(p), cat["name"], topic]).lower()
     return ('<li class="pl-icard" data-cat="%s" data-text="%s"><a href="/blog/%s">%s<span class="pl-cat">%s</span>'
             '<%s>%s</%s><p>%s</p><span class="pl-meta">%s<span>%d min read</span></span></a></li>'
             % (cat["slug"], A(text), slug, art_img(reg, slug), E(cat["name"]), level, E(p["title"]), level,
-               E(p["summary"]), time_tag(p["date_published"]), minutes(p)))
+               E(dek(p)), time_tag(p["date_published"]), minutes(p)))
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -290,7 +297,8 @@ def add_heading_ids(body):
                 hid, n = "%s-%d" % (base, n), n + 1
             seen.add(hid)
             attrs = ' id="%s"%s' % (hid, attrs)
-        heads.append((hid, text))
+        if "pl-refs-h" not in attrs:
+            heads.append((hid, text))
         return "<h2%s>%s</h2>" % (attrs, inner)
 
     return RE_H2.sub(fix, body), heads
@@ -359,24 +367,25 @@ def article_main(reg, slug, body):
     _, a = author_for(reg, p)
     body, heads = add_heading_ids(body.strip("\n"))
     toc = heads if len(heads) >= TOC_MIN_SECTIONS else []
-    parts = ['<main id="pl-main" class="pl-art">',
-             '<header class="pl-arthead">\n  <div class="pl-wrap">',
-             '    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>',
+    parts = ['<main class="pl-art">',
+             '<header class="pl-arthead">\n  <div class="pl-wrap pl-arthead-grid">',
              '    <div class="pl-arthead-inner">',
+             '      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>',
              '      <p class="pl-cat"><a href="/blog/#%s">%s</a></p>' % (cat["slug"], E(cat["name"])),
              '      <h1>%s</h1>' % E(p["title"]),
-             '      <p class="pl-dek">%s</p>' % E(p["summary"]),
+             '      <p class="pl-dek">%s</p>' % E(dek(p)),
              '      ' + byline(reg, p, a),
-             '    </div>\n  </div>\n</header>',
-             '<figure class="pl-art-hero"><div class="pl-wrap">%s</div></figure>' % art_img(reg, slug, eager=True),
+             '    </div>',
+             '    <figure class="pl-arthead-fig">%s</figure>' % art_img(reg, slug, eager=True),
+             '  </div>\n</header>',
              '<div class="pl-wrap">\n<div class="pl-art-layout%s">' % ("" if toc else " pl-art-layout--single")]
     if toc:
-        parts.append('<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol>%s</ol></nav>'
-                     % "".join('<li><a href="#%s">%s</a></li>' % (h, E(t)) for h, t in toc))
+        parts.append('<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol>%s</ol></details></nav>'
+                     % "".join('<li><a href="#%s">%s</a></li>' % (h, E(x)) for h, x in toc))
     parts.append('<article class="pl-art-body">')
     if p.get("takeaways"):
         parts.append('<div class="pl-takeaways"><p>Key takeaways</p><ul>%s</ul></div>'
-                     % "".join("<li>%s</li>" % E(t) for t in p["takeaways"]))
+                     % "".join("<li>%s</li>" % E(x) for x in p["takeaways"]))
     parts += ["<!-- PL:BODY -->", body, "<!-- /PL:BODY -->", capbox(reg, p, cat), author_box(a), "</article>",
               "</div>\n</div>"]
     rel = related(reg, slug)
@@ -387,6 +396,16 @@ def article_main(reg, slug, body):
                      '    <ul class="pl-ins-grid">%s</ul>\n  </div>\n</section>' % "".join(card(reg, s) for s in rel))
     parts += [cta_band(reg, cat, p.get("cta")), "</main>"]
     return "\n".join(parts)
+
+
+ARTICLE_JS = '<script src="/assets/js/article.js?v=%s" defer></script>' % JS_VERSION
+
+
+def with_article_js(page):
+    """Load the small article script (contents list + reading position) exactly once, before </body>."""
+    page = re.sub(r'[ \t]*<script src="/assets/js/article\.js[^"]*" defer></script>\n?', "", page)
+    k = page.rfind("</body>")
+    return page[:k] + ARTICLE_JS + "\n" + page[k:]
 
 
 def author_node(reg, p):
@@ -429,6 +448,7 @@ def update_head(head, reg, slug):
     def fix_block(m):
         block = m.group(2)
         if '"BlogPosting"' in block:
+            block = re.sub(r'("dateModified":\s*")[^"]*(")', lambda m_: m_.group(1) + p["date_modified"][:10] + m_.group(2), block)
             k = block.find('"author"')
             if k >= 0:
                 s = block.find("{", k)
@@ -463,11 +483,12 @@ def rebuild_post(reg, slug):
     rel = "blog/%s.html" % slug
     t = read(rel).replace("\r\n", "\n")
     body = extract_body(t)
+    reg["posts"][slug]["words"] = word_count(body)
     a = t.index("<!-- /PL:HEADER -->") + len("<!-- /PL:HEADER -->")
     b = t.index("<!-- PL:FOOTER -->")
     h = t.index("</head>")
     page = update_head(t[:h], reg, slug) + t[h:a] + "\n\n" + article_main(reg, slug, body) + "\n\n" + t[b:]
-    return write(rel, chrome(page, rel))
+    return write(rel, with_article_js(chrome(page, rel)))
 
 
 def new_post_page(reg, slug, seo_title, meta):
@@ -504,7 +525,7 @@ def new_post_page(reg, slug, seo_title, meta):
             "</head>\n<body>\n<!-- PL:HEADER -->\n<!-- /PL:HEADER -->\n\n")
     body = p.pop("_body")
     page = head + article_main(reg, slug, body) + "\n\n<!-- PL:FOOTER -->\n<!-- /PL:FOOTER -->\n</body>\n</html>\n"
-    return chrome(page, "blog/%s.html" % slug)
+    return with_article_js(chrome(page, "blog/%s.html" % slug))
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -515,72 +536,84 @@ INDEX_META = ("Expert IT advice, cybersecurity tips, and managed IT insights for
               "Systems &mdash; proudly serving LA companies since 1999.")
 
 
+def lead_panel(reg, slug):
+    p = reg["posts"][slug]
+    cat = category(reg, p["category"])
+    _, a = author_for(reg, p)
+    return ('<article class="pl-feature"><a href="/blog/%s"><div class="pl-lead-img">%s</div><div class="pl-lead-text">'
+            '<p class="pl-lead-k">Featured analysis</p><span class="pl-cat">%s</span><h3 class="pl-lead-title">%s</h3>'
+            '<p class="pl-lead-dek">%s</p><span class="pl-meta"><strong>%s</strong>%s<span>%d min read</span></span>'
+            '<span class="pl-lead-more">Read the analysis</span></div></a></article>'
+            % (slug, art_img(reg, slug, eager=True), E(cat["name"]), E(p["title"]), E(dek(p)), E(a["name"]),
+               time_tag(p["date_published"]), minutes(p)))
+
+
+def mini_card(reg, slug):
+    p = reg["posts"][slug]
+    return ('<li class="pl-mini"><a href="/blog/%s">%s<span class="pl-cat">%s</span><h3>%s</h3>'
+            '<span class="pl-meta">%s<span>%d min read</span></span></a></li>'
+            % (slug, art_img(reg, slug), E(category(reg, p["category"])["name"]), E(p["title"]),
+               time_tag(p["date_published"]), minutes(p)))
+
+
 def index_page(reg):
     ix = reg["index"]
     items = listed(reg)
     f = reg["featured"]
     lead = f["lead"]
     picks = [s for s in f["picks"] if s in reg["posts"] and s != lead and not reg["posts"][s].get("noindex")][:4]
-    lp = reg["posts"][lead]
-    lcat = category(reg, lp["category"])
-    _, la = author_for(reg, lp)
-
+    shown = {lead} | set(picks)
+    latest = [s for s, _ in items if s not in shown][:LATEST_MAX]
     counts = {}
     for _, p in items:
         counts[p["category"]] = counts.get(p["category"], 0) + 1
     plural = lambda n: "%d article%s" % (n, "" if n == 1 else "s")
     topics = "".join('<a href="#%s"><span>%s</span><small>%s</small></a>' % (c["slug"], E(c["name"]), plural(counts.get(c["name"], 0)))
-                     for c in reg["categories"] if counts.get(c["name"])) +         '<a href="#latest"><span>All perspectives</span><small>%s</small></a>' % plural(len(items))
-    side = "".join(
-        '<li class="pl-feat-item"><a href="/blog/%s">%s<div><span class="pl-cat">%s</span><h3>%s</h3>'
-        '<span class="pl-meta">%s<span>%d min read</span></span></div></a></li>'
-        % (s, art_img(reg, s), E(category(reg, reg["posts"][s]["category"])["name"]), E(reg["posts"][s]["title"]),
-           time_tag(reg["posts"][s]["date_published"]), minutes(reg["posts"][s])) for s in picks)
-    filters = '<button type="button" data-cat="" aria-pressed="true">All topics</button>' + "".join(
+                     for c in reg["categories"] if counts.get(c["name"])) + \
+        '<a href="#library"><span>All perspectives</span><small>%s</small></a>' % plural(len(items))
+    chips = '<button type="button" data-cat="" aria-pressed="true">All topics</button>' + "".join(
         '<button type="button" data-cat="%s" aria-pressed="false">%s</button>' % (c["slug"], E(c["name"]))
-        for c in reg["categories"])
-    archive = []
+        for c in reg["categories"] if counts.get(c["name"]))
+    sections = []
     for c in reg["categories"]:
         posts = [(s, p) for s, p in items if p["category"] == c["name"]]
         if not posts:
             continue
-        archive.append('<section id="%s" aria-labelledby="arch-%s"><h3 id="arch-%s">%s <span>(%d)</span></h3>'
-                       '<p class="pl-arch-sum">%s</p><ul class="pl-arch-list">%s</ul></section>'
-                       % (c["slug"], c["slug"], c["slug"], E(c["name"]), len(posts), E(c["summary"]),
-                          "".join('<li><a href="/blog/%s">%s<time datetime="%s">%s</time></a></li>'
-                                  % (s, E(p["title"]), p["date_published"][:10], long_date(p["date_published"]))
-                                  for s, p in posts)))
+        rows = "".join(
+            '<li class="pl-lib-row" data-text="%s"><a href="/blog/%s"><span>%s</span></a><span class="pl-lib-meta">%s'
+            '<span>%d min</span></span></li>'
+            % (A(" ".join([p["title"], dek(p), c["name"], re.sub(r"^\d{4}-\d{2}(?:-\d{2})?-(?:t\d+-)?", "", s).replace("-", " ")]).lower()),
+               s, E(p["title"]), time_tag(p["date_published"]), minutes(p)) for s, p in posts)
+        sections.append('<details class="pl-lib" id="%s" data-cat="%s"><summary><h3>%s</h3><span class="pl-lib-sum">%s</span>'
+                        '<span class="pl-lib-n">%s</span></summary><ul>%s</ul></details>'
+                        % (c["slug"], c["slug"], E(c["name"]), E(c["summary"]), plural(len(posts)), rows))
     main = "\n".join([
-        '<main id="pl-main" class="pl-ins">',
+        '<main class="pl-ins">',
         '<header class="pl-inshead">\n  <div class="pl-wrap">',
         '    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Insights</nav>',
-        '    <p class="pl-eyebrow">%s</p>' % E(ix["eyebrow"]),
         '    <h1 class="pl-h1">%s</h1>' % E(ix["h1"]),
-        '    <p class="pl-lead">%s</p>' % E(ix["lead"]),
+        '    <p class="pl-lead-in">%s</p>' % E(ix["lead"]),
         '    <nav class="pl-topics" aria-label="Topics">%s</nav>' % topics,
         '  </div>\n</header>',
         '<section class="pl-section pl-ins-featured" aria-labelledby="featured-h">\n  <div class="pl-wrap">',
         '    <h2 class="pl-eyebrow" id="featured-h">Featured</h2>',
-        '    <div class="pl-feat">',
-        '      <article class="pl-feat-main"><a href="/blog/%s">%s<span class="pl-cat">%s</span><h3 class="pl-feat-title">%s</h3>'
-        '<p>%s</p><span class="pl-meta"><strong>%s</strong>%s<span>%d min read</span></span></a></article>'
-        % (lead, art_img(reg, lead, eager=True), E(lcat["name"]), E(lp["title"]), E(lp["summary"]), E(la["name"]),
-           time_tag(lp["date_published"]), minutes(lp)),
-        '      <ol class="pl-feat-side">%s</ol>' % side,
-        '    </div>\n  </div>\n</section>',
-        '<section class="pl-section pl-mist" id="latest" aria-labelledby="latest-h">\n  <div class="pl-wrap">',
+        '    ' + lead_panel(reg, lead),
+        '    <ul class="pl-minis">%s</ul>' % "".join(mini_card(reg, s) for s in picks),
+        '  </div>\n</section>',
+        '<section class="pl-section pl-mist pl-ins-latest" id="latest" aria-labelledby="latest-h">\n  <div class="pl-wrap">',
         '    <div class="pl-ins-tools"><h2 class="pl-h2" id="latest-h">Latest perspectives</h2>'
-        '<div class="pl-ins-search pl-ins-js"><label for="pl-ins-q">Search insights</label>'
-        '<input type="search" id="pl-ins-q" placeholder="Search by keyword" autocomplete="off"></div></div>',
-        '    <div class="pl-ins-filter pl-ins-js" role="group" aria-label="Filter by topic">%s</div>' % filters,
-        '    <p class="pl-ins-count" aria-live="polite">%d articles</p>' % len(items),
-        '    <ul class="pl-ins-grid" id="pl-ins-list" data-page="%d">%s</ul>' % (PAGE_SIZE, "".join(card(reg, s) for s, _ in items)),
-        '    <p class="pl-ins-empty" hidden>No articles match that search. Try another keyword or topic.</p>',
+        '<a class="pl-arrow" href="#library">Browse all %d by topic</a></div>' % len(items),
+        '    <ul class="pl-ins-grid" id="pl-ins-list" data-page="%d">%s</ul>' % (PAGE_SIZE, "".join(card(reg, s) for s in latest)),
         '    <div class="pl-ins-more pl-ins-js"><button type="button" class="btn btn-outline">Show more articles</button></div>',
         '  </div>\n</section>',
-        '<section class="pl-section pl-ins-archive" aria-labelledby="archive-h">\n  <div class="pl-wrap">',
-        '    <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Archive</p><h2 class="pl-h2" id="archive-h">Every article, by topic.</h2></div>',
-        '    <div class="pl-archive">%s</div>' % "".join(archive),
+        '<section class="pl-section pl-ins-library" id="library" aria-labelledby="library-h">\n  <div class="pl-wrap">',
+        '    <div class="pl-ins-tools"><h2 class="pl-h2" id="library-h">Library</h2>'
+        '<div class="pl-ins-search pl-ins-js"><label for="pl-ins-q">Search all articles</label>'
+        '<input type="search" id="pl-ins-q" placeholder="Search by keyword" autocomplete="off"></div></div>',
+        '    <div class="pl-ins-filter pl-ins-js" role="group" aria-label="Filter by topic">%s</div>' % chips,
+        '    <p class="pl-ins-count" aria-live="polite">%s</p>' % plural(len(items)),
+        '    <div class="pl-libs">%s</div>' % "".join(sections),
+        '    <p class="pl-ins-empty" hidden>No articles match that search. Try another keyword or topic.</p>',
         '  </div>\n</section>',
         cta_band(reg),
         '</main>'])
@@ -657,7 +690,7 @@ def profile_page(reg, key):
     mine = [s for s, p in listed(reg) if author_for(reg, p)[0] == key]
     flags = "".join('<span class="pl-flag">Review %s</span>' % r for r in pr.get("flags", []))
     main = "\n".join([
-        '<main id="pl-main">',
+        '<main>',
         '<section class="pl-pagehead">\n  <div class="pl-wrap">',
         '    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/about">About</a><span>/</span>%s</nav>' % E(a["name"]),
         '    <p class="pl-eyebrow">Leadership</p>',
@@ -706,6 +739,25 @@ def add_to_sitemap(loc, lastmod):
     entry = ("  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>monthly</changefreq>\n"
              "    <priority>0.6</priority>\n  </url>\n" % (loc, lastmod)).replace("\n", nl)
     return write("sitemap.xml", sm.replace("</urlset>", entry + "</urlset>"))
+
+
+def sync_sitemap_dates(reg):
+    """lastmod of an article in sitemap.xml = the date its content last changed (registry date_modified)."""
+    sm = read("sitemap.xml")
+    changed = 0
+    for slug, p in reg["posts"].items():
+        if p.get("noindex"):
+            continue
+        loc = "%s/blog/%s" % (SITE, slug)
+        pat = re.compile(r"(<loc>%s</loc>\s*<lastmod>)([^<]+)(</lastmod>)" % re.escape(loc))
+        m = pat.search(sm)
+        want = p.get("date_modified") or p["date_published"]
+        if m and m.group(2)[:10] != want[:10] and want[:10] > p["date_published"][:10]:
+            sm = pat.sub(lambda g: g.group(1) + want[:10] + g.group(3), sm, count=1)
+            changed += 1
+    if changed:
+        write("sitemap.xml", sm)
+    return changed
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -764,6 +816,8 @@ def rebuild(reg):
         changed.append("blog/index.html")
     if write_home(reg):
         changed.append("index.html")
+    if sync_sitemap_dates(reg):
+        changed.append("sitemap.xml")
     for key, a in reg["authors"].items():
         if a.get("profile_page"):
             rel, text = profile_page(reg, key)

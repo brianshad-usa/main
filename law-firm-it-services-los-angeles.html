@@ -181,7 +181,7 @@
   <script src="/contact-form.js?v=20261109" defer></script>
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261121">
+  <link rel="stylesheet" href="_shared.css?v=20261122">
   <style>
     /* ── INDUSTRY HERO ─────────────────────────────────────── */
     .hero {
@@ -680,13 +680,13 @@
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -737,7 +737,7 @@
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -747,7 +747,7 @@
     <a href="/support">Client Support</a>
   </div>
 </div>
-<span id="pl-main" tabindex="-1"></span>
+<main id="pl-main" tabindex="-1">
 <!-- /PL:HEADER -->
 
 <!-- HERO -->
@@ -836,41 +836,41 @@
             Legal IT Specialists &middot; Since 1999
           </div>
           <h2>Schedule a Legal IT Consultation</h2>
-          <p>We'll review your current infrastructure, flag security gaps, and show you exactly what your firm needs &mdash;</p>
+          <p>We'll review your current infrastructure, flag security gaps, and show you exactly what your firm needs.</p>
         </div>
         <div class="form-body" id="formBody">
           <form method="post" id="legalForm" novalidate>
             <div class="form-row">
               <div class="form-group" id="fg-fname">
-                <label>First Name <span class="req">*</span></label>
-                <input type="text" name="first_name" placeholder="Sarah" autocomplete="given-name">
+                <label for="lead-first-name">First Name <span class="req">*</span></label>
+                <input id="lead-first-name" type="text" name="first_name" placeholder="Sarah" autocomplete="given-name">
                 <span class="form-error">Required</span>
               </div>
               <div class="form-group" id="fg-lname">
-                <label>Last Name</label>
-                <input type="text" name="last_name" placeholder="Thompson" autocomplete="family-name">
+                <label for="lead-last-name">Last Name</label>
+                <input id="lead-last-name" type="text" name="last_name" placeholder="Thompson" autocomplete="family-name">
                 <span class="form-error">Required</span>
               </div>
             </div>
             <div class="form-group" id="fg-firm">
-              <label>Law Firm / Organization</label>
-              <input type="text" name="firm_name" placeholder="Thompson & Associates LLP" autocomplete="organization">
+              <label for="lead-firm-name">Law Firm / Organization</label>
+              <input id="lead-firm-name" type="text" name="firm_name" placeholder="Thompson & Associates LLP" autocomplete="organization">
               <span class="form-error">Required</span>
             </div>
             <div class="form-group" id="fg-email">
-              <label>Work Email <span class="req">*</span></label>
-              <input type="email" name="email" placeholder="sarah@thompsonlaw.com" autocomplete="email">
+              <label for="lead-email">Work Email <span class="req">*</span></label>
+              <input id="lead-email" type="email" name="email" placeholder="sarah@thompsonlaw.com" autocomplete="email">
               <span class="form-error">Valid email required</span>
             </div>
             <div class="form-group" id="fg-phone">
-              <label>Phone</label>
-              <input type="tel" name="phone" placeholder="(310) 555-0100" autocomplete="tel">
+              <label for="lead-phone">Phone</label>
+              <input id="lead-phone" type="tel" name="phone" placeholder="(310) 555-0100" autocomplete="tel">
               <span class="form-error">Required</span>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Firm Size</label>
-                <select name="firm_size">
+                <label for="lead-firm-size">Firm Size</label>
+                <select id="lead-firm-size" name="firm_size">
                   <option value="">Select&hellip;</option>
                   <option>Solo / 1&ndash;2 attorneys</option>
                   <option>Small (3&ndash;10 attorneys)</option>
@@ -879,8 +879,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>Primary IT Challenge</label>
-                <select name="challenge">
+                <label for="lead-challenge">Primary IT Challenge</label>
+                <select id="lead-challenge" name="challenge">
                   <option value="">Select&hellip;</option>
                   <option>Cybersecurity / data breach risk</option>
                   <option>Remote access for attorneys</option>
@@ -893,8 +893,8 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Tell us about your IT situation</label>
-              <textarea name="message" placeholder="e.g. We have 12 attorneys across two offices and need better security and faster help desk response&hellip;"></textarea>
+              <label for="lead-message">Tell us about your IT situation</label>
+              <textarea id="lead-message" name="message" placeholder="e.g. We have 12 attorneys across two offices and need better security and faster help desk response&hellip;"></textarea>
             </div>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
         <button type="submit" class="submit-btn" id="submitBtn">
@@ -902,7 +902,7 @@
               <svg class="btn-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
             </button>
-            <p class="form-privacy">🔒 Confidential. We never share your information. Response within 1 business day.</p>
+            <p class="form-privacy">Confidential. We never share your information. Response within 1 business day.</p>
           </form>
         </div>
         <div class="form-success" id="formSuccess">
@@ -911,7 +911,7 @@
           </div>
           <div class="success-pill"><div class="success-pill-dot"></div>Inquiry Confirmed</div>
           <h3>You're in good hands.</h3>
-          <p>Thank you, <strong id="successName"></strong>. We'll reach out within 1 business day to schedule your free legal IT assessment.</p>
+          <p>Thank you, <strong id="successName"></strong>. We'll reach out within 1 business day to schedule your technology consultation.</p>
           <a href="tel:18008906133" class="success-cta-phone">
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             Call 1-800-890-6133
@@ -1009,7 +1009,7 @@
       </div>
       <div>
         <div class="challenge-side-head">
-          <span class="section-label">The Pro Link Difference</span>
+          <span class="section-label">The Pro Link Systems Difference</span>
           <h2 class="section-heading">IT That Understands<br>How Law Firms Work.</h2>
           <p class="section-sub">We've spent more than 25 years supporting Los Angeles businesses, law firms among them. We know what legal IT actually requires &mdash; from privileged communications to court e-filing infrastructure.</p>
         </div>
@@ -1104,7 +1104,7 @@
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <h3>Secure Remote Access</h3>
-        <p>Attorneys and staff working from home, court, or opposing counsel's office get seamless, encrypted access to firm systems &mdash; with MFA and encryption protecting every connection.</p>
+        <p>Attorneys and staff working from home, court, or opposing counsel's office get secure, encrypted access to firm systems &mdash; with MFA and encryption protecting every connection.</p>
         <ul>
           <li>Zero-trust network access (ZTNA)</li>
           <li>Multi-factor authentication (MFA)</li>
@@ -1212,7 +1212,7 @@
                srcset="/assets/photos/web/law-office-visit-720.webp 720w, /assets/photos/web/law-office-visit-972.webp 972w"
                sizes="(max-width: 860px) 92vw, 560px" width="972" height="720" loading="lazy" decoding="async"
                alt="A Pro Link Systems technician reviewing a document with a staff member in a law office">
-          <figcaption>On site at the Law Offices of Alan B. Snitzer, a Pro Link client for 18 years.</figcaption>
+          <figcaption>On site at the Law Offices of Alan B. Snitzer, a Pro Link Systems client for 18 years.</figcaption>
         </figure>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <div style="background:var(--off-white);border-radius:var(--r-lg);padding:28px 20px;text-align:center;">
@@ -1288,7 +1288,7 @@
 <div class="cta-band">
   <span class="section-label" style="color:var(--gold);">Ready to Protect Your Firm?</span>
   <h2>Your Clients' Data Deserves<br>the Best IT Infrastructure.</h2>
-  <p>Free legal IT assessment. We review your systems, flag security gaps, and give you a clear roadmap.</p>
+  <p>A complimentary consultation. We review your systems, flag security gaps, and give you a clear roadmap.</p>
   <div class="cta-buttons">
     <a href="https://prolinksystems.com/contact" class="btn btn-gold">
       Schedule a Consultation
@@ -1303,6 +1303,7 @@
 
 <!-- FOOTER -->
 <!-- PL:FOOTER -->
+</main>
 <footer class="pl-footer" role="contentinfo">
   <div class="pl-footer-top">
     <div class="pl-footer-brand">
@@ -1334,8 +1335,8 @@
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -1347,7 +1348,7 @@
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -1466,7 +1467,7 @@
   }
 
 </script>
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
 </body>
 </html>
 

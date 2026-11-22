@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-09-29",
-  "dateModified": "2026-09-29",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-09-29-t114-data-retention-as-risk-management-why-keeping-everythin"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,81 +331,100 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#governance-compliance">Governance &amp; Compliance</a></p>
       <h1>Retention Is Now a Security Decision</h1>
       <p class="pl-dek">Cheap storage made keeping everything the default. AI retrieval and exfiltration extortion turned that archive into exposure.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-29">September 29, 2026</time><br>6 min read</div></div>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-29">September 29, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>8 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-09-29-t114-data-retention-as-risk-management-why-keeping-everythin.svg" width="1200" height="675" alt="Archive boxes piling up over time with a cut-off mark through the oldest" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-09-29-t114-data-retention-as-risk-management-why-keeping-everythin.svg" width="1200" height="675" alt="Abstract illustration of a control matrix with one highlighted cell" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#storage-got-cheap-before-retrieval-got-fast">Storage got cheap before retrieval got fast</a></li><li><a href="#obscurity-was-doing-security-work-nobody-budgeted-for">Obscurity was doing security work nobody budgeted for</a></li><li><a href="#extortion-is-priced-off-the-archive-not-the-outage">Extortion is priced off the archive, not the outage</a></li><li><a href="#deletion-is-a-distributed-problem-not-a-delete-key">Deletion is a distributed problem, not a delete key</a></li><li><a href="#the-liability-is-the-accumulation">The liability is the accumulation</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#storage-got-cheap-before-retrieval-got-fast">Storage got cheap before retrieval got fast</a></li><li><a href="#obscurity-was-doing-security-work-nobody-budgeted-for">Obscurity was doing security work nobody budgeted for</a></li><li><a href="#extortion-is-priced-off-the-archive-not-the-outage">Extortion is priced off the archive, not the outage</a></li><li><a href="#deletion-is-a-distributed-problem-not-a-delete-key">Deletion is a distributed problem, not a delete key</a></li><li><a href="#the-liability-is-the-accumulation">The liability is the accumulation</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
 <p>A CFO asks Copilot what the margin was on a product line the company discontinued years ago. The answer comes back accurate, cited, and useful. One of the citations is a pricing spreadsheet built by an employee who left long before the current leadership team arrived, sitting in a SharePoint site that was migrated off a file server and never reviewed afterward. Three people were ever meant to see it.</p>
 
 <p>The scenario is constructed, and nothing in it is exotic. No control failed. Permissions behaved exactly as they were configured. A document that had been functionally invisible for years became a first-page result, because the cost of finding it fell to roughly zero.</p>
 
-<p>That is what a data retention problem looks like in 2026, and it bears little resemblance to the compliance-calendar exercise the phrase usually calls to mind.</p>
+<p>That is what a data retention problem looks like in 2026, and it bears little resemblance to the compliance-calendar exercise the phrase usually calls to mind. The decision in front of an executive is what the company will stop keeping, and who has authority to say so.</p>
 
 <h2 id="storage-got-cheap-before-retrieval-got-fast">Storage got cheap before retrieval got fast</h2>
 
-<p>For two decades the economics of keeping data pointed one direction. Deletion required judgment, a policy, a conversation with counsel, and somebody willing to be wrong about it later. Retention required a slightly larger invoice. Once cost per terabyte collapsed, that invoice stopped working as a forcing question, and keep it just in case became the default across nearly every business — not by decision, but by the absence of one.</p>
+<p>For two decades the economics of keeping data pointed one direction. Deletion required judgment, a policy, a conversation with counsel, and somebody willing to be wrong about it later. Retention required a slightly larger invoice. Once cost per terabyte collapsed, that invoice stopped working as a forcing question, and keeping it just in case became the default, less by decision than by the absence of one.</p>
 
-<p>An unwritten assumption sat underneath: old data was inert. Archives were technically accessible and practically unreachable. Finding one unlabeled spreadsheet inside a decade of accumulated <a href="/cloud-services">Microsoft 365</a> content required knowing it existed, knowing roughly where it lived, and caring enough to search. Few people satisfied all three conditions. Attackers working against a clock frequently did not either.</p>
+<p>An unwritten assumption sat underneath: old data was inert. Archives were technically accessible and practically unreachable. Finding one unlabeled spreadsheet inside a decade of accumulated <a href="/cloud-services">Microsoft 365</a> content required knowing it existed, knowing roughly where it lived, and caring enough to search. Few people satisfied all three conditions. Attackers working against a clock often did not either.</p>
 
-<p>Semantic retrieval removes that friction by design. An assistant grounded in your tenant does not need to know a file exists. It reads intent and surfaces relevance from whatever the requesting identity is already permitted to open. That is the product working correctly. It is also a permanent change to the risk profile of every byte nobody chose to delete.</p>
+<p>Semantic retrieval removes that friction by design. An assistant grounded in your tenant does not need to know a file exists. It reads intent and surfaces relevance from <a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy">whatever the individual user already has permission to view</a>. That is the product working correctly. It also changes the risk profile of everything nobody chose to delete.</p>
 
 <h2 id="obscurity-was-doing-security-work-nobody-budgeted-for">Obscurity was doing security work nobody budgeted for</h2>
 
-<p>This is analysis rather than a measured finding, but it survives inspection: many organizations have been protected less by their access controls than by the practical difficulty of exercising those controls at scale. Permissions in a mature tenant are sediment. A site opened to everyone during a rushed migration. A channel that outlived the project that created it. A departed employee's OneDrive still shared with a distribution group that has tripled in size since.</p>
+<p>This is analysis rather than a measured finding, but it survives inspection: many organizations have been protected less by their access controls than by the practical difficulty of exercising those controls at scale. Permissions in a mature tenant are sediment. A site opened to everyone during a rushed migration. A channel that outlived the project that created it. A library shared years ago with a security group that has tripled in size since.</p>
 
-<p>None of that was safe. It was quiet. Add a retrieval layer that reads at machine speed across everything one identity can touch, and the distance between permissions as designed and permissions as they actually exist becomes visible in a single query. That same distance is visible to anyone who compromises one set of credentials. Identity is the perimeter now, and the value of crossing it is a direct function of how much sits behind it.</p>
+<p>None of that was safe. It was quiet. Add a retrieval layer that reads at machine speed across everything one identity can touch, and the distance between permissions as designed and permissions as they exist becomes visible in a single query. That same distance is visible to anyone who compromises one set of credentials. Identity is the perimeter now, and the value of crossing it is a direct function of how much sits behind it.</p>
 
 <p>Executives tend to file this under AI governance, which it partly is. The sharper point is that an AI deployment audits a decision made years earlier. Retention created the exposure. The assistant only reported it.</p>
 
 <h2 id="extortion-is-priced-off-the-archive-not-the-outage">Extortion is priced off the archive, not the outage</h2>
 
-<p>Set the statistics aside — the incentive logic is enough on its own. An organization with tested <a href="/backup-disaster-recovery">disaster recovery</a> can rebuild its systems and decline to pay. What it cannot do is un-publish a copy of its own data. Pressure therefore concentrates on what was copied out rather than what was locked up, and what can be copied out is defined by what was kept.</p>
+<p>Set the statistics aside; the incentive logic is enough on its own. An organization with tested <a href="/backup-disaster-recovery">disaster recovery</a> can rebuild its systems and decline to pay. What it cannot do is un-publish a copy of its own data. Pressure therefore concentrates on what was copied out rather than what was locked up, and what can be copied out is defined by what was kept.</p>
 
-<p>That reframes severity in a way many boards have not absorbed. The damage ceiling in an incident is largely a function of the contents of the stolen set, and those contents are a function of retention practice. Scanned identity documents from an onboarding process retired two platforms ago. A legacy payment export. Accommodation requests for employees who left years back. Matter files from engagements that closed a decade ago. None of it serves the business today. All of it raises the ceiling on notification obligations, regulatory scope, and the number that appears in a negotiation.</p>
+<p>That reframes severity. The damage ceiling in an incident is largely a function of the contents of the stolen set, and those contents are a function of retention practice. Scanned identity documents from an onboarding process retired two platforms ago. A legacy payment export. Accommodation requests for employees who left years back. Matter files from engagements that closed a decade ago. Data like that may serve no current purpose. All of it raises the ceiling on notification obligations, regulatory scope, and the number that appears in a negotiation.</p>
 
-<p>Deletion is one of the very few <a href="/cybersecurity-services">cybersecurity</a> controls that lowers exposure permanently instead of defending it indefinitely. Every other control is a contest you have to keep winning, quarter after quarter. Data you no longer hold cannot be exfiltrated, cannot be indexed by an assistant, and cannot be produced in discovery.</p>
+<p>Deletion is one of the few <a href="/cybersecurity-services">cybersecurity</a> controls that lowers exposure permanently instead of defending it indefinitely. Data you no longer hold cannot be exfiltrated or indexed by an assistant. The power has a hard limit. Once litigation or an investigation is reasonably anticipated, a duty to preserve can override any schedule, and destroying records at that point can carry serious consequences. Counsel decides when a hold begins and ends.</p>
 
 <h2 id="deletion-is-a-distributed-problem-not-a-delete-key">Deletion is a distributed problem, not a delete key</h2>
 
-<p>Good intentions usually die here. Leadership approves a retention policy, IT applies it to the primary document store, and the data survives in six other places: mailbox archives, chat history, personal OneDrive folders where a surprising amount of real work lives, inactive accounts nobody closed, exports sitting inside a SaaS tool someone expensed, and backups.</p>
+<p>Good intentions usually die here. Leadership approves a retention policy, IT applies it to the primary document store, and the data survives somewhere else.</p>
+
+<table class="pl-compare"><caption>One retention policy, six places it has to reach</caption><thead><tr><th scope="col">Where the data sits</th><th scope="col">What governs deletion there</th><th scope="col">What tends to be missed</th></tr></thead><tbody>
+<tr><td>SharePoint and OneDrive files</td><td>Retention policies and labels</td><td>Retained copies in the Preservation Hold library</td></tr>
+<tr><td>Mailboxes and mailbox archives</td><td>Retention policies and labels</td><td>Retained copies in Recoverable Items; mailboxes kept for former staff</td></tr>
+<tr><td>Teams chats, channel messages, Copilot interactions</td><td>Policy locations of their own</td><td>A policy written for files and mail does not reach them</td></tr>
+<tr><td>A departed employee's OneDrive</td><td>License and billing status as well as policy</td><td>The archive and deletion clocks described below</td></tr>
+<tr><td>Exports inside SaaS tools someone expensed</td><td>The vendor's settings and contract</td><td>Nobody inside the company owns the setting</td></tr>
+<tr><td>Backups</td><td>The backup retention window</td><td>Deletion is complete only when the last copy ages out</td></tr>
+</tbody></table>
 
 <p>Backups deserve separate treatment, because retention policy and resilience strategy genuinely conflict there. Immutable backups exist so an intruder cannot destroy the recovery path, which means that for the length of the retention window, deletion is not deletion. That is correct design. It also means a retention policy written without reference to backup windows is fiction. Weaker immutability is not the resolution. The fix is backup retention that is deliberately time-boxed rather than accidentally infinite, written in the same conversation as the records policy.</p>
 
-<p>Legal holds push in the opposite direction. A hold placed during a dispute years ago and never lifted silently overrides everything downstream of it. Auditing open holds is unglamorous work that nobody requests and that quietly preserves years of material nobody intended to keep.</p>
+<p>Legal holds push in the opposite direction. In Microsoft 365, content under an eDiscovery hold <a href="https://learn.microsoft.com/en-us/purview/retention">cannot be permanently deleted by a retention policy or label until the hold is released</a>, so a hold placed during a dispute years ago and never lifted silently overrides everything downstream of it. The opposite failure is newer. Microsoft now makes <a href="https://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts">unlicensed OneDrive accounts</a> in commercial tenants read-only after 60 days and archives them after 93. Under a policy in force since July 1, 2026, an account left unpaid for 365 cumulative days is subject to deletion even where a retention setting or hold exists, with the earliest deletions possible from July 1, 2027. A company relying on a hold to preserve a former employee's files should confirm, with counsel, that the license or billing behind it is in order.</p>
 
 <p>What this calls for is a short list of decisions with named owners, not an eighteen-month data inventory project that concludes nothing:</p>
 
 <ul>
 <li><strong>Set a default retention period by data class</strong>, not file by file. Anything unclassified inherits the default. Exceptions require a stated reason.</li>
-<li><strong>Decide what the AI index may reach</strong> before licensing rather than after. Sensitivity labeling and permission remediation belong ahead of the rollout.</li>
+<li><strong>Decide what the AI index may reach</strong> before licensing rather than after. <a href="/blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-">Permission remediation</a> and sensitivity labeling belong ahead of the rollout.</li>
 <li><strong>Time-box backup retention explicitly</strong> and reconcile it against the records policy in writing.</li>
-<li><strong>Audit open legal holds on a fixed schedule.</strong> Someone owns lifting them.</li>
+<li><strong>Audit open legal holds on a fixed schedule</strong>, and the licensing of every account under one. Someone owns lifting them, with counsel.</li>
 <li><strong>Ask vendors what they retain and for how long.</strong> Third-party retention is your exposure under somebody else's controls.</li>
 </ul>
 
-<p>Regulated organizations face a sharper version of the same question. A Los Angeles medical group operating under <a href="/healthcare-it-services">HIPAA compliance</a> obligations must retain defined records for defined periods, which is an argument for precision rather than for indiscriminate accumulation. Minimum necessary has always cut in both directions.</p>
+<p>Regulated organizations face a sharper version of the same question, because rules set ceilings as well as floors. Financial institutions under the Federal Trade Commission's Safeguards Rule must <a href="https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know">securely dispose of customer information within two years of last using it to serve the customer</a>, with exceptions. For businesses covered by California's privacy law, retention must be <a href="https://privacy.ca.gov/wp-content/uploads/sites/357/2026/01/enfadvisory202401-1.pdf">reasonably necessary and proportionate to its purpose</a>, and the state's privacy agency counts lower breach risk among the benefits. A Los Angeles <a href="/healthcare-it-services">medical group</a> must keep the documentation HIPAA's Security Rule requires for <a href="https://www.law.cornell.edu/cfr/text/45/164.316">six years</a>, while the period for the medical record itself is set largely by other law. The minimum necessary standard, often quoted here, governs use, disclosure and requests rather than storage. All of this argues for precision over accumulation, and all of it should be confirmed with counsel.</p>
 
 <h2 id="the-liability-is-the-accumulation">The liability is the accumulation</h2>
 
-<p>No executive ever approved a policy of keeping everything forever. Accumulation happened because storage stopped costing enough to argue about and nobody owned the other side of the ledger. That cost did not disappear. It moved into retrieval, into extortion pricing, into discovery scope, and into the widening gap between the permissions a leadership team believes it has and the ones a query will actually honor.</p>
+<p>Few executives ever approved a policy of keeping everything forever. Accumulation happened because storage stopped costing enough to argue about and nobody owned the other side of the ledger. That cost did not disappear. It moved into retrieval, into extortion pricing, into discovery scope, and into the widening gap between the permissions a leadership team believes it has and the ones a query will actually honor.</p>
 
-<p>Retention now reports to whoever owns risk. Offered as prediction rather than fact: within a few years, cyber insurers will ask about data minimization the way they currently ask about multifactor authentication and immutable backups, and organizations without a clear answer will find the cost in their premium.</p>
+<p>Retention now belongs with whoever owns risk. Offered as prediction rather than fact: within a few years, cyber insurers may ask about data minimization the way they currently ask about multifactor authentication and immutable backups.</p>
 
-<p>Our own view, stated as opinion: the most exposed environments are rarely the ones with the weakest tools. They are the ones with the longest memory. Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999, and if an AI rollout is on your roadmap, our <a href="/managed-it-services">managed IT services</a> team can help you see what your tenant is holding and who can reach it — before the assistant answers that question for you.</p>
+<p>Our own view, stated as opinion: the most exposed environments are often the ones with the longest memory rather than the weakest tools. To see how long yours is, ask an assistant three questions it should not be able to answer, note what it cites, and make those files the first data class you decide on.</p>
+
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy">Data, Privacy, and Security for Microsoft Copilot</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/purview/retention">Learn about retention policies and retention labels</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts">Manage unlicensed OneDrive user accounts</a>, Microsoft Learn.</li>
+<li><a href="https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know">FTC Safeguards Rule: What Your Business Needs to Know</a>, Federal Trade Commission.</li>
+<li><a href="https://privacy.ca.gov/wp-content/uploads/sites/357/2026/01/enfadvisory202401-1.pdf">Enforcement Advisory on data minimization</a>, California Privacy Protection Agency.</li>
+<li><a href="https://www.law.cornell.edu/cfr/text/45/164.316">45 CFR 164.316, Policies and procedures and documentation requirements</a>, Legal Information Institute.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Technology Strategy &amp; Consulting</strong><p>A virtual CIO at your leadership table, responsible for roadmaps, budgets, vendor strategy and risk reporting.</p><a class="pl-arrow" href="/virtual-cio">Explore technology strategy and consulting</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -415,7 +434,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="governance-compliance" data-text="compliance is now an evidence problem advisory firm compliance in 2026 is an evidence problem, not a paperwork one: identity logs, unarchived ai chats and callback discipline decide exam outcomes. governance &amp; compliance it compliance checklist for los angeles financial advis"><a href="/blog/2026-10-05-t25-it-compliance-checklist-for-los-angeles-financial-advis"><img class="pl-art-img" src="/assets/insights/2026-10-05-t25-it-compliance-checklist-for-los-angeles-financial-advis.svg" width="1200" height="675" alt="Abstract illustration of a control matrix with one highlighted cell" loading="lazy" decoding="async"><span class="pl-cat">Governance &amp; Compliance</span><h3>Compliance Is Now an Evidence Problem</h3><p>Advisory firm compliance in 2026 is an evidence problem, not a paperwork one: identity logs, unarchived AI chats and callback discipline decide exam outcomes.</p><span class="pl-meta"><time datetime="2026-10-05">October 5, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="governance-compliance" data-text="access reviews should default to revoke the quarterly access review audits employees while the tenant fills with apps, service accounts and agents. governance &amp; compliance the quarterly access review an afternoon that prevents "><a href="/blog/2026-10-01-t115-the-quarterly-access-review-an-afternoon-that-prevents-"><img class="pl-art-img" src="/assets/insights/2026-10-01-t115-the-quarterly-access-review-an-afternoon-that-prevents-.svg" width="1200" height="675" alt="Abstract illustration of a control matrix with one highlighted cell" loading="lazy" decoding="async"><span class="pl-cat">Governance &amp; Compliance</span><h3>Access Reviews Should Default to Revoke</h3><p>The quarterly access review audits employees while the tenant fills with apps, service accounts and agents.</p><span class="pl-meta"><time datetime="2026-10-01">October 1, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="governance-compliance" data-text="vendor risk reviews that actually finish most vendor risk reviews grade companies. the version that works audits access: which apps, tokens and ai agents can reach your data, and who owns each one. governance &amp; compliance supply chain and vendor risk reviews a mid size busines"><a href="/blog/2026-09-25-t112-supply-chain-and-vendor-risk-reviews-a-mid-size-busines"><img class="pl-art-img" src="/assets/insights/2026-09-25-t112-supply-chain-and-vendor-risk-reviews-a-mid-size-busines.svg" width="1200" height="675" alt="Abstract illustration of a control matrix with one highlighted cell" loading="lazy" decoding="async"><span class="pl-cat">Governance &amp; Compliance</span><h3>Vendor Risk Reviews That Actually Finish</h3><p>Most vendor risk reviews grade companies. The version that works audits access: which apps, tokens and AI agents can reach your data, and who owns each one.</p><span class="pl-meta"><time datetime="2026-09-25">September 25, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="governance-compliance" data-text="compliance is now an evidence problem advisory firms are asked to demonstrate controls, not describe them. what the rules ask you to show, and four checks that reveal whether you can. governance &amp; compliance it compliance checklist for los angeles financial advis"><a href="/blog/2026-10-05-t25-it-compliance-checklist-for-los-angeles-financial-advis"><img class="pl-art-img" src="/assets/insights/2026-10-05-t25-it-compliance-checklist-for-los-angeles-financial-advis.svg" width="1200" height="675" alt="A binder set aside while a live activity log is verified line by line" loading="lazy" decoding="async"><span class="pl-cat">Governance &amp; Compliance</span><h3>Compliance Is Now an Evidence Problem</h3><p>Advisory firms are asked to demonstrate controls, not describe them. What the rules ask you to show, and four checks that reveal whether you can.</p><span class="pl-meta"><time datetime="2026-10-05">October 5, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="governance-compliance" data-text="access reviews should default to revoke the quarterly access review audits employees while the tenant fills with apps, service accounts and agents. governance &amp; compliance the quarterly access review an afternoon that prevents "><a href="/blog/2026-10-01-t115-the-quarterly-access-review-an-afternoon-that-prevents-"><img class="pl-art-img" src="/assets/insights/2026-10-01-t115-the-quarterly-access-review-an-afternoon-that-prevents-.svg" width="1200" height="675" alt="A list of accounts where most switches are turned off by default" loading="lazy" decoding="async"><span class="pl-cat">Governance &amp; Compliance</span><h3>Access Reviews Should Default to Revoke</h3><p>The quarterly access review audits employees while the tenant fills with apps, service accounts and agents.</p><span class="pl-meta"><time datetime="2026-10-01">October 1, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="governance-compliance" data-text="vendor risk reviews that actually finish most vendor risk reviews grade companies. the version that works audits access: which apps, tokens and ai agents can reach your data, and who owns each one. governance &amp; compliance supply chain and vendor risk reviews a mid size busines"><a href="/blog/2026-09-25-t112-supply-chain-and-vendor-risk-reviews-a-mid-size-busines"><img class="pl-art-img" src="/assets/insights/2026-09-25-t112-supply-chain-and-vendor-risk-reviews-a-mid-size-busines.svg" width="1200" height="675" alt="A chain link between two companies examined closely instead of either building" loading="lazy" decoding="async"><span class="pl-cat">Governance &amp; Compliance</span><h3>Vendor Risk Reviews That Actually Finish</h3><p>Most vendor risk reviews grade companies. The version that works audits access: which apps, tokens and AI agents can reach your data, and who owns each one.</p><span class="pl-meta"><time datetime="2026-09-25">September 25, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -467,8 +486,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -480,7 +499,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -533,6 +552,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

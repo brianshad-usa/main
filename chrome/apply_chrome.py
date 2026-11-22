@@ -27,8 +27,8 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PL_JS_VERSION = "20261121"
-SKIP_FILES = {"managed-it-services.html"}              # Ads landing page: own layout, no site menu
+PL_JS_VERSION = "20261122"
+FOOTER_ONLY = {"managed-it-services.html"}             # Ads landing page: own short header (no site menu), shared footer
 SKIP_DIRS = {".git", ".github", "chrome", "editorial", "functions", "node_modules", "tools", "apps", "videos"}
 
 SOLUTIONS = {
@@ -66,6 +66,9 @@ RE_NULLSAFE = re.compile(r"""document\.getElementById\((['"])(hamburger|mobileMe
 RE_SHARED_CSS = re.compile(r'<link rel="stylesheet" href="/?_shared\.css[^"]*">')
 RE_GFONTS_PRECONNECT = re.compile(r'[ \t]*<link rel="preconnect" href="https://fonts\.(?:googleapis|gstatic)\.com"[^>]*>\r?\n?')
 RE_PL_JS = re.compile(r'<script src="/assets/js/pl\.js[^"]*" defer></script>')
+# The main landmark: a page without its own <main> gets one, opened by the header block and closed by the footer block.
+MAIN_ANCHOR = '<span id="pl-main" tabindex="-1"></span>'
+MAIN_OPEN = '<main id="pl-main" tabindex="-1">'
 
 
 def section_for(rel):
@@ -149,6 +152,11 @@ def transform(text, rel, header_partial, footer_partial):
     t = text.replace("\r\n", "\n")
     notes = []
 
+    if rel.replace("\\", "/") in FOOTER_ONLY:
+        footer = "<!-- PL:FOOTER -->\n" + footer_partial.strip("\n") + "\n<!-- /PL:FOOTER -->"
+        t = RE_FOOTER_MARKED.sub(lambda _m: footer, t, count=1)
+        return (t.replace("\n", "\r\n") if crlf else t), notes
+
     header = header_for(header_partial, section_for(rel))
     if RE_HEADER_MARKED.search(t):
         t = RE_HEADER_MARKED.sub(lambda _m: header, t, count=1)
@@ -165,6 +173,12 @@ def transform(text, rel, header_partial, footer_partial):
         t = RE_FOOTER_LEGACY.sub(lambda _m: footer, t, count=1)
     else:
         notes.append("kept own footer")
+
+    if footer in t:
+        i, j = t.index(header) + len(header), t.index(footer)
+        if i < j and "<main" not in t[i:j]:
+            t = (t[:i - len(header)] + header.replace(MAIN_ANCHOR, MAIN_OPEN) + t[i:j]
+                 + footer.replace("<!-- PL:FOOTER -->\n", "<!-- PL:FOOTER -->\n</main>\n", 1) + t[j + len(footer):])
 
     t = RE_NULLSAFE.sub(lambda m: "(document.getElementById('%s')||document.createElement('i'))" % m.group(2), t)
 
@@ -202,9 +216,6 @@ def main():
                 continue
             path = os.path.join(dirpath, name)
             rel = os.path.relpath(path, ROOT)
-            if rel in SKIP_FILES:
-                skipped.append(rel + " (skipped on purpose)")
-                continue
             new, notes = process(path, header_partial, footer_partial)
             if "kept own footer" in notes:
                 kept_footer.append(rel)

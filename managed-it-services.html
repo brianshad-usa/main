@@ -104,774 +104,54 @@
   <meta property="og:title" content="Managed IT Services Los Angeles | 24/7 IT Support Since 1999">
   <meta property="og:description" content="Flat-rate managed IT for LA businesses. 24/7 live engineers. No long-term contracts. Serving LA since 1999.">
   <meta property="og:image" content="https://prolinksystems.com/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
 
+  <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="_shared.css?v=20261122">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      color: #0f1e2e;
-      background: #fff;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; }
-
-    /* ── VARIABLES ─────────────────────────────────────── */
-    :root {
-      --navy:    #0b3d6b;
-      --navy-dark:#072040;
-      --navy-mid:#082638;
-      --navy-btn:#0b3d6b;
-      --navy-light:#1762a8;
-      --orange:  #f5a623;
-      --orange-h:#d4881a;
-      --gold:    #f5a623;
-      --gold-dark:#d4881a;
-      --off:     #f7f9fc;
-      --border:  #dde4ee;
-      --muted:   #5a6a80;
-      --r:       10px;
-      --r-lg:    16px;
-    }
-
-    /* ── HEADER ─────────────────────────────────────────── */
-    .lp-header {
-      background: #072040;
-      padding: 0 32px;
-      height: 72px;
-      display: flex; align-items: center; justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      box-shadow: 0 2px 12px rgba(0,0,0,.25);
-    }
-    .lp-header-logo img { height: 44px; width: auto; display: block; }
-    .lp-header-right {
-      display: flex; align-items: center; gap: 24px;
-    }
-    .lp-header-tag {
-      font-size: .75rem; font-weight: 500;
-      color: rgba(255,255,255,.5);
-      display: none;
-    }
-    .lp-header-phone {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--gold); color: #072040;
-      font-size: .875rem; font-weight: 800;
-      padding: 9px 20px; border-radius: 10px;
-      transition: background .2s, transform .15s;
-      white-space: nowrap;
-    }
-    .lp-header-phone:hover { background: var(--gold-dark); transform: translateY(-1px); }
-    .lp-header-phone svg { flex-shrink: 0; }
-    @media (min-width: 640px) { .lp-header-tag { display: block; } }
-
-    /* ── HERO ──────────────────────────────────────────── */
-    .hero {
-      background: linear-gradient(135deg, #072040 0%, #0d4d85 100%);
-      min-height: auto;
-      display: flex;
-      align-items: center;
-      padding: 40px 24px 48px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
-    }
-    .hero-inner {
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 48px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ── HERO CONTENT (LEFT) ───────────────────────────── */
-    .hero-content { display: flex; flex-direction: column; gap: 22px; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(245,166,35,.12); border: 1px solid rgba(245,166,35,.35);
-      color: var(--gold); font-size: .72rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .1em;
-      padding: 5px 14px; border-radius: 100px; align-self: flex-start;
-    }
-    .hero-h1 {
-      font-size: clamp(2rem, 3.8vw, 3.2rem);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.1;
-      letter-spacing: -.035em;
-    }
-    .hero-h1 em { font-style: normal; color: var(--gold); }
-    .hero-sub {
-      font-size: clamp(.95rem, 1.6vw, 1.1rem);
-      color: rgba(255,255,255,.72);
-      line-height: 1.65;
-      max-width: 520px;
-    }
-    .hero-bullets { display: flex; flex-direction: column; gap: 10px; }
-    .hero-bullet {
-      display: flex; align-items: center; gap: 12px;
-      font-size: .9rem; color: rgba(255,255,255,.88); font-weight: 500;
-    }
-    .hero-bullet .chk {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(245,166,35,.2); border: 1.5px solid rgba(245,166,35,.5);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .hero-bullet .chk svg { color: var(--orange); }
-    .hero-phone {
-      display: inline-flex; align-items: center; gap: 10px;
-      margin-top: 4px;
-    }
-    .hero-phone a {
-      font-size: 1.35rem; font-weight: 800; color: #fff;
-      letter-spacing: -.02em;
-    }
-    .hero-phone a:hover { color: var(--gold); }
-    .hero-phone-label { font-size: .78rem; color: rgba(255,255,255,.55); }
-
-    /* ── FORM CARD ─────────────────────────────────────── */
-    .form-wrap { position: sticky; top: 24px; }
-    .form-card {
-      background: #fff;
-      border-radius: var(--r-lg);
-      padding: 28px 24px;
-      box-shadow: 0 32px 80px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.18);
-    }
-    /* ── FORM CARD CONTENT ─────────────────────────────── */
-    .form-card-head { margin-bottom: 22px; }
-    .form-card-head h2 {
-      font-size: 1.15rem; font-weight: 800; color: #0f1e2e;
-      letter-spacing: -.025em; margin-bottom: 5px;
-    }
-    .form-card-head p { font-size: .8rem; color: var(--muted); line-height: 1.55; }
-
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
-    .form-group label {
-      font-size: .76rem; font-weight: 600; color: #0f1e2e; letter-spacing: .02em;
-    }
-    .form-group label .req { color: var(--orange); margin-left: 2px; }
-    .form-group label .opt { color: var(--muted); font-weight: 400; font-size: .72rem; margin-left: 2px; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      font-family: 'Inter', sans-serif;
-      font-size: 16px; /* prevent iOS zoom */
-      color: #0f1e2e;
-      background: #f8f9fb;
-      border: 1.5px solid var(--border);
-      border-radius: var(--r);
-      padding: 11px 14px;
-      transition: border-color .2s, box-shadow .2s;
-      outline: none; width: 100%;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--navy-btn);
-      box-shadow: 0 0 0 3px rgba(11,61,107,.12);
-      background: #fff;
-    }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: #a0aab6; }
-    .form-group textarea { resize: vertical; min-height: 90px; line-height: 1.55; }
-    .form-group select { cursor: pointer; appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%23667788' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 14px center; padding-right: 32px; }
-    .form-error { font-size: .72rem; color: #dc2626; margin-top: 2px; display: none; }
-    .form-group.has-error input,
-    .form-group.has-error select,
-    .form-group.has-error textarea {
-      border-color: #dc2626;
-      box-shadow: 0 0 0 3px rgba(220,38,38,.1);
-    }
-    .form-group.has-error .form-error { display: block; }
-
-    .submit-btn {
-      width: 100%; padding: 18px 24px;
-      background: linear-gradient(135deg, #ffb02e 0%, var(--orange) 100%); color: #fff;
-      font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 800;
-      letter-spacing: .01em; border: none; border-radius: var(--r);
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      transition: background .2s, transform .15s, box-shadow .2s;
-      box-shadow: 0 6px 22px rgba(245,166,35,.6);
-      margin-top: 6px;
-    }
-    .submit-btn:hover:not(:disabled) {
-      background: var(--orange-h); transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(245,166,35,.5);
-    }
-    .submit-btn:disabled { opacity: .7; cursor: not-allowed; transform: none; }
-    .submit-btn .spinner {
-      width: 18px; height: 18px;
-      border: 2px solid rgba(255,255,255,.3); border-top-color: #fff;
-      border-radius: 50%; animation: spin .7s linear infinite; display: none;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .submit-btn.loading .btn-label { display: none; }
-    .submit-btn.loading .btn-arrow { display: none; }
-    .submit-btn.loading .spinner { display: block; }
-
-    .form-privacy {
-      font-size: .7rem; color: var(--muted); text-align: center;
-      margin-top: 10px; line-height: 1.5;
-    }
-    .form-urgency {
-      display: flex; align-items: center; gap: 7px;
-      background: rgba(245,166,35,.12); border: 1px solid rgba(245,166,35,.45);
-      color: #9a5300; font-size: .8rem; font-weight: 700;
-      padding: 9px 12px; border-radius: var(--r); margin-bottom: 14px; line-height: 1.35;
-    }
-    .form-urgency svg { flex-shrink: 0; color: var(--orange); }
-    .form-trust {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px;
-      margin-top: 12px;
-    }
-    .form-trust span {
-      font-size: .74rem; font-weight: 600; color: #1f7a44;
-      display: inline-flex; align-items: center; gap: 4px;
-    }
-    .form-body.hide { display: none; }
-
-    /* ── SUCCESS STATE ──────────────────────────────────── */
-    .form-success {
-      display: none; text-align: center; padding: 32px 12px 24px;
-      animation: fsUp .45s ease;
-    }
-    @keyframes fsUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
-    .form-success.show { display: block; }
-
-    .success-orbit {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: linear-gradient(135deg, #0b3d6b 0%, #1762a8 100%);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 0 8px rgba(11,61,107,.08), 0 0 0 18px rgba(11,61,107,.04);
-      animation: successPop .5s cubic-bezier(.34,1.56,.64,1);
-    }
-    @keyframes successPop { from { transform:scale(0); opacity:0; } to { transform:scale(1); opacity:1; } }
-    .success-checkmark {
-      stroke-dasharray: 40; stroke-dashoffset: 40;
-      animation: drawCheck .4s .35s ease forwards;
-    }
-    @keyframes drawCheck { to { stroke-dashoffset: 0; } }
-
-    .success-pill {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(34,197,94,.09); border: 1px solid rgba(34,197,94,.22);
-      border-radius: 999px; padding: 5px 16px;
-      font-size: .72rem; font-weight: 700; color: #16a34a;
-      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 16px;
-    }
-    .success-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; }
-    .form-success h3 {
-      font-size: 1.3rem; font-weight: 800; color: #0f1e2e;
-      letter-spacing: -.03em; margin-bottom: 8px;
-    }
-    .success-greeting {
-      font-size: .84rem; color: var(--muted); line-height: 1.65;
-      max-width: 300px; margin: 0 auto 16px;
-    }
-    .success-ref {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #f4f6f8; border: 1px solid var(--border);
-      border-radius: var(--r); padding: 7px 16px;
-      font-size: .75rem; color: var(--muted); margin-bottom: 22px;
-    }
-    .success-ref strong { color: #0f1e2e; font-family: 'Courier New', monospace; letter-spacing: .08em; }
-    .success-steps {
-      text-align: left; max-width: 290px; margin: 0 auto 22px;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .success-step { display: flex; align-items: flex-start; gap: 10px; }
-    .step-bbl {
-      width: 24px; height: 24px; border-radius: 50%;
-      background: rgba(11,61,107,.08); flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .68rem; font-weight: 800; color: var(--navy-btn); margin-top: 1px;
-    }
-    .step-txt { font-size: .8rem; color: var(--muted); line-height: 1.5; }
-    .step-txt strong { color: #0f1e2e; }
-    .success-div { height: 1px; background: var(--border); max-width: 260px; margin: 0 auto 18px; }
-    .success-urgent { font-size: .84rem; color: var(--muted); }
-    .success-urgent a { color: var(--navy-btn); font-weight: 700; }
-
-    .cly-eyebrow {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: #fff7ed; border: 1px solid #fed7aa;
-      color: #9a3412; font-size: .68rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .07em;
-      padding: 4px 12px; border-radius: 4px; margin-bottom: 10px;
-    }
-
-    /* ── TRUST BAR ─────────────────────────────────────── */
-    .trust-bar {
-      background: #072040;
-      border-top: 1px solid rgba(255,255,255,.06);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex; align-items: center; gap: 8px;
-      padding: 16px 28px;
-      color: rgba(255,255,255,.82);
-      font-size: .78rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .07em;
-      border-right: 1px solid rgba(255,255,255,.08);
-    }
-    .trust-item:last-child { border-right: none; }
-    .trust-item svg { color: var(--gold); flex-shrink: 0; }
-
-    /* ── SECTIONS ──────────────────────────────────────── */
-    .lp-section { padding: 80px 24px; }
-    .lp-section-alt { background: var(--off); }
-    .lp-section-dark { background: var(--navy); }
-    .lp-container { max-width: 1100px; margin: 0 auto; }
-    .section-eyebrow {
-      display: inline-block;
-      font-size: .72rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .1em; color: var(--orange);
-      margin-bottom: 12px;
-    }
-    .section-h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 800; color: #0f1e2e;
-      letter-spacing: -.03em; line-height: 1.2;
-      margin-bottom: 14px;
-    }
-    .section-h2-white { color: #fff; }
-    .section-sub {
-      font-size: .95rem; color: var(--muted);
-      line-height: 1.7; max-width: 600px;
-    }
-    .section-sub-white { color: rgba(255,255,255,.65); }
-    .centered { text-align: center; }
-    .centered .section-sub { margin: 0 auto; }
-
-    /* ── PAIN POINTS ───────────────────────────────────── */
-    .pain-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-    .pain-card {
-      background: #fff;
-      border-radius: var(--r-lg);
-      padding: 30px 26px;
-      border-top: 4px solid var(--orange);
-      box-shadow: 0 2px 16px rgba(0,0,0,.07);
-    }
-    .pain-before {
-      display: flex; align-items: center; gap: 9px;
-      font-size: .82rem; font-weight: 700; color: #dc2626;
-      text-transform: uppercase; letter-spacing: .05em;
-      margin-bottom: 8px;
-    }
-    .pain-arrow {
-      display: flex; align-items: center; gap: 8px;
-      font-size: .72rem; font-weight: 700; color: var(--muted);
-      letter-spacing: .04em; text-transform: uppercase;
-      margin: 10px 0; opacity: .6;
-    }
-    .pain-after {
-      display: flex; align-items: center; gap: 9px;
-      font-size: .82rem; font-weight: 700; color: #16a34a;
-      text-transform: uppercase; letter-spacing: .05em;
-      margin-bottom: 12px;
-    }
-    .pain-card h3 {
-      font-size: 1.05rem; font-weight: 800; color: #0f1e2e;
-      margin-bottom: 10px; line-height: 1.3;
-    }
-    .pain-card p { font-size: .875rem; color: var(--muted); line-height: 1.65; }
-
-    /* ── SERVICES ──────────────────────────────────────── */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 44px;
-    }
-    .svc-item {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: var(--r);
-      padding: 20px 18px;
-      display: flex; align-items: flex-start; gap: 14px;
-    }
-    .svc-icon {
-      width: 38px; height: 38px; flex-shrink: 0; border-radius: 8px;
-      background: rgba(245,166,35,.15);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .svc-icon svg { color: var(--orange); }
-    .svc-item h3 { font-size: .9rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
-    .svc-item p { font-size: .78rem; color: rgba(255,255,255,.55); line-height: 1.5; }
-
-    /* ── SOCIAL PROOF ──────────────────────────────────── */
-    .stat-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0;
-      margin-top: 0;
-      background: var(--navy);
-      border-radius: var(--r-lg);
-      overflow: hidden;
-    }
-    .stat-box {
-      flex: 1; min-width: 160px;
-      padding: 28px 20px; text-align: center;
-      border-right: 1px solid rgba(255,255,255,.08);
-    }
-    .stat-box:last-child { border-right: none; }
-    .stat-num {
-      font-size: 2.4rem; font-weight: 900; color: var(--gold);
-      letter-spacing: -.04em; line-height: 1;
-    }
-    .stat-lbl {
-      font-size: .75rem; color: rgba(255,255,255,.55);
-      margin-top: 6px; line-height: 1.4; font-weight: 500;
-    }
-    /* ── VIDEO TESTIMONIAL CAROUSEL ───────────────────── */
-    .vc-outer {
-      position: relative;
-      margin: 52px 0 16px;
-    }
-    .vc-clip { overflow: hidden; }
-    .vc-track {
-      display: flex;
-      gap: 24px;
-      transition: transform .5s cubic-bezier(.4,0,.2,1);
-      will-change: transform;
-    }
-    .vc-slide { flex-shrink: 0; /* width set by JS */ }
-
-    /* Video */
-    .vc-video {
-      position: relative; width: 100%; aspect-ratio: 16/9;
-      background: #06141d; border-radius: var(--r);
-      overflow: hidden; border: 1px solid rgba(255,255,255,.1);
-      box-shadow: 0 12px 40px rgba(0,0,0,.5);
-    }
-    .vc-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .vc-placeholder {
-      position: absolute; inset: 0;
-      background: rgba(6,20,29,.45);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 16px;
-    }
-    .vc-placeholder-lbl {
-      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: rgba(255,255,255,.7);
-    }
-    .vc-play-btn {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: rgba(255,255,255,.1); border: 2px solid rgba(255,255,255,.25);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; backdrop-filter: blur(8px);
-      transition: background .2s, border-color .2s, transform .2s;
-    }
-    .vc-play-btn:hover { background: var(--orange); border-color: var(--orange); transform: scale(1.1); }
-    .vc-play-btn svg { color: #fff; margin-left: 5px; }
-
-    /* Meta */
-    .vc-meta { padding: 22px 2px 0; }
-    .vc-caption { font-size: 1rem; color: #3f4c59; line-height: 1.65; margin-bottom: 18px; }
-    .vc-quote {
-      font-size: 1rem; font-style: italic;
-      color: #3f4c59; line-height: 1.72;
-      margin-bottom: 18px; padding-left: 24px; position: relative;
-    }
-    .vc-quote::before {
-      content: '\201C';
-      position: absolute; left: 0; top: -8px;
-      font-size: 2.6rem; line-height: 1;
-      color: var(--orange); font-style: normal; font-weight: 900; opacity: .9;
-    }
-    .vc-client { display: flex; align-items: center; gap: 13px; }
-    .vc-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, #0b3d6b, #1762a8);
-      border: 2px solid rgba(255,255,255,.18);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .8rem; font-weight: 800; color: #fff;
-      flex-shrink: 0; letter-spacing: .03em;
-    }
-    .vc-name { font-size: .88rem; font-weight: 700; color: #0f1e2e; margin-bottom: 3px; }
-    .vc-detail { font-size: .85rem; color: #6b7785; line-height: 1.5; }
-
-    /* Arrows */
-    .vc-arrow {
-      position: absolute; top: 30%; transform: translateY(-50%);
-      width: 46px; height: 46px; border-radius: 50%;
-      background: rgba(11,61,107,.65); border: 1.5px solid rgba(255,255,255,.22);
-      color: #fff; cursor: pointer; z-index: 10;
-      display: flex; align-items: center; justify-content: center;
-      backdrop-filter: blur(8px);
-      transition: background .2s, border-color .2s, transform .15s;
-    }
-    .vc-arrow:hover:not(:disabled) { background: var(--orange); border-color: var(--orange); transform: translateY(-50%) scale(1.08); }
-    .vc-arrow:disabled { opacity: .2; cursor: default; }
-    .vc-arrow.prev { left: -23px; }
-    .vc-arrow.next { right: -23px; }
-
-    /* Dots */
-    .vc-nav {
-      display: flex; align-items: center; justify-content: center;
-      gap: 8px; margin-top: 32px;
-    }
-    .vc-dot {
-      height: 8px; width: 8px; border-radius: 4px;
-      background: rgba(15,30,46,.2); border: none; padding: 0;
-      cursor: pointer; transition: width .3s ease, background .3s ease;
-    }
-    .vc-dot.active { width: 28px; background: var(--orange); }
-
-    /* ── WHY PRO LINK ──────────────────────────────────── */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      margin-top: 48px;
-    }
-    .why-card {
-      background: #fff;
-      border-radius: var(--r-lg);
-      padding: 26px 20px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 10px rgba(0,0,0,.05);
-      text-align: center;
-      display: flex; flex-direction: column; align-items: center; gap: 14px;
-    }
-    .why-icon {
-      width: 52px; height: 52px; border-radius: 12px;
-      background: rgba(245,166,35,.1);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .why-icon svg { color: var(--orange); }
-    .why-card h3 { font-size: .88rem; font-weight: 800; color: #0f1e2e; line-height: 1.3; }
-    .why-card p { font-size: .77rem; color: var(--muted); line-height: 1.55; }
-
-    /* ── SECOND CTA ────────────────────────────────────── */
-    .cta2 {
-      background: linear-gradient(135deg, #072040, #0d4d85);
-      padding: 72px 24px;
-      text-align: center;
-    }
-    .cta2 h2 {
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-      font-weight: 900; color: #fff; letter-spacing: -.03em;
-      line-height: 1.15; margin-bottom: 14px;
-    }
-    .cta2 p { font-size: 1rem; color: rgba(255,255,255,.65); margin-bottom: 36px; }
-    .cta2-actions {
-      display: flex; align-items: center; justify-content: center;
-      flex-wrap: wrap; gap: 16px;
-    }
-    .btn-orange {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: var(--orange); color: #fff;
-      font-size: 1rem; font-weight: 800;
-      padding: 16px 32px; border-radius: var(--r);
-      box-shadow: 0 4px 18px rgba(245,166,35,.45);
-      transition: background .2s, transform .15s;
-    }
-    .btn-orange:hover { background: var(--orange-h); transform: translateY(-2px); }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: rgba(255,255,255,.08);
-      border: 1.5px solid rgba(255,255,255,.25);
-      color: #fff; font-size: 1rem; font-weight: 700;
-      padding: 15px 28px; border-radius: var(--r);
-      transition: background .2s;
-    }
-    .btn-ghost:hover { background: rgba(255,255,255,.15); }
-
-    /* ── FOOTER ────────────────────────────────────────── */
-    .lp-footer {
-      background: #072040;
-      border-top: 1px solid rgba(255,255,255,.07);
-      padding: 28px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .lp-footer img { height: 28px; }
-    .lp-footer-center {
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-    }
-    .lp-footer-center a {
-      font-size: .82rem; color: rgba(255,255,255,.6);
-    }
-    .lp-footer-center span { font-size: .75rem; color: rgba(255,255,255,.35); }
-    .lp-footer-right {
-      display: flex; flex-direction: column; align-items: flex-end; gap: 3px;
-    }
-    .lp-footer-right a { font-size: .78rem; color: rgba(255,255,255,.5); }
-    .lp-footer-right a:hover { color: rgba(255,255,255,.8); }
-
-    /* ── AREAS WE SERVE ───────────────────────────────────── */
-    .lp-areas {
-      background: #072040;
-      border-top: 1px solid rgba(255,255,255,.07);
-      padding: 20px 24px;
-      text-align: center;
-    }
-    .lp-areas h4 {
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.35);
-      margin: 0 0 10px;
-    }
-    .lp-areas-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px 18px;
-    }
-    .lp-areas-links a {
-      font-size: .8rem;
-      color: rgba(255,255,255,.5);
-      text-decoration: none;
-    }
-    .lp-areas-links a:hover { color: #fff; text-decoration: underline; }
-
-    /* ── HERO STATS ───────────────────────────────────── */
-    .hero-stats {
-      display: flex; align-items: center; gap: 0;
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
-      border-radius: var(--r); overflow: hidden;
-      align-self: flex-start;
-    }
-    .hero-stat {
-      display: flex; flex-direction: column; align-items: center;
-      padding: 12px 20px; gap: 2px;
-    }
-    .hstat-num {
-      font-size: 1.25rem; font-weight: 900; color: var(--gold);
-      letter-spacing: -.03em; line-height: 1;
-    }
-    .hstat-lbl {
-      font-size: .65rem; color: rgba(255,255,255,.5);
-      text-transform: uppercase; letter-spacing: .07em; white-space: nowrap;
-    }
-    .hero-stat-div {
-      width: 1px; height: 36px; background: rgba(255,255,255,.1); flex-shrink: 0;
-    }
-
-    /* ── RESPONSIVE ────────────────────────────────────── */
+    /* Ads landing page: the 2026 identity with a short header (logo and phone, no menu on purpose) and the form in the hero. */
+    .lp-bar { background: #fff; border-bottom: 1px solid var(--line); }
+    .lp-bar .pl-wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: var(--header-h); }
+    .lp-bar-side { display: flex; align-items: center; gap: 28px; font-size: .88rem; color: var(--text-muted); }
+    .lp-bar-side a { font-weight: 600; font-size: 1rem; color: var(--navy); white-space: nowrap; }
+    .lp-hero { padding: 72px 0 80px; }
+    .lp-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 470px); grid-template-areas: "intro form" "facts form"; grid-template-rows: auto 1fr; gap: 36px 72px; align-items: start; }
+    .lp-intro { grid-area: intro; } .lp-form { grid-area: form; } .lp-facts { grid-area: facts; }
+    .lp-hero .pl-h1 { font-size: clamp(2.1rem, 3.7vw, 3.1rem); margin-bottom: 20px; }
+    .lp-hero .pl-lead { font-size: 1.08rem; }
+    .lp-form { padding: 32px; scroll-margin-top: 24px; }
+    .lp-form .contact-options-head h2 { font-size: 1.45rem; }
+    .lp-form .contact-options-head p { margin-bottom: 20px; }
+    .lp-form .contact-options-head .lp-form-k { margin-bottom: 8px; font-size: .8rem; font-weight: 600; color: var(--accent-ink); }
+    .lp-form .form-group { margin-bottom: 14px; }
+    .lp-form textarea { min-height: 84px; }
+    .lp-form .opt { font-weight: 400; color: var(--text-muted); }
+    .lp-points { list-style: none; border-top: 1px solid var(--line-dark); }
+    .lp-points li { padding: 13px 0; border-bottom: 1px solid var(--line-dark); font-size: .98rem; line-height: 1.6; color: var(--text-inv); }
+    .lp-points strong { color: #fff; font-weight: 600; }
+    .lp-call { margin-top: 22px; color: var(--text-inv); }
+    .lp-call a { color: #fff; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,.4); }
+    .lp-figures { padding: 0 0 48px; }
+    .lp-figures a { color: inherit; border-bottom: 1px solid rgba(255,255,255,.4); }
+    .lp-table td { width: 36%; } .lp-table td:first-child { width: 28%; white-space: normal; padding-right: 32px; } .lp-table td strong { color: var(--ink); font-weight: 600; }
+    .lp-persp-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lp-dl { margin-top: 32px; }
+    .lp-why { align-items: start; } .lp-why figure { padding-top: 8px; }
+    .lp-explain > div:first-child { max-width: 50rem; } .lp-explain .pl-prose { margin-top: 24px; }
+    .lp-two { margin-top: 56px; gap: 72px; } .lp-who dt { color: var(--ink); text-transform: none; letter-spacing: 0; font-size: 1rem; } .lp-diff { margin-top: 18px; }
+    .lp-faq { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; } .lp-faq .pl-arrow { margin-top: 14px; }
     @media (max-width: 1024px) {
-      .why-grid { grid-template-columns: repeat(3, 1fr); }
+      .lp-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "intro" "form" "facts"; grid-template-rows: none; gap: 32px; }
+      .lp-form { max-width: 620px; } .lp-faq, .lp-two { grid-template-columns: minmax(0, 1fr); gap: 40px; }
     }
-    @media (max-width: 860px) {
-      .hero-stats { flex-wrap: wrap; }
+    @media (max-width: 700px) {
+      .lp-hero { padding: 32px 0 56px; } .lp-form { padding: 24px 20px; } .lp-bar-side span { display: none; }
+      .lp-grid { grid-template-areas: "head" "form" "lead" "facts"; gap: 24px; } .lp-intro { display: contents; } .lp-intro .pl-eyebrow { display: none; }
+      .lp-intro .pl-h1 { grid-area: head; margin: 0; } .lp-intro .pl-lead { grid-area: lead; margin-top: 8px; }
+      .lp-form .form-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .lp-table td, .lp-table td:first-child { width: 100%; }
     }
-    @media (max-width: 768px) {
-      .lp-section [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
-    }
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-      /* Form comes FIRST on mobile for above-fold visibility */
-      .hero-content { order: 2; }
-      .form-wrap { order: 1; position: static; }
-      .form-card { max-width: 400px; margin: 0 auto; }
-      .hero { align-items: flex-start; padding: 24px 20px 40px; min-height: 0; }
-      .pain-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-      .vc-arrow.prev { left: -10px; }
-      .vc-arrow.next { right: -10px; }
-      .trust-item { padding: 12px 16px; font-size: .72rem; }
-    }
-    @media (max-width: 600px) {
-      .hero { padding: 20px 16px 36px; }
-      .form-row { grid-template-columns: 1fr; }
-      .form-group input, .form-group select, .form-group textarea { padding: 14px 16px; font-size: 16px; }
-      .submit-btn { padding: 19px 24px; font-size: 1.18rem; }
-      .services-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-      .stat-row { flex-direction: column; }
-      .stat-box { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
-      .stat-box:last-child { border-bottom: none; }
-      .lp-footer { flex-direction: column; align-items: center; text-align: center; }
-      .lp-footer-right { align-items: center; }
-      .trust-item { flex: 1; min-width: 140px; border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); justify-content: center; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
-    }
-
-    /* ── SITE FOOTER ──────────────────────────────────────── */
-    .site-footer {
-      background: var(--navy-dark);
-      color: rgba(255,255,255,.7);
-      padding: 64px 32px 32px;
-    }
-    .footer-grid {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px;
-    }
-    .footer-brand img { height: 38px; width: auto; margin-bottom: 16px; }
-    .footer-brand p { font-size: .875rem; line-height: 1.7; max-width: 280px; }
-    .footer-col h2, .footer-col h3, .footer-col h4 { color: #fff; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
-    .footer-col a { display: block; font-size: .875rem; color: rgba(255,255,255,.65); margin-bottom: 10px; transition: color .2s; }
-    .footer-col a:hover { color: var(--gold); }
-    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: .875rem; }
-    .footer-contact-item svg { flex-shrink: 0; margin-top: 3px; color: var(--gold); }
-    .footer-bottom {
-      max-width: 1200px; margin: 48px auto 0;
-      border-top: 1px solid rgba(255,255,255,.1);
-      padding-top: 24px;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-      font-size: .8rem;
-    }
-    .footer-bottom a { color: rgba(255,255,255,.5); transition: color .2s; }
-    .footer-bottom a:hover { color: var(--gold); }
-    .footer-areas {
-      max-width: 1200px; margin: 32px auto 0;
-      padding-top: 28px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      text-align: center;
-    }
-    .footer-areas h2, .footer-areas h3, .footer-areas h4 {
-      color: #fff; font-size: .75rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .08em; margin: 0 0 14px;
-    }
-    .footer-areas-links { display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: center; }
-    .footer-areas-links a { font-size: .85rem; color: rgba(255,255,255,.6); text-decoration: none; transition: color .2s; }
-    .footer-areas-links a:hover { color: var(--gold); }
-    @media (max-width: 1024px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-    }
-  
-    /* 2026-11-17: real photo in page flow (same look as .page-photo in the shared stylesheet, which this LP doesn't load) */
-    .page-photo { margin: 40px 0 0; }
-    .page-photo img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 32px rgba(0, 40, 80, .14); }
-    .page-photo figcaption { font-size: .85rem; line-height: 1.5; color: #5b6b7f; margin-top: 10px; }
-    @media (max-width: 700px) { .page-photo img { border-radius: 10px; } }
-</style>
+  </style>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ProLink_Systems">
 <meta name="twitter:title" content="Managed IT Services Los Angeles | 24/7 IT Support Since 1999">
@@ -978,7 +258,7 @@
       "Friday"
     ],
     "opens": "09:00",
-    "closes": "18:00"
+    "closes": "17:00"
   }
 }
   </script>
@@ -1028,7 +308,7 @@
       "name": "Do you require a long-term contract?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. We do not require long-term contracts. Clients stay with Pro Link because the service works, and many have for more than a decade, including law firms, schools, manufacturers, and healthcare organizations we have supported since the early 2000s."
+        "text": "No. We do not require long-term contracts. Clients stay with Pro Link Systems because the service works, and many have for more than a decade, including law firms, schools, manufacturers, and healthcare organizations we have supported since the early 2000s."
       }
     },
     {
@@ -1060,39 +340,36 @@
   </script>
 </head>
 <body>
+<a class="pl-skip" href="#pl-main">Skip to content</a>
 
-<!-- HEADER -->
-<header class="lp-header">
-  <a href="https://prolinksystems.com/" class="lp-header-logo">
-    <img src="logo.png" alt="Pro Link Systems" width="1817" height="464">
-  </a>
-  <div class="lp-header-right">
-    <span class="lp-header-tag">Serving Los Angeles Businesses Since 1999</span>
-    <a href="tel:18008906133" class="lp-header-phone">
-      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      1-800-890-6133
-    </a>
+<!-- HEADER (landing page: logo and phone only, no menu on purpose) -->
+<header class="lp-bar">
+  <div class="pl-wrap">
+    <a href="/" class="pl-logo" aria-label="Pro Link Systems home"><img src="/logo.png" alt="Pro Link Systems" width="157" height="40"></a>
+    <p class="lp-bar-side"><span>Serving Los Angeles organizations since 1999</span><a href="tel:18008906133">1-800-890-6133</a></p>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
+<main id="pl-main" tabindex="-1">
 
-    <!-- FORM (comes first in DOM so it's above fold on mobile) -->
-    <div class="form-wrap">
-      <div class="form-card">
+<!-- HERO: heading, form, supporting facts (this order on phones; two columns on desktop) -->
+<section class="pl-pagehead lp-hero" aria-labelledby="page-h1">
+  <div class="pl-wrap lp-grid">
 
-        <div class="form-card-head">
-          <div class="form-urgency">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-6z"/></svg>
-            Free 15-minute discovery call &middot; Rated 4.9 on Google
-          </div>
-          <h2>Get a Free IT Consultation</h2>
-          <p>Leave your details and a Pro Link engineer will reach out the same business day.</p>
-        </div>
+    <div class="lp-intro">
+      <p class="pl-eyebrow">Managed IT, Los Angeles</p>
+      <h1 class="pl-h1" id="page-h1">Managed IT Services &amp; Support for LA Businesses</h1>
+      <p class="pl-lead">Pro Link Systems provides flat-rate managed IT services for Los Angeles organizations. Our 24/7 live help desk, proactive monitoring, cybersecurity and cloud management take on the work of an in-house IT department, at a predictable monthly cost and without a long-term contract.</p>
+    </div>
 
+    <div class="pl-formcard lp-form" id="consultation">
+      <div>
         <div class="form-body" id="formBody">
+          <div class="contact-options-head">
+            <p class="lp-form-k">Free 15-minute discovery call</p>
+            <h2>Request a Free IT Consultation</h2>
+            <p>Leave your details and a member of our team will respond within one business day.</p>
+          </div>
           <form method="post" id="lpForm" novalidate>
             <div class="form-group" id="fg-name">
               <label for="fi-name">Full Name <span class="req">*</span></label>
@@ -1117,866 +394,350 @@
             </div>
             <div class="form-group" id="fg-message">
               <label for="fi-message">How can we help? <span class="opt">(optional)</span></label>
-              <textarea id="fi-message" name="message" rows="2" placeholder="Briefly describe your IT challenge&hellip;"></textarea>
+              <textarea id="fi-message" name="message" rows="2" placeholder="Briefly describe your environment or what prompted you to reach out&hellip;"></textarea>
             </div>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAE_xODgbk9278VBj" style="margin:0 0 16px"></div>
-        <button type="submit" class="submit-btn" id="lpBtn">
-              <span class="btn-label">Get My Free IT Consultation</span>
+            <button type="submit" class="submit-btn" id="lpBtn">
+              <span class="btn-label">Request a Consultation</span>
               <svg class="btn-arrow" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              <div class="spinner"></div>
+              <span class="spinner"></span>
             </button>
           </form>
-          <div class="form-trust">
-            <span>&#10003; No obligation</span>
-            <span>&#10003; No long-term contracts</span>
-            <span>&#10003; Local LA engineers since 1999</span>
-          </div>
-          <p class="form-privacy">&#128274; We never share your info &middot; No spam, ever</p>
+          <p class="form-privacy">No obligation. We never share your information.</p>
         </div>
 
         <div class="form-success" id="formSuccess">
           <div class="success-orbit" aria-hidden="true">
-            <svg width="30" height="30" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24">
-              <polyline class="success-checkmark" points="20 6 9 17 4 12"/>
-            </svg>
+            <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline class="success-checkmark" points="20 6 9 17 4 12"/></svg>
           </div>
-          <div class="success-pill">
-            <div class="success-pill-dot" aria-hidden="true"></div>
-            Inquiry Confirmed
-          </div>
-          <h3>You&rsquo;re in good hands.</h3>
-          <p class="success-greeting">
-            Thank you, <strong id="successName">for reaching out</strong>. Your message has been received and a confirmation has been sent to your email.
-          </p>
-          <div class="success-ref">
-            Reference:&nbsp;<strong id="successRef">PLS-&mdash;&mdash;</strong>
-          </div>
+          <div class="success-pill"><span class="success-pill-dot" aria-hidden="true"></span>Inquiry confirmed</div>
+          <h3>Thank you. Your inquiry is with our team.</h3>
+          <p class="success-greeting">Thank you, <strong id="successName">for reaching out</strong>. Your message has been received and a confirmation has been sent to your email.</p>
+          <div class="success-ref">Reference: <strong id="successRef">PLS-&mdash;&mdash;</strong></div>
           <div class="success-steps">
-            <div class="success-step">
-              <div class="step-bbl" aria-hidden="true">1</div>
-              <div class="step-txt"><strong>Check your inbox.</strong> A confirmation has been sent to the email address you provided.</div>
-            </div>
-            <div class="success-step">
-              <div class="step-bbl" aria-hidden="true">2</div>
-              <div class="step-txt"><strong>Expect a call the same business day.</strong> A Pro Link specialist will reach out to schedule your complimentary discovery call.</div>
-            </div>
-            <div class="success-step">
-              <div class="step-bbl" aria-hidden="true">3</div>
-              <div class="step-txt"><strong>Jot down a few notes</strong> about your current IT setup &mdash; it helps us tailor the conversation to your needs.</div>
-            </div>
+            <div class="success-step"><div class="step-bbl" aria-hidden="true">1</div><div class="step-txt"><strong>Check your inbox.</strong> A confirmation has been sent to the email address you provided.</div></div>
+            <div class="success-step"><div class="step-bbl" aria-hidden="true">2</div><div class="step-txt"><strong>Expect a response within one business day.</strong> A member of our team will schedule your complimentary discovery call.</div></div>
+            <div class="success-step"><div class="step-bbl" aria-hidden="true">3</div><div class="step-txt"><strong>Note a few details</strong> about your current IT environment. They help us prepare for the conversation.</div></div>
           </div>
           <div class="success-div" aria-hidden="true"></div>
-          <p class="success-urgent">
-            Need immediate assistance?&ensp;<a href="tel:18008906133">1-800-890-6133</a>
-          </p>
+          <p class="success-urgent">Need immediate assistance? <a href="tel:18008906133">1-800-890-6133</a></p>
         </div>
       </div>
     </div>
 
-    <!-- CONTENT -->
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Los Angeles Managed IT
-      </div>
-      <h1 class="hero-h1">
-        Managed IT Services &amp; Support<br>
-        for <em>LA Businesses</em>
-      </h1>
-      <p class="hero-sub">
-        Pro Link Systems provides flat-rate managed IT services for Los Angeles businesses with 5 or more employees. Our 24/7 live help desk, proactive monitoring, cybersecurity, and cloud management replace your need for an in-house IT department &mdash; at a predictable monthly cost with no long-term contracts.
-      </p>
-      <div class="hero-bullets">
-        <div class="hero-bullet">
-          <div class="chk"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <span><strong style="color:#fff;">24/7 Live Help Desk</strong> &mdash; Calls answered live by our in-house, US-based team &mdash; no phone tree, no hold queue.</span>
-        </div>
-        <div class="hero-bullet">
-          <div class="chk"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <span><strong style="color:#fff;">Flat-Rate Pricing</strong> &mdash; One predictable monthly fee. No surprise bills.</span>
-        </div>
-        <div class="hero-bullet">
-          <div class="chk"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <span><strong style="color:#fff;">No Long-Term Contracts</strong> &mdash; We earn your business every single month.</span>
-        </div>
-        <div class="hero-bullet">
-          <div class="chk"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <span><strong style="color:#fff;">Local LA Team</strong> &mdash; Woodland Hills HQ &middot; On-site dispatch across Greater LA.</span>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hstat-num">15 min</span>
-          <span class="hstat-lbl">Avg. first response</span>
-        </div>
-        <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hstat-num">90%</span>
-          <span class="hstat-lbl">Fixed on first contact</span>
-        </div>
-        <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hstat-num">&lt;1 hr</span>
-          <span class="hstat-lbl">Avg. resolution time</span>
-        </div>
-        <div class="hero-stat-div"></div>
-        <div class="hero-stat">
-          <span class="hstat-num">4.9&#9733;</span>
-          <span class="hstat-lbl"><a href="https://maps.app.goo.gl/2p9ooE6Rsk96rcnR6" target="_blank" rel="noopener" style="color:inherit;">Google rating</a></span>
-        </div>
-      </div>
-      <div class="hero-phone">
-        <svg width="18" height="18" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <div>
-          <div class="hero-phone-label">Prefer to call?</div>
-          <a href="tel:18008906133">1-800-890-6133</a>
-        </div>
-      </div>
+    <div class="lp-facts">
+      <ul class="lp-points">
+        <li><strong>24/7 live help desk.</strong> Calls are answered by our in-house, US-based team, with no phone tree and no hold queue.</li>
+        <li><strong>Flat-rate pricing.</strong> One predictable monthly fee.</li>
+        <li><strong>No long-term contracts.</strong> Clients stay because the service works.</li>
+        <li><strong>A local team.</strong> Headquartered in Woodland Hills, with on-site support across Greater Los Angeles.</li>
+      </ul>
+      <p class="lp-call">Prefer to call? <a href="tel:18008906133">1-800-890-6133</a></p>
     </div>
 
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    Serving LA Since 1999
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    24/7 Live Help Desk
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
-    No Long-Term Contracts
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Rated 4.9 on Google
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-    Flat-Rate Pricing
-  </div>
-</div>
-
-<!-- SOCIAL PROOF -->
-<section class="lp-section lp-section-alt">
-  <div class="lp-container">
-    <div class="centered">
-      <span class="section-eyebrow">Client Stories</span>
-      <h2 class="section-h2">Hear It Directly From<br>LA Businesses Like Yours</h2>
-    </div>
-
-    <!-- VIDEO CAROUSEL -->
-    <div class="vc-outer" id="vcOuter">
-
-      <button class="vc-arrow prev" id="vcPrev" aria-label="Previous testimonial" disabled>
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-
-      <div class="vc-clip">
-        <div class="vc-track" id="vcTrack">
-
-          <!-- Slide 1 — Optical Zonu (video testimonial) -->
-          <div class="vc-slide">
-            <div class="vc-video">
-              <video id="vid1" src="https://videos.prolinksystems.com/oz.mp4" poster="/assets/video/oz-poster.webp" preload="none" muted playsinline>
-                Your browser does not support HTML5 video.
-              </video>
-              <div class="vc-placeholder" id="ph1">
-                <div class="vc-placeholder-lbl">Client Testimonial</div>
-                <button class="vc-play-btn" aria-label="Play video" data-video="vid1" data-ph="ph1">
-                  <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                </button>
-              </div>
-            </div>
-            <div class="vc-meta">
-              <p class="vc-caption">Optical Zonu on what working with Pro Link Systems is like &mdash; in their own words.</p>
-              <div class="vc-client">
-                <div class="vc-avatar">OZ</div>
-                <div>
-                  <div class="vc-name">Optical Zonu</div>
-                  <div class="vc-detail">Manufacturing Company<br>Los Angeles, CA</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 — Law Offices of Alan B. Snitzer (quote = Alan B. Snitzer's Google review) -->
-          <div class="vc-slide">
-            <div class="vc-video">
-              <video id="vid2" src="https://videos.prolinksystems.com/snitzer.mp4" poster="/assets/video/snitzer-poster.webp" preload="none" muted playsinline>
-                Your browser does not support HTML5 video.
-              </video>
-              <div class="vc-placeholder" id="ph2">
-                <div class="vc-placeholder-lbl">Client Testimonial</div>
-                <button class="vc-play-btn" aria-label="Play video" data-video="vid2" data-ph="ph2">
-                  <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                </button>
-              </div>
-            </div>
-            <div class="vc-meta">
-              <p class="vc-quote">ProLink has been our only IT company for almost 2 decades now, and they continue to excel in providing us with the highest level of safety, security, and service!</p>
-              <div class="vc-client">
-                <div class="vc-avatar">AS</div>
-                <div>
-                  <div class="vc-name">Alan B. Snitzer</div>
-                  <div class="vc-detail">Law Offices of Alan B. Snitzer<br>Client for 18 years &middot; Google review</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 — The Waverly School (video testimonial) -->
-          <div class="vc-slide">
-            <div class="vc-video">
-              <video id="vid3" src="https://videos.prolinksystems.com/waverly.mp4" poster="/assets/video/waverly-poster.webp" preload="none" muted playsinline>
-                Your browser does not support HTML5 video.
-              </video>
-              <div class="vc-placeholder" id="ph3">
-                <div class="vc-placeholder-lbl">Client Testimonial</div>
-                <button class="vc-play-btn" aria-label="Play video" data-video="vid3" data-ph="ph3">
-                  <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                </button>
-              </div>
-            </div>
-            <div class="vc-meta">
-              <p class="vc-caption">The Waverly School on working with Pro Link Systems &mdash; in their own words.</p>
-              <div class="vc-client">
-                <div class="vc-avatar">WS</div>
-                <div>
-                  <div class="vc-name">The Waverly School</div>
-                  <div class="vc-detail">Private School<br>Pasadena, CA</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /vc-track -->
-      </div><!-- /vc-clip -->
-
-      <button class="vc-arrow next" id="vcNext" aria-label="Next testimonial">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-    </div><!-- /vc-outer -->
-
-    <!-- Dot navigation -->
-    <div class="vc-nav" id="vcNav"></div>
-
-    <!-- STAT ROW -->
-    <div class="stat-row">
-      <div class="stat-box">
-        <div class="stat-num">1999</div>
-        <div class="stat-lbl">Serving Los Angeles<br>businesses since</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">15 min</div>
-        <div class="stat-lbl">Average ticket<br>first-response time</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">90%</div>
-        <div class="stat-lbl">Of issues resolved<br>on first contact</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">24/7</div>
-        <div class="stat-lbl">In-house, US-based<br>help desk</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES INCLUDED -->
-<section class="lp-section lp-section-dark">
-  <div class="lp-container">
-    <div class="centered">
-      <span class="section-eyebrow" style="color:var(--gold);">What&rsquo;s Included</span>
-      <h2 class="section-h2 section-h2-white">Everything Your Business Needs.<br>One Monthly Price.</h2>
-      <p class="section-sub section-sub-white">No &agrave; la carte fees. No &ldquo;that&rsquo;s not in scope.&rdquo; Just complete managed IT for a flat rate.</p>
-    </div>
-    <div class="services-grid">
-
-      <div class="svc-item">
-        <div class="svc-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <div>
-          <h3>Help Desk &amp; Remote Support</h3>
-          <p>24/7 in-house help desk, unlimited calls. Average ticket first-response time: 15 minutes.</p>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <div>
-          <h3>Network Monitoring &amp; Management</h3>
-          <p>Proactive 24/7 monitoring. Problems caught before they cause downtime.</p>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div>
-          <h3>Cybersecurity &amp; Endpoint Protection</h3>
-          <p>EDR, email security, MFA, ransomware prevention &amp; response.</p>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
-        </div>
-        <div>
-          <h3>Cloud &amp; Microsoft 365</h3>
-          <p>Microsoft 365 management, SharePoint, Teams, and cloud migrations.</p>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
-        </div>
-        <div>
-          <h3>Backup &amp; Disaster Recovery</h3>
-          <p>Encrypted cloud backups with tested recovery and documented RTO.</p>
-        </div>
-      </div>
-
-      <div class="svc-item">
-        <div class="svc-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <div>
-          <h3>Virtual CIO &amp; IT Strategy</h3>
-          <p>Quarterly roadmaps, vendor management, and technology planning.</p>
-        </div>
-      </div>
-
+<!-- FIGURES (verified numbers only) -->
+<section class="pl-dark lp-figures" aria-label="Service figures">
+  <div class="pl-wrap">
+    <div class="pl-figures">
+      <div class="pl-figure"><strong>15 min</strong><span>Average ticket first-response time</span></div>
+      <div class="pl-figure"><strong>90%</strong><span>Of issues resolved on first contact</span></div>
+      <div class="pl-figure"><strong>&lt;1 hr</strong><span>Average resolution time</span></div>
+      <div class="pl-figure"><strong>4.9</strong><span><a href="https://share.google/ab8YpK16DxCYbt1Hd" target="_blank" rel="noopener">Average Google rating</a></span></div>
     </div>
   </div>
 </section>
 
-<!-- WHY PRO LINK -->
-<section class="lp-section">
-  <div class="lp-container">
-    <div class="centered">
-      <span class="section-eyebrow">Why Pro Link Systems</span>
-      <h2 class="section-h2">Not All Managed IT Providers<br>Are the Same. Here&rsquo;s the Difference.</h2>
-      <p class="section-sub">We&rsquo;ve been hearing from businesses frustrated with their current IT provider since 1999. These are the reasons they switch to us &mdash; and stay.</p>
-    </div>
-    <div class="why-grid">
-
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3>Local LA Team</h3>
-        <p>Woodland Hills HQ. On-site engineers dispatched across Greater Los Angeles the same day.</p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <h3>Calls Answered Live</h3>
-        <p>Your call is answered live by our in-house, US-based team &mdash; never an overseas call center, a phone tree or a hold queue.</p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
-        </div>
-        <h3>No Long-Term Contracts</h3>
-        <p>No long-term commitment required. We believe you should stay because we&rsquo;re good &mdash; not because you&rsquo;re locked in.</p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h3>Flat-Rate Predictable Pricing</h3>
-        <p>One monthly fee. Unlimited support. No per-incident billing, no surprise invoices for emergency labor.</p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Security-First Approach</h3>
-        <p>Every client gets layered cybersecurity built in &mdash; endpoint protection, email security, MFA, and backups verified by restore tests.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PAIN POINTS + SOLUTIONS -->
-<section class="lp-section lp-section-alt">
-  <div class="lp-container">
-    <div class="centered">
-      <span class="section-eyebrow">Sound Familiar?</span>
-      <h2 class="section-h2">The IT Problems LA Businesses<br>Bring Us Every Week</h2>
-      <p class="section-sub">If any of these describe your current situation, you&rsquo;re a good fit for what we do.</p>
-    </div>
-    <div class="pain-grid">
-
-      <div class="pain-card">
-        <div class="pain-before">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-          The Problem
-        </div>
-        <h3>Unpredictable IT Bills That Spike When Something Breaks</h3>
-        <p>Break-fix IT means you pay nothing&hellip; until you do. Then you get a surprise invoice for emergency labor, parts, and travel. Budgeting is impossible.</p>
-        <div class="pain-arrow">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-          Pro Link Solution
-        </div>
-        <div class="pain-after">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Flat-Rate Monthly Pricing
-        </div>
-        <p>One fixed monthly fee covers everything &mdash; unlimited help desk calls, proactive monitoring, security updates, and on-site visits. Your IT costs are predictable every month, forever.</p>
-      </div>
-
-      <div class="pain-card">
-        <div class="pain-before">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-          The Problem
-        </div>
-        <h3>Reactive IT That Only Shows Up After Something Breaks</h3>
-        <p>Your current IT provider reacts to problems instead of preventing them. By the time they show up, you&rsquo;ve already lost hours of productivity &mdash; and you&rsquo;re the one who had to call them.</p>
-        <div class="pain-arrow">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-          Pro Link Solution
-        </div>
-        <div class="pain-after">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          24/7 Proactive Monitoring
-        </div>
-        <p>We monitor your systems around the clock and fix issues before they become outages. Most clients don&rsquo;t even know there was a problem because we resolved it while they were sleeping.</p>
-      </div>
-
-      <div class="pain-card">
-        <div class="pain-before">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-          The Problem
-        </div>
-        <h3>Slow Support That Routes You Through a Ticket System</h3>
-        <p>You submit a ticket, wait hours for a response, get bounced between technicians who don&rsquo;t know your setup, and still don&rsquo;t have an answer by end of day.</p>
-        <div class="pain-arrow">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-          Pro Link Solution
-        </div>
-        <div class="pain-after">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Live Engineers Answer Immediately
-        </div>
-        <p>Call our help desk and our in-house team answers live, 24 hours a day, 7 days a week &mdash; no phone tree, no hold queue. Average ticket first-response time: 15 minutes.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHAT IS MANAGED IT / SEO CONTENT -->
-<section class="lp-section faq-section" aria-labelledby="faq-heading">
-  <style>
-    .faq-section{background:var(--off);}
-    .faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
-    .faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
-    .faq-q{width:100%;text-align:left;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:.95rem;font-weight:700;color:inherit;background:none;border:none;cursor:pointer;font-family:inherit;}
-    .faq-q svg{flex-shrink:0;transition:transform .3s;color:var(--muted);}
-    .faq-item.open .faq-q svg{transform:rotate(180deg);}
-    .faq-a{display:none;padding:0 24px 20px;font-size:.9rem;color:var(--muted);line-height:1.75;}
-    .faq-item.open .faq-a{display:block;}
-  </style>
-  <div class="lp-container">
-    <div style="max-width:800px;margin:0 auto 32px;text-align:center;">
-      <span class="section-eyebrow">Common Questions</span>
-      <h2 class="section-h2" id="faq-heading">Managed IT Services in Los Angeles &mdash; Your Questions Answered</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">
-          What do managed IT services in Los Angeles cost?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">Pro Link Systems uses flat-rate, per-user pricing with no long-term contracts: unlimited support, 24/7 monitoring, and cybersecurity for one predictable monthly fee. Most Los Angeles businesses with 5 to 150 employees land between $75 and $200 per user per month depending on their security needs and the scope of support. Our Los Angeles managed IT pricing guide breaks down what should be included at each tier.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">
-          How fast do you respond to IT support requests in Los Angeles?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">Our help desk is in-house, US-based and staffed 24/7/365, and calls are answered live, with no phone tree and no hold queue. Average ticket first-response time is 15 minutes, 90% of issues are resolved on first contact, and average resolution time is under an hour. For hardware or infrastructure work, our technicians come on-site across Greater Los Angeles from our Woodland Hills headquarters, with same-day on-site support when needed.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">
-          Do you require a long-term contract?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">No. We do not require long-term contracts. Clients stay with Pro Link because the service works, and many have for more than a decade, including law firms, schools, manufacturers, and healthcare organizations we have supported since the early 2000s.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">
-          Which parts of Los Angeles do you serve?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">All of Greater Los Angeles: the San Fernando Valley, the Westside, the South Bay, the San Gabriel Valley, Downtown, Hollywood, and into Ventura and Orange counties. We maintain dedicated service pages for 39 communities, and our headquarters is at 21241 Ventura Blvd in Woodland Hills.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">
-          What is included in a managed IT plan?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">A 24/7 help desk, proactive monitoring and patching, endpoint and email security, backup and disaster recovery, Microsoft 365 and cloud management, network and Wi-Fi management, vendor management, and virtual CIO guidance, all under one flat monthly fee with no per-ticket billing.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">
-          Can you work alongside our in-house IT staff?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">Yes. Our co-managed IT option adds our 24/7 in-house, US-based help desk, monitoring, security and project capacity to your existing team. Your IT lead keeps control of priorities; we cover the gaps, the after-hours calls and the overflow.</div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:28px;"><a href="/case-studies" style="color:var(--navy);font-weight:700;">Read 14 client case studies &rarr;</a> &nbsp;&middot;&nbsp; <a href="/managed-it-services-pricing-los-angeles" style="color:var(--navy);font-weight:700;">See Los Angeles managed IT pricing &rarr;</a></p>
-  </div>
-</section>
-<script>
-  document.querySelectorAll('.faq-q').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var item = this.closest('.faq-item');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
-      if (!isOpen) item.classList.add('open');
-      this.setAttribute('aria-expanded', !isOpen);
-    });
-  });
-</script>
-
-<section class="lp-section">
-  <div class="lp-container">
-
-    <div style="max-width:800px;">
-      <span class="section-eyebrow">The Full Picture</span>
-      <h2 class="section-h2">What Are Managed IT Services — and Is It Right for Your Los Angeles Business?</h2>
-      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:20px;">
-        Managed IT services means your business pays a flat monthly fee to a managed service provider in Los Angeles who takes complete ownership of your technology environment. Instead of calling a break-fix IT company only when something goes wrong — and paying emergency rates every time — you have a dedicated IT company in Los Angeles available 24 hours a day, 7 days a week, proactively monitoring, securing, and optimising your infrastructure.
-      </p>
-      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:20px;">
-        For growing businesses across the Los Angeles metro area, choosing the right managed service provider in Los Angeles can be the difference between a technology environment that accelerates growth and one that creates constant friction and unexpected costs. The right IT support partner in Los Angeles doesn't just fix problems — they prevent them, align your technology with your business goals, and give your team back the hours they were spending on IT headaches.
-      </p>
-      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:36px;">
-        Pro Link Systems has been the managed IT services provider Los Angeles businesses trust since 1999. We serve companies across Woodland Hills, Burbank, Santa Monica, Encino, Sherman Oaks, Glendale, Thousand Oaks, and Calabasas — with engineers who know the LA business landscape and respond the same day, in person, when you need it.
-      </p>
-      <p style="font-size:1rem;line-height:1.8;margin-bottom:10px;">
-        Managed IT keeps your technology running day to day. Deciding where that technology should go &mdash; the planning, budgeting, security strategy and roadmap &mdash; is the work of a <a href="/virtual-cio" style="color:#0b3d6b;font-weight:700;text-decoration:none;">virtual CIO (vCIO)</a>. Growing businesses usually need both: operations from managed IT and direction from a vCIO. See <a href="/vcio-vs-break-fix-vs-managed-it" style="color:#0b3d6b;font-weight:700;text-decoration:none;">vCIO vs. break-fix vs. managed IT</a> for how they fit together.
-      </p>
-      <p style="font-size:1rem;line-height:1.8;margin-bottom:0;"><a href="managed-it-services-pricing-los-angeles" style="color:#0b3d6b;font-weight:700;text-decoration:none;">&rarr; Read our 2026 Los Angeles managed IT pricing guide</a></p>
-      <figure class="page-photo" style="margin:36px 0 44px;">
-        <img src="/assets/photos/web/onsite-assistance-1024.webp"
-             srcset="/assets/photos/web/onsite-assistance-720.webp 720w, /assets/photos/web/onsite-assistance-1024.webp 1024w"
-             sizes="(max-width: 860px) 92vw, 800px" width="1024" height="720" loading="lazy" decoding="async"
-             alt="A Pro Link Systems technician in a branded polo helping a staff member at their desk">
-        <figcaption>A Pro Link Systems technician working through an issue with a staff member.</figcaption>
-      </figure>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
-
+<!-- WHAT IS INCLUDED -->
+<section class="pl-section" aria-labelledby="inc-h">
+  <div class="pl-wrap">
+    <div class="pl-head">
       <div>
-        <h3 style="font-size:1.25rem;font-weight:800;color:#0f1e2e;margin-bottom:18px;letter-spacing:-.02em;">Who Managed IT Services in LA Is Right For</h3>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <div style="display:flex;gap:14px;align-items:flex-start;">
-            <div style="width:38px;height:38px;border-radius:8px;background:rgba(11,61,107,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" fill="none" stroke="#0b3d6b" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-            </div>
-            <div>
-              <strong style="font-size:.9rem;color:#0f1e2e;">Small &amp; Mid-Sized Businesses (10–250 employees)</strong>
-              <p style="font-size:.85rem;color:var(--muted);margin-top:3px;line-height:1.6;">Companies that need enterprise-grade IT support in Los Angeles but don't have the budget or need for a full in-house IT department.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:14px;align-items:flex-start;">
-            <div style="width:38px;height:38px;border-radius:8px;background:rgba(11,61,107,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" fill="none" stroke="#0b3d6b" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <div>
-              <strong style="font-size:.9rem;color:#0f1e2e;">Healthcare Practices &amp; Medical Groups</strong>
-              <p style="font-size:.85rem;color:var(--muted);margin-top:3px;line-height:1.6;">Managed IT for Los Angeles medical, dental, and behavioral health practices that need secure, always-on systems.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:14px;align-items:flex-start;">
-            <div style="width:38px;height:38px;border-radius:8px;background:rgba(11,61,107,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" fill="none" stroke="#0b3d6b" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div>
-              <strong style="font-size:.9rem;color:#0f1e2e;">Law Firms &amp; Professional Services</strong>
-              <p style="font-size:.85rem;color:var(--muted);margin-top:3px;line-height:1.6;">IT support for Los Angeles law firms, CPA firms, and financial services companies that handle confidential data and require maximum uptime.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:14px;align-items:flex-start;">
-            <div style="width:38px;height:38px;border-radius:8px;background:rgba(11,61,107,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" fill="none" stroke="#0b3d6b" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            </div>
-            <div>
-              <strong style="font-size:.9rem;color:#0f1e2e;">Manufacturing &amp; Distribution</strong>
-              <p style="font-size:.85rem;color:var(--muted);margin-top:3px;line-height:1.6;">Managed IT services for Los Angeles manufacturers and distributors who depend on ERP systems, warehouse technology, and operational continuity.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:14px;align-items:flex-start;">
-            <div style="width:38px;height:38px;border-radius:8px;background:rgba(11,61,107,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" fill="none" stroke="#0b3d6b" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <div>
-              <strong style="font-size:.9rem;color:#0f1e2e;">Businesses With an Internal IT Team</strong>
-              <p style="font-size:.85rem;color:var(--muted);margin-top:3px;line-height:1.6;">Already have IT staff? Our <a href="co-managed-it-services" style="color:var(--navy,#0b3d6b);font-weight:700;">co-managed IT services</a> extend your internal team with 24/7 coverage, specialized security, and project support — rather than replacing them.</p>
-            </div>
-          </div>
-        </div>
+        <p class="pl-eyebrow">What is included</p>
+        <h2 class="pl-h2" id="inc-h">A complete IT function for one monthly fee.</h2>
       </div>
-
-      <div>
-        <h3 style="font-size:1.25rem;font-weight:800;color:#0f1e2e;margin-bottom:18px;letter-spacing:-.02em;">What Makes Pro Link Different From Other IT Companies in Los Angeles</h3>
-        <p style="font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px;">
-          Many IT providers route your call through a phone tree to a level-1 technician who reads from a script, escalates twice, and resolves your issue hours later. Pro Link is built differently.
-        </p>
-        <p style="font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px;">
-          When you call our help desk, our in-house team answers live &mdash; no phone tree, no hold queue. We document your entire environment on day one, which means faster resolutions, fewer repeat issues, and an IT company in Los Angeles that actually understands your business — not just your tickets.
-        </p>
-        <p style="font-size:.95rem;color:var(--muted);line-height:1.8;">
-          Our help desk is in-house and US-based, never outsourced. When you call at 2am about a server that's down, you reach our own team &mdash; people working from your documented environment, not a stranger reading a script. That continuity is one of the biggest reasons clients stay with us, some for more than 15 years.
-        </p>
-      </div>
-
+      <p class="pl-lead">Every plan brings these six disciplines together under one flat monthly fee, with no per-ticket billing.</p>
     </div>
-
+    <div class="pl-grid pl-grid-3">
+      <div class="pl-tile"><h3>Help desk and remote support</h3><p>A 24/7 in-house help desk with unlimited calls. Average ticket first-response time: 15 minutes.</p></div>
+      <div class="pl-tile"><h3>Network monitoring and management</h3><p>Proactive monitoring around the clock, so many problems are caught before they cause downtime.</p></div>
+      <div class="pl-tile"><h3>Cybersecurity and endpoint protection</h3><p>Endpoint detection and response, email security, MFA, and ransomware prevention and response.</p></div>
+      <div class="pl-tile"><h3>Cloud and Microsoft 365</h3><p>Microsoft 365 management, SharePoint, Teams and cloud migrations.</p></div>
+      <div class="pl-tile"><h3>Backup and disaster recovery</h3><p>Encrypted cloud backups with tested recovery and a documented recovery time objective.</p></div>
+      <div class="pl-tile"><h3>Virtual CIO and IT strategy</h3><p>Quarterly roadmaps, vendor management and technology planning.</p></div>
+    </div>
   </div>
 </section>
 
-<!-- SECOND CTA -->
-<div class="cta2">
-  <div style="max-width:700px;margin:0 auto;">
-    <span class="section-eyebrow">Ready to Get Started?</span>
-    <h2>Stop Dealing With IT Problems.<br>Let&rsquo;s Talk This Week.</h2>
-    <p>Book a free 15-minute discovery call. We&rsquo;ll learn about your business, walk you through our process, and give you a clear proposal &mdash; all at no cost and no obligation.</p>
-    <div class="cta2-actions">
-      <a href="/contact" class="btn-orange" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-        Book My Free Discovery Call
-        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="tel:18008906133" class="btn-ghost">
-        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3-8.57A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Call 1-800-890-6133
-      </a>
+<!-- WHAT CHANGES -->
+<section class="pl-section pl-mist" aria-labelledby="chg-h">
+  <div class="pl-wrap">
+    <div class="pl-head pl-head--stack">
+      <p class="pl-eyebrow">Why organizations change providers</p>
+      <h2 class="pl-h2" id="chg-h">Three situations Los Angeles organizations bring to us.</h2>
     </div>
-    <p style="margin-top:18px;font-size:.78rem;color:rgba(255,255,255,.35);">
-      No long-term contracts. No pressure. Just an honest conversation about your IT.
-    </p>
+    <table class="pl-table lp-table">
+      <thead><tr><th scope="col">Situation</th><th scope="col">What it costs</th><th scope="col">With managed IT</th></tr></thead>
+      <tbody>
+        <tr><td>Bills spike when something breaks</td><td>Break-fix support invoices emergency labor, parts and travel after the event, so IT is difficult to budget.</td><td><strong>Flat-rate monthly pricing.</strong> One fixed monthly fee covers help desk calls, proactive monitoring, security updates and on-site visits.</td></tr>
+        <tr><td>Support is reactive</td><td>Problems are addressed after they have cost hours of work, and staff are the ones who report them.</td><td><strong>24/7 proactive monitoring.</strong> Systems are watched around the clock and many issues are resolved before they become outages.</td></tr>
+        <tr><td>Requests wait in a queue</td><td>A ticket passes between technicians who do not know the environment, and the answer arrives late.</td><td><strong>Calls answered live.</strong> Our in-house team answers 24 hours a day, with an average ticket first-response time of 15 minutes.</td></tr>
+      </tbody>
+    </table>
   </div>
-</div>
+</section>
 
-<!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="logo.png" alt="Pro Link Systems" width="140" height="38">
-      <p>Managed IT and cybersecurity for Los Angeles businesses. Founded 1999. 24/7 in-house, US-based help desk.</p>
+<!-- CLIENT PERSPECTIVES -->
+<section class="pl-section pl-dark" id="perspectives" aria-labelledby="persp-h">
+  <div class="pl-wrap">
+    <div class="pl-head pl-head--stack">
+      <p class="pl-eyebrow">Client perspectives</p>
+      <h2 class="pl-h2" id="persp-h">In our clients&rsquo; words.</h2>
     </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <a href="managed-it-services">Managed IT</a>
-      <a href="virtual-cio">Virtual CIO &amp; IT Consulting</a>
-      <a href="cybersecurity-services">Cybersecurity</a>
-      <a href="cloud-services">Cloud &amp; Infrastructure</a>
-      <a href="backup-disaster-recovery">Disaster Recovery</a>
-      <a href="it-help-desk">24/7 Help Desk</a>
-      <a href="self-service">Self-Service Assessments</a>
-    </div>
-    <div class="footer-col">
-      <h3>Company</h3>
-      <a href="/">Home</a>
-      <a href="about">About Us</a>
-      <a href="contact">Contact</a>
-      <a href="blog/">Blog</a>
-      <a href="case-studies">Case Studies</a>
-      <a href="legal">Legal / Terms</a>
-    </div>
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <div><a href="tel:18008906133">1-800-890-6133</a><br><span style="font-size:.8rem;color:rgba(255,255,255,.45);">Sales &amp; Support</span></div>
+    <div class="pl-persp">
+      <div>
+        <div class="pl-video-frame">
+          <video id="pl-video" controls playsinline preload="none" poster="/assets/video/oz-poster.webp" aria-label="Client video">
+            <source src="https://videos.prolinksystems.com/oz.mp4" type="video/mp4">
+          </video>
+        </div>
+        <ul class="pl-persp-list lp-persp-list" data-video-list>
+          <li><button type="button" class="is-active" data-src="https://videos.prolinksystems.com/oz.mp4" data-poster="/assets/video/oz-poster.webp"><span>Client</span>Optical Zonu</button></li>
+          <li><button type="button" data-src="https://videos.prolinksystems.com/snitzer.mp4" data-poster="/assets/video/snitzer-poster.webp"><span>Client</span>Law Offices of Alan B. Snitzer</button></li>
+          <li><button type="button" data-src="https://videos.prolinksystems.com/waverly.mp4" data-poster="/assets/video/waverly-poster.webp"><span>Client</span>The Waverly School</button></li>
+        </ul>
       </div>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
-      </div>
-      <div class="footer-contact-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</span>
+      <div>
+        <figure class="pl-persp-quote">
+          <blockquote>&ldquo;ProLink has been our only IT company for almost 2 decades now, and they continue to excel in providing us with the highest level of safety, security, and service!&rdquo;</blockquote>
+          <figcaption><strong>Alan B. Snitzer</strong> &middot; Law Offices of Alan B. Snitzer &middot; Client for 18 years &middot; Google review</figcaption>
+        </figure>
+        <p class="pl-persp-rating"><strong>4.9</strong><span>average Google rating &middot; <a href="https://share.google/ab8YpK16DxCYbt1Hd" target="_blank" rel="noopener">Read all reviews</a></span></p>
       </div>
     </div>
   </div>
-  <div class="footer-areas">
-    <h3>Other Areas We Serve</h3>
-    <div class="footer-areas-links">
-      <a href="managed-it-services-los-angeles">Los Angeles</a>
-      <a href="managed-it-services-downtown-los-angeles">Downtown LA</a>
-      <a href="managed-it-services-woodland-hills">Woodland Hills</a>
-      <a href="managed-it-services-tarzana">Tarzana</a>
-      <a href="managed-it-services-west-hills">West Hills</a>
-      <a href="managed-it-services-chatsworth">Chatsworth</a>
-      <a href="managed-it-services-beverly-hills">Beverly Hills</a>
-      <a href="managed-it-services-century-city">Century City</a>
-      <a href="managed-it-services-west-los-angeles">West Los Angeles</a>
-      <a href="managed-it-services-pasadena">Pasadena</a>
-      <a href="it-support-burbank">Burbank</a>
-      <a href="managed-it-services-studio-city">Studio City</a>
-      <a href="managed-it-services-north-hollywood">North Hollywood</a>
-      <a href="managed-it-services-santa-monica">Santa Monica</a>
-      <a href="managed-it-services-culver-city">Culver City</a>
-      <a href="managed-it-services-glendale">Glendale</a>
-      <a href="managed-it-services-calabasas">Calabasas</a>
-      <a href="managed-it-services-agoura-hills">Agoura Hills</a>
-      <a href="managed-it-services-thousand-oaks">Thousand Oaks</a>
-      <a href="managed-it-services-simi-valley">Simi Valley</a>
-      <a href="managed-it-services-sherman-oaks">Sherman Oaks</a>
-      <a href="managed-it-services-van-nuys">Van Nuys</a>
-      <a href="managed-it-services-northridge">Northridge</a>
-      <a href="managed-it-services-santa-clarita">Santa Clarita</a>
-      <a href="managed-it-services-encino">Encino</a>
-      <a href="managed-it-services-torrance">Torrance</a>
-      <a href="managed-it-services-el-segundo">El Segundo</a>
-      <a href="managed-it-services-long-beach">Long Beach</a>
-      <a href="managed-it-services-irvine">Irvine</a>
-      <a href="managed-it-services-orange-county">Orange County</a>
-      <a href="managed-it-services-playa-vista">Playa Vista</a>
-      <a href="managed-it-services-hollywood">Hollywood</a>
-      <a href="managed-it-services-koreatown">Koreatown</a>
-      <a href="managed-it-services-hawthorne">Hawthorne</a>
-      <a href="managed-it-services-manhattan-beach">Manhattan Beach</a>
-      <a href="managed-it-services-sun-valley">Sun Valley</a>
-      <a href="managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
-      <a href="managed-it-services-camarillo">Camarillo</a>
-      <a href="managed-it-services-malibu">Malibu</a>
+</section>
+
+<!-- WHY PRO LINK SYSTEMS -->
+<section class="pl-section" aria-labelledby="why-h">
+  <div class="pl-wrap pl-split pl-split--wide-text lp-why">
+    <div>
+      <p class="pl-eyebrow">Why Pro Link Systems</p>
+      <h2 class="pl-h2" id="why-h">What clients can expect.</h2>
+      <dl class="pl-facts lp-dl">
+        <dt>Local team</dt><dd>Headquartered in Woodland Hills, with same-day on-site support across Greater Los Angeles when needed.</dd>
+        <dt>Calls answered live</dt><dd>By our in-house, US-based team, never an overseas call center, a phone tree or a hold queue.</dd>
+        <dt>No long-term contracts</dt><dd>No long-term commitment is required. We believe clients should stay because the service works.</dd>
+        <dt>Predictable pricing</dt><dd>One flat monthly fee with unlimited support and no per-incident billing.</dd>
+        <dt>Security built in</dt><dd>Layered protection for every client: endpoint protection, email security, MFA, and backups verified by restore tests.</dd>
+      </dl>
+    </div>
+    <figure>
+      <img src="/assets/photos/web/onsite-assistance-1024.webp"
+           srcset="/assets/photos/web/onsite-assistance-720.webp 720w, /assets/photos/web/onsite-assistance-1024.webp 1024w"
+           sizes="(max-width: 1024px) 92vw, 500px" width="1024" height="720" loading="lazy" decoding="async"
+           alt="A Pro Link Systems technician in a branded polo helping a staff member at their desk">
+      <figcaption>A Pro Link Systems technician working through an issue with a staff member.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHAT ARE MANAGED IT SERVICES -->
+<section class="pl-section pl-mist" aria-labelledby="what-h">
+  <div class="pl-wrap lp-explain">
+    <div>
+      <p class="pl-eyebrow">The full picture</p>
+      <h2 class="pl-h2" id="what-h">What are managed IT services, and are they right for your Los Angeles business?</h2>
+      <div class="pl-prose">
+        <p>With managed IT services, an organization pays a flat monthly fee to a managed service provider that takes ownership of its technology environment. Instead of calling a break-fix IT company after something fails, and paying emergency rates each time, you have a dedicated IT company in Los Angeles available 24 hours a day, 7 days a week to monitor, secure and maintain your infrastructure.</p>
+        <p>The right managed service provider does more than fix problems. It prevents many of them, keeps technology aligned with business goals, and gives your team back the hours it was spending on IT issues.</p>
+        <p>Pro Link Systems has provided managed IT services in Los Angeles since 1999. We serve organizations across Woodland Hills, Burbank, Santa Monica, Encino, Sherman Oaks, Glendale, Thousand Oaks and Calabasas, with engineers who come on-site when the work requires it.</p>
+        <p>Managed IT keeps your technology running day to day. Deciding where that technology should go, including planning, budgeting, security strategy and the roadmap, is the work of a <a href="/virtual-cio">virtual CIO (vCIO)</a>. Growing organizations usually need both: operations from managed IT and direction from a vCIO. See <a href="/vcio-vs-break-fix-vs-managed-it">vCIO vs. break-fix vs. managed IT</a> for how they fit together.</p>
+        <p><a class="pl-arrow" href="/managed-it-services-pricing-los-angeles">2026 Los Angeles managed IT pricing guide</a></p>
+      </div>
+    </div>
+    <div class="pl-grid pl-grid-2 lp-two">
+      <div>
+        <h3 class="pl-h3">Who managed IT services in Los Angeles are right for</h3>
+        <dl class="pl-facts pl-facts--stack lp-who">
+          <dt>Small and mid-sized organizations</dt><dd>Companies that need dependable IT support in Los Angeles without the cost of a full in-house IT department.</dd>
+          <dt>Healthcare practices and medical groups</dt><dd>Medical, dental and behavioral health practices that need secure, always-on systems.</dd>
+          <dt>Law firms and professional services</dt><dd>Law firms, CPA firms and financial services companies that handle confidential data and depend on uptime.</dd>
+          <dt>Manufacturing and distribution</dt><dd>Manufacturers and distributors that depend on ERP systems, warehouse technology and operational continuity.</dd>
+          <dt>Organizations with an internal IT team</dt><dd>Our <a href="/co-managed-it-services">co-managed IT services</a> extend an internal team with 24/7 coverage, specialized security and project support, rather than replacing it.</dd>
+        </dl>
+      </div>
+      <div>
+        <h3 class="pl-h3">What makes Pro Link Systems different from other IT companies in Los Angeles</h3>
+        <div class="pl-prose lp-diff">
+          <p>Many IT providers route a call through a phone tree to a first-level technician who reads from a script, escalates twice and resolves the issue hours later. When you call our help desk, our in-house team answers live, with no phone tree and no hold queue.</p>
+          <p>We document your environment from day one, which leads to faster resolutions and fewer repeat issues, and gives you an IT company that understands your organization, not only your tickets.</p>
+          <p>Our help desk is in-house and US-based, never outsourced. A call at 2 a.m. about a server that is down reaches our own team, working from your documented environment. That continuity is one reason clients stay with us, some for more than 15 years.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">
+</section>
+
+<!-- FAQ (same questions and answers as the FAQPage structured data) -->
+<section class="pl-section" aria-labelledby="faq-heading">
+  <div class="pl-wrap lp-faq">
+    <div>
+      <p class="pl-eyebrow">Common questions</p>
+      <h2 class="pl-h2" id="faq-heading">Managed IT services in Los Angeles: your questions answered.</h2>
+      <p><a class="pl-arrow" href="/case-studies">Client case studies</a></p>
+      <p><a class="pl-arrow" href="/managed-it-services-pricing-los-angeles">Los Angeles managed IT pricing</a></p>
+    </div>
+    <div class="pl-faq">
+      <details><summary>What do managed IT services in Los Angeles cost?</summary><p>Pro Link Systems uses flat-rate, per-user pricing with no long-term contracts: unlimited support, 24/7 monitoring, and cybersecurity for one predictable monthly fee. Most Los Angeles businesses with 5 to 150 employees land between $75 and $200 per user per month depending on their security needs and the scope of support. Our Los Angeles managed IT pricing guide breaks down what should be included at each tier.</p></details>
+      <details><summary>How fast do you respond to IT support requests in Los Angeles?</summary><p>Our help desk is in-house, US-based and staffed 24/7/365, and calls are answered live, with no phone tree and no hold queue. Average ticket first-response time is 15 minutes, 90% of issues are resolved on first contact, and average resolution time is under an hour. For hardware or infrastructure work, our technicians come on-site across Greater Los Angeles from our Woodland Hills headquarters, with same-day on-site support when needed.</p></details>
+      <details><summary>Do you require a long-term contract?</summary><p>No. We do not require long-term contracts. Clients stay with Pro Link Systems because the service works, and many have for more than a decade, including law firms, schools, manufacturers, and healthcare organizations we have supported since the early 2000s.</p></details>
+      <details><summary>Which parts of Los Angeles do you serve?</summary><p>All of Greater Los Angeles: the San Fernando Valley, the Westside, the South Bay, the San Gabriel Valley, Downtown, Hollywood, and into Ventura and Orange counties. We maintain dedicated service pages for 39 communities, and our headquarters is at 21241 Ventura Blvd in Woodland Hills.</p></details>
+      <details><summary>What is included in a managed IT plan?</summary><p>A 24/7 help desk, proactive monitoring and patching, endpoint and email security, backup and disaster recovery, Microsoft 365 and cloud management, network and Wi-Fi management, vendor management, and virtual CIO guidance, all under one flat monthly fee with no per-ticket billing.</p></details>
+      <details><summary>Can you work alongside our in-house IT staff?</summary><p>Yes. Our co-managed IT option adds our 24/7 in-house, US-based help desk, monitoring, security and project capacity to your existing team. Your IT lead keeps control of priorities; we cover the gaps, the after-hours calls and the overflow.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="pl-cta" aria-labelledby="cta-h">
+  <div class="pl-wrap">
+    <div>
+      <p class="pl-eyebrow">Next step</p>
+      <h2 class="pl-h2" id="cta-h">Discuss your IT requirements.</h2>
+    </div>
+    <div>
+      <p>Start with a free 15-minute discovery call. We learn about your organization, explain how we work and give you a clear proposal, with no obligation.</p>
+      <div class="pl-actions">
+        <a href="#consultation" class="btn btn-light">Request a Free IT Consultation</a>
+        <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- PL:FOOTER -->
+<footer class="pl-footer" role="contentinfo">
+  <div class="pl-footer-top">
+    <div class="pl-footer-brand">
+      <img src="/logo.png" alt="Pro Link Systems" width="141" height="36" loading="lazy" decoding="async">
+      <p>Technology management, cybersecurity and strategic IT leadership. Headquartered in Woodland Hills, California, since 1999.</p>
+      <a href="/contact" class="btn btn-light">Speak With an Expert</a>
+    </div>
+    <div class="pl-footer-col">
+      <h2>Solutions</h2>
+      <a href="/managed-it-services">Fully Managed IT</a>
+      <a href="/co-managed-it-services">Co-Managed IT</a>
+      <a href="/it-help-desk">24/7 Help Desk</a>
+      <a href="/cybersecurity-services">Cybersecurity</a>
+      <a href="/cloud-services">Cloud &amp; Infrastructure</a>
+      <a href="/backup-disaster-recovery">Business Continuity &amp; DR</a>
+      <a href="/virtual-cio">Strategic Consulting &amp; vCIO</a>
+      <a href="/ai-automation-services">AI &amp; Automation</a>
+    </div>
+    <div class="pl-footer-col">
+      <h2>Industries</h2>
+      <a href="/manufacturing-it-services">Manufacturing</a>
+      <a href="/aerospace-defense-it-services">Aerospace &amp; Defense</a>
+      <a href="/law-firm-it-services-los-angeles">Law Firms</a>
+      <a href="/financial-services-it">Financial Services</a>
+      <a href="/healthcare-it-services">Healthcare</a>
+      <a href="/education-it-services">Education</a>
+      <a href="/professional-services-it">Professional Services</a>
+      <a href="/nonprofit-it-services">Nonprofits</a>
+    </div>
+    <div class="pl-footer-col">
+      <h2>Company</h2>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
+      <a href="/case-studies">Client Success</a>
+      <a href="/blog/">Insights</a>
+      <a href="/m365-security-assessment">M365 Security Assessment</a>
+      <a href="/contact">Contact</a>
+      <a href="/support">Client Support</a>
+    </div>
+    <div class="pl-footer-col">
+      <h2>Contact</h2>
+      <a href="tel:18008906133">1-800-890-6133</a>
+      <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
+      <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
+    </div>
+  </div>
+  <div class="pl-footer-areas">
+    <p><strong>Areas we serve</strong><br>Organizations across Greater Los Angeles, Ventura County and Orange County.</p>
+    <nav class="pl-footer-areas-links" aria-label="Areas we serve">
+      <a href="/managed-it-services-los-angeles">Los Angeles</a>
+      <a href="/managed-it-services-downtown-los-angeles">Downtown LA</a>
+      <a href="/managed-it-services-woodland-hills">Woodland Hills</a>
+      <a href="/managed-it-services-tarzana">Tarzana</a>
+      <a href="/managed-it-services-west-hills">West Hills</a>
+      <a href="/managed-it-services-chatsworth">Chatsworth</a>
+      <a href="/managed-it-services-beverly-hills">Beverly Hills</a>
+      <a href="/managed-it-services-century-city">Century City</a>
+      <a href="/managed-it-services-west-los-angeles">West Los Angeles</a>
+      <a href="/managed-it-services-pasadena">Pasadena</a>
+      <a href="/it-support-burbank">Burbank</a>
+      <a href="/managed-it-services-studio-city">Studio City</a>
+      <a href="/managed-it-services-north-hollywood">North Hollywood</a>
+      <a href="/managed-it-services-santa-monica">Santa Monica</a>
+      <a href="/managed-it-services-culver-city">Culver City</a>
+      <a href="/managed-it-services-glendale">Glendale</a>
+      <a href="/managed-it-services-calabasas">Calabasas</a>
+      <a href="/managed-it-services-agoura-hills">Agoura Hills</a>
+      <a href="/managed-it-services-thousand-oaks">Thousand Oaks</a>
+      <a href="/managed-it-services-simi-valley">Simi Valley</a>
+      <a href="/managed-it-services-sherman-oaks">Sherman Oaks</a>
+      <a href="/managed-it-services-van-nuys">Van Nuys</a>
+      <a href="/managed-it-services-northridge">Northridge</a>
+      <a href="/managed-it-services-santa-clarita">Santa Clarita</a>
+      <a href="/managed-it-services-encino">Encino</a>
+      <a href="/managed-it-services-torrance">Torrance</a>
+      <a href="/managed-it-services-el-segundo">El Segundo</a>
+      <a href="/managed-it-services-long-beach">Long Beach</a>
+      <a href="/managed-it-services-irvine">Irvine</a>
+      <a href="/managed-it-services-orange-county">Orange County</a>
+      <a href="/managed-it-services-playa-vista">Playa Vista</a>
+      <a href="/managed-it-services-hollywood">Hollywood</a>
+      <a href="/managed-it-services-koreatown">Koreatown</a>
+      <a href="/managed-it-services-hawthorne">Hawthorne</a>
+      <a href="/managed-it-services-manhattan-beach">Manhattan Beach</a>
+      <a href="/managed-it-services-sun-valley">Sun Valley</a>
+      <a href="/managed-it-services-san-gabriel-valley">San Gabriel Valley</a>
+      <a href="/managed-it-services-camarillo">Camarillo</a>
+      <a href="/managed-it-services-malibu">Malibu</a>
+    </nav>
+  </div>
+  <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <span>9AM&ndash;6PM PST &nbsp;|&nbsp; <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></span>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
   </div>
 </footer>
+<!-- /PL:FOOTER -->
 
-<!-- Video testimonial carousel -->
 <script>
+/* Client perspectives: a list button swaps the video and starts it inside the tap (iOS only allows play() in a gesture). */
 (function () {
-  var outer   = document.getElementById('vcOuter');
-  var track   = document.getElementById('vcTrack');
-  var nav     = document.getElementById('vcNav');
-  var prevBtn = document.getElementById('vcPrev');
-  var nextBtn = document.getElementById('vcNext');
-  var slides  = Array.from(track.querySelectorAll('.vc-slide'));
-  var total   = slides.length;
-  var current = 0;
-  var GAP     = 24;
-
-  function perPage()  { return window.innerWidth >= 768 ? 2 : 1; }
-  function maxIdx()   { return Math.max(0, total - perPage()); }
-
-  function setWidths() {
-    var pp = perPage();
-    var w  = (outer.offsetWidth - GAP * (pp - 1)) / pp;
-    slides.forEach(function (s) { s.style.width = w + 'px'; });
-  }
-
-  function buildDots() {
-    nav.innerHTML = '';
-    var count = maxIdx() + 1;
-    for (var i = 0; i < count; i++) {
-      var d = document.createElement('button');
-      d.className = 'vc-dot' + (i === current ? ' active' : '');
-      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      d.dataset.i = i;
-      d.addEventListener('click', function () { goTo(+this.dataset.i); });
-      nav.appendChild(d);
-    }
-  }
-
-  function updateDots() {
-    nav.querySelectorAll('.vc-dot').forEach(function (d, i) {
-      d.classList.toggle('active', i === current);
-    });
-  }
-
-  function updateArrows() {
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current >= maxIdx();
-  }
-
-  function goTo(idx) {
-    current = Math.max(0, Math.min(idx, maxIdx()));
-    var slideW = slides[0].getBoundingClientRect().width;
-    track.style.transform = 'translateX(-' + (current * (slideW + GAP)) + 'px)';
-    updateDots();
-    updateArrows();
-  }
-
-  prevBtn.addEventListener('click', function () { goTo(current - 1); });
-  nextBtn.addEventListener('click', function () { goTo(current + 1); });
-
-  var resizeTimer;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-      setWidths();
-      if (current > maxIdx()) current = maxIdx();
-      buildDots();
-      goTo(current);
-    }, 120);
-  });
-
-  /* Init */
-  setWidths();
-  buildDots();
-  updateArrows();
-
-  /* Seek each video to first frame so the thumbnail is visible beneath the overlay */
-  ['vid1', 'vid2', 'vid3'].forEach(function (id) {
-    var vid = document.getElementById(id);
-    if (!vid) return;
-    vid.addEventListener('loadedmetadata', function () {
-      vid.currentTime = 0.01;
-    });
-  });
-
-  /* Video play: click play button → hide overlay, add controls, play */
-  document.querySelectorAll('.vc-play-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var vid = document.getElementById(btn.dataset.video);
-      var ph  = document.getElementById(btn.dataset.ph);
-      ph.style.display = 'none';
-      vid.setAttribute('controls', '');
-      vid.muted = false;
-      vid.play().catch(function () {});
+  var v = document.getElementById('pl-video');
+  var btns = [].slice.call(document.querySelectorAll('[data-video-list] button'));
+  if (!v || !btns.length) return;
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) { x.classList.toggle('is-active', x === b); });
+      try { v.pause(); } catch (e) {}
+      v.setAttribute('poster', b.getAttribute('data-poster'));
+      v.src = b.getAttribute('data-src');
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
     });
   });
 })();
 </script>
-
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <script src="/contact-form.js?v=20261109" defer></script>
-<script>
-(function () {
-
-})();
-</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/contact-form.js?v=20261109" defer></script>
 </body>
 </html>
-

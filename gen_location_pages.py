@@ -1235,16 +1235,14 @@ def build(c, tpl):
     out.append(head[pos:])
     head = "".join(out)
     head = head.replace("  <!-- Speakable (T11) -->\n  <!-- Speakable (T11) -->", "  <!-- Speakable (T11) -->")
-    # --- body: keep nav/mobile-menu from template, regenerate content, keep footer+script ---
+    # --- body: keep the shared header and footer blocks (between the PL:HEADER / PL:FOOTER markers) and regenerate
+    # the content. New cities are added to the footer list once, in chrome/footer.html (update_site_links.py), and
+    # apply_chrome.py puts the current header and footer on every page (2026 redesign).
     rest = tpl[head_end:]
-    nav_start = rest.index("<nav ")
-    hero_start = rest.index('<section class="page-hero"')
-    footer_start = rest.index("<footer ")
-    nav = rest[nav_start:hero_start]
-    footer = rest[footer_start:]
-    footer, n = re.subn(r'  <div class="footer-areas">.*?\n    </div>\n  </div>', footer_areas_block(), footer, count=1, flags=re.S)
-    assert n == 1, "footer-areas block not found in template footer"
-    return head + "</head>\n<body>\n\n" + nav + body(c).lstrip("\n") + footer
+    h0 = rest.index("<!-- PL:HEADER -->")
+    h1 = rest.index("<!-- /PL:HEADER -->") + len("<!-- /PL:HEADER -->")
+    f0 = rest.index("<!-- PL:FOOTER -->")
+    return head + "</head>\n<body>\n" + rest[h0:h1] + "\n\n" + body(c).strip("\n") + "\n\n" + rest[f0:]
 
 
 def main():

@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-10-20",
-  "dateModified": "2026-10-20",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -260,13 +260,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -317,7 +317,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -330,91 +330,113 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>Wire Fraud Now Comes From Real Inboxes</h1>
-      <p class="pl-dek">Business email compromise is an identity and authority failure, not a filtering failure.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-10-20">October 20, 2026</time><br>6 min read</div></div>
+      <p class="pl-dek">Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-10-20">October 20, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>7 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#the-attacker-is-not-spoofing-you-they-are-signed-in">The attacker is not spoofing you — they are signed in</a></li><li><a href="#a-callback-is-a-control-only-if-you-choose-the-number">A callback is a control only if you choose the number</a></li><li><a href="#your-microsoft-365-tenant-records-the-takeover-first">Your Microsoft 365 tenant records the takeover first</a></li><li><a href="#move-payment-authority-out-of-the-inbox">Move payment authority out of the inbox</a></li><li><a href="#the-seam-between-finance-and-it-is-a-leadership-problem">The seam between finance and IT is a leadership problem</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#the-attacker-is-not-spoofing-you-they-are-signed-in">The attacker is not spoofing you. They are signed in.</a></li><li><a href="#a-callback-is-a-control-only-if-you-choose-the-number">A callback is a control only if you choose the number</a></li><li><a href="#your-microsoft-365-tenant-records-the-takeover-first">Your Microsoft 365 tenant records the takeover first</a></li><li><a href="#move-payment-authority-out-of-the-inbox">Move payment authority out of the inbox</a></li><li><a href="#when-the-payment-has-already-gone">When the payment has already gone</a></li><li><a href="#the-seam-between-finance-and-it-is-a-leadership-problem">The seam between finance and IT is a leadership problem</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
 <p>Picture a controller at a mid-sized Los Angeles firm. She opens a message from a vendor she has paid every month for four years. Same thread. Identical signature block. Correct invoice number, correct amount, correct purchase order. The note says the vendor's bank was acquired and remittance details change with this cycle. Nothing is attached, and there is no link to inspect. The sending domain belongs to the vendor, because the message was composed and sent from the vendor's own mailbox.</p>
 
 <p>There is nothing in that message for a filter to catch. The email is authentic. Its instruction is not.</p>
 
-<p>This is where business email compromise sits in 2026, and it explains why organizations that have spent seriously on email security still send money they never recover. The product most of them bought was designed for a threat that has largely moved on.</p>
+<p>This is where business email compromise (BEC) sits in 2026, and it explains why organizations that have spent seriously on email security still send money they never recover. The FBI's Internet Crime Complaint Center (IC3) recorded <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf">more than $3.0 billion in reported BEC losses for 2025</a>. For the CFO, the controller and the IT lead, the decision is where payment authority lives, and who acts in the first hour when it fails.</p>
 
-<h2 id="the-attacker-is-not-spoofing-you-they-are-signed-in">The attacker is not spoofing you — they are signed in</h2>
+<h2 id="the-attacker-is-not-spoofing-you-they-are-signed-in">The attacker is not spoofing you. They are signed in.</h2>
 
-<p>The older model of BEC was impersonation: a lookalike domain, a display-name trick, a free webmail account posing as the CEO. Those attempts still arrive, and current filtering handles most of them.</p>
+<p>The older model of BEC was impersonation: a lookalike domain, a display-name trick, a free webmail account posing as the CEO. Those attempts still arrive, and email filtering and domain authentication were built for them.</p>
 
-<p>The expensive version works differently. An attacker holds a valid session in a real mailbox — a supplier's, a law firm's, sometimes your own. One common path is a reverse-proxy phishing page that passes the login through to the genuine service and captures the resulting session token; the user satisfies multi-factor authentication in real time, and the token is replayed. Another is an OAuth consent prompt for an app the user believes is a document viewer, granting persistent mail access without a password ever changing hands.</p>
+<p>The expensive version works differently. An attacker holds a valid session in a real mailbox: a supplier's, a law firm's, sometimes your own. One common path is a reverse-proxy phishing page that passes the login through to the genuine service and captures the resulting session token; the user satisfies multi-factor authentication (MFA) in real time, and the token is replayed. Another is an OAuth consent prompt for an app the user believes is a document viewer, granting persistent mail access without a password ever changing hands. New Microsoft 365 tenants now <a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-app-consent-policies">send requests for mail permissions to an administrator by default</a>. Older settings may not.</p>
 
 <p>Both paths produce the same result: a legitimate identity doing illegitimate things. Nothing is escalated. No malware runs.</p>
 
-<p>The intruder then reads. For days, sometimes weeks, learning the payment cadence, who approves what, how colleagues write to each other, and which invoices are already expected. This is analysis rather than speculation: that patience is precisely what defeats awareness training, because by the time the request arrives it is indistinguishable from the ordinary.</p>
+<p>The intruder then reads. For days, sometimes weeks, learning the payment cadence, who approves what, how colleagues write to each other, and which invoices are already expected. This is analysis: that patience is precisely what defeats awareness training, because by the time the request arrives it is indistinguishable from the ordinary.</p>
 
 <p>That is the distinction executives most often miss. Business email compromise is an <strong>identity compromise</strong> that happens to express itself in email. Treating it as a mail-hygiene problem funds the wrong control.</p>
 
 <h2 id="a-callback-is-a-control-only-if-you-choose-the-number">A callback is a control only if you choose the number</h2>
 
-<p>For a decade the standard advice on changed banking details was to call the vendor and confirm. That advice still holds. What no longer holds is the assumption underneath it.</p>
+<p>For a decade the standard advice on changed banking details was to call the vendor and confirm. That advice still holds; the FBI continues to recommend verifying account changes through <a href="https://www.ic3.gov/PSA/2024/PSA240911">a secondary channel</a>. What no longer holds is the assumption underneath it.</p>
 
-<p>Voice synthesis has moved from specialist tooling into ordinary consumer software. Executives are the most exposed, because their voices are public — earnings calls, conference panels, podcast appearances, webinar recordings, the company's own marketing video. The raw material is sitting on your website.</p>
+<p>Voice synthesis has moved from specialist tooling into ordinary consumer software. Executives are the most exposed, because their voices are public: earnings calls, conference panels, podcast appearances, webinar recordings, the company's own marketing video. The raw material is sitting on your website.</p>
 
-<p>So state the point precisely: a phone call remains useful, but <strong>the voice is no longer the evidence</strong>. What makes a callback a control is the number dialed. A number supplied in the request that prompted the call verifies nothing at all. A number drawn from your vendor master record, recorded before the request existed, is a genuine control, because an attacker would have to compromise the phone line as well as the mailbox.</p>
+<p>So state the point precisely: a phone call remains useful, but <strong>the voice is no longer the evidence</strong>. What makes a callback a control is the number dialed. A number supplied in the request that prompted the call verifies nothing at all. A number drawn from your vendor master record, recorded before the request existed, is a genuine control, because an attacker would have to control the phone line as well as the mailbox. Where a vendor's phones and mail run on the same cloud account, that condition deserves a second look; <a href="/blog/2026-08-15-t91-voice-cloning-and-deepfake-fraud-new-verification-rules">the companion piece on callbacks</a> explains why.</p>
 
-<p>A prediction, offered as prediction: voice confirmation on its own will come to be treated by cyber insurers the way unencrypted laptops were eventually treated — an acknowledged gap rather than a defense.</p>
+<p>A prediction, offered as prediction: voice confirmation on its own will come to be treated by cyber insurers the way unencrypted laptops were eventually treated, as an acknowledged gap rather than a defense.</p>
 
 <h2 id="your-microsoft-365-tenant-records-the-takeover-first">Your Microsoft 365 tenant records the takeover first</h2>
 
-<p>When a mailbox is taken over, evidence appears in the tenant before anyone notices an unusual invoice. The signals are unglamorous and specific:</p>
+<p>When a mailbox is taken over, evidence appears in the tenant before anyone notices an unusual invoice, provided the tenant is recording. The signals are unglamorous and specific:</p>
 
 <ul>
-<li>A new inbox rule routing messages containing "invoice," "wire," or "ACH" into a rarely-opened folder, often named with a single character or a period</li>
+<li>A new inbox rule routing messages containing "invoice," "wire," or "ACH" into a rarely opened folder, or deleting them outright</li>
 <li>External forwarding switched on for one account</li>
 <li>A sign-in from an unexpected location minutes after a legitimate one from Los Angeles</li>
-<li>A new third-party application grant with mail-read scope, consented to by a standard user</li>
+<li>A new third-party application grant with mail-read scope</li>
 <li>Mailbox activity in the middle of the night that lines up neatly with business hours somewhere else</li>
 </ul>
 
-<p>These events are logged by default in <a href="/cloud-services">Microsoft 365</a>. Reading them on a schedule, and acting the same day when one appears, is a separate commitment that many organizations never make. Our view, stated as opinion: the distance between detection being possible and detection being performed is where the loss actually occurs, and no purchase closes it.</p>
+<p>Do not assume all of it is logged. <a href="/cloud-services">Microsoft 365</a> audit logging is on by default for enterprise organizations but <a href="https://learn.microsoft.com/en-us/purview/audit-log-enable-disable">not for tenants on Business Basic, Business Standard or Business Premium</a>, where an administrator has to turn it on. Once on, the standard log keeps 180 days. Sign-in logs are a separate record with a shorter default. Reading them on a schedule, and acting the same day when a signal appears, is a further commitment that many organizations never make. Our view, stated as opinion: the distance between detection being possible and detection being performed is where the loss actually occurs, and no purchase closes it.</p>
 
-<p>One addition specific to 2026. AI assistants inside the tenant compress reconnaissance. An intruder holding a valid session no longer needs to scroll years of mail to find the finance thread; natural-language search across everything that account can reach surfaces it immediately. That is an argument for governing assistant access by identity and data boundary, not an argument against the technology. An assistant respects the permissions it is given. Permissions granted broadly to a compromised account are exactly that broad for whoever is holding the session.</p>
+<p>One addition specific to 2026. AI assistants inside the tenant compress reconnaissance. An intruder holding a valid session no longer needs to scroll years of mail to find the finance thread; natural-language search across everything that account can reach surfaces it immediately. That is an argument for governing assistant access by identity and data boundary, not an argument against the technology. Permissions granted broadly to a compromised account are exactly that broad for whoever is holding the session.</p>
 
 <h2 id="move-payment-authority-out-of-the-inbox">Move payment authority out of the inbox</h2>
 
 <p>The structural fix is not closer scrutiny of email. It is removing the decision from the channel the attacker controls.</p>
 
-<p>Changes to payment instructions should be a record change in a system of record, under dual control, with a mandatory hold before the first payment on new details. Approval authority should follow role, not whoever sent the message. Under that model the content of any email becomes irrelevant — a request is only a request, and the control sits elsewhere.</p>
+<p>Changes to payment instructions should be a record change in a system of record, under dual control, with a mandatory hold before the first payment on new details. Approval authority should follow role, not whoever sent the message. Under that model the content of any email becomes irrelevant: a request is only a request, and the control sits elsewhere.</p>
+
+<p>For companies that originate Automated Clearing House (ACH) payments this is also a network rule. Since June 22, 2026, Nacha's <a href="https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-2">fraud monitoring rule</a> covers all non-consumer originators regardless of volume. It calls for risk-based processes reasonably intended to identify entries initiated through fraud, a category that names BEC and vendor impersonation, with a review at least once a year. Change controls on vendor and payroll payment instructions are among Nacha's own examples. Ask your bank what it expects of you, and counsel if you are unsure how the rule applies.</p>
 
 <p>Three technical decisions carry disproportionate weight for a 20-to-500-seat business:</p>
 
 <ul>
 <li><strong>Phishing-resistant authentication</strong> for finance, executives and administrators. Passkeys and certificate-based sign-in defeat the proxy-and-replay pattern that one-time codes do not.</li>
-<li><strong>Conditional Access with device compliance enforced</strong>, so a stolen token is worth far less when presented from an unmanaged machine, paired with blocking legacy authentication protocols outright.</li>
-<li><strong>Restricting user consent for third-party applications</strong>, which quietly closes one of the most common persistence routes.</li>
+<li><strong>Conditional Access with device compliance enforced</strong>, so a relayed sign-in from an unmanaged machine fails, paired with blocking legacy authentication protocols outright.</li>
+<li><strong>Restricting user consent for third-party applications</strong> and turning automatic external forwarding off explicitly, which closes two quiet persistence routes.</li>
 </ul>
 
-<p>None of this is exotic. Much of it is already licensed in the Microsoft tenants these companies pay for every month and simply never configured — a recurring finding in <a href="/cybersecurity-services">IT security</a> work, and the clearest argument for treating configuration as a standing discipline rather than a project with an end date.</p>
+<p>None of this is exotic. Conditional Access needs Entra ID P1 licensing, which may already be in the plan you pay for and simply never configured. That is the clearest argument for treating configuration as a standing discipline in <a href="/cybersecurity-services">IT security</a> rather than a project with an end date.</p>
+
+<h2 id="when-the-payment-has-already-gone">When the payment has already gone</h2>
+
+<p>The outcome of the first hour depends on whether someone wrote the steps down. IC3 reports that in 2025 its recovery team acted on 3,900 incidents and froze $679 million of $1.16 billion in attempted theft, a 58 percent success rate, and the report's guidance begins with time being of the essence.</p>
+
+<ol class="pl-process">
+<li><strong>Call the bank.</strong> Ask its fraud desk to recall the funds, and ask which indemnification documents it needs.</li>
+<li><strong>File at ic3.gov,</strong> whatever the amount, with the full transaction details. IC3 can start a freeze request with the receiving bank.</li>
+<li><strong>Contain the mailbox.</strong> Microsoft's sequence is to <a href="https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account">disable the account, revoke its sessions, and review MFA devices, application consents, admin roles, forwarding and inbox rules</a>. A password reset alone does not cover that list.</li>
+<li><strong>Preserve the logs</strong> before they age out, and ask the other party to keep theirs.</li>
+<li><strong>Warn the counterparty through a channel you already trusted,</strong> and look for other payments to the same account. Then call the insurer and counsel.</li>
+</ol>
 
 <h2 id="the-seam-between-finance-and-it-is-a-leadership-problem">The seam between finance and IT is a leadership problem</h2>
 
 <p>Finance owns the authority model. IT owns the identity model. Business email compromise lives in the seam between them, and seams are not closed by either department acting alone. They are closed by the executive who can tell both departments what the rule is and then fund it.</p>
 
-<p>Speed decides the rest. A suspicious sign-in has value only if a competent person acts on it while the payment is still unsent, which is why response time belongs in the security conversation and not only the convenience one. Pro Link Systems runs a 24/7 in-house, US-based <a href="/it-help-desk">help desk</a> with an average ticket first-response time of 15 minutes, answered live rather than queued — a standard held while serving Los Angeles businesses from Woodland Hills since 1999.</p>
+<p>Speed decides the rest. A suspicious sign-in has value only if a competent person acts on it while the payment is still unsent, which is why response time belongs in the security conversation as well as the convenience one. Ask who at your <a href="/it-help-desk">help desk</a> can disable a mailbox and revoke its sessions at 7 p.m. on a Friday, and how finance reaches that person.</p>
 
-<p>If payment authority, identity controls and tenant monitoring have never been examined together in your environment, our <a href="https://prolinksystems.com/managed-it-services">managed IT services</a> team will walk through them with you.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf">2025 IC3 Annual Report</a>, FBI Internet Crime Complaint Center.</li>
+<li><a href="https://www.ic3.gov/PSA/2024/PSA240911">Business Email Compromise: public service announcement I-091124-PSA</a>, FBI Internet Crime Complaint Center.</li>
+<li><a href="https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account">Respond to a compromised email account in Microsoft 365</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-app-consent-policies">Manage app consent policies</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/purview/audit-log-enable-disable">Turn auditing on or off</a>, Microsoft Learn.</li>
+<li><a href="https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-2">Risk Management Topics: Fraud Monitoring, Phase 2</a>, Nacha.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -424,7 +446,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="zero trust starts after the login mfa verifies one moment. zero trust governs the hours after it: session lifetime, device conditions, and the unmanaged machine identities now signing in. cybersecurity &amp; risk zero trust security for remote and hybrid teams in los "><a href="/blog/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-"><img class="pl-art-img" src="/assets/insights/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Zero Trust Starts After the Login</h3><p>MFA verifies one moment. Zero trust governs the hours after it: session lifetime, device conditions, and the unmanaged machine identities now signing in.</p><span class="pl-meta"><time datetime="2026-10-13">October 13, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="zero trust starts after the login mfa verifies one moment. zero trust governs the hours after it: session lifetime, device conditions, and the unmanaged machine identities now signing in. cybersecurity &amp; risk zero trust security for remote and hybrid teams in los "><a href="/blog/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-"><img class="pl-art-img" src="/assets/insights/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-.svg" width="1200" height="675" alt="A login checkpoint followed by further checks along the life of a session" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Zero Trust Starts After the Login</h3><p>MFA verifies one moment. Zero trust governs the hours after it: session lifetime, device conditions, and the unmanaged machine identities now signing in.</p><span class="pl-meta"><time datetime="2026-10-13">October 13, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -476,8 +498,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -489,7 +511,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -542,6 +564,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

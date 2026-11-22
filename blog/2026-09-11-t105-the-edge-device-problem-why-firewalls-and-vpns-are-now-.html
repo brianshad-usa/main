@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-09-11",
-  "dateModified": "2026-09-11",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-09-11-t105-the-edge-device-problem-why-firewalls-and-vpns-are-now-"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,77 +331,93 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>Your Firewall Is an Unmonitored Computer</h1>
-      <p class="pl-dek">Edge appliances are the only computers required to answer strangers and the only ones you cannot instrument.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-11">September 11, 2026</time><br>6 min read</div></div>
+      <p class="pl-dek">Edge appliances must answer strangers and are hard to inspect. How fast to patch them, when to retire them, and what to do once you stop trusting one.</p>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-11">September 11, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>7 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-09-11-t105-the-edge-device-problem-why-firewalls-and-vpns-are-now-.svg" width="1200" height="675" alt="A boundary wall with one exposed appliance, seen only dimly from inside" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-09-11-t105-the-edge-device-problem-why-firewalls-and-vpns-are-now-.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#the-appliance-you-cannot-put-an-agent-on">The Appliance You Cannot Put an Agent On</a></li><li><a href="#why-your-identity-work-made-network-position-more-valuab">Why Your Identity Work Made Network Position More Valuable</a></li><li><a href="#the-maintenance-window-is-the-security-control">The Maintenance Window Is the Security Control</a></li><li><a href="#what-clean-means-when-you-cannot-look-inside">What "Clean" Means When You Cannot Look Inside</a></li><li><a href="#the-question-to-ask-before-the-next-renewal">The Question to Ask Before the Next Renewal</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#the-appliance-you-cannot-put-an-agent-on">The Appliance You Cannot Put an Agent On</a></li><li><a href="#why-your-identity-work-made-network-position-more-valuab">Why Your Identity Work Made Network Position More Valuable</a></li><li><a href="#the-maintenance-window-is-the-security-control">The Maintenance Window Is the Security Control</a></li><li><a href="#what-clean-means-when-you-cannot-look-inside">What "Clean" Means When You Cannot Look Inside</a></li><li><a href="#the-question-to-ask-before-the-next-renewal">The Question to Ask Before the Next Renewal</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
-<p>Every security control in your company can be taken offline for an hour except one. The endpoint agent pauses for a software install. Mail filtering can fail open, and you find out from a user forwarding something strange. A logging platform can miss a weekend before anyone notices on Monday. The firewall at the edge of your network cannot stop answering, because answering the internet is the entire job. It is the one computer you own that is required, by design, to respond to a stranger.</p>
+<p>Most security controls can be taken offline for an hour without anyone outside the company noticing. The endpoint agent pauses for a software install. Mail filtering can fail open, and you find out from a user forwarding something strange. A logging platform can miss a weekend before anyone checks on Monday. The firewall at the edge of your network cannot stop answering, because answering the internet is the entire job. It is one of the few computers you own that is required, by design, to respond to a stranger.</p>
 
-<p>That property — not brand, not price, not feature set — is what makes edge hardware structurally different from everything else you buy. Firewalls, VPN concentrators, SSL-VPN portals, remote access gateways, managed file transfer appliances: each is reachable on purpose, and each sits exactly where a mid-sized company's visibility stops. What follows is analysis rather than a count of incidents. The argument does not need one.</p>
+<p>That property, rather than brand, price or feature set, is what makes edge hardware structurally different from everything else you buy. Firewalls, VPN concentrators, SSL-VPN portals, remote access gateways, managed file transfer appliances: each is reachable on purpose, and each sits exactly where a mid-sized company's visibility stops. This article is for the executive who approves the maintenance window and the IT leader who has to ask for it. The decision is how fast you patch, when you retire, and what you do when you stop trusting the box.</p>
 
 <h2 id="the-appliance-you-cannot-put-an-agent-on">The Appliance You Cannot Put an Agent On</h2>
 
-<p>Strip the branding and an edge device is a Linux computer in a metal case, running vendor-controlled firmware, with a web administration interface. That is a factual description, not a criticism.</p>
+<p>Strip the branding and an edge device is a general-purpose computer in a metal case, usually running a Linux or other Unix-derived system, with vendor-controlled firmware and a web administration interface. That is a factual description, not a criticism.</p>
 
-<p>The consequences rarely reach the executive conversation, though. Endpoint detection does not install on it. Its filesystem is not yours to read. Its logs show the traffic it decided to report, in the format the vendor chose. When the box itself is the thing behaving oddly, your detection stack is pointed somewhere else.</p>
+<p>The consequences rarely reach the executive conversation, though. Endpoint detection does not install on it. Its filesystem is not yours to read. Its logs show the traffic it decided to report, in the format the vendor chose. The UK's National Cyber Security Centre (NCSC), with the US Cybersecurity and Infrastructure Security Agency (CISA), the FBI and other partners, has asked manufacturers to fix this, noting that network devices <a href="https://www.ncsc.gov.uk/guidance/guidance-on-digital-forensics-protective-monitoring">provide limited logging, which makes suspicious activity hard to detect</a>. When the box itself is the thing behaving oddly, your detection stack is pointed somewhere else.</p>
 
-<p>Consider the shape of that gap. Over the past decade the industry got genuinely good at two layers of visibility. Endpoints became instrumented — EDR and XDR gave defenders a view inside the machine. Identity became instrumented — sign-in logs, Conditional Access, risk scoring, and audit trails turned the account into a monitored object. The layer that never got instrumented is the appliance layer. That framing is the single most useful thing an executive can carry into a <a href="/cybersecurity-services">cybersecurity</a> review: an adversary has every incentive to operate precisely where your telemetry ends.</p>
+<p>Consider the shape of that gap. Over the past decade the industry got genuinely good at two layers of visibility. Endpoints became instrumented: endpoint detection and response gave defenders a view inside the machine. Identity became instrumented: sign-in logs, Conditional Access, risk scoring, and audit trails turned the account into a monitored object. The appliance layer did not keep pace. That framing is the single most useful thing an executive can carry into a <a href="/cybersecurity-services">cybersecurity</a> review: an adversary has every incentive to operate precisely where your telemetry ends.</p>
 
 <h2 id="why-your-identity-work-made-network-position-more-valuab">Why Your Identity Work Made Network Position More Valuable</h2>
 
 <p>The uncomfortable part is that diligence creates this pressure. The harder you have worked on identity, the more an edge device is worth to someone trying to get in.</p>
 
-<p>Trace what happened to the credential-theft path. Phishing a password used to be sufficient on its own. Multi-factor authentication became normal. Conditional Access started refusing logins from unmanaged devices and unfamiliar geographies. Passkeys began removing the phishable secret altogether. A well-configured <a href="/cloud-services">Microsoft 365</a> tenant now imposes real cost on what was once a cheap opening move.</p>
+<p>Trace what happened to the credential-theft path. Phishing a password used to be sufficient on its own. Multi-factor authentication became normal. Conditional Access started refusing logins from unmanaged devices and unfamiliar geographies. Passkeys began removing the phishable secret altogether. A well-configured <a href="/cloud-services">Microsoft 365</a> tenant now imposes real cost on what was once a cheap opening move. Verizon's 2026 breach report, which covers all sectors, found that exploitation of vulnerabilities had become <a href="https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf">the most common way in, at 31 percent of breaches</a>, while credential abuse fell to 13 percent.</p>
 
-<p>What has not moved nearly as fast is the internal network. Plenty of 20-to-500 seat environments still carry substantial flat trust inside the perimeter: file shares that authenticate anyone on the LAN, line-of-business applications running on a single shared service account, management interfaces never meant to face anything but the office, backup consoles reachable from a general workstation subnet. Zero Trust is an architecture most companies have started and few have finished.</p>
+<p>What has not moved nearly as fast is the internal network. Plenty of 20-to-500 seat environments still carry substantial flat trust inside the perimeter: file shares that authenticate anyone on the LAN, line-of-business applications running on a single shared service account, management interfaces never meant to face anything but the office, backup consoles reachable from a general workstation subnet. Zero trust is an architecture many companies have started and few describe as finished.</p>
 
-<p>So the economics tilted. A stolen password yields one identity, scoped and logged and revocable. A compromised gateway yields a location — and locations are still overtrusted in most networks. It can also yield whatever secrets the device was holding to do its job: directory bind accounts, RADIUS keys, certificates, saved administrative logins. That is a different class of problem from a bad sign-in, and it arrives wearing the environment's implicit trust in anything that looks internal.</p>
+<p>So the economics tilted. A stolen password yields one identity, scoped and logged and revocable. A compromised gateway yields a location, and locations are still overtrusted in most networks. It can also yield whatever secrets the device was holding to do its job: directory bind accounts, RADIUS keys, certificates, saved administrative logins. That is a different class of problem from a bad sign-in, and it arrives wearing the environment's implicit trust in anything that looks internal.</p>
 
 <h2 id="the-maintenance-window-is-the-security-control">The Maintenance Window Is the Security Control</h2>
 
 <p>Now the operational trap, which is where the executive decision actually lives.</p>
 
-<p>The asset with the shortest tolerable patch window is the same asset whose patch takes the whole company offline. Firmware upgrades on edge hardware are not routine. They interrupt every remote worker and every site-to-site tunnel. Sometimes they break a configuration nobody has documented since the person who built it moved on. So the update gets scheduled for a quiet weekend, the quiet weekend moves, and the device that most needs to be current becomes the device furthest behind.</p>
+<p>The asset with the shortest tolerable patch window is the same asset whose patch takes the whole company offline. Firmware upgrades on edge hardware are not routine. They interrupt remote workers and site-to-site tunnels. Sometimes they break a configuration nobody has documented since the person who built it moved on. So the update gets scheduled for a quiet weekend, the quiet weekend moves, and the device that most needs to be current becomes the device furthest behind. The same Verizon report puts the general rate in view: for vulnerabilities on CISA's known-exploited list, the median time to full resolution was 43 days.</p>
 
 <p>Nobody decides this. It is the accumulated result of never having decided. Which is why the most valuable moves available to a CEO or CFO here have nothing to do with technology selection:</p>
 
 <ul>
-<li><strong>Pre-authorize an emergency patch window.</strong> Not a request process — a standing decision that critical edge firmware is applied within a defined number of hours of vendor release, accepting the disruption, with a named person empowered to call it at 9pm on a Friday.</li>
+<li><strong>Pre-authorize an emergency patch window.</strong> Make it a standing decision rather than a request process: critical edge firmware is applied within a defined number of hours of vendor release, accepting the disruption, with a named person empowered to call it at 9pm on a Friday.</li>
 <li><strong>Fund redundancy where patching equals downtime.</strong> A high-availability pair or a second path converts a business-stopping maintenance event into a routine one. That is a security purchase even though it lands on the budget as hardware.</li>
-<li><strong>Treat end-of-support dates as security deadlines.</strong> An appliance past vendor support is not a cost saving. It is an internet-facing computer that will never be fixed again.</li>
+<li><strong>Treat end-of-support dates as security deadlines.</strong> An appliance past vendor support is an internet-facing computer that will never be fixed again. In February 2026 CISA ordered federal agencies to inventory and remove such devices, and together with the FBI and the NCSC <a href="https://www.cisa.gov/resources-tools/resources/reducing-attack-surface-end-support-edge-devices">urged every other organization to follow the same guidance</a>.</li>
 </ul>
 
 <p>One more thing worth naming about 2026 without overstating it. Internet-wide scanning has been cheap for a long time; what is changing is the cost of turning a freshly published advisory into a working attempt, because assistive tooling helps everyone read documentation faster, not only defenders. Call that a prediction about direction rather than a measured trend. Either way it argues for deciding your patch tolerance in advance, while the decision is calm.</p>
 
 <h2 id="what-clean-means-when-you-cannot-look-inside">What "Clean" Means When You Cannot Look Inside</h2>
 
-<p>A final consequence that most incident response plans handle badly: if you cannot inspect the firmware, you cannot prove the device is clean. Patching a suspect appliance closes the door. It does not establish that nothing is already inside.</p>
+<p>A final consequence that incident response plans often handle badly: if you cannot inspect the firmware, you cannot prove the device is clean. Patching a suspect appliance closes the door. It does not establish that nothing is already inside. CISA said so directly in its emergency directive on one vendor's firewalls, updated in April 2026: applying the required updates <a href="https://www.cisa.gov/news-events/directives/ed-25-03-identify-and-mitigate-potential-compromise-cisco-devices">does not necessarily remove an existing threat actor</a>. It found earlier that a compromised VPN gateway from another vendor could let an actor <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060b">keep root-level persistence through a factory reset</a>, and that the vendor's integrity checker was not sufficient to detect compromise.</p>
 
-<p>The practical implication — analysis again, not a claim about any specific product — is that edge hardware needs a remediation posture agreed before you need it. For a mid-sized business that usually means treating serious suspicion as a replacement event rather than a reimage event, keeping an exported configuration so replacement is measured in hours, and rotating every secret the device ever held instead of only the admin password. Bind accounts, pre-shared keys, certificates, management-platform tokens: all of it.</p>
+<p>The practical implication is that edge hardware needs a remediation posture agreed before you need it. For a mid-sized business that usually means treating serious suspicion as a replacement event rather than a reimage event, which is what the FBI advised for <a href="https://www.ic3.gov/CSA/2023/230823.pdf">one widely exploited email gateway in 2023</a>. Write the sequence down now:</p>
+
+<ol class="pl-process">
+<li><strong>Disconnect, do not power off.</strong> Memory can hold the evidence. CISA's directive tells agencies to keep a compromised device running but off the network.</li>
+<li><strong>Call the people you named in advance.</strong> Incident responder, insurer, vendor, counsel.</li>
+<li><strong>Replace.</strong> Build the new device from a configuration you can read line by line, and look for administrator accounts, rules and tunnels nobody recognizes before loading it.</li>
+<li><strong>Rotate every secret the old device held.</strong> Bind accounts, pre-shared keys, certificates, VPN and administrator passwords, management-platform tokens, then end active sessions.</li>
+<li><strong>Look inward.</strong> Search for use of those credentials on the internal network since the earliest suspicious date.</li>
+</ol>
 
 <p>It also widens what recovery planning has to cover. Most <a href="/backup-disaster-recovery">disaster recovery</a> plans are built around losing data or losing a server. Far fewer are built around concluding that the trust boundary itself was untrustworthy for an unknown period. Those are different exercises, and the second is the harder conversation with an insurer.</p>
 
 <h2 id="the-question-to-ask-before-the-next-renewal">The Question to Ask Before the Next Renewal</h2>
 
-<p>Edge devices deserve their own asset class: inventoried separately, owned by a named person, patched on a clock the business has already agreed to, retired on a schedule set by vendor support rather than depreciation. They are not furniture. They are the most exposed and least observable computers in the organization, sitting at the one place where an outsider's connection is guaranteed to be accepted.</p>
+<p>Edge devices deserve their own asset class: inventoried separately, owned by a named person, patched on a clock the business has already agreed to, retired on a schedule set by vendor support rather than depreciation. They are not furniture. They are among the most exposed and least observable computers in the organization, sitting at the one place where an outsider's connection is guaranteed to be accepted.</p>
 
-<p>So the question for whoever runs your infrastructure is not "are we protected." It is narrower and far more revealing. How many internet-facing appliances do we have, what firmware is each one running, who decides when they get patched, and what happens operationally the day we conclude one of them is compromised. If assembling those answers takes more than a day, the delay is the finding.</p>
+<p>So the question for whoever runs your infrastructure is not "are we protected." It is narrower and far more revealing. How many internet-facing appliances do we have, what firmware is each one running, when does vendor support end, who decides when they get patched, and what happens operationally the day we conclude one of them is compromised. If assembling those answers takes more than a day, the delay is the finding.</p>
 
-<p>Pro Link Systems has worked on the infrastructure of Los Angeles businesses from Woodland Hills since 1999 — long enough to watch the perimeter go from the thing that protected the network to the thing most worth attacking. If you want a clear-eyed inventory of what your edge looks like right now, our <a href="/managed-it-services">managed IT services</a> team is a reasonable place to begin.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://www.ncsc.gov.uk/guidance/guidance-on-digital-forensics-protective-monitoring">Guidance on digital forensics and protective monitoring specifications for producers of network devices and appliances</a>, UK NCSC with CISA, FBI and partners.</li>
+<li><a href="https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf">2026 Data Breach Investigations Report, executive summary</a>, Verizon.</li>
+<li><a href="https://www.cisa.gov/resources-tools/resources/reducing-attack-surface-end-support-edge-devices">Reducing the Attack Surface for End-of-Support Edge Devices</a>, CISA, FBI and UK NCSC.</li>
+<li><a href="https://www.cisa.gov/news-events/directives/ed-25-03-identify-and-mitigate-potential-compromise-cisco-devices">Emergency Directive 25-03</a>, CISA.</li>
+<li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060b">Advisory AA24-060B on Ivanti gateways</a>, CISA and partners.</li>
+<li><a href="https://www.ic3.gov/CSA/2023/230823.pdf">FLASH AC-000172-TT on Barracuda email security gateways</a>, FBI.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -411,7 +427,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -463,8 +479,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -476,7 +492,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -529,6 +545,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

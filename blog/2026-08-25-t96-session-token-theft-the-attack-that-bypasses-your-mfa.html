@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-08-25",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-08-25-t96-session-token-theft-the-attack-that-bypasses-your-mfa"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,31 +331,31 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>The Cookie That Walks Past Your MFA</h1>
       <p class="pl-dek">MFA verifies one moment; the session token it issues is what attackers now steal. Why executives should measure revocation speed instead of MFA coverage.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-08-25">August 25, 2026</time><br>6 min read</div></div>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-08-25">August 25, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>7 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-08-25-t96-session-token-theft-the-attack-that-bypasses-your-mfa.svg" width="1200" height="675" alt="A sign-in guarded by a lock, and a session token taken along a path that skips the lock" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-08-25-t96-session-token-theft-the-attack-that-bypasses-your-mfa.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#a-token-is-a-signed-statement-that-the-argument-is-over">A token is a signed statement that the argument is over</a></li><li><a href="#the-change-is-industrial-not-technical">The change is industrial, not technical</a></li><li><a href="#mfa-is-an-event-access-is-a-state">MFA is an event. Access is a state.</a></li><li><a href="#revocation-latency-is-the-number-nobody-measures">Revocation latency is the number nobody measures</a></li><li><a href="#three-questions-before-your-next-security-renewal">Three questions before your next security renewal</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#a-token-is-a-signed-statement-that-the-argument-is-over">A token is a signed statement that the argument is over</a></li><li><a href="#the-change-is-industrial-not-technical">The change is industrial, not technical</a></li><li><a href="#mfa-is-an-event-access-is-a-state">MFA is an event. Access is a state.</a></li><li><a href="#revocation-latency-is-the-number-nobody-measures">Revocation latency is the number nobody measures</a></li><li><a href="#three-questions-before-your-next-security-renewal">Three questions before your next security renewal</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
-<p>An attacker holding your session cookie never sees your login page. There is no password prompt, no approval request on your phone, nothing to deny. The session was already approved — by you, an hour earlier, on a screen you had every reason to trust.</p>
+<p>An attacker holding your session cookie never sees your login page. There is no password prompt, no approval request on your phone, nothing to deny. The session was already approved, by you, an hour earlier, on a screen you had every reason to trust.</p>
 
-<p>This is the part of the identity story most companies skipped. The MFA rollout was run as a project with an end date. It finished. A green square went onto a board slide. What did not stop was the search for the cheapest way in, and that path now runs through the artifact multi-factor authentication produces after it succeeds.</p>
+<p>This is the part of the identity story many companies skipped. The multi-factor authentication (MFA) rollout was run as a project with an end date. It finished. A green square went onto a board slide. What did not stop was the search for the cheapest way in, and that path now runs through the artifact MFA produces after it succeeds. The argument here, for executives and the IT leaders who report to them, is to measure how fast you can end a session rather than how many people enrolled.</p>
 
 <h2 id="a-token-is-a-signed-statement-that-the-argument-is-over">A token is a signed statement that the argument is over</h2>
 
-<p>When someone authenticates to <a href="/cloud-services">Microsoft 365</a> or any modern cloud application, the platform does not re-verify identity on every click. That would be unusable. Instead it issues a token: a signed statement that this browser, for a defined window, is that person. The browser holds it. Every subsequent request presents it. The identity provider honors it without asking again.</p>
+<p>When someone authenticates to <a href="/cloud-services">Microsoft 365</a> or any modern cloud application, the platform does not re-verify identity on every click. That would be unusable. Instead it issues a token: in effect a signed statement that this browser, for a defined window, is that person. The browser holds it. Every subsequent request presents it. The service honors it without asking again.</p>
 
 <p>The design is correct. It is also the exposure. A password is a secret you know; a token is a secret your device holds. Steal the token and you inherit the answer to a question that was already asked and already approved. Multi-factor authentication protects the asking. It has nothing to say about the answer once that answer is in someone else's hands.</p>
 
@@ -363,11 +363,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <h2 id="the-change-is-industrial-not-technical">The change is industrial, not technical</h2>
 
-<p>Session hijacking is old. Two well-documented routes now make it routine rather than specialized, and they converge on the same outcome.</p>
+<p>Session hijacking is old. Two <a href="https://learn.microsoft.com/en-us/entra/identity/devices/concept-tokens-microsoft-entra-id">well-documented routes</a> now make it routine rather than specialized, and they converge on the same outcome.</p>
 
-<p>The first is adversary-in-the-middle phishing. Rather than a fake login page harvesting credentials, the attacker's infrastructure relays the victim's traffic to the real login page in real time. The password is typed into a genuine Microsoft page, rendered through a proxy. The push notification is approved. Authentication actually succeeds — and the proxy captures the resulting session cookie on the way back. Analysis, not fact: the meaningful shift here is packaging rather than invention. The technique did not get smarter; it got easier to operate.</p>
+<p>The first is adversary-in-the-middle phishing. Rather than a fake login page harvesting credentials, the attacker's infrastructure relays the victim's traffic to the real login page in real time. The password is typed into a genuine Microsoft page, rendered through a proxy. The push notification is approved. Authentication actually succeeds, and the proxy captures the resulting session cookie on the way back. Analysis, not fact: the meaningful shift is packaging rather than invention. A related kit that the FBI described in May 2026, offered <a href="https://www.ic3.gov/PSA/2026/PSA260521">as a service</a> with lures, templates and dashboards, hands Microsoft 365 tokens to operators with little technical skill by abusing the device code sign-in flow.</p>
 
-<p>The second is information-stealing malware, delivered through a browser extension, a cracked utility, or a convincing installer served by a search ad. The payload's purpose is not encryption or persistence. It copies browser cookie stores, saved tokens and credential databases, then leaves. Defenses tuned to ransomware behavior have comparatively little to catch.</p>
+<figure class="pl-flow"><ol><li><b>Lure</b>A link opens a proxy in front of the real sign-in page.</li><li><b>Sign-in</b>The password reaches the genuine page, through the proxy.</li><li><b>MFA</b>The user approves the prompt, and it succeeds.</li><li class="is-hot"><b>Capture</b>The proxy keeps the session cookie the service returns.</li><li><b>Replay</b>The attacker presents that session from another device.</li></ol><figcaption>How a relayed sign-in turns a successful approval into a stolen session.</figcaption></figure>
+
+<p>The second is information-stealing malware, delivered through a browser extension, a cracked utility, or a convincing installer served by a search ad. The payload's purpose is collection rather than encryption. It copies browser cookie stores, saved tokens and credential databases, often without lingering. Defenses tuned to ransomware behavior have comparatively little to catch.</p>
 
 <p>Both routes end in the same place: a valid session, replayed from attacker infrastructure, presenting a token your identity provider issued and still trusts.</p>
 
@@ -375,32 +377,48 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <p>That distinction is the correction worth making at executive level, because it changes what you buy and what you measure.</p>
 
-<p>Multi-factor authentication is an event at a point in time. Access is a state that persists afterward, extended quietly by refresh cycles. Nearly every identity investment of the past decade targeted the event. Very little targeted the state.</p>
+<p>Multi-factor authentication is an event at a point in time. Access is a state that persists afterward, extended quietly by refresh cycles. In Microsoft Entra ID a refresh token lasts ninety days by default and restarts each time it is used. In our assessment nearly every identity investment of the past decade targeted the event, and very little targeted the state.</p>
 
 <p>The consequences are easy to underrate from a slide deck. Someone inside a live Microsoft 365 session does not need to escalate privilege. They already have the mailbox, the files that user can reach, the chat history, the SharePoint sites, the group memberships. They can read the thread about a pending wire transfer before writing into it. And where an AI assistant has been deployed to answer questions using whatever the signed-in user can already access, it will serve a stolen session as willingly as a real one. The assistant is behaving correctly. Nothing in the request tells it otherwise.</p>
 
-<p>A prediction, labeled as one: machine identity is where this widens next. As agents and automation platforms accumulate long-lived OAuth grants on behalf of employees, organizations create durable access that outlives the laptop, the browser session, and sometimes the employment. Few businesses can produce an inventory of those grants on request. Gaps like that tend to be discovered rather than closed.</p>
+<p>A prediction, labeled as one: machine identity is where this widens next. As agents and automation platforms accumulate long-lived OAuth grants on behalf of employees, organizations create <a href="/blog/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p">durable access that outlives the password</a>, the laptop, and sometimes the employment. Gaps like that tend to be discovered rather than closed.</p>
 
 <h2 id="revocation-latency-is-the-number-nobody-measures">Revocation latency is the number nobody measures</h2>
 
 <p>Stop asking whether MFA is enabled everywhere. Assume it is. Then assume it will be bypassed, and ask a harder question: from the moment we suspect a session is compromised, how long until that session is dead everywhere?</p>
 
-<p>For many organizations the honest answer runs through a ticket, a business-hours queue, an administrator who knows where the revocation control lives, and an assumption worth testing rather than trusting — that a password reset by itself terminates sessions already in flight. Whatever that elapsed time turns out to be, it is the attack.</p>
+<p>For many organizations the honest answer runs through a ticket, a business-hours queue, an administrator who knows where the revocation control lives, and an assumption that a password reset terminates sessions already in flight. Microsoft's own <a href="https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens">revocation table</a> shows how partial that assumption is.</p>
 
-<p>Four changes shorten it. None is exotic. Most are configuration and operational discipline rather than new tooling, though your licensing tier determines what is available to you.</p>
+<table class="pl-compare"><caption>What each action ends in Microsoft Entra ID</caption><thead><tr><th scope="col">Action</th><th scope="col">Password sign-ins</th><th scope="col">Passwordless sign-ins</th><th scope="col">Tokens held by server-side apps</th></tr></thead><tbody>
+<tr><td>User changes or resets their own password</td><td>Ended</td><td>Stay alive</td><td>Stay alive</td></tr>
+<tr><td>Administrator resets the password in the Entra or Microsoft 365 admin center</td><td>Ended</td><td>Cookies stay alive; tokens ended</td><td>Ended</td></tr>
+<tr><td>Administrator revokes all of the user's tokens</td><td>Ended</td><td>Ended</td><td>Ended</td></tr>
+</tbody></table>
+
+<p>Two limits apply even to the last row. An access token already issued can keep working until it expires, typically about an hour, unless the application supports continuous access evaluation. And Entra ID <a href="https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access">cannot directly revoke a session that an application issued for itself</a>.</p>
+
+<p>Four changes shorten the gap. Most are configuration and operational discipline rather than new tooling, though your licensing tier determines what is available to you.</p>
 
 <ul>
-<li><strong>Phishing-resistant credentials.</strong> Passkeys and FIDO2 keys are bound by design to the origin of the legitimate site, so a relay proxy has nothing usable to relay. The credential will not sign for a domain it was never registered to.</li>
-<li><strong>Device as a condition of access.</strong> Conditional Access policies requiring a managed, compliant device mean a token replayed from unmanaged infrastructure fails policy even though the token itself is valid. In our assessment this is the single most effective control most Microsoft tenants already own and have not enabled.</li>
-<li><strong>Continuous evaluation instead of fixed lifetimes.</strong> Re-check risk signals mid-session and force reauthentication when device posture, location or risk score changes, rather than waiting for a token to expire on schedule.</li>
+<li><strong>Phishing-resistant credentials.</strong> Passkeys and FIDO2 keys are bound by design to the legitimate site, so a relay proxy has nothing usable to relay. The credential will not sign for a domain it was never registered to.</li>
+<li><strong>Device as a condition of access.</strong> A Conditional Access policy requiring a managed, compliant device stops a relay that signs in from the attacker's machine, and it is checked again whenever a token is refreshed. In our assessment this is among the most effective controls that tenants are licensed for and have not enforced. It does not by itself neutralize a token copied from a compliant device. <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-token-protection">Token Protection</a> addresses that for native apps on Windows and Apple platforms; in browsers it remains a narrow preview.</li>
+<li><strong>Continuous evaluation instead of fixed lifetimes.</strong> Exchange Online, SharePoint Online and Teams can <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation">act within minutes on specific events</a>: a disabled account, a changed password, newly enabled MFA, revoked tokens, or high user risk. Location rules based on IP addresses are enforced almost at once.</li>
 <li><strong>A rehearsed revocation path.</strong> Someone must be able to terminate every session for an account, at any hour, without escalation. If that capability lives only in one person's memory, it does not exist.</li>
 </ul>
 
-<p>The fourth is operational rather than technical, which is why it is usually the weakest. Revocation is a race, and a phone tree loses it. The Pro Link Systems <a href="/it-help-desk">help desk</a> is in-house, US-based and staffed 24/7, with calls answered live and an average ticket first-response time of 15 minutes — relevant here for one narrow reason: minutes are the unit of measurement when a stolen session is live.</p>
+<p>The fourth is operational rather than technical, which is why it is usually the weakest. Revocation is a race, and a phone tree loses it. Whoever staffs your <a href="/it-help-desk">help desk</a> at 2 a.m. needs the authority and the runbook. Run the drill once a quarter and keep the time.</p>
+
+<ol class="pl-process">
+<li><strong>Start the clock.</strong> Sign a test account in on a laptop and a phone, then have someone report it as stolen through the normal channel.</li>
+<li><strong>Disable and revoke.</strong> Disable the account and revoke its sessions. These are two actions. For accounts synchronized from on-premises Active Directory, Microsoft advises disabling there as well and resetting the password twice.</li>
+<li><strong>Remove what an intruder would add.</strong> Check registered devices, MFA methods, inbox rules, forwarding and application consents.</li>
+<li><strong>Close the sessions Entra cannot reach.</strong> Sign the user out inside each application that keeps its own session.</li>
+<li><strong>Stop the clock</strong> when both devices are refused, and record which step took longest.</li>
+</ol>
 
 <h2 id="three-questions-before-your-next-security-renewal">Three questions before your next security renewal</h2>
 
-<p>Token theft does not reward more awareness training. The user in this scenario did nothing detectably wrong; they authenticated successfully to a real Microsoft page. What it rewards is architecture — binding sessions to devices, replacing shared secrets with origin-bound credentials, watching for valid tokens arriving from implausible places, and being able to end a session in minutes rather than by morning.</p>
+<p>Token theft does not reward more awareness training. The user in this scenario did nothing detectably wrong; they authenticated successfully to a real Microsoft page. What it rewards is architecture: tying access to devices, replacing shared secrets with origin-bound credentials, watching for valid tokens arriving from implausible places, and being able to end a session in minutes rather than by morning.</p>
 
 <p>Three questions will locate you:</p>
 
@@ -410,9 +428,17 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <li>Who holds long-lived tokens to our data that is not a human being?</li>
 </ul>
 
-<p>An organization that can answer those has stopped treating identity as a checkbox. One that cannot has an MFA deployment and an inflated sense of what it covers — the more common position, and not an embarrassing one, provided it is temporary. It is also, increasingly, what separates a functioning <a href="/managed-it-services">managed IT</a> program from one that merely looks compliant.</p>
+<p>An organization that can answer those has stopped treating identity as a checkbox. One that cannot has an MFA deployment and an inflated sense of what it covers, a common position and not an embarrassing one, provided it is temporary. Put the same questions to whoever runs your <a href="/managed-it-services">managed IT</a> and your <a href="/cybersecurity-services">cybersecurity</a> monitoring.</p>
 
-<p>Pro Link Systems has worked on identity and access with Los Angeles businesses from Woodland Hills since 1999. If you want an honest read on how your session controls would hold up, our <a href="/cybersecurity-services">cybersecurity</a> team will walk your tenant configuration with you.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/devices/concept-tokens-microsoft-entra-id">Understanding tokens in Microsoft Entra ID</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens">Refresh tokens in the Microsoft identity platform</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access">Revoke user access in an emergency in Microsoft Entra ID</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation">Continuous access evaluation in Microsoft Entra</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-token-protection">Token Protection in Conditional Access</a>, Microsoft Learn.</li>
+<li><a href="https://www.ic3.gov/PSA/2026/PSA260521">Kali365 Phishing-as-a-Service Kit Hijacks Microsoft 365 Access Tokens</a>, FBI Internet Crime Complaint Center.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -422,7 +448,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -474,8 +500,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -487,7 +513,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -540,6 +566,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

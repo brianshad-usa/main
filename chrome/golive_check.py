@@ -11,7 +11,9 @@ Checks:
   3. the header/footer partials are current on every page (apply_chrome.py --check);
   4. every page links _shared.css with one shared ?v= that differs from production main's;
   5. the page generators emit the new header/footer markers (generate_blog.py, gen_location_pages.py,
-     update_site_links.py), so new posts and city pages are born in the new design.
+     update_site_links.py), so new posts and city pages are born in the new design;
+  6-8. homepage, typography and the CR&R page are settled (see the code);
+  9. company name, Insights registry, internal links, form labels and wording checks pass.
 """
 import os
 import re
@@ -66,6 +68,12 @@ if '[data-type="sans"]' in css:
 if os.path.exists(os.path.join(ROOT, "case-studies", "crr.html")):
     problems.append("8 case-studies/crr.html exists: CR&R ships only with Brian's separate, explicit approval")
 
+for script, what in (("company_name.py", "the company is always Pro Link Systems"), ("insights.py", "Insights registry and assets"),
+                     ("link_check.py", "internal links and fragments"), ("form_labels.py", "form labels"), ("refine_wording.py", "corporate wording")):
+    args = [sys.executable, os.path.join(ROOT, "chrome", script)] + ([] if script in ("link_check.py",) else ["--check"])
+    r = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if r.returncode != 0 and not (script == "company_name.py" and "would change 0 file" in (r.stdout or "")):
+        problems.append("9 %s fails (%s)" % (script, what))
 for gen in ("generate_blog.py", "gen_location_pages.py", "update_site_links.py"):
     path = os.path.join(ROOT, gen)
     if os.path.exists(path) and "PL:HEADER" not in open(path, encoding="utf-8").read():

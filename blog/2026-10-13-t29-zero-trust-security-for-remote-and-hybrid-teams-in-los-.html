@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-10-13",
-  "dateModified": "2026-10-13",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -260,13 +260,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -317,7 +317,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -330,81 +330,106 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>Zero Trust Starts After the Login</h1>
       <p class="pl-dek">MFA verifies one moment. Zero trust governs the hours after it: session lifetime, device conditions, and the unmanaged machine identities now signing in.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-10-13">October 13, 2026</time><br>6 min read</div></div>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-10-13">October 13, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>7 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-.svg" width="1200" height="675" alt="A login checkpoint followed by further checks along the life of a session" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-10-13-t29-zero-trust-security-for-remote-and-hybrid-teams-in-los-.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#the-office-ip-address-stopped-being-a-security-control">The office IP address stopped being a security control</a></li><li><a href="#authentication-is-a-moment-access-is-a-duration">Authentication is a moment; access is a duration</a></li><li><a href="#most-of-your-new-identities-cannot-receive-a-push-notifi">Most of your new identities cannot receive a push notification</a></li><li><a href="#exceptions-granted-at-9-p-m-become-your-real-architectur">Exceptions granted at 9 p.m. become your real architecture</a></li><li><a href="#the-question-to-put-to-your-technology-team">The question to put to your technology team</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#the-office-ip-address-stopped-being-a-security-control">The office IP address stopped being a security control</a></li><li><a href="#authentication-is-a-moment-access-is-a-duration">Authentication is a moment; access is a duration</a></li><li><a href="#your-newest-identities-cannot-receive-a-push-notificatio">Your newest identities cannot receive a push notification</a></li><li><a href="#exceptions-granted-at-9-p-m-become-your-real-architectur">Exceptions granted at 9 p.m. become your real architecture</a></li><li><a href="#the-question-to-put-to-your-technology-team">The question to put to your technology team</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
 <p>"We rolled out multifactor authentication two years ago. Are we zero trust?"</p>
 
-<p>The question usually arrives in a tone that expects a yes. The honest answer is no, and it has nothing to do with whether MFA was a good decision. It was. MFA answers a question asked once, at the door. The rest of the workday happens after the door closes.</p>
+<p>The question usually arrives in a tone that expects a yes. The honest answer is no, and it has nothing to do with whether multifactor authentication (MFA) was a good decision. It was. MFA answers a question asked once, at the door. The rest of the workday happens after the door closes.</p>
 
-<p>Zero trust is not a product, a purchase, or a project with a completion date. It is a design assumption: that no request earns trust from its origin, and that trust granted at sign-in expires. Plenty of organizations adopted the vocabulary during the remote-work scramble and never moved the architecture behind it. That gap is where the 2026 conversation actually lives.</p>
+<p>Zero trust is not a product, a purchase, or a project with a completion date. It is a design assumption. In the architecture published by the National Institute of Standards and Technology (NIST), <a href="https://csrc.nist.gov/pubs/sp/800/207/final">no trust is implied by network location or by who owns the device</a>, and the person and the device are both checked before a session to a resource begins. The corollary is that trust granted at sign-in expires. Plenty of organizations adopted the vocabulary during the remote-work scramble and never moved the architecture behind it. That gap is where the 2026 conversation actually lives, and closing it starts with a leadership decision: which access deserves which conditions, and for how long.</p>
 
 <h2 id="the-office-ip-address-stopped-being-a-security-control">The office IP address stopped being a security control</h2>
 
-<p>Los Angeles businesses run on geography that no 2016 security model anticipated. A sixty-person firm might keep a Woodland Hills office, a second suite downtown, a controller working from <a href="/managed-it-services-pasadena">Pasadena</a> three days a week, and a sales lead functionally mobile between <a href="/managed-it-services-long-beach">Long Beach</a> and client sites. The commute shapes the work pattern. That pattern decides where the data goes.</p>
+<p>Los Angeles makes the point faster than any framework. A sixty-person firm might keep a Woodland Hills office, a second suite downtown, a controller working from <a href="/managed-it-services-pasadena">Pasadena</a> three days a week, and a sales lead functionally mobile between <a href="/managed-it-services-long-beach">Long Beach</a> and client sites. The commute shapes the work pattern. That pattern decides where the data goes.</p>
 
 <p>Many such companies still carry access rules written when the VPN was the trust boundary and "on the network" meant "verified." Those rules survive untouched: applications that trust any connection from the office subnet, file shares where presence implies permission, admin consoles reachable from anywhere inside the tunnel.</p>
 
-<p>A VPN is still useful. It is transport, not a verdict. Once an attacker holds a valid credential or a hijacked session, the tunnel carries them in as politely as it carries your CFO. Treating network location as evidence of identity is, in our assessment, the most common unexamined assumption in hybrid-era <a href="/cybersecurity-services">IT security</a>, and it rarely appears on a risk register because nobody remembers deciding it.</p>
+<p>A VPN is still useful. It is transport, not a verdict. Once an attacker holds a valid credential or a hijacked session, the tunnel carries them in as politely as it carries your CFO. Treating network location as evidence of identity is, in our assessment, among the most common unexamined assumptions in hybrid-era <a href="/cybersecurity-services">IT security</a>, and it rarely appears on a risk register because nobody remembers deciding it.</p>
 
 <h2 id="authentication-is-a-moment-access-is-a-duration">Authentication is a moment; access is a duration</h2>
 
-<p>Worth stating plainly, as analysis rather than alarm: when someone signs in, a session token is issued, and that token is what actually grants access for the hours or days that follow. Credential theft aimed at the token sidesteps the login prompt entirely. No password is required. The MFA challenge you are counting on is never presented, because the attacker arrives after it.</p>
+<p>Worth stating plainly, as analysis rather than alarm: when someone signs in, a session token is issued, and that token is what actually grants access for the hours or days that follow. The Microsoft Entra default is <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-session-lifetime">a rolling window of 90 days</a> before a user must sign in again, unless an event such as a password change or a disabled account ends the session first. Credential theft aimed at the token sidesteps the login prompt entirely. No password is required. The MFA challenge you are counting on is never presented, because the attacker arrives after it.</p>
 
-<p>The defense is not more authentication. It is shorter, more conditional trust. In practice that means a small set of decisions many <a href="/cloud-services">Microsoft 365</a> tenants can already make and simply have not:</p>
+<p>The defense is shorter, more conditional trust rather than more authentication. In practice that means a small set of decisions many <a href="/cloud-services">Microsoft 365</a> tenants can already make and simply have not:</p>
 
 <ul>
 <li><strong>Device posture as a condition.</strong> Access requires a managed, compliant, encrypted device, not merely a correct password from an unknown laptop.</li>
 <li><strong>Phishing-resistant authentication where it matters most.</strong> Passkeys and hardware-bound credentials cannot be relayed through a proxy the way a one-time code can.</li>
-<li><strong>Session lifetime matched to risk.</strong> A finance approval session should not persist as long as a lobby display login.</li>
-<li><strong>Continuous evaluation.</strong> When risk signals change mid-session, the session is re-challenged rather than honored until expiry.</li>
-<li><strong>Legacy authentication disabled.</strong> Protocols that cannot carry a second factor are the back door that invalidates the front one.</li>
+<li><strong>Session lifetime matched to risk.</strong> A finance approval session should not persist as long as a lobby display login. Sign-in frequency is set by policy, per application and group.</li>
+<li><strong>Continuous evaluation.</strong> In Exchange Online, SharePoint Online and Teams, events such as <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation">a disabled account, a changed password, revoked tokens or high user risk</a> can end access within minutes rather than at expiry.</li>
+<li><strong>Legacy authentication blocked.</strong> Protocols that cannot carry a second factor are the back door that invalidates the front one. Exchange Online has <a href="https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online">retired Basic authentication for nearly everything except SMTP submission</a>, so check what still uses that, and every system outside Exchange.</li>
 </ul>
 
-<p>Which of these are available to you depends on your licensing tier, and confirming what your tenant already includes is a short exercise rather than a procurement cycle. The obstacle is rarely technical. More often, nobody owns the decision.</p>
+<p>Which of these are available to you depends on licensing, since Conditional Access is a premium Entra ID capability, and confirming what your tenant already includes is a short exercise rather than a procurement cycle. The obstacle is rarely technical. More often, nobody owns the decision.</p>
 
-<h2 id="most-of-your-new-identities-cannot-receive-a-push-notifi">Most of your new identities cannot receive a push notification</h2>
+<h2 id="your-newest-identities-cannot-receive-a-push-notificatio">Your newest identities cannot receive a push notification</h2>
 
-<p>Here is the part that changes the math for 2026. The population of things signing into your systems is no longer mostly human.</p>
+<p>Here is the part that changes the math for 2026. The population of things signing into your systems is no longer only human.</p>
 
-<p>Service accounts, API keys, third-party integrations, OAuth-connected SaaS tools, automation scripts, and now AI agents all authenticate. None of them can approve a prompt on a phone. Many were created by a well-meaning employee who clicked accept on an app consent screen and handed a vendor standing read access to a mailbox. Identities like these commonly have no rotation schedule, no expiry, no owner listed anywhere, and permissions chosen for convenience during setup.</p>
+<p>Service accounts, API keys, third-party integrations, OAuth-connected SaaS tools, automation scripts, and now AI agents all authenticate. None of them can approve a prompt on a phone. Many were created by a well-meaning employee who clicked accept on an app consent screen and handed a vendor standing read access to a mailbox. Identities like these often have no rotation schedule, no expiry, no owner listed anywhere, and permissions chosen for convenience during setup. The policy engine that governs people reaches them only in part: Microsoft's <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity">Conditional Access for workload identities</a> needs its own license and does not cover third-party or multi-tenant applications.</p>
 
-<p>AI assistants make the problem visible in an uncomfortable way. Copilot-style tools are designed to answer within the permissions the requesting user already holds. That is correct behavior. It also means years of over-permissioned SharePoint sites and share-with-everyone folders become searchable in plain English. The tool did not create the exposure; it surfaced it. An executive who asks an assistant what it knows about compensation planning and gets a real answer has just received an unplanned access audit.</p>
+<p>AI assistants make the problem visible in an uncomfortable way. Microsoft says Copilot <a href="https://learn.microsoft.com/en-us/copilot/plan/microsoft-365-copilot-privacy">surfaces only data the user already has permission to view</a>. That is correct behavior. It also means years of over-permissioned SharePoint sites and share-with-everyone folders become searchable in plain English. The tool did not create the exposure; it surfaced it. An executive who asks an assistant what it knows about compensation planning and gets a real answer has just received an unplanned access audit.</p>
 
 <p>Zero trust applied to machine identities means something specific: every non-human account has a named owner, a defined scope, an expiry date, and a log someone actually reads. That is governance work, not a purchase. It belongs in the same conversation as <a href="/backup-disaster-recovery">data backup</a>, because modern extortion involves stolen data as well as encrypted data, and exfiltration travels on credentials that look entirely legitimate.</p>
 
 <h2 id="exceptions-granted-at-9-p-m-become-your-real-architectur">Exceptions granted at 9 p.m. become your real architecture</h2>
 
-<p>Every zero trust deployment creates friction at the worst possible moments. A partner cannot reach a document the night before a filing. A device falls out of compliance the morning of a board meeting. Someone traveling hits a conditional access block from a hotel in another time zone.</p>
+<p>Every zero trust deployment creates friction at the worst possible moments. A partner cannot reach a document the night before a filing. A device falls out of compliance the morning of a board meeting. Someone traveling hits a Conditional Access block from a hotel in another time zone.</p>
 
 <p>What happens next decides whether the design survives. If help is slow, a person with authority says turn it off for me, and that exception becomes permanent. Accumulate enough of them and the policy exists on paper while the real access model is whatever was fastest at 9 p.m. Stated as opinion rather than finding: more good security designs die this way than are defeated technically.</p>
 
-<p>Support capacity, then, is a security control rather than a convenience line item. At <strong>Pro Link Systems</strong>, the <a href="/it-help-desk">help desk</a> is in-house, US-based and staffed 24/7, with an average ticket first-response time of 15 minutes and phones answered live by that same team. The relevance is unglamorous: a user who reaches a real person quickly does not need an exception, and an exception never granted is an attack path that never opens.</p>
+<p>Support capacity, then, is a security control rather than a convenience line item. A user who reaches a real person at the <a href="/it-help-desk">help desk</a> quickly does not need an exception, and an exception never granted is an attack path that never opens. For the ones you do grant:</p>
+
+<ul class="pl-checklist">
+<li>One approver, named in advance, who is not the person asking.</li>
+<li>A written reason, and the narrowest scope that solves the problem.</li>
+<li>An expiry in hours that removes itself.</li>
+<li>A weekly list of open exceptions, read by someone who did not grant them.</li>
+</ul>
 
 <h2 id="the-question-to-put-to-your-technology-team">The question to put to your technology team</h2>
 
 <p>"Are we zero trust?" has no useful answer. It asks for a yes or no about something that is neither.</p>
 
-<p>Better, and specific enough to hold a team to: for each class of access we grant, what conditions must be true, and when does that trust expire? If the answer for your financial systems is a correct password, from anywhere, for as long as the browser stays open, you now know your real posture regardless of what the strategy deck says.</p>
+<p>Better, and specific enough to hold a team to: for each class of access we grant, what conditions must be true, and when does that trust expire? If the answer for your financial systems is a correct password, from anywhere, for as long as the browser stays open, you now know your real posture regardless of what the strategy deck says. Ask for a completed version of this table. The entries are illustrations, not a standard.</p>
+
+<table class="pl-compare"><caption>Access classes, conditions and expiry (illustrative)</caption><thead><tr><th scope="col">Access</th><th scope="col">Conditions that must be true</th><th scope="col">When trust expires</th></tr></thead><tbody>
+<tr><td>Finance and payroll approvals</td><td>Compliant device, phishing-resistant sign-in</td><td>Hours</td></tr>
+<tr><td>Administrator roles</td><td>Separate account, phishing-resistant sign-in, activation on request</td><td>End of the task</td></tr>
+<tr><td>Staff email and files</td><td>Managed device or protected app, MFA</td><td>On risk events; a sign-in frequency you chose</td></tr>
+<tr><td>Contractors and guests</td><td>Named sponsor, MFA, only the sites required</td><td>Contract end date</td></tr>
+<tr><td>Third-party applications</td><td>Administrator-approved, least scope, named owner</td><td>Review date</td></tr>
+<tr><td>Automation and service accounts</td><td>Named owner, stored secret or managed identity</td><td>Secret expiry</td></tr>
+<tr><td>AI assistants</td><td>The user's own permissions, sensitive sites excluded</td><td>With the user's access review</td></tr>
+</tbody></table>
 
 <p>Ask it about employees. Then ask about contractors, the marketing SaaS tool connected to your tenant, the automation someone built last spring, the assistant that reads executive email. Answers will not be uniform across those, and they should not be. They should be deliberate.</p>
 
-<p>Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999, and the hybrid shift changed far more about identity than it changed about networks. If you want a clear read on where trust is currently being granted by default across your environment, our <a href="/managed-it-services">managed IT services</a> team will walk that assessment with you.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://csrc.nist.gov/pubs/sp/800/207/final">SP 800-207, Zero Trust Architecture</a>, NIST.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-session-lifetime">Conditional Access adaptive session lifetime policies</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation">Continuous access evaluation in Microsoft Entra</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online">Deprecation of Basic authentication in Exchange Online</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/workload-identity">Conditional Access for workload identities</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/copilot/plan/microsoft-365-copilot-privacy">Data, privacy, and security for Microsoft Copilot</a>, Microsoft Learn.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -414,7 +439,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -466,8 +491,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -479,7 +504,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -532,6 +557,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

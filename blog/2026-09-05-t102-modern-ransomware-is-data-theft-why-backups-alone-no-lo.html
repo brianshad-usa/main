@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-09-05",
-  "dateModified": "2026-09-05",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-09-05-t102-modern-ransomware-is-data-theft-why-backups-alone-no-lo"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,66 +331,80 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>Backups End the Outage, Not the Ransom</h1>
-      <p class="pl-dek">Modern extortion is priced against your disclosure obligations, not your downtime.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-05">September 5, 2026</time><br>6 min read</div></div>
+      <p class="pl-dek">Modern extortion is priced against disclosure, not downtime, so log retention and permissions decide the outcome as much as backups do.</p>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-05">September 5, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>8 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-09-05-t102-modern-ransomware-is-data-theft-why-backups-alone-no-lo.svg" width="1200" height="675" alt="A server rack whose copied data leaves along an amber path while the backup restores beside it" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-09-05-t102-modern-ransomware-is-data-theft-why-backups-alone-no-lo.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#encryption-became-the-receipt-not-the-leverage">Encryption became the receipt, not the leverage</a></li><li><a href="#the-demand-is-priced-against-your-obligations-not-your-d">The demand is priced against your obligations, not your downtime</a></li><li><a href="#restoring-quickly-can-destroy-the-answer-you-need">Restoring quickly can destroy the answer you need</a></li><li><a href="#one-compromised-login-sets-the-ceiling-on-the-demand">One compromised login sets the ceiling on the demand</a></li><li><a href="#two-exposures-one-budget-line">Two exposures, one budget line</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#encryption-became-the-receipt-not-the-leverage">Encryption became the receipt, not the leverage</a></li><li><a href="#the-demand-is-priced-against-your-obligations-not-your-d">The demand is priced against your obligations, not your downtime</a></li><li><a href="#restoring-quickly-can-destroy-the-answer-you-need">Restoring quickly can destroy the answer you need</a></li><li><a href="#one-compromised-login-sets-the-ceiling-on-the-demand">One compromised login sets the ceiling on the demand</a></li><li><a href="#two-exposures-one-budget-line">Two exposures, one budget line</a></li></ol></details></nav>
 <article class="pl-art-body">
 <div class="pl-takeaways"><p>Key takeaways</p><ul><li>Backups shorten the outage; they do nothing about data already copied out of your environment.</li><li>Extortion is priced against your disclosure obligations, such as contracts, notification duties and insurance terms, not your downtime.</li><li>Log retention and limiting what any one account can reach decide, months in advance, how costly an incident becomes.</li></ul></div>
 <!-- PL:BODY -->
 <p>The most dangerous tabletop exercise is the one that goes perfectly.</p>
 
-<p>Picture the scenario most leadership teams have rehearsed. Friday evening, file servers encrypted, a ransom note on every desktop. The team executes. Immutable backups are intact, the restore runs overnight, and by Monday operations are back with a day of lost work. Everyone exhales.</p>
+<p>Picture the scenario many leadership teams have rehearsed. Friday evening, file servers encrypted, a ransom note on every desktop. The team executes. Immutable backups are intact, the restore runs overnight, and by Monday operations are back with a day of lost work. Everyone exhales.</p>
 
 <p>Then Wednesday brings an email to the CEO's personal address. A directory listing of the HR share. Three payroll exports. The master services agreement with your largest client. A countdown, and a link to a leak site. Nobody in the room can say what else the sender holds, because the machines that would have known were reimaged on Saturday.</p>
 
-<p>The plan answered the availability question flawlessly. It never touched the question that decided the outcome.</p>
+<p>The plan answered the availability question flawlessly. It never touched the question that decided the outcome. For the executives who fund recovery and the IT leaders who design it, the argument here is that log retention and permissions now belong beside backups in the same decision.</p>
 
 <h2 id="encryption-became-the-receipt-not-the-leverage">Encryption became the receipt, not the leverage</h2>
 
-<p>What follows is analysis rather than reporting. No study is being cited here, and none is needed, because the argument rests on incentives that any executive can evaluate directly.</p>
+<p>What follows is analysis built on incentives that any executive can evaluate directly, and public advisories point the same way. The ransomware guide from the Cybersecurity and Infrastructure Security Agency (CISA) notes that some actors <a href="https://www.cisa.gov/stopransomware/ransomware-guide">steal data and threaten to release it as their sole form of extortion</a>. In May 2026 the FBI described <a href="https://www.ic3.gov/CSA/2026/260526.pdf">Silent Ransom Group</a>, which works without encryption and has consistently targeted US law firms by posing as their own IT support. Los Angeles firms should read it closely.</p>
 
-<p>Encryption is an expensive way to extort a business. It is loud. It trips every monitoring tool the victim owns, forces the organization into crisis mode, and hands a well-prepared company a clean exit: restore and refuse to pay. Building reliable cross-platform encryption tooling is genuine engineering work, and the return on that work erodes every time a mid-sized company gets its <a href="/backup-disaster-recovery">data backup</a> discipline right.</p>
+<p>Encryption is an expensive way to extort a business. It is loud. It trips monitoring tools, forces the organization into crisis mode, and hands a well-prepared company a clean exit: restore and refuse to pay. Building reliable cross-platform encryption tooling is genuine engineering work, and the return on that work erodes every time a mid-sized company gets its <a href="/backup-disaster-recovery">data backup</a> discipline right.</p>
 
-<p>Copying data out has the opposite economics. At a network level it resembles ordinary business activity — a sync client, a browser session, a legitimate cloud storage endpoint. It requires no destructive payload and no negotiation deadline. Stolen data can be sold, re-extorted later, or used to approach your customers directly.</p>
+<p>Copying data out has the opposite economics. At a network level it resembles ordinary business activity: a sync client, a browser session, a legitimate cloud storage endpoint. The FBI's notice describes exactly that, with files moved by common transfer tools or into Google Drive and OneDrive, and warns that traditional antivirus is unlikely to flag it. Theft requires no destructive payload and no negotiation deadline. Stolen data can be sold, re-extorted later, or used to approach your customers directly.</p>
 
 <p>Follow that logic to its end and you reach an uncomfortable place. If the theft carries the leverage, encryption is optional. A company can be fully compromised, fully extorted, and never see a ransom note on a screen. The first indication is a message from someone who already has the files.</p>
+
+<figure class="pl-flow"><ol><li><b>Access</b>One login, session token or exposed device.</li><li><b>Reach</b>Everything that account can read.</li><li class="is-hot"><b>Copy</b>Files leave through ordinary tools.</li><li><b>Encrypt</b>Optional. The only step backups answer.</li><li><b>Extort</b>Priced on your obligations, not your downtime.</li></ol><figcaption>Backups answer the fourth step. The leverage is created at the third.</figcaption></figure>
 
 <h2 id="the-demand-is-priced-against-your-obligations-not-your-d">The demand is priced against your obligations, not your downtime</h2>
 
 <p>Executives tend to model a ransom as a function of business interruption: days offline, cost per day, weighed against the demand. That arithmetic made sense when encryption was the weapon.</p>
 
-<p>Extortion pricing works differently. The attacker is estimating what disclosure costs you, and the inputs are your contracts and your regulatory exposure rather than your revenue per hour. Breach notification duties under state law. Client agreements containing notification clauses and audit rights. The reporting and controls conditions written into your own cyber insurance policy. Lender or investor covenants. If regulated data sits anywhere in the environment, the calculation changes again.</p>
+<p>Extortion pricing works differently. The attacker is estimating what disclosure costs you, and the inputs are your contracts and your regulatory exposure rather than your revenue per hour. Client agreements containing notification clauses and audit rights. The reporting and controls conditions written into your own cyber insurance policy. Lender or investor covenants. If regulated data sits anywhere in the environment, the calculation changes again.</p>
 
-<p>None of those costs shrink because the restore was fast. Backups shorten the outage. They do nothing about the copy.</p>
+<p>State breach law now adds a clock. Under California's SB 446, effective January 1, 2026, a business generally has <a href="https://apcp.assembly.ca.gov/system/files/2025-06/sb-446-hurtado-apcp-analysis.pdf">30 calendar days from discovery or notification</a> to notify affected residents, and where more than 500 are notified, 15 days after that to send the Attorney General a sample notice. Delay is allowed for law enforcement needs, or as necessary to determine scope and restore the system. Counsel decides how that applies to you. The operational point is that scope has become a dated legal question.</p>
+
+<p>None of those costs shrink because the restore was fast, and payment does not reliably remove them. CISA's advisory on Karakurt, another theft-only group, reports victims who said <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-152a">their information was not kept confidential after payment</a>, and actors who contacted employees, business partners and clients to add pressure. Backups shorten the outage. They do nothing about the copy.</p>
 
 <h2 id="restoring-quickly-can-destroy-the-answer-you-need">Restoring quickly can destroy the answer you need</h2>
 
-<p>Here is the tension that rarely surfaces until it is too late. The instinct during an incident is to get back to work — wipe, reimage, restore, resume. That instinct is correct for availability and actively harmful for scope determination.</p>
+<p>Here is the tension that rarely surfaces until it is too late. The instinct during an incident is to get back to work: wipe, reimage, restore, resume. That instinct is correct for availability and actively harmful for scope determination. CISA's response checklist asks for system images and memory captures from a sample of affected devices, and for evidence that is volatile or retained only briefly to be preserved first.</p>
 
-<p>Establishing what actually left your environment requires evidence: endpoint telemetry, authentication logs, cloud audit trails, egress records, mailbox activity. Those artifacts live on the systems being rebuilt, and inside retention windows that were set — or left at their defaults — long before anyone imagined needing them. Retention length is a licensing and configuration decision, usually made quietly. Few executives know what theirs is. Fewer have compared it against how long an intruder might plausibly have been present before anyone noticed.</p>
+<p>Establishing what actually left your environment requires evidence: endpoint telemetry, authentication logs, cloud audit trails, egress records, mailbox activity. Those artifacts live on the systems being rebuilt, and inside retention windows that were set, or left at their defaults, long before anyone imagined needing them. Retention length is a licensing and configuration decision, usually made quietly. Compare yours with how long an intruder might plausibly have been present before anyone noticed.</p>
+
+<table class="pl-compare"><caption>How long common evidence lasts if nobody changes the default</caption><thead><tr><th scope="col">Evidence</th><th scope="col">Default</th><th scope="col">What to do</th></tr></thead><tbody>
+<tr><td>Microsoft Entra sign-in and audit logs</td><td><a href="https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention">Seven days on the free tier, 30 days with P1 or P2</a></td><td>Export to storage or a log platform; extensions are not retroactive</td></tr>
+<tr><td>Microsoft 365 audit log</td><td><a href="https://learn.microsoft.com/en-us/purview/audit-log-enable-disable">180 days once auditing is on; off by default in Business Basic, Standard and Premium tenants</a></td><td>Turn it on, then prove it with a test search</td></tr>
+<tr><td>Endpoint detection telemetry</td><td>Set by product and plan</td><td>Get the number in writing</td></tr>
+<tr><td>Firewall, VPN and server logs</td><td>Whatever the device can hold</td><td>Forward them off the device</td></tr>
+<tr><td>Reimaged computers</td><td>Nothing</td><td>Image a sample before rebuilding</td></tr>
+</tbody></table>
+
+<p>As a yardstick, CISA suggests keeping logs for critical systems for at least a year where possible.</p>
 
 <p>When the evidence has expired, the honest answer to "what did they take" becomes "we cannot determine that." That answer is expensive. It forces conservative assumptions in legal review, widens notification, weakens any negotiating position, and strains every customer relationship you have.</p>
 
-<p>Whether you can answer the question is decided months in advance, in unglamorous choices about log retention, telemetry coverage, and whether anyone is watching data movement at all. This is where <a href="/cybersecurity-services">cybersecurity</a> spending has quietly changed purpose. Detection is no longer only about stopping a payload. It is about producing a defensible record of what happened.</p>
+<p>Whether you can answer the question is decided months in advance, in unglamorous choices about log retention, telemetry coverage, and whether anyone is watching data movement at all. This is where <a href="/cybersecurity-services">cybersecurity</a> spending has quietly changed purpose. Detection is also about producing a defensible record of what happened.</p>
 
 <h2 id="one-compromised-login-sets-the-ceiling-on-the-demand">One compromised login sets the ceiling on the demand</h2>
 
 <p>If the value of an extortion equals the sensitivity of what was taken, then the size of your exposure starts as a permissions question rather than a security question.</p>
 
-<p>In a typical mid-sized company, one set of stolen credentials — harvested through a convincing sign-in page, a stolen session token, or an approval prompt tapped at the end of a long day — opens a startling amount of material. Shared drives accumulated over a decade. Sites created for a project that ended years ago and never locked down. Mailboxes holding every contract, wire instruction, and board deck an executive has ever received. Departed staff disabled in the HR system but still active in three connected applications.</p>
+<p>In a typical mid-sized company, one set of stolen credentials, harvested through a convincing sign-in page, a stolen session token, or an approval prompt tapped at the end of a long day, opens a startling amount of material. Shared drives accumulated over a decade. Sites created for a project that ended years ago and never locked down. Mailboxes holding every contract, wire instruction, and board deck an executive has ever received. Departed staff disabled in the HR system but still active in three connected applications.</p>
 
 <p>Identity is the perimeter now, and the blast radius behind each identity is what an attacker monetizes. Deploying Copilot across <a href="/cloud-services">Microsoft 365</a> makes this legible almost immediately, because the assistant answers from whatever the employee already has permission to open. Documents nobody knew were reachable become reachable in one sentence. That is by design, and it is genuinely useful information: permissions sprawl that was invisible becomes measurable.</p>
 
@@ -398,7 +412,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 
 <h2 id="two-exposures-one-budget-line">Two exposures, one budget line</h2>
 
-<p>None of this argues against backups. Immutable, tested, offline-capable recovery remains the control that separates a bad week from an extinction event, and companies still fail over skimping on it. The argument is narrower: backup strategy and extortion strategy have separated, and most mid-sized budgets still fund only the first.</p>
+<p>None of this argues against backups. Immutable, tested, offline-capable recovery still decides how long you are down. The argument is narrower: backup strategy and extortion strategy have separated, and in our assessment many mid-sized budgets still fund only the first.</p>
 
 <p>Four questions worth putting to your IT leadership before the next planning cycle:</p>
 
@@ -409,11 +423,19 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <li>Who decides, in the first four hours, between restoring systems and preserving evidence, and do they know they own that decision?</li>
 </ul>
 
-<p>The last one is the cheapest to fix and the most commonly unassigned. It belongs in a written incident plan, not in a hallway conversation at 11 p.m.</p>
+<p>The last one is the cheapest to fix. It belongs in a written incident plan, not in a hallway conversation at 11 p.m.</p>
 
-<p>Recovery capability answers whether you can keep operating. It says nothing about whether you can be extorted. Boards treating the first as coverage for the second are carrying a risk they have never priced. The corrective work is unremarkable to describe and demanding to sustain: know what data you hold, know who can reach it, keep enough telemetry to reconstruct what moved, and decide in advance who chooses between speed and evidence. That is ongoing operational discipline rather than a project with an end date, which is why it tends to stall inside busy internal teams and why it belongs with whoever runs your <a href="/it-help-desk">IT support</a> and security operations day to day.</p>
+<p>Recovery capability answers whether you can keep operating. It says nothing about whether you can be extorted. Boards treating the first as coverage for the second are carrying a risk they have never priced. The corrective work is unremarkable to describe and demanding to sustain: know what data you hold, know who can reach it, keep enough telemetry to reconstruct what moved, and decide in advance who chooses between speed and evidence. That is ongoing operational discipline, which is why it belongs with whoever runs your <a href="/it-help-desk">IT support</a> and security operations day to day. The anomalies that precede an extortion event often arrive first as an ordinary ticket, so settle now who is allowed to treat one as something else.</p>
 
-<p>Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills, with an in-house, US-based help desk operating 24/7 — relevant here because the anomalies preceding an extortion event usually arrive first as an ordinary support ticket nobody thought twice about. If you want a clear read on what your environment could and could not tell you after an incident, our <a href="/managed-it-services">managed IT services</a> team will walk through it with you.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://www.cisa.gov/stopransomware/ransomware-guide">#StopRansomware Guide</a>, CISA.</li>
+<li><a href="https://www.ic3.gov/CSA/2026/260526.pdf">FLASH-20260526-01: Silent Ransom Group Impersonating IT Personnel</a>, FBI.</li>
+<li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-152a">Karakurt Data Extortion Group, advisory AA22-152A</a>, CISA and FBI.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention">Microsoft Entra data retention</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/purview/audit-log-enable-disable">Turn auditing on or off</a>, Microsoft Learn.</li>
+<li><a href="https://apcp.assembly.ca.gov/system/files/2025-06/sb-446-hurtado-apcp-analysis.pdf">SB 446, Data breaches: customer notification (committee analysis)</a>, California State Assembly.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -423,7 +445,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -475,8 +497,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -488,7 +510,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -541,6 +563,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

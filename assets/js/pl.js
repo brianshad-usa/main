@@ -105,6 +105,18 @@
     select(0, false);
   });
 
+  /* ---- accordions on older pages: keep aria-expanded in step with the open state ------------------ */
+  function syncFaq() {
+    [].slice.call(d.querySelectorAll('.faq-q, .faq-question')).forEach(function (b) {
+      var item = b.closest('.faq-item') || b.parentElement;
+      b.setAttribute('aria-expanded', b.classList.contains('open') || item.classList.contains('open') ? 'true' : 'false');
+    });
+  }
+  if (d.querySelector('.faq-q, .faq-question')) {
+    syncFaq();
+    d.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('.faq-q, .faq-question')) setTimeout(syncFaq, 0); });
+  }
+
   /* ---- reveal on scroll (content is never hidden; arriving blocks only rise a few pixels) -------- */
   var els = [].slice.call(d.querySelectorAll('.pl-reveal'));
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

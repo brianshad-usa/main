@@ -419,15 +419,39 @@ MOTIFS = {
 MIRRORABLE = {_security, _security_zones, _ai, _ai_radial, _governance, _cloud, _continuity, _industry}
 
 
-def art_svg(slug, category, label=None):
-    r = _rng(slug)
-    variants = MOTIFS.get(category, MOTIFS["Technology Leadership"])
-    motif = variants[r.randrange(len(variants))]
-    mirror = motif in MIRRORABLE and r.random() < .5
+def _frame(label):
     parts = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (W, H, (label or "Illustration for the article").replace('"', "'")),
              '<rect width="%d" height="%d" fill="%s"/>' % (W, H, BG), _grid()]
     for (x, y) in [(28, 28), (W - 28, 28), (28, H - 28), (W - 28, H - 28)]:
         parts.append('<path d="M%d %dh16M%d %dv16" stroke="%s" stroke-width="1"/>' % (x - 8, y, x, y - 8, LINE % ".3"))
+    return parts
+
+
+def scene_svg(slug):
+    """The article's own illustration (chrome/art_scenes), or None when none is registered."""
+    import art_scenes
+    art_scenes.load()
+    fn = art_scenes.SCENES.get(slug)
+    if fn is None:
+        return None
+    return "".join(_frame(art_scenes.ALT.get(slug)) + fn(_rng(slug)) + ["</svg>"])
+
+
+def scene_alt(slug):
+    import art_scenes
+    art_scenes.load()
+    return art_scenes.ALT.get(slug)
+
+
+def art_svg(slug, category, label=None):
+    own = scene_svg(slug)
+    if own:
+        return own
+    r = _rng(slug)
+    variants = MOTIFS.get(category, MOTIFS["Technology Leadership"])
+    motif = variants[r.randrange(len(variants))]
+    mirror = motif in MIRRORABLE and r.random() < .5
+    parts = _frame(label)
     body = motif(r)
     if mirror:
         body = ['<g transform="translate(%d 0) scale(-1 1)">' % W] + body + ["</g>"]

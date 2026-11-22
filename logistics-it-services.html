@@ -153,7 +153,7 @@
 
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261121">
+  <link rel="stylesheet" href="_shared.css?v=20261122">
   <style>
     /* Logistics accent: industrial amber/slate over deep charcoal */
     :root {
@@ -498,13 +498,13 @@
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -555,7 +555,7 @@
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -565,7 +565,7 @@
     <a href="/support">Client Support</a>
   </div>
 </div>
-<span id="pl-main" tabindex="-1"></span>
+<main id="pl-main" tabindex="-1">
 <!-- /PL:HEADER -->
 
 <!-- HERO -->
@@ -678,35 +678,35 @@
           <form method="post" id="logForm" novalidate>
             <div class="form-row">
               <div class="form-group" id="fg-fname">
-                <label>First Name <span class="req">*</span></label>
-                <input type="text" name="first_name" placeholder="Robert" autocomplete="given-name">
+                <label for="lead-first-name">First Name <span class="req">*</span></label>
+                <input id="lead-first-name" type="text" name="first_name" placeholder="Robert" autocomplete="given-name">
                 <span class="form-error">Required</span>
               </div>
               <div class="form-group" id="fg-lname">
-                <label>Last Name</label>
-                <input type="text" name="last_name" placeholder="Alvarez" autocomplete="family-name">
+                <label for="lead-last-name">Last Name</label>
+                <input id="lead-last-name" type="text" name="last_name" placeholder="Alvarez" autocomplete="family-name">
                 <span class="form-error">Required</span>
               </div>
             </div>
             <div class="form-group" id="fg-company">
-              <label>Company Name</label>
-              <input type="text" name="firm_name" placeholder="Harbor Freight Logistics" autocomplete="organization">
+              <label for="lead-firm-name">Company Name</label>
+              <input id="lead-firm-name" type="text" name="firm_name" placeholder="Harbor Freight Logistics" autocomplete="organization">
               <span class="form-error">Required</span>
             </div>
             <div class="form-group" id="fg-email">
-              <label>Work Email <span class="req">*</span></label>
-              <input type="email" name="email" placeholder="robert@harborfreightlog.com" autocomplete="email">
+              <label for="lead-email">Work Email <span class="req">*</span></label>
+              <input id="lead-email" type="email" name="email" placeholder="robert@harborfreightlog.com" autocomplete="email">
               <span class="form-error">Valid email required</span>
             </div>
             <div class="form-group" id="fg-phone">
-              <label>Phone</label>
-              <input type="tel" name="phone" placeholder="(310) 555-0190" autocomplete="tel">
+              <label for="lead-phone">Phone</label>
+              <input id="lead-phone" type="tel" name="phone" placeholder="(310) 555-0190" autocomplete="tel">
               <span class="form-error">Required</span>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Company Type</label>
-                <select name="firm_type">
+                <label for="lead-firm-type">Company Type</label>
+                <select id="lead-firm-type" name="firm_type">
                   <option value="">Select&hellip;</option>
                   <option>Warehousing / Distribution</option>
                   <option>Third-Party Logistics (3PL)</option>
@@ -720,8 +720,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>Primary IT Challenge</label>
-                <select name="challenge">
+                <label for="lead-challenge">Primary IT Challenge</label>
+                <select id="lead-challenge" name="challenge">
                   <option value="">Select&hellip;</option>
                   <option>Warehouse Wi-Fi / RF Scanning</option>
                   <option>WMS / TMS Support</option>
@@ -735,8 +735,8 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Number of Facilities</label>
-              <select name="firm_size">
+              <label for="lead-firm-size">Number of Facilities</label>
+              <select id="lead-firm-size" name="firm_size">
                 <option value="">Select&hellip;</option>
                 <option>Single location</option>
                 <option>2–3 facilities</option>
@@ -758,7 +758,7 @@
           <div class="success-orbit"><svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div class="success-pill"><div class="success-pill-dot"></div>Request Received</div>
           <h3>You're in good hands.</h3>
-          <p>A Pro Link engineer will reach out within one business day to schedule your free logistics IT assessment.</p>
+          <p>A Pro Link Systems engineer will reach out within one business day to schedule your technology consultation.</p>
           <a href="tel:18008906133" class="success-cta-phone">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             Call 1-800-890-6133
@@ -815,7 +815,7 @@
       </div>
       <div>
         <div class="challenge-side-head">
-          <span class="section-label">How Pro Link Keeps You Moving</span>
+          <span class="section-label">How Pro Link Systems Keeps You Moving</span>
           <h2 class="section-heading">IT Built for the Speed<br>and Scale of Freight.</h2>
           <p class="section-sub">We've served Los Angeles businesses since 1999. We understand that in logistics, IT isn't back-office — it's on the critical path of every shipment.</p>
         </div>
@@ -934,7 +934,7 @@
 </section>
 
 <!-- STATS STRIP -->
-<div class="stats-strip" role="region" aria-label="Pro Link by the numbers">
+<div class="stats-strip" role="region" aria-label="Pro Link Systems by the numbers">
   <div class="stat-item"><span class="stat-number">25+</span><div class="stat-label">Years serving<br>LA businesses</div></div>
   <div class="stat-item"><span class="stat-number">24/7</span><div class="stat-label">Support for round-the-<br>clock operations</div></div>
   <div class="stat-item"><span class="stat-number">15 min</span><div class="stat-label">Average ticket<br>first-response time</div></div>
@@ -1021,6 +1021,7 @@
 
 <!-- FOOTER -->
 <!-- PL:FOOTER -->
+</main>
 <footer class="pl-footer" role="contentinfo">
   <div class="pl-footer-top">
     <div class="pl-footer-brand">
@@ -1052,8 +1053,8 @@
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -1065,7 +1066,7 @@
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -1140,6 +1141,6 @@
 
   })();
 </script>
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
 </body>
 </html>

@@ -41,7 +41,7 @@
     }
   },
   "datePublished": "2026-09-03",
-  "dateModified": "2026-09-03",
+  "dateModified": "2026-11-21",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://prolinksystems.com/blog/2026-09-03-t101-saas-sprawl-the-subscription-audit-that-is-also-a-secur"
@@ -51,7 +51,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/_shared.css?v=20261121">
+  <link rel="stylesheet" href="/_shared.css?v=20261122">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -261,13 +261,13 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -318,7 +318,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -331,85 +331,116 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <span id="pl-main" tabindex="-1"></span>
 <!-- /PL:HEADER -->
 
-<main id="pl-main" class="pl-art">
+<main class="pl-art">
 <header class="pl-arthead">
-  <div class="pl-wrap">
-    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
+  <div class="pl-wrap pl-arthead-grid">
     <div class="pl-arthead-inner">
+      <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a></nav>
       <p class="pl-cat"><a href="/blog/#cybersecurity-risk">Cybersecurity &amp; Risk</a></p>
       <h1>Canceling SaaS Doesn't Revoke Access</h1>
       <p class="pl-dek">Canceling a SaaS subscription ends the invoice, not the OAuth grant. The subscription audit that finds wasted spend also finds access grants nobody revoked.</p>
-      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-03">September 3, 2026</time><br>6 min read</div></div>
+      <div class="pl-byline"><img class="is-org" src="/apple-touch-icon.png" width="52" height="52" alt="Pro Link Systems logo" decoding="async"><div class="pl-byline-who"><strong>Pro Link Systems</strong>Insights</div><div class="pl-byline-meta"><time datetime="2026-09-03">September 3, 2026</time> &middot; Updated <time datetime="2026-11-21">November 21, 2026</time><br>7 min read</div></div>
     </div>
+    <figure class="pl-arthead-fig"><img class="pl-art-img" src="/assets/insights/2026-09-03-t101-saas-sprawl-the-subscription-audit-that-is-also-a-secur.svg" width="1200" height="675" alt="A grid of software tiles where a cancelled tile still has a live connection to company data" fetchpriority="high" decoding="async"></figure>
   </div>
 </header>
-<figure class="pl-art-hero"><div class="pl-wrap"><img class="pl-art-img" src="/assets/insights/2026-09-03-t101-saas-sprawl-the-subscription-audit-that-is-also-a-secur.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" fetchpriority="high" decoding="async"></div></figure>
 <div class="pl-wrap">
 <div class="pl-art-layout">
-<nav class="pl-toc" aria-label="In this article"><p>In this article</p><ol><li><a href="#cancellation-ends-the-invoice-not-the-grant">Cancellation Ends the Invoice, Not the Grant</a></li><li><a href="#the-tool-you-approved-in-2022-reads-more-than-it-did">The Tool You Approved in 2022 Reads More Than It Did</a></li><li><a href="#finance-has-the-best-software-inventory-in-the-building">Finance Has the Best Software Inventory in the Building, and It Is Blind in One Direction</a></li><li><a href="#build-a-register-not-a-cancellation-list">Build a Register, Not a Cancellation List</a></li><li><a href="#count-owners-not-logos">Count Owners, Not Logos</a></li></ol></nav>
+<nav class="pl-toc" aria-label="In this article"><details open><summary>In this article</summary><ol><li><a href="#cancellation-ends-the-invoice-not-the-grant">Cancellation Ends the Invoice, Not the Grant</a></li><li><a href="#the-tool-you-approved-three-years-ago-reads-more-than-it">The Tool You Approved Three Years Ago Reads More Than It Did</a></li><li><a href="#finance-has-the-best-software-inventory-in-the-building">Finance Has the Best Software Inventory in the Building, and It Is Blind in One Direction</a></li><li><a href="#build-a-register-not-a-cancellation-list">Build a Register, Not a Cancellation List</a></li><li><a href="#count-owners-not-logos">Count Owners, Not Logos</a></li></ol></details></nav>
 <article class="pl-art-body">
 <!-- PL:BODY -->
-<p>Somewhere in your Microsoft or Google tenant is an application with read access to a shared mailbox. An employee who left two years ago authorized it, for a tool your finance team canceled at the following renewal. The seat is gone. Billing stopped. The token did not.</p>
+<p>Somewhere in your Microsoft or Google tenant is an application with read access to a shared mailbox. An administrator who left two years ago approved it, for a tool your finance team canceled at the following renewal. The seat is gone. Billing stopped. The permission did not.</p>
 
 <p>That gap between commercial termination and technical termination is the part of SaaS sprawl nobody owns. Finance treats subscriptions as spend. IT treats applications as access. Both read the same list from opposite ends, and the middle is where the interesting problems live.</p>
 
-<p>A useful reframe for 2026: a subscription audit and an access audit are the same exercise performed in different vocabulary. Run either one properly and the other falls out as a byproduct. Most mid-sized companies run neither — the spending version feels like a cost-cutting chore, and the access version has no budget line.</p>
+<p>A useful reframe for 2026: a subscription audit and an access audit are the same exercise performed in different vocabulary. Run either one properly and most of the other falls out as a byproduct. Many mid-sized companies run neither, because the spending version feels like a cost-cutting chore and the access version has no budget line. This article is for the CFO and the IT lead who would have to run it together.</p>
 
 <h2 id="cancellation-ends-the-invoice-not-the-grant">Cancellation Ends the Invoice, Not the Grant</h2>
 
-<p>Worth stating plainly, because this is a fact about how modern authorization works rather than an opinion about any vendor: when a user connects a third-party application to your identity provider, the resulting consent grant lives in <strong>your</strong> directory, not in the vendor's billing system. Ending the subscription removes seats. Doing so does not revoke the grant, expire the refresh token, remove the application registration, or clear the mailbox and file permissions attached to it.</p>
+<p>Worth stating plainly, because this is a fact about how modern authorization works rather than an opinion about any vendor: when someone connects a third-party application to your identity provider, the resulting consent lives in <strong>your</strong> directory, not in the vendor's billing system. Ending the subscription removes seats. It does not remove the enterprise application, the permissions attached to it, or the keys the vendor still holds. Tokens age out only when nobody uses them; in the Microsoft identity platform a refresh token lasts <a href="https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens">ninety days by default and is replaced on every use</a>, so an integration the vendor leaves running renews itself.</p>
+
+<p>Who approved the application decides what happens when people leave. Where one employee granted access to their own mailbox, <a href="https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants">disabling that employee's account cuts off the application's access to it</a>. Where an administrator consented for the whole organization, or granted permissions that let the application act as itself, nobody's departure changes anything.</p>
 
 <p>The same holds for the connective tissue that accumulates around any tool that was genuinely useful:</p>
 
 <ul>
 <li>API keys minted for the departing tool and pasted into systems that are still running</li>
 <li>Inbound webhooks and automation flows that still fire</li>
-<li>Service accounts with delegated mailbox or file rights, exempted from MFA years ago "temporarily"</li>
-<li>DNS records pointing a subdomain at infrastructure the vendor may have since recycled</li>
+<li>Service accounts with delegated mailbox or file rights, exempted from multi-factor authentication (MFA) years ago "temporarily"</li>
+<li>DNS records pointing a subdomain at infrastructure the vendor may have since recycled, which opens the way to <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/subdomain-takeover">subdomain takeover</a></li>
 <li>SFTP or file-share credentials shared during onboarding and never rotated</li>
 </ul>
 
-<p>Employee offboarding is mature at most mid-sized companies. Application offboarding barely exists. When a person leaves, someone disables an account. When a tool leaves, someone stops paying — and that is the whole ritual. This is not negligence. Nobody was ever assigned the second job.</p>
+<p>When a person leaves, someone disables an account, because a checklist says so. When a tool leaves, someone stops paying, and in many companies that is the whole ritual. This is not negligence. Nobody was ever assigned the second job.</p>
 
-<h2 id="the-tool-you-approved-in-2022-reads-more-than-it-did">The Tool You Approved in 2022 Reads More Than It Did</h2>
+<h2 id="the-tool-you-approved-three-years-ago-reads-more-than-it">The Tool You Approved Three Years Ago Reads More Than It Did</h2>
 
-<p>Something changed recently enough that most of your approval decisions predate it. Business software has been adding embedded assistants, summarizers, and "chat with your data" features at speed. No number is needed to make the point, and none should be invented: open five tools your team uses and count the ones that gained an assistant after you bought them.</p>
+<p>Something changed recently enough that many of your approval decisions predate it. Business software has been adding embedded assistants, summarizers, and "chat with your data" features at speed. No number is needed to make the point, and none should be invented: open five tools your team uses and count the ones that gained an assistant after you bought them.</p>
 
-<p>The consequence is analysis rather than a reported finding, and it is the part executives underestimate. Your original consent decision was made against a product description that no longer applies. A tool approved as a scheduling utility now reads meeting content to produce summaries. File-transfer services index what passes through them. Where the initial grant was broad — read all mail, read all files, read directory data — nobody had to ask you again. Nothing was violated. The product simply grew into permissions you had already given it.</p>
+<p>The consequence is analysis rather than a reported finding, and it is the part executives underestimate. Your original consent decision was made against a product description that no longer applies. A tool approved as a scheduling utility now reads meeting content to produce summaries. File-transfer services index what passes through them. Where the initial grant was broad, covering all mail, all files or the directory, nobody had to ask you again. Nothing was violated. The product simply grew into permissions you had already given it.</p>
 
-<p>Shadow AI sharpens the picture. Employees are not exfiltrating data maliciously; they paste a contract into whichever assistant renders it readable fastest. Companies that have invested seriously in <a href="/cloud-services">Microsoft 365</a> governance and Copilot data controls sometimes find the harder problem sits outside that boundary entirely — in a free-tier tool signed up for with a work identity, which cost nothing and therefore appears in no ledger finance maintains.</p>
+<p>Shadow AI sharpens the picture. Employees are not exfiltrating data maliciously; they paste a contract into whichever assistant renders it readable fastest. Companies that have invested seriously in <a href="/cloud-services">Microsoft 365</a> governance and Copilot data controls sometimes find the harder problem sits outside that boundary entirely, in a free-tier tool signed up for with a work identity, which cost nothing and therefore appears in no ledger finance maintains.</p>
 
 <p>The review question has moved. It used to be what does this application do. Now it is <strong>what can this application read, what does it do with what it reads, and where does that end up</strong>. Those are <a href="/cybersecurity-services">IT security</a> questions wearing a procurement costume.</p>
 
 <h2 id="finance-has-the-best-software-inventory-in-the-building">Finance Has the Best Software Inventory in the Building, and It Is Blind in One Direction</h2>
 
-<p>Card and AP data is the closest thing most 20-to-500 seat businesses have to a real software asset inventory. It is also systematically blind in exactly the wrong direction. Paid tools appear. Free tiers, expired trials whose integration quietly survived, personal-card purchases reimbursed as office expense, and self-serve signups authorized with a corporate Google or Microsoft identity do not. Those last ones frequently hold the broadest permissions, because free products lean hardest on OAuth to reduce signup friction.</p>
+<p>Card and accounts payable data is often the closest thing a 20-to-500 seat business has to a real software asset inventory. It is also systematically blind in exactly the wrong direction. Paid tools appear. Free tiers, expired trials whose integration quietly survived, personal-card purchases reimbursed as office expense, and self-serve signups authorized with a corporate identity do not. Those last ones can hold broad permissions, because one-click sign-in is how free products reduce signup friction.</p>
+
+<p>Know your defaults before you start. Microsoft's managed consent policy, the default for new tenants, now <a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-app-consent-policies">routes mail, calendar, file and Teams chat requests to an administrator</a>; older tenants may differ, and grants made earlier remain. In Google Workspace the starting position for third-party apps an administrator has not configured is to <a href="https://knowledge.workspace.google.com/admin/apps/control-which-apps-access-google-workspace-data">let users access them</a>, until someone changes it.</p>
 
 <p>So the audit worth running reconciles three ledgers that rarely agree:</p>
 
 <ul>
-<li><strong>What finance pays for</strong> — the spend view, complete on cost, blind on access</li>
-<li><strong>What your identity provider has authorized</strong> — the enterprise applications and consent grants, complete on access, silent on cost</li>
-<li><strong>What your network and browsers actually talk to</strong> — the behavioral view, which catches what neither of the others knows exists</li>
+<li><strong>What finance pays for:</strong> the spend view, complete on cost, blind on access</li>
+<li><strong>What your identity provider has authorized:</strong> the enterprise applications and consent grants, complete on access, silent on cost</li>
+<li><strong>What your network and browsers actually talk to:</strong> the behavioral view, which catches what neither of the others knows exists</li>
 </ul>
 
-<p>Findings live in the disagreements. An application in the identity provider with no matching invoice is either a free tool nobody vetted or a canceled tool nobody disconnected. Invoices with no matching sign-in activity are money leaving for nothing. A tool that appears in network traffic and in neither of the other two ledgers is the most instructive finding of the day, and usually the one that ends the "we don't really have a shadow IT problem" conversation.</p>
+<p>Findings live in the disagreements.</p>
+
+<table class="pl-compare"><caption>Reading the three ledgers against each other</caption><thead><tr><th scope="col">What you see</th><th scope="col">What it usually means</th><th scope="col">First action</th></tr></thead><tbody>
+<tr><td>Authorized in the directory, no invoice</td><td>A free tool nobody vetted, or a canceled tool nobody disconnected</td><td>Find an owner; disable if none comes forward</td></tr>
+<tr><td>Invoice, no sign-in activity</td><td>Money leaving for nothing</td><td>Confirm with the owner, cancel, then disconnect</td></tr>
+<tr><td>Network or browser traffic only</td><td>Shadow IT that bypasses both records</td><td>Identify the data involved before the person</td></tr>
+<tr><td>Service account or key with no tool behind it</td><td>The remains of an integration</td><td>Rotate, watch for breakage, remove</td></tr>
+<tr><td>All three agree</td><td>A governed application</td><td>Set the next review at renewal</td></tr>
+</tbody></table>
 
 <p>Machine identities belong in the same reconciliation. Service accounts, API keys, and automation connectors have no leaver's date and no manager, which is precisely why they survive the humans who created them.</p>
 
 <h2 id="build-a-register-not-a-cancellation-list">Build a Register, Not a Cancellation List</h2>
 
-<p>A cancellation list saves money once. A register changes how decisions get made. For each application that survives review, capture the business owner by name, the data classification it touches, whether authentication runs through single sign-on or a local password, how many people hold admin rights, what it can read inside your tenant, the steps required to disconnect it, and how you would get your data out if the vendor disappeared. That last field is where SaaS sprawl meets <a href="/backup-disaster-recovery">disaster recovery</a> — a platform holding business records you cannot export is a continuity exposure regardless of the vendor's uptime.</p>
+<p>A cancellation list saves money once. A register changes how decisions get made. For each application that survives review, capture the business owner by name, the data classification it touches, whether authentication runs through single sign-on or a local password, how many people hold admin rights, what it can read inside your tenant, the steps required to disconnect it, and how you would get your data out if the vendor disappeared. That last field is where SaaS sprawl meets <a href="/backup-disaster-recovery">disaster recovery</a>: a platform holding business records you cannot export is a continuity exposure regardless of the vendor's uptime.</p>
 
-<p>Two operational notes make this stick. Use renewal dates as the governance clock; every renewal is a scheduled, budget-backed excuse to re-examine scope. Then put the disconnect procedure with whoever runs your <a href="/it-help-desk">IT support</a> function, because that group sees a tool's entire lifecycle — the request, the integration, the tickets, the abandonment. If your company has recently completed a cyber insurance renewal questionnaire or a large customer's vendor review, you have likely met a version of these questions already, under time pressure.</p>
+<p>Use renewal dates as the governance clock; every renewal is a scheduled, budget-backed excuse to re-examine scope. Then put the disconnect procedure with whoever runs your <a href="/it-help-desk">IT support</a> function, because that group sees a tool's entire lifecycle: the request, the integration, the tickets, the abandonment. The steps are short.</p>
+
+<ol class="pl-process">
+<li><strong>Disable sign-in for the application.</strong> In Entra ID this <a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/disable-user-sign-in-portal">stops all new tokens</a> and can be reversed, so it is the safe first move.</li>
+<li><strong>Wait one business cycle.</strong> Month-end is when forgotten integrations announce themselves.</li>
+<li><strong>Remove the permissions</strong> and then the application, user grants included.</li>
+<li><strong>Rotate what the vendor held:</strong> API keys, shared passwords, SFTP credentials, webhook secrets.</li>
+<li><strong>Delete the leftovers:</strong> DNS records, mail-flow exceptions, MFA exemptions, firewall rules.</li>
+<li><strong>Export, then get deletion confirmed in writing,</strong> and close the register entry with a date.</li>
+</ol>
+
+<p>The consent side of the register, including which permissions deserve the closest reading, is in <a href="/blog/2026-09-13-t106-oauth-app-grants-the-third-party-access-that-survives-p">The Access That Survives a Password Reset</a>. If your company has recently completed a cyber insurance renewal questionnaire or a large customer's vendor review, you have likely met a version of these questions already, under time pressure.</p>
 
 <h2 id="count-owners-not-logos">Count Owners, Not Logos</h2>
 
-<p>Consolidation is the reflexive answer and only sometimes the right one. Collapsing a dozen tools into one platform trades vendor sprawl for concentration risk, which is a different exposure rather than a smaller one. The honest goal is fewer <strong>unowned</strong> applications — every tool attached to a named person who can say what it reads and how it would be removed.</p>
+<p>Consolidation is the reflexive answer and only sometimes the right one. Collapsing a dozen tools into one platform trades vendor sprawl for concentration risk, which is a different exposure rather than a smaller one. The honest goal is fewer <strong>unowned</strong> applications: every tool attached to a named person who can say what it reads and how it would be removed.</p>
 
-<p>A company with sixty governed applications is in better shape than one with fifteen where four hold permissions nobody can explain.</p>
+<p>A company with sixty governed applications is in better shape than one with fifteen where four hold permissions nobody can explain. That is opinion, but it gives you the measure to report: the number of authorized applications with no owner. The subscription review is the least intimidating door into a serious access conversation, because it opens on the CFO's turf.</p>
 
-<p>Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999. The subscription review is the least intimidating door into a serious access conversation, because it opens on the CFO's turf. If you want that reconciliation run properly rather than as a spreadsheet exercise, our <a href="https://prolinksystems.com/managed-it-services">managed IT services</a> team can start with what your directory has authorized that your invoices never mentioned.</p>
+<h2 id="references" class="pl-refs-h">References</h2>
+<ul class="pl-refs">
+<li><a href="https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens">Refresh tokens in the Microsoft identity platform</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants">Detect and remediate illicit consent grants</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/manage-app-consent-policies">Manage app consent policies</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/disable-user-sign-in-portal">Disable user sign-in for an application</a>, Microsoft Learn.</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/subdomain-takeover">Prevent dangling DNS entries and avoid subdomain takeover</a>, Microsoft Learn.</li>
+<li><a href="https://knowledge.workspace.google.com/admin/apps/control-which-apps-access-google-workspace-data">Control which apps access Google Workspace data</a>, Google Workspace.</li>
+</ul>
 <!-- /PL:BODY -->
 <aside class="pl-capbox" aria-label="Related practice"><p class="pl-capbox-k">Related practice</p><div><strong>Cybersecurity &amp; Risk</strong><p>Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.</p><a class="pl-arrow" href="/cybersecurity-services">Explore the cybersecurity practice</a></div></aside>
 <section class="pl-author pl-author--org" aria-labelledby="author-h"><img src="/apple-touch-icon.png" width="96" height="96" alt="Pro Link Systems logo" loading="lazy" decoding="async"><div><p class="pl-author-k">Published by</p><h2 id="author-h">Pro Link Systems</h2><p class="pl-author-bio">Pro Link Systems is an independent technology management, advisory and engineering firm, serving organizations since 1999.</p><a class="pl-arrow" href="/about">About Pro Link Systems</a></div></section>
@@ -419,7 +450,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
 <section class="pl-section pl-mist pl-art-related" aria-labelledby="related-h">
   <div class="pl-wrap">
     <div class="pl-head pl-head--stack"><p class="pl-eyebrow">Related perspectives</p><h2 class="pl-h2" id="related-h">Continue reading</h2></div>
-    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>6 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity and authority failure, not a filtering failure. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="Abstract illustration of layered security perimeters around a protected core" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity and authority failure, not a filtering failure.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>6 min read</span></span></a></li></ul>
+    <ul class="pl-ins-grid"><li class="pl-icard" data-cat="cybersecurity-risk" data-text="what a microsoft 365 security assessment checks (and how to order one online) a microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. here&#x27;s what gets checked and how ours works. cybersecurity &amp; risk what a microsoft 365 security assessment checks"><a href="/blog/2026-11-20-what-a-microsoft-365-security-assessment-checks"><img class="pl-art-img" src="/assets/insights/2026-11-20-what-a-microsoft-365-security-assessment-checks.svg" width="1200" height="675" alt="A ring of thirteen segments with one highlighted, feeding a findings report sorted by severity" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>What a Microsoft 365 Security Assessment Checks (and How to Order One Online)</h3><p>A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.</p><span class="pl-meta"><time datetime="2026-11-20">November 20, 2026</time><span>4 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="train staff to verify, not to detect ai-written phishing and cloned voices erased the tells staff were taught to spot. train for verification, and measure how fast people report. cybersecurity &amp; risk security awareness training turning employees into your"><a href="/blog/2026-11-17-t53-security-awareness-training-turning-employees-into-your"><img class="pl-art-img" src="/assets/insights/2026-11-17-t53-security-awareness-training-turning-employees-into-your.svg" width="1200" height="675" alt="A suspicious message stopped at a gate, with a separate call to a known number that confirms it" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Train Staff to Verify, Not to Detect</h3><p>AI-written phishing and cloned voices erased the tells staff were taught to spot. Train for verification, and measure how fast people report.</p><span class="pl-meta"><time datetime="2026-11-17">November 17, 2026</time><span>7 min read</span></span></a></li><li class="pl-icard" data-cat="cybersecurity-risk" data-text="wire fraud now comes from real inboxes business email compromise is an identity failure. what the tenant records, where payment authority should live, and what to do once money has moved. cybersecurity &amp; risk business email compromise how to protect your los angel"><a href="/blog/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel"><img class="pl-art-img" src="/assets/insights/2026-10-20-t32-business-email-compromise-how-to-protect-your-los-angel.svg" width="1200" height="675" alt="A genuine mailbox with an uninvited reader inside sending a payment request onward" loading="lazy" decoding="async"><span class="pl-cat">Cybersecurity &amp; Risk</span><h3>Wire Fraud Now Comes From Real Inboxes</h3><p>Business email compromise is an identity failure. What the tenant records, where payment authority should live, and what to do once money has moved.</p><span class="pl-meta"><time datetime="2026-10-20">October 20, 2026</time><span>7 min read</span></span></a></li></ul>
   </div>
 </section>
 <section class="pl-cta" aria-labelledby="cta-heading">
@@ -471,8 +502,8 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -484,7 +515,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -537,6 +568,7 @@ gtag('config', 'G-SYTKYHZHWJ'); // GA4 — property 507517385
   </div>
 </footer>
 <!-- /PL:FOOTER -->
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
+<script src="/assets/js/article.js?v=20261122" defer></script>
 </body>
 </html>

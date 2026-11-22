@@ -73,12 +73,8 @@
     "headline": "Los Angeles Business Cybersecurity Report 2026",
     "description": "The state of cybersecurity for Los Angeles businesses in 2026: current threats, industry risks, research findings, and practical protection strategies.",
     "datePublished": "2026-06-16",
-    "dateModified": "2026-11-09",
-    "author": {
-      "@type": "Person",
-      "name": "Brian Shad",
-      "jobTitle": "Founder & CEO"
-    },
+    "dateModified": "2026-11-21",
+    "author": {"@type": "Organization", "@id": "https://prolinksystems.com/#organization", "name": "Pro Link Systems", "url": "https://prolinksystems.com"},
     "publisher": {
       "@type": "Organization",
       "name": "Pro Link Systems",
@@ -103,7 +99,7 @@
         "name": "What are the biggest cybersecurity threats to LA businesses in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The most significant threats facing Los Angeles businesses in 2026 are ransomware, business email compromise (BEC), and phishing. Ransomware remains the most disruptive and costly attack type, with healthcare, legal, and manufacturing firms among the most targeted sectors. Business email compromise — where attackers impersonate executives or vendors to redirect payments — ranks among the costliest categories of cybercrime by total reported losses, according to the FBI Internet Crime Complaint Center (IC3). Phishing and stolen or compromised credentials are the most common ways attackers gain initial access to a network, according to the Verizon Data Breach Investigations Report (DBIR). Supply chain attacks and insider threats round out the top concerns for mid-sized LA organizations."
+          "text": "Exploited vulnerabilities, ransomware, business email compromise, phishing and compromised vendors. In Verizon's 2026 Data Breach Investigations Report, exploitation of vulnerabilities was the most common way in (31% of breaches), followed by phishing (16%) and credential abuse (13%), and ransomware was present in 48% of breaches. The FBI's Internet Crime Complaint Center recorded $3.05 billion in business email compromise losses in 2025, second only to investment fraud."
         }
       },
       {
@@ -111,7 +107,7 @@
         "name": "How much does a data breach cost a small business?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "There is no single reliable figure. The cost depends on the size of the business, the data involved, and how quickly the breach is found and contained, and it typically includes incident response, downtime, lost productivity, legal fees, regulatory penalties, and customer notification. Speed matters: IBM's annual Cost of a Data Breach Report consistently finds that breaches take months to identify and contain, and the longer a breach goes undetected, the more it costs. For a small business, a single serious incident can threaten continuity, which is why prevention and tested recovery matter more than any average."
+          "text": "There is no single reliable figure. IBM's 2026 Cost of a Data Breach Report puts the global average at $4.99 million across 602 organizations worldwide, which is a direction rather than a budget number for a small business. The cost depends on the data involved and how quickly the breach is found and contained, and typically includes incident response, downtime, lost productivity, legal fees, regulatory penalties and customer notification."
         }
       },
       {
@@ -119,7 +115,7 @@
         "name": "What cybersecurity compliance rules apply to Los Angeles businesses?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The compliance framework that applies to your LA business depends on your industry and the data you handle. Healthcare providers and their business associates must comply with HIPAA, which governs the protection of patient health information. Retailers and any business that processes credit or debit card payments must meet PCI DSS requirements. Defense contractors — a significant segment in the LA aerospace corridor — must now meet CMMC (Cybersecurity Maturity Model Certification) standards to maintain federal contracts. SaaS companies and professional service firms serving enterprise clients are frequently required to hold a SOC 2 report. And California businesses that meet the California Consumer Privacy Act (CCPA) thresholds are subject to its rules on personal information about California residents. A qualified compliance advisor can confirm which frameworks apply to your business."
+          "text": "It depends on your industry and the data you handle. Healthcare providers and their business associates must comply with HIPAA. Businesses that process card payments must meet PCI DSS requirements. Defense suppliers that handle controlled unclassified information must meet NIST SP 800-171 where their contracts require it; the CMMC program adds verification, and its second phase was suspended for review in July 2026. SaaS companies and professional firms serving enterprise clients are often asked for a SOC 2 report. Businesses that meet the California Consumer Privacy Act (CCPA) thresholds are subject to its rules on personal information. A qualified compliance advisor can confirm which frameworks apply to your business."
         }
       },
       {
@@ -127,7 +123,7 @@
         "name": "How can a small business protect itself from ransomware?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Effective ransomware protection is layered, not a single product. The most important steps are: deploying endpoint detection and response (EDR) software on all devices; maintaining encrypted, offsite backups that are tested regularly (so you can recover without paying a ransom); implementing multi-factor authentication on all accounts, especially email and remote access; running security awareness training so employees can identify phishing attempts — since phishing and stolen credentials are the most common initial attack vectors according to the Verizon DBIR, and a majority of breaches involve a human element; and having a documented incident response plan so your team knows exactly what to do if an attack occurs. Patch management and vendor risk assessments further reduce your exposure. Pro Link Systems provides EDR, tested backups, MFA, security awareness training, and patch management as part of our managed cybersecurity services."
+          "text": "Protection is layered, not a single product. The most important steps are patching internet-facing systems promptly, because exploited vulnerabilities are now the most common way in; multi-factor authentication on all accounts, especially email and remote access; endpoint detection and response on all devices; encrypted, isolated backups proven by restore tests; training that gives employees a simple way to report and verify; and a rehearsed incident response plan that covers data theft as well as encryption."
         }
       },
       {
@@ -135,7 +131,7 @@
         "name": "Does my small business really need managed cybersecurity?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes — and the economics make a compelling case. A single serious incident can threaten business continuity, and IBM's Cost of a Data Breach Report consistently finds that breaches take months to identify and contain, a window during which attackers can exfiltrate data, move laterally through systems, and maximize damage. Small businesses often lack the in-house security expertise to detect threats early. Managed cybersecurity from Pro Link Systems gives LA businesses 24/7 security monitoring, EDR, email security, and backups verified by restore testing at a predictable monthly cost. For businesses with 5 to 500 employees, outsourcing cybersecurity to a local expert is almost always more cost-effective than building that capability in-house."
+          "text": "It depends on whether you can keep the controls running. Someone has to patch on schedule, watch alerts outside business hours, test restores and rehearse the response. Organizations that can staff that work may not need a provider; those that cannot usually share it with one. What matters is that every control has a named owner and a date when it was last tested."
         }
       }
     ]
@@ -171,66 +167,23 @@
 
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261121">
+  <link rel="stylesheet" href="_shared.css?v=20261122">
   <style>
-    .page-hero { background: linear-gradient(135deg, var(--navy-dark) 0%, #0d4d85 100%); padding: 84px 32px 72px; text-align: center; position: relative; overflow: hidden; }
-    .page-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
-    .page-hero .svc-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(34,197,94,.15); border: 1px solid rgba(34,197,94,.4); border-radius: 100px; padding: 6px 16px; font-size: .78rem; font-weight: 700; color: #4ade80; letter-spacing: .04em; margin-bottom: 20px; position: relative; }
-    .page-hero .svc-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,.3); animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 3px rgba(34,197,94,.3); } 50% { box-shadow: 0 0 0 6px rgba(34,197,94,.1); } }
-    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; letter-spacing: -.035em; line-height: 1.15; margin-bottom: 18px; position: relative; max-width: 780px; margin-left: auto; margin-right: auto; }
-    .page-hero h1 em { font-style: normal; color: var(--gold); }
-    .page-hero p { font-size: 1.1rem; color: rgba(255,255,255,.75); max-width: 600px; margin: 0 auto 32px; line-height: 1.7; position: relative; }
-    .hero-cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
-
-    .intro-section { padding: 72px 32px; }
-    .intro-wrap { max-width: 820px; margin: 0 auto; text-align: center; }
-    .intro-wrap h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 800; color: var(--text); letter-spacing: -.02em; margin-bottom: 18px; line-height: 1.25; }
-    .intro-wrap p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; text-align: left; }
-
-    .features-section { background: var(--off-white); padding: 72px 32px; }
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1150px; margin: 0 auto; }
-    .feature-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 30px 26px; transition: transform .2s, box-shadow .2s; }
-    .feature-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
-    .feature-icon { width: 50px; height: 50px; border-radius: var(--r-sm); background: rgba(11,61,107,.08); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--navy); }
-    .feature-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
-    .feature-card p { font-size: .85rem; color: var(--text-muted); line-height: 1.65; }
-
-    .stats-band { background: var(--navy-dark); padding: 56px 32px; }
-    .stats-band-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-    .sb-stat .sb-num { font-size: 2.4rem; font-weight: 800; color: var(--gold); letter-spacing: -.03em; line-height: 1; }
-    .sb-stat .sb-label { font-size: .8rem; color: rgba(255,255,255,.6); margin-top: 8px; line-height: 1.4; }
-
-    .faq-section { background: var(--off-white); padding: 72px 32px; }
-    .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; }
-    .faq-q { width: 100%; text-align: left; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: .95rem; font-weight: 700; color: var(--text); background: none; border: none; cursor: pointer; }
-    .faq-q svg { flex-shrink: 0; transition: transform .3s; color: var(--text-muted); }
-    .faq-item.open .faq-q svg { transform: rotate(180deg); }
-    .faq-a { display: none; padding: 0 24px 20px; font-size: .9rem; color: var(--text-muted); line-height: 1.75; }
-    .faq-item.open .faq-a { display: block; }
-
-    .rpt-body-section { padding: 64px 32px; }
-    .rpt-body-section + .rpt-body-section { padding-top: 0; }
-    .rpt-body-section.alt-bg { background: var(--off-white); padding: 64px 32px; }
-
-    @media (max-width: 1024px) { .features-grid { grid-template-columns: repeat(2, 1fr); } .stats-band-inner { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .page-hero { padding: 56px 20px 52px; } .intro-section, .features-section, .faq-section { padding: 56px 20px; } .features-grid { grid-template-columns: 1fr; } .hero-cta-group { flex-direction: column; align-items: center; } .rpt-body-section, .rpt-body-section.alt-bg { padding: 48px 20px; } }
-
-    /* Report-specific additions */
-    .answer-lede { font-size: 1.08rem; line-height: 1.75; color: var(--text); background: var(--off-white); border-left: 4px solid var(--gold); padding: 22px 26px; border-radius: var(--r-md); max-width: 880px; margin: 0 auto; }
-    .rpt-section { max-width: 860px; margin: 0 auto; }
-    .cmp-wrap { overflow-x: auto; margin: 28px auto; border: 1px solid var(--border); border-radius: var(--r-md); max-width: 900px; }
-    .cmp { width: 100%; border-collapse: collapse; min-width: 640px; font-size: .9rem; }
-    .cmp th, .cmp td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-    .cmp thead th { background: var(--navy-dark); color: #fff; font-weight: 700; font-size: .8rem; }
-    .cmp tbody tr:nth-child(even) { background: var(--off-white); }
-    .cmp tbody tr:last-child td { border-bottom: none; }
-    .cmp td:first-child { font-weight: 700; color: var(--text); }
-    .chk-list { max-width: 800px; margin: 18px auto; list-style: none; padding: 0; }
-    .chk-list li { position: relative; padding: 13px 14px 13px 46px; border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; line-height: 1.55; color: var(--text); background: var(--white); }
-    .chk-list li::before { content: '\2713'; position: absolute; left: 14px; top: 12px; width: 22px; height: 22px; background: rgba(31,122,68,.12); color: #1f7a44; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .8rem; }
-    .src-note { font-size: .8rem; color: var(--text-muted); font-style: italic; margin-top: 6px; }
+    .rp-figures { padding: 0 0 56px; }
+    .rp-cols { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr); gap: 72px; align-items: start; }
+    .rp-side { position: sticky; top: calc(var(--header-h) + 32px); }
+    .rp-note { margin-top: 18px; color: var(--text-muted); line-height: 1.65; }
+    .rp-cols .pl-prose h3 { font-family: var(--font-title); font-weight: 650; font-size: 1.22rem; letter-spacing: -.012em; color: var(--ink); margin: 1.5em 0 .45em; }
+    .rp-cols .pl-prose h3:first-child { margin-top: 0; }
+    .rp-facts dd { line-height: 1.7; } .rp-facts dd a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+    .rp-table td:first-child { white-space: normal; width: 26%; } .rp-table td:last-child { width: 22%; color: var(--text-muted); }
+    .rp-list { list-style: none; counter-reset: rp; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .rp-list li { counter-increment: rp; position: relative; padding: 17px 0 17px 46px; border-bottom: 1px solid var(--line); line-height: 1.65; }
+    .rp-list li::before { content: "0" counter(rp); position: absolute; left: 0; top: 19px; font: 500 .84rem/1.6 var(--font-sans); letter-spacing: .08em; color: var(--accent-ink); }
+    .rp-list strong { color: var(--ink); font-weight: 600; } .rp-list a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+    .rp-src { padding-left: 20px; } .rp-src li { margin: 8px 0; line-height: 1.6; } .rp-src a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 1024px) { .rp-cols { grid-template-columns: minmax(0, 1fr); gap: 28px; } .rp-side { position: static; } }
+    @media (max-width: 700px) { .rp-table td, .rp-table td:first-child, .rp-table td:last-child { width: 100%; } }
   </style>
   <script type="application/ld+json">
   {
@@ -447,13 +400,13 @@
         <p class="pl-eyebrow">About</p>
         <p class="pl-h3">An established technology partner since 1999.</p>
         <p>Headquartered in Woodland Hills, California, with a 24/7 in-house, US-based help desk.</p>
-        <a class="pl-arrow" href="/about">About Pro Link</a>
+        <a class="pl-arrow" href="/about">About Pro Link Systems</a>
       </div>
       <div class="pl-panel-cols">
         <div class="pl-panel-group">
           <h3>Company</h3>
           <a class="pl-panel-link" href="/about"><strong>Our Company</strong><span>History, leadership and how we work</span></a>
-          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link</strong><span>What clients get that they did not before</span></a>
+          <a class="pl-panel-link" href="/why-pro-link-systems"><strong>Why Pro Link Systems</strong><span>What clients get that they did not before</span></a>
           <a class="pl-panel-link" href="/case-studies"><strong>Client Success</strong><span>Engagements and long-term partnerships</span></a>
         </div>
         <div class="pl-panel-group">
@@ -504,7 +457,7 @@
   </details>
   <details><summary>About</summary>
     <a href="/about">Our Company</a>
-    <a href="/why-pro-link-systems">Why Pro Link</a>
+    <a href="/why-pro-link-systems">Why Pro Link Systems</a>
     <a href="/about#areas">Service Areas</a>
   </details>
   <a href="/contact">Contact</a>
@@ -514,240 +467,200 @@
     <a href="/support">Client Support</a>
   </div>
 </div>
-<span id="pl-main" tabindex="-1"></span>
+<main id="pl-main" tabindex="-1">
 <!-- /PL:HEADER -->
-
-<!-- HERO -->
-<section class="page-hero" aria-label="Los Angeles Business Cybersecurity Report 2026">
-  <div class="svc-badge">
-    <span class="dot"></span>
-    2026 Report
-  </div>
-  <h1>Los Angeles Business<br><em>Cybersecurity Report 2026</em></h1>
-  <p>Threats, industry risks, key regulations, and practical protection strategies for Los Angeles businesses — from the IT and cybersecurity team serving LA since 1999.</p>
-  <div class="hero-cta-group">
-    <a href="cybersecurity-services" class="btn btn-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Schedule a Security Consultation</a>
-    <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
+<section class="pl-pagehead" aria-labelledby="page-h1">
+  <div class="pl-wrap">
+    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Insights</a><span>/</span>2026 report</nav>
+    <h1 class="pl-h1" id="page-h1">Los Angeles Business Cybersecurity Report 2026</h1>
+    <p class="pl-lead">What the major 2026 research says about cyber threats, what it means for Los Angeles industries, and the controls worth funding first.</p>
+    <div class="pl-actions">
+      <a href="/contact" class="btn btn-light">Schedule a Security Consultation</a>
+      <a href="/incident-response-playbook" class="btn btn-outline-white">Incident Response Playbook</a>
+    </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar" role="complementary">
-  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Serving LA Businesses Since 1999</div>
-  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>24/7 Security Monitoring</div>
-  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Backups Verified by Restore Testing</div>
-  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>In-House, US-Based Help Desk</div>
-</div>
-
-<!-- EXECUTIVE SUMMARY -->
-<section class="rpt-body-section" aria-labelledby="exec-summary-heading">
-  <div class="rpt-section">
-    <span class="section-label">Executive Summary</span>
-    <h2 id="exec-summary-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:22px;line-height:1.25;">The state of cybersecurity for Los Angeles businesses in 2026</h2>
-    <p class="answer-lede">Los Angeles businesses face a rapidly evolving cybersecurity threat landscape in 2026. Ransomware, business email compromise, and phishing remain the leading threats, and healthcare, legal, and manufacturing firms are frequent targets. This report provides an overview of current threats, industry-specific risks, what the major industry research shows, the regulations that apply by industry, and practical protection strategies for businesses with 5&ndash;500 employees in the Greater Los Angeles area.</p>
+<section class="pl-dark rp-figures" aria-label="Key figures">
+  <div class="pl-wrap">
+    <div class="pl-figures">
+      <div class="pl-figure"><strong>31%</strong><span>Of breaches began with an exploited vulnerability, now the most common way in</span><small>Verizon 2026 DBIR</small></div>
+      <div class="pl-figure"><strong>48%</strong><span>Of breaches involved ransomware, up from 44% a year earlier</span><small>Verizon 2026 DBIR</small></div>
+      <div class="pl-figure"><strong>$3.05B</strong><span>In reported business email compromise losses in 2025</span><small>FBI IC3 2025 report</small></div>
+      <div class="pl-figure"><strong>$3.67B</strong><span>In reported losses from California in 2025, the most of any state</span><small>FBI IC3 2025 report</small></div>
+    </div>
   </div>
 </section>
 
-<!-- SECTION 1: CURRENT THREATS -->
-<section class="rpt-body-section alt-bg" aria-labelledby="threats-heading">
-  <div class="rpt-section">
-    <span class="section-label">Section 1</span>
-    <h2 id="threats-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:28px;line-height:1.25;">Current cyber threats targeting LA businesses</h2>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Ransomware</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Ransomware remains the most disruptive and financially damaging threat category for Los Angeles businesses. Attackers encrypt business-critical data — patient records, legal files, production assets, financial systems — and demand payment for the decryption key, often while simultaneously threatening to publish stolen data. Healthcare, legal, and manufacturing organizations are frequent targets because every hour of downtime is so costly for them. The severity of an attack is compounded by the time it typically takes organizations to detect it: IBM's annual Cost of a Data Breach Report consistently finds that breaches take months to identify and contain, a window during which attackers can move laterally, exfiltrate data, and entrench themselves deeply in a network.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Business Email Compromise (BEC)</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Business email compromise attacks target the human layer of an organization. Attackers impersonate executives, vendors, or attorneys and use carefully crafted emails to redirect wire transfers, request fraudulent payments, or manipulate payroll data. The FBI Internet Crime Complaint Center (IC3) consistently ranks BEC among the costliest categories of cybercrime by total reported losses nationwide. Los Angeles, with its high concentration of entertainment, real estate, legal, and financial services firms, is a particularly attractive target for BEC actors given the volume of high-value transactions flowing through those industries.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Phishing and credential theft</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Phishing is the dominant initial access method used in cyberattacks against small and mid-size businesses. According to the Verizon Data Breach Investigations Report (DBIR), phishing and stolen or compromised credentials are the most common initial attack vectors, and a majority of data breaches involve a human element — meaning an employee who clicked a malicious link, entered credentials on a spoofed site, or fell for a social engineering technique. For LA businesses, this makes security awareness training and email security controls as important as any technical safeguard.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Supply chain attacks</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Attackers increasingly target trusted vendors and software providers as a route into their clients' networks. A small LA business may have strong internal security controls and still be compromised through a managed service provider, payroll vendor, or cloud application that was breached. Vendor risk assessment — vetting the security posture of every third party with access to your systems or data — is now a foundational element of any credible cybersecurity program, and is specifically required under frameworks like HIPAA, SOC 2, and CMMC.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Insider threats</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;">Not all threats originate outside your organization. Insider threats — whether malicious (a disgruntled employee exfiltrating data before departure) or accidental (an employee misconfiguring a cloud storage bucket or emailing sensitive files to a personal account) — account for a meaningful share of data incidents. Effective insider threat programs combine access controls and the principle of least privilege with security awareness training and activity monitoring, implemented in a way that respects employee privacy under California law.</p>
+<section class="pl-section" aria-labelledby="exec-summary-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Executive summary</p>
+      <h2 class="pl-h2" id="exec-summary-heading">The state of cybersecurity for Los Angeles businesses in 2026</h2>
+    </div>
+    <div class="pl-prose">
+      <p>This report summarizes the year&rsquo;s major research for organizations with 5 to 500 employees in the Greater Los Angeles area: current threats, industry risks, the regulations that apply by industry, and practical protection strategies.</p>
+      <p>Three findings stand out. Unpatched vulnerabilities are now the most common way attackers get in, ahead of phishing and stolen passwords. Ransomware appears in nearly half of confirmed breaches, and small organizations are disproportionately affected. Business email compromise remains the second-costliest crime reported to the FBI, and California reports more complaints and larger losses than any other state.</p>
+    </div>
   </div>
 </section>
 
-<!-- SECTION 2: INDUSTRY-SPECIFIC RISK -->
-<section class="rpt-body-section" aria-labelledby="industry-heading">
-  <div class="rpt-section">
-    <span class="section-label">Section 2</span>
-    <h2 id="industry-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:28px;line-height:1.25;">Industry-specific cyber risk in Los Angeles</h2>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Healthcare</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Healthcare is one of the most heavily targeted sectors for ransomware and data theft. Greater Los Angeles has a large concentration of independent medical practices, dental offices, behavioral health providers, and specialty clinics — each one a potential target. Protected health information (PHI) is among the most valuable data on the dark web, commanding a high price per record. Beyond the financial exposure, a breach at a healthcare provider can directly harm patients through delayed care or corrupted medical records. HIPAA requires covered entities and business associates to implement administrative, physical, and technical safeguards for that data. Pro Link Systems provides dedicated <a href="healthcare-it-services" style="color:var(--navy);font-weight:600;">healthcare IT services</a> built around protecting patient data and keeping clinical workflows running.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Legal</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Law firms of all sizes hold extraordinarily sensitive client data — litigation strategy, M&amp;A documents, financial disclosures, privileged communications. A breach of attorney-client privilege can expose a firm to malpractice liability, regulatory sanctions, and irreparable reputational damage. The Los Angeles legal market, spanning entertainment law, intellectual property, real estate, and corporate transactional work, is a high-value target precisely because of the caliber of clients and the sensitivity of the matters being handled. BEC attacks specifically targeting law firm wire instructions are a persistent threat.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Entertainment and media</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">Hollywood is a prime target for intellectual property theft and ransomware. Unreleased films, scripts, music masters, and visual effects projects represent enormous financial value. Production companies and post-production facilities frequently work with tight deadlines and large, complex file systems — conditions that make ransomware attacks particularly devastating. Attackers know that a studio facing a release deadline has strong financial incentive to pay a ransom quickly rather than attempt recovery. Robust backup strategies and endpoint protection are non-negotiable for any LA entertainment firm.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Manufacturing and aerospace</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">The Los Angeles basin is home to a significant aerospace and defense manufacturing corridor, spanning the San Fernando Valley, El Segundo, and Long Beach. Companies in this sector handling controlled unclassified information (CUI) under federal contracts are now required to meet the Cybersecurity Maturity Model Certification (CMMC) standards — and those that don't can become ineligible for contracts that require it. Beyond contract requirements, trade secrets, proprietary manufacturing processes, and supply chain data are high-value targets for nation-state and criminal actors alike. Our <a href="aerospace-defense-it-services" style="color:var(--navy);font-weight:600;">aerospace and defense IT services</a> focus on the IT side: access controls, MFA, patching, monitoring, and backups verified by restore testing.</p>
-
-    <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:10px;margin-top:32px;">Professional services</h3>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;">Accounting firms, financial advisors, real estate brokerages, and consulting firms handle sensitive financial data and personally identifiable information subject to a growing patchwork of regulations. Enterprise clients increasingly require their vendors to hold SOC 2 reports or demonstrate equivalent controls before extending access to their systems. California's Consumer Privacy Act (CCPA) applies to many businesses that collect personal information about California residents — making privacy protection a baseline expectation rather than an optional consideration.</p>
+<section class="pl-section pl-mist" aria-labelledby="threats-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Section 1</p>
+      <h2 class="pl-h2" id="threats-heading">Current cyber threats targeting LA businesses</h2>
+    </div>
+    <div class="pl-prose">
+      <h3>Exploited vulnerabilities</h3>
+      <p>Exploitation of known vulnerabilities is now the most common initial access vector in <a href="https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf" target="_blank" rel="noopener">Verizon&rsquo;s 2026 Data Breach Investigations Report</a>: 31% of breaches, against 16% for phishing and 13% for credential abuse. Among small and mid-sized businesses, vulnerabilities also lead, at 26%. Only 26% of the vulnerabilities on CISA&rsquo;s Known Exploited Vulnerabilities list were fully remediated in 2025. Firewalls, VPN gateways and other systems that face the internet deserve the first deadline.</p>
+      <h3>Ransomware</h3>
+      <p>Ransomware was present in 48% of breaches in the same report, and 69% of the victims in its data did not pay. Attackers encrypt patient records, legal files, production assets and financial systems, and often threaten to publish what they copied first, so a clean restore does not always end the incident. Backups still decide how long the business is down.</p>
+      <h3>Business email compromise (BEC)</h3>
+      <p>Attackers impersonate executives, vendors or attorneys, often from a real mailbox they have compromised, to redirect wire transfers, request payments or change payroll details. The <a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener">FBI&rsquo;s Internet Crime Complaint Center</a> recorded more than $3 billion in business email compromise losses in 2025, second only to investment fraud. Firms that move large sums on emailed instructions, such as real estate, legal, entertainment and financial practices, have the most to review.</p>
+      <h3>Phishing and credential theft</h3>
+      <p>Phishing opened 16% of breaches and stolen or abused credentials another 13%, and a human element was present in 62%. Multi-factor authentication, email security and training remain essential. The change in 2026 is that they no longer cover the most common way in.</p>
+      <h3>Supply chain attacks</h3>
+      <p>Third parties were involved in 48% of breaches, and in 55% of those at small and mid-sized businesses. A Los Angeles company may have strong internal controls and still be exposed through a managed service provider, payroll vendor or cloud application. Reviewing the security of each third party that can reach your systems or data is now a basic part of a security program.</p>
+      <h3>Insider threats</h3>
+      <p>Not all incidents begin outside the organization. A departing employee may copy data, and a well-meaning one may misconfigure a storage folder or send a sensitive file to a personal account. Access controls, least privilege, training and activity monitoring reduce the risk, implemented in a way that respects employee privacy under California law.</p>
+    </div>
   </div>
 </section>
 
-<!-- SECTION 3: BENCHMARKS TABLE -->
-<section class="rpt-body-section alt-bg" aria-labelledby="benchmarks-heading">
-  <div class="rpt-section">
-    <span class="section-label">Section 3</span>
-    <h2 id="benchmarks-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:18px;line-height:1.25;">What the research shows for LA small businesses</h2>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:8px;">The table below summarizes findings that major annual industry reports return to year after year. They describe the broader small and mid-size business landscape and serve as a useful reference for Los Angeles firms evaluating their risk exposure and program maturity.</p>
+<section class="pl-section" aria-labelledby="industry-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Section 2</p>
+      <h2 class="pl-h2" id="industry-heading">Industry-specific cyber risk in Los Angeles</h2>
+    </div>
+    <dl class="pl-facts rp-facts">
+      <dt>Healthcare</dt><dd>Greater Los Angeles has a large concentration of independent medical practices, dental offices, behavioral health providers and specialty clinics. They hold records that cannot be reissued and they cannot simply stop operating, so an attack can delay care as well as expose data. HIPAA requires covered entities and business associates to implement administrative, physical and technical safeguards. See our <a href="/healthcare-it-services">healthcare IT services</a>.</dd>
+      <dt>Legal</dt><dd>Law firms hold litigation strategy, transaction documents, financial disclosures and privileged communications. A breach can expose a firm to malpractice claims and professional discipline, and fraud aimed at wire instructions is a persistent threat. In May 2026 the FBI described a group that targets US law firms by posing as their own IT support.</dd>
+      <dt>Entertainment and media</dt><dd>Unreleased films, scripts, music masters and visual effects projects represent significant value, and production and post-production companies work to fixed release dates. Tight deadlines and large shared file systems make downtime expensive and recovery plans important.</dd>
+      <dt>Manufacturing and aerospace</dt><dd>In Verizon&rsquo;s 2026 manufacturing data, exploited vulnerabilities opened 38% of breaches and third parties were involved in 61%. Suppliers that handle controlled unclassified information (CUI) must meet NIST SP 800-171 where their contracts require it. The Cybersecurity Maturity Model Certification (CMMC) program adds verification; the Pentagon suspended its second phase for review in July 2026, so confirm the current position with your prime. Our <a href="/aerospace-defense-it-services">aerospace and defense IT services</a> cover the IT side: access controls, MFA, patching, monitoring and backups verified by restore testing.</dd>
+      <dt>Professional services</dt><dd>Accounting firms, financial advisors, real estate brokerages and consulting firms handle financial data and personal information under a growing set of rules. Enterprise clients increasingly ask vendors for a SOC 2 report or equivalent evidence before granting access to their systems.</dd>
+    </dl>
   </div>
-  <div class="cmp-wrap">
-    <table class="cmp">
-      <thead>
-        <tr>
-          <th>Topic</th>
-          <th>Finding</th>
-          <th>Source</th>
-        </tr>
-      </thead>
+</section>
+
+<section class="pl-section pl-mist" aria-labelledby="benchmarks-heading">
+  <div class="pl-wrap">
+    <div class="pl-head">
+      <div>
+        <p class="pl-eyebrow">Section 3</p>
+        <h2 class="pl-h2" id="benchmarks-heading">What the research shows for LA small businesses</h2>
+      </div>
+      <p class="pl-lead">Figures as published in the 2026 editions. They describe each report&rsquo;s own data set, not a survey of Los Angeles businesses.</p>
+    </div>
+    <table class="pl-table rp-table">
+      <thead><tr><th scope="col">Topic</th><th scope="col">Finding</th><th scope="col">Source</th></tr></thead>
       <tbody>
-        <tr>
-          <td>Time to identify &amp; contain a breach</td>
-          <td>Months, on average</td>
-          <td>IBM, Cost of a Data Breach Report</td>
-        </tr>
-        <tr>
-          <td>Most common initial attack vectors</td>
-          <td>Phishing &amp; stolen credentials</td>
-          <td>Verizon DBIR</td>
-        </tr>
-        <tr>
-          <td>Breaches involving a human element</td>
-          <td>A majority</td>
-          <td>Verizon DBIR</td>
-        </tr>
-        <tr>
-          <td>Costliest cybercrime categories</td>
-          <td>Business email compromise ranks near the top by reported losses</td>
-          <td>FBI IC3 annual report</td>
-        </tr>
+        <tr><td>Most common way in</td><td>Exploited vulnerabilities, 31% of breaches; phishing, 16%; credential abuse, 13%</td><td>Verizon 2026 DBIR</td></tr>
+        <tr><td>Small and mid-sized businesses</td><td>Vulnerabilities 26%, credential abuse 13%, phishing 9%; third parties involved in 55%</td><td>Verizon 2026 DBIR</td></tr>
+        <tr><td>Ransomware</td><td>Present in 48% of breaches; 69% of victims did not pay</td><td>Verizon 2026 DBIR</td></tr>
+        <tr><td>Human element</td><td>Present in 62% of breaches</td><td>Verizon 2026 DBIR</td></tr>
+        <tr><td>Business email compromise</td><td>$3.05 billion in reported losses in 2025, second to investment fraud</td><td>FBI IC3 2025 report</td></tr>
+        <tr><td>California</td><td>116,414 complaints and $3.67 billion in reported losses in 2025, the most of any state</td><td>FBI IC3 2025 report</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="src-note" style="max-width:900px;margin:0 auto;">Findings are summarized from the named industry reports (IBM, Verizon DBIR, FBI IC3). Exact figures change with each annual edition, so check the latest report before quoting a number. This is not a proprietary Los Angeles survey.</p>
 </section>
 
-<!-- SECTION 4: COMPLIANCE -->
-<section class="rpt-body-section" aria-labelledby="compliance-heading">
-  <div class="rpt-section">
-    <span class="section-label">Section 4</span>
-    <h2 id="compliance-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:28px;line-height:1.25;">Compliance requirements by industry</h2>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:28px;">Cybersecurity compliance in Los Angeles is not a single framework — it is a matrix of overlapping requirements that vary by industry, client type, and the nature of the data your business handles. Below is a practical overview of the frameworks most relevant to Greater LA businesses. For the risk assessments, policies, and audits these frameworks require, we work alongside your compliance advisor and handle the IT side.</p>
+<section class="pl-section" aria-labelledby="compliance-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Section 4</p>
+      <h2 class="pl-h2" id="compliance-heading">Compliance requirements by industry</h2>
+      <p class="rp-note">For the risk assessments, policies and audits these frameworks require, we work alongside your compliance advisor and handle the IT side.</p>
+    </div>
+    <dl class="pl-facts rp-facts">
+      <dt>HIPAA</dt><dd>Applies to healthcare providers, health plans and their business associates. Requires administrative, physical and technical safeguards for protected health information. Civil penalties can reach into the millions of dollars.</dd>
+      <dt>PCI DSS</dt><dd>Applies to businesses that accept, process, store or transmit payment card data, including retailers, restaurants, medical offices and service providers. Requirements are enforced through the card brands and acquiring banks.</dd>
+      <dt>CMMC</dt><dd>Applies through contract clauses to suppliers that handle federal contract information or controlled unclassified information. Phase II of the program, which adds third-party assessments, was suspended for review in July 2026. NIST SP 800-171 obligations in existing contracts remain.</dd>
+      <dt>SOC 2</dt><dd>An attestation report that enterprise clients often request from SaaS companies, managed service providers and professional services firms. A Type II report describes whether controls operated effectively over a period.</dd>
+      <dt>CCPA</dt><dd>The California Consumer Privacy Act applies to businesses that collect personal information about California residents and meet its thresholds. It grants consumers rights over their data and requires reasonable security. California also sets deadlines for breach notices; counsel can confirm what applies.</dd>
+    </dl>
+  </div>
+</section>
 
-    <div class="features-grid" style="max-width:860px;margin:0 auto;">
-      <div class="feature-card">
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <h3>HIPAA</h3>
-        <p>Applies to healthcare providers, health plans, and their business associates. Requires administrative, physical, and technical safeguards for protected health information (PHI). Violation penalties can reach into the millions per incident category.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-        <h3>PCI DSS</h3>
-        <p>Applies to any business that accepts, processes, stores, or transmits payment card data. Retailers, restaurants, healthcare offices, and service providers all fall under PCI DSS scope. Non-compliance can result in fines and loss of card processing privileges.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg></div>
-        <h3>CMMC</h3>
-        <p>Required for Department of Defense contractors handling controlled unclassified information. The Cybersecurity Maturity Model Certification mandates third-party assessments at higher maturity levels. LA's aerospace corridor is significantly impacted by this framework.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>SOC 2</h3>
-        <p>A trust services report increasingly required by enterprise clients as a condition of doing business. SaaS companies, managed service providers, and professional services firms are most commonly asked to provide SOC 2 Type II reports. Achieving SOC 2 demonstrates that your security controls are operating effectively over time.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3>CCPA</h3>
-        <p>The California Consumer Privacy Act applies to businesses that collect personal information about California residents and meet certain thresholds. It grants consumers rights over their data and requires businesses to disclose data practices, honor opt-out requests, and implement reasonable security measures. Non-compliance exposes California businesses to regulatory fines and private right of action for data breaches.</p>
+<section class="pl-section pl-mist" aria-labelledby="checklist-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Section 5</p>
+      <h2 class="pl-h2" id="checklist-heading">Cybersecurity checklist for LA businesses</h2>
+      <p class="rp-note">Nine controls, in the order the 2026 findings suggest, consistent with guidance from CISA and the NIST Cybersecurity Framework.</p>
+    </div>
+    <ol class="rp-list">
+      <li><strong>Patch internet-facing systems first.</strong> Keep an inventory of firewalls, VPN gateways, remote access tools and servers, and give every entry on CISA&rsquo;s Known Exploited Vulnerabilities list a deadline and an owner.</li>
+      <li><strong>Multi-factor authentication on all accounts.</strong> Enforce it on email, cloud applications, remote access and administrative accounts, with phishing-resistant methods for administrators.</li>
+      <li><strong>Endpoint detection and response (EDR).</strong> Behavioral monitoring and automated response on desktops, laptops and servers, with someone responsible for alerts after hours.</li>
+      <li><strong>Email security and anti-phishing.</strong> Filtering, anti-spoofing controls (SPF, DKIM and DMARC) and link protection.</li>
+      <li><strong>Payment verification.</strong> Confirm new or changed payment instructions by calling a number on file, every time, regardless of who asks.</li>
+      <li><strong>Security awareness training.</strong> Ongoing practice in reporting and verifying, including voice and text messages.</li>
+      <li><strong>Encrypted, isolated and tested backup.</strong> Keep a copy the production network cannot alter, and prove recovery with restore tests.</li>
+      <li><strong>Incident response plan.</strong> A written, rehearsed plan for the first hours: who to call, how to isolate systems, what evidence to preserve, and when to engage counsel and your insurer. Ours is <a href="/incident-response-playbook">published in full</a>.</li>
+      <li><strong>Vendor review and cyber insurance.</strong> Review each third party with access to your systems or data, and check that coverage limits and exclusions match what an incident would cost.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="pl-section" aria-labelledby="about-report-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Section 6</p>
+      <h2 class="pl-h2" id="about-report-heading">About this report</h2>
+    </div>
+    <div class="pl-prose">
+      <p>Prepared by Pro Link Systems, a technology management and cybersecurity firm serving Los Angeles organizations since 1999. Published June 16, 2026. Updated November 21, 2026 with the 2026 Verizon and FBI figures.</p>
+      <p>No survey of Los Angeles businesses was conducted for this report. Industry observations without a citation are our own assessment.</p>
+      <h3>Sources</h3>
+      <ul class="rp-src">
+        <li><a href="https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf" target="_blank" rel="noopener">2026 Data Breach Investigations Report, executive summary</a>, Verizon.</li>
+        <li><a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener">2025 IC3 Annual Report</a>, FBI Internet Crime Complaint Center.</li>
+        <li><a href="https://www.ic3.gov/CSA/2026/260526.pdf" target="_blank" rel="noopener">Silent Ransom Group Impersonating IT Personnel</a>, FBI.</li>
+        <li><a href="https://cyberab.org/News-Events/Press-Releases/statement-on-the-department-of-wars-suspension-of-cmmc-phase-ii-requirements" target="_blank" rel="noopener">Statement on the suspension of CMMC Phase II requirements</a>, The Cyber AB.</li>
+        <li><a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener">Cost of a Data Breach Report 2026</a>, IBM.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ (same text as the FAQPage structured data) -->
+<section class="pl-section pl-mist" aria-labelledby="faq-heading">
+  <div class="pl-wrap rp-cols">
+    <div class="rp-side">
+      <p class="pl-eyebrow">Common questions</p>
+      <h2 class="pl-h2" id="faq-heading">Cybersecurity for LA businesses, answered</h2>
+    </div>
+    <div class="pl-faq">
+      <details><summary>What are the biggest cybersecurity threats to LA businesses in 2026?</summary><p>Exploited vulnerabilities, ransomware, business email compromise, phishing and compromised vendors. In Verizon's 2026 Data Breach Investigations Report, exploitation of vulnerabilities was the most common way in (31% of breaches), followed by phishing (16%) and credential abuse (13%), and ransomware was present in 48% of breaches. The FBI's Internet Crime Complaint Center recorded $3.05 billion in business email compromise losses in 2025, second only to investment fraud.</p></details>
+      <details><summary>How much does a data breach cost a small business?</summary><p>There is no single reliable figure. IBM's 2026 Cost of a Data Breach Report puts the global average at $4.99 million across 602 organizations worldwide, which is a direction rather than a budget number for a small business. The cost depends on the data involved and how quickly the breach is found and contained, and typically includes incident response, downtime, lost productivity, legal fees, regulatory penalties and customer notification.</p></details>
+      <details><summary>What cybersecurity compliance rules apply to Los Angeles businesses?</summary><p>It depends on your industry and the data you handle. Healthcare providers and their business associates must comply with HIPAA. Businesses that process card payments must meet PCI DSS requirements. Defense suppliers that handle controlled unclassified information must meet NIST SP 800-171 where their contracts require it; the CMMC program adds verification, and its second phase was suspended for review in July 2026. SaaS companies and professional firms serving enterprise clients are often asked for a SOC 2 report. Businesses that meet the California Consumer Privacy Act (CCPA) thresholds are subject to its rules on personal information. A qualified compliance advisor can confirm which frameworks apply to your business.</p></details>
+      <details><summary>How can a small business protect itself from ransomware?</summary><p>Protection is layered, not a single product. The most important steps are patching internet-facing systems promptly, because exploited vulnerabilities are now the most common way in; multi-factor authentication on all accounts, especially email and remote access; endpoint detection and response on all devices; encrypted, isolated backups proven by restore tests; training that gives employees a simple way to report and verify; and a rehearsed incident response plan that covers data theft as well as encryption.</p></details>
+      <details><summary>Does my small business really need managed cybersecurity?</summary><p>It depends on whether you can keep the controls running. Someone has to patch on schedule, watch alerts outside business hours, test restores and rehearse the response. Organizations that can staff that work may not need a provider; those that cannot usually share it with one. What matters is that every control has a named owner and a date when it was last tested.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="pl-cta" aria-labelledby="cta-h">
+  <div class="pl-wrap">
+    <div>
+      <p class="pl-eyebrow">Next step</p>
+      <h2 class="pl-h2" id="cta-h">Discuss your security strategy.</h2>
+    </div>
+    <div>
+      <p>Pro Link Systems has worked with Los Angeles organizations since 1999. A consultation identifies gaps in your current protections and gives you a clear, prioritized roadmap.</p>
+      <div class="pl-actions">
+        <a href="/contact" class="btn btn-light">Schedule a Security Consultation</a>
+        <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 5: CHECKLIST -->
-<section class="rpt-body-section alt-bg" aria-labelledby="checklist-heading">
-  <div class="rpt-section">
-    <span class="section-label">Section 5</span>
-    <h2 id="checklist-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:18px;line-height:1.25;">Cybersecurity checklist for LA businesses</h2>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:8px;">The following eight controls represent the baseline cybersecurity posture that every Los Angeles business with five or more employees should have in place. These align with guidance from CISA (the Cybersecurity and Infrastructure Security Agency) and NIST's Cybersecurity Framework, and are consistent with what cyber insurers increasingly require as a condition of coverage.</p>
-  </div>
-  <ul class="chk-list">
-    <li><strong>Multi-factor authentication on all accounts.</strong> MFA is the single most effective control for preventing unauthorized access via compromised passwords. It should be enforced on email, cloud applications, remote access, and any administrative accounts — no exceptions.</li>
-    <li><strong>Endpoint detection and response (EDR).</strong> Traditional antivirus is insufficient against modern threats. EDR solutions provide real-time behavioral monitoring, threat detection, and automated response capabilities across all desktops, laptops, and servers in your environment.</li>
-    <li><strong>Email security and anti-phishing.</strong> Since phishing and stolen credentials are the most common initial attack vectors (Verizon DBIR), advanced email filtering, anti-spoofing controls (SPF, DKIM, DMARC), and link sandboxing are essential layers of defense.</li>
-    <li><strong>Regular security awareness training.</strong> A majority of breaches involve a human element (Verizon DBIR). Ongoing training — including simulated phishing campaigns — builds employee resilience and reduces the likelihood that a social engineering attempt will succeed.</li>
-    <li><strong>Encrypted offsite backup.</strong> A tested, encrypted offsite backup is your last line of defense against ransomware. The key word is tested: backups that haven't been verified for restorability provide false confidence. Backups should be isolated from the primary network to prevent ransomware from encrypting them as well.</li>
-    <li><strong>Incident response plan.</strong> Every business should have a documented, practiced plan for what to do in the first hours of a cybersecurity incident — who to call, how to isolate affected systems, how to communicate with customers, and when to engage legal counsel and a breach coach.</li>
-    <li><strong>Vendor and third-party risk assessment.</strong> Every vendor, contractor, or cloud service provider with access to your systems or data is a potential attack vector. Regular assessment of vendor security posture is expected under HIPAA, SOC 2, and CMMC, and recommended by CISA and NIST.</li>
-    <li><strong>Cyber insurance policy.</strong> Check that your coverage limits and exclusions match what an incident would actually cost your business — response, downtime, legal fees, and notification. A current, appropriately scoped cyber policy — reviewed annually — should be part of every LA business's risk management strategy.</li>
-  </ul>
-</section>
-
-<!-- SECTION 6: ABOUT THIS REPORT -->
-<section class="rpt-body-section" aria-labelledby="about-report-heading">
-  <div class="rpt-section">
-    <span class="section-label">Section 6</span>
-    <h2 id="about-report-heading" style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:18px;line-height:1.25;">About this report</h2>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px;">This report was prepared by Pro Link Systems, a managed IT and cybersecurity company serving Los Angeles businesses since 1999. Data reflects cybersecurity trends as of 2026. Pro Link Systems provides managed <a href="cybersecurity-services" style="color:var(--navy);font-weight:600;">cybersecurity services</a> including EDR, email security, MFA, backups verified by restore testing, and 24/7 security monitoring for LA businesses, as well as comprehensive <a href="managed-it-services" style="color:var(--navy);font-weight:600;">managed IT services</a> covering the full technology stack.</p>
-    <p style="font-size:.97rem;color:var(--text-muted);line-height:1.8;">Research findings summarized in this report are drawn from IBM's Cost of a Data Breach Report, the Verizon Data Breach Investigations Report (DBIR), and the FBI Internet Crime Complaint Center (IC3) annual report, supplemented by qualitative guidance from CISA and the NIST Cybersecurity Framework. Findings are summarized rather than quoted as exact figures, because the numbers change with each annual edition; no LA-specific proprietary survey data has been generated for this report.</p>
-  </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="faq-section" aria-labelledby="faq-heading">
-  <div class="container">
-    <div class="centered" style="margin-bottom:48px;">
-      <span class="section-label">Common Questions</span>
-      <h2 class="section-heading" id="faq-heading">Cybersecurity for LA businesses — answered</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What are the biggest cybersecurity threats to LA businesses in 2026?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">The most significant threats facing Los Angeles businesses in 2026 are ransomware, business email compromise (BEC), and phishing. Ransomware remains the most disruptive and costly attack type, with healthcare, legal, and manufacturing firms among the most targeted sectors. Business email compromise — where attackers impersonate executives or vendors to redirect payments — ranks among the costliest categories of cybercrime by total reported losses, according to the FBI Internet Crime Complaint Center (IC3). Phishing and stolen or compromised credentials are the most common ways attackers gain initial access to a network, according to the Verizon Data Breach Investigations Report (DBIR). Supply chain attacks and insider threats round out the top concerns for mid-sized LA organizations.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How much does a data breach cost a small business?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">There is no single reliable figure. The cost depends on the size of the business, the data involved, and how quickly the breach is found and contained, and it typically includes incident response, downtime, lost productivity, legal fees, regulatory penalties, and customer notification. Speed matters: IBM's annual Cost of a Data Breach Report consistently finds that breaches take months to identify and contain, and the longer a breach goes undetected, the more it costs. For a small business, a single serious incident can threaten continuity, which is why prevention and tested recovery matter more than any average.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What cybersecurity compliance rules apply to Los Angeles businesses?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">The compliance framework that applies to your LA business depends on your industry and the data you handle. Healthcare providers and their business associates must comply with HIPAA, which governs the protection of patient health information. Retailers and any business that processes credit or debit card payments must meet PCI DSS requirements. Defense contractors — a significant segment in the LA aerospace corridor — must now meet CMMC (Cybersecurity Maturity Model Certification) standards to maintain federal contracts. SaaS companies and professional service firms serving enterprise clients are frequently required to hold a SOC 2 report. And California businesses that meet the California Consumer Privacy Act (CCPA) thresholds are subject to its rules on personal information about California residents. A qualified compliance advisor can confirm which frameworks apply to your business.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How can a small business protect itself from ransomware?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">Effective ransomware protection is layered, not a single product. The most important steps are: deploying endpoint detection and response (EDR) software on all devices; maintaining encrypted, offsite backups that are tested regularly (so you can recover without paying a ransom); implementing multi-factor authentication on all accounts, especially email and remote access; running security awareness training so employees can identify phishing attempts — since phishing and stolen credentials are the most common initial attack vectors according to the Verizon DBIR, and a majority of breaches involve a human element; and having a documented incident response plan so your team knows exactly what to do if an attack occurs. Patch management and vendor risk assessments further reduce your exposure. Pro Link Systems provides EDR, tested backups, MFA, security awareness training, and patch management as part of our managed cybersecurity services.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Does my small business really need managed cybersecurity?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">Yes — and the economics make a compelling case. A single serious incident can threaten business continuity, and IBM's Cost of a Data Breach Report consistently finds that breaches take months to identify and contain, a window during which attackers can exfiltrate data, move laterally through systems, and maximize damage. Small businesses often lack the in-house security expertise to detect threats early. Managed cybersecurity from Pro Link Systems gives LA businesses 24/7 security monitoring, EDR, email security, and backups verified by restore testing at a predictable monthly cost. For businesses with 5 to 500 employees, outsourcing cybersecurity to a local expert is almost always more cost-effective than building that capability in-house.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<div class="cta-band" role="complementary">
-  <span class="section-label" style="display:block;margin-bottom:12px;">Protect Your LA Business</span>
-  <h2>Discuss your security strategy</h2>
-  <p>Pro Link Systems has been protecting Los Angeles businesses since 1999. Our cybersecurity assessments identify gaps in your current protections and give you a clear, prioritized roadmap. Speak with a local expert today.</p>
-  <div class="cta-buttons">
-    <a href="cybersecurity-services" class="btn btn-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Schedule a Security Consultation</a>
-    <a href="tel:18008906133" class="btn btn-outline-white">Call 1-800-890-6133</a>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <!-- PL:FOOTER -->
+</main>
 <footer class="pl-footer" role="contentinfo">
   <div class="pl-footer-top">
     <div class="pl-footer-brand">
@@ -779,8 +692,8 @@
     </div>
     <div class="pl-footer-col">
       <h2>Company</h2>
-      <a href="/about">About Pro Link</a>
-      <a href="/why-pro-link-systems">Why Pro Link</a>
+      <a href="/about">About Pro Link Systems</a>
+      <a href="/why-pro-link-systems">Why Pro Link Systems</a>
       <a href="/case-studies">Client Success</a>
       <a href="/blog/">Insights</a>
       <a href="/m365-security-assessment">M365 Security Assessment</a>
@@ -792,7 +705,7 @@
       <a href="tel:18008906133">1-800-890-6133</a>
       <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
       <p class="pl-footer-note">21241 Ventura Blvd #193<br>Woodland Hills, CA 91364</p>
-      <p class="pl-footer-note">Help desk: 24/7<br>Office: Mon&ndash;Fri, 9 AM&ndash;6 PM PT</p>
+      <p class="pl-footer-note">Business hours: Mon&ndash;Fri, 9 AM&ndash;5 PM PT<br>24/7 help desk for managed-service clients</p>
     </div>
   </div>
   <div class="pl-footer-areas">
@@ -846,16 +759,6 @@
 </footer>
 <!-- /PL:FOOTER -->
 
-<script>
-  document.querySelectorAll('.faq-q').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var item = this.closest('.faq-item');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-</script>
-<script src="/assets/js/pl.js?v=20261121" defer></script>
+<script src="/assets/js/pl.js?v=20261122" defer></script>
 </body>
 </html>

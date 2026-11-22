@@ -28,13 +28,13 @@ const RIBBON = '<div aria-hidden="true" style="position:fixed;left:12px;bottom:1
   'pointer-events:none">STAGING</div>';
 
 // Design review (staging only, removed with this file): a small panel linking to the same page in earlier
-// staging iterations and to Brian's private review notes. Iteration 3 has no design switches (Brian chose).
+// staging iterations and to Brian's private review notes. No design switches since iteration 3 (Brian chose).
 const REVIEW_PANEL = `
 <div id="plr" class="plr">
   <button type="button" class="plr-toggle" aria-expanded="false" aria-controls="plr-body">Design review</button>
   <div class="plr-body" id="plr-body" hidden>
     <p class="plr-h">Compare this page</p>
-    <p class="plr-links"><a data-v="2" href="https://redesign-2026-v2.plsmain.pages.dev/">Iteration 2</a> &middot; <a data-v="1" href="https://redesign-2026-v1.plsmain.pages.dev/">Iteration 1</a></p>
+    <p class="plr-links"><a data-v="3" href="https://redesign-2026-v3.plsmain.pages.dev/">Iteration 3</a> &middot; <a data-v="2" href="https://redesign-2026-v2.plsmain.pages.dev/">Iteration 2</a> &middot; <a data-v="1" href="https://redesign-2026-v1.plsmain.pages.dev/">Iteration 1</a></p>
     <p class="plr-links"><a href="https://claude.ai/artifact/2ZvGhFzcjrKx5M8gR2wMLN" target="_blank" rel="noopener">Review notes</a></p>
   </div>
 </div>
