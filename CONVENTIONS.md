@@ -702,7 +702,7 @@ that I would like to host on our site similarly". Every app follows this one pat
     `div.pl-framework`, `div.pl-callout`, `figure.pl-flow` and a `References` list (`h2.pl-refs-h` + `ul.pl-refs`).
   - **Client quotes:** `figure.pl-quote.pl-quote--inline.pl-quote--side` beside other content (inside `.pl-split`), or two
     in `div.pl-quotes-2`. Words are never edited; the caption names the client only; no stars, no review markup.
-  - **Privacy policy:** it names every analytics, advertising, page-recording and payment service the site loads. Adding or
+  - **Privacy policy:** it must name every analytics, advertising, page-recording and payment service the site loads. Adding or
     removing one means updating `privacy.html` (sections 2 to 6, effective date, change note) in the same change.
   - **Editorial bar:** no sales copy in article bodies (the template adds the CTA), no statistic without a primary source
     that was opened, references to primary sources only, "Pro Link Systems" at most once per article, no
