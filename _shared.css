@@ -1517,4 +1517,6 @@ html body #pl-main h2:not([class]) { font-family: var(--font-display) !important
 html body .intro-section h2, html body .intro-wrap h2, html body .rpt-section h2 { font-family: var(--font-display) !important; font-weight: 650 !important; letter-spacing: -.028em !important; color: var(--ink) !important; }
 html body .section.section-off { padding-top: 72px !important; padding-bottom: 72px !important; }
 html body .page-hero .err-links { justify-content: flex-start !important; }
-html body .page-hero .err-code { font-family: var(--font-display) !important; font-weight: 650 !important; color: rgba(255,255,255,.28) !important; }
+html body .page-hero .err-code { font-family: var(--font-display) !important; font-weight: 650 !important; color: rgba(255,255,255,.46) !important; }
+html body .pl-art-body a.btn, html body .pl-art-body .assess-callout a.btn { color: #fff !important; text-decoration: none !important; }
+html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline { color: var(--ink) !important; }
