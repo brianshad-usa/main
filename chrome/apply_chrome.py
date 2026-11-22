@@ -27,7 +27,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PL_JS_VERSION = "20261122"
+PL_JS_VERSION = "20261122b"
 FOOTER_ONLY = {"managed-it-services.html"}             # Ads landing page: own short header (no site menu), shared footer
 SKIP_DIRS = {".git", ".github", "chrome", "editorial", "functions", "node_modules", "tools", "apps", "videos"}
 

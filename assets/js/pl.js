@@ -39,6 +39,29 @@
       timer = setTimeout(function () { openMenu(btn); }, openTrigger ? 0 : 110);
     });
   });
+  /* keyboard: an open panel follows its trigger in the focus order (Tab or Down Arrow enters it, Tab leaves it) */
+  function panelLinks(p) { return [].slice.call(p.querySelectorAll('a[href], button')); }
+  triggers.forEach(function (btn) {
+    var p = panelOf(btn);
+    if (!p) return;
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || (e.key === 'Tab' && !e.shiftKey && openTrigger === btn)) {
+        if (openTrigger !== btn) openMenu(btn);
+        var first = panelLinks(p)[0];
+        if (first) { e.preventDefault(); first.focus(); }
+      }
+    });
+    p.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var l = panelLinks(p), at = l.indexOf(d.activeElement);
+      if (e.shiftKey && at === 0) { e.preventDefault(); btn.focus(); }
+      if (!e.shiftKey && at === l.length - 1) {
+        var items = [].slice.call(header.querySelectorAll('.pl-nav-trigger, .pl-nav-link, .pl-header-cta'));
+        var next = items[items.indexOf(btn) + 1];
+        if (next) { e.preventDefault(); closeMenu(false); next.focus(); }
+      }
+    });
+  });
   if (header) {
     [].slice.call(header.querySelectorAll('.pl-nav-link, .pl-logo, .pl-header-cta')).forEach(function (el) {
       el.addEventListener('mouseenter', function () { if (hoverCapable.matches) { clearTimeout(timer); timer = setTimeout(function () { closeMenu(false); }, 150); } });
