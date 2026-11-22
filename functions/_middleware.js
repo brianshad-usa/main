@@ -50,7 +50,7 @@ const REVIEW_PANEL = `
 (function () {
   var d = document, box = d.getElementById('plr');
   if (!box) return;
-  [].slice.call(box.querySelectorAll('[data-v]')).forEach(function (a) { a.href = a.href.replace(/\/$/, '') + location.pathname; });
+  [].slice.call(box.querySelectorAll('[data-v]')).forEach(function (a) { a.href = a.href.split('?')[0].replace(new RegExp('/$'), '') + location.pathname; });
   var toggle = box.querySelector('.plr-toggle'), body = d.getElementById('plr-body');
   toggle.addEventListener('click', function () { var on = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', on ? 'true' : 'false'); body.hidden = !on; });
 })();
