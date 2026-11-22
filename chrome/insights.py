@@ -531,9 +531,9 @@ def new_post_page(reg, slug, seo_title, meta):
 # ---------------------------------------------------------------------------------------------------------------
 # Insights index
 
-INDEX_TITLE = "IT Blog for Los Angeles Businesses | Pro Link Systems"
-INDEX_META = ("Expert IT advice, cybersecurity tips, and managed IT insights for Los Angeles businesses from Pro Link "
-              "Systems &mdash; proudly serving LA companies since 1999.")
+INDEX_TITLE = "IT Insights for Los Angeles Businesses | Pro Link Systems"
+INDEX_META = ("Perspectives on technology leadership, cybersecurity, AI and IT strategy for Los Angeles businesses: analysis, "
+              "checklists and guides from Pro Link Systems.")
 
 
 def lead_panel(reg, slug):
