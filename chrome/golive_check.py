@@ -13,8 +13,10 @@ Checks:
   5. the page generators emit the new header/footer markers (generate_blog.py, gen_location_pages.py,
      update_site_links.py), so new posts and city pages are born in the new design;
   6-8. homepage, typography and the CR&R page are settled (see the code);
-  9. company name, Insights registry, internal links, form labels and wording checks pass.
+  9. company name, Insights registry, internal links, form labels and wording checks pass;
+  10. the client portfolio matches its data and carries the owner's final approval of names and logos.
 """
+import json
 import os
 import re
 import subprocess
@@ -72,7 +74,10 @@ for p in pages():
     if rel != "case-studies/crr.html" and re.search(r"CR(?:&amp;|&#38;|&)R(?![a-z])", open(p, encoding="utf-8").read()):
         problems.append("8 %s names CR&R: same approval" % rel)
 
-for script, what in (("company_name.py", "the company is always Pro Link Systems"), ("insights.py", "Insights registry and assets"),
+clients = json.load(open(os.path.join(ROOT, "editorial", "clients.json"), encoding="utf-8"))
+if not clients.get("approved"):
+    problems.append("10 client portfolio: Brian's final approval of client names and logos is not recorded (editorial/clients.json: approved)")
+for script, what in (("company_name.py", "the company is always Pro Link Systems"), ("clients.py", "client portfolio order, profiles and case study links"), ("insights.py", "Insights registry and assets"),
                      ("link_check.py", "internal links and fragments"), ("form_labels.py", "form labels"), ("refine_wording.py", "corporate wording")):
     args = [sys.executable, os.path.join(ROOT, "chrome", script)] + ([] if script in ("link_check.py",) else ["--check"])
     r = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", errors="replace")

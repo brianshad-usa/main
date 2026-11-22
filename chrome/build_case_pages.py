@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-chrome/build_case_pages.py -- build the Client Success hub (case-studies.html) and one page per major case study
-(case-studies/<slug>.html) from the CASES data below. Facts come only from the case-study source files and
-editorial/verified_facts.json; anything awaiting Brian's decision carries a neutral "Review R#" marker.
+chrome/build_case_pages.py -- build the Client Success hub (case-studies.html: the client portfolio) and one page per
+case study (case-studies/<slug>.html) from the CASES data below. Facts come only from the case-study source files and
+editorial/verified_facts.json; anything awaiting Brian's decision carries a neutral "Review R#" marker. Company names,
+industry classifications, company profiles and the portfolio order come from editorial/clients.json (chrome/clients.py).
 
     python chrome/build_case_pages.py      # then: python chrome/apply_chrome.py
 
@@ -12,12 +13,14 @@ editorial/verified_facts.json; anything awaiting Brian's decision carries a neut
 - Cases with "noindex": True (pending a separate approval) get robots noindex and stay out of the sitemap.
 - Indexable detail pages are added to sitemap.xml once (idempotent).
 - The hub keeps its URL, title, description, canonical and JSON-LD; only its <main> is regenerated.
+- The featured clients on index.html are refreshed too (clients.write_home()).
 """
 import html
 import io
 import json
 import os
 import re
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://prolinksystems.com"
@@ -26,11 +29,15 @@ A = lambda s: html.escape(s, quote=True)
 # the site-wide ?v= of _shared.css, read from the home page so this builder never carries its own copy
 CSS_V = re.search(r'_shared\.css\?v=([^"]+)"', io.open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()).group(1)
 FLAG = lambda r: '<span class="pl-flag">Review %s</span>' % r
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import clients as CL  # noqa: E402
+
+DATA = CL.load()
 
 CASES = [
     {
-        "slug": "global-holdings", "client": "Global Holdings", "sector": "Healthcare imaging", "current": False,
-        "status": "Past engagement, 12+ years to 2021", "flags": ["R4"],
+        "slug": "global-holdings",
+        "status": "Historical client, 12+ years to 2021", "flags": ["R4"],
         "title": "Global Holdings: Imaging Network | Pro Link Systems",
         "meta": "How Pro Link Systems designed and ran the network, AWS imaging platform and patient portal behind 19 diagnostic imaging facilities for 12+ years.",
         "h1": "A secure imaging backbone for 19 facilities and hundreds of partner sites.",
@@ -39,8 +46,7 @@ CASES = [
         "summary": "For more than 12 years, to 2021, Pro Link Systems designed and operated the technology behind Global Holdings, a Southern California diagnostic imaging provider focused on MRI and CT. We built the network across its 19 owned facilities, consolidated imaging studies from every modality into an AWS environment we architected and managed, and ran a secure portal for referring doctors and patients.",
         "metrics": [("19", "owned facilities on one network"), ("Hundreds", "of partner facilities sending studies to the same platform"),
                     ("Thousands", "of imaging studies handled each month"), ("12+ yrs", "engagement, to 2021")],
-        "snapshot": [("Industry", "Healthcare: diagnostic medical imaging, focused on MRI and CT"),
-                     ("Location", "Southern California; 19 owned facilities and a referral network of hundreds of partner facilities"),
+        "snapshot": [("Location", "Southern California; 19 owned facilities and a referral network of hundreds of partner facilities"),
                      ("Size", "200+ employees"), ("Relationship", None),
                      ("Scope", "Network design, AWS cloud architecture, imaging (DICOM) workflows, secure patient portal, security")],
         "relationship": "More than 12 years, ending in 2021",
@@ -59,7 +65,7 @@ CASES = [
         "value": "A single, secure imaging platform that scaled with the referral network and gave clinicians and patients appropriate access to studies, maintained by the same partner for more than a decade.",
     },
     {
-        "slug": "cunico", "client": "Cunico Corp.", "sector": "Precision manufacturing", "current": True,
+        "slug": "cunico",
         "status": "Current client since 2012", "flags": ["R1"],
         "title": "Cunico Case Study: 13-Year IT Partnership | Pro Link Systems",
         "meta": "How Pro Link Systems has run and secured Cunico's multi-site technology since 2012, through growth and its 2022 acquisition by BWX Technologies.",
@@ -69,10 +75,9 @@ CASES = [
         "summary": "Since 2012, Pro Link Systems has been the outsourced IT and technology-governance partner for Cunico, a precision manufacturer with a legacy of more than 70 years. We maintain its on-premises and cloud environments across multiple sites, hardened its security with continuous monitoring, and supported its integration into BWX Technologies after the 2022 acquisition.",
         "metrics": [("13+ yrs", "continuously renewed partnership, since 2012"), ("Multi-site", "on-premises and cloud environments"),
                     ("2022", "integration into BWX Technologies")],
-        "snapshot": [("Industry", "Precision manufacturing: valves, manifolds and fittings for marine and shipbuilding applications"),
-                     ("Location", "Long Beach, California; multiple sites"), ("Size", "35 employees"), ("Relationship", None),
+        "snapshot": [("Location", "Long Beach, California; multiple sites"), ("Size", "35 employees"), ("Relationship", None),
                      ("Scope", "Managed IT, cybersecurity, cloud, backup and disaster recovery, technology governance")],
-        "relationship": "Client since May 2012",
+        "relationship": "Since May 2012",
         "challenge": "As Cunico grew, it needed rock-solid technology governance and infrastructure that matched the standards of the platforms it supplies. After its acquisition by BWX Technologies in April 2022, its systems also had to align with enterprise-grade practices while staying reliable day to day.",
         "approach": ["Architected, implemented and maintained local and cloud-native environments across Cunico’s multiple sites",
                      "Hardened its cybersecurity posture, with continuous monitoring and defense of critical systems",
@@ -83,7 +88,7 @@ CASES = [
         "value": "Cunico operates today within BWXT’s Government Operations segment, on infrastructure secured and maintained by the same partner for more than a decade.",
     },
     {
-        "slug": "lisi-aerospace", "client": "LISI Aerospace", "sector": "Aerospace manufacturing", "current": False,
+        "slug": "lisi-aerospace",
         "status": "Past engagement, 2019–2021", "flags": ["R2"],
         "title": "LISI Aerospace Case Study: IT Stabilized | Pro Link Systems",
         "meta": "How Pro Link Systems took ownership of LISI Aerospace's IT administration and stabilized operations within 90 days, through the move to remote work.",
@@ -92,8 +97,7 @@ CASES = [
         "plate": ("90 days", "to stabilized IT operations"),
         "summary": "From October 2019 to August 2021, Pro Link Systems took ownership of IT administration for LISI Aerospace, a 700-person aerospace fastener manufacturer with its main plant in Torrance and facilities across North America. Operations stabilized within 90 days, and the environment stayed resilient through the move to remote work.",
         "metrics": [("90 days", "to stabilized operations"), ("700", "employees"), ("3 sites", "in Southern California managed by Pro Link Systems")],
-        "snapshot": [("Industry", "Aerospace manufacturing: fasteners and precision components"),
-                     ("Location", "Main plant in Torrance, California, with facilities in Canada, Mexico and elsewhere in North America"),
+        "snapshot": [("Location", "Main plant in Torrance, California, with facilities in Canada, Mexico and elsewhere in North America"),
                      ("Size", "700 employees"), ("Relationship", None),
                      ("Scope", "IT administration, network modernization, security agents, remote work")],
         "relationship": "October 2019 – August 2021",
@@ -108,7 +112,7 @@ CASES = [
         "value": "A comprehensive IT management system that carried a multinational manufacturer through the operational shock of 2020 without losing continuity.",
     },
     {
-        "slug": "snitzer-law", "client": "Law Offices of Alan B. Snitzer", "sector": "Legal", "current": True,
+        "slug": "snitzer-law",
         "status": "Current client for 18 years", "flags": [],
         "title": "Law Firm Case Study: 18 Years, Azure | Pro Link Systems",
         "meta": "How Pro Link Systems moved the Law Offices of Alan B. Snitzer from an on-premises data center to Microsoft Azure over an 18-year partnership.",
@@ -118,9 +122,9 @@ CASES = [
         "summary": "For 18 years, Pro Link Systems has been the only IT company for the Law Offices of Alan B. Snitzer in Pasadena. We have carried the firm from a data center in its own office to the cloud, where over 90% of its environment now runs on Microsoft Azure, and handled the infrastructure for its office moves along the way.",
         "metrics": [("18 yrs", "partnership that continues today"), ("90%+", "of the environment on Microsoft Azure"),
                     ("Multiple", "office relocations, infrastructure moved by Pro Link Systems")],
-        "snapshot": [("Industry", "Legal"), ("Location", "Pasadena, California"), ("Relationship", None),
+        "snapshot": [("Location", "Pasadena, California"), ("Relationship", None),
                      ("Scope", "Managed IT, cloud migration to Microsoft Azure, security, office relocations")],
-        "relationship": "Client for 18 years",
+        "relationship": "For 18 years",
         "challenge": "The firm’s environment started entirely on premises, in a data center at its own office. As the practice grew, so did the demands on that infrastructure: more staff, more data, higher security expectations and a series of office relocations, each of which meant moving critical systems without disrupting the firm’s work or its confidentiality obligations.",
         "approach": ["Many migrations and upgrades across the entire environment as the practice scaled",
                      "A move from the on-premises data center to the cloud: today, over 90% of the firm’s environment runs on Microsoft Azure",
@@ -136,7 +140,7 @@ CASES = [
                   "A Pro Link Systems technician reviewing a document with a staff member in a law office"),
     },
     {
-        "slug": "waverly-school", "client": "The Waverly School", "sector": "Independent K–12 education", "current": True,
+        "slug": "waverly-school",
         "status": "Current client for about 23 years", "flags": [],
         "title": "The Waverly School Case Study: 23 Years | Pro Link Systems",
         "meta": "How Pro Link Systems has served as The Waverly School's outsourced IT department for about 23 years, including Google Workspace for staff and students.",
@@ -145,9 +149,9 @@ CASES = [
         "plate": ("23 yrs", "as the school’s outsourced IT department"),
         "summary": "For about 23 years, Pro Link Systems has served as the outsourced IT department of The Waverly School, an independent K–12 school in Pasadena, including management and support of the Google Workspace environment that covers both staff and student accounts.",
         "metrics": [("23 yrs", "as the outsourced IT department"), ("Staff + students", "Google Workspace accounts managed")],
-        "snapshot": [("Industry", "Independent K–12 education"), ("Location", "Pasadena, California"), ("Size", "60 staff"),
+        "snapshot": [("Location", "Pasadena, California"), ("Size", "60 staff"),
                      ("Relationship", None), ("Scope", "Outsourced IT department, Google Workspace management")],
-        "relationship": "Client for about 23 years",
+        "relationship": "For about 23 years",
         "challenge": "A school’s technology has to serve two very different populations at once: staff who depend on reliable administrative systems, and students who hold their own accounts. The environment has to be secure, easy to administer and dependable across the school year, without a large in-house IT team to run it.",
         "approach": ["Pro Link Systems acts as The Waverly School’s outsourced IT department",
                      "Management and support of the school’s Google Workspace environment, covering both staff and student accounts"],
@@ -157,7 +161,7 @@ CASES = [
                   "Four people talking on a school lawn"),
     },
     {
-        "slug": "cookes-crating", "client": "Cooke’s Crating", "sector": "Fine-art logistics", "current": True,
+        "slug": "cookes-crating",
         "status": "Current client for 3+ years", "flags": ["R6"],
         "title": "Cooke's Crating: 5-Day Migration | Pro Link Systems",
         "meta": "How Pro Link Systems moved Cooke's Crating off a former provider's locked infrastructure in five days, with zero downtime, and modernized it.",
@@ -166,9 +170,9 @@ CASES = [
         "plate": ("5 days", "full migration, with zero downtime"),
         "summary": "Cooke’s Crating, a Los Angeles fine-art crating and logistics company, came to Pro Link Systems after its previous IT provider locked it out of its entire infrastructure, down to phone management. We migrated the whole environment onto new infrastructure in five days with zero downtime, modernized it, and have supported the company for more than three years since.",
         "metrics": [("5 days", "full environment migration"), ("Zero", "downtime during the cutover"), ("3+ yrs", "client since")],
-        "snapshot": [("Industry", "Fine-art crating, shipping and logistics"), ("Location", "Los Angeles, California"),
+        "snapshot": [("Location", "Los Angeles, California"),
                      ("Size", "33 employees"), ("Relationship", None), ("Scope", "Emergency migration, infrastructure modernization, security")],
-        "relationship": "Client for more than 3 years",
+        "relationship": "For more than 3 years",
         "challenge": "Cooke’s Crating came to Pro Link Systems in a worst-case situation. A dispute with its previous IT provider had escalated until that provider locked the company out of its entire infrastructure, down to its phone management. It needed to regain control fast, without operations grinding to a halt.",
         "approach": ["An emergency migration of the entire environment onto new infrastructure designed by Pro Link Systems",
                      "A full modernization of aging infrastructure, including an upgraded FileMaker environment",
@@ -179,17 +183,16 @@ CASES = [
         "value": "Full ownership and control of its own infrastructure, on a modernized environment secured with current security frameworks.",
     },
     {
-        "slug": "crr", "client": "CR&R Incorporated", "sector": "Environmental services", "current": False,
-        "status": "Past engagement, 2023–2025", "flags": ["R3 · separate approval"], "noindex": True,
+        "slug": "crr",
+        "status": "Historical client, 2023–2025", "flags": ["R3 · separate approval"], "noindex": True,
         "title": "CR&R Case Study: De Facto CIO | Pro Link Systems",
-        "meta": "How Pro Link Systems served as de facto CIO for CR&R Incorporated, unifying cybersecurity, cloud and network standards across its divisions.",
+        "meta": "How Pro Link Systems served as de facto CIO for CR&R, unifying cybersecurity, cloud and network standards across its divisions.",
         "h1": "Acting as de facto CIO to unify a multi-division enterprise.",
         "card": "De facto CIO for a multi-division environmental services company.",
         "plate": ("450", "employees across divisions"),
-        "summary": "From December 2023 to April 2025, Pro Link Systems served as de facto CIO for CR&R Incorporated, a Southern California waste collection, recycling and environmental services company with divisions including Haulaway and Recycle America, bringing consistent cybersecurity, cloud and network standards to an IT environment that had grown fragmented.",
+        "summary": "From December 2023 to April 2025, Pro Link Systems served as de facto CIO for CR&R Environmental Services, a Southern California waste collection, recycling and environmental services company with divisions including Haulaway and Recycle America, bringing consistent cybersecurity, cloud and network standards to an IT environment that had grown fragmented.",
         "metrics": [("450", "employees across divisions"), ("SOC + SIEM", "SentinelOne monitoring deployed")],
-        "snapshot": [("Industry", "Waste collection, recycling and environmental services"),
-                     ("Location", "Southern California; multi-division, multi-site"), ("Size", "450 employees"), ("Relationship", None),
+        "snapshot": [("Location", "Southern California; multi-division, multi-site"), ("Size", "450 employees"), ("Relationship", None),
                      ("Scope", "De facto CIO, cybersecurity, Microsoft 365 and Azure, network architecture, disaster recovery")],
         "relationship": "December 2023 – April 2025",
         "challenge": "CR&R operates across multiple divisions and subsidiaries, including Haulaway and Recycle America, and needed to modernize and unify an IT environment that had grown fragmented. It needed one partner to act as its de facto CIO and bring consistent cybersecurity, cloud and network standards to the whole organization.",
@@ -200,15 +203,169 @@ CASES = [
                      "Greater efficiency, visibility and resilience across the company"],
         "value": "Consistent standards across divisions that had grown apart, delivered through a single accountable technology leader.",
     },
+    {
+        "slug": "fralock",
+        "status": "Past engagement, 2022–2023", "flags": ["R7"],
+        "title": "Fralock Case Study: Multi-State IT | Pro Link Systems",
+        "meta": "How Pro Link Systems unified network, security and IT operations for Fralock Holdings across sites, states and newly acquired subsidiaries.",
+        "h1": "One framework for a manufacturer spread across sites, states and acquisitions.",
+        "card": "Network, security and IT operations unified across several states and newly acquired subsidiaries.",
+        "plate": ("Multi-state", "operations on one network and security framework"),
+        "summary": "From January 2022 to July 2023, Pro Link Systems unified and secured the IT infrastructure of Fralock Holdings, an advanced-materials and precision manufacturer of about 350 people whose environment had become fragmented across multiple sites and newly acquired subsidiaries.",
+        "metrics": [("350", "employees"), ("Multi-state", "sites and newly acquired subsidiaries"), ("One", "framework for network management and communications")],
+        "snapshot": [("Location", "Los Angeles, California; sites in several states"), ("Size", "350 employees"), ("Relationship", None),
+                     ("Scope", "Network restructuring, cybersecurity, IT operations, infrastructure for industrial systems")],
+        "relationship": "January 2022 – July 2023",
+        "challenge": "Fralock asked Pro Link Systems to unify and secure an IT infrastructure that had become fragmented across multiple sites and newly acquired subsidiaries. It needed network management, cybersecurity and IT operations standardized across several states, including the infrastructure behind key workloads and industrial systems in its manufacturing environments.",
+        "approach": ["Internal network topology restructured", "Cybersecurity strengthened across the organization’s digital ecosystem",
+                     "IT operations standardized across several states",
+                     "Network management and communications brought under a single, cohesive framework",
+                     "Infrastructure modernized for key workloads and industrial systems in manufacturing"],
+        "outcomes": ["A complex, multi-site enterprise under unified, scalable management",
+                     "Greater reliability, visibility and scalability across the company"],
+        "value": "A rapid transformation: consistent network, security and operating standards across established sites and newly acquired subsidiaries, delivered within a short engagement.",
+    },
+    {
+        "slug": "fsc-lighting",
+        "status": "Past engagement, 2020–2024", "flags": ["R7"],
+        "title": "FSC Lighting Case Study: IT Overhaul | Pro Link Systems",
+        "meta": "How Pro Link Systems overhauled the network behind FSC Lighting's offices and production facilities and moved the manufacturer to cloud systems.",
+        "h1": "A scalable technology foundation for a manufacturer in rapid expansion.",
+        "card": "A complete network overhaul across offices and production facilities, with secure cloud systems.",
+        "plate": ("4+ yrs", "managed IT partnership, 2020 to 2024"),
+        "summary": "From March 2020 to August 2024, Pro Link Systems modernized the technology behind FSC Lighting, a Rancho Cucamonga manufacturer of energy-efficient and custom lighting, during a period of rapid expansion.",
+        "metrics": [("4+ yrs", "managed IT partnership"), ("45", "employees"), ("Office + plant", "on one overhauled network")],
+        "snapshot": [("Location", "Rancho Cucamonga, California"), ("Size", "45 employees"), ("Relationship", None),
+                     ("Scope", "Network overhaul, cloud systems, centralized data management, managed IT")],
+        "relationship": "March 2020 – August 2024",
+        "challenge": "FSC Lighting was expanding rapidly and needed to modernize its IT infrastructure and improve operational efficiency. Communication between departments, spread across offices and production facilities, had to become faster and more reliable, on a technology foundation that could scale with new growth.",
+        "approach": ["A complete network overhaul across offices and production facilities", "Secure cloud-based systems",
+                     "Centralized data management", "Improved connectivity across engineering, production and sales teams"],
+        "outcomes": ["Faster communication between departments", "Streamlined day-to-day operations",
+                     "A stable, scalable foundation for FSC Lighting’s continued innovation"],
+        "value": "A partnership of more than four years that supported the company’s growth in energy-efficient and custom lighting.",
+    },
+    {
+        "slug": "hallmark-lighting",
+        "status": "Past engagement, 2018–2020", "flags": ["R7", "R18"],
+        "title": "Hallmark Lighting Case Study | Pro Link Systems",
+        "meta": "How Pro Link Systems rebuilt Hallmark Lighting's IT from the ground up, connecting California design teams with an overseas manufacturing plant.",
+        "h1": "An IT environment rebuilt to connect design and manufacturing across continents.",
+        "card": "IT rebuilt from the ground up, connecting California design teams with an overseas plant.",
+        "plate": ("Ground up", "IT environment rebuilt, 2018 to 2020"),
+        "summary": "From December 2018 to July 2020, Pro Link Systems rebuilt the IT environment of Hallmark Lighting, a lighting design and manufacturing company with design teams in California and an overseas plant, during a period of rapid market growth.",
+        "metrics": [("60", "employees"), ("Ground up", "rebuild of the IT environment"), ("Overseas", "manufacturing connected with California design teams")],
+        "snapshot": [("Location", "Design teams in California; overseas manufacturing plant"), ("Size", "60 employees"), ("Relationship", None),
+                     ("Scope", "IT rebuild, network modernization, secure and scalable systems")],
+        "relationship": "December 2018 – July 2020",
+        "challenge": "Hallmark Lighting needed to modernize its technology to support expanding global operations during rapid market growth. With an overseas manufacturing plant and design teams in California, it had to close a communication and workflow gap between continents so teams could collaborate faster and produce more efficiently.",
+        "approach": ["A modernized network topology", "Secure, scalable systems",
+                     "Communication and workflow connected between the California design teams and the overseas plant"],
+        "outcomes": ["Faster collaboration between design and manufacturing", "Reliable performance across all departments",
+                     "A technology environment able to meet rising demand"],
+        "value": "A trusted industry name equipped to meet rising demand with speed and precision.",
+    },
+    {
+        "slug": "m13",
+        "status": "Past engagement, 2017–2018", "flags": ["R7"],
+        "title": "M13 Case Study: Founding IT Platform | Pro Link Systems",
+        "meta": "How Pro Link Systems helped design and build the founding technology and communications platform for M13, a venture capital firm.",
+        "h1": "The founding technology platform for a venture firm.",
+        "card": "A flexible, secure technology and communications platform for a growing venture portfolio.",
+        "plate": ("Founding", "technology platform for a venture firm"),
+        "summary": "In M13’s early days, from June 2017 to March 2018, Pro Link Systems helped design and build the technology platform beneath the firm: an IT and communications framework made to support collaboration, data security and operational scale across a growing venture portfolio.",
+        "metrics": [("30", "employees"), ("2017–2018", "engagement"), ("One", "framework for collaboration across early ventures")],
+        "snapshot": [("Location", "Los Angeles, California"), ("Size", "30 employees"), ("Relationship", None),
+                     ("Scope", "Technology platform design, communications, data security")],
+        "relationship": "June 2017 – March 2018",
+        "challenge": "M13 needed a flexible, stable technology platform to serve as the foundation for a rapidly growing venture portfolio: an IT and communications framework that would enable collaboration, data security and operational scalability across its early ventures, built right from the start.",
+        "approach": ["A flexible, stable technology platform to anchor the venture portfolio",
+                     "An IT and communications framework for collaboration across early ventures",
+                     "Data security appropriate to a venture organization", "Operational scalability as the portfolio grew"],
+        "outcomes": ["The firm’s technical foundation in place in its early days", "A platform built to scale with the portfolio"],
+        "value": "A solid technical foundation, laid early, beneath what became a prominent venture firm.",
+    },
+    {
+        "slug": "veev-spirits",
+        "status": "Past engagement, 2006–2013", "flags": ["R7", "R16"],
+        "title": "VEEV Spirits Case Study: Seven Years | Pro Link Systems",
+        "meta": "How Pro Link Systems designed and ran the technology behind VEEV Spirits for about seven years, from the founders' home to a multi-state operation.",
+        "h1": "Technology that kept pace from the founders’ home to a multi-state brand.",
+        "card": "Technology designed and run from inception through multi-state growth.",
+        "plate": ("7 yrs", "from inception to a multi-state operation"),
+        "summary": "VEEV Spirits engaged Pro Link Systems at its inception, when the company ran from its founders’ home in Beverly Hills. For about seven years, from July 2006 to September 2013, we designed, implemented and managed its technology as it grew into a multi-state operation.",
+        "metrics": [("7 yrs", "engagement, 2006 to 2013"), ("Multi-state", "operation, from a home office"), ("40", "employees")],
+        "snapshot": [("Location", "Beverly Hills, California, growing to several states"), ("Size", "40 employees"), ("Relationship", None),
+                     ("Scope", "Information technology, communications infrastructure, online presence")],
+        "relationship": "July 2006 – September 2013",
+        "challenge": "VEEV needed technology that could scale with rapid national expansion. As the brand grew from a home office to a multi-state operation, its IT, communications and online presence had to let the team work without technology becoming a constraint on growth.",
+        "approach": ["An information technology environment built from inception and scaled with the business",
+                     "Communications infrastructure", "Online presence and web systems",
+                     "Ongoing management, so the founders could focus on building the brand"],
+        "outcomes": ["A partnership of about seven years, from startup to multi-state operation",
+                     "Technology that kept pace with the brand’s growth"],
+        "value": "One technology partner from the first day through national expansion, while the founders built the brand.",
+    },
+    {
+        "slug": "optical-zonu",
+        "status": "Current client", "flags": ["R10"],
+        "title": "Optical Zonu Case Study: Managed IT | Pro Link Systems",
+        "meta": "How Pro Link Systems serves as the primary IT management team for Optical Zonu, a fiber-optic and RF-over-fiber manufacturer.",
+        "h1": "One accountable IT team for a photonics manufacturer.",
+        "card": "Primary IT management team, including centralized domain and DNS management.",
+        "plate": ("One team", "for IT management, domain and DNS"),
+        "summary": "Pro Link Systems serves as the primary IT management team for Optical Zonu, a manufacturer of fiber-optic and RF-over-fiber technology, including centralized management of the company’s domain and DNS.",
+        "metrics": [("Primary", "IT management team"), ("Domain + DNS", "managed centrally"), ("50", "employees")],
+        "snapshot": [("Location", "Los Angeles, California"), ("Size", "50 employees"), ("Relationship", None),
+                     ("Scope", "IT management, domain and DNS management")],
+        "relationship": "Ongoing",
+        "challenge": "A specialized photonics company depends on reliable infrastructure, protected intellectual property and dependable connectivity to run engineering and business operations. It needs a technology partner that can own IT management end to end, including its domain and DNS.",
+        "approach": ["Pro Link Systems acts as Optical Zonu’s primary IT management team",
+                     "Domain and DNS managed centrally, within Pro Link Systems’ managed DNS environment"],
+        "outcomes": ["An ongoing managed IT partnership, with Pro Link Systems as the primary IT team"],
+        "value": "One team accountable for the technology that engineering and business operations depend on.",
+        "video": ("oz", "Optical Zonu on working with Pro Link Systems"),
+    },
+    {
+        "slug": "global-garden",
+        "status": "Current client", "flags": ["R7", "R17"],
+        "title": "Global Garden Case Study: Email Security | Pro Link Systems",
+        "meta": "How Pro Link Systems supports Global Garden with managed IT, including email security across all of the organization's mailboxes.",
+        "h1": "Email security for a growing business.",
+        "card": "Managed IT, with email security deployed across the organization’s mailboxes.",
+        "plate": ("18", "mailboxes on one email security platform"),
+        "summary": "Pro Link Systems supports Global Garden, based in Torrance, as its managed IT partner. A featured project deployed Proofpoint email security across all 18 of the organization’s mailboxes.",
+        "metrics": [("18", "mailboxes protected"), ("Managed IT", "ongoing support")],
+        "snapshot": [("Location", "Torrance, California"), ("Relationship", None), ("Scope", "Managed IT, email security (Proofpoint)")],
+        "relationship": "Ongoing",
+        "challenge": "A growing business needs its email and core systems to stay secure against increasingly sophisticated phishing and email-borne threats, while day-to-day operations keep running across its team and shared mailboxes.",
+        "approach": ["Managed IT support", "Proofpoint email security scoped to user and shared mailboxes"],
+        "outcomes": ["Email security in place across all 18 mailboxes", "Stronger protection against phishing and email-borne threats"],
+        "value": "Email and day-to-day systems looked after by one managed IT partner.",
+    },
 ]
-FEATURED = ["global-holdings", "cunico", "lisi-aerospace", "snitzer-law", "waverly-school", "cookes-crating"]
 BY = {c["slug"]: c for c in CASES}
+for _c in CASES:
+    _k = DATA["clients"][_c["slug"]]
+    _c["client"], _c["sector"], _c["current"] = CL.case_name(_k), _k["industry"], _k["status"] == "current"
+    _c["snapshot"].insert(0, ("Industry", _k["industry"]))
+    if _k.get("ownership"):
+        _c["snapshot"].insert(1, ("Ownership", _k["ownership"]))
+CASE_ORDER = [s for s in DATA["order"] if s in BY and DATA["clients"][s].get("include", True)]
+
+
+def related_to(c):
+    """The next three case studies in portfolio order (wrapping around), so every page links to others and is linked to."""
+    ring = [s for s in CASE_ORDER if not BY[s].get("noindex")]
+    if c["slug"] in ring:
+        i = ring.index(c["slug"])
+        ring = ring[i + 1:] + ring[:i]
+    return [BY[s] for s in ring[:3]]
 
 
 def status_html(c):
-    cls = "pl-status is-current" if c["current"] else "pl-status"
-    word = "Current" if c["current"] else "Past engagement"
-    return '<span class="%s">%s</span> %s' % (cls, word, E(c["relationship"]))
+    word, cls = CL.STATUS[DATA["clients"][c["slug"]]["status"]]
+    return '<span class="pl-status%s">%s</span> %s' % (cls, word, E(c["relationship"]))
 
 
 def flags_html(c):
@@ -217,7 +374,7 @@ def flags_html(c):
 
 def card(c, level="h3"):
     plate_n, plate_l = c["plate"]
-    status = ("Current client" if c["current"] else c["status"].replace("Past engagement, ", ""))
+    status = ("Current client" if c["current"] else c["status"].replace("Past engagement, ", "").replace("Historical client, ", ""))
     flag = "".join(" " + FLAG(E(r)) for r in c["flags"]) if c.get("noindex") else ""
     return ('<a class="pl-ccard" id="%s" href="/case-studies/%s">\n'
             '  <span class="pl-ccard-plate"><span class="pl-ccard-metric">%s</span><span>%s</span></span>\n'
@@ -259,7 +416,8 @@ def detail_main(c):
     snap = []
     for k, v in c["snapshot"]:
         snap.append("<dt>%s</dt><dd>%s</dd>" % (E(k), status_html(c) if k == "Relationship" else E(v)))
-    body = ['<p class="pl-case-sector">%s &middot; %s</p>' % (E(c["sector"]), E(c["status"])),
+    k = DATA["clients"][c["slug"]]
+    body = ["<h3>Company profile</h3>", "<p>%s</p>" % E(k["description"]),
             "<h3>The challenge</h3>", "<p>%s</p>" % E(c["challenge"])]
     if c.get("complexity"):
         body += ["<h3>Complexity</h3>", "<p>%s</p>" % E(c["complexity"])]
@@ -271,11 +429,16 @@ def detail_main(c):
         q, who, role = c["quote"]
         body.append('<figure class="pl-quote pl-quote--inline"><blockquote>&ldquo;%s&rdquo;</blockquote>'
                     '<figcaption><strong>%s</strong> &middot; %s</figcaption></figure>' % (E(q), E(who), E(role)))
+    if c.get("video"):
+        v, label = c["video"]
+        body.append('<figure class="pl-case-video"><div class="pl-video-frame"><video controls playsinline preload="none" poster="/assets/video/%s-poster.webp" '
+                    'aria-label="%s"><source src="https://videos.prolinksystems.com/%s.mp4" type="video/mp4"></video></div>'
+                    '<figcaption>%s</figcaption></figure>' % (v, A(label), v, E(label)))
     if c.get("photo"):
         src, srcset, w, h, alt = c["photo"]
         body.append('<figure class="pl-case-photo"><img src="%s" srcset="%s" sizes="(max-width: 1024px) 92vw, 760px" '
                     'width="%d" height="%d" loading="lazy" decoding="async" alt="%s"></figure>' % (src, srcset, w, h, A(alt)))
-    related = [BY[s] for s in FEATURED if s != c["slug"]][:3]
+    related = related_to(c)
     n = len(c["metrics"])
     return ('<main>\n\n<section class="pl-casehead" aria-labelledby="page-h1">\n  <div class="pl-wrap">\n'
             '    <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/case-studies">Client Success</a><span>/</span>%s</nav>\n'
@@ -285,7 +448,7 @@ def detail_main(c):
             '    <div class="pl-cmetrics" style="--n:%d">%s</div>\n  </div>\n</section>\n\n'
             '<section class="pl-section" aria-label="Case study detail">\n  <div class="pl-wrap">\n'
             '    <article class="pl-study">\n      <aside class="pl-study-meta">\n        <p class="pl-study-client">%s</p>\n'
-            '        <dl>%s</dl>\n        %s\n      </aside>\n      <div class="pl-study-body">\n        %s\n      </div>\n'
+            '        <dl>%s</dl>\n        <p class="pl-study-portfolio"><a class="pl-arrow" href="/case-studies#%s">In the client portfolio</a></p>\n        %s\n      </aside>\n      <div class="pl-study-body">\n        %s\n      </div>\n'
             '    </article>\n  </div>\n</section>\n\n'
             '<section class="pl-section pl-mist" aria-labelledby="related-h">\n  <div class="pl-wrap">\n'
             '    <div class="pl-head"><div><p class="pl-eyebrow">More client success</p><h2 class="pl-h2" id="related-h">Related engagements.</h2></div>'
@@ -297,67 +460,31 @@ def detail_main(c):
             '      <div class="pl-actions"><a href="/contact" class="btn btn-light">Schedule a Technology Consultation</a>'
             '<a href="/services" class="btn btn-outline-white">Explore Our Capabilities</a></div></div>\n  </div>\n</section>\n\n</main>'
             % (E(c["client"]), E(c["sector"]), E(c["status"]), E(c["h1"]), E(c["summary"]), n, metrics,
-               E(c["client"]), "".join(snap), flags_html(c), "\n        ".join(body),
+               E(c["client"]), "".join(snap), c["slug"], flags_html(c), "\n        ".join(body),
                "\n".join(card(r) for r in related)))
 
 
 def hub_main():
-    featured = "\n".join(card(BY[s], "h2") for s in FEATURED)
-    crr = card(BY["crr"], "h2")
     return ('''<main>
 
 <section class="pl-pagehead" aria-labelledby="page-h1">
   <div class="pl-wrap">
     <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Client Success</nav>
     <h1 class="pl-h1" id="page-h1">Long partnerships with organizations that depend on technology.</h1>
-    <p class="pl-lead">Representative engagements from more than 25 years of managing, securing and modernizing technology. Each story notes whether the relationship is current or a past engagement.</p>
+    <p class="pl-lead">The complete client portfolio, from more than 25 years of managing, securing and modernizing technology. Each profile notes whether the relationship is current or past.</p>
   </div>
 </section>
+
+%s
 
 <section class="pl-section--tight pl-dark" aria-label="Relationship tenure">
   <div class="pl-wrap">
     <div class="pl-figures">
       <div class="pl-figure"><strong>23 yrs</strong><span>The Waverly School</span><small>Current client</small></div>
       <div class="pl-figure"><strong>18 yrs</strong><span>Law Offices of Alan B. Snitzer</span><small>Current client</small></div>
-      <div class="pl-figure"><strong>13+ yrs</strong><span>Cunico Corp.</span><small>Current client, since 2012</small></div>
-      <div class="pl-figure"><strong>12+ yrs</strong><span>Global Holdings</span><small>Past engagement, to 2021</small></div>
+      <div class="pl-figure"><strong>13+ yrs</strong><span>Cunico Corporation</span><small>Current client, since 2012</small></div>
+      <div class="pl-figure"><strong>12+ yrs</strong><span>Global Holdings</span><small>Historical client, to 2021</small></div>
     </div>
-  </div>
-</section>
-
-<section class="pl-section" aria-labelledby="featured-h">
-  <div class="pl-wrap">
-    <div class="pl-head">
-      <div><p class="pl-eyebrow">Case studies</p><h2 class="pl-h2" id="featured-h">Engineering, infrastructure and long-term leadership.</h2></div>
-      <p class="pl-lead">Each case study has an executive summary, the complexity involved, our approach and the outcomes.</p>
-    </div>
-    <div class="pl-ccards">
-%s
-    </div>
-  </div>
-</section>
-
-<section class="pl-section pl-mist" aria-labelledby="more-h">
-  <div class="pl-wrap">
-    <div class="pl-head">
-      <div><p class="pl-eyebrow">More engagements</p><h2 class="pl-h2" id="more-h">Other organizations we support and have supported.</h2></div>
-      <p class="pl-lead">Optical Zonu, a photonics manufacturer, relies on Pro Link Systems as its primary IT management team, including domain and DNS management. <span class="pl-flag">Review R10</span></p>
-    </div>
-    <div class="pl-ccards" style="margin-bottom:56px">
-%s
-    </div>
-    <p class="pl-flag-note"><span class="pl-flag">Review R7</span></p>
-    <table class="pl-table">
-      <thead><tr><th scope="col">Client</th><th scope="col">Sector</th><th scope="col">Engagement</th><th scope="col">Highlights</th></tr></thead>
-      <tbody>
-        <tr><td>FSC Lighting</td><td>Lighting manufacturing, Rancho Cucamonga</td><td>2020&ndash;2024</td><td>Network overhaul across offices and production facilities; cloud systems; centralized data management</td></tr>
-        <tr><td>Fralock Holdings</td><td>Advanced materials and precision manufacturing, multi-state</td><td>2022&ndash;2023</td><td>Network restructuring, security and IT operations standardized across states and newly acquired subsidiaries</td></tr>
-        <tr><td>Hallmark Lighting</td><td>Lighting design, California and an overseas plant</td><td>2018&ndash;2020</td><td>IT rebuilt from the ground up, connecting California teams with overseas manufacturing</td></tr>
-        <tr><td>M13</td><td>Venture firm, Los Angeles</td><td>2017&ndash;2018</td><td>Founding technology platform</td></tr>
-        <tr><td>VEEV Spirits</td><td>Spirits, Beverly Hills to multi-state</td><td>2006&ndash;2013</td><td>About seven years of growth, through a sale to new ownership</td></tr>
-        <tr><td>Global Garden</td><td>Torrance</td><td>Ongoing</td><td>Email security across the organization&rsquo;s mailboxes</td></tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
@@ -393,7 +520,7 @@ def hub_main():
   </div>
 </section>
 
-</main>''' % (featured, crr))
+</main>''' % CL.portfolio_html(DATA))
 
 
 def main():
@@ -432,13 +559,14 @@ def main():
         loc = "%s/case-studies/%s" % (SITE, c["slug"])
         if c.get("noindex") or ("<loc>%s</loc>" % loc) in sm:
             continue
-        entry = ("  <url>\n    <loc>%s</loc>\n    <lastmod>2026-11-21</lastmod>\n    <changefreq>monthly</changefreq>\n"
+        entry = ("  <url>\n    <loc>%s</loc>\n    <lastmod>2026-11-22</lastmod>\n    <changefreq>monthly</changefreq>\n"
                  "    <priority>0.6</priority>\n  </url>\n" % loc)
         nl = "\r\n" if "\r\n" in sm else "\n"
         sm = sm.replace("</urlset>", entry.replace("\n", nl) + "</urlset>")
         added.append(c["slug"])
     io.open(sm_path, "w", encoding="utf-8", newline="").write(sm)
-    print("built %d case pages + hub; sitemap added: %s" % (len(CASES), ", ".join(added) or "none"))
+    CL.write_home(DATA)
+    print("built %d case pages + hub + home clients; sitemap added: %s" % (len(CASES), ", ".join(added) or "none"))
 
 
 if __name__ == "__main__":

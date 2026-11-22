@@ -291,7 +291,7 @@
   <script src="/contact-form.js?v=20261109" defer></script>
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261122c">
+  <link rel="stylesheet" href="_shared.css?v=20261122d">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -663,21 +663,29 @@
   </div>
 </section>
 
-<!-- 2. CLIENT CREDIBILITY (names until authorized logo files are supplied) -->
-<section class="pl-wall" aria-labelledby="wall-h">
+<!-- 2. CLIENT CREDIBILITY: featured clients, in a fixed order, from editorial/clients.json -->
+<!-- PL:CLIENTS (python chrome/clients.py --write) -->
+<section class="pl-clients" aria-labelledby="clients-h">
   <div class="pl-wrap">
-    <div class="pl-wall-head"><p class="pl-wall-label" id="wall-h">Selected clients, current and past</p><a class="pl-arrow" href="/case-studies">Client success</a></div>
-    <ul class="pl-wall-grid">
-      <li><span class="pl-wall-name">LISI Aerospace</span><span class="pl-wall-meta">Aerospace &middot; 2019&ndash;2021</span></li>
-      <li><span class="pl-wall-name">Cunico Corp.</span><span class="pl-wall-meta">Precision manufacturing &middot; <span class="is-current">Current</span></span></li>
-      <li><span class="pl-wall-name">Global Holdings</span><span class="pl-wall-meta">Medical imaging &middot; to 2021</span></li>
-      <li><span class="pl-wall-name">The Waverly School</span><span class="pl-wall-meta">Education &middot; <span class="is-current">Current</span></span></li>
-      <li><span class="pl-wall-name">Optical Zonu</span><span class="pl-wall-meta">Photonics &middot; <span class="is-current">Current</span></span></li>
-      <li><span class="pl-wall-name">Law Offices of Alan B. Snitzer</span><span class="pl-wall-meta">Legal &middot; <span class="is-current">Current</span></span></li>
-      <li><span class="pl-wall-name">Cooke&rsquo;s Crating</span><span class="pl-wall-meta">Fine-art logistics &middot; <span class="is-current">Current</span></span></li>
-    </ul>
+    <div class="pl-clients-head">
+      <div><p class="pl-eyebrow">Client portfolio</p><h2 class="pl-h2" id="clients-h">Selected clients, current and past.</h2></div>
+      <a class="btn btn-primary" href="/case-studies#portfolio">View the complete client portfolio</a>
+    </div>
+    <ol class="pl-clients-grid">
+      <li><a href="/case-studies#lisi-aerospace"><span class="pl-client-name">LISI Aerospace</span><span class="pl-client-industry">Global Aerospace Manufacturing</span><span class="pl-client-status">Past engagement, <b>2019–2021</b></span></a></li>
+      <li><a href="/case-studies#cunico"><span class="pl-client-name">Cunico / BWXT</span><span class="pl-client-sub">A BWX Technologies company</span><span class="pl-client-industry">Aerospace, Defense &amp; Precision Manufacturing</span><span class="pl-client-status is-current">Current client</span></a></li>
+      <li><a href="/case-studies#m13"><span class="pl-client-name">M13</span><span class="pl-client-industry">Venture Capital</span><span class="pl-client-status">Past engagement, <b>2017–2018</b></span></a></li>
+      <li><a href="/case-studies#fralock"><span class="pl-client-name">Fralock</span><span class="pl-client-industry">Advanced Materials &amp; Precision Manufacturing</span><span class="pl-client-status">Past engagement, <b>2022–2023</b></span></a></li>
+      <li><a href="/case-studies#veev-spirits"><span class="pl-client-name">VEEV Spirits</span><span class="pl-client-industry">Consumer Brands &amp; Spirits</span><span class="pl-client-status">Past engagement, <b>2006–2013</b></span></a></li>
+      <li><a href="/case-studies#optical-zonu"><span class="pl-client-name">Optical Zonu</span><span class="pl-client-industry">Photonics, Telecommunications &amp; Defense Technology</span><span class="pl-client-status is-current">Current client</span></a></li>
+      <li><a href="/case-studies#cochise-capital"><span class="pl-client-name">Cochise Capital</span><span class="pl-client-industry">Real Estate Investment</span></a></li>
+      <li><a href="/case-studies#fsc-lighting"><span class="pl-client-name">FSC Lighting</span><span class="pl-client-industry">Commercial &amp; Industrial Lighting Manufacturing</span><span class="pl-client-status">Past engagement, <b>2020–2024</b></span></a></li>
+    </ol>
+    <p class="pl-clients-note">Eight of the 21 organizations profiled in our client portfolio. <span class="pl-flag">Review R7 · R15</span></p>
   </div>
 </section>
+<!-- /PL:CLIENTS -->
+
 <!-- 3. CORE CAPABILITIES: six practice areas -->
 <section class="pl-section" id="capabilities" aria-labelledby="cap-h">
   <div class="pl-wrap">
@@ -769,9 +777,9 @@
     </div>
     <div class="pl-scale-grid">
       <div class="pl-scale-item"><span class="pl-scale-num">27<small>years</small></span><p>of independent technology leadership and engineering, since 1999.</p><span class="pl-scale-src">Pro Link Systems, founded 1999</span></div>
-      <div class="pl-scale-item"><span class="pl-scale-num">19<small>facilities</small></span><p>on one network and AWS imaging platform we designed and ran, plus hundreds of partner sites.</p><span class="pl-scale-src"><a href="/case-studies/global-holdings">Global Holdings</a> &middot; medical imaging &middot; to 2021 <span class="pl-flag">Review R4</span></span></div>
+      <div class="pl-scale-item"><span class="pl-scale-num">19<small>facilities</small></span><p>on one network and AWS imaging platform we designed and ran, plus hundreds of partner sites.</p><span class="pl-scale-src"><a href="/case-studies/global-holdings">Case study</a> &middot; diagnostic imaging &middot; to 2021 <span class="pl-flag">Review R4</span></span></div>
       <div class="pl-scale-item"><span class="pl-scale-num">700<small>employees</small></span><p>at the multinational aerospace manufacturer whose IT operations we stabilized within 90 days.</p><span class="pl-scale-src"><a href="/case-studies/lisi-aerospace">LISI Aerospace</a> &middot; 2019&ndash;2021 <span class="pl-flag">Review R2</span></span></div>
-      <div class="pl-scale-item"><span class="pl-scale-num">5<small>days</small></span><p>to move a locked-out business onto new infrastructure, with zero downtime.</p><span class="pl-scale-src"><a href="/case-studies/cookes-crating">Cooke&rsquo;s Crating</a> &middot; current client <span class="pl-flag">Review R6</span></span></div>
+      <div class="pl-scale-item"><span class="pl-scale-num">5<small>days</small></span><p>to move a locked-out business onto new infrastructure, with zero downtime.</p><span class="pl-scale-src"><a href="/case-studies/cookes-crating">Case study</a> &middot; fine art logistics &middot; current client <span class="pl-flag">Review R6</span></span></div>
     </div>
   </div>
 </section>
@@ -808,30 +816,30 @@
         <p class="pl-eyebrow">Client success</p>
         <h2 class="pl-h2" id="success-h">Complex environments, long-term outcomes.</h2>
       </div>
-      <p class="pl-lead">Healthcare imaging, precision manufacturing and aerospace engagements, current and past. <a class="pl-arrow" href="/case-studies">All client stories</a></p>
+      <p class="pl-lead">Aerospace, precision manufacturing and advanced materials engagements, current and past. <a class="pl-arrow" href="/case-studies#portfolio">The client portfolio</a></p>
     </div>
     <div class="pl-fcases">
-      <a class="pl-fcase-main" href="/case-studies/global-holdings">
-        <span class="pl-case-sector">Healthcare imaging &middot; Past engagement, 12+ years</span>
-        <span class="pl-fcase-metric">19 facilities</span>
-        <span class="pl-fcase-metric-label">and hundreds of partner sites feeding one secure imaging platform</span>
-        <h3>A secure imaging backbone for a regional diagnostic network</h3>
-        <p>We designed the network across 19 owned facilities, built and managed the AWS environment that consolidated imaging studies, and ran a secure, access-controlled patient portal for referring doctors and patients.</p>
+      <a class="pl-fcase-main" href="/case-studies/lisi-aerospace">
+        <span class="pl-case-sector">Global Aerospace Manufacturing &middot; 2019&ndash;2021</span>
+        <span class="pl-fcase-metric">90 days</span>
+        <span class="pl-fcase-metric-label">to stabilized IT operations at LISI Aerospace</span>
+        <h3>Order for a multinational manufacturer&rsquo;s IT</h3>
+        <p>Pro Link Systems took ownership of hosts, virtual machines, communication systems and security policies, modernized the network, and carried operations through the move to remote work.</p>
         <span class="pl-arrow">Read the case study</span>
       </a>
       <div class="pl-fcase-side">
         <a class="pl-fcase" href="/case-studies/cunico">
-          <span class="pl-case-sector">Precision manufacturing &middot; Current client</span>
-          <span class="pl-cmetric"><strong>13+ yrs</strong><span>continuously renewed partnership, since 2012</span></span>
+          <span class="pl-case-sector">Aerospace, Defense &amp; Precision Manufacturing &middot; Current client</span>
+          <span class="pl-cmetric"><strong>13+ yrs</strong><span>continuously renewed partnership with Cunico, since 2012</span></span>
           <h3>Technology governance through growth and an acquisition</h3>
           <p>On-premises and cloud environments across multiple sites, hardened security, and support through Cunico&rsquo;s integration into BWX Technologies.</p>
           <span class="pl-arrow">Read the case study</span>
         </a>
-        <a class="pl-fcase" href="/case-studies/lisi-aerospace">
-          <span class="pl-case-sector">Aerospace manufacturing &middot; 2019&ndash;2021</span>
-          <span class="pl-cmetric"><strong>90 days</strong><span>to stabilize IT operations</span></span>
-          <h3>Order for a multinational manufacturer&rsquo;s IT</h3>
-          <p>Ownership of hosts, virtual machines, communication systems and security policies, then a continuity-preserving move to remote work.</p>
+        <a class="pl-fcase" href="/case-studies/fralock">
+          <span class="pl-case-sector">Advanced Materials &amp; Precision Manufacturing &middot; 2022&ndash;2023</span>
+          <span class="pl-cmetric"><strong>Multi-state</strong><span>operations unified at Fralock</span></span>
+          <h3>One framework across sites, states and acquisitions</h3>
+          <p>Network, security and IT operations standardized across several states and newly acquired subsidiaries, including the infrastructure behind manufacturing systems.</p>
           <span class="pl-arrow">Read the case study</span>
         </a>
       </div>

@@ -700,6 +700,15 @@ that I would like to host on our site similarly". Every app follows this one pat
   - **Article page:** headline beside a 3:2 illustration, contents list with reading position (`assets/js/article.js`),
     takeaways first, and components usable in any article body: `table.pl-compare`, `ul.pl-checklist`, `ol.pl-process`,
     `div.pl-framework`, `div.pl-callout`, `figure.pl-flow` and a `References` list (`h2.pl-refs-h` + `ul.pl-refs`).
+  - **Client portfolio:** `editorial/clients.json` is the single source for the 21 company profiles: name, industry,
+    description, ownership, status, engagement, logo. `python chrome/build_case_pages.py` renders the portfolio on
+    `/case-studies#portfolio`, the profile on each `/case-studies/<slug>` page and the eight featured clients on the home
+    page (`<!-- PL:CLIENTS -->`); `python chrome/clients.py --check` enforces 21 organizations without duplicates, the two
+    fixed orders (never alphabetical, no CSS reordering) and the links between profiles and case studies. Supplied
+    descriptions (`"text": "supplied"`) are used word for word. `"include": false` removes a client everywhere. A parent
+    company is named under Ownership only; nothing may suggest that Pro Link Systems manages the parent's environment.
+    Name plates show the name in one style until an approved logo file is set in `logo`. The earlier `/case-studies#1-cunico-corp`
+    style anchors are kept on the profiles.
   - **Client quotes:** `figure.pl-quote.pl-quote--inline.pl-quote--side` beside other content (inside `.pl-split`), or two
     in `div.pl-quotes-2`. Words are never edited; the caption names the client only; no stars, no review markup.
   - **Privacy policy:** it must name every analytics, advertising, page-recording and payment service the site loads. Adding or
