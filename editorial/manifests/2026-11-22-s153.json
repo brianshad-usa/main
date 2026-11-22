@@ -1,0 +1,166 @@
+{
+  "post": "Your IT manager gives notice. The new job pays more. In the exit conversation, though, they mention something else: they were the only one answering the phone at night, and they never got to work on anything that mattered.\n\nA big company's salary is hard to match. The rest is fixable.\n\nThis week, ask your IT person three questions. What routine work would you hand off if you could? Which leadership meetings should you be in? What project would you be proud to own?\n\nThen act on the answers. Automate or hand off the repetitive tickets, give them a regular seat in budget planning, and protect time for one meaningful project.\n\nOne more check: if they were unreachable for two weeks, could anyone else get into your admin accounts, firewall, and backups? Keeping a good person beats replacing one, but no business should depend on a single set of hands.",
+  "headline": "You can't outbid an enterprise for IT talent. You can out-keep one.",
+  "cta_label": "Talk to us",
+  "cta_type": "CALL",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-22-s153-card.png",
+  "image_file_jpg": "2026-11-22-s153-card.jpg",
+  "theme": "exec_strategy",
+  "idea_id": "S153",
+  "core_idea": "Mid-size businesses cannot outbid enterprises for IT talent, but they can out-keep them: remove the grind, give IT a standing seat where technology money is decided, and hand each person one consequential project. Retention can still fail, so run the two-week test: if the IT lead vanished for two weeks, could anyone else reach global admin, the firewall, and the backup console?",
+  "channels": {
+    "linkedin": "You will not win a salary war with an enterprise for a senior systems engineer. You can win the contest that comes after the hire.\n\nMost leadership teams call their IT staffing problem a talent shortage. In practice, the expensive event is rarely the open requisition. It is losing someone you already trained: the person who knows where every admin credential, workaround, and undocumented dependency lives.\n\nThat is a retention problem, and retention is a contest a mid-size business can win.\n\n1. Remove the grind. Ask your IT lead what they would give away tomorrow. The usual answers are after-hours tickets, password resets, and the early patch window. Self-service password reset, managed patch rings, and zero-touch enrollment cover much of it. A help desk partner can take the rest.\n\n2. Give them a standing seat in the quarterly budget review. In a large enterprise, an engineer often sits several layers from the CFO. Yours can sit across the table.\n\n3. Hand them one consequential project end to end, such as Copilot governance or a Conditional Access rollout, with protected time and training. As routine work gets automated, judgment work like this is what makes the role worth staying in.\n\nThen run the two-week test. Could anyone besides your IT lead get into a global admin account, the firewall, and the backup console if that person were unreachable? A no is a security finding, not a staffing detail. The fix is named admin accounts, sealed break-glass credentials, and written runbooks.\n\nNone of this replaces fair pay. It changes what fair pay is competing against.",
+    "facebook": "Your IT manager gives notice. The new job pays more. In the exit conversation, though, they mention something else: they were the only one answering the phone at night, and they never got to work on anything that mattered.\n\nA big company's salary is hard to match. The rest is fixable.\n\nThis week, ask your IT person three questions. What routine work would you hand off if you could? Which leadership meetings should you be in? What project would you be proud to own?\n\nThen act on the answers. Automate or hand off the repetitive tickets, give them a regular seat in budget planning, and protect time for one meaningful project.\n\nOne more check: if they were unreachable for two weeks, could anyone else get into your admin accounts, firewall, and backups? Keeping a good person beats replacing one, but no business should depend on a single set of hands.",
+    "gbp": "Before posting another IT job opening, run a two-week test. If your IT lead were unreachable, could anyone else get into your admin accounts, firewall, and backup console? Fix that first with named admin accounts and written runbooks. Then work on keeping the people you have: move after-hours tickets off their desk, give them a regular seat in budget planning, and hand them one project to own. Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999, with a 24/7, in-house, US-based help desk that answers calls live. Call us to talk through what your internal team could stop carrying.",
+    "x": [
+      "You can't outbid an enterprise for IT talent. You can out-keep one: take away the after-hours grind, give IT a seat in the budget meeting, hand them a project to own. Then check one thing: could anyone besides your IT lead reach global admin tomorrow?"
+    ],
+    "instagram_caption": "For most mid-size companies, the expensive IT staffing event is not the open requisition. It is losing someone they already trained. Enterprises can usually pay more. A mid-size business can offer access to leadership and real ownership once the grind is gone. Below are three steps to start this week, plus the two-week test every business should pass regardless. Save this for your next one-on-one with your IT lead.\n\n#ITLeadership #TalentRetention #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "tip_banner",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "banner",
+    "register": "how_to",
+    "channels": {
+      "linkedin": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "facebook": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "gbp": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "instagram": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      },
+      "x": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 90,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 88,
+      "originality": 90,
+      "hook_strength": 93,
+      "educational_value": 94,
+      "technical_accuracy": 96,
+      "executive_value": 94,
+      "writing_quality": 94,
+      "visual_sophistication": 84,
+      "platform_fit": 93,
+      "shareability": 90,
+      "saveability": 95,
+      "brand_authority": 92,
+      "trust": 97,
+      "strategic_value": 90
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F001): the help desk operates 24/7",
+    "FACT(F002): the help desk is in-house, not outsourced",
+    "FACT(F008): the help desk is US-based",
+    "FACT(F007): calls are answered live by the in-house team",
+    "ANALYSIS: mid-size businesses generally cannot match enterprise salaries for senior IT staff (qualitative, no figure)",
+    "ANALYSIS: losing a trained IT employee is typically costlier than an open vacancy because institutional knowledge leaves with them",
+    "ANALYSIS: in large enterprises an engineer often sits several organizational layers from the CFO; mid-size IT staff can be given direct access (structural reasoning, not a measured claim)",
+    "ANALYSIS: self-service password reset, managed patch rings, and zero-touch device enrollment are widely available mechanisms that reduce routine IT work (generic capability categories, no product claims)",
+    "ANALYSIS: sole custody of admin, firewall, or backup access by one person is a privileged-access security risk; named admin accounts, emergency break-glass credentials, and runbooks are standard mitigations",
+    "OPINION: as routine IT work is automated, governance and judgment work becomes the reason to stay in the role",
+    "OPINION: proximity to decisions and ownership function as non-salary compensation",
+    "OPINION: for many mid-size firms the IT 'talent shortage' is better treated as a retention problem",
+    "SCENARIO: the Facebook exit-conversation example is an illustrative hypothetical, not a client story",
+    "DEVICE: the 'two-week test' is a framing device proposed in this post, not a cited standard"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The package stops at HR advice. It never reaches the angle only a security-minded IT firm would raise: the departing person may hold the only admin keys. Without that, the strategic link to Pro Link's expertise is thin, and the help-desk mention in GBP reads as a pivot rather than a conclusion. Added a documentation and privileged-access 'insurance' beat across channels."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is a list with a hook stapled on. It never stages the turn, which is why a mid-size company can win at all, so the three steps arrive without tension. Added an 'advantage' slide before the steps and a 'safeguard' slide before the takeaway, which gives the sequence a real arc."
+    },
+    {
+      "role": "Art Director",
+      "finding": "Hook slide headline is two sentences and runs long for a swipe-earner. Slides 3-5 share identical kicker-headline-body density with no visual rhythm, and the package carries no visual direction, so visual quality cannot be verified from copy alone. Shortened the hook to one statement. The design pass still needs a defined system, for example a numbered step motif and a single diagram for the 'one person holds the keys' slide, before this clears the visual bar."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The claim that enterprises 'struggle to offer relief from grind' is backwards. Large enterprises typically have tiered support, so senior engineers rarely do password resets. Grind is a mid-size liability to fix, not an advantage. The real mid-size advantages are proximity and ownership. Reframed so grind removal is the prerequisite and proximity and ownership are the edge."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Put them in the room' is vague enough to become a courtesy invite that changes nothing. Specified a standing seat in the quarterly budget review. Step one also said 'better tooling' without naming any, so it now names real, widely available mechanisms: self-service password reset, managed patch rings, and zero-touch device enrollment."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treats 'knows where every credential lives' as a knowledge-loss problem only. It is also a privileged-access risk: single-person admin custody is an exposure regardless of retention. Added the line that sole custody of admin keys is a security finding, not a staffing detail. This is also the beat that separates the post from generic HR content."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "Copilot governance as an ownership project is a good, current example. The draft misses the more relevant 2026 point: much of the grind is now automatable, which makes grind removal cheaper than it was a few years ago. Added this as analysis, without overstating AI or manufacturing urgency."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "A CFO reading this gets advice but no reason to act before the resignation letter arrives. The insurance framing (retention lowers the odds of a departure, documentation lowers its cost) gives an executive a risk-management reason that survives even if retention efforts fail."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "Saveability is undercut by the empty checklist field and a carousel with no standalone reference slide. Populated checklist_items with a compact retention-and-safeguard list. The X post also leaned on an unsourced generalization ('most IT departures are about the job'), which invites pushback without evidence; replaced it with a reasoned observation."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Several brand-voice problems: 'My view:' is an unattributed first-person voice inside a company channel, the GBP opens with a rhetorical question, and 'the people who fix printers' is a tired, slightly dismissive trope. Changed to 'Our view', opened GBP with an observation, and removed the printer line."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Multiple violations of the no-consecutive-same-word rule: 'You will not... You do not' (LinkedIn), 'At a large company... At yours' (LinkedIn and slide 4), 'You can't... You can' (X and hook slide), and 'You probably cannot... You can fix' (Facebook). 'Picture this.' is a stock opener. All fixed. The takeaway's 'stop shopping for one elsewhere' had an unclear pronoun and was rewritten. LinkedIn was rebalanced to stay inside 900-1,600 characters after the additions."
+    },
+    {
+      "role": "Cybersecurity Expert (with CIO)",
+      "finding": "The admin-keys safeguard was the most defensible and least generic idea in the package, but it read as an afterthought and gave the reader nothing to check. It now leads as the two-week test: could anyone besides the IT lead reach global admin, the firewall, and the backup console? A no is treated as a security finding, and the fix is named concretely: named admin accounts, sealed break-glass credentials, written runbooks. The GBP post now opens with this test as its practical advice, and X closes on it."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Few enterprise engineers ever brief the CFO' read as an unsourced empirical claim. It is reframed as structural analysis: an enterprise engineer often sits several layers from the CFO. The Instagram hook 'mostly a retention problem' asserted a proportion no source supports. It is replaced with 'You can't outbid an enterprise for IT talent. You can out-keep one.' That keeps the argument and drops the implied measurement. Draft and revised LinkedIn and Facebook were checked against length limits, banned phrasing, and consecutive-sentence openers."
+    },
+    {
+      "role": "AI Strategist / Executive Audience Representative",
+      "finding": "The timeliness tie-in was decorative, with Copilot named only as a project example. The revision makes it load-bearing without manufacturing AI urgency: as routine IT work gets automated, governance and identity work is what makes the role worth staying in. The package also still partly fails the any-MSP test. Grind removal plus 'call our help desk' is a co-managed IT pitch any MSP could run. The two-week test reduces that risk but does not eliminate it, so it is reflected in the scores rather than claimed as solved."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

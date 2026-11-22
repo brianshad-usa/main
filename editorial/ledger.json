@@ -4239,6 +4239,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-22",
+      "idea_id": "S153",
+      "theme": "exec_strategy",
+      "format": "linkedin_analysis",
+      "title": "The IT talent shortage is really a retention problem",
+      "excellence": 90,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "tip_banner",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "banner",
+        "register": "how_to",
+        "channels": {
+          "linkedin": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "facebook": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "gbp": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "instagram": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          },
+          "x": {
+            "style": "tip_banner",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "banner",
+            "register": "how_to"
+          }
+        }
+      }
     }
   ]
 }
