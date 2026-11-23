@@ -7,12 +7,30 @@
  * Accept Hosted token: { ok, order_id, token, post_url }. The browser then posts the token
  * to Authorize.net's hosted payment page; card data never touches this site.
  * Setup and secrets: functions/_lib/checkout/core.js header.
+ *
+ * Every answer is JSON with a message the order page can show. Missing settings and anything
+ * unexpected after the Turnstile check (a KV outage, a platform error) also email Pro Link the
+ * cause (2026-11-23: a bare Cloudflare error page left the customer with "Something went wrong"
+ * and Pro Link with no alert).
  */
 import {
   json, log, nowIso, newOrderId, clientIp, verifyTurnstile, anetConfig, billingFromInput, cleanLine,
-  hostedPaymentToken, getOrder, putOrder, sendAlert, KV_TTL_PENDING, UNAVAILABLE,
+  hostedPaymentToken, getOrder, putOrder, sendAlert, kvReady, KV_TTL_PENDING, UNAVAILABLE,
 } from "../../_lib/checkout/core.js";
 import { productById } from "../../_lib/checkout/products.js";
+
+const START_FAILED = "We couldn't start the secure payment. Please try again, or call 1-800-890-6133.";
+
+/** Names (never values) of the settings the checkout needs and doesn't have. */
+function missingSettings(env, anet) {
+  const out = [];
+  if (!anet) out.push('ANET_ENV ("production" or "sandbox")');
+  if (!env.ANET_API_LOGIN_ID) out.push("ANET_API_LOGIN_ID");
+  if (!env.ANET_TRANSACTION_KEY) out.push("ANET_TRANSACTION_KEY");
+  if (!kvReady(env)) out.push(env.ORDERS ? "ORDERS (it is a plain variable; it must be a KV namespace binding)" : "ORDERS (KV namespace binding)");
+  if (!env.TURNSTILE_SECRET_KEY) out.push("TURNSTILE_SECRET_KEY");
+  return out;
+}
 
 export async function onRequestPost({ request, env }) {
   let input;
@@ -31,8 +49,15 @@ export async function onRequestPost({ request, env }) {
   }
 
   const anet = anetConfig(env);
-  if (!anet || !env.ANET_API_LOGIN_ID || !env.ANET_TRANSACTION_KEY || !env.ORDERS || !env.TURNSTILE_SECRET_KEY) {
-    log({ outcome: "unavailable", reason: "not-configured", product: product.id });
+  const missing = missingSettings(env, anet);
+  if (missing.length) {
+    log({ outcome: "unavailable", reason: "not-configured", missing, product: product.id });
+    // Tell Pro Link, but only for a visitor who passed Turnstile: a bare POST can't trigger email.
+    if (env.TURNSTILE_SECRET_KEY && (await verifyTurnstile(env.TURNSTILE_SECRET_KEY, input["cf-turnstile-response"])).ok) {
+      await sendAlert(env, "start-not-configured", "Checkout is switched off: settings missing",
+        [`Someone tried to order the ${product.name}, but these Cloudflare Pages settings are missing or invalid: ${missing.join("; ")}.`,
+          "Customers see \"Online ordering isn't available right now\". Changed settings apply from the next deployment."]);
+    }
     return json(503, { ok: false, message: UNAVAILABLE });
   }
 
@@ -42,6 +67,19 @@ export async function onRequestPost({ request, env }) {
     return json(400, { ok: false, field: "turnstile", message: "Please complete the security check again, then continue." });
   }
 
+  try {
+    return await startOrder(request, env, input, product, anet);
+  } catch (e) {
+    const detail = cleanLine(e && e.name ? `${e.name}: ${e.message}` : String(e), 300);
+    log({ outcome: "error", reason: "exception", detail: detail.slice(0, 160), product: product.id });
+    await sendAlert(env, "start-exception", "Checkout failed before the payment page",
+      [`The order form's request failed inside /api/checkout/start (mode: ${anet.mode}): ${detail}`,
+        `Customers see "${START_FAILED}" Details: Cloudflare Pages > Functions > real-time logs.`]);
+    return json(500, { ok: false, message: START_FAILED });
+  }
+}
+
+async function startOrder(request, env, input, product, anet) {
   const now = nowIso();
   const ip = clientIp(request);
   let orderId = newOrderId(product.orderPrefix);
@@ -80,7 +118,7 @@ export async function onRequestPost({ request, env }) {
       "Checkout can't create payment pages",
       [`Authorize.net refused the hosted-payment request (codes: ${(pay.codes || []).join(", ") || "none"}; mode: ${anet.mode}).`,
         "Customers see \"we couldn't start the secure payment\". Check ANET_API_LOGIN_ID / ANET_TRANSACTION_KEY / ANET_ENV in Cloudflare Pages."]);
-    return json(502, { ok: false, message: "We couldn't start the secure payment. Please try again, or call 1-800-890-6133." });
+    return json(502, { ok: false, message: START_FAILED });
   }
 
   try {
@@ -89,7 +127,7 @@ export async function onRequestPost({ request, env }) {
     }, KV_TTL_PENDING);
   } catch (e) {
     log({ outcome: "error", reason: "kv-put", product: product.id, order: orderId });
-    return json(503, { ok: false, message: "We couldn't start the secure payment. Please try again, or call 1-800-890-6133." });
+    return json(503, { ok: false, message: START_FAILED });
   }
 
   log({ outcome: "token", product: product.id, order: orderId, mode: anet.mode });

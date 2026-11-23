@@ -360,6 +360,13 @@ export async function verifyAnetSignature(signatureKey, rawBytes, header) {
 // --------------------------------------------------------------------------
 // Orders in KV ("order:<id>")
 // --------------------------------------------------------------------------
+/** True when ORDERS is a usable Workers KV binding: not missing, and not a plain-text variable that
+ *  happens to be named ORDERS (which would pass a truthiness check and then crash on .get). */
+export function kvReady(env) {
+  const kv = env && env.ORDERS;
+  return !!kv && typeof kv.get === "function" && typeof kv.put === "function";
+}
+
 export async function getOrder(env, id) {
   return env.ORDERS.get(`order:${id}`, "json");
 }
@@ -371,7 +378,9 @@ export async function putOrder(env, id, rec, ttl) {
 // --------------------------------------------------------------------------
 // Failure alerts to Pro Link (Microsoft Graph, the contact form's app + mailbox).
 // Best effort, never throws; one email per tag per 6 hours (KV-deduped) so
-// Authorize.net's retries can't flood the inbox.
+// Authorize.net's retries can't flood the inbox. If KV itself is the problem the
+// alert still goes out, without de-duplication: every caller sits behind a solved
+// Turnstile check or a verified Authorize.net signature, so it can't be flooded.
 // --------------------------------------------------------------------------
 function esc(s) {
   return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -379,10 +388,12 @@ function esc(s) {
 
 export async function sendAlert(env, tag, subject, lines) {
   try {
-    if (env.ORDERS) {
+    if (kvReady(env)) {
       const k = `alert:${tag}`;
-      if (await env.ORDERS.get(k)) return false;
-      await env.ORDERS.put(k, "1", { expirationTtl: 6 * 3600 });
+      try {
+        if (await env.ORDERS.get(k)) return false;
+        await env.ORDERS.put(k, "1", { expirationTtl: 6 * 3600 });
+      } catch (e) { /* KV unavailable: send anyway (see above) */ }
     }
     const to = env.CHECKOUT_ALERT_TO || env.LEAD_NOTIFY || env.SEND_FROM;
     if (!to || !env.MS_TENANT_ID || !env.MS_CLIENT_ID || !env.MS_CLIENT_SECRET || !env.SEND_FROM) {

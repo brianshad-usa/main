@@ -171,7 +171,11 @@
           }
           resetTurnstile();      // tokens are single-use; the next attempt needs a new one
           setBusy(false);
-          showError(j.message || ("Something went wrong. Please try again, or call " + PHONE + "."));
+          // No message = not our function's answer (a Cloudflare error or rate-limit page): show the
+          // status so a customer's call or a screenshot says what happened.
+          showError(j.message || (res.status === 429
+            ? "Too many attempts in a short time. Please wait a minute, then try again, or call " + PHONE + "."
+            : "Something went wrong (error " + res.status + "). Please try again, or call " + PHONE + "."));
           if (j.field) markField(j.field);
           ga("event", "checkout_error", { reason: j.field || ("server_" + res.status), product: product });
         });

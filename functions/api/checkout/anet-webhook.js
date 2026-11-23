@@ -30,7 +30,7 @@
  */
 import {
   json, log, nowIso, anetConfig, transactionDetails, verifyAnetSignature, validate, paymentState,
-  getOrder, putOrder, sendAlert, KV_TTL_PAID,
+  getOrder, putOrder, sendAlert, kvReady, KV_TTL_PAID,
 } from "../../_lib/checkout/core.js";
 import { productByOrderId } from "../../_lib/checkout/products.js";
 import { githubIssueHandoff } from "../../_lib/checkout/github.js";
@@ -74,10 +74,10 @@ export async function onRequestPost({ request, env }) {
   if (!/^[0-9]{1,20}$/.test(transId)) return json(200, { ok: true, ignored: "no-transaction-id" });
 
   const anet = anetConfig(env);
-  if (!anet || !env.ANET_API_LOGIN_ID || !env.ANET_TRANSACTION_KEY || !env.ORDERS) {
+  if (!anet || !env.ANET_API_LOGIN_ID || !env.ANET_TRANSACTION_KEY || !kvReady(env)) {
     log({ outcome: "error", reason: "not-configured", trans: transId });
     await sendAlert(env, "webhook-not-configured", "Payment webhook is not configured",
-      [`A payment notification arrived (transaction ${transId}) but ANET_ENV / ANET_API_LOGIN_ID / ANET_TRANSACTION_KEY or the ORDERS KV binding is missing in Cloudflare Pages.`]);
+      [`A payment notification arrived (transaction ${transId}) but ANET_ENV / ANET_API_LOGIN_ID / ANET_TRANSACTION_KEY or the ORDERS KV binding is missing in Cloudflare Pages (ORDERS must be a KV namespace binding, not a variable).`]);
     return json(500, { ok: false });
   }
 

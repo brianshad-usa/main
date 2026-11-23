@@ -1652,3 +1652,12 @@ html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline 
   .pl-profile-work { margin-top: 0; }
   .pl-profile-about { margin-top: 16px; }
 }
+
+/* 19. LAUNCH QA FIXES (2026-11-23) ------------------------------------------------------------------------------------
+   The stats band on the older service pages (co-managed, help desk, outsourced, pricing, M365, network, how-to-choose)
+   sets 2.4rem figures in two columns; on a 320 px phone "24/7/365" was wider than its column and the page scrolled
+   sideways by 6 px. Their inline <style> loads after this file, hence the html body prefix. */
+@media (max-width: 480px) {
+  html body .stats-band { padding-left: 20px; padding-right: 20px; }
+  html body .stats-band .sb-stat .sb-num { font-size: clamp(1.6rem, 9vw, 2.4rem); }
+}
