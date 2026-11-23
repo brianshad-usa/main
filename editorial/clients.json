@@ -1,9 +1,7 @@
 {
- "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | past | project (Current client / Past engagement / Project engagement) or null when unverified. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' stays null until the owner gives final approval of names and logos; golive_check.py fails until then.",
- "approved": null,
- "portfolio_review": [
-  "R15"
- ],
+ "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | past | project (Current client / Past engagement / Project engagement) or null when unverified. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' records the owner's final approval of names and logos (2026-11-23). 'logo' points to a file in assets/clients/, taken from the client's own website (an archived copy where the site is gone); clients without a logo keep a text name plate.",
+ "approved": "2026-11-23: client names (naming permission held for every client) and logos (taken from each client's own website) approved by the owner",
+ "portfolio_review": [],
  "order": [
   "lisi-aerospace",
   "cunico",
@@ -88,7 +86,12 @@
    "legacy_id": "5-lisi-aerospace",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/lisi-aerospace.webp",
+    "width": 223,
+    "height": 96,
+    "source": "parent company site (lisi-aerospace.com unreachable)"
+   },
    "summary": "LISI Aerospace is an international aerospace manufacturing organization specializing in advanced fastening systems, assembly technologies and precision structural components.",
    "group": "manufacturing"
   },
@@ -110,13 +113,18 @@
    "legacy_id": "1-cunico-corp",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/cunico.webp",
+    "width": 172,
+    "height": 47,
+    "source": "cunicocorp.com logo, archived copy (live site blocks automated access)"
+   },
    "summary": "Cunico Corporation specializes in the engineering and manufacturing of mission-critical valves, manifolds and fluid control components for naval defense and marine applications.",
    "group": "manufacturing"
   },
   "philip-morris-international": {
    "name": "Philip Morris International",
-   "plate_sub": "PMI",
+   "plate_sub": null,
    "industry": "Multinational Consumer Products",
    "text": "supplied",
    "description": "Philip Morris International is a publicly traded multinational corporation with extensive global operations across manufacturing, research, product development and distribution. The organization has also pursued diversification into pharmaceutical and inhalation technologies, including its acquisition of respiratory drug development company OtiTopic in 2021.",
@@ -128,7 +136,12 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/philip-morris-international.webp",
+    "width": 419,
+    "height": 96,
+    "source": "pmi.com"
+   },
    "summary": "Philip Morris International is a publicly traded multinational corporation with global operations across manufacturing, research, product development and distribution.",
    "group": "consumer"
   },
@@ -147,7 +160,12 @@
    "legacy_id": "7-m13",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/m13.webp",
+    "width": 197,
+    "height": 96,
+    "source": "m13.co"
+   },
    "summary": "M13 is a venture capital firm focused on investing in and accelerating innovative technology companies.",
    "group": "investment"
   },
@@ -167,7 +185,12 @@
    "legacy_id": "4-fralock-holdings",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/fralock.webp",
+    "width": 316,
+    "height": 33,
+    "source": "fralock.com"
+   },
    "summary": "Fralock specializes in the engineering and manufacturing of advanced materials, high-performance components and precision assemblies.",
    "group": "manufacturing"
   },
@@ -189,7 +212,12 @@
    "legacy_id": "8-veev-spirits",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/veev-spirits.webp",
+    "width": 244,
+    "height": 57,
+    "source": "veevlife.com's own logo file (site retired, file still hosted)"
+   },
    "summary": "VEEV Spirits introduced an innovative portfolio of premium spirits and organic ready-to-drink cocktails.",
    "group": "consumer"
   },
@@ -208,7 +236,12 @@
    "legacy_id": "11-optical-zonu",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/optical-zonu.webp",
+    "width": 195,
+    "height": 96,
+    "source": "opticalzonu.com"
+   },
    "summary": "Optical Zonu Corporation is a specialized technology manufacturer focused on advanced fiber-optic communications and radio frequency transmission systems.",
    "group": "manufacturing"
   },
@@ -225,7 +258,12 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/cochise-capital.webp",
+    "width": 232,
+    "height": 78,
+    "source": "cochisecapital.com"
+   },
    "summary": "Cochise Capital is a Los Angeles-based private investment firm specializing in multifamily investments, property development and value-add real estate opportunities.",
    "group": "investment"
   },
@@ -245,7 +283,12 @@
    "legacy_id": "2-crr-incorporated",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/crr.webp",
+    "width": 309,
+    "height": 96,
+    "source": "crrwasteservices.com"
+   },
    "summary": "CR&R Environmental Services is an established environmental services organization specializing in waste collection, recycling, resource recovery and sustainable waste management.",
    "group": "logistics"
   },
@@ -284,7 +327,12 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/otitopic.webp",
+    "width": 133,
+    "height": 96,
+    "source": "otitopic.com logo, archived copy (site retired)"
+   },
    "summary": "OtiTopic was a pharmaceutical research and development company specializing in inhaled therapeutic technologies.",
    "group": "healthcare"
   },
@@ -306,7 +354,12 @@
    "legacy_id": "3-fsc-lighting",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/fsc-lighting.webp",
+    "width": 178,
+    "height": 65,
+    "source": "fsclighting.com"
+   },
    "summary": "FSC Lighting is a California-based manufacturer specializing in energy-efficient commercial and industrial lighting technologies.",
    "group": "manufacturing"
   },
@@ -325,7 +378,12 @@
    "legacy_id": "6-hallmark-lighting",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/hallmark-lighting.webp",
+    "width": 256,
+    "height": 96,
+    "source": "hallmarklighting.com logo, archived copy (site retired)"
+   },
    "summary": "Hallmark Lighting has a longstanding history of designing and manufacturing custom lighting solutions for the upscale hospitality industry.",
    "group": "manufacturing"
   },
@@ -342,7 +400,12 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/myx-fusions.webp",
+    "width": 151,
+    "height": 90,
+    "source": "myxfusions.com"
+   },
    "summary": "MYX Fusions is a beverage brand known for its fruit-infused Moscato wines and distinctive approach to consumer marketing.",
    "group": "consumer"
   },
@@ -363,7 +426,12 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/beverly-hills-plaza.webp",
+    "width": 119,
+    "height": 96,
+    "source": "beverlyhillsplazahotel.com"
+   },
    "summary": "Beverly Hills Plaza Hotel & Spa is an upscale boutique hospitality property on Wilshire Boulevard, serving leisure travelers, business professionals and extended-stay guests.",
    "group": "real-estate"
   },
@@ -386,7 +454,12 @@
    "legacy_id": "13-cookes-crating",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/cookes-crating.webp",
+    "width": 96,
+    "height": 96,
+    "source": "cookescrating.com"
+   },
    "summary": "Cooke’s Crating is a fine art transportation, storage and installation company serving museums, galleries, collectors and cultural institutions internationally.",
    "group": "logistics"
   },
@@ -403,7 +476,12 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/optimus-property-management.webp",
+    "width": 369,
+    "height": 96,
+    "source": "opminc.com"
+   },
    "summary": "Optimus Property Management is a Los Angeles-based real estate management organization specializing in residential and commercial properties.",
    "group": "real-estate"
   },
@@ -421,7 +499,12 @@
    "legacy_id": "12-global-garden",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/global-garden.webp",
+    "width": 733,
+    "height": 96,
+    "source": "globalgarden.co"
+   },
    "summary": "Global Garden is a North American wholesale distributor specializing in advanced horticultural and controlled-environment agriculture solutions.",
    "group": "logistics"
   },
@@ -439,7 +522,12 @@
    "legacy_id": "9-waverly-school",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/waverly-school.webp",
+    "width": 246,
+    "height": 96,
+    "source": "thewaverlyschool.org"
+   },
    "summary": "The Waverly School is an independent, accredited educational institution in Pasadena, California, serving students from preschool through 12th grade.",
    "group": "education-legal"
   },
@@ -461,7 +549,12 @@
    "legacy_id": "10-snitzer-law",
    "review": [],
    "include": true,
-   "logo": null,
+   "logo": {
+    "src": "/assets/clients/snitzer-law.webp",
+    "width": 276,
+    "height": 68,
+    "source": "the firm's site logo, archived copy (site retired)"
+   },
    "summary": "The Law Offices of Alan B. Snitzer is an established California legal practice specializing in workers’ compensation and personal injury law.",
    "group": "education-legal"
   }

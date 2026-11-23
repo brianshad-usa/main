@@ -1501,7 +1501,10 @@ html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline 
 .pl-clients-grid a:hover { background: var(--mist); }
 .pl-clients-grid a:hover .pl-client-name { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .pl-client-name { font-family: var(--font-title); font-weight: 650; font-size: 1.22rem; line-height: 1.25; letter-spacing: -.015em; color: var(--ink); }
-.pl-client-name img, .pl-nameplate img { max-height: 38px; width: auto; filter: grayscale(1) contrast(1.1); opacity: .82; }
+.pl-client-name img, .pl-nameplate img { display: block; max-height: 38px; max-width: 100%; width: auto; height: auto; filter: grayscale(1) contrast(1.1); opacity: .82; }
+.pl-nameplate img { max-height: 56px; }        /* client logos (assets/clients/), one size rule for all */
+.pl-client-name img { max-height: 42px; }
+.pl-nameplate img + small { margin-top: 10px; }
 .pl-client-sub { margin-top: 3px; font-size: .84rem; color: var(--steel); }
 .pl-client-industry { margin-top: 10px; font-size: .88rem; line-height: 1.45; color: var(--text-muted); }
 .pl-client-status { margin-top: auto; padding-top: 14px; font-size: .8rem; line-height: 1.5; color: var(--text-muted); }
