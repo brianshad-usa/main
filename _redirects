@@ -16,9 +16,6 @@
 # These runs were announced on LinkedIn but never deployed (push blocked by
 # branch protection), so their dated URLs 404. Redirect to the blog index so
 # the shared LinkedIn links resolve. No real posts exist on these dates.
-/blog/2026-10-15-*    /blog/    301
-/blog/2026-10-17-*    /blog/    301
-/blog/2026-10-19-*    /blog/    301
 
 # ---- Core pages ----
 /index.html                                /                                    301
@@ -80,7 +77,6 @@
 /it-help-desk.html                         /it-help-desk                        301
 /co-managed-it-services.html               /co-managed-it-services              301
 /co-managed-it                             /co-managed-it-services              301
-/co-managed-it/*                           /co-managed-it-services              301
 
 # ---- Case studies ----
 /case-studies.html                         /case-studies                        301
@@ -127,37 +123,25 @@
 # URGENT: /helpdesk-it-support-los-angeles was renamed to /it-help-desk with no
 # redirect; it 404'd for ~2 weeks while paid ads pointed at it (asset disapproved).
 /helpdesk-it-support-los-angeles     /it-help-desk                        301
-/helpdesk-it-support-los-angeles/*   /it-help-desk                        301
 
 # ---- Legacy vertical / lead-gen paths from the old site (old backlinks/GBP) ----
 # No dedicated hospitality page exists, so /hospitality-companies/ -> general MSP page.
 /it-consultation                     /contact                             301
-/it-consultation/*                   /contact                             301
 /sign-up-now                         /contact                             301
-/sign-up-now/*                       /contact                             301
 /office-365-migration-service        /microsoft-365-support-los-angeles   301
-/office-365-migration-service/*      /microsoft-365-support-los-angeles   301
 /entertainment-companies             /entertainment-it-services           301
-/entertainment-companies/*           /entertainment-it-services           301
 /hospitality-companies               /managed-it-services                 301
-/hospitality-companies/*             /managed-it-services                 301
 /manufacturing-companies             /manufacturing-it-services           301
-/manufacturing-companies/*           /manufacturing-it-services           301
 /healthcare-institutions             /healthcare-it-services              301
-/healthcare-institutions/*           /healthcare-it-services              301
 
 # ---- Legacy vertical pages, second wave (2026-08-07) — found via Google Ads
 # asset sweep: these pages died in the restructure while ad-group sitelinks and
 # possibly old backlinks still referenced them. Bare + splat variants both
 # needed (Pages splats do not match the bare path).
 /restaurants-bars-and-clubs          /entertainment-it-services           301
-/restaurants-bars-and-clubs/*        /entertainment-it-services           301
 /socal-startups                      /technology-it-services              301
-/socal-startups/*                    /technology-it-services              301
 /cloud-and-infrastructure            /cloud-services                      301
-/cloud-and-infrastructure/*          /cloud-services                      301
 /cloud-management-services           /cloud-services                      301
-/cloud-management-services/*         /cloud-services                      301
 
 
 
@@ -169,59 +153,20 @@
 # From the Wayback archive of the old site; compact prefix families (splats)
 # collapse whole old sections. Obscure/probe URLs are left to 404.
 
-/managed-it-services-2/cloud-services/*        /cloud-services                      301
-/managed-it-services-2/cyber-security-services/* /cybersecurity-services              301
-/managed-it-services-2/it-support/*            /it-help-desk                        301
-/managed-it-services-2/*                       /managed-it-services                 301
-/solutions/*                                   /managed-it-services                 301
-/2023/*                                        /blog                                301
-/2024/*                                        /blog                                301
-/author/*                                      /blog                                301
-/category/*                                    /blog                                301
-/helpdesk*                                     /it-help-desk                        301
-/24*                                           /it-help-desk                        301
-/desktop-support*                              /it-help-desk                        301
-/remote-*                                      /it-help-desk                        301
 /network-security                              /network-security-services           301
 /network-security/                             /network-security-services           301
 /network-monitoring                            /cybersecurity-services              301
 /network-monitoring/                           /cybersecurity-services              301
 /cybersecurity                                 /cybersecurity-services              301
 /cybersecurity/                                /cybersecurity-services              301
-/business-cloud*                               /cloud-services                      301
-/cloud-migration*                              /cloud-services                      301
-/migration-to-cloud*                           /cloud-services                      301
-/virtualiz*                                    /cloud-services                      301
-/server-*                                      /cloud-services                      301
-/disaster-recovery*                            /backup-disaster-recovery            301
-/data-recovery*                                /backup-disaster-recovery            301
-/office-365*                                   /microsoft-365-support-los-angeles   301
-/microsoft-exchange*                           /microsoft-365-support-los-angeles   301
 /email-messaging                               /microsoft-365-support-los-angeles   301
 /email-messaging/                              /microsoft-365-support-los-angeles   301
 /email-office-365-management                   /microsoft-365-support-los-angeles   301
 /email-office-365-management/                  /microsoft-365-support-los-angeles   301
-/artificial-intelligence*                      /ai-automation-services              301
-/about-us*                                     /about                               301
-/contact-us*                                   /contact                             301
-/free-managed-it-consultation*                 /contact                             301
-/privacy-policy*                               /privacy                             301
-/legal-services*                               /law-firm-it-services-los-angeles    301
-/educational-institution*                      /education-it-services               301
 /manufacturing                                 /manufacturing-it-services           301
 /manufacturing/                                /manufacturing-it-services           301
 /entertainment                                 /entertainment-it-services           301
 /entertainment/                                /entertainment-it-services           301
-/it-services*                                  /managed-it-services                 301
-/it-consulting*                                /managed-it-services                 301
-/complete-managed*                             /managed-it-services                 301
-/application-*                                 /managed-it-services                 301
-/hardware-*                                    /managed-it-services                 301
-/hosted-*                                      /managed-it-services                 301
-/user-profile*                                 /managed-it-services                 301
-/domain-controller*                            /managed-it-services                 301
-/os-install*                                   /managed-it-services                 301
-/troubleshooting*                              /managed-it-services                 301
 
 # ===========================================================================
 # POLICY — never rename or delete a published URL without shipping a 301 to its
@@ -236,3 +181,65 @@
 # 2026-11-22 consolidated into the Copilot rollout article (iteration 6)
 /blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
 /blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-.html    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
+
+# ===========================================================================
+# DYNAMIC RULES (splats / placeholders) -- keep them all BELOW every static rule.
+# Cloudflare Pages: 2,000 static + 100 dynamic rules, static first. With dynamic rules mixed in
+# above static ones, everything after the 100th rule was silently ignored (found 2026-11-22: 62
+# rules, live site included). chrome/golive_check.py enforces the order and the limits.
+# ===========================================================================
+/blog/2026-10-15-*    /blog/    301
+/blog/2026-10-17-*    /blog/    301
+/blog/2026-10-19-*    /blog/    301
+/co-managed-it/*                           /co-managed-it-services              301
+/helpdesk-it-support-los-angeles/*   /it-help-desk                        301
+/it-consultation/*                   /contact                             301
+/sign-up-now/*                       /contact                             301
+/office-365-migration-service/*      /microsoft-365-support-los-angeles   301
+/entertainment-companies/*           /entertainment-it-services           301
+/hospitality-companies/*             /managed-it-services                 301
+/manufacturing-companies/*           /manufacturing-it-services           301
+/healthcare-institutions/*           /healthcare-it-services              301
+/restaurants-bars-and-clubs/*        /entertainment-it-services           301
+/socal-startups/*                    /technology-it-services              301
+/cloud-and-infrastructure/*          /cloud-services                      301
+/cloud-management-services/*         /cloud-services                      301
+/managed-it-services-2/cloud-services/*        /cloud-services                      301
+/managed-it-services-2/cyber-security-services/* /cybersecurity-services              301
+/managed-it-services-2/it-support/*            /it-help-desk                        301
+/managed-it-services-2/*                       /managed-it-services                 301
+/solutions/*                                   /managed-it-services                 301
+/2023/*                                        /blog                                301
+/2024/*                                        /blog                                301
+/author/*                                      /blog                                301
+/category/*                                    /blog                                301
+/helpdesk*                                     /it-help-desk                        301
+/24*                                           /it-help-desk                        301
+/desktop-support*                              /it-help-desk                        301
+/remote-*                                      /it-help-desk                        301
+/business-cloud*                               /cloud-services                      301
+/cloud-migration*                              /cloud-services                      301
+/migration-to-cloud*                           /cloud-services                      301
+/virtualiz*                                    /cloud-services                      301
+/server-*                                      /cloud-services                      301
+/disaster-recovery*                            /backup-disaster-recovery            301
+/data-recovery*                                /backup-disaster-recovery            301
+/office-365*                                   /microsoft-365-support-los-angeles   301
+/microsoft-exchange*                           /microsoft-365-support-los-angeles   301
+/artificial-intelligence*                      /ai-automation-services              301
+/about-us*                                     /about                               301
+/contact-us*                                   /contact                             301
+/free-managed-it-consultation*                 /contact                             301
+/privacy-policy*                               /privacy                             301
+/legal-services*                               /law-firm-it-services-los-angeles    301
+/educational-institution*                      /education-it-services               301
+/it-services*                                  /managed-it-services                 301
+/it-consulting*                                /managed-it-services                 301
+/complete-managed*                             /managed-it-services                 301
+/application-*                                 /managed-it-services                 301
+/hardware-*                                    /managed-it-services                 301
+/hosted-*                                      /managed-it-services                 301
+/user-profile*                                 /managed-it-services                 301
+/domain-controller*                            /managed-it-services                 301
+/os-install*                                   /managed-it-services                 301
+/troubleshooting*                              /managed-it-services                 301

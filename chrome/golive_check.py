@@ -22,7 +22,9 @@ Checks:
       canonical; indexable pages missing from the sitemap are listed too;
   13. every production URL (origin/main pages, sitemap and _redirects sources) still resolves on this branch,
       directly or through exactly one redirect (Cloudflare Pages rules: _redirects first, then .html and
-      trailing-slash normalization, each a hop);
+      trailing-slash normalization, each a hop); and _redirects keeps every static rule above the first dynamic
+      (splat/placeholder) rule, within Cloudflare's 2,000 static / 100 dynamic / 1,000-character limits (with
+      dynamic rules mixed in higher up, Cloudflare silently ignored everything after rule 100);
   14. no staging labels in static files ("STAGING", the "Design review" panel, *.pages.dev preview links).
 (8, the CR&R hold, was retired on 2026-11-22: Brian approved CR&R for the portfolio and its own case study.)
 """
@@ -284,6 +286,22 @@ for loc in locs:
 for path, (rp, t, can) in sorted(page_info.items()):
     if rp != "404.html" and indexable(t) and can == SITE + path and SITE + path not in seen:
         problems.append("12 indexable page missing from sitemap.xml: %s" % (SITE + path))
+
+seen_dynamic = None
+n_static = n_dynamic = 0
+for i, (src, target, code) in enumerate(redirect_rules(read(os.path.join(ROOT, "_redirects"))), 1):
+    if "*" in src or re.search(r":[A-Za-z]", src):
+        n_dynamic += 1
+        seen_dynamic = seen_dynamic or (i, src)
+    else:
+        n_static += 1
+        if seen_dynamic:
+            problems.append("13 _redirects rule %d (%s) is static but comes after dynamic rule %d (%s): keep static rules first"
+                            % (i, src, seen_dynamic[0], seen_dynamic[1]))
+    if len("%s %s %s" % (src, target, code)) > 1000:
+        problems.append("13 _redirects rule %d is longer than 1,000 characters" % i)
+if n_static > 2000 or n_dynamic > 100:
+    problems.append("13 _redirects has %d static and %d dynamic rules (Cloudflare limit: 2,000 and 100)" % (n_static, n_dynamic))
 
 try:
     r = subprocess.run(["git", "-C", ROOT, "ls-tree", "-r", "--name-only", "origin/main"], capture_output=True, text=True, encoding="utf-8")
