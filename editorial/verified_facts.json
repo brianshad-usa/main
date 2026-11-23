@@ -1,8 +1,8 @@
 {
  "_comment": "Runtime mirror of the owner-confirmed facts in C:\\googleads\\cmo\\verified-facts.json. GitHub Actions cannot see that repo, so the publishable subset is mirrored here. THIS IS THE ONLY SOURCE OF NUMBERS the automated social pipeline may cite about Pro Link Systems. If a claim is not in this file and has no named external primary source in the brief, the post must make its argument without a number. Sync direction is one-way: cmo/verified-facts.json -> here, by hand, after Brian confirms.",
  "version": 1,
- "synced_from": "cmo/verified-facts.json 2026-11-10",
- "last_synced": "2026-11-10",
+ "synced_from": "cmo/verified-facts.json 2026-11-23",
+ "last_synced": "2026-11-23",
  "citable": [
   {
    "id": "F001",
@@ -29,7 +29,7 @@
   },
   {
    "id": "F007",
-   "claim": "Phone calls are answered live by the in-house team — no phone tree, no hold queue."
+   "claim": "During business hours, calls are answered live by our in-house, US-based team; after hours, managed-service clients press 1 to reach the on-call help desk."
   },
   {
    "id": "F008",
@@ -76,12 +76,12 @@
   },
   {
    "id": "F010",
-   "claim": "The Waverly School — 23-year client.",
+   "claim": "The Waverly School \u2014 client since 2003.",
    "reason": "Named-client mention is permitted by the CMO permission model but is deliberately withheld from UNREVIEWED automated posting. Use only in human-reviewed assets."
   },
   {
    "id": "F011",
-   "claim": "Law Offices of Alan B. Snitzer — 18-year client.",
+   "claim": "Law Offices of Alan B. Snitzer \u2014 client since 2006.",
    "reason": "Same as F010. Permission covers mention, not automated syndication."
   }
  ],
