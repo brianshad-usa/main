@@ -1,5 +1,5 @@
 {
- "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home page revised 2026-11-22 for iteration 5): never alphabetize. 'text' says whether a description was supplied by the owner or is a proposal awaiting review. 'include': false removes a client everywhere. 'approved' stays null until the owner gives final approval of names and logos; golive_check.py fails until then.",
+ "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | past | project (Current client / Past engagement / Project engagement) or null when unverified. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' stays null until the owner gives final approval of names and logos; golive_check.py fails until then.",
  "approved": null,
  "portfolio_review": [
   "R7",
@@ -11,7 +11,6 @@
   "philip-morris-international",
   "m13",
   "fralock",
-  "marriott-hotels",
   "veev-spirits",
   "optical-zonu",
   "cochise-capital",
@@ -33,10 +32,43 @@
   "cunico",
   "m13",
   "fralock",
+  "veev-spirits",
   "optical-zonu",
-  "optimus-property-management",
-  "cookes-crating",
-  "waverly-school"
+  "cochise-capital",
+  "fsc-lighting"
+ ],
+ "groups": [
+  {
+   "id": "manufacturing",
+   "label": "Aerospace, Defense & Manufacturing"
+  },
+  {
+   "id": "investment",
+   "label": "Investment & Venture Capital"
+  },
+  {
+   "id": "consumer",
+   "label": "Consumer Brands"
+  },
+  {
+   "id": "healthcare",
+   "label": "Healthcare & Life Sciences"
+  },
+  {
+   "id": "real-estate",
+   "label": "Real Estate & Hospitality"
+  },
+  {
+   "id": "logistics",
+   "label": "Logistics, Distribution & Environmental Services"
+  },
+  {
+   "id": "education-legal",
+   "label": "Education & Legal"
+  }
+ ],
+ "removed": [
+  "marriott-hotels"
  ],
  "clients": {
   "lisi-aerospace": {
@@ -59,12 +91,14 @@
     "R2"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "LISI Aerospace is an international aerospace manufacturing organization specializing in advanced fastening systems, assembly technologies and precision structural components.",
+   "group": "manufacturing"
   },
   "cunico": {
-   "name": "Cunico Corporation / BWX Technologies",
+   "name": "Cunico Corporation",
    "short": "Cunico",
-   "home_name": "Cunico Corporation / BWXT",
+   "home_name": "Cunico Corporation",
    "case_name": "Cunico Corporation",
    "plate_sub": "A BWX Technologies company",
    "industry": "Aerospace, Defense & Precision Manufacturing",
@@ -74,17 +108,14 @@
    "status": "current",
    "period": "Since May 2012",
    "engagement": "Outsourced IT and technology governance across Cunico’s sites, through its integration into BWXT.",
-   "metric": [
-    "13+ yrs",
-    "continuously renewed partnership"
-   ],
+   "metric": null,
    "case": "cunico",
    "legacy_id": "1-cunico-corp",
-   "review": [
-    "R1"
-   ],
+   "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Cunico Corporation specializes in the engineering and manufacturing of mission-critical valves, manifolds and fluid control components for naval defense and marine applications.",
+   "group": "manufacturing"
   },
   "philip-morris-international": {
    "name": "Philip Morris International",
@@ -98,9 +129,13 @@
    "engagement": "Pro Link Systems participated in a project-based engagement involving Philip Morris International.",
    "metric": null,
    "case": null,
-   "review": [],
+   "review": [
+    "R20"
+   ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Philip Morris International is a publicly traded multinational corporation with global operations across manufacturing, research, product development and distribution.",
+   "group": "consumer"
   },
   "m13": {
    "name": "M13",
@@ -117,7 +152,9 @@
    "legacy_id": "7-m13",
    "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "M13 is a venture capital firm focused on investing in and accelerating innovative technology companies.",
+   "group": "investment"
   },
   "fralock": {
    "name": "Fralock Holdings",
@@ -135,29 +172,16 @@
    "legacy_id": "4-fralock-holdings",
    "review": [],
    "include": true,
-   "logo": null
-  },
-  "marriott-hotels": {
-   "name": "Marriott Hotels",
-   "industry": "Hospitality",
-   "text": "supplied",
-   "description": "Marriott Hotels is part of Marriott International, one of the world’s largest hospitality organizations, with a global portfolio spanning luxury hotels, resorts, full-service accommodations and extended-stay properties.",
-   "ownership": null,
-   "status": "project",
-   "period": null,
-   "engagement": "Pro Link Systems participated in a technology project involving a Marriott hotel property, adding to our experience within the hospitality sector.",
-   "metric": null,
-   "case": null,
-   "review": [],
-   "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Fralock specializes in the engineering and manufacturing of advanced materials, high-performance components and precision assemblies.",
+   "group": "manufacturing"
   },
   "veev-spirits": {
    "name": "VEEV Spirits",
    "industry": "Consumer Brands & Beverage Manufacturing",
-   "text": "supplied",
-   "description": "Founded by entrepreneurs Carter and Courtney Reum in 2007, VEEV Spirits introduced an innovative portfolio of premium spirits and organic ready-to-drink cocktails. The Los Angeles-based company established a national presence before being acquired by Luxco in 2016, marking a successful entrepreneurial exit in the competitive beverage industry.",
-   "ownership": null,
+   "text": "supplied; 'Founded' changed to 'Launched' (iteration 6) to match the July 2006 engagement start",
+   "description": "Launched by entrepreneurs Carter and Courtney Reum in 2007, VEEV Spirits introduced an innovative portfolio of premium spirits and organic ready-to-drink cocktails. The Los Angeles-based company established a national presence before being acquired by Luxco in 2016, marking a successful entrepreneurial exit in the competitive beverage industry.",
+   "ownership": "Acquired by Luxco in 2016.",
    "status": "past",
    "period": "July 2006 – September 2013",
    "years": "2006–2013",
@@ -168,11 +192,11 @@
    ],
    "case": "veev-spirits",
    "legacy_id": "8-veev-spirits",
-   "review": [
-    "R16"
-   ],
+   "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "VEEV Spirits introduced an innovative portfolio of premium spirits and organic ready-to-drink cocktails.",
+   "group": "consumer"
   },
   "optical-zonu": {
    "name": "Optical Zonu Corporation",
@@ -191,7 +215,9 @@
     "R10"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Optical Zonu Corporation is a specialized technology manufacturer focused on advanced fiber-optic communications and radio frequency transmission systems.",
+   "group": "manufacturing"
   },
   "cochise-capital": {
    "name": "Cochise Capital",
@@ -199,7 +225,7 @@
    "text": "supplied",
    "description": "Cochise Capital is a Los Angeles-based private investment firm founded by Mike Talla and Rex Licklider. With more than four decades of real estate investment experience and reported capital under management exceeding $1.2 billion, the firm specializes in multifamily investments, property development and value-add real estate opportunities across strategically selected coastal markets.",
    "ownership": null,
-   "status": null,
+   "status": "current",
    "period": null,
    "engagement": null,
    "metric": null,
@@ -208,7 +234,9 @@
     "R14"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Cochise Capital is a Los Angeles-based private investment firm specializing in multifamily investments, property development and value-add real estate opportunities.",
+   "group": "investment"
   },
   "crr": {
    "name": "CR&R Environmental Services",
@@ -217,18 +245,18 @@
    "text": "supplied",
    "description": "CR&R Environmental Services is an established environmental services organization specializing in waste collection, recycling, resource recovery and sustainable waste management. Through its extensive operational infrastructure and multiple business divisions, the company provides essential environmental services to residential, commercial, industrial and municipal customers.",
    "ownership": null,
-   "status": "historical",
+   "status": "past",
    "period": "December 2023 – April 2025",
    "years": "2023–2025",
-   "engagement": "De facto CIO: cybersecurity, cloud and network standards unified across divisions.",
+   "engagement": "Cybersecurity, Microsoft 365 and Azure, cloud migration and network architecture across divisions.",
    "metric": null,
    "case": "crr",
    "legacy_id": "2-crr-incorporated",
-   "review": [
-    "R3 · separate approval"
-   ],
+   "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "CR&R Environmental Services is an established environmental services organization specializing in waste collection, recycling, resource recovery and sustainable waste management.",
+   "group": "logistics"
   },
   "global-holdings": {
    "name": "Global Holdings",
@@ -236,7 +264,7 @@
    "text": "supplied",
    "description": "Global Holdings was a Southern California healthcare organization operating an extensive network of diagnostic medical imaging facilities, specializing in MRI, CT scanning and advanced radiological services. During its operations, the organization maintained 19 owned facilities and an extensive network of affiliated healthcare providers, delivering diagnostic imaging services across a complex, multi-location healthcare environment.",
    "ownership": "Dissolved in 2021, when its facilities were sold.",
-   "status": "historical",
+   "status": "past",
    "period": "12+ years, to 2021",
    "years": "12+ years, to 2021",
    "engagement": "Network, AWS imaging platform and secure patient portal, designed and operated by Pro Link Systems.",
@@ -250,24 +278,29 @@
     "R4"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Global Holdings was a Southern California healthcare organization operating a network of diagnostic medical imaging facilities, specializing in MRI, CT scanning and advanced radiological services.",
+   "group": "healthcare"
   },
   "otitopic": {
    "name": "OtiTopic",
    "industry": "Biotechnology & Pharmaceutical Research",
    "text": "supplied",
    "description": "Founded in 2012, OtiTopic was a pharmaceutical research and development company specializing in inhaled therapeutic technologies. Its research included patented drug delivery systems and the development of an investigational inhalable aspirin treatment intended for cardiovascular emergencies. In August 2021, OtiTopic was acquired by Philip Morris International as part of its expansion into pharmaceutical innovation.",
-   "ownership": null,
+   "ownership": "Acquired by Philip Morris International in August 2021.",
    "status": null,
    "period": null,
    "engagement": null,
    "metric": null,
    "case": null,
    "review": [
-    "R14"
+    "R14",
+    "R20"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "OtiTopic was a pharmaceutical research and development company specializing in inhaled therapeutic technologies.",
+   "group": "healthcare"
   },
   "fsc-lighting": {
    "name": "FSC Lighting",
@@ -287,7 +320,9 @@
    "legacy_id": "3-fsc-lighting",
    "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "FSC Lighting is a California-based manufacturer specializing in energy-efficient commercial and industrial lighting technologies.",
+   "group": "manufacturing"
   },
   "hallmark-lighting": {
    "name": "Hallmark Lighting",
@@ -302,11 +337,11 @@
    "metric": null,
    "case": "hallmark-lighting",
    "legacy_id": "6-hallmark-lighting",
-   "review": [
-    "R18"
-   ],
+   "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Hallmark Lighting has a longstanding history of designing and manufacturing custom lighting solutions for the upscale hospitality industry.",
+   "group": "manufacturing"
   },
   "myx-fusions": {
    "name": "MYX Fusions",
@@ -314,16 +349,18 @@
    "text": "supplied",
    "description": "MYX Fusions is a beverage brand known for its fruit-infused Moscato wines and distinctive approach to consumer marketing. Through its partnership with internationally recognized recording artist Nicki Minaj and entertainment entrepreneur Mona Scott-Young, the brand combined beverage innovation with popular culture, expanding its distribution into international markets.",
    "ownership": "A brand of MYX Beverage LLC.",
-   "status": null,
+   "status": "current",
    "period": null,
-   "engagement": null,
+   "engagement": "Microsoft 365 backup.",
    "metric": null,
    "case": null,
    "review": [
     "R14"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "MYX Fusions is a beverage brand known for its fruit-infused Moscato wines and distinctive approach to consumer marketing.",
+   "group": "consumer"
   },
   "beverly-hills-plaza": {
    "name": "Beverly Hills Plaza Hotel & Spa",
@@ -342,7 +379,9 @@
    "case": null,
    "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Beverly Hills Plaza Hotel & Spa is an upscale boutique hospitality property on Wilshire Boulevard, serving leisure travelers, business professionals and extended-stay guests.",
+   "group": "real-estate"
   },
   "cookes-crating": {
    "name": "Cooke’s Crating & Fine Arts Transportation",
@@ -354,7 +393,7 @@
    "ownership": null,
    "status": "current",
    "period": "For more than 3 years",
-   "engagement": "Moved off a former provider’s locked infrastructure with zero downtime, then modernized.",
+   "engagement": "Administrative control restored after a dispute with the previous IT provider; the environment migrated with zero downtime, then modernized.",
    "metric": [
     "5 days",
     "for the full migration"
@@ -365,7 +404,9 @@
     "R6"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Cooke’s Crating is a fine art transportation, storage and installation company serving museums, galleries, collectors and cultural institutions internationally.",
+   "group": "logistics"
   },
   "optimus-property-management": {
    "name": "Optimus Property Management",
@@ -373,16 +414,18 @@
    "text": "supplied",
    "description": "Established in 2007, Optimus Property Management is a Los Angeles-based real estate management organization specializing in residential and commercial properties. Its diverse portfolio encompasses multifamily communities, office buildings and retail centers, supported by comprehensive property operations, leasing, financial reporting and asset management services.",
    "ownership": null,
-   "status": null,
+   "status": "current",
    "period": null,
-   "engagement": null,
+   "engagement": "Microsoft 365 backup, plus Cloud PC and iPad onboarding.",
    "metric": null,
    "case": null,
    "review": [
     "R14"
    ],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Optimus Property Management is a Los Angeles-based real estate management organization specializing in residential and commercial properties.",
+   "group": "real-estate"
   },
   "global-garden": {
    "name": "Global Garden",
@@ -398,7 +441,9 @@
    "legacy_id": "12-global-garden",
    "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "Global Garden is a North American wholesale distributor specializing in advanced horticultural and controlled-environment agriculture solutions.",
+   "group": "logistics"
   },
   "waverly-school": {
    "name": "The Waverly School",
@@ -417,7 +462,9 @@
    "legacy_id": "9-waverly-school",
    "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "The Waverly School is an independent, accredited educational institution in Pasadena, California, serving students from preschool through 12th grade.",
+   "group": "education-legal"
   },
   "snitzer-law": {
    "name": "Law Offices of Alan B. Snitzer",
@@ -437,7 +484,9 @@
    "legacy_id": "10-snitzer-law",
    "review": [],
    "include": true,
-   "logo": null
+   "logo": null,
+   "summary": "The Law Offices of Alan B. Snitzer is an established California legal practice specializing in workers’ compensation and personal injury law.",
+   "group": "education-legal"
   }
  },
  "intro": {

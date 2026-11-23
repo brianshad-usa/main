@@ -95,19 +95,6 @@ def tenant_search(r):
     return out
 
 
-@scene(S("2026-08-13-t90-"), alt="A beam passing over a field of documents and lighting one of them")
-def permission_beam(r):
-    out = []
-    for i in range(3):
-        for j in range(7):
-            hot = (i, j) == (1, 4)
-            out.append(doc(168 + j * 128, 236 + i * 108, 66, 82, 2, None, "amber" if hot else "lo", .2, 1.7))
-    out.append(dot(600, 92, 12, "hi"))
-    out.append(poly([(600, 92), (340, 590), (940, 590)], "faint", 1.3, "rgba(255,255,255,.035)", None, True))
-    out.append(path("M600 92 L712 344", "amber", 2.4, "none", "8 8"))
-    return out
-
-
 @scene(S("2026-08-31-t99-"), alt="A vendor holding a key that opens a customer's data store")
 def vendor_key(r):
     out = [building(150, 200, 230, 350, 7, 3, "hi")]

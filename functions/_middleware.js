@@ -8,8 +8,9 @@
  *      (Cloudflare Pages > Settings > Variables and Secrets > Preview, set by Brian; never in code); no password
  *      configured = everything is refused (fail closed). 2026-11-21: Brian asked to remove the login, so
  *      REQUIRE_LOGIN is false and staging is viewable by anyone with the link (still never indexed).
- *   2. keeps search engines out: robots.txt disallows everything, every response gets X-Robots-Tag: noindex,
- *      and HTML pages get a robots noindex meta tag.
+ *   2. keeps search engines out: robots.txt disallows everything, every response gets one X-Robots-Tag: noindex,
+ *      and every HTML page ends up with exactly one robots meta tag, set to noindex (the page's own tag is
+ *      rewritten; one is added only when a page has none), so there are no conflicting directives.
  *   3. answers the lead form and the checkout APIs itself: no email to the inbox, no payment session, no order
  *      sent to the assessment agent.
  *   4. removes the analytics / advertising tags (Google tag: Ads + GA4, Microsoft UET, Hotjar, Clarity) from HTML
@@ -21,7 +22,8 @@ const REQUIRE_LOGIN = false;   // 2026-11-21 Brian: no login on staging; set tru
 const USER = "prolink";
 const TRACKING_SRC = /googletagmanager\.com|google-analytics\.com|bat\.bing\.net|clarity\.ms|hotjar\.com/i;
 const TRACKING_INLINE = /googletagmanager\.com|bat\.bing\.net|clarity\.ms|static\.hotjar\.com|hotjar|gtag\(\s*['"](?:js|config)['"]/i;
-const STUB = '<meta name="robots" content="noindex, nofollow"><script>window.dataLayer=[];' +
+const NOINDEX = "noindex, nofollow";
+const STUB = '<script>window.dataLayer=[];' +
   'window.gtag=function(){};window.uetq=[];window.clarity=function(){};window.hj=function(){};</script>';
 const RIBBON = '<div aria-hidden="true" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;' +
   'background:#9b1c1c;color:#fff;font:700 11px/1 system-ui,sans-serif;letter-spacing:.12em;padding:7px 9px;' +
@@ -35,7 +37,7 @@ const REVIEW_PANEL = `
   <button type="button" class="plr-toggle" aria-expanded="false" aria-controls="plr-body">Design review</button>
   <div class="plr-body" id="plr-body" hidden>
     <p class="plr-h">Compare this page</p>
-    <p class="plr-links"><a data-v="4" href="https://redesign-2026-v4.plsmain.pages.dev/">Iteration 4</a> &middot; <a data-v="3" href="https://redesign-2026-v3.plsmain.pages.dev/">Iteration 3</a> &middot; <a data-v="2" href="https://redesign-2026-v2.plsmain.pages.dev/">Iteration 2</a> &middot; <a data-v="1" href="https://redesign-2026-v1.plsmain.pages.dev/">Iteration 1</a></p>
+    <p class="plr-links"><a data-v="5" href="https://redesign-2026-v5.plsmain.pages.dev/">Iteration 5</a> &middot; <a data-v="4" href="https://redesign-2026-v4.plsmain.pages.dev/">Iteration 4</a> &middot;<a data-v="3" href="https://redesign-2026-v3.plsmain.pages.dev/">Iteration 3</a> &middot; <a data-v="2" href="https://redesign-2026-v2.plsmain.pages.dev/">Iteration 2</a> &middot; <a data-v="1" href="https://redesign-2026-v1.plsmain.pages.dev/">Iteration 1</a></p>
     <p class="plr-links"><a href="https://claude.ai/artifact/2ZvGhFzcjrKx5M8gR2wMLN" target="_blank" rel="noopener">Review notes</a></p>
   </div>
 </div>
@@ -130,9 +132,18 @@ export async function onRequest(context) {
   headers.set("Cache-Control", "no-store");
   const out = new Response(res.body, { status: res.status, statusText: res.statusText, headers });
   if (!(headers.get("Content-Type") || "").includes("text/html")) return out;
+  const robots = { seen: false };
   return new HTMLRewriter()
     .on("script", new ScriptFilter())
-    .on("head", { element(el) { el.prepend(STUB, { html: true }); } })
+    .on('meta[name="robots"]', { element(el) {
+      if (robots.seen) { el.remove(); return; }        // never two robots tags
+      robots.seen = true;
+      el.setAttribute("content", NOINDEX);
+    } })
+    .on("head", { element(el) {
+      el.prepend(STUB, { html: true });
+      el.onEndTag((end) => { if (!robots.seen) end.before('<meta name="robots" content="' + NOINDEX + '">', { html: true }); });
+    } })
     .on("body", { element(el) { el.append(RIBBON + REVIEW_PANEL, { html: true }); } })
     .transform(out);
 }

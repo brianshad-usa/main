@@ -112,15 +112,16 @@
 /waste-management-it-services.html         /waste-management-it-services        301
 
 # ---- Self-service apps: hub + one product page per app (CONVENTIONS "Self-service apps") ----
-/self-service.html                         /self-service                        301
+/self-service.html                         /m365-security-assessment            302
 /m365-security-assessment.html             /m365-security-assessment            301
 # While there is only ONE app (Brian 2026-11-20), the hub sends visitors straight to it. TEMPORARY (302,
-# never 301: browsers cache 301s for good). When app #2 launches, delete this line, remove the hub's
-# noindex and put /self-service back in sitemap.xml + llms.txt.
+# never 301: browsers cache 301s for good). When app #2 launches, delete this line, point /self-service.html
+# back to /self-service (301), remove the hub's noindex and put /self-service back in sitemap.xml + llms.txt.
+# (/self-service.html goes straight to the app meanwhile, so no visitor takes two hops.)
 /self-service                              /m365-security-assessment            302
 
 # ---- Duplicate blog post -> canonical (t5) version ----
-/blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html   301
+/blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre   301
 
 # ---- Restructure fixes (2026-08-06): renamed / removed pages -> current URLs ----
 # URGENT: /helpdesk-it-support-los-angeles was renamed to /it-help-desk with no
@@ -232,3 +233,6 @@
 # www -> apex is handled by a Cloudflare Redirect Rule (zone level), NOT here:
 # _redirects matches path only, so a catch-all would also loop on the apex domain.
 # ===========================================================================
+# 2026-11-22 consolidated into the Copilot rollout article (iteration 6)
+/blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
+/blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-.html    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301

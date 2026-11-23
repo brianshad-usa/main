@@ -37,7 +37,7 @@ DATA = CL.load()
 CASES = [
     {
         "slug": "global-holdings",
-        "status": "Historical client, 12+ years to 2021", "flags": ["R4"],
+        "status": "Past engagement, 12+ years to 2021", "flags": ["R4"],
         "title": "Global Holdings: Imaging Network | Pro Link Systems",
         "meta": "How Pro Link Systems designed and ran the network, AWS imaging platform and patient portal behind 19 diagnostic imaging facilities for 12+ years.",
         "h1": "A secure imaging backbone for 19 facilities and hundreds of partner sites.",
@@ -66,14 +66,14 @@ CASES = [
     },
     {
         "slug": "cunico",
-        "status": "Current client since 2012", "flags": ["R1"],
-        "title": "Cunico Case Study: 13-Year IT Partnership | Pro Link Systems",
+        "status": "Current client since 2012", "flags": [],
+        "title": "Cunico Case Study: Partner Since 2012 | Pro Link Systems",
         "meta": "How Pro Link Systems has run and secured Cunico's multi-site technology since 2012, through growth and its 2022 acquisition by BWX Technologies.",
-        "h1": "Thirteen years of technology governance, through growth and an acquisition.",
+        "h1": "Technology governance since 2012, through growth and an acquisition.",
         "card": "Multi-site environments, hardened security and support through an acquisition by BWX Technologies.",
-        "plate": ("13+ yrs", "continuously renewed partnership, since 2012"),
-        "summary": "Since 2012, Pro Link Systems has been the outsourced IT and technology-governance partner for Cunico, a precision manufacturer with a legacy of more than 70 years. We maintain its on-premises and cloud environments across multiple sites, hardened its security with continuous monitoring, and supported its integration into BWX Technologies after the 2022 acquisition.",
-        "metrics": [("13+ yrs", "continuously renewed partnership, since 2012"), ("Multi-site", "on-premises and cloud environments"),
+        "plate": ("Since 2012", "continuously renewed partnership"),
+        "summary": "Since 2012, Pro Link Systems has been the outsourced IT and technology-governance partner for Cunico Corporation, a precision manufacturer with a legacy of more than 70 years. We maintain its on-premises and cloud environments across multiple sites, hardened its security with continuous monitoring, and supported its integration into BWX Technologies after the 2022 acquisition.",
+        "metrics": [("Since 2012", "continuously renewed partnership"), ("Multi-site", "on-premises and cloud environments"),
                     ("2022", "integration into BWX Technologies")],
         "snapshot": [("Location", "Long Beach, California; multiple sites"), ("Size", "35 employees"), ("Relationship", None),
                      ("Scope", "Managed IT, cybersecurity, cloud, backup and disaster recovery, technology governance")],
@@ -83,7 +83,7 @@ CASES = [
                      "Hardened its cybersecurity posture, with continuous monitoring and defense of critical systems",
                      "Designed and enforced workflows, backup and disaster-recovery strategies and access controls as the company scaled",
                      "Supported the integration into BWXT, aligning systems with enterprise-grade practices"],
-        "outcomes": ["A continuously renewed partnership of more than 13 years",
+        "outcomes": ["A continuously renewed partnership since May 2012",
                      "A well-governed environment that carried Cunico through its integration into BWXT"],
         "value": "Cunico operates today within BWXT’s Government Operations segment, on infrastructure secured and maintained by the same partner for more than a decade.",
     },
@@ -164,44 +164,45 @@ CASES = [
         "slug": "cookes-crating",
         "status": "Current client for 3+ years", "flags": ["R6"],
         "title": "Cooke's Crating: 5-Day Migration | Pro Link Systems",
-        "meta": "How Pro Link Systems moved Cooke's Crating off a former provider's locked infrastructure in five days, with zero downtime, and modernized it.",
-        "h1": "Regaining control of a locked-out business in five days, with zero downtime.",
-        "card": "An emergency migration off a former provider’s locked infrastructure, completed in five days.",
+        "meta": "How Pro Link Systems helped Cooke's Crating regain administrative control of its systems, migrating in five days with zero downtime.",
+        "h1": "Regaining control of business systems in five days, with zero downtime.",
+        "card": "An emergency migration onto infrastructure the company controls, completed in five days.",
         "plate": ("5 days", "full migration, with zero downtime"),
-        "summary": "Cooke’s Crating, a Los Angeles fine-art crating and logistics company, came to Pro Link Systems after its previous IT provider locked it out of its entire infrastructure, down to phone management. We migrated the whole environment onto new infrastructure in five days with zero downtime, modernized it, and have supported the company for more than three years since.",
+        "summary": "Cooke’s Crating, a Los Angeles fine-art crating and logistics company, came to Pro Link Systems after a dispute with its previous IT provider left it without administrative access to its own systems, including phone management. We migrated the whole environment onto new infrastructure in five days with zero downtime, modernized it, and have supported the company for more than three years since.",
         "metrics": [("5 days", "full environment migration"), ("Zero", "downtime during the cutover"), ("3+ yrs", "client since")],
         "snapshot": [("Location", "Los Angeles, California"),
                      ("Size", "33 employees"), ("Relationship", None), ("Scope", "Emergency migration, infrastructure modernization, security")],
         "relationship": "For more than 3 years",
-        "challenge": "Cooke’s Crating came to Pro Link Systems in a worst-case situation. A dispute with its previous IT provider had escalated until that provider locked the company out of its entire infrastructure, down to its phone management. It needed to regain control fast, without operations grinding to a halt.",
+        "challenge": "Cooke’s Crating came to Pro Link Systems in a worst-case situation. A dispute with its previous IT provider had left the company without administrative access to its own infrastructure, including its phone management. It needed to regain control fast, without operations grinding to a halt.",
         "approach": ["An emergency migration of the entire environment onto new infrastructure designed by Pro Link Systems",
                      "A full modernization of aging infrastructure, including an upgraded FileMaker environment",
                      "Current security frameworks rolled out across the new environment",
-                     "Control regained over every system, including phone management"],
+                     "Administrative control restored over every system, including phone management"],
         "outcomes": ["Migration completed in five days, with zero downtime during the cutover",
                      "Full ownership and control of its infrastructure", "A client for more than three years since"],
         "value": "Full ownership and control of its own infrastructure, on a modernized environment secured with current security frameworks.",
     },
     {
         "slug": "crr",
-        "status": "Historical client, 2023–2025", "flags": ["R3 · separate approval"], "noindex": True,
-        "title": "CR&R Case Study: De Facto CIO | Pro Link Systems",
-        "meta": "How Pro Link Systems served as de facto CIO for CR&R, unifying cybersecurity, cloud and network standards across its divisions.",
-        "h1": "Acting as de facto CIO to unify a multi-division enterprise.",
-        "card": "De facto CIO for a multi-division environmental services company.",
+        "status": "Past engagement, 2023–2025", "flags": [],
+        "title": "CR&R Case Study: Multi-Division IT | Pro Link Systems",
+        "meta": "How Pro Link Systems supported CR&R’s IT across its divisions: cybersecurity, Microsoft 365 and Azure, network architecture and disaster recovery.",
+        "h1": "Consistent IT standards across a multi-division enterprise.",
+        "card": "Cybersecurity, cloud and network work across a multi-division environmental services company.",
         "plate": ("450", "employees across divisions"),
-        "summary": "From December 2023 to April 2025, Pro Link Systems served as de facto CIO for CR&R Environmental Services, a Southern California waste collection, recycling and environmental services company with divisions including Haulaway and Recycle America, bringing consistent cybersecurity, cloud and network standards to an IT environment that had grown fragmented.",
+        "summary": "From December 2023 to April 2025, Pro Link Systems was a technology partner to CR&R Environmental Services, a Southern California waste collection, recycling and environmental services company with divisions including Haulaway and Recycle America. The engagement covered cybersecurity, Microsoft 365 and Azure, cloud migration, network architecture and disaster recovery in an IT environment that had grown fragmented.",
         "metrics": [("450", "employees across divisions"), ("SOC + SIEM", "SentinelOne monitoring deployed")],
         "snapshot": [("Location", "Southern California; multi-division, multi-site"), ("Size", "450 employees"), ("Relationship", None),
-                     ("Scope", "De facto CIO, cybersecurity, Microsoft 365 and Azure, network architecture, disaster recovery")],
+                     ("Scope", "Cybersecurity, Microsoft 365 and Azure, cloud migration, network architecture, disaster recovery, systems administration")],
         "relationship": "December 2023 – April 2025",
-        "challenge": "CR&R operates across multiple divisions and subsidiaries, including Haulaway and Recycle America, and needed to modernize and unify an IT environment that had grown fragmented. It needed one partner to act as its de facto CIO and bring consistent cybersecurity, cloud and network standards to the whole organization.",
+        "challenge": "CR&R operates across multiple divisions and subsidiaries, including Haulaway and Recycle America, and needed to modernize and unify an IT environment that had grown fragmented, with consistent cybersecurity, cloud and network standards across the organization.",
         "approach": ["Advanced cybersecurity deployment, including SentinelOne SOC and SIEM monitoring",
                      "Microsoft 365 and Azure integration, with a secure cloud migration", "Network architecture across divisions",
                      "Disaster-recovery automation", "Strategic vendor alignment across subsidiaries", "Ongoing systems administration"],
-        "outcomes": ["One of Pro Link Systems’ most comprehensive technology transformations",
-                     "Greater efficiency, visibility and resilience across the company"],
-        "value": "Consistent standards across divisions that had grown apart, delivered through a single accountable technology leader.",
+        "outcomes": ["SentinelOne SOC and SIEM monitoring in place across the environment",
+                     "Microsoft 365 and Azure integrated, with a secure migration to the cloud",
+                     "Network architecture and vendor alignment standardized across divisions"],
+        "value": "Consistent standards across divisions that had grown apart, delivered through one technology partner.",
     },
     {
         "slug": "fralock",
@@ -247,7 +248,7 @@ CASES = [
     },
     {
         "slug": "hallmark-lighting",
-        "status": "Past engagement, 2018–2020", "flags": ["R7", "R18"],
+        "status": "Past engagement, 2018–2020", "flags": ["R7"],
         "title": "Hallmark Lighting Case Study | Pro Link Systems",
         "meta": "How Pro Link Systems rebuilt Hallmark Lighting's IT from the ground up, connecting California design teams with an overseas manufacturing plant.",
         "h1": "An IT environment rebuilt to connect design and manufacturing across continents.",
@@ -287,13 +288,13 @@ CASES = [
     },
     {
         "slug": "veev-spirits",
-        "status": "Past engagement, 2006–2013", "flags": ["R7", "R16"],
+        "status": "Past engagement, 2006–2013", "flags": ["R7"],
         "title": "VEEV Spirits Case Study: Seven Years | Pro Link Systems",
         "meta": "How Pro Link Systems designed and ran the technology behind VEEV Spirits for about seven years, from the founders' home to a multi-state operation.",
         "h1": "Technology that kept pace from the founders’ home to a multi-state brand.",
         "card": "Technology designed and run from inception through multi-state growth.",
         "plate": ("7 yrs", "from inception to a multi-state operation"),
-        "summary": "VEEV Spirits engaged Pro Link Systems at its inception, when the company ran from its founders’ home in Beverly Hills. For about seven years, from July 2006 to September 2013, we designed, implemented and managed its technology as it grew into a multi-state operation.",
+        "summary": "VEEV Spirits engaged Pro Link Systems in July 2006, at the company’s inception and ahead of the brand’s 2007 launch, when it ran from its founders’ home in Beverly Hills. For about seven years, to September 2013, we designed, implemented and managed its technology as it grew into a multi-state operation.",
         "metrics": [("7 yrs", "engagement, 2006 to 2013"), ("Multi-state", "operation, from a home office"), ("40", "employees")],
         "snapshot": [("Location", "Beverly Hills, California, growing to several states"), ("Size", "40 employees"), ("Relationship", None),
                      ("Scope", "Information technology, communications infrastructure, online presence")],
@@ -374,7 +375,7 @@ def flags_html(c):
 
 def card(c, level="h3"):
     plate_n, plate_l = c["plate"]
-    status = ("Current client" if c["current"] else c["status"].replace("Past engagement, ", "").replace("Historical client, ", ""))
+    status = ("Current client" if c["current"] else c["status"].replace("Past engagement, ", ""))
     flag = "".join(" " + FLAG(E(r)) for r in c["flags"]) if c.get("noindex") else ""
     return ('<a class="pl-ccard" id="%s" href="/case-studies/%s">\n'
             '  <span class="pl-ccard-plate"><span class="pl-ccard-metric">%s</span><span>%s</span></span>\n'
@@ -471,7 +472,7 @@ def hub_main():
   <div class="pl-wrap">
     <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Client Success</nav>
     <h1 class="pl-h1" id="page-h1">Long partnerships with organizations that depend on technology.</h1>
-    <p class="pl-lead">The complete client portfolio, from more than 25 years of managing, securing and modernizing technology. Each profile notes whether the relationship is current or past.</p>
+    <p class="pl-lead">The complete client portfolio, from more than 25 years of managing, securing and modernizing technology. Each profile leads with what we did and, where confirmed, labels the relationship: current client, past engagement or project engagement.</p>
   </div>
 </section>
 
@@ -482,8 +483,8 @@ def hub_main():
     <div class="pl-figures">
       <div class="pl-figure"><strong>23 yrs</strong><span>The Waverly School</span><small>Current client</small></div>
       <div class="pl-figure"><strong>18 yrs</strong><span>Law Offices of Alan B. Snitzer</span><small>Current client</small></div>
-      <div class="pl-figure"><strong>13+ yrs</strong><span>Cunico Corporation</span><small>Current client, since 2012</small></div>
-      <div class="pl-figure"><strong>12+ yrs</strong><span>Global Holdings</span><small>Historical client, to 2021</small></div>
+      <div class="pl-figure"><strong>Since 2012</strong><span>Cunico Corporation</span><small>Current client</small></div>
+      <div class="pl-figure"><strong>12+ yrs</strong><span>Global Holdings</span><small>Past engagement, to 2021</small></div>
     </div>
   </div>
 </section>

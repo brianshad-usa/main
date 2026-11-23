@@ -700,11 +700,14 @@ that I would like to host on our site similarly". Every app follows this one pat
   - **Article page:** headline beside a 3:2 illustration, contents list with reading position (`assets/js/article.js`),
     takeaways first, and components usable in any article body: `table.pl-compare`, `ul.pl-checklist`, `ol.pl-process`,
     `div.pl-framework`, `div.pl-callout`, `figure.pl-flow` and a `References` list (`h2.pl-refs-h` + `ul.pl-refs`).
-  - **Client portfolio:** `editorial/clients.json` is the single source for the 21 company profiles: name, industry,
-    description, ownership, status, engagement, logo. `python chrome/build_case_pages.py` renders the portfolio on
+  - **Client portfolio:** `editorial/clients.json` is the single source for the 20 company profiles: name, industry,
+    summary, description, ownership, status, engagement, group, logo. `python chrome/build_case_pages.py` renders the portfolio on
     `/case-studies#portfolio`, the profile on each `/case-studies/<slug>` page and the eight featured clients on the home
-    page (`<!-- PL:CLIENTS -->`); `python chrome/clients.py --check` enforces 21 organizations without duplicates, the two
-    fixed orders (never alphabetical, no CSS reordering) and the links between profiles and case studies. Supplied
+    page (`<!-- PL:CLIENTS -->`); `python chrome/clients.py --check` enforces the organizations in `order` without duplicates, the two
+    fixed orders (never alphabetical, no CSS reordering), the links between profiles and case studies, displayed counts
+    computed from the entries shown, and that nobody in `removed` appears. Labels are only Current client, Past engagement
+    or Project engagement, and only where verified. A profile leads with what we did (engagement, outcome, case study);
+    `summary` is the short company line and the full `description` appears on the case study page. Supplied
     descriptions (`"text": "supplied"`) are used word for word. `"include": false` removes a client everywhere. A parent
     company is named under Ownership only; nothing may suggest that Pro Link Systems manages the parent's environment.
     Name plates show the name in one style until an approved logo file is set in `logo`. The earlier `/case-studies#1-cunico-corp`
@@ -719,8 +722,14 @@ that I would like to host on our site similarly". Every app follows this one pat
     `date_modified` in the registry, which shows "Updated ..." on the page and updates `dateModified` and the sitemap.
     `dek` (registry) is the standfirst shown on the page; the meta description tag is not edited by that.
   - **Name:** the company is always "Pro Link Systems" (`python chrome/company_name.py`); only titles that would pass 60
-    characters keep the short brand. Verbatim reviews are never edited. **Business hours:** Mon-Fri 9 AM-5 PM PT
-    (footer, contact page, structured data); the 24/7 help desk is for managed-service clients under contract.
+    characters keep the short brand. Verbatim reviews are never edited. **Business hours:** "Monday through Friday,
+    9 AM–5 PM Pacific" (footer, contact page, structured data); the 24/7 help desk is for managed-service clients under contract.
+  - **Call handling (owner, 2026-11-22):** calls are answered live by the in-house, US-based team during business hours;
+    after hours, managed-service clients press 1 to reach the on-call help desk, with a backup answering service. Never
+    write "no phone tree", "answered live 24/7" or "staffed around the clock"; scope 24/7 to managed-service clients; the
+    15-minute figure is always the "average ticket first-response time" and is not tied to "24 hours a day"; same-day
+    on-site support is "when needed"; unlimited support belongs to managed IT plans. Applies to generators too
+    (`gen_location_pages.py`). The social pipeline's `editorial/verified_facts.json` F007 still says "no phone tree".
   - **Landmarks:** `apply_chrome.py` gives every page without its own `<main>` one (opened at the end of the header block,
     closed at the start of the footer block). Do not add a second `<main>` to those pages.
   - **Ads landing page (`/managed-it-services`):** rebuilt on `_shared.css` (about 55 KB lighter, no Google Fonts). Unchanged:
@@ -751,6 +760,20 @@ that I would like to host on our site similarly". Every app follows this one pat
   - **Service pages:** the hero sentence leads with the business benefit; titles, H1 keywords, technical sections and
     structured data are unchanged. Small-business questions sit in the home and outsourced IT FAQs (structured data equal
     to the visible text).
+- **Iteration 6 (2026-11-22):** branch `redesign-2026-v5` freezes iteration 5 (preview `https://redesign-2026-v5.plsmain.pages.dev`).
+  - **Portfolio:** Marriott Hotels removed (`removed` in clients.json); CR&R kept as a past engagement with its own,
+    indexable case study written neutrally about scope; Cunico leads with its own name ("A BWX Technologies company"
+    beneath) and "since 2012" replaces elapsed-year figures; a jump-to-industry filter (seven groups, `group`) sits above
+    the profiles and is hidden without JavaScript.
+  - **Home:** featured clients "Selected Clients & Engagements" (LISI, Cunico, M13, Fralock, VEEV, Optical Zonu, Cochise,
+    FSC); "Who we work with" shows the three engagement models of `/services#models`; "Why growing businesses choose us"
+    has six reasons without repeats.
+  - **Insights:** the t90 Copilot governance article was merged into t49 and 301s to it; t89 stays (owner/CFO decision).
+  - **Link labels:** "Fully Managed IT" means `/services#managed-it`; "Managed IT Services" means `/managed-it-services`;
+    "Outsourced IT department" means `/outsourced-it-services-los-angeles`.
+  - **Robots on staging:** the guard rewrites each page's own robots tag to noindex (one tag, one X-Robots-Tag).
+    `python chrome/golive_check.py --seo` runs the cutover checks (one robots tag, canonicals, sitemap, every production
+    URL resolving in at most one hop, no staging labels) on its own.
 - **Before go-live (checklist):** `python chrome/golive_check.py` must pass: no `pl-flag` left, no
   `functions/_middleware.js`, a new `_shared.css?v=` (`bump_shared_css.py` now covers `case-studies/`,
   `leadership/` and `m365-security-assessment/`), and `gen_location_pages.py` / `update_site_links.py`

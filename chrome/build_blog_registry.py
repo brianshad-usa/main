@@ -57,7 +57,7 @@ CATEGORIES = [
 # The six practice areas, with the descriptions already used on the home page.
 PRACTICES = {
     "managed": {"name": "Managed Technology Services", "url": "/outsourced-it-services-los-angeles",
-                "line": "Day-to-day technology run by one accountable team: monitored, documented and supported around the clock.",
+                "line": "Day-to-day technology run by one accountable team: monitored around the clock, documented, and supported in-house.",
                 "link": "Explore managed technology services"},
     "cybersecurity": {"name": "Cybersecurity & Risk", "url": "/cybersecurity-services",
                       "line": "Layered protection across identity, endpoints, email, network and cloud, with monitoring and documented controls.",
