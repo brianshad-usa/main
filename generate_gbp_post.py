@@ -73,7 +73,7 @@ Guidelines:
 - Open with a relatable pain point (unexpected IT bill, downtime, slow response)
 - Compare reactive "break-fix" costs vs proactive managed IT in 1 concrete way \
 (cost, downtime minutes, staff hours, etc.)
-- Mention 24/7 monitoring, live engineers (not a ticket queue), and LA-area coverage
+- Mention 24/7 monitoring, an in-house, US-based team that answers calls live during business hours, and LA-area coverage
 - End with a soft CTA: "See what flat-rate IT looks like for your team."
 - Total length: 300–500 characters
 - Add 2–3 hashtags: \
@@ -163,21 +163,25 @@ Guidelines:
 Write a Google Business Profile post for a managed IT company in Woodland Hills, CA \
 that has served Los Angeles businesses since 1999.
 
-Theme: 24/7 live help desk and fast response
-Goal: differentiate from offshore ticket-queue IT support by highlighting \
-live, US-based engineers available around the clock.
+Theme: a responsive, in-house help desk
+Goal: differentiate from offshore ticket-queue IT support by highlighting an \
+in-house, US-based team that answers calls live during business hours.
 
 Guidelines:
 - Open with the frustration of waiting on hold or submitting a ticket for a \
 simple IT problem
-- Contrast that with talking to a live engineer within minutes, 24/7
-- Mention average response time or the "no ticket queue" approach
+- Contrast that with calls answered live by our in-house, US-based team during \
+business hours (Monday through Friday, 9 AM to 5 PM Pacific); after hours, \
+managed-service clients press 1 to reach the on-call help desk
+- Mention the 15-minute average ticket first-response time (always name it in full)
+- Never say "no phone tree", "answered live 24/7", "around the clock" or that an \
+engineer picks up at any hour, and never mention an answering service
 - Speak to LA businesses specifically: time zones matter, executives and staff \
 can't wait
-- End with: "Call us now — a real engineer picks up."
+- End with: "Call us to talk about help desk support."
 - Total length: 300–500 characters
 - Add 2–3 hashtags: \
-#ITHelpDesk #TechSupportLA #ManagedITLA #24x7Support
+#ITHelpDesk #TechSupportLA #ManagedITLA
 - Plain text only — no markdown, no bullets, no emojis""",
     },
     {
