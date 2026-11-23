@@ -28,15 +28,14 @@ const RIBBON = '<div aria-hidden="true" style="position:fixed;left:12px;bottom:1
   'pointer-events:none">STAGING</div>';
 
 // Design review (staging only, removed with this file): a small panel linking to the same page in earlier
-// staging iterations and to Brian's private review notes. Iteration 5: on the home page it also lets Brian try the
-// headline options (text only, in this browser tab; nothing is saved).
+// staging iterations and to Brian's private review notes. The iteration 5 headline switch was removed after Brian
+// chose option A (2026-11-22).
 const REVIEW_PANEL = `
 <div id="plr" class="plr">
   <button type="button" class="plr-toggle" aria-expanded="false" aria-controls="plr-body">Design review</button>
   <div class="plr-body" id="plr-body" hidden>
     <p class="plr-h">Compare this page</p>
     <p class="plr-links"><a data-v="4" href="https://redesign-2026-v4.plsmain.pages.dev/">Iteration 4</a> &middot; <a data-v="3" href="https://redesign-2026-v3.plsmain.pages.dev/">Iteration 3</a> &middot; <a data-v="2" href="https://redesign-2026-v2.plsmain.pages.dev/">Iteration 2</a> &middot; <a data-v="1" href="https://redesign-2026-v1.plsmain.pages.dev/">Iteration 1</a></p>
-    <div class="plr-hl" hidden><p class="plr-h" style="margin-top:14px">Homepage headline</p><p class="plr-opts"></p></div>
     <p class="plr-links"><a href="https://claude.ai/artifact/2ZvGhFzcjrKx5M8gR2wMLN" target="_blank" rel="noopener">Review notes</a></p>
   </div>
 </div>
@@ -47,9 +46,6 @@ const REVIEW_PANEL = `
 .plr-h{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4b6580;margin:0 0 8px}
 .plr-links{margin:6px 0 0;font-size:13px}
 .plr-links a{color:#0b3d6b;text-decoration:underline}
-.plr-opts{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}
-.plr-opts button{border:1px solid #0b3d6b;background:#fff;color:#0b3d6b;padding:6px 10px;font:600 12px/1 system-ui,sans-serif;cursor:pointer}
-.plr-opts button[aria-pressed="true"]{background:#0b3d6b;color:#fff}
 </style>
 <script>
 (function () {
@@ -58,16 +54,6 @@ const REVIEW_PANEL = `
   [].slice.call(box.querySelectorAll('[data-v]')).forEach(function (a) { a.href = a.href.split('?')[0].replace(new RegExp('/$'), '') + location.pathname; });
   var toggle = box.querySelector('.plr-toggle'), body = d.getElementById('plr-body');
   toggle.addEventListener('click', function () { var on = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', on ? 'true' : 'false'); body.hidden = !on; });
-  var h1 = d.getElementById('home-h1'), lead = d.getElementById('home-lead'), hl = box.querySelector('.plr-hl');
-  if (h1 && lead && hl) {
-    var opts = [["Current", "Technology leadership for an increasingly complex world.", "Enterprise-grade IT, cybersecurity and technology management for growing businesses. Get the expertise of an experienced technology department without the cost and complexity of building one internally."], ["A", "Enterprise-grade IT for growing businesses.", "Managed IT, cybersecurity and technology strategy from a team that has supported multinational manufacturers and growing local businesses alike, for a predictable monthly cost."], ["B", "Your technology department, without the overhead of building one.", "Pro Link Systems manages, secures and plans technology for growing businesses, bringing enterprise experience and personal attention to every client since 1999."], ["C", "Enterprise-grade expertise. Personalized service. Built for growing businesses.", "Managed IT, cybersecurity and technology management with the expertise of an experienced technology department, without the cost and complexity of building one internally."]], wrap = hl.querySelector('.plr-opts');
-    hl.hidden = false;
-    opts.forEach(function (o, i) {
-      var b = d.createElement('button'); b.type = 'button'; b.textContent = o[0]; b.setAttribute('aria-pressed', i ? 'false' : 'true');
-      b.addEventListener('click', function () { h1.textContent = o[1]; lead.textContent = o[2]; [].slice.call(wrap.children).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); });
-      wrap.appendChild(b);
-    });
-  }
 })();
 </script>`;
 
