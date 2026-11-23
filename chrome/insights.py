@@ -680,6 +680,8 @@ def profile_page(reg, key):
               "worksFor": {"@type": "Organization", "@id": SITE + "/#organization", "name": "Pro Link Systems",
                            "url": SITE + "/"},
               "knowsAbout": a.get("focus", [])}
+    if a.get("alumni_of"):
+        person["alumniOf"] = {"@type": "CollegeOrUniversity", "name": a["alumni_of"]}
     prof = {"@context": "https://schema.org", "@type": "ProfilePage", "@id": url + "#webpage", "url": url,
             "name": pr["title"], "isPartOf": {"@id": SITE + "/#website"}, "mainEntity": person}
     crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

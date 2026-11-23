@@ -92,8 +92,10 @@ AUTHORS = {
             "Brian Shad is the founder and CEO of Pro Link Systems, which he established in 1999. He leads the firm’s "
             "technology direction and works directly with client leadership teams on strategy, architecture and major initiatives.",
             "Over more than 25 years in technology leadership, his work has spanned enterprise infrastructure, cybersecurity, "
-            "strategic consulting and digital transformation.",
+            "strategic consulting and digital transformation. He holds a degree in Computer Science from California State "
+            "University, Northridge.",
         ],
+        "alumni_of": "California State University, Northridge",
         "focus": ["Technology leadership", "Enterprise infrastructure", "Cybersecurity", "Strategic consulting",
                   "Digital transformation"],
         "profile_page": {
@@ -106,8 +108,8 @@ AUTHORS = {
             "width": 1100, "height": 687,
             "alt": "Brian Shad in a navy blazer and striped tie, photographed outdoors",
             "caption": "Brian Shad, Founder & CEO",
-            "lastmod": "2026-11-21",
-            "flags": ["R12"],
+            "lastmod": "2026-11-23",
+            "flags": [],
         },
     },
     "pro-link-systems": {

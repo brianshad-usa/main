@@ -1628,6 +1628,10 @@ html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline 
 .pl-profile[hidden] { display: none; }
 /* tenure figures on the portfolio page are start years ("Since 2003"): one line at every width */
 .pl-figures--tenure .pl-figure strong { font-size: clamp(2.1rem, 3.3vw, 2.9rem); white-space: nowrap; }
+/* About: six platform groups in three columns */
+.pl-tech--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1024px) { .pl-tech--3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pl-tech--3 { grid-template-columns: 1fr; } }
 /* profiles lead with what Pro Link Systems did; the company summary is secondary */
 .pl-profile-work .pl-case-sector { margin-bottom: 10px; line-height: 1.5; }
 .pl-profile-did { font-size: 1rem; line-height: 1.62; color: var(--text); }

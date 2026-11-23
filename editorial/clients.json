@@ -2,7 +2,6 @@
  "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | past | project (Current client / Past engagement / Project engagement) or null when unverified. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' stays null until the owner gives final approval of names and logos; golive_check.py fails until then.",
  "approved": null,
  "portfolio_review": [
-  "R7",
   "R15"
  ],
  "order": [
@@ -87,9 +86,7 @@
    ],
    "case": "lisi-aerospace",
    "legacy_id": "5-lisi-aerospace",
-   "review": [
-    "R2"
-   ],
+   "review": [],
    "include": true,
    "logo": null,
    "summary": "LISI Aerospace is an international aerospace manufacturing organization specializing in advanced fastening systems, assembly technologies and precision structural components.",
@@ -204,14 +201,12 @@
    "description": "Optical Zonu Corporation is a specialized technology manufacturer focused on advanced fiber-optic communications and radio frequency transmission systems. Its engineering solutions support telecommunications infrastructure, satellite communications, aerospace, defense, public safety and enterprise networks, addressing complex requirements for high-performance optical data and signal transmission.",
    "ownership": null,
    "status": "current",
-   "period": null,
+   "period": "Since 2017",
    "engagement": "Primary IT management team, including domain and DNS management.",
    "metric": null,
    "case": "optical-zonu",
    "legacy_id": "11-optical-zonu",
-   "review": [
-    "R10"
-   ],
+   "review": [],
    "include": true,
    "logo": null,
    "summary": "Optical Zonu Corporation is a specialized technology manufacturer focused on advanced fiber-optic communications and radio frequency transmission systems.",
@@ -259,20 +254,18 @@
    "industry": "Healthcare & Diagnostic Imaging",
    "text": "supplied",
    "description": "Global Holdings was a Southern California healthcare organization operating an extensive network of diagnostic medical imaging facilities, specializing in MRI, CT scanning and advanced radiological services. During its operations, the organization maintained 19 owned facilities and an extensive network of affiliated healthcare providers, delivering diagnostic imaging services across a complex, multi-location healthcare environment.",
-   "ownership": "Dissolved in 2021, when its facilities were sold.",
+   "ownership": "Dissolved in 2021, when its sites were taken over by another imaging provider.",
    "status": "past",
    "period": "12+ years, to 2021",
    "years": "12+ years, to 2021",
-   "engagement": "Network, AWS imaging platform and secure patient portal, designed and operated by Pro Link Systems.",
+   "engagement": "Network, AWS imaging platform and secure patient portal, designed and operated by Pro Link Systems; services continued for the new owner of its sites until 2023.",
    "metric": [
     "19",
     "owned facilities on one network and imaging platform"
    ],
    "case": "global-holdings",
    "legacy_id": "15-global-holdings",
-   "review": [
-    "R4"
-   ],
+   "review": [],
    "include": true,
    "logo": null,
    "summary": "Global Holdings was a Southern California healthcare organization operating a network of diagnostic medical imaging facilities, specializing in MRI, CT scanning and advanced radiological services.",
