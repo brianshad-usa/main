@@ -329,7 +329,7 @@ CASES = [
     },
     {
         "slug": "global-garden",
-        "status": "Current client", "flags": ["R7", "R17"],
+        "status": "Current client", "flags": ["R7"],
         "title": "Global Garden Case Study: Email Security | Pro Link Systems",
         "meta": "How Pro Link Systems supports Global Garden with managed IT, including email security across all of the organization's mailboxes.",
         "h1": "Email security for a growing business.",
