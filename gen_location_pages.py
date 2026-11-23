@@ -849,7 +849,7 @@ def local_business_schema(c):
             '      { "@type": "City", "name": %s },\n      { "@type": "City", "name": "Los Angeles" }\n    ],\n'
             '    "openingHoursSpecification": {\n      "@type": "OpeningHoursSpecification",\n'
             '      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],\n'
-            '      "opens": "09:00",\n      "closes": "18:00"\n    }\n  }\n  </script>'
+            '      "opens": "09:00",\n      "closes": "17:00"\n    }\n  }\n  </script>'
             % (j(c["schema_desc"]), j(c["city"])))
 
 
