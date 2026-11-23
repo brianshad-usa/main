@@ -214,7 +214,8 @@ export function anetConfig(env) {
 }
 
 export function merchantAuth(env) {
-  return { name: env.ANET_API_LOGIN_ID, transactionKey: env.ANET_TRANSACTION_KEY };
+  // Trimmed: a key pasted into the dashboard with a trailing space or line break fails as E00007.
+  return { name: String(env.ANET_API_LOGIN_ID || "").trim(), transactionKey: String(env.ANET_TRANSACTION_KEY || "").trim() };
 }
 
 /** POST one API request. Throws only on network failure / unparseable reply. */
@@ -346,6 +347,7 @@ function sameHex(a, b) {
 }
 
 export async function verifyAnetSignature(signatureKey, rawBytes, header) {
+  signatureKey = String(signatureKey || "").trim();      // pasted keys can carry whitespace
   const m = /^(?:sha512=)?([0-9a-f]{128})$/i.exec(String(header || "").trim());
   if (!m || !signatureKey) return false;
   const keys = [new TextEncoder().encode(signatureKey)];
