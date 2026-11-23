@@ -62,11 +62,27 @@ def flag(ids):
     return '<span class="pl-flag">Review %s</span>' % E(" · ".join(ids)) if ids else ""
 
 
+# Logos sit in identical boxes and are sized to the same visual weight: each keeps its own proportions (never
+# stretched), is scaled to a common area, then fitted inside the box. Wide wordmarks come out shorter, compact marks
+# taller, so the row reads evenly. (owner, 2026-11-23: smaller, all the same size)
+LOGO_HOME = (128, 40, 2500)        # box width, box height, target area in px: home page lineup
+LOGO_PLATE = (150, 50, 3600)       # portfolio name plates
+
+
+def logo_html(c, box):
+    g = c["logo"]
+    bw, bh, area = box
+    s = (area / float(g["width"] * g["height"])) ** 0.5
+    w, h = g["width"] * s, g["height"] * s
+    k = min(1.0, bw / w, bh / h)
+    return ('<span class="pl-clogo"><img src="%s" alt="%s" width="%d" height="%d" loading="lazy" decoding="async"></span>'
+            % (A(g["src"]), A(c["name"]), round(w * k), round(h * k)))
+
+
 def plate(c):
     """Name plate: one size and one typeface for every client; an approved logo file replaces the name."""
     if c.get("logo"):
-        g = c["logo"]
-        inner = '<img src="%s" alt="%s" width="%d" height="%d" loading="lazy" decoding="async">' % (A(g["src"]), A(c["name"]), g["width"], g["height"])
+        inner = logo_html(c, LOGO_PLATE)
     else:
         inner = "<span>%s</span>" % E(c["name"])
     if c.get("plate_sub"):
@@ -172,8 +188,7 @@ def home_html(d):
     cs = home_clients(d)
     cells = []
     for c in cs:
-        name = '<img src="%s" alt="%s" width="%d" height="%d" loading="lazy" decoding="async">' % (
-            A(c["logo"]["src"]), A(c["name"]), c["logo"]["width"], c["logo"]["height"]) if c.get("logo") else E(c.get("home_name") or c["name"])
+        name = logo_html(c, LOGO_HOME) if c.get("logo") else E(c.get("home_name") or c["name"])
         sub = '<span class="pl-client-sub">%s</span>' % E(c["plate_sub"]) if c.get("plate_sub") else ""
         cells.append('      <li><a href="/case-studies#%s"><span class="pl-client-name">%s</span>%s<span class="pl-client-industry">%s</span>%s</a></li>'
                      % (c["slug"], name, sub, E(c["industry"]), home_status(c)))

@@ -1501,10 +1501,13 @@ html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline 
 .pl-clients-grid a:hover { background: var(--mist); }
 .pl-clients-grid a:hover .pl-client-name { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .pl-client-name { font-family: var(--font-title); font-weight: 650; font-size: 1.22rem; line-height: 1.25; letter-spacing: -.015em; color: var(--ink); }
-.pl-client-name img, .pl-nameplate img { display: block; max-height: 38px; max-width: 100%; width: auto; height: auto; filter: grayscale(1) contrast(1.1); opacity: .82; }
-.pl-nameplate img { max-height: 56px; }        /* client logos (assets/clients/), one size rule for all */
-.pl-client-name img { max-height: 42px; }
-.pl-nameplate img + small { margin-top: 10px; }
+/* client logos (assets/clients/): every logo sits in an identical box; its size inside the box comes from
+   chrome/clients.py (same visual weight for all, proportions never stretched) */
+.pl-clogo { display: flex; align-items: center; }
+.pl-clogo img { display: block; max-width: 100%; height: auto; filter: grayscale(1) contrast(1.1); opacity: .82; }
+.pl-clients-grid .pl-clogo { width: 128px; max-width: 100%; height: 40px; }
+.pl-nameplate .pl-clogo { width: 150px; max-width: 100%; height: 50px; }
+.pl-nameplate .pl-clogo + small { margin-top: 10px; }
 .pl-client-sub { margin-top: 3px; font-size: .84rem; color: var(--steel); }
 .pl-client-industry { margin-top: 10px; font-size: .88rem; line-height: 1.45; color: var(--text-muted); }
 .pl-client-status { margin-top: auto; padding-top: 14px; font-size: .8rem; line-height: 1.5; color: var(--text-muted); }
