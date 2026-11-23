@@ -7,7 +7,7 @@ chrome/clients.py -- the client portfolio, from editorial/clients.json.
     python chrome/clients.py --check     # exit 1 when a page and the data disagree
 
 Rules the check enforces (owner, 2026-11-22): 21 organizations, no duplicates, in the fixed order below on the hub; exactly
-eight, in their own fixed order, on the home page; every client has an industry and an individual description; a
+eight, in their own fixed order, on the home page (enterprise and growing-business clients side by side); every client has an industry and an individual description; a
 client with a case study links to it and the case study page carries the same company profile and links back.
 Both lists are plain source order (no CSS reordering), so the sequence is the same on desktop and mobile.
 """
@@ -27,8 +27,9 @@ ORDER = ["lisi-aerospace", "cunico", "philip-morris-international", "m13", "fral
          "optical-zonu", "cochise-capital", "crr", "global-holdings", "otitopic", "fsc-lighting", "hallmark-lighting",
          "myx-fusions", "beverly-hills-plaza", "cookes-crating", "optimus-property-management", "global-garden",
          "waverly-school", "snitzer-law"]
-HOME = ["lisi-aerospace", "cunico", "m13", "fralock", "veev-spirits", "optical-zonu", "cochise-capital", "fsc-lighting"]
-STATUS = {"current": ("Current client", " is-current"), "past": ("Past engagement", ""), "historical": ("Historical client", "")}
+HOME = ["lisi-aerospace", "cunico", "m13", "fralock", "optical-zonu", "optimus-property-management", "cookes-crating", "waverly-school"]
+STATUS = {"current": ("Current client", " is-current"), "past": ("Past engagement", ""), "historical": ("Historical client", ""),
+          "project": ("Project engagement", "")}
 WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen",
          "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty", "Twenty-one"]
 
@@ -104,16 +105,17 @@ def short(c):
 
 def portfolio_html(d):
     cs = included(d)
-    n = len(cs)
-    word = WORDS[n] if n < len(WORDS) else str(n)
+    intro = d["intro"]
+    lead = " ".join(E(p) for p in intro["lead"])
+    review = (" " + flag(d["portfolio_review"])) if d.get("portfolio_review") else ""
     return ('<section class="pl-section" id="portfolio" aria-labelledby="portfolio-h">\n  <div class="pl-wrap">\n'
             '    <div class="pl-head">\n'
-            '      <div><p class="pl-eyebrow">Client portfolio</p><h2 class="pl-h2" id="portfolio-h">%s organizations, current and past.</h2></div>\n'
-            '      <p class="pl-lead">Each profile describes the company, identifies its ownership where it belongs to a larger group, and summarizes our engagement. Case studies are linked to the company they belong to.%s</p>\n'
-            '    </div>\n    <ol class="pl-folio">\n%s\n    </ol>\n'
+            '      <div><p class="pl-eyebrow">Client portfolio</p><h2 class="pl-h2" id="portfolio-h">%s</h2></div>\n'
+            '      <p class="pl-lead">%s</p>\n'
+            '    </div>\n    <p class="pl-folio-intro">%s%s</p>\n    <ol class="pl-folio">\n%s\n    </ol>\n'
             '    <p class="pl-folio-note">Our work is for the client named in each profile. Parent companies are identified for context and do not mean that Pro Link Systems managed the group&rsquo;s wider technology environment. Company names and marks belong to their owners and identify clients; they do not imply endorsement.</p>\n'
             '  </div>\n</section>'
-            % (word, (" " + flag(d["portfolio_review"])) if d.get("portfolio_review") else "", "\n".join(profile_item(c) for c in cs)))
+            % (E(intro["title"]), lead, E(intro["note"]), review, "\n".join(profile_item(c) for c in cs)))
 
 
 def home_status(c):
@@ -121,6 +123,8 @@ def home_status(c):
         return ""
     if c["status"] == "current":
         return '<span class="pl-client-status is-current">Current client</span>'
+    if not c.get("years"):
+        return '<span class="pl-client-status">%s</span>' % STATUS[c["status"]][0]
     return '<span class="pl-client-status">%s, <b>%s</b></span>' % (STATUS[c["status"]][0], E(c["years"]))
 
 
@@ -137,7 +141,7 @@ def home_html(d):
     return ('<!-- PL:CLIENTS (python chrome/clients.py --write) -->\n'
             '<section class="pl-clients" aria-labelledby="clients-h">\n  <div class="pl-wrap">\n'
             '    <div class="pl-clients-head">\n'
-            '      <div><p class="pl-eyebrow">Client portfolio</p><h2 class="pl-h2" id="clients-h">Selected clients, current and past.</h2></div>\n'
+            '      <div><p class="pl-eyebrow">Our clients</p><h2 class="pl-h2" id="clients-h">Trusted by organizations of all sizes, from growing businesses to globally recognized enterprises.</h2></div>\n'
             '      <a class="btn btn-primary" href="/case-studies#portfolio">View the complete client portfolio</a>\n'
             '    </div>\n    <ol class="pl-clients-grid">\n%s\n    </ol>\n'
             '    <p class="pl-clients-note">Eight of the %d organizations profiled in our client portfolio.%s</p>\n'
@@ -177,7 +181,7 @@ def check():
     for s, c in cl.items():
         if not c.get("industry") or len(c.get("description", "").split()) < 20:
             bad.append("%s: industry or individual description missing" % s)
-        if c.get("status") not in (None, "current", "past", "historical"):
+        if c.get("status") not in (None, "current", "past", "historical", "project"):
             bad.append("%s: unknown status" % s)
         if c.get("logo") and not os.path.exists(os.path.join(ROOT, c["logo"]["src"].lstrip("/"))):
             bad.append("%s: logo file missing" % s)

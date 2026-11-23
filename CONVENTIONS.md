@@ -738,6 +738,19 @@ that I would like to host on our site similarly". Every app follows this one pat
   - **Offer wording:** "assessment" means the paid Microsoft 365 product only, also in form confirmation messages.
   - **Site checks:** `chrome/link_check.py`, `form_labels.py`, `refine_wording.py`, `company_name.py --check` and
     `insights.py --check` are part of `golive_check.py`.
+- **Iteration 5 (2026-11-22):** branch `redesign-2026-v4` freezes iteration 4 (preview `https://redesign-2026-v4.plsmain.pages.dev`).
+  Positioning for organizations of about 10 to 100 users without dropping the enterprise proof:
+  - **Home order:** hero (who we serve, the 10-100 user note, consultation + phone), featured clients (enterprise and
+    growing businesses, `editorial/clients.json` `home`), who we work with, value, practices, client success (Waverly,
+    Cooke's, Optical Zonu, Cunico, Snitzer, LISI), framework, perspectives, industries, Insights, consultation + FAQ.
+  - **Calls to action:** the header and footer say "Talk to Our Team"; the main action stays "Schedule a Technology
+    Consultation" (free, no obligation); a tap-to-call button shows in the header below 920px. The consultation is never
+    called an assessment; the Microsoft 365 Security Assessment is the separately priced product.
+  - **Lead forms:** contact page and the Ads landing page have an optional "Number of users" select named `firm_size`,
+    which `functions/api/contact.js` already writes into the lead email. Only name and email are required.
+  - **Service pages:** the hero sentence leads with the business benefit; titles, H1 keywords, technical sections and
+    structured data are unchanged. Small-business questions sit in the home and outsourced IT FAQs (structured data equal
+    to the visible text).
 - **Before go-live (checklist):** `python chrome/golive_check.py` must pass: no `pl-flag` left, no
   `functions/_middleware.js`, a new `_shared.css?v=` (`bump_shared_css.py` now covers `case-studies/`,
   `leadership/` and `m365-security-assessment/`), and `gen_location_pages.py` / `update_site_links.py`

@@ -1,7 +1,10 @@
 {
- "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (2026-11-22): never alphabetize. 'text' says whether a description was supplied by the owner or is a proposal awaiting review. 'include': false removes a client everywhere. 'approved' stays null until the owner gives final approval of names and logos; golive_check.py fails until then.",
+ "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home page revised 2026-11-22 for iteration 5): never alphabetize. 'text' says whether a description was supplied by the owner or is a proposal awaiting review. 'include': false removes a client everywhere. 'approved' stays null until the owner gives final approval of names and logos; golive_check.py fails until then.",
  "approved": null,
- "portfolio_review": ["R7", "R15"],
+ "portfolio_review": [
+  "R7",
+  "R15"
+ ],
  "order": [
   "lisi-aerospace",
   "cunico",
@@ -30,10 +33,10 @@
   "cunico",
   "m13",
   "fralock",
-  "veev-spirits",
   "optical-zonu",
-  "cochise-capital",
-  "fsc-lighting"
+  "optimus-property-management",
+  "cookes-crating",
+  "waverly-school"
  ],
  "clients": {
   "lisi-aerospace": {
@@ -46,17 +49,22 @@
    "period": "October 2019 – August 2021",
    "years": "2019–2021",
    "engagement": "IT administration taken over and stabilized, then carried through the move to remote work.",
-   "metric": ["90 days", "to stabilized IT operations"],
+   "metric": [
+    "90 days",
+    "to stabilized IT operations"
+   ],
    "case": "lisi-aerospace",
    "legacy_id": "5-lisi-aerospace",
-   "review": ["R2"],
+   "review": [
+    "R2"
+   ],
    "include": true,
    "logo": null
   },
   "cunico": {
    "name": "Cunico Corporation / BWX Technologies",
    "short": "Cunico",
-   "home_name": "Cunico / BWXT",
+   "home_name": "Cunico Corporation / BWXT",
    "case_name": "Cunico Corporation",
    "plate_sub": "A BWX Technologies company",
    "industry": "Aerospace, Defense & Precision Manufacturing",
@@ -66,10 +74,15 @@
    "status": "current",
    "period": "Since May 2012",
    "engagement": "Outsourced IT and technology governance across Cunico’s sites, through its integration into BWXT.",
-   "metric": ["13+ yrs", "continuously renewed partnership"],
+   "metric": [
+    "13+ yrs",
+    "continuously renewed partnership"
+   ],
    "case": "cunico",
    "legacy_id": "1-cunico-corp",
-   "review": ["R1"],
+   "review": [
+    "R1"
+   ],
    "include": true,
    "logo": null
   },
@@ -77,23 +90,23 @@
    "name": "Philip Morris International",
    "plate_sub": "PMI",
    "industry": "Multinational Consumer Products",
-   "text": "proposed",
-   "description": "Philip Morris International is a multinational tobacco and smoke-free products company headquartered in Stamford, Connecticut. Its portfolio spans cigarettes, heated tobacco, nicotine pouches and e-vapor products, and the company has set the goal of a smoke-free future.",
-   "ownership": "Publicly traded on the New York Stock Exchange (PM). Acquired OtiTopic in August 2021.",
-   "status": null,
+   "text": "supplied",
+   "description": "Philip Morris International is a publicly traded multinational corporation with extensive global operations across manufacturing, research, product development and distribution. The organization has also pursued diversification into pharmaceutical and inhalation technologies, including its acquisition of respiratory drug development company OtiTopic in 2021.",
+   "ownership": null,
+   "status": "project",
    "period": null,
-   "engagement": null,
+   "engagement": "Pro Link Systems participated in a project-based engagement involving Philip Morris International.",
    "metric": null,
    "case": null,
-   "review": ["R13", "R14"],
+   "review": [],
    "include": true,
    "logo": null
   },
   "m13": {
    "name": "M13",
-   "industry": "Venture Capital",
-   "text": "proposed",
-   "description": "M13 is a venture capital firm that invests early in founders building new markets, with offices in Los Angeles, New York and San Francisco. It was founded in 2016 by brothers Courtney and Carter Reum, who had previously built VEEV Spirits.",
+   "industry": "Venture Capital & Technology Investment",
+   "text": "supplied",
+   "description": "Founded in 2016 by entrepreneurs Carter and Courtney Reum, M13 is a venture capital firm focused on investing in and accelerating innovative technology companies. Its investment history includes prominent businesses such as Ring, Lyft, Pinterest, ClassPass and Thrive Market. M13 combines venture investment with operational expertise to support entrepreneurs building and scaling transformative businesses.",
    "ownership": null,
    "status": "past",
    "period": "June 2017 – March 2018",
@@ -102,7 +115,7 @@
    "metric": null,
    "case": "m13",
    "legacy_id": "7-m13",
-   "review": ["R13"],
+   "review": [],
    "include": true,
    "logo": null
   },
@@ -126,33 +139,38 @@
   },
   "marriott-hotels": {
    "name": "Marriott Hotels",
-   "industry": "Global Hospitality",
-   "text": "proposed",
-   "description": "Marriott Hotels is the flagship full-service brand of Marriott International, with hotels and resorts in major business and leisure destinations around the world. Its properties combine guest rooms and dining with meeting and event space for corporate and leisure travelers.",
-   "ownership": "A brand of Marriott International, Inc.",
-   "status": null,
+   "industry": "Hospitality",
+   "text": "supplied",
+   "description": "Marriott Hotels is part of Marriott International, one of the world’s largest hospitality organizations, with a global portfolio spanning luxury hotels, resorts, full-service accommodations and extended-stay properties.",
+   "ownership": null,
+   "status": "project",
    "period": null,
-   "engagement": null,
+   "engagement": "Pro Link Systems participated in a technology project involving a Marriott hotel property, adding to our experience within the hospitality sector.",
    "metric": null,
    "case": null,
-   "review": ["R13", "R14"],
+   "review": [],
    "include": true,
    "logo": null
   },
   "veev-spirits": {
    "name": "VEEV Spirits",
-   "industry": "Consumer Brands & Spirits",
-   "text": "proposed",
-   "description": "VEEV Spirits was a Los Angeles spirits company founded by brothers Courtney and Carter Reum. It was known for VEEV, an açaí spirit created as an alternative to vodka, and for VitaFrute, a line of certified organic ready-to-drink cocktails.",
-   "ownership": "Sold in 2016 to Luxco, a St. Louis spirits company.",
+   "industry": "Consumer Brands & Beverage Manufacturing",
+   "text": "supplied",
+   "description": "Founded by entrepreneurs Carter and Courtney Reum in 2007, VEEV Spirits introduced an innovative portfolio of premium spirits and organic ready-to-drink cocktails. The Los Angeles-based company established a national presence before being acquired by Luxco in 2016, marking a successful entrepreneurial exit in the competitive beverage industry.",
+   "ownership": null,
    "status": "past",
    "period": "July 2006 – September 2013",
    "years": "2006–2013",
    "engagement": "Technology designed and run from the founders’ home through multi-state expansion.",
-   "metric": ["7 yrs", "from inception to a multi-state operation"],
+   "metric": [
+    "7 yrs",
+    "from inception to a multi-state operation"
+   ],
    "case": "veev-spirits",
    "legacy_id": "8-veev-spirits",
-   "review": ["R13", "R16"],
+   "review": [
+    "R16"
+   ],
    "include": true,
    "logo": null
   },
@@ -169,22 +187,27 @@
    "metric": null,
    "case": "optical-zonu",
    "legacy_id": "11-optical-zonu",
-   "review": ["R10"],
+   "review": [
+    "R10"
+   ],
    "include": true,
    "logo": null
   },
   "cochise-capital": {
    "name": "Cochise Capital",
-   "industry": "Real Estate Investment",
-   "text": "proposed",
-   "description": "Cochise Capital is a Los Angeles investment firm focused on diversified real estate, including multifamily properties in coastal communities. It was founded by Mike Talla and Rex Licklider.",
+   "industry": "Investment Management & Real Estate",
+   "text": "supplied",
+   "description": "Cochise Capital is a Los Angeles-based private investment firm founded by Mike Talla and Rex Licklider. With more than four decades of real estate investment experience and reported capital under management exceeding $1.2 billion, the firm specializes in multifamily investments, property development and value-add real estate opportunities across strategically selected coastal markets.",
    "ownership": null,
    "status": null,
    "period": null,
    "engagement": null,
    "metric": null,
    "case": null,
-   "review": ["R13", "R14"],
+   "review": [
+    "R14",
+    "R19"
+   ],
    "include": true,
    "logo": null
   },
@@ -202,7 +225,9 @@
    "metric": null,
    "case": "crr",
    "legacy_id": "2-crr-incorporated",
-   "review": ["R3 · separate approval"],
+   "review": [
+    "R3 · separate approval"
+   ],
    "include": true,
    "logo": null
   },
@@ -216,50 +241,60 @@
    "period": "12+ years, to 2021",
    "years": "12+ years, to 2021",
    "engagement": "Network, AWS imaging platform and secure patient portal, designed and operated by Pro Link Systems.",
-   "metric": ["19", "owned facilities on one network and imaging platform"],
+   "metric": [
+    "19",
+    "owned facilities on one network and imaging platform"
+   ],
    "case": "global-holdings",
    "legacy_id": "15-global-holdings",
-   "review": ["R4"],
+   "review": [
+    "R4"
+   ],
    "include": true,
    "logo": null
   },
   "otitopic": {
    "name": "OtiTopic",
-   "industry": "Respiratory Drug Development",
-   "text": "proposed",
-   "description": "OtiTopic is a United States respiratory drug development company known for a late-stage, inhaled form of acetylsalicylic acid (aspirin) developed for the treatment of acute myocardial infarction.",
-   "ownership": "Acquired by Philip Morris International in August 2021.",
+   "industry": "Biotechnology & Pharmaceutical Research",
+   "text": "supplied",
+   "description": "Founded in 2012, OtiTopic was a pharmaceutical research and development company specializing in inhaled therapeutic technologies. Its research included patented drug delivery systems and the development of an investigational inhalable aspirin treatment intended for cardiovascular emergencies. In August 2021, OtiTopic was acquired by Philip Morris International as part of its expansion into pharmaceutical innovation.",
+   "ownership": null,
    "status": null,
    "period": null,
    "engagement": null,
    "metric": null,
    "case": null,
-   "review": ["R13", "R14"],
+   "review": [
+    "R14"
+   ],
    "include": true,
    "logo": null
   },
   "fsc-lighting": {
    "name": "FSC Lighting",
-   "industry": "Commercial & Industrial Lighting Manufacturing",
-   "text": "proposed",
-   "description": "Founded in 1969 and headquartered in Rancho Cucamonga, California, FSC Lighting manufactures energy-efficient lighting for commercial and industrial facilities. Its range includes high bays, canopy fixtures, wall packs, flat panels and LED retrofit kits.",
+   "industry": "Manufacturing & Energy Efficiency",
+   "text": "supplied",
+   "description": "Established in 1969, FSC Lighting is a California-based manufacturer specializing in energy-efficient commercial and industrial lighting technologies. With more than five decades of manufacturing experience, the company develops customized LED lighting systems and integrated lighting controls for commercial, industrial and institutional facilities, supporting both modernization initiatives and new construction projects.",
    "ownership": null,
    "status": "past",
    "period": "March 2020 – August 2024",
    "years": "2020–2024",
    "engagement": "Network overhauled across offices and production facilities, with cloud systems and centralized data management.",
-   "metric": ["4+ yrs", "managed IT partnership"],
+   "metric": [
+    "4+ yrs",
+    "managed IT partnership"
+   ],
    "case": "fsc-lighting",
    "legacy_id": "3-fsc-lighting",
-   "review": ["R13"],
+   "review": [],
    "include": true,
    "logo": null
   },
   "hallmark-lighting": {
    "name": "Hallmark Lighting",
-   "industry": "Decorative & Hospitality Lighting",
-   "text": "proposed",
-   "description": "Founded in 1978, Hallmark Lighting designed and manufactured custom, high-end lighting for hotels and other hospitality projects, with design teams in California and manufacturing overseas.",
+   "industry": "Manufacturing & Hospitality Design",
+   "text": "supplied",
+   "description": "Hallmark Lighting has a longstanding history of designing and manufacturing custom lighting solutions for the upscale hospitality industry. Established in Southern California, the company has worked with hospitality designers, purchasing organizations and hotel developers to deliver specialized architectural lighting and decorative fixtures for luxury hotel construction and renovation projects.",
    "ownership": "Acquired in 2016 by Resilience Capital Partners, together with its sister company Luminance.",
    "status": "past",
    "period": "December 2018 – July 2020",
@@ -268,44 +303,53 @@
    "metric": null,
    "case": "hallmark-lighting",
    "legacy_id": "6-hallmark-lighting",
-   "review": ["R13", "R18"],
+   "review": [
+    "R18"
+   ],
    "include": true,
    "logo": null
   },
   "myx-fusions": {
    "name": "MYX Fusions",
-   "industry": "Wine & Beverage Brands",
-   "text": "proposed",
-   "description": "MYX Fusions is a wine brand known for Moscato, sangria and lighter-style wines, made from wines imported from Australia, Spain, Italy and Argentina and sold in single-serve and full-size bottles.",
+   "industry": "Consumer Brands & Beverage Manufacturing",
+   "text": "supplied",
+   "description": "MYX Fusions is a beverage brand known for its fruit-infused Moscato wines and distinctive approach to consumer marketing. Through its partnership with internationally recognized recording artist Nicki Minaj and entertainment entrepreneur Mona Scott-Young, the brand combined beverage innovation with popular culture, expanding its distribution into international markets.",
    "ownership": "A brand of MYX Beverage LLC.",
    "status": null,
    "period": null,
    "engagement": null,
    "metric": null,
    "case": null,
-   "review": ["R13", "R14"],
+   "review": [
+    "R14",
+    "R19"
+   ],
    "include": true,
    "logo": null
   },
   "beverly-hills-plaza": {
    "name": "Beverly Hills Plaza Hotel & Spa",
-   "industry": "Hospitality",
-   "text": "proposed",
-   "description": "The Beverly Hills Plaza Hotel & Spa is a 116-room hotel on Wilshire Boulevard in Los Angeles, with an outdoor pool and a full-service spa.",
+   "industry": "Luxury Hospitality",
+   "text": "supplied",
+   "description": "Located along Wilshire Boulevard, Beverly Hills Plaza Hotel & Spa is an upscale boutique hospitality property serving leisure travelers, business professionals and extended-stay guests. The hotel offers luxury accommodations, residential-style suites, dining and spa facilities, combining traditional hospitality with the personalized experience of an independent luxury property.",
    "ownership": null,
    "status": "past",
    "period": "February 2000 – June 2012",
    "years": "2000–2012",
    "engagement": "Dial-up data ports replaced with high-speed coverage across the hotel, and a custom application that posted internet charges to guest folios.",
-   "metric": ["12 yrs", "of technology management"],
+   "metric": [
+    "12 yrs",
+    "of technology management"
+   ],
    "case": null,
-   "review": ["R13"],
+   "review": [],
    "include": true,
    "logo": null
   },
   "cookes-crating": {
    "name": "Cooke’s Crating & Fine Arts Transportation",
    "case_name": "Cooke’s Crating",
+   "home_name": "Cooke’s Crating",
    "industry": "Fine Art Logistics & Transportation",
    "text": "supplied",
    "description": "Established in 1975, Cooke’s Crating is a respected fine art transportation, storage and installation company serving museums, galleries, collectors and cultural institutions internationally. Its extensive portfolio includes work involving the J. Paul Getty Museum, the Huntington, the Museum of Contemporary Art and numerous other prominent cultural institutions. The company specializes in the handling, transportation and preservation of valuable artwork and museum collections.",
@@ -313,33 +357,40 @@
    "status": "current",
    "period": "For more than 3 years",
    "engagement": "Moved off a former provider’s locked infrastructure with zero downtime, then modernized.",
-   "metric": ["5 days", "for the full migration"],
+   "metric": [
+    "5 days",
+    "for the full migration"
+   ],
    "case": "cookes-crating",
    "legacy_id": "13-cookes-crating",
-   "review": ["R6"],
+   "review": [
+    "R6"
+   ],
    "include": true,
    "logo": null
   },
   "optimus-property-management": {
    "name": "Optimus Property Management",
    "industry": "Real Estate & Property Management",
-   "text": "proposed",
-   "description": "Optimus Property Management manages residential and commercial real estate across Los Angeles County, including multifamily communities, office buildings and retail centers. Founded in 2007 and based in Century City, it handles leasing, maintenance, rent collection and financial reporting for property owners.",
+   "text": "supplied",
+   "description": "Established in 2007, Optimus Property Management is a Los Angeles-based real estate management organization specializing in residential and commercial properties. Its diverse portfolio encompasses multifamily communities, office buildings and retail centers, supported by comprehensive property operations, leasing, financial reporting and asset management services.",
    "ownership": null,
    "status": null,
    "period": null,
    "engagement": null,
    "metric": null,
    "case": null,
-   "review": ["R13", "R14"],
+   "review": [
+    "R14"
+   ],
    "include": true,
    "logo": null
   },
   "global-garden": {
    "name": "Global Garden",
-   "industry": "Horticultural Lighting & Growing Equipment",
-   "text": "proposed",
-   "description": "Global Garden is a Torrance, California wholesaler of hydroponic and indoor growing equipment, including LED horticultural lighting, nutrients, growing media and climate control, supplying growers worldwide.",
+   "industry": "Agricultural Technology & Distribution",
+   "text": "supplied",
+   "description": "Global Garden is a North American wholesale distributor specializing in advanced horticultural and controlled-environment agriculture solutions. Serving retailers and commercial cultivation operations throughout the United States and Canada, the company provides specialized lighting, plant nutrition, hydroponic equipment and infrastructure solutions designed to improve cultivation efficiency and productivity.",
    "ownership": null,
    "status": "current",
    "period": null,
@@ -347,7 +398,7 @@
    "metric": null,
    "case": "global-garden",
    "legacy_id": "12-global-garden",
-   "review": ["R13", "R17"],
+   "review": [],
    "include": true,
    "logo": null
   },
@@ -360,7 +411,10 @@
    "status": "current",
    "period": "For about 23 years",
    "engagement": "Day-to-day IT for the school, including Google Workspace for staff and student accounts.",
-   "metric": ["23 yrs", "as the school’s outsourced IT department"],
+   "metric": [
+    "23 yrs",
+    "as the school’s outsourced IT department"
+   ],
    "case": "waverly-school",
    "legacy_id": "9-waverly-school",
    "review": [],
@@ -377,12 +431,23 @@
    "status": "current",
    "period": "For 18 years",
    "engagement": "From an on-premises data center to the cloud, with the infrastructure for every office move handled.",
-   "metric": ["90%+", "of the firm’s environment on Microsoft Azure"],
+   "metric": [
+    "90%+",
+    "of the firm’s environment on Microsoft Azure"
+   ],
    "case": "snitzer-law",
    "legacy_id": "10-snitzer-law",
    "review": [],
    "include": true,
    "logo": null
   }
+ },
+ "intro": {
+  "title": "Experience across industries. Relationships built on trust.",
+  "lead": [
+   "Since 1999, Pro Link Systems has worked with organizations ranging from emerging ventures and established mid-market businesses to internationally recognized brands and multinational corporations.",
+   "Our experience spans investment management, manufacturing, biotechnology, professional services, real estate, hospitality and consumer products."
+  ],
+  "note": "The following represents a selection of organizations we have served through ongoing technology management, strategic advisory services and individual project engagements."
  }
 }

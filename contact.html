@@ -126,7 +126,7 @@
 
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261122d">
+  <link rel="stylesheet" href="_shared.css?v=20261122e">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -187,8 +187,9 @@
         <li><button type="button" class="pl-nav-trigger" data-nav="insights" aria-expanded="false" aria-controls="pl-panel-insights">Insights</button></li>
         <li><button type="button" class="pl-nav-trigger is-current" data-nav="about" aria-expanded="false" aria-controls="pl-panel-about">About</button></li>
       </ul>
-      <a href="/contact" class="btn btn-primary pl-header-cta">Speak With an Expert</a>
+      <a href="/contact" class="btn btn-primary pl-header-cta">Talk to Our Team</a>
     </nav>
+    <a class="pl-call" href="tel:18008906133" aria-label="Call Pro Link Systems at 1-800-890-6133">Call<span> 1-800-890-6133</span></a>
     <button type="button" class="pl-burger" aria-label="Open menu" aria-expanded="false" aria-controls="pl-drawer"><span></span><span></span><span></span></button>
   </div>
 
@@ -367,7 +368,7 @@
   </details>
   <a href="/contact">Contact</a>
   <div class="pl-drawer-meta">
-    <a href="/contact" class="btn btn-primary">Speak With an Expert</a>
+    <a href="/contact" class="btn btn-primary">Talk to Our Team</a>
     <a href="tel:18008906133">Call 1-800-890-6133</a>
     <a href="/support">Client Support</a>
   </div>
@@ -380,8 +381,8 @@
 <section class="pl-pagehead" aria-labelledby="page-h1">
   <div class="pl-wrap">
     <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Contact</nav>
-    <h1 class="pl-h1" id="page-h1">Speak with an expert.</h1>
-    <p class="pl-lead">Tell us about your organization and what you need. A member of our team will respond within one business day to schedule a technology consultation.</p>
+    <h1 class="pl-h1" id="page-h1">Let&rsquo;s discuss your IT needs.</h1>
+    <p class="pl-lead">Tell us a little about your organization. A member of our team will respond within one business day to schedule a free, no-obligation consultation. Prefer to talk now? Call <a href="tel:18008906133">1-800-890-6133</a>.</p>
   </div>
 </section>
 
@@ -397,19 +398,22 @@
         <dt>Business hours</dt><dd>Monday to Friday, 9 AM to 5 PM PT</dd>
         <dt>After-hours support</dt><dd>24/7 help desk for managed-service clients, under contract. <a href="/support">Client Support</a></dd>
       </dl>
-      <h2 class="pl-h3" style="margin-top:56px">What to expect</h2>
+      <h2 class="pl-h3" style="margin-top:56px">What to expect from a consultation</h2>
       <ol class="pl-expect">
         <li><strong>A response within one business day.</strong> We confirm what you need and find a time that works.</li>
-        <li><strong>A consultation, not a pitch.</strong> We learn how your organization works and review your environment and priorities.</li>
-        <li><strong>Practical next steps.</strong> You leave with clear recommendations, whether or not you engage us.</li>
+        <li><strong>Your environment.</strong> We learn how your organization works and review your current systems.</li>
+        <li><strong>Your challenges and goals.</strong> We identify what is getting in the way and discuss your business objectives.</li>
+        <li><strong>Your options.</strong> We explore solutions that fit, with practical next steps, whether or not you engage us.</li>
       </ol>
+      <p class="pl-contact-note">The consultation is free. The <a href="/m365-security-assessment">Microsoft 365 Security Assessment</a> is a separate, fixed-price review that you can order online.</p>
+      <p class="pl-contact-note">Organizations of about 10 to 100 users are our focus, and smaller or larger teams are welcome to reach out.</p>
     </div>
     <div class="pl-formcard">
       <div class="form-card">
     <div class="form-body" id="form-body">
       <div class="contact-options-head">
         <h2>Schedule a technology consultation</h2>
-        <p>Share a few details and a member of our team will respond within one business day to find a time that works for you.</p>
+        <p>Only your name and email are required. No technical details needed: we will cover those in the conversation.</p>
       </div>
 
       <form method="post" id="contact-form" novalidate>
@@ -449,6 +453,18 @@
         </div>
 
         <div class="form-group">
+          <label for="firm_size">Number of users <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+          <select id="firm_size" name="firm_size">
+            <option value="" selected>Select a range&hellip;</option>
+            <option value="1 to 9 users">1 to 9 users</option>
+            <option value="10 to 25 users">10 to 25 users</option>
+            <option value="26 to 50 users">26 to 50 users</option>
+            <option value="51 to 100 users">51 to 100 users</option>
+            <option value="More than 100 users">More than 100 users</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <label for="interest">What can we help with?</label>
           <select id="interest" name="interest">
             <option value="" disabled selected>Select a service area&hellip;</option>
@@ -465,7 +481,7 @@
         </div>
 
         <div class="form-group" id="fg-message">
-          <label for="message">Tell us about your situation</label>
+          <label for="message">Tell us about your situation <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
           <textarea id="message" name="message" placeholder="Briefly describe your current IT environment, your biggest challenge, or what prompted you to reach out&hellip;"></textarea>
           <span class="form-error">Please include a brief message.</span>
         </div>
@@ -565,7 +581,7 @@
     <div class="pl-footer-brand">
       <img src="/logo.png" alt="Pro Link Systems" width="141" height="36" loading="lazy" decoding="async">
       <p>Technology management, cybersecurity and strategic IT leadership. Headquartered in Woodland Hills, California, since 1999.</p>
-      <a href="/contact" class="btn btn-light">Speak With an Expert</a>
+      <a href="/contact" class="btn btn-light">Talk to Our Team</a>
     </div>
     <div class="pl-footer-col">
       <h2>Solutions</h2>

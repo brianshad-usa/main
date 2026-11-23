@@ -107,7 +107,7 @@
 
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="_shared.css?v=20261122d">
+  <link rel="stylesheet" href="_shared.css?v=20261122e">
   <style>
     /* Ads landing page: the 2026 identity with a short header (logo and phone, no menu on purpose) and the form in the hero. */
     .lp-bar { background: #fff; border-bottom: 1px solid var(--line); }
@@ -392,6 +392,17 @@
               <label for="fi-company">Company Name <span class="opt">(optional)</span></label>
               <input type="text" id="fi-company" name="company" placeholder="Acme Corporation" autocomplete="organization">
             </div>
+            <div class="form-group" id="fg-size">
+              <label for="fi-size">Number of users <span class="opt">(optional)</span></label>
+              <select id="fi-size" name="firm_size">
+                <option value="" selected>Select a range&hellip;</option>
+                <option value="1 to 9 users">1 to 9 users</option>
+                <option value="10 to 25 users">10 to 25 users</option>
+                <option value="26 to 50 users">26 to 50 users</option>
+                <option value="51 to 100 users">51 to 100 users</option>
+                <option value="More than 100 users">More than 100 users</option>
+              </select>
+            </div>
             <div class="form-group" id="fg-message">
               <label for="fi-message">How can we help? <span class="opt">(optional)</span></label>
               <textarea id="fi-message" name="message" rows="2" placeholder="Briefly describe your environment or what prompted you to reach out&hellip;"></textarea>
@@ -626,7 +637,7 @@
     <div class="pl-footer-brand">
       <img src="/logo.png" alt="Pro Link Systems" width="141" height="36" loading="lazy" decoding="async">
       <p>Technology management, cybersecurity and strategic IT leadership. Headquartered in Woodland Hills, California, since 1999.</p>
-      <a href="/contact" class="btn btn-light">Speak With an Expert</a>
+      <a href="/contact" class="btn btn-light">Talk to Our Team</a>
     </div>
     <div class="pl-footer-col">
       <h2>Solutions</h2>

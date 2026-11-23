@@ -1558,3 +1558,57 @@ html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline 
   .pl-client-name { font-size: 1.08rem; }
   .pl-client-industry { font-size: .84rem; }
 }
+
+/* 17. ITERATION 5: GROWING-BUSINESS POSITIONING AND CONVERSION ----------------------------------------------------------
+   Same identity; new home sections (who we work with, value), a size note in the hero, consultation steps, and a
+   tap-to-call button in the header below 920px. */
+.pl-call { display: none; }
+.pl-hero-size { margin-top: 22px; max-width: 34rem; padding-left: 14px; border-left: 2px solid var(--accent); font-size: .95rem; line-height: 1.55; color: rgba(255,255,255,.82); }
+.pl-who-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.pl-who { padding: 28px 30px 30px 0; border-bottom: 1px solid var(--line); }
+.pl-who:not(:nth-child(3n+1)) { padding-left: 30px; border-left: 1px solid var(--line); }
+.pl-who h3 { font-family: var(--font-title); font-weight: 650; font-size: 1.16rem; line-height: 1.3; letter-spacing: -.012em; color: var(--ink); margin-bottom: 10px; }
+.pl-who p { font-size: .97rem; line-height: 1.65; color: var(--text-muted); }
+.pl-models { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+.pl-model { display: flex; flex-direction: column; gap: 8px; padding: 26px 28px; border: 1px solid var(--line); border-left: 2px solid var(--navy); background: #fff; transition: background .15s; }
+.pl-model:hover { background: var(--mist); }
+.pl-model-k { font: 600 .72rem/1.3 var(--font-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); }
+.pl-model strong { font-family: var(--font-title); font-weight: 650; font-size: 1.2rem; line-height: 1.3; color: var(--ink); }
+.pl-model .pl-arrow { margin-top: 6px; font-size: .92rem; }
+.pl-value-grid { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 32px; }
+.pl-value-grid li { padding: 24px 0 30px; border-top: 1px solid var(--ink); }
+.pl-value-grid h3 { font-family: var(--font-title); font-weight: 650; font-size: 1.1rem; line-height: 1.3; color: var(--ink); margin-bottom: 8px; }
+.pl-value-grid p { font-size: .95rem; line-height: 1.62; color: var(--text-muted); }
+.pl-steps-mini { list-style: none; counter-reset: s; margin: 28px 0 6px; border-top: 1px solid var(--line-dark); }
+.pl-steps-mini li { counter-increment: s; position: relative; padding: 14px 0 14px 40px; border-bottom: 1px solid var(--line-dark); font-size: .97rem; line-height: 1.55; color: var(--text-inv); }
+.pl-steps-mini li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 0; top: 15px; font: 600 .8rem/1.4 var(--font-sans); color: var(--accent); }
+.pl-steps-mini strong { color: #fff; font-weight: 600; }
+.pl-closing-note { margin-top: 22px; font-size: .9rem; line-height: 1.6; color: rgba(255,255,255,.7); }
+.pl-closing-note a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.pl-home #success .pl-ccards { gap: 48px 36px; }
+.pl-home #value .pl-h2 { font-size: clamp(1.9rem, 3.1vw, 2.65rem); }
+.pl-contact-note { margin-top: 16px; font-size: .92rem; line-height: 1.6; color: var(--text-muted); }
+.pl-contact-note a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+.pl-pagehead .pl-lead a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.pl-folio-intro { max-width: 52rem; margin: -24px 0 28px; font-size: 1rem; line-height: 1.65; color: var(--text-muted); }
+@media (max-width: 1024px) {
+  .pl-who-grid { grid-template-columns: 1fr 1fr; }
+  .pl-who:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .pl-who:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--line); }
+  .pl-value-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 920px) {
+  .pl-call { display: inline-flex; align-items: center; height: 44px; padding: 0 14px; margin-left: auto; border: 1px solid var(--navy); color: var(--navy); font: 600 .9rem/1 var(--font-sans); white-space: nowrap; }
+  .pl-call:hover { background: var(--navy); color: #fff; }
+  .pl-header .pl-wrap { gap: 12px; }
+}
+@media (max-width: 768px) {
+  .pl-who-grid { grid-template-columns: 1fr; }
+  .pl-who, .pl-who:nth-child(even) { padding: 22px 0 24px; border-left: 0; }
+  .pl-models { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+  .pl-value-grid { grid-template-columns: 1fr; }
+  .pl-hero-size { font-size: .9rem; }
+}
+@media (max-width: 480px) {
+  .pl-call span { display: none; }
+}
