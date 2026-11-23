@@ -396,7 +396,7 @@ generator (blog, GBP posts, social, SEO engine).
   /case-studies). Named real-client quotes are never edited — and a quote is only "real" if
   it can be traced: the quote the site attributed to Alan B. Snitzer ("over 21 years") was
   another client's 2018 Google review with the number changed; it was replaced on 2026-11-10
-  with Snitzer's own review text. Snitzer = **18-year client** (F011). Cunico and CR&R
+  with Snitzer's own review text. Snitzer = **client since 2006** (owner, 2026-11-23; the social facts file F011 still says 18-year). Cunico and CR&R
   mention permission granted by Brian 2026-11-10.
 - **No `aggregateRating`** anywhere (removed from 10 pages on 2026-11-09).
 - **Enforced by `site_guard.py` check 20** (compliance-status claims, response-time wording,
@@ -768,6 +768,9 @@ that I would like to host on our site similarly". Every app follows this one pat
   - **Home:** featured clients "Selected Clients & Engagements" (LISI, Cunico, M13, Fralock, VEEV, Optical Zonu, Cochise,
     FSC); "Who we work with" shows the three engagement models of `/services#models`; "Why growing businesses choose us"
     has six reasons without repeats.
+  - **Headline (owner, 2026-11-23):** back to the earlier approved "Technology leadership for an increasingly complex world."
+    with the supporting line it carried in iteration 5. Tenure is written as a start year: Waverly since 2003, Snitzer since
+    2006, Cunico since 2012, Cooke's since 2022 (no elapsed-year counts that go stale).
   - **Insights:** the t90 Copilot governance article was merged into t49 and 301s to it; t89 stays (owner/CFO decision).
   - **Link labels:** "Fully Managed IT" means `/services#managed-it`; "Managed IT Services" means `/managed-it-services`;
     "Outsourced IT department" means `/outsourced-it-services-los-angeles`.

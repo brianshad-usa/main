@@ -31,7 +31,7 @@ const RIBBON = '<div aria-hidden="true" style="position:fixed;left:12px;bottom:1
 
 // Design review (staging only, removed with this file): a small panel linking to the same page in earlier
 // staging iterations and to Brian's private review notes. The iteration 5 headline switch was removed after Brian
-// chose option A (2026-11-22).
+// chose option A (2026-11-22); on 2026-11-23 he returned the home page to the earlier approved headline.
 const REVIEW_PANEL = `
 <div id="plr" class="plr">
   <button type="button" class="plr-toggle" aria-expanded="false" aria-controls="plr-body">Design review</button>

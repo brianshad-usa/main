@@ -1626,6 +1626,8 @@ html body .pl-art-body a.btn-outline-navy, html body .pl-art-body a.btn-outline 
 .pl-folio-count { margin: 0 0 18px; font-size: .88rem; color: var(--text-muted); }
 .pl-folio-jump[hidden] + .pl-folio-count { display: none; }
 .pl-profile[hidden] { display: none; }
+/* tenure figures on the portfolio page are start years ("Since 2003"): one line at every width */
+.pl-figures--tenure .pl-figure strong { font-size: clamp(2.1rem, 3.3vw, 2.9rem); white-space: nowrap; }
 /* profiles lead with what Pro Link Systems did; the company summary is secondary */
 .pl-profile-work .pl-case-sector { margin-bottom: 10px; line-height: 1.5; }
 .pl-profile-did { font-size: 1rem; line-height: 1.62; color: var(--text); }
