@@ -16,9 +16,6 @@
 # These runs were announced on LinkedIn but never deployed (push blocked by
 # branch protection), so their dated URLs 404. Redirect to the blog index so
 # the shared LinkedIn links resolve. No real posts exist on these dates.
-/blog/2026-10-15-*    /blog/    301
-/blog/2026-10-17-*    /blog/    301
-/blog/2026-10-19-*    /blog/    301
 
 # ---- Core pages ----
 /index.html                                /                                    301
@@ -80,7 +77,6 @@
 /it-help-desk.html                         /it-help-desk                        301
 /co-managed-it-services.html               /co-managed-it-services              301
 /co-managed-it                             /co-managed-it-services              301
-/co-managed-it/*                           /co-managed-it-services              301
 
 # ---- Case studies ----
 /case-studies.html                         /case-studies                        301
@@ -112,51 +108,40 @@
 /waste-management-it-services.html         /waste-management-it-services        301
 
 # ---- Self-service apps: hub + one product page per app (CONVENTIONS "Self-service apps") ----
-/self-service.html                         /self-service                        301
+/self-service.html                         /m365-security-assessment            302
 /m365-security-assessment.html             /m365-security-assessment            301
 # While there is only ONE app (Brian 2026-11-20), the hub sends visitors straight to it. TEMPORARY (302,
-# never 301: browsers cache 301s for good). When app #2 launches, delete this line, remove the hub's
-# noindex and put /self-service back in sitemap.xml + llms.txt.
+# never 301: browsers cache 301s for good). When app #2 launches, delete this line, point /self-service.html
+# back to /self-service (301), remove the hub's noindex and put /self-service back in sitemap.xml + llms.txt.
+# (/self-service.html goes straight to the app meanwhile, so no visitor takes two hops.)
 /self-service                              /m365-security-assessment            302
 
 # ---- Duplicate blog post -> canonical (t5) version ----
-/blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre.html   301
+/blog/2026-06-signs-your-los-angeles-business-has-outgrown-your-current-it.html   /blog/2026-06-t5-signs-your-los-angeles-business-has-outgrown-your-curre   301
 
 # ---- Restructure fixes (2026-08-06): renamed / removed pages -> current URLs ----
 # URGENT: /helpdesk-it-support-los-angeles was renamed to /it-help-desk with no
 # redirect; it 404'd for ~2 weeks while paid ads pointed at it (asset disapproved).
 /helpdesk-it-support-los-angeles     /it-help-desk                        301
-/helpdesk-it-support-los-angeles/*   /it-help-desk                        301
 
 # ---- Legacy vertical / lead-gen paths from the old site (old backlinks/GBP) ----
 # No dedicated hospitality page exists, so /hospitality-companies/ -> general MSP page.
 /it-consultation                     /contact                             301
-/it-consultation/*                   /contact                             301
 /sign-up-now                         /contact                             301
-/sign-up-now/*                       /contact                             301
 /office-365-migration-service        /microsoft-365-support-los-angeles   301
-/office-365-migration-service/*      /microsoft-365-support-los-angeles   301
 /entertainment-companies             /entertainment-it-services           301
-/entertainment-companies/*           /entertainment-it-services           301
 /hospitality-companies               /managed-it-services                 301
-/hospitality-companies/*             /managed-it-services                 301
 /manufacturing-companies             /manufacturing-it-services           301
-/manufacturing-companies/*           /manufacturing-it-services           301
 /healthcare-institutions             /healthcare-it-services              301
-/healthcare-institutions/*           /healthcare-it-services              301
 
 # ---- Legacy vertical pages, second wave (2026-08-07) — found via Google Ads
 # asset sweep: these pages died in the restructure while ad-group sitelinks and
 # possibly old backlinks still referenced them. Bare + splat variants both
 # needed (Pages splats do not match the bare path).
 /restaurants-bars-and-clubs          /entertainment-it-services           301
-/restaurants-bars-and-clubs/*        /entertainment-it-services           301
 /socal-startups                      /technology-it-services              301
-/socal-startups/*                    /technology-it-services              301
 /cloud-and-infrastructure            /cloud-services                      301
-/cloud-and-infrastructure/*          /cloud-services                      301
 /cloud-management-services           /cloud-services                      301
-/cloud-management-services/*         /cloud-services                      301
 
 
 
@@ -168,6 +153,54 @@
 # From the Wayback archive of the old site; compact prefix families (splats)
 # collapse whole old sections. Obscure/probe URLs are left to 404.
 
+/network-security                              /network-security-services           301
+/network-security/                             /network-security-services           301
+/network-monitoring                            /cybersecurity-services              301
+/network-monitoring/                           /cybersecurity-services              301
+/cybersecurity                                 /cybersecurity-services              301
+/cybersecurity/                                /cybersecurity-services              301
+/email-messaging                               /microsoft-365-support-los-angeles   301
+/email-messaging/                              /microsoft-365-support-los-angeles   301
+/email-office-365-management                   /microsoft-365-support-los-angeles   301
+/email-office-365-management/                  /microsoft-365-support-los-angeles   301
+/manufacturing                                 /manufacturing-it-services           301
+/manufacturing/                                /manufacturing-it-services           301
+/entertainment                                 /entertainment-it-services           301
+/entertainment/                                /entertainment-it-services           301
+
+# ===========================================================================
+# POLICY — never rename or delete a published URL without shipping a 301 to its
+# successor in the SAME deploy. Paid ads, Google Business Profile, and backlinks
+# point at these URLs; a silent rename 404s them within hours and burns ad spend
+# (Google disapproves assets on "Destination not working, HTTP 404"). Put the
+# redirect in this file in the same commit that renames or removes the page.
+#
+# www -> apex is handled by a Cloudflare Redirect Rule (zone level), NOT here:
+# _redirects matches path only, so a catch-all would also loop on the apex domain.
+# ===========================================================================
+
+# ===========================================================================
+# DYNAMIC RULES (splats / placeholders) -- keep them all BELOW every static rule.
+# Cloudflare Pages: 2,000 static + 100 dynamic rules, static first. With dynamic rules mixed in
+# above static ones, everything after the 100th rule was silently ignored (found 2026-11-22: 62
+# rules, live site included). chrome/golive_check.py enforces the order and the limits.
+# ===========================================================================
+/blog/2026-10-15-*    /blog/    301
+/blog/2026-10-17-*    /blog/    301
+/blog/2026-10-19-*    /blog/    301
+/co-managed-it/*                           /co-managed-it-services              301
+/helpdesk-it-support-los-angeles/*   /it-help-desk                        301
+/it-consultation/*                   /contact                             301
+/sign-up-now/*                       /contact                             301
+/office-365-migration-service/*      /microsoft-365-support-los-angeles   301
+/entertainment-companies/*           /entertainment-it-services           301
+/hospitality-companies/*             /managed-it-services                 301
+/manufacturing-companies/*           /manufacturing-it-services           301
+/healthcare-institutions/*           /healthcare-it-services              301
+/restaurants-bars-and-clubs/*        /entertainment-it-services           301
+/socal-startups/*                    /technology-it-services              301
+/cloud-and-infrastructure/*          /cloud-services                      301
+/cloud-management-services/*         /cloud-services                      301
 /managed-it-services-2/cloud-services/*        /cloud-services                      301
 /managed-it-services-2/cyber-security-services/* /cybersecurity-services              301
 /managed-it-services-2/it-support/*            /it-help-desk                        301
@@ -181,12 +214,6 @@
 /24*                                           /it-help-desk                        301
 /desktop-support*                              /it-help-desk                        301
 /remote-*                                      /it-help-desk                        301
-/network-security                              /network-security-services           301
-/network-security/                             /network-security-services           301
-/network-monitoring                            /cybersecurity-services              301
-/network-monitoring/                           /cybersecurity-services              301
-/cybersecurity                                 /cybersecurity-services              301
-/cybersecurity/                                /cybersecurity-services              301
 /business-cloud*                               /cloud-services                      301
 /cloud-migration*                              /cloud-services                      301
 /migration-to-cloud*                           /cloud-services                      301
@@ -196,10 +223,6 @@
 /data-recovery*                                /backup-disaster-recovery            301
 /office-365*                                   /microsoft-365-support-los-angeles   301
 /microsoft-exchange*                           /microsoft-365-support-los-angeles   301
-/email-messaging                               /microsoft-365-support-los-angeles   301
-/email-messaging/                              /microsoft-365-support-los-angeles   301
-/email-office-365-management                   /microsoft-365-support-los-angeles   301
-/email-office-365-management/                  /microsoft-365-support-los-angeles   301
 /artificial-intelligence*                      /ai-automation-services              301
 /about-us*                                     /about                               301
 /contact-us*                                   /contact                             301
@@ -207,10 +230,6 @@
 /privacy-policy*                               /privacy                             301
 /legal-services*                               /law-firm-it-services-los-angeles    301
 /educational-institution*                      /education-it-services               301
-/manufacturing                                 /manufacturing-it-services           301
-/manufacturing/                                /manufacturing-it-services           301
-/entertainment                                 /entertainment-it-services           301
-/entertainment/                                /entertainment-it-services           301
 /it-services*                                  /managed-it-services                 301
 /it-consulting*                                /managed-it-services                 301
 /complete-managed*                             /managed-it-services                 301
@@ -221,14 +240,3 @@
 /domain-controller*                            /managed-it-services                 301
 /os-install*                                   /managed-it-services                 301
 /troubleshooting*                              /managed-it-services                 301
-
-# ===========================================================================
-# POLICY — never rename or delete a published URL without shipping a 301 to its
-# successor in the SAME deploy. Paid ads, Google Business Profile, and backlinks
-# point at these URLs; a silent rename 404s them within hours and burns ad spend
-# (Google disapproves assets on "Destination not working, HTTP 404"). Put the
-# redirect in this file in the same commit that renames or removes the page.
-#
-# www -> apex is handled by a Cloudflare Redirect Rule (zone level), NOT here:
-# _redirects matches path only, so a catch-all would also loop on the apex domain.
-# ===========================================================================
