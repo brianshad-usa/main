@@ -771,6 +771,9 @@ that I would like to host on our site similarly". Every app follows this one pat
   - **Insights:** the t90 Copilot governance article was merged into t49 and 301s to it; t89 stays (owner/CFO decision).
   - **Link labels:** "Fully Managed IT" means `/services#managed-it`; "Managed IT Services" means `/managed-it-services`;
     "Outsourced IT department" means `/outsourced-it-services-los-angeles`.
+  - **_redirects order:** every static rule above the first splat/placeholder rule (Cloudflare: 2,000 static + 100
+    dynamic). Mixed in higher up, Cloudflare silently ignored every rule after the 100th (62 rules, live site included).
+    Add new static rules above the "DYNAMIC RULES" banner; verify with a per-rule request sweep after deploying.
   - **Robots on staging:** the guard rewrites each page's own robots tag to noindex (one tag, one X-Robots-Tag).
     `python chrome/golive_check.py --seo` runs the cutover checks (one robots tag, canonicals, sitemap, every production
     URL resolving in at most one hop, no staging labels) on its own.
