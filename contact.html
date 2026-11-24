@@ -452,14 +452,16 @@
         </div>
 
         <div class="form-group">
-          <label for="firm_size">Number of users <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+          <label for="firm_size">Users or employees <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
           <select id="firm_size" name="firm_size">
             <option value="" selected>Select a range&hellip;</option>
-            <option value="1 to 9 users">1 to 9 users</option>
-            <option value="10 to 25 users">10 to 25 users</option>
-            <option value="26 to 50 users">26 to 50 users</option>
-            <option value="51 to 100 users">51 to 100 users</option>
-            <option value="More than 100 users">More than 100 users</option>
+            <option value="1-9">1&ndash;9</option>
+            <option value="10-24">10&ndash;24</option>
+            <option value="25-49">25&ndash;49</option>
+            <option value="50-99">50&ndash;99</option>
+            <option value="100-249">100&ndash;249</option>
+            <option value="250-499">250&ndash;499</option>
+            <option value="500+">500+</option>
           </select>
         </div>
 
@@ -721,7 +723,7 @@
       ft = { landing_page: location.pathname + location.search, first_referrer: document.referrer || '' };
       try {
         var q = new URLSearchParams(location.search);
-        ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','msclkid'].forEach(function(k) { if (q.get(k)) ft[k] = q.get(k); });
+        ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','gbraid','wbraid','msclkid'].forEach(function(k) { if (q.get(k)) ft[k] = q.get(k); });
       } catch (e) {}
       try { sessionStorage.setItem(FT_KEY, JSON.stringify(ft)); } catch (e) {}
     }

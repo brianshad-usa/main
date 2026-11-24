@@ -23,7 +23,7 @@
  */
 (function () {
   var FT_KEY = "pls_first_touch";
-  var ATTR = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "msclkid"];
+  var ATTR = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid", "msclkid"];
 
   // First touch for this browser session: the page they landed on and where from.
   function firstTouch() {
