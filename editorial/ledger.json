@@ -4297,6 +4297,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-24",
+      "idea_id": "S197",
+      "theme": "creative_surprise",
+      "format": "framework",
+      "title": "What nobody tells you before your first security incident",
+      "excellence": 95,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight",
+        "channels": {
+          "linkedin": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "facebook": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "gbp": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "instagram": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          },
+          "x": {
+            "style": "stat",
+            "format": "single_image",
+            "ground": "navy",
+            "layout": "stat_hero",
+            "register": "stat_insight"
+          }
+        }
+      }
     }
   ]
 }

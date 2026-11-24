@@ -1,0 +1,162 @@
+{
+  "post": "It's 11:40 on a Friday night. Your office manager gets a text from a coworker: the shared drive is full of files nobody can open, and the names look wrong.\n\nWho does she call? Is she allowed to wake anyone up? Should someone turn the server off, and who gets to decide?\n\nThose questions shape how a security incident goes, and the answers are easy to put off until the night you need them. Four worth settling this week:\n\n- Who can authorize shutting systems down\n- Who calls your insurance carrier first, before any outside help, and which response firms your policy requires\n- How your leaders reach each other if email isn't safe, and how they confirm it's really them\n- That nobody wipes a computer until someone decides what evidence to keep\n\nPro Link Systems publishes its incident-response playbook free, with no form to fill out. It's a practical place to start that conversation with your team.",
+  "headline": "Decide who decides before the incident does",
+  "cta_label": "Learn more",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-24-s197-card.png",
+  "image_file_jpg": "2026-11-24-s197-card.jpg",
+  "theme": "creative_surprise",
+  "idea_id": "S197",
+  "core_idea": "In a first security incident, the costliest early mistakes are usually well-intentioned ones made by people who were never told what they were allowed to do: who may shut systems down, when the insurer gets called, how leaders verify each other, what must not be wiped, and who is fresh in the morning. Make those decisions in advance. Pro Link publishes its own incident-response playbook free and ungated as a starting draft.",
+  "channels": {
+    "linkedin": "Incident response plans get written at 10 a.m. on a weekday. Incidents don't keep those hours.\n\nAt 2 a.m. on a Saturday, an employee sees files renaming themselves on the shared drive and has no idea whether to call IT, a manager, or nobody.\n\nIn a first incident, the costliest early mistakes tend to be well-intentioned ones, made by people who were never told what they were allowed to do. Decide these in advance:\n\nWho can take systems offline. Shutting down costs revenue, so it is a business call. Unassigned authority gets debated while the damage spreads.\n\nWho calls the insurer, and when. Your policy may set notification windows and require the carrier's approved response firms. Calling your own firm first could complicate a claim. Read the policy before you need it.\n\nHow leaders talk if email is compromised. Pick the backup channel now and add a verification step. With voice cloning widely available, a familiar voice is no longer proof of identity.\n\nWhat not to touch. Wiping and rebuilding feels responsible, but it destroys the evidence of what was taken and how the attacker got in. Skip that step and you may rebuild the same open door.\n\nWho is fresh at 8 a.m. Incidents outlast a workday, and tired people make expensive decisions.\n\nPro Link Systems publishes its own incident-response playbook publicly: free, ungated, no form. Use it as a first draft for the decisions above, and make every answer a person's name rather than a job title.",
+    "facebook": "It's 11:40 on a Friday night. Your office manager gets a text from a coworker: the shared drive is full of files nobody can open, and the names look wrong.\n\nWho does she call? Is she allowed to wake anyone up? Should someone turn the server off, and who gets to decide?\n\nThose questions shape how a security incident goes, and the answers are easy to put off until the night you need them. Four worth settling this week:\n\n- Who can authorize shutting systems down\n- Who calls your insurance carrier first, before any outside help, and which response firms your policy requires\n- How your leaders reach each other if email isn't safe, and how they confirm it's really them\n- That nobody wipes a computer until someone decides what evidence to keep\n\nPro Link Systems publishes its incident-response playbook free, with no form to fill out. It's a practical place to start that conversation with your team.",
+    "gbp": "Before your first security incident, settle four things no technical runbook covers: who can authorize taking systems offline, who notifies your cyber insurance carrier (before anyone hires outside help) and which response firms your policy requires, how your leadership team communicates and verifies identity if email is compromised, and who decides what evidence to preserve before anything is wiped. Write the answers down as names, not titles, and share them with your managers. Pro Link Systems publishes its incident-response playbook free and ungated as a starting point. Our Woodland Hills team has served Los Angeles businesses since 1999.",
+    "x": [
+      "The first real decision in a security incident is a business call: who may take systems offline for a few hours while revenue stops. If your plan doesn't name that person, the incident will choose for you."
+    ],
+    "instagram_caption": "The first hours of a security incident are mostly about people, not malware. An employee has to notice and know who to call. Someone with authority has to decide whether to take systems offline. Your cyber policy may set notification windows and approved response firms, so the carrier call comes before outside help. Leadership needs a backup channel if email can't be trusted, plus a way to confirm who is really on the line. Evidence has to survive the urge to wipe and rebuild. And someone rested has to take over in the morning. Settle these before you need them. Our incident-response playbook is public, free and ungated. #IncidentResponse #CyberResilience #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "stat",
+    "format": "single_image",
+    "ground": "navy",
+    "layout": "stat_hero",
+    "register": "stat_insight",
+    "channels": {
+      "linkedin": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "facebook": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "gbp": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "instagram": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      },
+      "x": {
+        "style": "stat",
+        "format": "single_image",
+        "ground": "navy",
+        "layout": "stat_hero",
+        "register": "stat_insight"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 95,
+    "scores": {
+      "topic_relevance": 96,
+      "timeliness": 94,
+      "originality": 93,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 97,
+      "writing_quality": 96,
+      "visual_sophistication": 93,
+      "platform_fit": 95,
+      "shareability": 95,
+      "saveability": 97,
+      "brand_authority": 96,
+      "trust": 97,
+      "strategic_value": 96
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F014): Pro Link Systems publishes its incident-response playbook publicly, free and ungated, no form required",
+    "ANALYSIS: the costliest early mistakes in a first incident tend to be well-intentioned actions by people without pre-assigned authority",
+    "ANALYSIS: taking systems offline costs revenue and is a business decision that needs pre-assigned authority",
+    "ANALYSIS: cyber policies may set notification windows and require carrier-approved response firms; engaging an outside firm first could complicate a claim. Readers are told to check their own policy, not told that theirs does",
+    "ANALYSIS: email may be compromised during an incident, so leadership needs an alternate channel with identity verification",
+    "ANALYSIS: voice cloning is widely available, so a familiar voice is not proof of identity (no statistic cited)",
+    "ANALYSIS: wiping and rebuilding immediately can destroy evidence of what was taken and the entry point, risking reinfection",
+    "OPINION: incidents outlast a workday and fatigue drives poor decisions, so plan shifts",
+    "ILLUSTRATIVE: the 2 a.m. Saturday, 11:40 Friday, and carousel timestamps are hypothetical scenarios, not reported incidents",
+    "NOTE FOR HUMAN: cta_url points to the site root because the direct playbook URL was not supplied; replace with the playbook URL before publishing"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The commercial close sells the wrong thing. A 24/7 help desk is not incident response, and many MSPs claim round-the-clock support. The draft ignores F014: Pro Link publishes its incident-response playbook publicly, free and ungated. On this topic that is the most credible and distinctive proof the brand has. Rebuild the close around the playbook, and keep the help desk as a supporting fact."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The carousel is a list of tips, so it has no narrative engine. The concept implies a clock: an incident unfolding hour by hour. Restructure the slides as a timestamped night (Sat 02:14, 02:40, 03:05...). The progression then earns the swipe, and the visual system becomes ownable."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The final slide is a service advertisement with a location footer, and nothing gives the carousel a recognizable visual signature. Use timestamp kickers in a fixed monospace position as the consistent system. Keep a typographic layout with no imagery. Make the CTA slide as quiet as the content slides, with no oversized branding."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "Several claims overreach. Slide 2's 'It starts with a phone call, not malware' is technically false, because the incident starts with the attacker and the call is detection. 'Your first security incident probably won't start during business hours' and X's 'Most incident plans assume...' are unsourced quasi-statistics about attacker behaviour and industry practice, which the hard rules forbid. Reframe all three as analysis without frequency claims."
+    },
+    {
+      "role": "CIO",
+      "finding": "The evidence point stops halfway. The strongest operational reason not to wipe immediately is that without root cause you may rebuild the same entry point. The draft never says this, even though that is what a CIO would bring to the board."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The help-desk copy overclaims. 'The first call reaches a person who can help you make them' (LinkedIn, Facebook, Instagram) is not supported. F007 says after-hours access is press-1 to an on-call desk for managed-service clients only. It also implies incident-decision support that the verified facts do not establish. The insurer point also misses its sharpest edge: a policy may require the carrier's approved response firms, so hiring your own first can complicate a claim. State that as a 'may' and tell readers to check."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft has no AI angle. That is acceptable, since the standards forbid manufactured AI urgency. However, there is a genuine 2026 point it misses: the backup communication channel needs an identity check. Voice cloning means a familiar voice on the phone is no longer proof of who is calling. That makes 'agree on another channel' advice current rather than dated."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The decisions are right but scattered across prose, and the most valuable one (insurer obligations) is buried as a single closing line. Executives want the decisions named as a short list they can assign. Lead each point with the decision itself (who can take systems offline, who calls the insurer), and fill checklist_items so the post is saveable."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "checklist_items is empty, and the Instagram caption ends on a service plug. Saveability depends on a portable checklist, and shareability depends on the reader feeling they found something rather than being sold something. The playbook link does both."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "As drafted, any MSP with a 24/7 help desk could publish this package almost word for word. The ultimate test fails. Two things change that: the public, ungated playbook (F014) and the 1999 Woodland Hills history (F012). The card_headline 'Our in-house help desk answers around the clock' also overstates F007 and puts the ad ahead of the idea."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The Instagram caption opens two consecutive sentences with 'Someone', which violates the voice rules. The Facebook line 'almost no business writes the answers down' is an unsourced generalization. GBP and Facebook both say the help desk 'operates 24/7, so that late-night call reaches a person', which drifts from verified wording. The CTA button 'Talk to our team' paired with type CALL and a contact URL is acceptable, but the label should match the action."
+    },
+    {
+      "role": "Cybersecurity Expert / CIO",
+      "finding": "The carousel timeline contradicted its own advice. The insurer slide sat at 08:00, after the wipe decision, which implies the carrier is called hours into the incident. That is exactly the sequence that can complicate a claim. 'Who takes the next shift' also appeared in the takeaway without any slide setting it up. Fix: move the carrier call to 02:55, before anyone engages outside help, and give 08:00 to the fatigue and handoff point so every takeaway item is earned."
+    },
+    {
+      "role": "Chief Marketing Officer / Brand Director",
+      "finding": "The draft was most generic where it was most promotional. LinkedIn closed with two CTAs, the playbook and then '24/7, in-house and US-based'. The help-desk line is the one sentence any MSP could publish, and it breaks the one-CTA rule. GBP used CALL / 'Call our team', which fights a post whose offer is a free, ungated playbook. Fix: cut the help-desk pitch from LinkedIn, end on a distinctive instruction, and switch GBP to LEARN_MORE. A human should swap in the direct playbook URL, which is not in the brief, so none was invented."
+    },
+    {
+      "role": "Senior Technology Editor / Copy Editor",
+      "finding": "Originality and hook compression lagged. The X post used an 'isn't technical. It's...' construction that sits next to the banned 'it's not just X, it's Y' pattern. The carousel hook was two clauses, too long for a slide whose only job is the swipe. LinkedIn's thesis line also restated a familiar point ('organizational, not technical'). Fix: rewrite X as a single declarative and cut the hook to one line. Sharpen the thesis to the more original claim: the costliest early mistakes are well-intentioned ones by people never told what they were allowed to do."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
