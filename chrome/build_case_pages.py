@@ -533,7 +533,8 @@ def main():
     crlf = "\r\n" in hub
     h = hub.replace("\r\n", "\n")
     head = h[:h.index("</head>")]
-    tracking = "".join(m.group(0) + "\n" for m in re.finditer(r"<script(?![^>]*ld\+json)[^>]*>.*?</script>", head, re.S))
+    tracking = "".join(m.group(0) + "\n" for m in re.finditer(r"<script(?![^>]*ld\+json)[^>]*>.*?</script>", head, re.S)
+                       if "/assets/js/consent.js" not in m.group(0))   # apply_chrome adds the marked consent block
     assert "googletagmanager.com/gtag/js" in tracking and "bat.bing.net" in tracking, "tracking scripts not found in hub head"
 
     os.makedirs(os.path.join(ROOT, "case-studies"), exist_ok=True)

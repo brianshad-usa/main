@@ -1,6 +1,6 @@
 {
  "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | former | past | project (Current client / Former client / Past engagement / Project engagement) or null when unverified; 'model': 'co-managed' adds a Co-managed IT label. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' records the owner's final approval of names and logos (2026-11-23). 'logo' points to a file in assets/clients/, taken from the client's own website (an archived copy where the site is gone); clients without a logo keep a text name plate.",
- "approved": "2026-11-23: client names (naming permission held for every client) and logos (taken from each client's own website) approved by the owner",
+ "approved": "2026-11-23: client names (naming permission held for every client) and logos (taken from each client's own website) approved by the owner; 2026-11-25 (Phase 4): the owner approved publication of every portfolio client's logo, including the 16 Phase 3 additions (logos taken from each client's own website; white knockout logos shown in their one-color dark version)",
  "portfolio_review": [],
  "order": [
   "lisi-aerospace",
@@ -45,10 +45,10 @@
   "cunico",
   "m13",
   "fralock",
-  "veev-spirits",
+  "beverly-hills-plaza",
   "optical-zonu",
   "cochise-capital",
-  "fsc-lighting"
+  "general-pharma-partners"
  ],
  "groups": [
   {
@@ -603,7 +603,13 @@
    "review": [],
    "include": true,
    "summary": "General Pharma Partners is a Los Angeles-based healthcare investment firm backing early- and growth-stage life sciences companies.",
-   "group": "healthcare"
+   "group": "healthcare",
+   "logo": {
+    "src": "/assets/clients/general-pharma-partners.webp",
+    "width": 266,
+    "height": 96,
+    "source": "generalpharmapartners.com (header SVG, rasterized)"
+   }
   },
   "black-diamond-ventures": {
    "name": "Black Diamond Ventures",
@@ -619,7 +625,13 @@
    "review": [],
    "include": true,
    "summary": "Black Diamond Ventures is a Glendale-based venture capital firm investing in biotechnology, medical technology and deep technology.",
-   "group": "investment"
+   "group": "investment",
+   "logo": {
+    "src": "/assets/clients/black-diamond-ventures.webp",
+    "width": 151,
+    "height": 96,
+    "source": "bdventures.com (dark-background logo, positive version)"
+   }
   },
   "redwood-investment-management": {
    "name": "Redwood Investment Management",
@@ -635,7 +647,13 @@
    "review": [],
    "include": true,
    "summary": "Redwood Investment Management is an SEC-registered investment adviser offering risk-managed portfolios to financial advisors.",
-   "group": "investment"
+   "group": "investment",
+   "logo": {
+    "src": "/assets/clients/redwood-investment-management.webp",
+    "width": 480,
+    "height": 83,
+    "source": "redwoodim.com (white header SVG, one-color dark version)"
+   }
   },
   "barefoot-sound": {
    "name": "Barefoot Sound",
@@ -651,7 +669,13 @@
    "review": [],
    "include": true,
    "summary": "Barefoot Sound designs and builds powered studio monitors used in professional recording, mixing and mastering.",
-   "group": "manufacturing"
+   "group": "manufacturing",
+   "logo": {
+    "src": "/assets/clients/barefoot-sound.webp",
+    "width": 342,
+    "height": 23,
+    "source": "barefootsound.com"
+   }
   },
   "magnolia-public-schools": {
    "name": "Magnolia Public Schools",
@@ -667,7 +691,14 @@
    "review": [],
    "include": true,
    "summary": "Magnolia Public Schools operates Magnolia Science Academy public charter schools across Southern California.",
-   "group": "education"
+   "group": "education",
+   "logo": {
+    "src": "/assets/clients/magnolia-public-schools.webp",
+    "width": 83,
+    "height": 71,
+    "source": "magnoliapublicschools.org (header emblem)"
+   },
+   "plate_sub": "Magnolia Public Schools"
   },
   "hm-digital": {
    "name": "HM Digital",
@@ -683,7 +714,14 @@
    "review": [],
    "include": true,
    "summary": "HM Digital designs and manufactures water-quality testing instruments, including meters, monitors and controllers.",
-   "group": "manufacturing"
+   "group": "manufacturing",
+   "logo": {
+    "src": "/assets/clients/hm-digital.webp",
+    "width": 62,
+    "height": 60,
+    "source": "hmdigital.com (logo mark, tagline omitted)"
+   },
+   "plate_sub": "HM Digital"
   },
   "virtual-guard": {
    "name": "Virtual Guard",
@@ -699,7 +737,13 @@
    "review": [],
    "include": true,
    "summary": "Virtual Guard provides technology-enabled remote video monitoring and virtual security services.",
-   "group": "technology-security"
+   "group": "technology-security",
+   "logo": {
+    "src": "/assets/clients/virtual-guard.webp",
+    "width": 295,
+    "height": 62,
+    "source": "virtualguard.com"
+   }
   },
   "fallbrook-companies": {
    "name": "Fallbrook Companies",
@@ -715,7 +759,14 @@
    "review": [],
    "include": true,
    "summary": "Fallbrook Companies is a Calabasas-based group arranging tax-credit investment and financing for real estate and energy projects.",
-   "group": "real-estate"
+   "group": "real-estate",
+   "logo": {
+    "src": "/assets/clients/fallbrook-companies.webp",
+    "width": 347,
+    "height": 96,
+    "source": "fallbrookfinancialservices.com (fallbrookcompanies.com redirects there)"
+   },
+   "plate_sub": "Fallbrook Companies"
   },
   "burg-brock": {
    "name": "Law Offices of Burg & Brock",
@@ -731,7 +782,13 @@
    "review": [],
    "include": true,
    "summary": "The Law Offices of Burg & Brock is a Sherman Oaks-based personal injury law firm.",
-   "group": "legal"
+   "group": "legal",
+   "logo": {
+    "src": "/assets/clients/burg-brock.webp",
+    "width": 283,
+    "height": 96,
+    "source": "burgbrock.com (white header logo, one-color dark text)"
+   }
   },
   "jonathan-neil-associates": {
    "name": "Jonathan Neil & Associates",
@@ -747,7 +804,13 @@
    "review": [],
    "include": true,
    "summary": "Jonathan Neil & Associates is a business-to-business collection agency based in Woodland Hills.",
-   "group": "investment"
+   "group": "investment",
+   "logo": {
+    "src": "/assets/clients/jonathan-neil-associates.webp",
+    "width": 409,
+    "height": 96,
+    "source": "jnacollect.com"
+   }
   },
   "dragon-herbs": {
    "name": "Dragon Herbs",
@@ -763,7 +826,13 @@
    "review": [],
    "include": true,
    "summary": "Dragon Herbs sells tonic herbal formulas, functional mushroom products and teas online and in Los Angeles.",
-   "group": "consumer"
+   "group": "consumer",
+   "logo": {
+    "src": "/assets/clients/dragon-herbs.webp",
+    "width": 249,
+    "height": 96,
+    "source": "dragonherbs.com"
+   }
   },
   "woodland-hills-private-school": {
    "name": "Woodland Hills Private School",
@@ -779,7 +848,13 @@
    "review": [],
    "include": true,
    "summary": "Woodland Hills Private School offers toddler, preschool and elementary programs through fifth grade.",
-   "group": "education"
+   "group": "education",
+   "logo": {
+    "src": "/assets/clients/woodland-hills-private-school.webp",
+    "width": 295,
+    "height": 96,
+    "source": "woodlandhillsprivateschool.com (white header logo, one-color dark wordmark)"
+   }
   },
   "delphi-academy-los-angeles": {
    "name": "Delphi Academy of Los Angeles",
@@ -795,7 +870,13 @@
    "review": [],
    "include": true,
    "summary": "Delphi Academy of Los Angeles is a private day school serving students from preschool through 12th grade.",
-   "group": "education"
+   "group": "education",
+   "logo": {
+    "src": "/assets/clients/delphi-academy-los-angeles.webp",
+    "width": 480,
+    "height": 75,
+    "source": "delphila.org"
+   }
   },
   "brandon-femme": {
    "name": "Brandon Femme",
@@ -811,7 +892,13 @@
    "review": [],
    "include": true,
    "summary": "Brandon Femme designs and distributes beauty accessories under the Brandon and Femme brands.",
-   "group": "consumer"
+   "group": "consumer",
+   "logo": {
+    "src": "/assets/clients/brandon-femme.webp",
+    "width": 480,
+    "height": 78,
+    "source": "brandonfemme.com (white header logo, one-color dark wordmark)"
+   }
   },
   "founders-mcc": {
    "name": "Founders Metropolitan Community Church",
@@ -828,7 +915,13 @@
    "include": true,
    "summary": "Founders Metropolitan Community Church is the Los Angeles congregation formerly known as MCC Los Angeles.",
    "group": "nonprofit",
-   "plate_sub": "MCC Los Angeles"
+   "plate_sub": "MCC Los Angeles",
+   "logo": {
+    "src": "/assets/clients/founders-mcc.webp",
+    "width": 480,
+    "height": 89,
+    "source": "foundersmcc.org"
+   }
   },
   "mcc-ucc-valley": {
    "name": "MCC United Church of Christ in the Valley",
@@ -856,5 +949,5 @@
   ],
   "note": "The following represents a selection of organizations we have served through ongoing technology management, strategic advisory services and individual project engagements."
  },
- "phase3_pending": "2026-11-24: Phase 3 staging. New profiles general-pharma-partners, black-diamond-ventures, redwood-investment-management, barefoot-sound, magnolia-public-schools, hm-digital, virtual-guard, fallbrook-companies, burg-brock, jonathan-neil-associates, dragon-herbs, woodland-hills-private-school, delphi-academy-los-angeles, brandon-femme, founders-mcc, mcc-ucc-valley and the co-managed labels for crr, lisi-aerospace and fralock await the owner's publication approval. New clients carry text name plates until logo use is authorized; relationship labels only where the owner supplied them."
+ "phase3_pending": "2026-11-25: Phase 4 staging. Logos approved and added (15 of 16; MCC United Church of Christ in the Valley publishes no logo and keeps its name plate). Relationship labels only where the owner confirmed them (General Pharma Partners current, Redwood former; CR&R, LISI Aerospace and Fralock historical co-managed). Publication awaits the owner's deployment approval."
 }
