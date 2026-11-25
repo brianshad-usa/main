@@ -181,6 +181,26 @@
     "lead": "Expert analysis and practical perspectives on technology leadership, cybersecurity, artificial intelligence, and the evolving challenges facing modern organizations."
   },
   "posts": {
+    "2026-11-25-t57-ai-data-security-using-chatgpt-safely-at-your-los-angel": {
+      "title": "Who Owns Your Company's AI History?",
+      "summary": "Most AI policies police what staff paste. The bigger 2026 exposure is whose account holds the work and what it can reach.",
+      "date_published": "2026-11-25",
+      "date_modified": "2026-11-25",
+      "noindex": false,
+      "canonical": "https://prolinksystems.com/blog/2026-11-25-t57-ai-data-security-using-chatgpt-safely-at-your-los-angel",
+      "words": 1330,
+      "category": "Artificial Intelligence & Automation",
+      "local": false,
+      "executive": true,
+      "author": "pro-link-systems",
+      "reviewers": [],
+      "takeaways": [
+        "The larger AI exposure now is whose account holds the work and what that account can reach, not only what employees paste into a prompt.",
+        "Connected assistants generally act with each user's existing permissions, so cleaning up overshared files and locking down app consent come before any AI rollout.",
+        "A blanket ban tends to push AI use out of sight. A company-owned, identity-managed workspace with approved connectors is the defensible path."
+      ],
+      "illustration": "/assets/insights/2026-11-25-t57-ai-data-security-using-chatgpt-safely-at-your-los-angel.svg"
+    },
     "2026-11-20-what-a-microsoft-365-security-assessment-checks": {
       "title": "What a Microsoft 365 Security Assessment Checks (and How to Order One Online)",
       "summary": "A Microsoft 365 security assessment reviews about 80 settings across identity, email, sharing and devices. Here's what gets checked and how ours works.",
