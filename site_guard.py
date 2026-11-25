@@ -490,6 +490,23 @@ elif inline_js:
         os.unlink(tmp_path)
 
 # --------------------------------------------------------------------------- #
+# 22: consent defaults before advertising/analytics tags (2026-11-25, Phase 3).
+#     /assets/js/consent.js sets Google Consent Mode and Microsoft UET consent
+#     defaults (opt-outs, Global Privacy Control, EEA/UK/CH opt-in). It must load
+#     synchronously BEFORE the Google tag and UET on every page that has them;
+#     chrome/apply_chrome.py inserts it between <!-- PL:CONSENT --> markers.
+# --------------------------------------------------------------------------- #
+CONSENT_MARK = "<!-- PL:CONSENT -->"
+TAG_RX = re.compile(r"googletagmanager\.com/gtag/js|bat\.bing\.(?:net|com)/bat\.js")
+for name, pg in pages.items():
+    m = TAG_RX.search(pg["src"])
+    if not m:
+        continue
+    i = pg["src"].find(CONSENT_MARK)
+    if i < 0 or i > m.start() or "/assets/js/consent.js" not in pg["src"][i:i + 200]:
+        V(22, name, "Google tag / Microsoft UET without consent.js before it (run python chrome/apply_chrome.py)")
+
+# --------------------------------------------------------------------------- #
 # Report
 # --------------------------------------------------------------------------- #
 advisory = "--fix-report" in sys.argv[1:]
