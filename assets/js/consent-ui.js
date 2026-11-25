@@ -84,12 +84,12 @@
       '<div class="plc-row"><div><h3>Strictly necessary</h3><p>Security, spam protection for forms (Cloudflare Turnstile), ' +
       'payments and site delivery. Always on.</p></div><span class="plc-fixed">Always on</span></div>' +
       '<div class="plc-row"><div><h3>Analytics</h3><p>Google Analytics, Microsoft Clarity and Hotjar help us see how pages are ' +
-      'used so we can improve them.</p></div><label class="plc-toggle"><input type="checkbox" id="plc-analytics"> Allow</label></div>' +
+      'used so we can improve them.</p></div><label class="plc-toggle"><input type="checkbox" id="plc-analytics" aria-label="Allow analytics"> Allow</label></div>' +
       '<div class="plc-row"><div><h3>Advertising measurement</h3><p>Google Ads and Microsoft Advertising measure which ads lead ' +
       'to inquiries. When you submit a form, a hashed (coded) copy of your name, email and phone may be sent to Google to match ' +
       'your inquiry to an ad click. Turning this off opts you out of the sale or sharing of your personal information for ' +
       'advertising. We do not use remarketing or personalized-ad audiences.</p></div>' +
-      '<label class="plc-toggle"><input type="checkbox" id="plc-ads"> Allow</label></div>' +
+      '<label class="plc-toggle"><input type="checkbox" id="plc-ads" aria-label="Allow advertising measurement"> Allow</label></div>' +
       '<p class="plc-note" id="plc-gpc" hidden>Your browser is sending a Global Privacy Control signal, so advertising ' +
       'measurement stays off for this browser.</p>' +
       '<div class="plc-actions">' +
