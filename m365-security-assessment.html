@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261125"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -195,6 +196,27 @@
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/_shared.css?v=20261123f">
   <link rel="stylesheet" href="/assets/apps/apps.css?v=20261120e">
+<style>
+  /* Phase 2 (2026-11): two clear options and the sample report beside them */
+  .app-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .app-option { display: flex; flex-direction: column; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.2); border-radius: var(--r-lg); padding: 20px 20px 22px; }
+  .app-option--order { background: #fff; border-color: #fff; color: var(--text); }
+  .app-option-k { margin: 0 0 6px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.78); }
+  .app-option--order .app-option-k { color: var(--navy); }
+  .app-option-h { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; color: #fff; }
+  .app-option--order .app-option-h { color: var(--navy); }
+  .app-option-t { flex: 1; margin: 0 0 16px; font-size: .95rem; line-height: 1.55; color: rgba(255,255,255,.85); }
+  .app-option--order .app-option-t { color: var(--text-muted); }
+  .app-option .btn { width: 100%; justify-content: center; padding: 14px 16px; white-space: nowrap; }
+  .app-option-fine { margin: 10px 0 0; font-size: .8rem; line-height: 1.45; color: var(--text-muted); }
+  .app-hero-sample { margin: 0; text-align: center; }
+  .app-hero-sample-img { display: block; max-width: 340px; margin: 0 auto; border-radius: var(--r-md); overflow: hidden; background: #fff; box-shadow: var(--sh-xl); }
+  .app-hero-sample-img img { display: block; width: 100%; height: auto; }
+  .app-hero-sample figcaption { margin-top: 12px; font-size: .9rem; line-height: 1.5; color: rgba(255,255,255,.82); }
+  .app-hero-sample figcaption a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 860px) { .app-options { grid-template-columns: minmax(0, 1fr); } .app-hero-sample-img { max-width: 300px; } }
+    .pl-hero2 :focus-visible, .pl-cta :focus-visible, .pl-dark :focus-visible, .app-hero :focus-visible, .cta-band :focus-visible, .page-hero :focus-visible, .trust-bar :focus-visible, .stats-band :focus-visible { outline-color: #fff; }
+</style>
 </head>
 <body>
 
@@ -415,22 +437,63 @@
       <div class="app-badge">One-time &middot; Read-only &middot; $2,500</div>
       <h1>Microsoft 365 Security Assessment</h1>
       <p class="app-lede">We review the security settings of your Microsoft 365 environment, send you a findings report sorted by severity, and walk you through every finding on a complimentary review call. You order and pay online; your Global Administrator approves read-only access in about five minutes.</p>
-      <div class="app-cta">
-        <a href="/m365-security-assessment/order" class="btn btn-gold">Order your assessment</a>
-        <!-- data-bookings-link = Brian's private Bookings meeting type "Microsoft 365 Security Assessment: questions"
-             (30 min, Teams). The @ in the URL is written %40 so Cloudflare's email obfuscation can't rewrite it. -->
-        <a href="https://bookings.cloud.microsoft/bookwithme/user/f113d8c06c4b4286a3186a08653a7160%40prolinksystems.com/meetingtype/vw3eDGolSUScfQuOdht4lQ2?bookingcode=a770325b-2722-4bab-8cfc-da022d59d461&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" class="btn btn-outline-white" data-bookings-link="m365-security-assessment" target="_blank" rel="noopener">Talk to us first</a>
+      <div class="app-options" role="group" aria-label="Two ways to start">
+        <div class="app-option app-option--order">
+          <p class="app-option-k">Ready to order</p>
+          <p class="app-option-h">Order online today</p>
+          <p class="app-option-t">Pay securely online. After you order, your Global Administrator receives two short steps to approve read-only access.</p>
+          <a href="/m365-security-assessment/order" class="btn btn-navy">Order Assessment &mdash; $2,500</a>
+          <p class="app-option-fine">One-time fee, paid when you order. Full refund if we decline the engagement.</p>
+        </div>
+        <div class="app-option">
+          <p class="app-option-k">Want to discuss scope first?</p>
+          <p class="app-option-h">Talk it through</p>
+          <p class="app-option-t">Book a 30-minute Teams call to go over scope, your environment and timing before you order.</p>
+          <!-- data-bookings-link = Brian's private Bookings meeting type "Microsoft 365 Security Assessment: questions"
+               (30 min, Teams). The @ in the URL is written %40 so Cloudflare's email obfuscation can't rewrite it. -->
+          <a href="https://bookings.cloud.microsoft/bookwithme/user/f113d8c06c4b4286a3186a08653a7160%40prolinksystems.com/meetingtype/vw3eDGolSUScfQuOdht4lQ2?bookingcode=a770325b-2722-4bab-8cfc-da022d59d461&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" class="btn btn-outline-white" data-bookings-link="m365-security-assessment" target="_blank" rel="noopener">Discuss Your Assessment</a>
+        </div>
       </div>
     </div>
-    <div class="app-price-card">
-      <div class="price">$2,500 <small>one-time</small></div>
-      <ul>
-        <li>Paid online in full when you order</li>
-        <li>Read-only: nothing in your environment is changed</li>
-        <li>Findings report sorted by severity</li>
-        <li>Complimentary review call, no obligation</li>
-        <li>Approved by Pro Link Systems before it runs; full refund if we decline</li>
-      </ul>
+    <figure class="app-hero-sample">
+      <a class="app-hero-sample-img" href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the full sample report (PDF)">
+        <img src="/assets/apps/m365-security-assessment/sample-report-page1-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page1-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page1-935.webp 935w" sizes="(max-width: 860px) 300px, 340px" width="600" height="776" fetchpriority="high" decoding="async" alt="Sample report page 1: overall rating, security score and the number of findings by severity and area, for a fictitious company">
+      </a>
+      <figcaption>The report template every client receives, shown with fictitious data. <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf">Open the full sample report (PDF)</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- SAMPLE REPORT -->
+<section class="app-section" aria-labelledby="sample-heading">
+  <div class="app-wrap">
+    <div class="app-head">
+      <h2 id="sample-heading">See inside the report</h2>
+      <p>The same report template a client receives, filled with fictitious data for "Sample Company, Inc." and marked SAMPLE on every page.</p>
+    </div>
+    <div class="app-samples">
+      <figure>
+        <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the sample report, page 1">
+          <img src="/assets/apps/m365-security-assessment/sample-report-page1-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page1-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page1-935.webp 935w" sizes="(max-width: 700px) 92vw, 340px" width="600" height="776" loading="lazy" decoding="async" alt="Sample report page 1: overall rating, security score and the number of findings by severity and area, for a fictitious company">
+        </a>
+        <figcaption>Page 1: rating, score and findings by area</figcaption>
+      </figure>
+      <figure>
+        <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the sample report, page 2">
+          <img src="/assets/apps/m365-security-assessment/sample-report-page2-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page2-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page2-935.webp 935w" sizes="(max-width: 700px) 92vw, 340px" width="600" height="776" loading="lazy" decoding="async" alt="Sample report page 2: a list of findings sorted by severity, from critical to medium">
+        </a>
+        <figcaption>Page 2: findings sorted by severity</figcaption>
+      </figure>
+      <figure>
+        <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the sample report, page 3">
+          <img src="/assets/apps/m365-security-assessment/sample-report-page3-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page3-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page3-935.webp 935w" sizes="(max-width: 700px) 92vw, 340px" width="600" height="776" loading="lazy" decoding="async" alt="Sample report page 3: the remaining findings and the first finding in detail, showing what was found and why it matters">
+        </a>
+        <figcaption>Page 3: what we found and why it matters</figcaption>
+      </figure>
+    </div>
+    <div class="app-center">
+      <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" class="btn btn-navy">Open the full sample report (PDF)</a>
+      <p class="app-note" style="margin-top:14px;">Sample data: the fictitious company in this report has 40 issues, 4 of them critical.</p>
     </div>
   </div>
 </section>
@@ -477,40 +540,6 @@
   </div>
 </section>
 
-<!-- SAMPLE REPORT -->
-<section class="app-section" aria-labelledby="sample-heading">
-  <div class="app-wrap">
-    <div class="app-head">
-      <h2 id="sample-heading">See a sample report</h2>
-      <p>The same report template a client receives, filled with fictitious data for "Sample Company, Inc." and marked SAMPLE on every page.</p>
-    </div>
-    <div class="app-samples">
-      <figure>
-        <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the sample report, page 1">
-          <img src="/assets/apps/m365-security-assessment/sample-report-page1-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page1-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page1-935.webp 935w" sizes="(max-width: 700px) 92vw, 340px" width="600" height="776" loading="lazy" decoding="async" alt="Sample report page 1: overall rating, security score and the number of findings by severity and area, for a fictitious company">
-        </a>
-        <figcaption>Page 1: rating, score and findings by area</figcaption>
-      </figure>
-      <figure>
-        <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the sample report, page 2">
-          <img src="/assets/apps/m365-security-assessment/sample-report-page2-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page2-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page2-935.webp 935w" sizes="(max-width: 700px) 92vw, 340px" width="600" height="776" loading="lazy" decoding="async" alt="Sample report page 2: a list of findings sorted by severity, from critical to medium">
-        </a>
-        <figcaption>Page 2: findings sorted by severity</figcaption>
-      </figure>
-      <figure>
-        <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" aria-label="Open the sample report, page 3">
-          <img src="/assets/apps/m365-security-assessment/sample-report-page3-600.webp" srcset="/assets/apps/m365-security-assessment/sample-report-page3-600.webp 600w, /assets/apps/m365-security-assessment/sample-report-page3-935.webp 935w" sizes="(max-width: 700px) 92vw, 340px" width="600" height="776" loading="lazy" decoding="async" alt="Sample report page 3: the remaining findings and the first finding in detail, showing what was found and why it matters">
-        </a>
-        <figcaption>Page 3: what we found and why it matters</figcaption>
-      </figure>
-    </div>
-    <div class="app-center">
-      <a href="/downloads/prolink-m365-security-assessment-sample-report.pdf" class="btn btn-navy">View the sample report (PDF)</a>
-      <p class="app-note" style="margin-top:14px;">Sample data: the fictitious company in this report has 40 issues, 4 of them critical.</p>
-    </div>
-  </div>
-</section>
-
 <!-- WHAT'S INCLUDED -->
 <section class="app-section app-section--off" aria-labelledby="included-heading">
   <div class="app-wrap">
@@ -531,8 +560,10 @@
         <h3>Not included</h3>
         <ul class="app-list app-list--no">
           <li>Changes to your environment: the assessment only reads settings</li>
+          <li>Instructions for fixing findings, or technical corrections</li>
+          <li>Remediation work</li>
         </ul>
-        <p>The report lists findings; it doesn't include instructions for fixing them. If you'd like help addressing the findings, remediation is scoped and quoted separately, at your request.</p>
+        <p><strong>How remediation is handled:</strong> the report lists findings only. If you would like help addressing them, we assess, propose and price remediation separately, and only at your request.</p>
       </div>
     </div>
   </div>
@@ -542,10 +573,11 @@
 <section class="app-section" aria-labelledby="data-heading">
   <div class="app-narrow">
     <div class="app-head">
-      <h2 id="data-heading">Your data</h2>
+      <h2 id="data-heading">Your data and read-only access</h2>
       <p>Read-only from start to finish, and you stay in control of access.</p>
     </div>
     <ul class="app-list">
+      <li>How access works: your Global Administrator approves read-only access for our assessment app, then gives it Microsoft&rsquo;s built-in, view-only Global Reader role.</li>
       <li>Read-only: the assessment reads configuration and security settings and changes nothing.</li>
       <li>It cannot read the content of email or files.</li>
       <li>Access is granted by your Global Administrator through app consent. We never ask for an account or a password.</li>
@@ -595,8 +627,8 @@
   <h2>Know where your Microsoft 365 security stands</h2>
   <p>A one-time, read-only assessment for $2,500, with a complimentary review call. Order online in a few minutes.</p>
   <div class="cta-buttons">
-    <a href="/m365-security-assessment/order" class="btn btn-gold">Order your assessment</a>
-    <a href="https://bookings.cloud.microsoft/bookwithme/user/f113d8c06c4b4286a3186a08653a7160%40prolinksystems.com/meetingtype/vw3eDGolSUScfQuOdht4lQ2?bookingcode=a770325b-2722-4bab-8cfc-da022d59d461&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" class="btn btn-outline-white" data-bookings-link="m365-security-assessment" target="_blank" rel="noopener">Talk to us first</a>
+    <a href="/m365-security-assessment/order" class="btn btn-gold">Order Assessment &mdash; $2,500</a>
+    <a href="https://bookings.cloud.microsoft/bookwithme/user/f113d8c06c4b4286a3186a08653a7160%40prolinksystems.com/meetingtype/vw3eDGolSUScfQuOdht4lQ2?bookingcode=a770325b-2722-4bab-8cfc-da022d59d461&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" class="btn btn-outline-white" data-bookings-link="m365-security-assessment" target="_blank" rel="noopener">Discuss Your Assessment</a>
   </div>
 </div>
 
@@ -696,7 +728,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->

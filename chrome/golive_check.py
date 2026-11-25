@@ -209,7 +209,9 @@ if not SEO_ONLY:
     else:
         try:
             pv = re.findall(r'_shared\.css\?v=([^"]+)"', git_show("origin/main:index.html"))
-            if pv and pv[0] in versions:
+            # only a changed stylesheet needs a new ?v= (Phase 4: no CSS change since production, so no bump needed)
+            css_changed = git_show("origin/main:_shared.css").replace("\r\n", "\n") != read(os.path.join(ROOT, "_shared.css")).replace("\r\n", "\n")
+            if pv and pv[0] in versions and css_changed:
                 problems.append("4 _shared.css?v=%s is the same as production; run bump_shared_css.py" % pv[0])
         except Exception as e:  # no git / no origin: report, do not pass silently
             problems.append("4 could not compare with origin/main: %s" % e)
@@ -338,6 +340,24 @@ for f in sorted(files):
         src = re.sub(r"(?m)^\s*//.*$", "", src)
     if STAGING_TEXT.search(src):
         problems.append("14 staging label or preview link in %s" % f)
+
+# ---------------------------------------------------------------- 15-16: privacy release checks (Phase 3)
+# 15. the revised privacy policy (approved by counsel 2026-11-25) needs its real effective date: set_policy_date.py
+#     stamps it in the release commit; until then the <time data-policy-effective> tags read "on publication"
+if ("data-draft-policy" in read(os.path.join(ROOT, "privacy.html"))
+        or "<time data-policy-effective>" in read(os.path.join(ROOT, "privacy.html"))):
+    problems.append("15 privacy.html effective date is not set: run python chrome/set_policy_date.py YYYY-MM-DD "
+                    "with the actual publication date (policy approved by counsel 2026-11-25)")
+# 16. consent defaults must load before the Google tag / Microsoft UET on every page that has them
+for f in ("assets/js/consent.js", "assets/js/consent-ui.js"):
+    if not os.path.exists(os.path.join(ROOT, f)):
+        problems.append("16 %s is missing" % f)
+TAG_RE = re.compile(r"googletagmanager\.com/gtag/js|bat\.bing\.(?:net|com)/bat\.js")
+for p in pages():
+    t = read(p)
+    m = TAG_RE.search(t)
+    if m and (t.find("<!-- PL:CONSENT -->") < 0 or t.find("<!-- PL:CONSENT -->") > m.start()):
+        problems.append("16 %s loads Google/Microsoft tags without consent.js first: run python chrome/apply_chrome.py" % rel(p))
 
 if problems:
     print(("NOT READY for go-live (%d):\n  " % len(problems)) + "\n  ".join(problems))

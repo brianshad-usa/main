@@ -909,7 +909,7 @@ INDUSTRIES = [
   'ta_placeholder': 'e.g. We manage $200M in AUM, run on Pershing, and need help with SEC exam prep and our cybersecurity posture…',
   'form_service':   'Financial Services IT Assessment Request',
   'submit_label':   'Request Free Consultation',
-  'privacy_text':   'Secure &amp; confidential. We never share your information. Response within 1 business day.',
+  'privacy_text':   'Response within 1 business day. We use your details to reply to your request and, depending on your privacy choices, send a hashed copy of your contact details to Google to measure our ads. <a href="/privacy#notice-at-collection">Privacy policy</a> &middot; <a href="/privacy#your-choices" data-privacy-choices>Your privacy choices</a>',
   'compliance': [
     ('shield','SEC &amp; FINRA Regulations'),
     ('shield','SOX Compliance Support'),
@@ -1041,7 +1041,7 @@ INDUSTRIES = [
   'ta_placeholder': 'e.g. We have 40 agents across 3 offices, our CRM keeps going down during busy periods, and we&rsquo;re worried about wire fraud targeting our transactions…',
   'form_service':   'Real Estate IT Assessment Request',
   'submit_label':   'Request Free Consultation',
-  'privacy_text':   'Secure &amp; confidential. We never share your information. Response within 1 business day.',
+  'privacy_text':   'Response within 1 business day. We use your details to reply to your request and, depending on your privacy choices, send a hashed copy of your contact details to Google to measure our ads. <a href="/privacy#notice-at-collection">Privacy policy</a> &middot; <a href="/privacy#your-choices" data-privacy-choices>Your privacy choices</a>',
   'compliance': [
     ('shield','CCPA Compliant'),
     ('shield','Transaction Data Security'),

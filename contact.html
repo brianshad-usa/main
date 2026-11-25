@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261125"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -396,6 +397,7 @@
         <dt>Email</dt><dd><a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a></dd>
         <dt>Business hours</dt><dd>Monday through Friday, 9 AM–5 PM Pacific</dd>
         <dt>After-hours support</dt><dd>24/7 help desk for managed-service clients, under contract. <a href="/support">Client Support</a></dd>
+        <dt>Support response</dt><dd>Average ticket first-response time of 15 minutes for managed-service clients (a measured average, not a guaranteed service level)</dd>
       </dl>
       <h2 class="pl-h3" style="margin-top:56px">What to expect from a consultation</h2>
       <ol class="pl-expect">
@@ -452,14 +454,16 @@
         </div>
 
         <div class="form-group">
-          <label for="firm_size">Number of users <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+          <label for="firm_size">Users or employees <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
           <select id="firm_size" name="firm_size">
             <option value="" selected>Select a range&hellip;</option>
-            <option value="1 to 9 users">1 to 9 users</option>
-            <option value="10 to 25 users">10 to 25 users</option>
-            <option value="26 to 50 users">26 to 50 users</option>
-            <option value="51 to 100 users">51 to 100 users</option>
-            <option value="More than 100 users">More than 100 users</option>
+            <option value="1-9">1&ndash;9</option>
+            <option value="10-24">10&ndash;24</option>
+            <option value="25-49">25&ndash;49</option>
+            <option value="50-99">50&ndash;99</option>
+            <option value="100-249">100&ndash;249</option>
+            <option value="250-499">250&ndash;499</option>
+            <option value="500+">500+</option>
           </select>
         </div>
 
@@ -491,7 +495,7 @@
           <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           <div class="spinner"></div>
         </button>
-        <p class="form-privacy">We respect your privacy. Your information is never sold or shared with third parties.</p>
+        <p class="form-privacy">We use your details to reply to your request and, depending on your privacy choices, send a hashed copy of your contact details to Google to measure our ads. <a href="/privacy#notice-at-collection">Privacy policy</a> &middot; <a href="/privacy#your-choices" data-privacy-choices>Your privacy choices</a></p>
       </form>
     </div>
 
@@ -668,7 +672,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->
@@ -721,7 +725,7 @@
       ft = { landing_page: location.pathname + location.search, first_referrer: document.referrer || '' };
       try {
         var q = new URLSearchParams(location.search);
-        ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','msclkid'].forEach(function(k) { if (q.get(k)) ft[k] = q.get(k); });
+        ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','gbraid','wbraid','msclkid'].forEach(function(k) { if (q.get(k)) ft[k] = q.get(k); });
       } catch (e) {}
       try { sessionStorage.setItem(FT_KEY, JSON.stringify(ft)); } catch (e) {}
     }
@@ -783,7 +787,8 @@
              these client-side (SHA-256) before sending over HTTPS. */
           var __ph = String(data.phone || '').replace(/[^0-9]/g, '');
           if (__ph.length === 10) __ph = '1' + __ph;
-          gtag('set', 'user_data', {
+          /* Phase 3: only with advertising consent (consent.js; off for opt-outs, GPC and the EEA until accepted) */
+          if (window.plsConsent && window.plsConsent.ads()) gtag('set', 'user_data', {
             'email': String(data.email || '').trim().toLowerCase(),
             'phone_number': __ph ? ('+' + __ph) : undefined,
             'address': {

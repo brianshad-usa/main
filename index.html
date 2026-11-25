@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261125"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -55,7 +56,10 @@
     (function () {
       var done = false;
       function loadRecorders() {
-        if (done) return; done = true;
+        if (done) return;
+        // Phase 3: session recording only with analytics consent (consent.js); never without it
+        if (!(window.plsConsent && window.plsConsent.analytics())) return;
+        done = true; window.__plsRecorders = true;
         ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.removeEventListener(ev, loadRecorders, true); });
         (function (c, s, q, u, a, r, e) {
           c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
@@ -74,6 +78,7 @@
       }
       ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, loadRecorders, { capture: true, passive: true }); });
       window.addEventListener('load', function () { setTimeout(loadRecorders, 6000); });
+      window.addEventListener('pls:consent', function (e) { if (e.detail && e.detail.analytics) loadRecorders(); });
     })();
   </script>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -287,7 +292,7 @@
   }
   </script>
 
-  <script src="/contact-form.js?v=20261109" defer></script>
+  <script src="/contact-form.js?v=20261125b" defer></script>
   <link rel="preload" href="/assets/fonts/Manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="_shared.css?v=20261123f">
@@ -746,9 +751,9 @@
       <li><a href="/case-studies#veev-spirits"><span class="pl-client-name"><span class="pl-clogo"><img src="/assets/clients/veev-spirits.webp" alt="VEEV Spirits" width="103" height="24" loading="lazy" decoding="async"></span></span><span class="pl-client-industry">Consumer Brands &amp; Beverage Manufacturing</span><span class="pl-client-status">Past engagement, <b>2006–2013</b></span></a></li>
       <li><a href="/case-studies#optical-zonu"><span class="pl-client-name"><span class="pl-clogo"><img src="/assets/clients/optical-zonu.webp" alt="Optical Zonu Corporation" width="71" height="35" loading="lazy" decoding="async"></span></span><span class="pl-client-industry">Photonics, Telecommunications &amp; Defense Technology</span><span class="pl-client-status is-current">Current client</span></a></li>
       <li><a href="/case-studies#cochise-capital"><span class="pl-client-name"><span class="pl-clogo"><img src="/assets/clients/cochise-capital.webp" alt="Cochise Capital" width="86" height="29" loading="lazy" decoding="async"></span></span><span class="pl-client-industry">Investment Management &amp; Real Estate</span><span class="pl-client-status is-current">Current client</span></a></li>
-      <li><a href="/case-studies#fsc-lighting"><span class="pl-client-name"><span class="pl-clogo"><img src="/assets/clients/fsc-lighting.webp" alt="FSC Lighting" width="83" height="30" loading="lazy" decoding="async"></span></span><span class="pl-client-industry">Manufacturing &amp; Energy Efficiency</span><span class="pl-client-status">Past engagement, <b>2020–2024</b></span></a></li>
+      <li><a href="/case-studies#general-pharma-partners"><span class="pl-client-name"><span class="pl-clogo"><img src="/assets/clients/general-pharma-partners.webp" alt="General Pharma Partners" width="83" height="30" loading="lazy" decoding="async"></span></span><span class="pl-client-industry">Healthcare Investment &amp; Life Sciences</span><span class="pl-client-status is-current">Current client</span></a></li>
     </ol>
-    <p class="pl-clients-note">Eight of the 20 organizations in our <a href="/case-studies#portfolio">client portfolio</a>.</p>
+    <p class="pl-clients-note">Eight of the 36 organizations in our <a href="/case-studies#portfolio">client portfolio</a>.</p>
   </div>
 </section>
 <!-- /PL:CLIENTS -->
@@ -1188,7 +1193,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->

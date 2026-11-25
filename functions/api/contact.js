@@ -49,7 +49,7 @@ const REQUIRED = ["first_name", "email"];
 const SOFT_FAIL_CODES = ["timeout-or-duplicate", "internal-error"];
 // Attribution fields the form scripts add (contact-form.js / contact.html).
 const ATTRIBUTION = ["source_page", "page_url", "referrer", "landing_page", "first_referrer",
-  "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "msclkid"];
+  "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid", "msclkid"];
 
 // The pages use varied field names (name / firm_name / firm_size / firm_type,
 // honeypot "botcheck" vs "challenge"). Map them to the canonical set the email
@@ -129,7 +129,7 @@ function attribution(f, request) {
   const ua = request.headers.get("User-Agent") || "";
   a.device = /iPhone|iPad|Android|Mobile/i.test(ua) ? "mobile" : "desktop";
   const ref = a.first_referrer || a.referrer || "";
-  a.channel = a.gclid || (/google/i.test(a.utm_source || "") && /cpc|paid/i.test(a.utm_medium || "")) ? "Google Ads"
+  a.channel = a.gclid || a.gbraid || a.wbraid || (/google/i.test(a.utm_source || "") && /cpc|paid/i.test(a.utm_medium || "")) ? "Google Ads"
     : a.msclkid || (/bing|microsoft/i.test(a.utm_source || "") && /cpc|paid/i.test(a.utm_medium || "")) ? "Microsoft Ads"
     : /google\.|bing\.|duckduckgo\.|yahoo\./i.test(ref) ? "Organic search"
     : /chatgpt|openai|perplexity|claude\.ai|copilot|gemini/i.test(ref) ? "AI assistant"
@@ -183,8 +183,8 @@ ${banner}<table>${row("Name", f.first_name + " " + f.last_name)}${row("Company",
 <p style="margin:16px 0 4px;color:#666">Message</p>
 <div style="white-space:pre-wrap;background:#f6f8fb;border:1px solid #e2e8f0;border-radius:6px;padding:12px 14px">${esc(f.message)}</div>
 <p style="margin:16px 0 4px;color:#666">How they found us</p>
-<table>${row("Channel", a.channel || "unknown")}${a.landing_page ? row("Landed on", a.landing_page) : ""}${a.first_referrer ? row("Came from", a.first_referrer) : ""}${row("Form page", a.page_url || page || "")}${utm ? row("Campaign", utm) : ""}${a.gclid ? row("Google click id (gclid)", a.gclid) : ""}${a.msclkid ? row("Microsoft click id (msclkid)", a.msclkid) : ""}${a.location ? row("Location (approx.)", a.location) : ""}${row("Device", a.device || "")}</table>
-${a.gclid ? `<p style="margin-top:10px;color:#666;font-size:12px">Ads lead-quality loop: if this lead qualifies (or becomes a client), tell Claude or add the gclid to the war room <em>ads/offline_conversions.csv</em> so Google Ads learns which clicks produce real business.</p>` : ""}
+<table>${row("Channel", a.channel || "unknown")}${a.landing_page ? row("Landed on", a.landing_page) : ""}${a.first_referrer ? row("Came from", a.first_referrer) : ""}${row("Form page", a.page_url || page || "")}${utm ? row("Campaign", utm) : ""}${a.gclid ? row("Google click id (gclid)", a.gclid) : ""}${a.gbraid ? row("Google click id (gbraid)", a.gbraid) : ""}${a.wbraid ? row("Google click id (wbraid)", a.wbraid) : ""}${a.msclkid ? row("Microsoft click id (msclkid)", a.msclkid) : ""}${a.location ? row("Location (approx.)", a.location) : ""}${row("Device", a.device || "")}</table>
+${(a.gclid || a.gbraid || a.wbraid) ? `<p style="margin-top:10px;color:#666;font-size:12px">Ads lead-quality loop: when this lead qualifies (or becomes a client), record it with this click id in the war room <em>ads/lead_ledger.csv</em> (or tell Claude) so Google Ads learns which clicks produce real business.</p>` : ""}
 <p style="margin-top:16px;color:#666;font-size:12px">Reply directly to reach the sender (${esc(f.email)}).</p></div>`;
 }
 

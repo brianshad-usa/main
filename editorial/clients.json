@@ -1,6 +1,6 @@
 {
- "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | past | project (Current client / Past engagement / Project engagement) or null when unverified. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' records the owner's final approval of names and logos (2026-11-23). 'logo' points to a file in assets/clients/, taken from the client's own website (an archived copy where the site is gone); clients without a logo keep a text name plate.",
- "approved": "2026-11-23: client names (naming permission held for every client) and logos (taken from each client's own website) approved by the owner",
+ "_comment": "Client portfolio: the single source for the portfolio on /case-studies, the featured clients on the home page and the company profile on each case study page. Rendered by chrome/clients.py and chrome/build_case_pages.py; checked by chrome/clients.py --check. The two orders are fixed by the owner (portfolio 2026-11-22; home lineup revised 2026-11-22 for iteration 6): never alphabetize. 'summary' is the short company line on the portfolio; 'description' (the owner's full text) appears on case study pages. 'status' is current | former | past | project (Current client / Former client / Past engagement / Project engagement) or null when unverified; 'model': 'co-managed' adds a Co-managed IT label. 'group' places a client under one industry for the portfolio's jump-to-industry control. 'removed' lists clients that must not appear anywhere. 'include': false hides a client everywhere. 'approved' records the owner's final approval of names and logos (2026-11-23). 'logo' points to a file in assets/clients/, taken from the client's own website (an archived copy where the site is gone); clients without a logo keep a text name plate.",
+ "approved": "2026-11-23: client names (naming permission held for every client) and logos (taken from each client's own website) approved by the owner; 2026-11-25 (Phase 4): the owner approved publication of every portfolio client's logo, including the 16 Phase 3 additions (logos taken from each client's own website; white knockout logos shown in their one-color dark version)",
  "portfolio_review": [],
  "order": [
   "lisi-aerospace",
@@ -22,7 +22,23 @@
   "optimus-property-management",
   "global-garden",
   "waverly-school",
-  "snitzer-law"
+  "snitzer-law",
+  "general-pharma-partners",
+  "black-diamond-ventures",
+  "redwood-investment-management",
+  "barefoot-sound",
+  "magnolia-public-schools",
+  "hm-digital",
+  "virtual-guard",
+  "fallbrook-companies",
+  "burg-brock",
+  "jonathan-neil-associates",
+  "dragon-herbs",
+  "woodland-hills-private-school",
+  "delphi-academy-los-angeles",
+  "brandon-femme",
+  "founders-mcc",
+  "mcc-ucc-valley"
  ],
  "home": [
   "lisi-aerospace",
@@ -32,36 +48,48 @@
   "veev-spirits",
   "optical-zonu",
   "cochise-capital",
-  "fsc-lighting"
+  "general-pharma-partners"
  ],
  "groups": [
   {
-   "id": "manufacturing",
-   "label": "Aerospace, Defense & Manufacturing"
-  },
-  {
    "id": "investment",
-   "label": "Investment & Venture Capital"
-  },
-  {
-   "id": "consumer",
-   "label": "Consumer Brands"
+   "label": "Financial Services & Investment Management"
   },
   {
    "id": "healthcare",
    "label": "Healthcare & Life Sciences"
   },
   {
+   "id": "manufacturing",
+   "label": "Aerospace & Advanced Manufacturing"
+  },
+  {
    "id": "real-estate",
    "label": "Real Estate & Hospitality"
   },
   {
-   "id": "logistics",
-   "label": "Logistics, Distribution & Environmental Services"
+   "id": "legal",
+   "label": "Legal & Professional Services"
   },
   {
-   "id": "education-legal",
-   "label": "Education & Legal"
+   "id": "education",
+   "label": "Education"
+  },
+  {
+   "id": "technology-security",
+   "label": "Technology & Security"
+  },
+  {
+   "id": "consumer",
+   "label": "Consumer Products & Entertainment"
+  },
+  {
+   "id": "nonprofit",
+   "label": "Nonprofit & Community Organizations"
+  },
+  {
+   "id": "logistics",
+   "label": "Logistics, Distribution & Environmental Services"
   }
  ],
  "removed": [
@@ -77,7 +105,7 @@
    "status": "past",
    "period": "October 2019 – August 2021",
    "years": "2019–2021",
-   "engagement": "IT administration taken over and stabilized, then carried through the move to remote work.",
+   "engagement": "Co-managed IT with the internal technology team: IT administration taken over and stabilized, then carried through the move to remote work.",
    "metric": [
     "90 days",
     "to stabilized IT operations"
@@ -93,7 +121,8 @@
     "source": "parent company site (lisi-aerospace.com unreachable)"
    },
    "summary": "LISI Aerospace is an international aerospace manufacturing organization specializing in advanced fastening systems, assembly technologies and precision structural components.",
-   "group": "manufacturing"
+   "group": "manufacturing",
+   "model": "co-managed"
   },
   "cunico": {
    "name": "Cunico Corporation",
@@ -179,7 +208,7 @@
    "status": "past",
    "period": "January 2022 – July 2023",
    "years": "2022–2023",
-   "engagement": "Network, security and IT operations unified across sites and newly acquired subsidiaries in several states.",
+   "engagement": "Co-managed IT supplementing internal IT: network, security and IT operations unified across sites and newly acquired subsidiaries in several states.",
    "metric": null,
    "case": "fralock",
    "legacy_id": "4-fralock-holdings",
@@ -192,7 +221,8 @@
     "source": "fralock.com"
    },
    "summary": "Fralock specializes in the engineering and manufacturing of advanced materials, high-performance components and precision assemblies.",
-   "group": "manufacturing"
+   "group": "manufacturing",
+   "model": "co-managed"
   },
   "veev-spirits": {
    "name": "VEEV Spirits",
@@ -277,7 +307,7 @@
    "status": "past",
    "period": "December 2023 – April 2025",
    "years": "2023–2025",
-   "engagement": "Cybersecurity, Microsoft 365 and Azure, cloud migration and network architecture across divisions.",
+   "engagement": "Co-managed IT alongside CR&R's internal technology resources, with Pro Link Systems' founder serving as vCIO: cybersecurity, Microsoft 365 and Azure, cloud migration and network architecture across divisions.",
    "metric": null,
    "case": "crr",
    "legacy_id": "2-crr-incorporated",
@@ -290,7 +320,8 @@
     "source": "crrwasteservices.com"
    },
    "summary": "CR&R Environmental Services is an established environmental services organization specializing in waste collection, recycling, resource recovery and sustainable waste management.",
-   "group": "logistics"
+   "group": "logistics",
+   "model": "co-managed"
   },
   "global-holdings": {
    "name": "Global Holdings",
@@ -529,7 +560,7 @@
     "source": "thewaverlyschool.org"
    },
    "summary": "The Waverly School is an independent, accredited educational institution in Pasadena, California, serving students from preschool through 12th grade.",
-   "group": "education-legal"
+   "group": "education"
   },
   "snitzer-law": {
    "name": "Law Offices of Alan B. Snitzer",
@@ -556,15 +587,367 @@
     "source": "the firm's site logo, archived copy (site retired)"
    },
    "summary": "The Law Offices of Alan B. Snitzer is an established California legal practice specializing in workers’ compensation and personal injury law.",
-   "group": "education-legal"
+   "group": "legal"
+  },
+  "general-pharma-partners": {
+   "name": "General Pharma Partners",
+   "industry": "Healthcare Investment & Life Sciences",
+   "text": "researched",
+   "description": "General Pharma Partners is a Los Angeles-based healthcare investment firm. It invests in early- and growth-stage companies across the life sciences, including drug delivery, medical devices and compounding pharmacy.",
+   "ownership": null,
+   "status": "current",
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "General Pharma Partners is a Los Angeles-based healthcare investment firm backing early- and growth-stage life sciences companies.",
+   "group": "healthcare",
+   "logo": {
+    "src": "/assets/clients/general-pharma-partners.webp",
+    "width": 266,
+    "height": 96,
+    "source": "generalpharmapartners.com (header SVG, rasterized)"
+   }
+  },
+  "black-diamond-ventures": {
+   "name": "Black Diamond Ventures",
+   "industry": "Venture Capital & Technology Investment",
+   "text": "researched",
+   "description": "Black Diamond Ventures is a venture capital firm based in Glendale, California, founded in 1998. It invests in technology-focused companies, with an emphasis on biotechnology, medical technology and deep technology.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Black Diamond Ventures is a Glendale-based venture capital firm investing in biotechnology, medical technology and deep technology.",
+   "group": "investment",
+   "logo": {
+    "src": "/assets/clients/black-diamond-ventures.webp",
+    "width": 151,
+    "height": 96,
+    "source": "bdventures.com (dark-background logo, positive version)"
+   }
+  },
+  "redwood-investment-management": {
+   "name": "Redwood Investment Management",
+   "industry": "Investment Management & Financial Services",
+   "text": "researched",
+   "description": "Redwood Investment Management is an SEC-registered investment adviser. It provides risk-managed model portfolios to financial advisors and advises the Redwood mutual funds and LeaderShares exchange-traded funds.",
+   "ownership": null,
+   "status": "former",
+   "period": null,
+   "engagement": "Managed the firm's technology environment.",
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Redwood Investment Management is an SEC-registered investment adviser offering risk-managed portfolios to financial advisors.",
+   "group": "investment",
+   "logo": {
+    "src": "/assets/clients/redwood-investment-management.webp",
+    "width": 480,
+    "height": 83,
+    "source": "redwoodim.com (white header SVG, one-color dark version)"
+   }
+  },
+  "barefoot-sound": {
+   "name": "Barefoot Sound",
+   "industry": "Professional Audio Equipment Manufacturing",
+   "text": "researched",
+   "description": "Barefoot Sound designs and builds premium powered studio monitors and subwoofers used in professional recording, mixing and mastering environments.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Barefoot Sound designs and builds powered studio monitors used in professional recording, mixing and mastering.",
+   "group": "manufacturing",
+   "logo": {
+    "src": "/assets/clients/barefoot-sound.webp",
+    "width": 342,
+    "height": 23,
+    "source": "barefootsound.com"
+   }
+  },
+  "magnolia-public-schools": {
+   "name": "Magnolia Public Schools",
+   "industry": "Education",
+   "text": "researched",
+   "description": "Magnolia Public Schools operates the Magnolia Science Academy network of public charter schools across Southern California, offering a college-preparatory STEAM program from transitional kindergarten through 12th grade.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Magnolia Public Schools operates Magnolia Science Academy public charter schools across Southern California.",
+   "group": "education",
+   "logo": {
+    "src": "/assets/clients/magnolia-public-schools.webp",
+    "width": 83,
+    "height": 71,
+    "source": "magnoliapublicschools.org (header emblem)"
+   },
+   "plate_sub": "Magnolia Public Schools"
+  },
+  "hm-digital": {
+   "name": "HM Digital",
+   "industry": "Industrial Instrumentation & Manufacturing",
+   "text": "researched",
+   "description": "HM Digital, based in Los Angeles County, designs and manufactures water-quality testing instruments: handheld meters, inline monitors and controllers that measure dissolved solids, conductivity, pH and temperature for water-treatment systems.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "HM Digital designs and manufactures water-quality testing instruments, including meters, monitors and controllers.",
+   "group": "manufacturing",
+   "logo": {
+    "src": "/assets/clients/hm-digital.webp",
+    "width": 62,
+    "height": 60,
+    "source": "hmdigital.com (logo mark, tagline omitted)"
+   },
+   "plate_sub": "HM Digital"
+  },
+  "virtual-guard": {
+   "name": "Virtual Guard",
+   "industry": "Physical Security Technology & Remote Monitoring",
+   "text": "researched",
+   "description": "Virtual Guard provides technology-enabled security: operators in a monitoring center watch client cameras live, deter intruders and contact police, alongside virtual gate attendant and access control services.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Virtual Guard provides technology-enabled remote video monitoring and virtual security services.",
+   "group": "technology-security",
+   "logo": {
+    "src": "/assets/clients/virtual-guard.webp",
+    "width": 295,
+    "height": 62,
+    "source": "virtualguard.com"
+   }
+  },
+  "fallbrook-companies": {
+   "name": "Fallbrook Companies",
+   "industry": "Real Estate & Tax-Credit Investment",
+   "text": "researched",
+   "description": "Fallbrook Companies is a Calabasas-based group whose businesses arrange tax-credit equity investment and financing for affordable housing, historic rehabilitation and renewable energy projects.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Fallbrook Companies is a Calabasas-based group arranging tax-credit investment and financing for real estate and energy projects.",
+   "group": "real-estate",
+   "logo": {
+    "src": "/assets/clients/fallbrook-companies.webp",
+    "width": 347,
+    "height": 96,
+    "source": "fallbrookfinancialservices.com (fallbrookcompanies.com redirects there)"
+   },
+   "plate_sub": "Fallbrook Companies"
+  },
+  "burg-brock": {
+   "name": "Law Offices of Burg & Brock",
+   "industry": "Legal Services",
+   "text": "researched",
+   "description": "The Law Offices of Burg & Brock is a California personal injury law firm based in Sherman Oaks, representing people injured in vehicle accidents and other serious injury and wrongful-death cases.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "The Law Offices of Burg & Brock is a Sherman Oaks-based personal injury law firm.",
+   "group": "legal",
+   "logo": {
+    "src": "/assets/clients/burg-brock.webp",
+    "width": 283,
+    "height": 96,
+    "source": "burgbrock.com (white header logo, one-color dark text)"
+   }
+  },
+  "jonathan-neil-associates": {
+   "name": "Jonathan Neil & Associates",
+   "industry": "Commercial Collections & Financial Services",
+   "text": "researched",
+   "description": "Jonathan Neil & Associates is a business-to-business collection agency based in Woodland Hills, California, handling commercial collections, receivables management, skip tracing and asset searches across many industries.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Jonathan Neil & Associates is a business-to-business collection agency based in Woodland Hills.",
+   "group": "investment",
+   "logo": {
+    "src": "/assets/clients/jonathan-neil-associates.webp",
+    "width": 409,
+    "height": 96,
+    "source": "jnacollect.com"
+   }
+  },
+  "dragon-herbs": {
+   "name": "Dragon Herbs",
+   "industry": "Consumer Products & Wellness",
+   "text": "researched",
+   "description": "Dragon Herbs, founded by herbalist Ron Teeguarden, sells tonic herbal formulas, functional mushroom products and teas online and through its store in Los Angeles.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Dragon Herbs sells tonic herbal formulas, functional mushroom products and teas online and in Los Angeles.",
+   "group": "consumer",
+   "logo": {
+    "src": "/assets/clients/dragon-herbs.webp",
+    "width": 249,
+    "height": 96,
+    "source": "dragonherbs.com"
+   }
+  },
+  "woodland-hills-private-school": {
+   "name": "Woodland Hills Private School",
+   "industry": "Private Education",
+   "text": "researched",
+   "description": "Woodland Hills Private School is an independent school in Woodland Hills, California, offering toddler and preschool programs and transitional kindergarten through fifth grade.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Woodland Hills Private School offers toddler, preschool and elementary programs through fifth grade.",
+   "group": "education",
+   "logo": {
+    "src": "/assets/clients/woodland-hills-private-school.webp",
+    "width": 295,
+    "height": 96,
+    "source": "woodlandhillsprivateschool.com (white header logo, one-color dark wordmark)"
+   }
+  },
+  "delphi-academy-los-angeles": {
+   "name": "Delphi Academy of Los Angeles",
+   "industry": "Education",
+   "text": "researched",
+   "description": "Delphi Academy of Los Angeles is a private day school in the San Fernando Valley serving students from preschool through 12th grade, part of the Delphi Schools network.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Delphi Academy of Los Angeles is a private day school serving students from preschool through 12th grade.",
+   "group": "education",
+   "logo": {
+    "src": "/assets/clients/delphi-academy-los-angeles.webp",
+    "width": 480,
+    "height": 75,
+    "source": "delphila.org"
+   }
+  },
+  "brandon-femme": {
+   "name": "Brandon Femme",
+   "industry": "Beauty Accessories & Consumer Products",
+   "text": "researched",
+   "description": "Brandon Femme designs and distributes beauty accessories, including mirrors, makeup brushes and sponges, and nail, bath and hair accessories, sold wholesale and retail under the Brandon and Femme brands.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Brandon Femme designs and distributes beauty accessories under the Brandon and Femme brands.",
+   "group": "consumer",
+   "logo": {
+    "src": "/assets/clients/brandon-femme.webp",
+    "width": 480,
+    "height": 78,
+    "source": "brandonfemme.com (white header logo, one-color dark wordmark)"
+   }
+  },
+  "founders-mcc": {
+   "name": "Founders Metropolitan Community Church",
+   "industry": "Nonprofit & Faith-Based Organization",
+   "text": "researched",
+   "description": "Founders Metropolitan Community Church, legally the Metropolitan Community Church of Los Angeles, is the congregation that grew out of the original Metropolitan Community Church founded in Los Angeles in 1968.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "Founders Metropolitan Community Church is the Los Angeles congregation formerly known as MCC Los Angeles.",
+   "group": "nonprofit",
+   "plate_sub": "MCC Los Angeles",
+   "logo": {
+    "src": "/assets/clients/founders-mcc.webp",
+    "width": 480,
+    "height": 89,
+    "source": "foundersmcc.org"
+   }
+  },
+  "mcc-ucc-valley": {
+   "name": "MCC United Church of Christ in the Valley",
+   "industry": "Nonprofit & Faith-Based Organization",
+   "text": "researched",
+   "description": "MCC United Church of Christ in the Valley is a North Hollywood congregation founded in 1972 within the Metropolitan Community Church movement, and part of the United Church of Christ since 2014.",
+   "ownership": null,
+   "status": null,
+   "period": null,
+   "engagement": null,
+   "metric": null,
+   "case": null,
+   "review": [],
+   "include": true,
+   "summary": "MCC United Church of Christ in the Valley is a North Hollywood congregation formerly known as MCC in the Valley.",
+   "group": "nonprofit",
+   "plate_sub": "MCC in the Valley"
   }
  },
  "intro": {
   "title": "Experience across industries. Relationships built on trust.",
   "lead": [
    "Since 1999, Pro Link Systems has worked with organizations ranging from emerging ventures and established mid-market businesses to internationally recognized brands and multinational corporations.",
-   "Our experience spans investment management, manufacturing, biotechnology, professional services, real estate, hospitality and consumer products."
+   "Our experience spans investment management, healthcare and life sciences, aerospace and advanced manufacturing, professional services, education, real estate, hospitality, consumer products, security technology and community organizations."
   ],
   "note": "The following represents a selection of organizations we have served through ongoing technology management, strategic advisory services and individual project engagements."
- }
+ },
+ "phase3_pending": "2026-11-25: Phase 4 staging. Logos approved and added (15 of 16; MCC United Church of Christ in the Valley publishes no logo and keeps its name plate). Relationship labels only where the owner confirmed them (General Pharma Partners current, Redwood former; CR&R, LISI Aerospace and Fralock historical co-managed). Publication awaits the owner's deployment approval."
 }

@@ -23,7 +23,7 @@
  */
 (function () {
   var FT_KEY = "pls_first_touch";
-  var ATTR = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "msclkid"];
+  var ATTR = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid", "msclkid"];
 
   // First touch for this browser session: the page they landed on and where from.
   function firstTouch() {
@@ -53,7 +53,12 @@
     return form.querySelector('button[type="submit"], input[type="submit"], button:not([type])');
   }
 
-  function setError(msg) { window.alert(msg); }
+  // A page can render messages inline instead (assets/js/lead-form-ux.js defines window.plsFormError on the Ads
+  // landing pages); every other page keeps the browser alert. 2026-11-25.
+  function setError(msg) {
+    try { if (typeof window.plsFormError === "function" && window.plsFormError(msg)) return; } catch (e) {}
+    window.alert(msg);
+  }
 
   function showSuccess(form, ref, firstName) {
     var body = document.querySelector(".form-body");
@@ -123,7 +128,8 @@
               // client-side before sending) so Google can match cookieless conversions.
               var ph = String(data.phone || "").replace(/[^0-9]/g, "");
               if (ph.length === 10) ph = "1" + ph;
-              gtag("set", "user_data", {
+              // Phase 3: only with advertising consent (consent.js; off for opt-outs, GPC and the EEA until accepted)
+              if (window.plsConsent && window.plsConsent.ads()) gtag("set", "user_data", {
                 email: email.toLowerCase(),
                 phone_number: ph ? ("+" + ph) : undefined,
                 address: {

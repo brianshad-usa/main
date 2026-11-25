@@ -1176,7 +1176,7 @@ def body(c):
               <svg class="btn-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               <div class="spinner"></div>
             </button>
-            <p class="form-privacy">Your information is never shared. We respond within one business day.</p>
+            <p class="form-privacy">We respond within one business day. We use your details to reply to your request and, depending on your privacy choices, send a hashed copy of your contact details to Google to measure our ads. <a href="/privacy#notice-at-collection">Privacy policy</a> &middot; <a href="/privacy#your-choices" data-privacy-choices>Your privacy choices</a></p>
           </form>
         </div>
         <div class="form-success" id="formSuccess">

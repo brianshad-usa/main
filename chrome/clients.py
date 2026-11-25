@@ -9,7 +9,7 @@ chrome/clients.py -- the client portfolio, from editorial/clients.json.
 Rules the check enforces (owner, 2026-11-22, iterations 5 and 6): the portfolio holds every organization in `order` once, in
 that fixed order; the home page shows the `home` lineup in its own fixed order; every client has an industry, a short
 summary, an industry group and a relationship label (Current client, Past engagement or Project engagement) when one is
-known; a client with a case study links to it and the case study page carries the same company profile and links back.
+known (Former client added in Phase 3, plus an optional "Co-managed IT" engagement model); a client with a case study links to it and the case study page carries the same company profile and links back.
 Both lists are plain source order (no CSS reordering), so the sequence is the same on desktop and mobile. Counts shown on
 the pages are computed from the entries actually rendered.
 """
@@ -28,9 +28,20 @@ A = lambda s: html.escape(s, quote=True)
 ORDER = ["lisi-aerospace", "cunico", "philip-morris-international", "m13", "fralock", "veev-spirits",
          "optical-zonu", "cochise-capital", "crr", "global-holdings", "otitopic", "fsc-lighting", "hallmark-lighting",
          "myx-fusions", "beverly-hills-plaza", "cookes-crating", "optimus-property-management", "global-garden",
-         "waverly-school", "snitzer-law"]
-HOME = ["lisi-aerospace", "cunico", "m13", "fralock", "veev-spirits", "optical-zonu", "cochise-capital", "fsc-lighting"]
-STATUS = {"current": ("Current client", " is-current"), "past": ("Past engagement", ""), "project": ("Project engagement", "")}
+         "waverly-school", "snitzer-law",
+         # Phase 3 additions (2026-11-24), awaiting the owner's publication approval: high priority, then secondary
+         "general-pharma-partners", "black-diamond-ventures", "redwood-investment-management", "barefoot-sound",
+         "magnolia-public-schools", "hm-digital", "virtual-guard", "fallbrook-companies", "burg-brock",
+         "jonathan-neil-associates", "dragon-herbs", "woodland-hills-private-school", "delphi-academy-los-angeles",
+         "brandon-femme", "founders-mcc", "mcc-ucc-valley"]
+# Phase 4 (2026-11-25): General Pharma Partners (healthcare, current client) replaces FSC Lighting. The owner kept
+# VEEV Spirits in slot 5 (final adjustment); Beverly Hills Plaza stays in the full portfolio.
+HOME = ["lisi-aerospace", "cunico", "m13", "fralock", "veev-spirits", "optical-zonu", "cochise-capital",
+        "general-pharma-partners"]
+STATUS = {"current": ("Current client", " is-current"), "former": ("Former client", ""), "past": ("Past engagement", ""),
+          "project": ("Project engagement", "")}
+# Engagement model shown beside the relationship label (Phase 3: CR&R, LISI Aerospace and Fralock were co-managed)
+MODEL = {"co-managed": "Co-managed IT"}
 WORDS = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen",
          "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty", "Twenty-one", "Twenty-two"]
 
@@ -95,7 +106,8 @@ def status_line(c):
         return ""
     label, cls = STATUS[c["status"]]
     when = c.get("period") if c["status"] == "current" else c.get("years")
-    return '<span class="pl-status%s">%s</span>%s' % (cls, label, (" " + E(when)) if when else "")
+    model = (' <span class="pl-status">%s</span>' % E(MODEL[c["model"]])) if c.get("model") else ""
+    return '<span class="pl-status%s">%s</span>%s%s' % (cls, label, (" " + E(when)) if when else "", model)
 
 
 def short(c):
@@ -240,8 +252,10 @@ def check():
             bad.append("%s: industry, description or summary missing" % s)
         if c.get("group") not in groups:
             bad.append("%s: no industry group" % s)
-        if c.get("status") not in (None, "current", "past", "project"):
-            bad.append("%s: label must be Current client, Past engagement or Project engagement" % s)
+        if c.get("status") not in (None,) + tuple(STATUS):
+            bad.append("%s: label must be Current client, Former client, Past engagement or Project engagement" % s)
+        if c.get("model") not in (None,) + tuple(MODEL):
+            bad.append("%s: unknown engagement model" % s)
         if c.get("logo") and not os.path.exists(os.path.join(ROOT, c["logo"]["src"].lstrip("/"))):
             bad.append("%s: logo file missing" % s)
     hub = io.open(os.path.join(ROOT, "case-studies.html"), encoding="utf-8").read()
