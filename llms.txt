@@ -1,21 +1,21 @@
 # Pro Link Systems
 
-> Managed IT services, cybersecurity, and cloud solutions for Los Angeles businesses since 1999. Based in Woodland Hills, CA, with a 24/7 in-house, US-based help desk, serving organizations across healthcare, legal, finance, manufacturing, aerospace, and more.
+> Managed IT services, cybersecurity, and cloud solutions for Los Angeles businesses since 1999. Based in Woodland Hills, CA, with an in-house, US-based help desk and 24/7 response availability for managed-service clients, serving organizations across healthcare, legal, finance, manufacturing, aerospace, and more.
 
-Pro Link Systems is a managed IT services provider (MSP) serving the greater Los Angeles area. Founded in 1999 by Brian Shad and headquartered in Woodland Hills, the company delivers flat-rate managed IT with unlimited support, cybersecurity, cloud infrastructure, backup and disaster recovery, AI automation, and a 24/7 help desk staffed by real engineers - with no long-term contracts.
+Pro Link Systems is a managed IT services provider (MSP) serving the greater Los Angeles area. Founded in 1999 by Brian Shad and headquartered in Woodland Hills, the company delivers flat-rate managed IT with unlimited support, cybersecurity, cloud infrastructure, backup and disaster recovery, AI automation, strategic consulting (vCIO), and an in-house, US-based help desk with 24/7 response availability for managed-service clients - with no long-term contracts.
 
 - Address: 21241 Ventura Blvd #193, Woodland Hills, CA 91364
 - Phone: 1-800-890-6133
 - Email: info@prolinksystems.com
-- Standard business hours: Monday-Friday, 9 AM - 5 PM Pacific. 24/7 help desk and after-hours support for managed-service clients under contract
+- Standard business hours: Monday-Friday, 9 AM - 5 PM Pacific. 24/7 response availability for managed-service clients under contract, through the on-call help desk after hours.
 - Founded: 1999 (25+ years in business)
 - Service area: Greater Los Angeles - San Fernando Valley, West LA, the South Bay, the San Gabriel Valley, the Conejo Valley and Ventura County, and Orange County
 - YouTube: https://www.youtube.com/channel/UCm0_oUdW9jLC_HX7pxpIAWA
 
 ## Key Facts
 
-- Help desk: 24/7, in-house and US-based. Phone calls are answered live by the in-house team - no phone tree, no hold queue.
-- Average ticket first-response time: 15 minutes.
+- Help desk: in-house and US-based, with 24/7 response availability for managed-service clients under contract. Calls are answered live during business hours (Monday-Friday, 9 AM - 5 PM Pacific); after hours, managed-service clients press 1 to reach the on-call help desk.
+- Average ticket first-response time: 15 minutes (a measured average, not a guaranteed service level).
 - First-contact resolution: 90%. Average resolution time: under one hour.
 - Managed IT plans include unlimited support at a flat monthly rate, with no long-term contracts.
 - Same-day on-site support when needed, from the Woodland Hills office.
@@ -23,20 +23,23 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 - Pro Link Systems signs a Business Associate Agreement (BAA) with its healthcare clients.
 - For compliance assessments and audits, Pro Link Systems works alongside the client's compliance advisor and handles the IT side.
 - The incident-response playbook is published free and ungated (no form, no email required).
+- Co-managed IT experience: Pro Link Systems worked alongside the internal IT teams of CR&R Environmental Services, LISI Aerospace and Fralock; founder Brian Shad served as virtual CIO (vCIO) for CR&R.
+- Client portfolio: 36 organizations in ten industry groups: Financial Services & Investment Management; Healthcare & Life Sciences; Aerospace & Advanced Manufacturing; Real Estate & Hospitality; Legal & Professional Services; Education; Technology & Security; Consumer Products & Entertainment; Nonprofit & Community Organizations; Logistics, Distribution & Environmental Services.
 
 ## Services
 
-- [Managed IT Services](https://prolinksystems.com/managed-it-services): Flat-rate managed IT for LA businesses - proactive monitoring, 24/7 help desk, unlimited support, same-day on-site support when needed, no long-term contracts.
+- [Managed IT Services](https://prolinksystems.com/managed-it-services): Flat-rate managed IT for LA businesses - proactive monitoring, cybersecurity and cloud, an in-house, US-based help desk with 24/7 response availability for managed-service clients, unlimited support, same-day on-site support when needed, no long-term contracts.
 - [Cybersecurity Services](https://prolinksystems.com/cybersecurity-services): EDR, email security, 24/7 SOC monitoring, and ransomware and phishing defense.
 - [Cloud Services](https://prolinksystems.com/cloud-services): Microsoft 365, Azure, cloud migration, virtual desktops, and managed cloud infrastructure.
 - [Backup & Disaster Recovery](https://prolinksystems.com/backup-disaster-recovery): Automated backups, ransomware recovery, tested failover, and business continuity planning.
-- [24/7 IT Help Desk](https://prolinksystems.com/it-help-desk): Round-the-clock support answered live by our in-house, US-based team; average ticket first-response time is 15 minutes.
+- [24/7 IT Help Desk](https://prolinksystems.com/it-help-desk): Help desk for managed-service clients from our in-house, US-based team: answered live during business hours, on-call after hours (24/7 response availability); average ticket first-response time is 15 minutes.
 - [AI & Automation Services](https://prolinksystems.com/ai-automation-services): AI knowledge assistants, workflow automation, Microsoft Copilot deployment, and custom AI solutions.
 - [Outsourced IT Services](https://prolinksystems.com/outsourced-it-services-los-angeles): Replace an in-house IT department with a flat-rate team of local engineers, ideal for businesses with 5 to 100 employees.
-- [Co-Managed IT Services](https://prolinksystems.com/co-managed-it-services): Augment an existing internal IT person or team with 24/7 help desk overflow, SOC-backed cybersecurity, cloud, backup, and vCIO strategy - we extend your team, not replace it.
+- [Co-Managed IT Services](https://prolinksystems.com/co-managed-it-services): Augment an existing internal IT person or team with help desk overflow and after-hours coverage for clients under contract, SOC-backed cybersecurity, cloud, backup, and vCIO strategy - we extend your team, not replace it. Experience includes co-managed engagements with CR&R Environmental Services, LISI Aerospace and Fralock.
 - [Microsoft 365 Support](https://prolinksystems.com/microsoft-365-support-los-angeles): Microsoft 365 setup, migration, and management - Exchange, Teams, SharePoint, Azure AD, security hardening, and licensing optimization.
-- [Microsoft 365 Security Assessment](https://prolinksystems.com/m365-security-assessment): One-time, read-only review of a company's Microsoft 365 security settings for $2,500, ordered and paid online. A findings report sorted by severity, reviewed by Pro Link Systems, plus a complimentary review call; Pro Link Systems approves every engagement and changes nothing.- [Network Support & Management](https://prolinksystems.com/network-support-los-angeles): 24/7 network monitoring, business WiFi design, firewall, VPN, and network security across the LA metro.
-- [Virtual CIO (vCIO) & IT Consulting](https://prolinksystems.com/virtual-cio): Fractional CIO leadership for LA businesses - strategic technology planning, budgeting, security strategy, and vendor management.
+- [Microsoft 365 Security Assessment](https://prolinksystems.com/m365-security-assessment): One-time, read-only review of a company's Microsoft 365 security settings for $2,500, ordered and paid online. A findings report sorted by severity, reviewed by Pro Link Systems, plus a complimentary review call; Pro Link Systems approves every engagement and changes nothing. You can also book a call to discuss the assessment first; any remediation is scoped and priced separately.
+- [Network Support & Management](https://prolinksystems.com/network-support-los-angeles): 24/7 network monitoring, business WiFi design, firewall, VPN, and network security across the LA metro.
+- [Virtual CIO (vCIO) & IT Consulting](https://prolinksystems.com/virtual-cio): Fractional CIO leadership for LA businesses - strategic technology planning, budgeting, security strategy, and vendor management, including coordination with internal IT teams. Founder Brian Shad served as virtual CIO for CR&R Environmental Services.
 - [All Services Overview](https://prolinksystems.com/services): Full summary of Pro Link Systems' IT service offerings.
 
 ## Cybersecurity
@@ -52,12 +55,12 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 
 - [Healthcare IT](https://prolinksystems.com/healthcare-it-services): IT support for medical and dental practices: EHR uptime, secure devices and email, and restore-tested backups. Pro Link Systems signs a BAA with its healthcare clients.
 - [Law Firm IT](https://prolinksystems.com/law-firm-it-services-los-angeles): Secure document management, remote access, and 24/7 support for law firms.
-- [Financial Services IT](https://prolinksystems.com/financial-services-it): Managed IT for RIAs, wealth managers, CPAs, and insurers: BEC and wire-fraud defense, tested backups, and a 24/7 in-house help desk.
-- [Manufacturing IT](https://prolinksystems.com/manufacturing-it-services): OT/IT-integrated IT for manufacturers: plant networks, ERP uptime, and a 24/7 help desk.
+- [Financial Services IT](https://prolinksystems.com/financial-services-it): Managed IT for RIAs, wealth managers, CPAs, and insurers: BEC and wire-fraud defense, tested backups, and an in-house help desk with 24/7 response availability for managed-service clients.
+- [Manufacturing IT](https://prolinksystems.com/manufacturing-it-services): OT/IT-integrated IT for manufacturers: plant networks, ERP uptime, and an in-house help desk with 24/7 response availability for managed-service clients.
 - [Aerospace & Defense IT](https://prolinksystems.com/aerospace-defense-it-services): IT support for aerospace and defense suppliers: engineering workstations and secure, segmented networks.
 - [Real Estate IT](https://prolinksystems.com/real-estate-it-services): Wire-fraud defense and IT for brokerages and property management.
 - [Professional Services IT](https://prolinksystems.com/professional-services-it): Scalable IT for consulting, accounting, and professional firms.
-- [Nonprofit IT](https://prolinksystems.com/nonprofit-it-services): Managed IT for nonprofits and foundations: Microsoft 365 Nonprofit setup, help accessing donated and discounted technology, donor-data security, and a 24/7 help desk.
+- [Nonprofit IT](https://prolinksystems.com/nonprofit-it-services): Managed IT for nonprofits and foundations: Microsoft 365 Nonprofit setup, help accessing donated and discounted technology, donor-data security, and an in-house help desk with 24/7 response availability for managed-service clients.
 - [Technology & SaaS IT](https://prolinksystems.com/technology-it-services): Secure cloud, identity, and endpoint management for tech companies.
 - [Entertainment & Media IT](https://prolinksystems.com/entertainment-it-services): Content security, post-production workstation support, shared media storage, and backup for studios and media companies.
 - [Education IT](https://prolinksystems.com/education-it-services): School IT for private and charter schools: content filtering, student-data security, classroom technology, and campus Wi-Fi.
@@ -108,7 +111,7 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 
 ## Guides
 
-- [Why Choose Pro Link Systems](https://prolinksystems.com/why-pro-link-systems): How Pro Link Systems compares to national MSPs and break-fix IT - flat-rate pricing, 24/7 local engineers, no long-term contracts, serving LA since 1999. Includes a side-by-side comparison table and client testimonials.
+- [Why Choose Pro Link Systems](https://prolinksystems.com/why-pro-link-systems): How Pro Link Systems compares to national MSPs and break-fix IT - flat-rate pricing, an in-house local team with 24/7 response availability for managed-service clients, no long-term contracts, serving LA since 1999. Includes a side-by-side comparison table and client testimonials.
 - [How to Choose a Managed IT Provider in Los Angeles](https://prolinksystems.com/how-to-choose-managed-it-provider-los-angeles): Buyer's guide - what to look for, red flags to avoid, and the questions to ask before hiring a managed IT company in LA.
 - [Managed IT Services Pricing in Los Angeles (2026)](https://prolinksystems.com/managed-it-services-pricing-los-angeles): What managed IT costs in Los Angeles - pricing models, typical $75-200 per user per month, and what should be included at each service tier.
 - [Los Angeles Business Cybersecurity Report 2026](https://prolinksystems.com/la-business-cybersecurity-report-2026): The state of cybersecurity for LA businesses in 2026 - top threats (ransomware, BEC, phishing), industry-specific risk by sector, compliance frameworks (HIPAA, PCI DSS, CMMC, SOC 2, CCPA), an industry-benchmark data table, and an 8-point security checklist. Benchmark figures are sourced and attributed to IBM, the Verizon DBIR, and the FBI IC3.
@@ -118,11 +121,28 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 
 ## Company
 
-- [About Pro Link Systems](https://prolinksystems.com/about): Company history, founder Brian Shad, and core values.
-- [Brian Shad, Founder & CEO](https://prolinksystems.com/leadership/brian-shad): Leadership profile of the founder of Pro Link Systems.
+- [About Pro Link Systems](https://prolinksystems.com/about): Company history, founder Brian Shad (including his role as virtual CIO for CR&R Environmental Services), operating approach, and core values.
+- [Brian Shad, Founder & CEO](https://prolinksystems.com/leadership/brian-shad): Leadership profile of the founder of Pro Link Systems, including his work as virtual CIO (vCIO) for CR&R Environmental Services.
 - [Contact](https://prolinksystems.com/contact): Phone, email, address, and contact form.
 - [Blog](https://prolinksystems.com/blog/): Practical IT, cybersecurity, and managed IT guidance for Los Angeles businesses.
-- [Client Success Stories](https://prolinksystems.com/case-studies): the client portfolio, with company profiles and 14 client case studies across healthcare, defense, legal, manufacturing, logistics, and tech — engagements spanning up to 20+ years.
+- [Client Success Stories](https://prolinksystems.com/case-studies): the client portfolio of 36 organizations by industry, with company profiles, current and former client and co-managed IT engagement labels, and 14 client case studies — engagements spanning up to 20+ years.
+
+## Case Studies
+
+- [LISI Aerospace](https://prolinksystems.com/case-studies/lisi-aerospace): Co-managed IT engagement. How Pro Link Systems took ownership of LISI Aerospace's IT administration and stabilized operations within 90 days, through the move to remote work.
+- [Cunico Corporation](https://prolinksystems.com/case-studies/cunico): How Pro Link Systems has run and secured Cunico's multi-site technology since 2012, through growth and its 2022 acquisition by BWX Technologies.
+- [M13](https://prolinksystems.com/case-studies/m13): How Pro Link Systems helped design and build the founding technology and communications platform for M13, a venture capital firm.
+- [Fralock Holdings](https://prolinksystems.com/case-studies/fralock): Co-managed IT engagement. How Pro Link Systems unified network, security and IT operations for Fralock Holdings across sites, states and newly acquired subsidiaries.
+- [VEEV Spirits](https://prolinksystems.com/case-studies/veev-spirits): How Pro Link Systems designed and ran the technology behind VEEV Spirits for about seven years, from the founders' home to a multi-state operation.
+- [Optical Zonu Corporation](https://prolinksystems.com/case-studies/optical-zonu): How Pro Link Systems serves as the primary IT management team for Optical Zonu, a fiber-optic and RF-over-fiber manufacturer.
+- [CR&R Environmental Services](https://prolinksystems.com/case-studies/crr): Co-managed IT engagement. How Pro Link Systems supported CR&R's IT across its divisions: cybersecurity, Microsoft 365 and Azure, network architecture and disaster recovery.
+- [Global Holdings](https://prolinksystems.com/case-studies/global-holdings): How Pro Link Systems designed and ran the network, AWS imaging platform and patient portal behind 19 diagnostic imaging facilities for 12+ years.
+- [FSC Lighting](https://prolinksystems.com/case-studies/fsc-lighting): How Pro Link Systems overhauled the network behind FSC Lighting's offices and production facilities and moved the manufacturer to cloud systems.
+- [Hallmark Lighting](https://prolinksystems.com/case-studies/hallmark-lighting): How Pro Link Systems rebuilt Hallmark Lighting's IT from the ground up, connecting California design teams with an overseas manufacturing plant.
+- [Cooke's Crating & Fine Arts Transportation](https://prolinksystems.com/case-studies/cookes-crating): How Pro Link Systems helped Cooke's Crating regain administrative control of its systems, migrating in five days with zero downtime.
+- [Global Garden](https://prolinksystems.com/case-studies/global-garden): How Pro Link Systems supports Global Garden with managed IT, including email security across all of the organization's mailboxes.
+- [The Waverly School](https://prolinksystems.com/case-studies/waverly-school): How Pro Link Systems has served as The Waverly School's outsourced IT department since 2003, including Google Workspace for staff and students.
+- [Law Offices of Alan B. Snitzer](https://prolinksystems.com/case-studies/snitzer-law): How Pro Link Systems moved the Law Offices of Alan B. Snitzer from an on-premises data center to Microsoft Azure, in a partnership since 2006.
 
 ## Resources
 
@@ -134,4 +154,4 @@ Pro Link Systems is a managed IT services provider (MSP) serving the greater Los
 ## Optional
 
 - [Legal / Terms](https://prolinksystems.com/legal): Managed services agreement and terms of service.
-- [Privacy Policy](https://prolinksystems.com/privacy): What information the website collects, how it is used and shared, and the choices available to you.
+- [Privacy Policy](https://prolinksystems.com/privacy): What information the website collects, how it is used and shared (including advertising measurement with hashed contact details), Your Privacy Choices, Global Privacy Control, and privacy rights. Effective November 25, 2026.
