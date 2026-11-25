@@ -53,7 +53,12 @@
     return form.querySelector('button[type="submit"], input[type="submit"], button:not([type])');
   }
 
-  function setError(msg) { window.alert(msg); }
+  // A page can render messages inline instead (assets/js/lead-form-ux.js defines window.plsFormError on the Ads
+  // landing pages); every other page keeps the browser alert. 2026-11-25.
+  function setError(msg) {
+    try { if (typeof window.plsFormError === "function" && window.plsFormError(msg)) return; } catch (e) {}
+    window.alert(msg);
+  }
 
   function showSuccess(form, ref, firstName) {
     var body = document.querySelector(".form-body");

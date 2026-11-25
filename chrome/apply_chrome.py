@@ -28,11 +28,11 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PL_JS_VERSION = "20261122b"
-FOOTER_ONLY = {"managed-it-services.html"}             # Ads landing page: own short header (no site menu), shared footer
+FOOTER_ONLY = set()   # 2026-11-25: the Managed IT Ads landing page now uses the shared header too (Phase 2 brief §7)
 SKIP_DIRS = {".git", ".github", "chrome", "editorial", "functions", "node_modules", "tools", "apps", "videos"}
 
 SOLUTIONS = {
-    "services", "co-managed-it-services", "it-help-desk", "cybersecurity-services", "cloud-services",
+    "services", "managed-it-services", "co-managed-it-services", "it-help-desk", "cybersecurity-services", "cloud-services",
     "backup-disaster-recovery", "email-security-services", "endpoint-security-services",
     "governance-risk-compliance", "identity-access-management", "network-security-services",
     "security-awareness-training", "virtual-cio", "ai-automation-services", "microsoft-365-support-los-angeles",
