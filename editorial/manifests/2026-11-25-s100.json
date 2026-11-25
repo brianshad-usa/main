@@ -1,0 +1,184 @@
+{
+  "post": "Picture an ordinary afternoon at an LA office. The office manager gets a call from someone who sounds exactly like a senior colleague: locked out, traveling, needs the login reset right now. Nobody hacked anything. They simply asked, and with today's voice cloning, sounding right is no longer proof.\n\nThat call belongs on a list we think about often: the ways attackers get in, ranked by how boring they are. Near it sit a reused password with no second login step and a firewall that missed an update. In our experience, the boring list and the dangerous list look a lot alike.\n\nThe fixes are just as plain. Keep internet-facing equipment updated. Require a second login step everywhere. Then agree, today, that nobody resets a password because a voice sounds right: hang up and call back on a number already on file. If the request is genuine, the callback costs almost nothing.",
+  "headline": "Where attackers get in, ranked by how boring it is",
+  "cta_label": "Call Pro Link",
+  "cta_type": "CALL",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-25-s100-card.png",
+  "image_file_jpg": "2026-11-25-s100-card.jpg",
+  "theme": "ransomware",
+  "idea_id": "S100",
+  "core_idea": "Ranked by how boring they are, the ways attackers get into a mid-sized business run from a reused password on a remote login, through an unpatched edge device, a forgotten internet-facing system, a fatigue-approved MFA prompt, and a cloned-voice reset call to the help desk, with the zero-day in last place. In Pro Link's view, the dullest doors are the ones most worth closing first, and closing them is mostly discipline rather than new products.",
+  "channels": {
+    "linkedin": "Rank the ways attackers get into a mid-sized business by how boring they are, and an uncomfortable pattern appears: the dullest entries are the ones we would close first.\n\nThis ranking is opinion, built from supporting Los Angeles businesses since 1999, not a frequency study. Most boring first:\n\n1. A password reused from a breached personal account, guarding a remote login with no second factor.\n2. Firewall or VPN firmware still missing a fix the vendor already shipped.\n3. Some forgotten device that still faces the internet.\n4. An MFA prompt approved by someone who just wanted the notifications to stop.\n5. A confident call asking the help desk to reset someone's MFA. In 2026, that voice may be cloned.\n\nZero-days come last. They are real, including on edge appliances, and they dominate coverage. For most businesses the bigger exposure is the gap between a fix shipping and someone installing it.\n\nWhat this means for a CEO or CFO: closing these doors is mostly discipline, not new products. Phishing-resistant MFA, ideally passkeys, on every remote login. Edge devices patched in days, not quarters. Keep a current list of everything reachable from the internet. Adopt a reset rule that never trusts a voice alone.\n\nOne question is worth asking your IT provider this week, us included: what does it take to get an MFA reset over the phone? If the honest answer is a name and a confident tone, item five is open.\n\nWe publish our incident-response playbook free and ungated for the same reason: a process you can inspect beats one you are asked to trust.\n\nBoring, done consistently, is what calm looks like.",
+    "facebook": "Picture an ordinary afternoon at an LA office. The office manager gets a call from someone who sounds exactly like a senior colleague: locked out, traveling, needs the login reset right now. Nobody hacked anything. They simply asked, and with today's voice cloning, sounding right is no longer proof.\n\nThat call belongs on a list we think about often: the ways attackers get in, ranked by how boring they are. Near it sit a reused password with no second login step and a firewall that missed an update. In our experience, the boring list and the dangerous list look a lot alike.\n\nThe fixes are just as plain. Keep internet-facing equipment updated. Require a second login step everywhere. Then agree, today, that nobody resets a password because a voice sounds right: hang up and call back on a number already on file. If the request is genuine, the callback costs almost nothing.",
+    "gbp": "Ask an LA business owner how ransomware gets in and you often hear about sophisticated hackers. In our view, the more common doors are dull: a firewall or VPN that missed an update, a reused password on a remote login with no second factor, a device nobody knew faced the internet. Three checks are worth doing this month. Confirm your edge devices run current firmware, require MFA on every remote login, and list everything reachable from the internet. Pro Link Systems has supported Los Angeles businesses from Woodland Hills since 1999, with an in-house, US-based help desk. Call if you want a second set of eyes on your setup.",
+    "x": [
+      "Where attackers get in, ranked by how boring it is:\n\n1. Reused password, remote login, no MFA\n2. Firewall or VPN that missed an update\n3. A device nobody knew faced the internet\n4. MFA prompt approved just to make it stop\n5. A cloned voice asking IT for a reset",
+      "Zero-days come last. Real, heavily covered, and in our view rarely the first problem a mid-sized business needs to solve. The bigger gap is usually between a fix shipping and anyone installing it.\n\nThe pattern: the more boring the door, the less anyone watches it."
+    ],
+    "instagram_caption": "Where attackers get in, ranked by how boring it is, most boring first. This is our opinion from supporting LA businesses since 1999, not a frequency study. In our experience, though, the boring list and the dangerous list overlap heavily.\n\nClosing these doors is mostly discipline, not new products. Save this for your next conversation with whoever runs your IT.\n\n#Ransomware #IdentitySecurity #LosAngelesBusiness"
+  },
+  "carousel": {
+    "png": [
+      "2026-11-25-s100-01.png",
+      "2026-11-25-s100-02.png",
+      "2026-11-25-s100-03.png",
+      "2026-11-25-s100-04.png",
+      "2026-11-25-s100-05.png",
+      "2026-11-25-s100-06.png",
+      "2026-11-25-s100-07.png",
+      "2026-11-25-s100-08.png"
+    ],
+    "jpg": [
+      "2026-11-25-s100-01.jpg",
+      "2026-11-25-s100-02.jpg",
+      "2026-11-25-s100-03.jpg",
+      "2026-11-25-s100-04.jpg",
+      "2026-11-25-s100-05.jpg",
+      "2026-11-25-s100-06.jpg",
+      "2026-11-25-s100-07.jpg",
+      "2026-11-25-s100-08.jpg"
+    ]
+  },
+  "variety": {
+    "style": "photo_light",
+    "format": "carousel",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "client_value",
+    "channels": {
+      "linkedin": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "facebook": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "gbp": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "instagram": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      },
+      "x": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 93,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 93,
+      "originality": 91,
+      "hook_strength": 94,
+      "educational_value": 95,
+      "technical_accuracy": 96,
+      "executive_value": 94,
+      "writing_quality": 95,
+      "visual_sophistication": 88,
+      "platform_fit": 95,
+      "shareability": 93,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 93
+    }
+  },
+  "claims_audit": [
+    "OPINION: the ranking of entry points by how boring they are, explicitly labeled as opinion and not a frequency study",
+    "OPINION: in Pro Link's experience, the most boring entry points overlap heavily with the most dangerous ones",
+    "ANALYSIS: attackers use reused credentials from breached personal accounts against remote logins lacking MFA (a technique description, no statistic)",
+    "ANALYSIS: internet-facing edge devices that remain unpatched after a vendor fix are discoverable by scanning and are a known entry route",
+    "ANALYSIS: zero-days do occur on edge appliances; the opinion offered is only that, for most mid-sized businesses, the post-disclosure patch gap is the larger exposure",
+    "ANALYSIS: number matching mitigates MFA push fatigue but is not phishing-resistant; passkeys and other phishing-resistant MFA address both",
+    "ANALYSIS: attackers request password or MFA resets from help desks by phone, and voice cloning can make the caller sound legitimate",
+    "OPINION: closing these entry points is mostly discipline rather than new products",
+    "ANALYSIS: 'patched in days, not quarters' is guidance, not a regulatory or vendor deadline",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F014): Pro Link Systems publishes its incident-response playbook publicly, free and ungated",
+    "FACT(F002+F008): the Pro Link help desk is in-house and US-based (paired, per the F002 note)",
+    "ANALYSIS: the Facebook office-manager call is an illustrative hypothetical, not a client story or real incident",
+    "No statistics, no named incidents, no client references, no compliance claims, no claim about Pro Link's own reset-verification policy"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft did not deliver its concept. S100 promises a ranking of entry points by how boring they are, and no channel contains a ranking. The idea readers would save and forward was missing, leaving a familiar 'patch and use MFA' post. Revision: the ranking is now the spine of every channel."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The 'boring is good news' reframe is a decent turn, but it was stated three times on LinkedIn and resolved nothing. A ranked list gives the piece tension: zero-days land in last place, and the pattern that the dullest doors get the least attention becomes the payoff."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel was seven slides of headline plus paragraph with empty footers, and nothing a designer could build a recognizable system on. Revision: each entry point gets its own numbered slide ('Boredom rank 01 to 05'). The footer carries the one-line fix, giving a consistent hierarchy of rank, door and fix that reads as a ladder diagram. The help-desk ad slide is removed."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The draft's central frequency claim ('usually', 'the way in is usually ordinary') was framed as a view, but 'after decades of reading incident write-ups' implied research the brand cannot cite. Revision: the ranking is explicitly labeled opinion, 'not a frequency study', and grounded only in F012 (serving LA businesses since 1999)."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Retire shared and reused passwords' drifts into the demoted 'use strong passwords' theme. The draft also ignored two current, practical doors: MFA push approved out of fatigue, and help-desk reset requests made by phone. Revision: both are added, with concrete fixes (number matching or passkeys, and callback to a number already on file)."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treated MFA as binary. Push-approval fatigue and social-engineered MFA resets defeat ordinary MFA, so 'turn on a second login step' was incomplete advice. 'Know which devices face the internet' was also left without an action. Revision: phishing-resistant MFA or number matching, an external inventory of what faces the internet, and a reset policy that never trusts a voice alone."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There was no AI angle at all, which is acceptable. However, the 2026 version of a help-desk reset call can involve a cloned voice, and that belongs in the ranking. Revision: it is added once, as a plain clause without alarm, consistent with the rule against manufacturing urgency around AI."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn closing paragraph turned a peer perspective into a sales pitch with two stacked metrics. Revision: the pitch is replaced with a question an executive can actually ask their IT provider this week, 'what does it take to get an MFA reset over the phone?', explicitly including Pro Link. That earns more trust than a response-time figure."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The single X post compressed the idea but lost the list, which is the shareable artifact. The Instagram hook ('The way in is usually boring') was a mood, not a reason to swipe. Revision: the X thread leads with the full ranked list in post one. The Instagram hook states the ranking premise, and a 'Most boring first' footer drives the swipe."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "Ultimate test, applied to the draft: yes, any MSP could have published it. Revision: the boredom ranking, the explicit opinion label, and the invitation to test Pro Link's own help-desk reset process are distinctive moves a generic MSP would not make. The verified facts are reduced to a single, relevant one (F012) so the brand reads as authority, not advertisement."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "Problems found: 'That is genuinely good news' (filler intensifier); a Facebook scenario echoing the LinkedIn structure; 'Our clients reach our help desk around the clock' (slightly overstates F007, where after-hours access is via press 1 for managed-service clients); and a card_headline using an informal contraction inconsistent with the publication register. All are fixed, and the revision is checked for consecutive sentences opening with the same word, banned phrasing, emoji and exclamation marks."
+    },
+    {
+      "role": "Senior Technology Editor / Cybersecurity Expert",
+      "finding": "Three technical tensions remained. LinkedIn offered 'number-matched MFA' as a sufficient fix for remote logins, while the slides and checklist said 'phishing-resistant MFA'. Number matching stops push fatigue but not adversary-in-the-middle phishing, so the package contradicted itself. The zero-day item also implied edge devices are only at risk from missed updates, when edge appliances are a common zero-day target. Fix: phishing-resistant MFA, ideally passkeys, for remote logins everywhere; number matching only as the push-fatigue fix; and reframe the zero-day point around the gap between a fix shipping and someone installing it. 'In 2026, the voice may not belong to the caller' was also vague and is now stated as voice cloning."
+    },
+    {
+      "role": "Brand Director / CMO (could any MSP publish this?)",
+      "finding": "Apart from the 1999 line, a capable competitor could have published the draft almost verbatim. The 'ask your IT provider, us included' question was the only differentiator, and nothing backed it. Fix: tie the argument to verified, distinctive behavior without claiming unverified policy. F014, the public, ungated incident-response playbook, extends the 'inspect, don't trust' logic on LinkedIn. F002 with F008, the in-house, US-based help desk, carries local credibility on GBP. 'Every fix is routine work rather than budget' also overclaimed, since a passkey rollout has real cost. It is now 'mostly discipline, not new products'."
+    },
+    {
+      "role": "Copy Editor / Social Growth Strategist",
+      "finding": "The first X post ran to roughly 282 characters, over the 280 limit. Fix: shorten the lead line. In the LinkedIn list, consecutive items opened with 'A', which breaks the voice rule; those openers are now varied. The Facebook close told readers to call back but did not say why the callback is painless for a genuine colleague, so it now names the low cost of verifying."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

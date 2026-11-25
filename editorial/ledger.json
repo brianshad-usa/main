@@ -4355,6 +4355,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-25",
+      "idea_id": "S100",
+      "theme": "ransomware",
+      "format": "carousel",
+      "title": "Where attackers get in, ranked by how boring it is",
+      "excellence": 93,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo_light",
+        "format": "carousel",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "client_value",
+        "channels": {
+          "linkedin": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "facebook": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "gbp": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "instagram": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          },
+          "x": {
+            "style": "photo_light",
+            "format": "carousel",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "client_value"
+          }
+        }
+      }
     }
   ]
 }
