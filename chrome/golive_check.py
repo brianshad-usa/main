@@ -339,6 +339,22 @@ for f in sorted(files):
     if STAGING_TEXT.search(src):
         problems.append("14 staging label or preview link in %s" % f)
 
+# ---------------------------------------------------------------- 15-16: privacy release checks (Phase 3)
+# 15. the revised privacy policy carries a draft marker until Brian approves it and sets the effective date
+if "data-draft-policy" in read(os.path.join(ROOT, "privacy.html")):
+    problems.append("15 privacy.html is still the draft: set the effective date and remove the data-draft-policy markers "
+                    "once the policy is approved for publication")
+# 16. consent defaults must load before the Google tag / Microsoft UET on every page that has them
+for f in ("assets/js/consent.js", "assets/js/consent-ui.js"):
+    if not os.path.exists(os.path.join(ROOT, f)):
+        problems.append("16 %s is missing" % f)
+TAG_RE = re.compile(r"googletagmanager\.com/gtag/js|bat\.bing\.(?:net|com)/bat\.js")
+for p in pages():
+    t = read(p)
+    m = TAG_RE.search(t)
+    if m and (t.find("<!-- PL:CONSENT -->") < 0 or t.find("<!-- PL:CONSENT -->") > m.start()):
+        problems.append("16 %s loads Google/Microsoft tags without consent.js first: run python chrome/apply_chrome.py" % rel(p))
+
 if problems:
     print(("NOT READY for go-live (%d):\n  " % len(problems)) + "\n  ".join(problems))
     sys.exit(1)

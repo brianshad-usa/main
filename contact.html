@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261124"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -493,7 +494,7 @@
           <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           <div class="spinner"></div>
         </button>
-        <p class="form-privacy">We respect your privacy. Your information is never sold or shared with third parties.</p>
+        <p class="form-privacy">We use your details to reply to your request and, depending on your privacy choices, send a hashed copy of your contact details to Google to measure our ads. <a href="/privacy#notice-at-collection">Privacy policy</a> &middot; <a href="/privacy#your-choices" data-privacy-choices>Your privacy choices</a></p>
       </form>
     </div>
 
@@ -670,7 +671,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->
@@ -785,7 +786,8 @@
              these client-side (SHA-256) before sending over HTTPS. */
           var __ph = String(data.phone || '').replace(/[^0-9]/g, '');
           if (__ph.length === 10) __ph = '1' + __ph;
-          gtag('set', 'user_data', {
+          /* Phase 3: only with advertising consent (consent.js; off for opt-outs, GPC and the EEA until accepted) */
+          if (window.plsConsent && window.plsConsent.ads()) gtag('set', 'user_data', {
             'email': String(data.email || '').trim().toLowerCase(),
             'phone_number': __ph ? ('+' + __ph) : undefined,
             'address': {

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261124"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -258,6 +259,14 @@
       .toc-sidebar { position: static; max-height: none; margin-bottom: 12px; }
       .page-hero { padding: 40px 20px 36px; }
     }
+      /* Phase 3: notice-at-collection table */
+    .legal-table-wrap { overflow-x: auto; margin: 18px 0; border: 1px solid var(--border, #dde3ea); border-radius: 8px; }
+    .legal-table-wrap:focus-visible { outline: 3px solid var(--navy, #0b3d6b); outline-offset: 2px; }
+    .legal-table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .88rem; line-height: 1.5; }
+    .legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border, #dde3ea); }
+    .legal-table thead th { background: var(--off-white, #f5f7fa); font-weight: 700; color: var(--navy, #0b3d6b); }
+    .legal-table tbody th { font-weight: 600; width: 26%; }
+    .legal-table tr:last-child th, .legal-table tr:last-child td { border-bottom: 0; }
   </style>
   <script type="application/ld+json">
   {
@@ -513,11 +522,11 @@
   <div class="page-hero-inner">
     <span class="section-label">Legal</span>
     <h1>Privacy Policy</h1>
-    <p>How Pro Link Systems, Inc. collects, uses, and protects information on prolinksystems.com — and the choices you have.</p>
+    <p>How Pro Link Systems, Inc. collects, uses, shares and protects information on prolinksystems.com, including for analytics and advertising measurement, and the choices you have.</p>
     <div class="page-hero-meta">
       <span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Effective November 21, 2026
+        <span data-draft-policy>Draft for review: the effective date is set when this policy is published</span>
       </span>
       <span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -540,15 +549,18 @@
       <h2>Contents</h2>
       <ul class="toc-list" id="toc-list">
         <li><a href="#s1">1. Who We Are</a></li>
-        <li><a href="#s2">2. Information We Collect</a></li>
-        <li><a href="#s3">3. Cookies, Analytics &amp; Advertising</a></li>
-        <li><a href="#s4">4. How We Use Information</a></li>
-        <li><a href="#s5">5. How We Share Information</a></li>
-        <li><a href="#s6">6. Data Retention</a></li>
-        <li><a href="#s7">7. Your Choices &amp; Rights</a></li>
-        <li><a href="#s8">8. Children's Privacy</a></li>
-        <li><a href="#s9">9. Security</a></li>
-        <li><a href="#s10">10. Changes &amp; Contact</a></li>
+        <li><a href="#notice-at-collection">2. Summary: Notice at Collection</a></li>
+        <li><a href="#s3">3. Information We Collect</a></li>
+        <li><a href="#cookies">4. Cookies, Analytics &amp; Advertising</a></li>
+        <li><a href="#s5">5. How We Use Information</a></li>
+        <li><a href="#s6">6. How We Share Information</a></li>
+        <li><a href="#your-choices">7. Your Privacy Choices</a></li>
+        <li><a href="#s8">8. Your Privacy Rights</a></li>
+        <li><a href="#s9">9. Data Retention</a></li>
+        <li><a href="#s10">10. Security</a></li>
+        <li><a href="#s11">11. Children&rsquo;s Privacy</a></li>
+        <li><a href="#s12">12. Visitors Outside the United States</a></li>
+        <li><a href="#s13">13. Changes &amp; Contact</a></li>
       </ul>
       <div class="toc-print">
         <button onclick="window.print()">
@@ -566,114 +578,173 @@
     <section class="legal-section" id="s1">
       <div class="ls-header"><span class="ls-num">§ 1</span><span class="ls-title">Who We Are</span></div>
       <div class="legal-sub">
-        <p>Pro Link Systems, Inc. ("Pro Link Systems," "we," "us") is a managed IT services provider based in Woodland Hills, California, serving Los Angeles–area businesses since 1999. This Privacy Policy describes how we handle information collected through our website, <strong>prolinksystems.com</strong> (the "Site"), and when you contact us by phone or email.</p>
+        <p>Pro Link Systems, Inc. ("Pro Link Systems," "we," "us") is a managed IT services provider based in Woodland Hills, California, serving Los Angeles–area businesses since 1999. This Privacy Policy describes how we handle information collected through our website, <strong>prolinksystems.com</strong> (the "Site"), through our online Microsoft 365 Security Assessment checkout, and when you contact us by phone or email.</p>
         <div class="address-block">
           <strong>Pro Link Systems, Inc.</strong>
           21241 Ventura Blvd, Suite 193, Woodland Hills, CA 91364<br>
           Phone: <a href="tel:18008906133">1-800-890-6133</a> &nbsp;·&nbsp; Email: <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a>
         </div>
-        <p>This policy covers the Site and our marketing communications. Services we deliver to clients under a Managed Services Agreement are governed by that agreement and its terms, not this policy.</p>
+        <p>Services we deliver to clients under a Managed Services Agreement, and the data we process inside client environments, are governed by that agreement and its terms, not this policy.</p>
       </div>
     </section>
 
-    <!-- §2 INFORMATION WE COLLECT -->
-    <section class="legal-section" id="s2">
-      <div class="ls-header"><span class="ls-num">§ 2</span><span class="ls-title">Information We Collect</span></div>
+    <!-- §2 NOTICE AT COLLECTION -->
+    <section class="legal-section" id="notice-at-collection">
+      <div class="ls-header"><span class="ls-num">§ 2</span><span class="ls-title">Summary: Notice at Collection</span></div>
       <div class="legal-sub">
-        <p><strong>Information you provide to us.</strong> When you fill out a contact, consultation, or download form on the Site, or reach out by phone or email, we collect the information you choose to give us — typically your name, work email address, phone number, company name, and your message or request.</p>
-        <p><strong>Information collected automatically.</strong> Like nearly all websites, the Site's infrastructure records standard technical data when you visit: your IP address, browser type and device information, the pages you view, and the approximate (city-level) location derived from your IP address. Our Site is served through Cloudflare, whose systems process this data to deliver pages and protect the Site from abuse. We also use the analytics and advertising services described in Section 3.</p>
-        <p><strong>What we do not collect.</strong> The Site has no user accounts or logins and does not ask for sensitive personal information. Please do not submit confidential details through our web forms.</p>
-        <p><strong>Payments.</strong> If you order the Microsoft 365 Security Assessment, your card is entered in Authorize.net&rsquo;s own secure form; we do not receive or store card numbers.</p>
+        <p>This summary shows what we collect on the Site, why, who receives it and how long we keep it. The sections that follow explain each item. You can change your choices at any time with <a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a>.</p>
+        <div class="legal-table-wrap" role="region" aria-label="Notice at collection summary" tabindex="0">
+          <table class="legal-table">
+            <thead><tr><th scope="col">What we collect</th><th scope="col">Why</th><th scope="col">Who receives it</th><th scope="col">Used for advertising?</th><th scope="col">How long we keep it</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Contact details you enter in a form: name, email, phone, company and your message</th><td>To respond to your request and provide our services</td><td>Our email provider (Microsoft 365) and, for spam protection, Cloudflare</td><td>A hashed (coded) copy of your name, email and phone is sent to Google to measure our ads, unless you opt out (or, in the EEA, UK and Switzerland, only if you agree)</td><td>As long as needed for your request and our relationship, then as required for our business records</td></tr>
+              <tr><th scope="row">How you reached us: the page you used, the referring site, campaign tags and ad click identifiers (GCLID, GBRAID, WBRAID, MSCLKID), approximate city and region, device type</th><td>To know which pages and ads bring inquiries</td><td>Our email provider; Google, for offline conversion measurement (click identifier only)</td><td>Yes: ad click identifiers are used to measure our ads</td><td>As long as needed to measure marketing results</td></tr>
+              <tr><th scope="row">Website activity: pages viewed, clicks, device and browser data, IP address, cookie and similar identifiers</th><td>Analytics, site security and advertising measurement</td><td>Google (Analytics, Ads), Microsoft (Advertising, Clarity), Hotjar, Cloudflare</td><td>Yes, through Google Ads and Microsoft Advertising tags, unless you opt out</td><td>Google Analytics: up to 14 months. Other providers: under their own retention schedules</td></tr>
+              <tr><th scope="row">Order details for the Microsoft 365 Security Assessment: contacts, company, billing address, authorization, IP address</th><td>To process your order, verify payment and deliver the assessment</td><td>Authorize.net (payment), Cloudflare (order processing), GitHub (private order workflow), Microsoft 365 (email)</td><td>No contact details. A purchase conversion with an order number and amount is reported to Google and Microsoft, subject to your choices</td><td>Checkout records: 7 days (unpaid) or 45 days (paid). Order records: for the engagement, then as required for tax and accounting</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>We do not sell personal information for money. Some of our advertising measurement may count as "selling" or "sharing" personal information under California and other state laws; see Sections 6 and 7. We do not collect sensitive personal information through the Site.</p>
       </div>
     </section>
 
-    <!-- §3 COOKIES, ANALYTICS & ADVERTISING -->
+    <!-- §3 INFORMATION WE COLLECT -->
     <section class="legal-section" id="s3">
-      <div class="ls-header"><span class="ls-num">§ 3</span><span class="ls-title">Cookies, Analytics &amp; Advertising</span></div>
+      <div class="ls-header"><span class="ls-num">§ 3</span><span class="ls-title">Information We Collect</span></div>
       <div class="legal-sub">
-        <p>We use Google Analytics 4, the Google Ads tag and Microsoft Advertising to understand how the Site is used and whether our advertising works, and on some pages Hotjar and Microsoft Clarity record how pages are used. These services may set cookies or similar identifiers and process data under their own policies.</p>
-        <p>The advertising tags let Google and Microsoft tell us, in aggregate, when a visit or an action on our Site, such as clicking our phone number to call us, followed an ad click.</p>
-        <p><strong>Your controls:</strong></p>
-        <ul>
-          <li>Adjust or opt out of personalized advertising at <strong>adssettings.google.com</strong>.</li>
-          <li>Learn how Google uses data from partner sites at <strong>policies.google.com/technologies/partner-sites</strong>.</li>
-          <li>Block or delete cookies using your browser's privacy settings. The Site remains fully usable without advertising cookies.</li>
-        </ul>
+        <p><strong>Information you provide to us.</strong> When you fill out a contact or consultation form, book a meeting, or reach out by phone or email, we collect the information you choose to give us: typically your name, work email address, phone number, company name, and your message or request. Some forms also ask about your organization, such as its size or industry.</p>
+        <p><strong>How you reached us.</strong> When you submit a form, it also sends us the page you submitted it from, the page you first arrived on and the site that referred you, any campaign tags in the link you followed (for example utm_source), and any ad click identifier added by Google (GCLID, GBRAID or WBRAID) or Microsoft (MSCLKID). Our server adds your approximate city and region, derived from your IP address by Cloudflare, and whether you used a mobile or desktop device. This tells us which pages and ads lead to inquiries.</p>
+        <p><strong>Information collected automatically.</strong> When you visit, the Site&rsquo;s infrastructure records standard technical data: your IP address, browser type and device information, the pages you view, and an approximate (city-level) location derived from your IP address. The analytics and advertising services described in Section 4 also collect information about your visit, subject to your choices.</p>
+        <p><strong>Microsoft 365 Security Assessment orders.</strong> If you order the assessment, we collect the contact details of the person ordering and of your technical contact, your company name and domain, approximate employee count, any notes you add, your billing name and address, the name and title of the person authorizing the engagement, and the IP address the order came from. Your card is entered in Authorize.net&rsquo;s own secure payment form; we do not receive or store card numbers.</p>
+        <p><strong>Meeting bookings.</strong> If you book a meeting through our Microsoft Bookings page, Microsoft collects the details you enter (such as your name, email and phone) on our behalf.</p>
+        <p><strong>What we do not collect.</strong> The Site has no user accounts or logins and does not ask for sensitive personal information. Please do not submit confidential details through our web forms.</p>
       </div>
     </section>
 
-    <!-- §4 HOW WE USE -->
-    <section class="legal-section" id="s4">
-      <div class="ls-header"><span class="ls-num">§ 4</span><span class="ls-title">How We Use Information</span></div>
+    <!-- §4 COOKIES, ANALYTICS & ADVERTISING -->
+    <section class="legal-section" id="cookies">
+      <div class="ls-header"><span class="ls-num">§ 4</span><span class="ls-title">Cookies, Analytics &amp; Advertising</span></div>
       <div class="legal-sub">
-        <ul>
-          <li>To respond to your inquiries and schedule consultations you request.</li>
-          <li>To provide, quote, and administer our services.</li>
-          <li>To understand how the Site is used and measure the effectiveness of our advertising (Section 3).</li>
-          <li>To operate, secure, and improve the Site.</li>
-          <li>To comply with legal obligations and enforce our agreements.</li>
-        </ul>
-        <p>We do not use the information collected through the Site for automated decision-making, and we do not sell personal information.</p>
+        <p>The Site uses cookies and similar technologies (such as pixels and local storage) in four groups. You control the analytics and advertising groups with <a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a>.</p>
+        <p><strong>Strictly necessary.</strong> Cloudflare delivers and protects the Site. Cloudflare Turnstile checks that form submissions come from a person rather than a bot, using technical signals from your browser; it is not used for advertising. During checkout, Cloudflare and Authorize.net process what is needed to take your order and payment. These are always on because the Site and its forms cannot work securely without them. Cloudflare Web Analytics also counts page views without cookies and without identifying individual visitors.</p>
+        <p><strong>Analytics.</strong> Google Analytics 4 tells us how visitors use the Site: pages viewed, time on page, approximate location, device type and how you arrived. On some pages, Microsoft Clarity and Hotjar record how pages are used (scrolling, clicks and mouse movement) so we can improve them; they are set up not to record what you type into form fields, and they load only when analytics is allowed.</p>
+        <p><strong>Advertising measurement.</strong> Our Google Ads tag and Microsoft Advertising (UET) tag tell us when a visit or an action on the Site, such as submitting a form, clicking our phone number or completing an order, followed a click on one of our ads. These tags can set cookies and receive your IP address, browser data, the pages you visit on the Site and ad click identifiers. Google and Microsoft may collect information about your online activities over time and across different websites when you visit our Site.</p>
+        <p id="enhanced-conversions"><strong>Hashed contact details (enhanced conversions).</strong> When you submit a form and advertising measurement is allowed, our Google tag takes the name, email address and phone number you entered, normalizes them (for example, lowercasing the email address and formatting the phone number), and converts them with a one-way hash (SHA-256) in your browser before sending them to Google over an encrypted connection. Google uses the hashed values to match your inquiry to an ad click from a signed-in Google user, so we can measure which ads work. Hashing is a security measure, not anonymization: hashed contact details are still personal information, because Google can match them against data it already holds. Google uses this data to provide measurement to us under its <a href="https://support.google.com/adspolicy/answer/9755941" rel="noopener">enhanced conversions data use terms</a>, and says it does not share it with other advertisers. If you opt out, or do not opt in where consent is required, the Site does not send these details.</p>
+        <p><strong>Offline conversion measurement.</strong> When an inquiry that came from an ad becomes a qualified opportunity or a client, we may report that to Google using only the ad click identifier, the date and an estimated value, through Google&rsquo;s Data Manager. We do not send your name or contact details in these reports.</p>
+        <p><strong>No remarketing or customer lists.</strong> We do not use remarketing or personalized-ad audiences, and the Site tells Google not to use your visit for ad personalization. We do not upload customer contact lists to advertising platforms.</p>
+        <p><strong>Embedded content.</strong> Some pages show a YouTube video (in YouTube&rsquo;s privacy-enhanced mode) and our contact page shows a Google map. These load content from Google, which receives your IP address and browser data and may set cookies when you play the video or use the map, under Google&rsquo;s own policy.</p>
+        <p><strong>Provider policies.</strong> <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites that use its services</a> · <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsoft Privacy Statement</a> · <a href="https://www.hotjar.com/legal/policies/privacy/" rel="noopener">Hotjar privacy policy</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare privacy policy</a> · <a href="https://www.authorize.net/about-us/privacy/" rel="noopener">Authorize.net privacy policy</a></p>
       </div>
     </section>
 
-    <!-- §5 SHARING -->
+    <!-- §5 HOW WE USE -->
     <section class="legal-section" id="s5">
-      <div class="ls-header"><span class="ls-num">§ 5</span><span class="ls-title">How We Share Information</span></div>
+      <div class="ls-header"><span class="ls-num">§ 5</span><span class="ls-title">How We Use Information</span></div>
       <div class="legal-sub">
-        <p>We share information only as needed to run our business:</p>
         <ul>
-          <li><strong>Service providers.</strong> Vendors that host and operate our systems — including Cloudflare (website hosting, content delivery, and security), Google, Microsoft and Hotjar (the analytics and advertising services described in Section 3), Microsoft (our business email and productivity platform, where your messages to us are received and stored), and Authorize.net (card payments).</li>
-          <li><strong>Legal requirements.</strong> When required by law, subpoena, or to protect our rights, safety, or property.</li>
-          <li><strong>Business transfers.</strong> If our business is merged, acquired, or reorganized, information may transfer as part of that transaction.</li>
+          <li>To respond to your inquiries, schedule consultations you request, and send you a confirmation of your request.</li>
+          <li>To provide, quote, deliver and administer our services, including the Microsoft 365 Security Assessment.</li>
+          <li>To understand how the Site is used and improve it (analytics).</li>
+          <li>To measure the effectiveness of our advertising, including matching inquiries to ad clicks (Section 4).</li>
+          <li>To operate, secure and protect the Site and our forms from fraud and abuse.</li>
+          <li>To comply with legal, tax and accounting obligations and enforce our agreements.</li>
         </ul>
-        <p><strong>We do not sell or rent personal information</strong>, and we do not share it with third parties for their own marketing.</p>
+        <p>We do not use information collected through the Site for automated decisions that produce legal or similarly significant effects.</p>
       </div>
     </section>
 
-    <!-- §6 RETENTION -->
+    <!-- §6 SHARING -->
     <section class="legal-section" id="s6">
-      <div class="ls-header"><span class="ls-num">§ 6</span><span class="ls-title">Data Retention</span></div>
+      <div class="ls-header"><span class="ls-num">§ 6</span><span class="ls-title">How We Share Information</span></div>
       <div class="legal-sub">
-        <p>We keep inquiry and correspondence records for as long as they are useful for the business purpose you contacted us about, and as required for legal, accounting, or record-keeping obligations. Technical log data and the data collected by the services in Section 3 are retained under the schedules of the providers described above.</p>
+        <p>We disclose information only for the purposes in Section 5:</p>
+        <ul>
+          <li><strong>Service providers that operate our systems.</strong> Microsoft (our business email and Microsoft Bookings, where your messages and bookings are received and stored); Cloudflare (website hosting, security, spam protection and checkout processing); Authorize.net (card payments); and GitHub (a private repository where our team manages assessment orders, including the ordering contact&rsquo;s name, email, phone and IP address).</li>
+          <li><strong>Analytics providers.</strong> Google (Google Analytics), Microsoft (Clarity) and Hotjar, as described in Section 4.</li>
+          <li><strong>Advertising partners.</strong> Google (Google Ads, including hashed contact details for enhanced conversions and ad click identifiers for offline conversion measurement) and Microsoft (Microsoft Advertising), to measure our advertising, as described in Section 4.</li>
+          <li><strong>Legal requirements.</strong> When required by law, subpoena or court order, or to protect our rights, safety or property.</li>
+          <li><strong>Business transfers.</strong> If our business is merged, acquired or reorganized, information may transfer as part of that transaction.</li>
+        </ul>
+        <p id="sale-sharing"><strong>"Selling" and "sharing."</strong> We do not sell personal information for money, and we do not disclose it to third parties for their own direct marketing. California law, however, defines "selling" broadly and defines "sharing" as disclosing personal information for cross-context behavioral advertising. Making identifiers (such as cookie identifiers, IP addresses and hashed contact details) and website activity available to Google and Microsoft through their advertising tags may fall within those definitions. In the past 12 months, the categories involved were identifiers, internet or other electronic network activity, and approximate location. You can opt out at any time; see Section 7.</p>
       </div>
     </section>
 
-    <!-- §7 CHOICES & RIGHTS -->
-    <section class="legal-section" id="s7">
-      <div class="ls-header"><span class="ls-num">§ 7</span><span class="ls-title">Your Choices &amp; Rights</span></div>
+    <!-- §7 CHOICES -->
+    <section class="legal-section" id="your-choices">
+      <div class="ls-header"><span class="ls-num">§ 7</span><span class="ls-title">Your Privacy Choices</span></div>
+      <div class="legal-sub">
+        <p><strong>Your Privacy Choices.</strong> Use the <a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a> link (also at the bottom of every page) to allow or turn off analytics and advertising measurement. Turning off advertising measurement opts you out of the sale or sharing of your personal information for advertising: the Site then tells Google and Microsoft not to use advertising cookies, stops sending hashed contact details from forms, and asks Google to limit how it processes data from your visit. Your choice is saved in your browser, so it applies on this device and browser until you change it or clear your browser&rsquo;s storage.</p>
+        <p><strong>Default settings.</strong> If you visit from the European Economic Area, the United Kingdom or Switzerland, analytics and advertising measurement stay off unless you agree to them. Elsewhere they are on unless you opt out.</p>
+        <p><strong>Global Privacy Control.</strong> If your browser sends a Global Privacy Control (GPC) signal, we treat it as a request to opt out of the sale or sharing of your personal information, and advertising measurement stays off for that browser.</p>
+        <p><strong>Do Not Track.</strong> There is no common standard for browser "Do Not Track" signals, so the Site does not respond to them. We do honor Global Privacy Control as described above.</p>
+        <p><strong>Other controls.</strong> You can block or delete cookies in your browser&rsquo;s settings; the Site remains fully usable without analytics and advertising cookies. You can also manage how Google uses your data at <strong>myadcenter.google.com</strong>, and Microsoft at <strong>account.microsoft.com/privacy</strong>.</p>
+        <p><strong>Marketing email.</strong> Every marketing or outreach email we send includes a working unsubscribe option; you can also reply and ask us to stop.</p>
+      </div>
+    </section>
+
+    <!-- §8 RIGHTS -->
+    <section class="legal-section" id="s8">
+      <div class="ls-header"><span class="ls-num">§ 8</span><span class="ls-title">Your Privacy Rights</span></div>
+      <div class="legal-sub">
+        <p>Depending on where you live, you may have the right to:</p>
+        <ul>
+          <li><strong>Know and access</strong> the personal information we hold about you, including the categories, sources, purposes and recipients;</li>
+          <li><strong>Correct</strong> inaccurate personal information;</li>
+          <li><strong>Delete</strong> personal information, subject to legal exceptions (for example, records we must keep for tax purposes);</li>
+          <li><strong>Opt out</strong> of the sale or sharing of personal information for advertising (Section 7); and</li>
+          <li><strong>Not be discriminated against</strong> for exercising these rights.</li>
+        </ul>
+        <p><strong>How to make a request.</strong> Email <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a> or call <a href="tel:18008906133">1-800-890-6133</a>. To protect your information, we will confirm your identity before acting, usually by confirming details you gave us, such as the email address you used to contact us. You may use an authorized agent; we will ask for your signed permission and may confirm your identity directly with you. We confirm requests to know, correct or delete within 10 business days and respond within 45 days (or tell you if we need up to 45 more days). Opt-out requests take effect immediately through Your Privacy Choices, and within 15 business days when made by email or phone.</p>
+        <p>California residents may exercise these rights under California law, and we will not discriminate against anyone for doing so.</p>
+      </div>
+    </section>
+
+    <!-- §9 RETENTION -->
+    <section class="legal-section" id="s9">
+      <div class="ls-header"><span class="ls-num">§ 9</span><span class="ls-title">Data Retention</span></div>
       <div class="legal-sub">
         <ul>
-          <li><strong>Marketing email.</strong> Every marketing or outreach email we send includes a working unsubscribe option; you can also just reply and ask us to stop.</li>
-          <li><strong>Cookies and ads.</strong> Use the controls described in Section 3.</li>
-          <li><strong>Access, correction, and deletion.</strong> You may ask us what information we hold about you, ask us to correct it, or ask us to delete it. Email <a href="mailto:info@prolinksystems.com">info@prolinksystems.com</a> with your request; we will verify it and respond. California residents may exercise these rights under California law, and we will never discriminate against you for doing so.</li>
+          <li><strong>Inquiries and correspondence</strong> (form submissions, emails and bookings) are kept as long as they are useful for the request or relationship they relate to, and as required for legal, accounting or record-keeping obligations.</li>
+          <li><strong>Marketing measurement records</strong> (how an inquiry reached us and its outcome) are kept as long as needed to measure our marketing results. Google accepts offline conversion reports only for ad clicks from the previous 90 days.</li>
+          <li><strong>Checkout records</strong> held by our order system are deleted automatically 7 days after an unpaid checkout and 45 days after payment.</li>
+          <li><strong>Assessment order records</strong> are kept for the engagement and as long as needed to support it, and then as required for tax and accounting.</li>
+          <li><strong>Google Analytics</strong> keeps event-level data for no longer than 14 months. Other analytics and advertising providers keep data under their own retention schedules (see their policies in Section 4).</li>
         </ul>
       </div>
     </section>
 
-    <!-- §8 CHILDREN -->
-    <section class="legal-section" id="s8">
-      <div class="ls-header"><span class="ls-num">§ 8</span><span class="ls-title">Children's Privacy</span></div>
-      <div class="legal-sub">
-        <p>The Site is a business-to-business website and is not directed to children under 16. We do not knowingly collect personal information from children. If you believe a child has provided us information, contact us and we will delete it.</p>
-      </div>
-    </section>
-
-    <!-- §9 SECURITY -->
-    <section class="legal-section" id="s9">
-      <div class="ls-header"><span class="ls-num">§ 9</span><span class="ls-title">Security</span></div>
-      <div class="legal-sub">
-        <p>Security is our profession. The Site is served exclusively over HTTPS, and we apply reasonable technical and organizational safeguards to the information we hold — including access controls, encrypted transport, and hardened business systems. No method of transmission or storage is perfectly secure, but we work to protect your information with the same discipline we bring to our clients' environments.</p>
-      </div>
-    </section>
-
-    <!-- §10 CHANGES & CONTACT -->
+    <!-- §10 SECURITY -->
     <section class="legal-section" id="s10">
-      <div class="ls-header"><span class="ls-num">§ 10</span><span class="ls-title">Changes &amp; Contact</span></div>
+      <div class="ls-header"><span class="ls-num">§ 10</span><span class="ls-title">Security</span></div>
       <div class="legal-sub">
-        <p>If our practices change, we will update this policy and revise the effective date at the top of this page. Material changes will be noted prominently here.</p>
+        <p>Security is our profession. The Site is served only over HTTPS, and we apply reasonable technical and organizational safeguards to the information we hold, including access controls, encrypted transport and hardened business systems. Our server logs do not record the content of your messages, and order records are posted to our private order workflow only after we confirm that it is not publicly accessible. No method of transmission or storage is perfectly secure, but we protect your information with the same discipline we bring to our clients&rsquo; environments.</p>
+      </div>
+    </section>
+
+    <!-- §11 CHILDREN -->
+    <section class="legal-section" id="s11">
+      <div class="ls-header"><span class="ls-num">§ 11</span><span class="ls-title">Children&rsquo;s Privacy</span></div>
+      <div class="legal-sub">
+        <p>The Site is a business-to-business website and is not directed to children under 16. We do not knowingly collect personal information from children, and we do not sell or share the personal information of anyone we know to be under 16. If you believe a child has provided us information, contact us and we will delete it.</p>
+      </div>
+    </section>
+
+    <!-- §12 OUTSIDE THE US -->
+    <section class="legal-section" id="s12">
+      <div class="ls-header"><span class="ls-num">§ 12</span><span class="ls-title">Visitors Outside the United States</span></div>
+      <div class="legal-sub">
+        <p>Our services are offered to organizations in the United States, and the information described here is processed in the United States. If you visit from the European Economic Area, the United Kingdom or Switzerland, analytics and advertising measurement stay off unless you agree to them (Section 7).</p>
+      </div>
+    </section>
+
+    <!-- §13 CHANGES & CONTACT -->
+    <section class="legal-section" id="s13">
+      <div class="ls-header"><span class="ls-num">§ 13</span><span class="ls-title">Changes &amp; Contact</span></div>
+      <div class="legal-sub">
+        <p>If our practices change, we will update this policy and revise the effective date at the top of this page. Material changes will be noted here.</p>
+        <p><strong><span data-draft-policy>[Publication date]</span>:</strong> The policy was revised to describe advertising measurement in detail, including hashed contact details sent to Google (enhanced conversions), ad click identifiers and offline conversion measurement; the new Your Privacy Choices controls, Global Privacy Control and regional defaults; how we share information and when that may count as "selling" or "sharing"; retention periods; and how to make a privacy request.</p>
         <p><strong>November 21, 2026:</strong> Sections 2 to 6 were updated to cover analytics, advertising, page recording and card payments.</p>
-        <p>Questions, requests, or concerns about privacy:</p>
+        <p>Questions, requests or concerns about privacy:</p>
         <div class="address-block">
           <strong>Pro Link Systems, Inc. — Privacy</strong>
           21241 Ventura Blvd, Suite 193, Woodland Hills, CA 91364<br>
@@ -780,7 +851,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->

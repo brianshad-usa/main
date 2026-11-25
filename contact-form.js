@@ -128,7 +128,8 @@
               // client-side before sending) so Google can match cookieless conversions.
               var ph = String(data.phone || "").replace(/[^0-9]/g, "");
               if (ph.length === 10) ph = "1" + ph;
-              gtag("set", "user_data", {
+              // Phase 3: only with advertising consent (consent.js; off for opt-outs, GPC and the EEA until accepted)
+              if (window.plsConsent && window.plsConsent.ads()) gtag("set", "user_data", {
                 email: email.toLowerCase(),
                 phone_number: ph ? ("+" + ph) : undefined,
                 address: {

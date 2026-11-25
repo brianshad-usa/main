@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261124"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -55,7 +56,10 @@
     (function () {
       var done = false;
       function loadRecorders() {
-        if (done) return; done = true;
+        if (done) return;
+        // Phase 3: session recording only with analytics consent (consent.js); never without it
+        if (!(window.plsConsent && window.plsConsent.analytics())) return;
+        done = true; window.__plsRecorders = true;
         ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.removeEventListener(ev, loadRecorders, true); });
         (function (c, s, q, u, a, r, e) {
           c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
@@ -74,6 +78,7 @@
       }
       ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, loadRecorders, { capture: true, passive: true }); });
       window.addEventListener('load', function () { setTimeout(loadRecorders, 6000); });
+      window.addEventListener('pls:consent', function (e) { if (e.detail && e.detail.analytics) loadRecorders(); });
     })();
   </script>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -1188,7 +1193,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->

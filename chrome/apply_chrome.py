@@ -57,6 +57,13 @@ FONT_PRELOAD = (
     '  <link rel="preload" href="/assets/fonts/Inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>\n  '
 )
 PL_JS_TAG = '<script src="/assets/js/pl.js?v=%s" defer></script>' % PL_JS_VERSION
+# Consent defaults (Phase 3, 2026-11-24): consent.js must run synchronously before the Google tag and Microsoft UET,
+# so it goes immediately before whichever of the two comes first in <head>. Pages without either are left alone.
+CONSENT_VERSION = "20261124"
+CONSENT_TAG = ('<!-- PL:CONSENT --><script src="/assets/js/consent.js?v=%s"></script><!-- /PL:CONSENT -->' % CONSENT_VERSION)
+RE_CONSENT = re.compile(r"<!-- PL:CONSENT -->.*?<!-- /PL:CONSENT -->", re.S)
+RE_TAG_START = re.compile(r'<!-- Google tag \(gtag\.js\) -->|<script async src="https://www\.googletagmanager\.com/gtag/js\?id='
+                          r'|<!-- Microsoft UET tag|bat\.bing\.(?:net|com)/bat\.js')
 
 RE_HEADER_MARKED = re.compile(r"<!-- PL:HEADER -->.*?<!-- /PL:HEADER -->", re.S)
 RE_FOOTER_MARKED = re.compile(r"<!-- PL:FOOTER -->.*?<!-- /PL:FOOTER -->", re.S)
@@ -69,6 +76,28 @@ RE_PL_JS = re.compile(r'<script src="/assets/js/pl\.js[^"]*" defer></script>')
 # The main landmark: a page without its own <main> gets one, opened by the header block and closed by the footer block.
 MAIN_ANCHOR = '<span id="pl-main" tabindex="-1"></span>'
 MAIN_OPEN = '<main id="pl-main" tabindex="-1">'
+
+
+def ensure_consent(t):
+    """Insert (or refresh) the consent block before the first Google tag / UET snippet in <head>."""
+    if RE_CONSENT.search(t):
+        return RE_CONSENT.sub(lambda _m: CONSENT_TAG, t, count=1)
+    head_end = t.find("</head>")
+    m = RE_TAG_START.search(t)
+    if not m:
+        return t
+    start = m.start()
+    if head_end > 0 and start > head_end:
+        # tags placed in <body> (legacy page): consent defaults still go in <head>, which runs first
+        return t[:head_end] + "  " + CONSENT_TAG + "\n" + t[head_end:]
+    if not t.startswith("<", start):
+        # matched inside an inline UET <script>: back up to that <script> element
+        start = t.rfind("<script", 0, start)
+    line_start = t.rfind("\n", 0, start) + 1
+    indent = t[line_start:start]
+    if indent.strip():          # the tag shares a line with other markup: insert inline
+        return t[:start] + CONSENT_TAG + t[start:]
+    return t[:line_start] + indent + CONSENT_TAG + "\n" + t[line_start:]
 
 
 def section_for(rel):
@@ -155,6 +184,7 @@ def transform(text, rel, header_partial, footer_partial):
     if rel.replace("\\", "/") in FOOTER_ONLY:
         footer = "<!-- PL:FOOTER -->\n" + footer_partial.strip("\n") + "\n<!-- /PL:FOOTER -->"
         t = RE_FOOTER_MARKED.sub(lambda _m: footer, t, count=1)
+        t = ensure_consent(t)
         return (t.replace("\n", "\r\n") if crlf else t), notes
 
     header = header_for(header_partial, section_for(rel))
@@ -195,6 +225,8 @@ def transform(text, rel, header_partial, footer_partial):
         if i < 0:
             return None, ["no </body>"]
         t = t[:i] + PL_JS_TAG + "\n" + t[i:]
+
+    t = ensure_consent(t)
 
     if crlf:
         t = t.replace("\n", "\r\n")

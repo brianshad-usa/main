@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PL:CONSENT --><script src="/assets/js/consent.js?v=20261124"></script><!-- /PL:CONSENT -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068497497"></script>
   <script>
@@ -70,7 +71,10 @@
     (function () {
       var done = false;
       function loadRecorders() {
-        if (done) return; done = true;
+        if (done) return;
+        // Phase 3: session recording only with analytics consent (consent.js); never without it
+        if (!(window.plsConsent && window.plsConsent.analytics())) return;
+        done = true; window.__plsRecorders = true;
         ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.removeEventListener(ev, loadRecorders, true); });
         (function (c, s, q, u, a, r, e) {
           c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
@@ -89,6 +93,7 @@
       }
       ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, loadRecorders, { capture: true, passive: true }); });
       window.addEventListener('load', function () { setTimeout(loadRecorders, 6000); });
+      window.addEventListener('pls:consent', function (e) { if (e.detail && e.detail.analytics) loadRecorders(); });
     })();
   </script>
 
@@ -815,7 +820,7 @@
           <p>Fields marked <span class="req" aria-hidden="true">*</span><span class="pl-sr">with an asterisk</span> are required. Everything else is optional.</p>
         </div>
         <div class="lf-alert" role="alert" aria-live="assertive" hidden></div>
-        <form method="post" id="lpForm" novalidate data-ux="lead">
+        <form method="post" id="lpForm" novalidate data-ux="lead" data-clarity-mask="true" data-hj-suppress>
           <div class="form-group" id="fg-name">
             <label for="fi-name">Full name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="fi-name" name="name" autocomplete="name" aria-required="true" aria-describedby="err-name">
@@ -873,7 +878,7 @@
             <svg class="btn-arrow" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             <span class="spinner" aria-hidden="true"></span>
           </button>
-          <p class="form-privacy">No obligation. We use your details only to respond to your inquiry and never sell or share them. <a href="/privacy">Privacy policy</a></p>
+          <p class="form-privacy">No obligation. We use your details to reply to your request and, depending on your privacy choices, send a hashed copy of your contact details to Google to measure our ads. <a href="/privacy#notice-at-collection">Privacy policy</a> &middot; <a href="/privacy#your-choices" data-privacy-choices>Your privacy choices</a></p>
         </form>
       </div>
 
@@ -1056,7 +1061,7 @@
   </div>
   <div class="pl-footer-bottom">
     <span>&copy; 2026 Pro Link Systems, Inc. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a></nav>
+    <nav aria-label="Legal"><a href="/legal">Legal &amp; Terms</a><a href="/privacy">Privacy</a><a href="/privacy#your-choices" data-privacy-choices>Your Privacy Choices</a></nav>
   </div>
 </footer>
 <!-- /PL:FOOTER -->
