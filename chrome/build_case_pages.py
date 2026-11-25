@@ -366,8 +366,10 @@ def related_to(c):
 
 
 def status_html(c):
-    word, cls = CL.STATUS[DATA["clients"][c["slug"]]["status"]]
-    return '<span class="pl-status%s">%s</span> %s' % (cls, word, E(c["relationship"]))
+    cd = DATA["clients"][c["slug"]]
+    word, cls = CL.STATUS[cd["status"]]
+    model = (' <span class="pl-status">%s</span>' % E(CL.MODEL[cd["model"]])) if cd.get("model") else ""
+    return '<span class="pl-status%s">%s</span> %s%s' % (cls, word, E(c["relationship"]), model)
 
 
 def flags_html(c):
@@ -473,7 +475,7 @@ def hub_main():
   <div class="pl-wrap">
     <nav class="pl-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Client Success</nav>
     <h1 class="pl-h1" id="page-h1">Long partnerships with organizations that depend on technology.</h1>
-    <p class="pl-lead">The complete client portfolio, from more than 25 years of managing, securing and modernizing technology. Each profile leads with what we did and, where confirmed, labels the relationship: current client, past engagement or project engagement.</p>
+    <p class="pl-lead">The complete client portfolio, from more than 25 years of managing, securing and modernizing technology. Each profile leads with what we did and, where confirmed, labels the relationship: current client, former client, past engagement or project engagement, and marks co-managed IT engagements.</p>
   </div>
 </section>
 
