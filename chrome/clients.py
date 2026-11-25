@@ -34,9 +34,9 @@ ORDER = ["lisi-aerospace", "cunico", "philip-morris-international", "m13", "fral
          "magnolia-public-schools", "hm-digital", "virtual-guard", "fallbrook-companies", "burg-brock",
          "jonathan-neil-associates", "dragon-herbs", "woodland-hills-private-school", "delphi-academy-los-angeles",
          "brandon-femme", "founders-mcc", "mcc-ucc-valley"]
-# Phase 4 (2026-11-25): Beverly Hills Plaza (hospitality) and General Pharma Partners (healthcare) replace VEEV Spirits
-# and FSC Lighting, so the lineup covers aerospace, manufacturing, investment, healthcare, technology and hospitality.
-HOME = ["lisi-aerospace", "cunico", "m13", "fralock", "beverly-hills-plaza", "optical-zonu", "cochise-capital",
+# Phase 4 (2026-11-25): General Pharma Partners (healthcare, current client) replaces FSC Lighting. The owner kept
+# VEEV Spirits in slot 5 (final adjustment); Beverly Hills Plaza stays in the full portfolio.
+HOME = ["lisi-aerospace", "cunico", "m13", "fralock", "veev-spirits", "optical-zonu", "cochise-capital",
         "general-pharma-partners"]
 STATUS = {"current": ("Current client", " is-current"), "former": ("Former client", ""), "past": ("Past engagement", ""),
           "project": ("Project engagement", "")}
