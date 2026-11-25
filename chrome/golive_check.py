@@ -209,7 +209,9 @@ if not SEO_ONLY:
     else:
         try:
             pv = re.findall(r'_shared\.css\?v=([^"]+)"', git_show("origin/main:index.html"))
-            if pv and pv[0] in versions:
+            # only a changed stylesheet needs a new ?v= (Phase 4: no CSS change since production, so no bump needed)
+            css_changed = git_show("origin/main:_shared.css").replace("\r\n", "\n") != read(os.path.join(ROOT, "_shared.css")).replace("\r\n", "\n")
+            if pv and pv[0] in versions and css_changed:
                 problems.append("4 _shared.css?v=%s is the same as production; run bump_shared_css.py" % pv[0])
         except Exception as e:  # no git / no origin: report, do not pass silently
             problems.append("4 could not compare with origin/main: %s" % e)
