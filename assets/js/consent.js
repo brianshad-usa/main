@@ -21,7 +21,7 @@
   "use strict";
   var KEY = "pls_consent_v1";
   var VERSION = 1;
-  var UI_SRC = "/assets/js/consent-ui.js?v=20261124";
+  var UI_SRC = "/assets/js/consent-ui.js?v=20261125";
   var EEA = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI",
              "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB", "CH"];
 

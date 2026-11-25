@@ -59,7 +59,7 @@ FONT_PRELOAD = (
 PL_JS_TAG = '<script src="/assets/js/pl.js?v=%s" defer></script>' % PL_JS_VERSION
 # Consent defaults (Phase 3, 2026-11-24): consent.js must run synchronously before the Google tag and Microsoft UET,
 # so it goes immediately before whichever of the two comes first in <head>. Pages without either are left alone.
-CONSENT_VERSION = "20261124"
+CONSENT_VERSION = "20261125"   # bump whenever consent.js or consent-ui.js changes
 CONSENT_TAG = ('<!-- PL:CONSENT --><script src="/assets/js/consent.js?v=%s"></script><!-- /PL:CONSENT -->' % CONSENT_VERSION)
 RE_CONSENT = re.compile(r"<!-- PL:CONSENT -->.*?<!-- /PL:CONSENT -->", re.S)
 RE_TAG_START = re.compile(r'<!-- Google tag \(gtag\.js\) -->|<script async src="https://www\.googletagmanager\.com/gtag/js\?id='
