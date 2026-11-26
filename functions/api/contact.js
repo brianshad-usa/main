@@ -23,6 +23,22 @@
  *     submitter, but the endpoint is un-spammable without a Turnstile token.
  *   - Every user-supplied value is HTML-escaped before being placed in email
  *     bodies, so form input can't inject markup/links into the messages.
+ *   - 2026-11-26 (Phase G security closeout), all tested in tests/contact.test.mjs:
+ *       * HOSTNAME: a token is only accepted on the host it was solved on
+ *         (prolinksystems.com and www count as one). The site key also works on
+ *         plsmain.pages.dev and every preview / old-deployment subdomain of it,
+ *         so this stops a token solved there from being spent on production.
+ *       * ACTION: the lead-form widgets carry data-action="contact". A token with
+ *         any other action (the checkout's "checkout") is refused; an unlabeled
+ *         token (a page opened before the widgets were labeled) takes the
+ *         [UNVERIFIED] path, so no real lead is lost.
+ *       * RATE LIMITS per IP (IPv6 per /64): every POST, and [UNVERIFIED]
+ *         notifications. Each token is processed once (a repeat gets the first
+ *         reference and sends nothing). Visitor confirmations are capped per
+ *         address and skipped when an echoed field holds link-like text.
+ *         Counters: this data center's cache + an exact per-isolate count; no
+ *         binding needed; approximate by design and FAIL OPEN (a cache error
+ *         never blocks a visitor). The WAF rate-limiting rule is the edge shield.
  *
  * Mail is sent from info@ via Microsoft Graph (application permissions), the
  * same mailbox/app the review agent already uses — real DKIM/SPF/DMARC, no
@@ -36,6 +52,9 @@
  *   TURNSTILE_SECRET_KEY  Cloudflare Turnstile secret    [mark as "Secret"/encrypted]
  * Optional:
  *   LEAD_NOTIFY           Where internal lead notifications go (default: SEND_FROM)
+ *   TURNSTILE_ALLOWED_HOSTNAMES  Extra token hostnames accepted on any host, comma-separated.
+ *                         Local testing only (Turnstile's dummy keys report "example.com");
+ *                         never set it in Production.
  */
 
 const GRAPH = "https://graph.microsoft.com/v1.0";
@@ -50,6 +69,25 @@ const SOFT_FAIL_CODES = ["timeout-or-duplicate", "internal-error"];
 // Attribution fields the form scripts add (contact-form.js / contact.html).
 const ATTRIBUTION = ["source_page", "page_url", "referrer", "landing_page", "first_referrer",
   "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid", "msclkid"];
+
+// Turnstile hostname + action (2026-11-26). The production pair counts as one host.
+const PROD_HOSTS = new Set(["prolinksystems.com", "www.prolinksystems.com"]);
+const ACTION = "contact";          // data-action on every lead-form widget (site_guard check 19)
+
+// Rate limits (2026-11-26). A real visitor sends 1–2 POSTs. win = seconds, max = allowed per window.
+const LIMITS = {
+  post: [{ win: 600, max: 5 }, { win: 86400, max: 20 }],   // every POST from one IP
+  unverified: [{ win: 3600, max: 2 }],                      // [UNVERIFIED] notifications from one IP
+  confirm: [{ win: 86400, max: 2 }],                        // visitor confirmations to one address
+};
+const TOKEN_TTL = 86400;           // seconds a processed or refused token is remembered (tokens live 300 s)
+const PENDING_TTL = 120;           // seconds a token counts as "being processed"
+const REFUSED = "!refused";        // marker: solved on another host / for another widget; never accepted
+const VERIFY_FAILED = "Verification failed — please retry the challenge.";
+const TOO_MANY = "Too many attempts from your network. Please wait a few minutes and try again, or call 1-800-890-6133.";
+// Text a mail client would turn into a link (or an address). Real names, companies, phones and the service
+// dropdown practically never contain one; spam pushed through the visitor confirmation always does.
+const LINKISH = /https?:\/\/|www\.|@|\b[a-z0-9-]{2,}\.(?:com|net|org|info|biz|io|co|ru|cn|xyz|top|site|online|link|click|live|shop|app|me|us|uk)\b/i;
 
 // The pages use varied field names (name / firm_name / firm_size / firm_type,
 // honeypot "botcheck" vs "challenge"). Map them to the canonical set the email
@@ -97,8 +135,9 @@ function makeRef() {
 }
 
 async function verifyTurnstile(secret, token) {
-  // Returns { ok, soft, codes }: ok = verified; soft = only a stale-token /
-  // Cloudflare-side failure (a human, not a bot). No remoteip — see header.
+  // Returns { ok, soft, codes, hostname, action }: ok = verified; soft = only a
+  // stale-token / Cloudflare-side failure (a human, not a bot). hostname/action
+  // come from a successful siteverify only. No remoteip — see header.
   try {
     const body = new URLSearchParams({ secret, response: token || "" });
     const r = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -108,12 +147,112 @@ async function verifyTurnstile(secret, token) {
     });
     const data = await r.json().catch(() => ({ success: false, "error-codes": ["bad-json"] }));
     const codes = data["error-codes"] || [];
-    if (data.success) return { ok: true, soft: false, codes };
+    if (data.success === true) {
+      return { ok: true, soft: false, codes, hostname: String(data.hostname || ""), action: String(data.action || "") };
+    }
     return { ok: false, soft: codes.length > 0 && codes.every((c) => SOFT_FAIL_CODES.includes(c)), codes };
   } catch (e) {
     // Network failure reaching Cloudflare: never the visitor's fault.
     return { ok: false, soft: true, codes: ["siteverify-unreachable"] };
   }
+}
+
+// A token may only be spent on the host it was solved on; prolinksystems.com and www are one site.
+function hostnameOk(tokenHost, requestHost, env) {
+  const t = String(tokenHost || "").toLowerCase();
+  const r = String(requestHost || "").toLowerCase();
+  if (!t) return false;
+  const extra = String(env.TURNSTILE_ALLOWED_HOSTNAMES || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean);
+  if (extra.includes(t)) return true;
+  if (PROD_HOSTS.has(t) && PROD_HOSTS.has(r)) return true;
+  return t === r;
+}
+
+// ---------------------------------------------------------------------------
+// Counters for the rate limits and the once-per-token rule. Each key lives in an
+// exact in-memory map (this isolate) AND in this data center's cache, which every
+// isolate here shares; an abusive client normally stays on one data center. Every
+// cache call is wrapped: on any error the request simply goes ahead (fail open).
+// ---------------------------------------------------------------------------
+const mem = new Map();             // key -> { n, exp, v }
+
+function nowSec() { return Math.floor(Date.now() / 1000); }
+
+function prune(now) {
+  if (mem.size < 2000) return;
+  for (const [k, e] of mem) if (e.exp <= now) mem.delete(k);
+  if (mem.size > 5000) for (const k of mem.keys()) { mem.delete(k); if (mem.size <= 4000) break; }   // oldest first
+}
+
+function sharedCache() {
+  try { return typeof caches !== "undefined" && caches.default ? caches.default : null; } catch (e) { return null; }
+}
+
+function cacheKey(origin, key) { return origin + "/__contact-rl/" + key; }
+
+async function cacheGet(origin, key) {
+  const c = sharedCache();
+  if (!c) return null;
+  try {
+    const hit = await c.match(cacheKey(origin, key));
+    return hit ? await hit.text() : null;
+  } catch (e) { return null; }
+}
+
+async function cachePut(origin, key, value, ttl) {
+  const c = sharedCache();
+  if (!c) return;
+  try {
+    await c.put(cacheKey(origin, key), new Response(String(value), {
+      headers: { "Cache-Control": "max-age=" + Math.max(1, Math.floor(ttl)) },
+    }));
+  } catch (e) {}
+}
+
+async function cacheDelete(origin, key) {
+  const c = sharedCache();
+  if (!c) return;
+  try { await c.delete(cacheKey(origin, key)); } catch (e) {}
+}
+
+async function hashId(s) {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("pls-contact:" + s));
+  return [...new Uint8Array(d)].slice(0, 12).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+// The client IP as counted: IPv4 as is, IPv6 by its /64 (a client can rotate addresses inside it).
+function clientId(request) {
+  const ip = String(request.headers.get("CF-Connecting-IP") || "").trim().toLowerCase();
+  if (!ip || !ip.includes(":")) return ip;
+  if (ip.includes(".")) return ip.slice(ip.lastIndexOf(":") + 1);   // IPv4-mapped IPv6 -> the IPv4
+  const [head, tail = ""] = ip.split("::");
+  const h = head ? head.split(":") : [];
+  const t = tail ? tail.split(":") : [];
+  const full = [...h, ...Array(Math.max(0, 8 - h.length - t.length)).fill("0"), ...t];
+  return full.slice(0, 4).map((x) => x.padStart(4, "0")).join(":") + "::/64";
+}
+
+// Counts one event for `id` in every window of `rules`. Returns the first exceeded
+// window as { win, retry } (seconds), or null while within all limits.
+async function overLimit(origin, kind, id, rules) {
+  const now = nowSec();
+  let over = null;
+  for (const r of rules) {
+    const bucket = Math.floor(now / r.win);
+    const key = `${kind}-${r.win}-${bucket}-${id}`;
+    const exp = (bucket + 1) * r.win;
+    const m = mem.get(key);
+    const local = (m && m.exp > now ? m.n : 0) + 1;      // set before any await: exact inside this isolate
+    mem.set(key, { n: local, exp });
+    const shared = parseInt((await cacheGet(origin, key)) || "0", 10) || 0;
+    const n = Math.max(local, shared + 1);
+    const cur = mem.get(key);
+    if (cur && n > cur.n) cur.n = n;
+    await cachePut(origin, key, n, exp - now);
+    if (n > r.max && !over) over = { win: r.win, retry: exp - now };
+  }
+  prune(now);
+  return over;
 }
 
 function log(evt) {
@@ -162,20 +301,35 @@ async function sendMail(token, from, message) {
   if (r.status !== 202) throw new Error("sendMail " + r.status + " " + (await r.text()).slice(0, 200));
 }
 
-function confirmationHtml(f, ref) {
+function clip(s, n) {
+  s = String(s == null ? "" : s).trim();
+  return s.length > n ? s.slice(0, n - 1) + "…" : s;
+}
+
+function confirmationHtml(f0, ref) {
   // Exact reproduction of the prior EmailJS confirmation design; every dynamic
-  // value is HTML-escaped. No third-party "sent via" footer.
+  // value is HTML-escaped. No third-party "sent via" footer. The echoed fields
+  // are clipped (2026-11-26) so the email can't carry a long block of someone
+  // else's text to the address typed into the form.
+  const f = { first_name: clip(f0.first_name, 40), last_name: clip(f0.last_name, 60), company: clip(f0.company, 100),
+    phone: clip(f0.phone, 40), interest: clip(f0.interest, 100) };
   return `<table style="background:#f0f4f9;padding:40px 20px"><tbody><tr><td><table style="max-width:600px;width:100%"><tbody><tr><td style="background:#0b3d6b;border-radius:12px 12px 0 0;padding:36px 48px;text-align:center"><div style="font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.5px">PRO LINK SYSTEMS</div><div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:5px;letter-spacing:1.5px;text-transform:uppercase">Managed IT  ·  Cybersecurity  ·  Cloud</div></td></tr><tr><td style="background:#fff;padding:48px 48px 40px;border:1px solid #dde5f0;border-top:none"><div style="text-align:center;margin-bottom:28px">✓  Inquiry Confirmed</div><h1 style="font-size:24px;font-weight:800;color:#0d1117;margin:0 0 14px;letter-spacing:-0.5px">You're in good hands, ${esc(f.first_name)}.</h1><p style="font-size:15px;color:#4a5568;line-height:1.7;margin:0 0 28px">Thank you for reaching out to Pro Link Systems. We've received your inquiry and a member of our team will contact you within <strong style="color:#0b3d6b">one business day</strong> to schedule your complimentary IT discovery call.</p><div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 24px;margin-bottom:32px;text-align:center"><div style="font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Confirmation Reference</div><div style="font-size:20px;font-weight:700;color:#0b3d6b;font-family:'Courier New',monospace;letter-spacing:3px">${esc(ref)}</div></div><div style="background:#f8fafc;border-left:3px solid #0b3d6b;border-radius:0 8px 8px 0;padding:20px 24px;margin-bottom:32px"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0b3d6b;margin-bottom:14px">Your Inquiry Summary</div><table><tbody><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0;width:90px">Name</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.first_name)} ${esc(f.last_name)}</td></tr><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0">Company</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.company)}</td></tr><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0">Phone</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.phone)}</td></tr><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0">Service</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.interest || "General inquiry")}</td></tr></tbody></table></div><div style="margin-bottom:36px"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d1117;margin-bottom:16px">What Happens Next</div><table><tbody><tr><td style="padding-bottom:14px"><table><tbody><tr><td style="vertical-align:top;padding-right:12px"><div style="width:26px;height:26px;background:rgba(11,61,107,0.08);border-radius:50%;text-align:center;line-height:26px;font-size:11px;font-weight:800;color:#0b3d6b">1</div></td><td style="font-size:13px;color:#4a5568;line-height:1.6;vertical-align:middle"><strong style="color:#1a202c">We review your inquiry.</strong> Your request is already with our team.</td></tr></tbody></table></td></tr><tr><td style="padding-bottom:14px"><table><tbody><tr><td style="vertical-align:top;padding-right:12px"><div style="width:26px;height:26px;background:rgba(11,61,107,0.08);border-radius:50%;text-align:center;line-height:26px;font-size:11px;font-weight:800;color:#0b3d6b">2</div></td><td style="font-size:13px;color:#4a5568;line-height:1.6;vertical-align:middle"><strong style="color:#1a202c">A specialist reaches out.</strong> Within 1 business day to schedule your free discovery call.</td></tr></tbody></table></td></tr><tr><td><table><tbody><tr><td style="vertical-align:top;padding-right:12px"><div style="width:26px;height:26px;background:rgba(11,61,107,0.08);border-radius:50%;text-align:center;line-height:26px;font-size:11px;font-weight:800;color:#0b3d6b">3</div></td><td style="font-size:13px;color:#4a5568;line-height:1.6;vertical-align:middle"><strong style="color:#1a202c">We assess your needs.</strong> No obligation — just an honest conversation about your IT environment.</td></tr></tbody></table></td></tr></tbody></table></div><div style="text-align:center;margin-bottom:36px"><a href="tel:18008906133" style="display:inline-block;background:#0b3d6b;color:#fff;text-decoration:none;padding:14px 36px;border-radius:8px;font-size:14px;font-weight:700">Need Help Now?  1-800-890-6133</a></div><div style="height:1px;background:#e5eaf2;margin-bottom:24px"></div><p style="font-size:12px;color:#94a3b8;line-height:1.6;margin:0;text-align:center">If you did not submit this form, please disregard this email.<br /><a href="mailto:info@prolinksystems.com" style="color:#0b3d6b;text-decoration:none;font-weight:600">info@prolinksystems.com</a>  ·  <a href="tel:18008906133" style="color:#0b3d6b;text-decoration:none;font-weight:600">1-800-890-6133</a></p></td></tr><tr><td style="background:#0b3d6b;border-radius:0 0 12px 12px;padding:24px 48px;text-align:center"><p style="font-size:11px;color:rgba(255,255,255,0.5);margin:0;line-height:1.7">© 2026 Pro Link Systems, Inc.  ·  21241 Ventura Blvd, Woodland Hills, CA 91364<br />Southern California's trusted managed IT partner since 1999.</p></td></tr></tbody></table></td></tr></tbody></table>`;
 }
 
-function notifyHtml(f, ref, page, attr, unverified) {
+function notifyHtml(f, ref, page, attr, unverified, noConfirm) {
   const row = (k, v) => `<tr><td style="padding:4px 16px 4px 0;color:#666">${esc(k)}</td><td style="font-weight:600">${esc(v)}</td></tr>`;
   const a = attr || {};
   const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].filter((k) => a[k]).map((k) => k.slice(4) + "=" + a[k]).join(" · ");
+  const box = (html) => `<div style="background:#fff7e6;border:1px solid #f5c26b;border-radius:6px;padding:10px 12px;margin:0 0 14px;color:#7a4b00">
+${html}</div>`;
+  const why = unverified === "unlabeled-widget"
+    ? "the form page was opened before the latest site update"
+    : `the robot check expired or Cloudflare could not confirm it (${esc(unverified)})`;
   const banner = unverified
-    ? `<div style="background:#fff7e6;border:1px solid #f5c26b;border-radius:6px;padding:10px 12px;margin:0 0 14px;color:#7a4b00">
-<strong>Unverified:</strong> the robot check expired or Cloudflare could not confirm it (${esc(unverified)}). Likely a real visitor &mdash; no confirmation email was sent to them, so reply personally.</div>`
-    : "";
+    ? box(`<strong>Unverified:</strong> ${why}. Likely a real visitor &mdash; no confirmation email was sent to them, so reply personally.`)
+    : noConfirm
+      ? box(`<strong>No confirmation email was sent to this visitor</strong> (${esc(noConfirm)}), so reply personally.`)
+      : "";
   return `<div style="font-family:system-ui,Arial,sans-serif;font-size:14px;color:#111">
 <h2 style="margin:0 0 4px">New website inquiry — ${esc(f.first_name)} ${esc(f.last_name)}</h2>
 <p style="color:#666;margin:0 0 14px">Ref ${esc(ref)}${page ? " · from " + esc(page) : ""}${a.channel ? " · " + esc(a.channel) : ""}</p>
@@ -188,8 +342,40 @@ ${(a.gclid || a.gbraid || a.wbraid) ? `<p style="margin-top:10px;color:#666;font
 <p style="margin-top:16px;color:#666;font-size:12px">Reply directly to reach the sender (${esc(f.email)}).</p></div>`;
 }
 
+function tooMany(retry) {
+  return new Response(JSON.stringify({ success: false, message: TOO_MANY }), {
+    status: 429,
+    headers: { "Content-Type": "application/json", "Cache-Control": "no-store", "Retry-After": String(Math.max(1, retry || 60)) },
+  });
+}
+
+// A token seen before: once its lead was sent, the repeat gets the same reference and nothing is sent again;
+// while the first request is still running, the repeat is told to wait; a refused token stays refused.
+function duplicate(ref, page) {
+  if (ref === REFUSED) {
+    log({ outcome: "rejected", reason: "refused-token-again", page });
+    return json(400, { success: false, message: VERIFY_FAILED });
+  }
+  log({ outcome: "duplicate", page, ref: ref || "" });
+  if (ref) return json(200, { success: true, refNumber: ref });
+  return json(409, { success: false, message: "This form is already being sent. If no confirmation appears within a minute, please call 1-800-890-6133." });
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
+  const url = new URL(request.url);
+  const origin = url.origin;
+
+  // Per-IP limit on every POST, before any other work. No client IP (local dev) = not counted.
+  const ipId = clientId(request);
+  const ipHash = ipId ? await hashId("ip:" + ipId) : "";
+  if (ipHash) {
+    const over = await overLimit(origin, "post", ipHash, LIMITS.post);
+    if (over) {
+      log({ outcome: "rejected", reason: "rate-limit:post", window: over.win });
+      return tooMany(over.retry);
+    }
+  }
 
   let f;
   try {
@@ -197,6 +383,7 @@ export async function onRequestPost(context) {
   } catch {
     return json(400, { success: false, message: "Invalid request." });
   }
+  if (!f || typeof f !== "object" || Array.isArray(f)) return json(400, { success: false, message: "Invalid request." });
 
   // Honeypot: silently accept-and-drop obvious bots. Only "botcheck" is a real
   // hidden honeypot; "challenge" is a VISIBLE "Primary IT Challenge" dropdown on
@@ -218,23 +405,69 @@ export async function onRequestPost(context) {
     log({ outcome: "rejected", reason: "no-token", page });
     return json(400, { success: false, message: "Verification failed — please retry the challenge." });
   }
-  const v = await verifyTurnstile(env.TURNSTILE_SECRET_KEY, token);
+  // Once per token: claim it (this isolate at once, then this data center) before
+  // verifying, so a double submit or a replay can't produce a second email.
+  const tokenStr = String(token).slice(0, 2048);    // Turnstile tokens are at most 2048 characters
+  const memKey = "tok:" + tokenStr;
+  const seen = mem.get(memKey);
+  if (seen && seen.exp > nowSec()) return duplicate(seen.v, page);
+  mem.set(memKey, { n: 1, exp: nowSec() + PENDING_TTL, v: "" });
+  const tokenKey = "tok-" + (await hashId("tok:" + tokenStr));
+  const shared = await cacheGet(origin, tokenKey);
+  if (shared) {
+    const prior = shared === "pending" ? "" : shared;
+    mem.set(memKey, { n: 1, exp: nowSec() + (prior ? TOKEN_TTL : PENDING_TTL), v: prior });
+    return duplicate(prior, page);
+  }
+  await cachePut(origin, tokenKey, "pending", PENDING_TTL);
+  const remember = async (value) => {
+    mem.set(memKey, { n: 1, exp: nowSec() + TOKEN_TTL, v: value });
+    await cachePut(origin, tokenKey, value, TOKEN_TTL);
+  };
+  const release = async () => { mem.delete(memKey); await cacheDelete(origin, tokenKey); };
+  // A token solved on another host or for another widget is refused, and stays refused: a replay of it must
+  // not slip into the [UNVERIFIED] path once Cloudflare reports it as already used.
+  const refuse = async (reason, extra) => {
+    await remember(REFUSED);
+    log(Object.assign({ outcome: "rejected", reason, page }, extra || {}));
+    return json(400, { success: false, message: VERIFY_FAILED });
+  };
+
+  const v = await verifyTurnstile(env.TURNSTILE_SECRET_KEY, tokenStr);
   let unverified = "";
-  if (!v.ok) {
+  if (v.ok) {
+    // Solved on another host (a preview or an old deployment)? Or another widget (the checkout)?
+    if (!hostnameOk(v.hostname, url.hostname, env)) return refuse("hostname", { host: v.hostname.slice(0, 80) });
+    if (v.action && v.action !== ACTION) return refuse("action", { action: v.action.slice(0, 40) });
+    if (!v.action) unverified = "unlabeled-widget";    // a page opened before the widgets carried the action
+  } else {
     if (!v.soft) {
+      await release();                                  // a forged token fails siteverify every time anyway
       log({ outcome: "rejected", reason: "turnstile", codes: v.codes, page });
-      return json(400, { success: false, message: "Verification failed — please retry the challenge." });
+      return json(400, { success: false, message: VERIFY_FAILED });
     }
     unverified = v.codes.join(",") || "unknown";
+  }
+
+  // [UNVERIFIED] notifications are capped per IP, so one solved token can't be replayed into a flood.
+  if (unverified && ipHash) {
+    const over = await overLimit(origin, "unverified", ipHash, LIMITS.unverified);
+    if (over) {
+      await release();
+      log({ outcome: "rejected", reason: "rate-limit:unverified", why: unverified, page });
+      return tooMany(over.retry);
+    }
   }
 
   // Validate the relaxed core set.
   const missing = REQUIRED.filter((k) => !String(f[k] || "").trim());
   if (missing.length) {
+    await release();
     log({ outcome: "rejected", reason: "missing:" + missing.join("+"), page });
     return json(400, { success: false, message: "Please enter your name and email address." });
   }
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(f.email))) {
+    await release();
     log({ outcome: "rejected", reason: "bad-email", page });
     return json(400, { success: false, message: "Please enter a valid email address." });
   }
@@ -248,10 +481,22 @@ export async function onRequestPost(context) {
   const notifyTo = env.LEAD_NOTIFY || env.SEND_FROM;
   const attr = attribution(f, request);
 
+  // Visitor confirmation gates, decided now so the notification can say why none was sent.
+  let noConfirm = null;
+  if (!unverified) {
+    if (["first_name", "last_name", "company", "phone", "interest"].some((k) => LINKISH.test(String(f[k] || "")))) {
+      noConfirm = { code: "linkish", text: "a link or address in the name, company, phone or service field" };
+    } else {
+      const over = await overLimit(origin, "confirm", await hashId("to:" + String(f.email).trim().toLowerCase()), LIMITS.confirm);
+      if (over) noConfirm = { code: "address-cap", text: `this address already had ${LIMITS.confirm[0].max} confirmations today` };
+    }
+  }
+
   let token2;
   try {
     token2 = await graphToken(env);
   } catch (e) {
+    await release();
     log({ outcome: "error", reason: "graph-token", page, ref });
     return json(502, { success: false, message: "Could not send right now — please call 1-800-890-6133." });
   }
@@ -261,7 +506,7 @@ export async function onRequestPost(context) {
     await sendMail(token2, from, {
       message: {
         subject: `${unverified ? "[UNVERIFIED] " : ""}New Contact Form Submission — Pro Link Systems Website [${ref}]`,
-        body: { contentType: "HTML", content: notifyHtml(f, ref, page, attr, unverified) },
+        body: { contentType: "HTML", content: notifyHtml(f, ref, page, attr, unverified, noConfirm && noConfirm.text) },
         toRecipients: [{ emailAddress: { address: notifyTo } }],
         from: { emailAddress: { address: from, name: "Pro Link Systems Website" } },
         replyTo: [{ emailAddress: { address: String(f.email) } }],
@@ -269,14 +514,22 @@ export async function onRequestPost(context) {
       saveToSentItems: false,
     });
   } catch (e) {
+    await release();
     log({ outcome: "error", reason: "notify-send", page, ref });
     return json(502, { success: false, message: "Could not send right now — please call 1-800-890-6133." });
   }
 
+  // Lead captured: a repeat of this token now gets this reference and sends nothing.
+  await remember(ref);
+
   // Unverified path: the lead is captured for a human to follow up; no outbound
   // mail goes to the submitted address (keeps this path useless for relay abuse).
   if (unverified) {
-    log({ outcome: "accepted-unverified", codes: v.codes, page, ref, channel: attr.channel });
+    log({ outcome: "accepted-unverified", codes: v.codes, why: unverified, page, ref, channel: attr.channel });
+    return json(200, { success: true, refNumber: ref });
+  }
+  if (noConfirm) {
+    log({ outcome: "accepted", confirmation: "skipped:" + noConfirm.code, page, ref, channel: attr.channel });
     return json(200, { success: true, refNumber: ref });
   }
   log({ outcome: "accepted", page, ref, channel: attr.channel });

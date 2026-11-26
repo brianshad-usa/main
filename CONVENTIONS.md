@@ -256,6 +256,25 @@ fail-safe and measured; keep them that way:
   Stale token (`timeout-or-duplicate`), `internal-error`, or Cloudflare unreachable
   → the lead still goes to info@ as **`[UNVERIFIED] New Contact Form Submission…`**
   with NO visitor confirmation (keeps the path useless for relay abuse).
+- **Turnstile hostname + action, rate limits (2026-11-26, Phase G security closeout).** The site
+  key also works on `plsmain.pages.dev` and every preview / old-deployment subdomain, so
+  `/api/contact` accepts a token **only on the host it was solved on** (prolinksystems.com and
+  www count as one). Every lead-form widget carries **`data-action="contact"`** (the checkout's
+  is `checkout`; **enforced by check 19**, emitted by `gen_location_pages.py`); any other action
+  is refused, and an unlabeled token (a page opened before a release) only gets the
+  `[UNVERIFIED]` path. Limits per IP (IPv6 per /64): **5 POSTs / 10 min and 20 / day; 2
+  `[UNVERIFIED]` / hour**. Each token is processed once (a repeat gets the same reference and
+  sends nothing; a refused token stays refused, 24 h). Visitor confirmations: **max 2 per address
+  per day**, none when the name / company / phone / service field holds a link or an address,
+  echoed fields clipped. Counters live in the data center's Cache API plus per-isolate memory,
+  no binding needed, and **fail open**. The Free-plan WAF rate-limiting rule (1 rule: path
+  `/api/contact`, per IP, 10 s) is the optional edge shield, set in the dashboard by Brian.
+  **Tests: `node --test tests/contact.test.mjs`** (Turnstile, Graph and the Cache API mocked).
+- **Old deployments keep their old code and credentials.** Every Cloudflare Pages deployment
+  stays reachable at `<hash>.plsmain.pages.dev` with the Functions and environment variables it
+  was built with, so a new protection only covers new deployments. Pre-2026-09-22 deployments
+  still serve the retired EmailJS / Web3Forms forms (inert since Brian removed both providers on
+  2026-11-26).
 - Every notification carries **"How they found us"** (channel, landing page, first
   referrer, UTMs, gclid/msclkid, approx. location, device) from the session's first
   touch (`sessionStorage.pls_first_touch`, written by both form scripts).
@@ -266,9 +285,9 @@ fail-safe and measured; keep them that way:
 - Function logs one JSON line per submission (`evt: "contact"`, outcome, reason/codes,
   page, ref, channel) → Cloudflare Pages → Functions → real-time logs.
 - Both form scripts **wait up to 8 s for the Turnstile token** before complaining.
-- Any form/handler/Function change: test in a scratch copy, run `site_guard.py`,
-  then a **human** submit on mobile (cellular) + desktop, and confirm the info@
-  notification shows the attribution block.
+- Any form/handler/Function change: test in a scratch copy, run `site_guard.py` and
+  `node --test tests/contact.test.mjs`, then a **human** submit on mobile (cellular) +
+  desktop, and confirm the info@ notification shows the attribution block.
 - Ads landing page (`/managed-it-services`) + home: Hotjar + Clarity load on the
   first scroll/tap/key or after 6 s (main-thread time = Ads landing-page experience).
   Keep `/managed-it-services` LA-focused — it is the Google + Microsoft Ads landing
