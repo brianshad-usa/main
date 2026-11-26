@@ -175,7 +175,7 @@ business hours (Monday through Friday, 9 AM to 5 PM Pacific); after hours, \
 managed-service clients press 1 to reach the on-call help desk
 - Mention the 15-minute average ticket first-response time (always name it in full)
 - Never say "no phone tree", "answered live 24/7", "around the clock" or that an \
-engineer picks up at any hour, and never mention an answering service
+engineer picks up at any hour or answers every call, and never mention an answering service
 - Speak to LA businesses specifically: time zones matter, executives and staff \
 can't wait
 - End with: "Call us to talk about help desk support."

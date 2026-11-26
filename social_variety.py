@@ -137,8 +137,8 @@ REGISTERS = {
         "kicker": "What you get",
         "copy_directive": "Describe a concrete benefit the client experiences. Positive, human, "
                           "specific - the good outcome, not the scary one.",
-        "headline_directive": "A warm benefit statement, e.g. 'A real technician answers your "
-                              "first call'.",
+        "headline_directive": "A warm benefit statement, e.g. 'Our own team answers your call "
+                              "during business hours'.",
         "prefer": ["bright_accent", "editorial_light", "photo_light", "tip_banner"],
     },
     "question": {

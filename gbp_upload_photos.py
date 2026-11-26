@@ -48,7 +48,7 @@ DESCRIPTION = {
     "leadership-interview":     "Pro Link Systems leadership",
     "monitoring-displays":      "24/7 monitoring at Pro Link Systems",
     "server-rack-support":      "On-site server and network support",
-    "headset-support":          "Live help desk - a real engineer answers every call",
+    "headset-support":          "Help desk - our in-house team answers calls in business hours",
     "onsite-computer-support":  "On-site computer support for Los Angeles businesses",
     "client-consultation":      "Client IT consultation",
     "technology-planning":      "Technology planning session",

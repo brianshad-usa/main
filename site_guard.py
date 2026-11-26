@@ -438,6 +438,30 @@ for name, pg in pages.items():
         m = rx.search(src)
         if m:
             V(20, name, f"{why}: '{m.group(0)[:60]}'")
+
+# 2026-11-25 (Phase G): call-flow wording. Owner-verified: calls are answered by our team during business hours
+# (Mon-Fri 9 AM-5 PM Pacific); after hours, callers follow a phone prompt to reach on-call support; 24/7 response
+# availability is for managed-services clients. Never imply every call reaches an engineer immediately. Site pages
+# only: the Insights articles and their publishing workflow are outside this rule.
+CALL_FLOW_PATTERNS = [
+    (re.compile(r"(?i)\bevery (?:support )?(?:call|interaction)\b[^.<\"]{0,80}\b(?:engineers?|technicians?)\b"),
+     "implies every call reaches an engineer; say calls are answered by our team in business hours"),
+    (re.compile(r"(?i)\breal (?:engineers?|technicians?)\b[^.<\"?]{0,40}\b(?:phone|line|answer\w*)\b"),
+     "'a real engineer answers' wording; calls are answered by our team in business hours"),
+    (re.compile(r"(?i)\b(?:24/7|around[- ]the[- ]clock)\s+live\b|\blive\s+(?:24/7|around[- ]the[- ]clock)\b"),
+     "'live' combined with 24/7 (live answer is business hours only)"),
+    (re.compile(r"(?i)\bstaffed (?:exclusively )?by (?:trained )?(?:pro link(?: systems)? )?engineers\b"),
+     "help desk 'staffed by engineers' (business hours: our team; after hours: on-call support)"),
+]
+for name, pg in pages.items():
+    if name.startswith("blog/"):
+        continue
+    # client testimonials (<blockquote>) are the client's own words and are reviewed with the owner separately
+    body = re.sub(r"(?is)<blockquote\b.*?</blockquote>", " ", pg["src"])
+    for rx, why in CALL_FLOW_PATTERNS:
+        m = rx.search(body)
+        if m:
+            V(20, name, f"{why}: '{m.group(0)[:60]}'")
 # llms.txt is what AI assistants read about Pro Link: hold it to the same claim rules (2026-11-11;
 # until then only HTML pages were scanned).
 if os.path.exists(llms_path):

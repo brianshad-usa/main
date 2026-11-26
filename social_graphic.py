@@ -223,11 +223,11 @@ _cta_pill = _cta_caption
 
 # ── Verified-fact hero figures for the stat styles ───────────────────────
 _HERO_STATS = [
-    ("24/7",   "US-based help desk, always on"),
+    ("24/7",   "response for managed-IT clients"),
     ("90%",    "first-contact resolution"),
     ("1999",   "serving Los Angeles businesses since"),
     ("15 min", "average ticket first-response time"),
-    ("Live",   "phone answered by a real technician"),
+    ("Live",   "calls answered by our team in business hours"),
 ]
 
 

@@ -47,7 +47,9 @@ RULES = [
     (re.compile(r"\s*(?:&mdash;|—)\s*(?:not|never) (?:an? |outsourced to an? )?(?:overseas |remote )?(?:script-read(?:er|ing)[^.<\"]*|call center script)(?=[.<\"])"), ""),
     (re.compile(r"Just an honest conversation about (?:your current setup|where your IT stands|your cloud)[^.<]*\."), "A conversation about your current environment and where it can improve."),
     (re.compile(r"we(?:'|’|&rsquo;)re minutes away, not hours\.(?: This is our home, and most of our clients are neighbors\.)?"), "our engineers are minutes away."),
-    (re.compile(r"Real Engineers, No Call Centers"), "Answered by Our Own Engineers"),
+    # 2026-11-25 (Phase G): calls are answered by our team in business hours; after hours a phone prompt reaches
+    # on-call support, so no heading may promise that an engineer answers every call.
+    (re.compile(r"Real Engineers, No(?:t a)? Call Cent(?:er|re)s?|Answered by Our Own Engineers"), "Our In-House Team"),
     (re.compile(r"You(?:'|’|&rsquo;|&#39;)re in good hands\."), "Thank you for contacting us."),
     (re.compile(r"so technology stops being something you worry about"), "so that technology supports the business"),
 ]

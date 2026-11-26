@@ -6,7 +6,8 @@
  "citable": [
   {
    "id": "F001",
-   "claim": "The Pro Link Systems help desk operates 24/7."
+   "claim": "Pro Link Systems provides 24/7 response availability for managed-services clients.",
+   "publishing_rule": "Always scoped to managed-services clients. Business-hours calls are answered by our team; after hours a phone prompt reaches on-call support. Never 'answered live 24/7', never that an engineer answers every call, never name an answering service."
   },
   {
    "id": "F002",
