@@ -181,6 +181,17 @@
 # 2026-11-22 consolidated into the Copilot rollout article (iteration 6)
 /blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
 /blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-.html    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
+# 2026-11-25 SEO program (needs owner approval before release): /insights returned 404 although search engines still
+# listed it; three legacy articles point to the page that now answers the same question instead of the generic /blog/
+# (their /2023/* and /2024/* splats used to take two hops via /blog).
+/insights                                      /blog/                               301
+/insights/                                     /blog/                               301
+/2023/11/20/different-pricing-models-used-by-it-companies/          /managed-it-services-pricing-los-angeles        301
+/2023/11/20/different-pricing-models-used-by-it-companies           /managed-it-services-pricing-los-angeles        301
+/2024/01/02/mistakes-to-avoid-when-choosing-a-helpdesk-provider/    /how-to-choose-managed-it-provider-los-angeles  301
+/2024/01/02/mistakes-to-avoid-when-choosing-a-helpdesk-provider     /how-to-choose-managed-it-provider-los-angeles  301
+/2024/01/02/costa-mesa-manufacturing-company-modernizes-with-the-cloud/   /cloud-services                           301
+/2024/01/02/costa-mesa-manufacturing-company-modernizes-with-the-cloud    /cloud-services                           301
 
 # ===========================================================================
 # DYNAMIC RULES (splats / placeholders) -- keep them all BELOW every static rule.
@@ -209,10 +220,10 @@
 /managed-it-services-2/it-support/*            /it-help-desk                        301
 /managed-it-services-2/*                       /managed-it-services                 301
 /solutions/*                                   /managed-it-services                 301
-/2023/*                                        /blog                                301
-/2024/*                                        /blog                                301
-/author/*                                      /blog                                301
-/category/*                                    /blog                                301
+/2023/*                                        /blog/                               301
+/2024/*                                        /blog/                               301
+/author/*                                      /blog/                               301
+/category/*                                    /blog/                               301
 /helpdesk*                                     /it-help-desk                        301
 /24*                                           /it-help-desk                        301
 /desktop-support*                              /it-help-desk                        301

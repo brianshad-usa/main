@@ -674,7 +674,8 @@ def profile_page(reg, key):
     rel = a["profile"].strip("/") + ".html"
     about = read("about.html").replace("\r\n", "\n")
     head_src = about[:about.index("</head>")]
-    tracking = "".join(m.group(0) + "\n" for m in re.finditer(r"<script(?![^>]*ld\+json)[^>]*>.*?</script>", head_src, re.S))
+    tracking = "".join(m.group(0) + "\n" for m in re.finditer(r"<script(?![^>]*ld\+json)[^>]*>.*?</script>", head_src, re.S)
+                       if "/assets/js/consent.js" not in m.group(0))   # apply_chrome adds the marked consent block
     person = {"@type": "Person", "@id": a["id"], "name": a["name"], "jobTitle": a["job_title"],
               "description": pr["meta"], "image": SITE + pr["photo"], "url": url, "sameAs": a.get("same_as", []),
               "worksFor": {"@type": "Organization", "@id": SITE + "/#organization", "name": "Pro Link Systems",
@@ -683,7 +684,9 @@ def profile_page(reg, key):
     if a.get("alumni_of"):
         person["alumniOf"] = {"@type": "CollegeOrUniversity", "name": a["alumni_of"]}
     prof = {"@context": "https://schema.org", "@type": "ProfilePage", "@id": url + "#webpage", "url": url,
-            "name": pr["title"], "isPartOf": {"@id": SITE + "/#website"}, "mainEntity": person}
+            "name": pr["title"], "isPartOf": {"@id": SITE + "/#website"}, "mainEntity": person,
+            # kept here so the SEO engine's Speakable fixer has nothing to add (it used to append a second WebPage node)
+            "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", "h1 + p"]}}
     crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
         {"@type": "ListItem", "position": 2, "name": "About", "item": SITE + "/about"},
@@ -706,8 +709,9 @@ def profile_page(reg, key):
         ('        <p class="pl-flag-note">%s</p>' % flags) if flags else "",
         '        <p class="pl-profile-k">Areas of focus</p>',
         '        <ul class="pl-checks">%s</ul>' % "".join("<li>%s</li>" % E(x) for x in a.get("focus", [])),
-        '        <div class="pl-actions">%s<a class="pl-arrow" href="/about">About Pro Link Systems</a></div>'
-        % "".join('<a class="pl-arrow" href="%s" rel="me">LinkedIn profile</a>' % A(u) for u in a.get("same_as", [])[:1]),
+        '        <div class="pl-actions">%s%s<a class="pl-arrow" href="/about">About Pro Link Systems</a></div>'
+        % ("".join('<a class="pl-arrow" href="%s" rel="me">LinkedIn profile</a>' % A(u) for u in a.get("same_as", [])[:1]),
+           "".join('<a class="pl-arrow" href="%s">%s</a>' % (A(l["href"]), E(l["label"])) for l in pr.get("links", []))),
         '      </div>',
         '      <figure>\n        <img src="%s" srcset="%s" sizes="(max-width: 1024px) 92vw, 520px" width="%d" height="%d" '
         'alt="%s" decoding="async">\n        <figcaption>%s</figcaption>\n      </figure>'

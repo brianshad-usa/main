@@ -415,20 +415,24 @@ def head_for(c, tracking):
                json.dumps(crumbs, ensure_ascii=False), json.dumps(page, ensure_ascii=False)))
 
 
+# SEO program 2026-11: each case study links to its industry page (and co-managed IT where that was the model)
+TOPIC_LINKS = {"crr": [["/waste-management-it-services", "IT for waste &amp; recycling"], ["/co-managed-it-services", "Co-managed IT"]], "lisi-aerospace": [["/aerospace-defense-it-services", "IT for aerospace &amp; defense"], ["/co-managed-it-services", "Co-managed IT"]], "fralock": [["/manufacturing-it-services", "IT for manufacturers"], ["/co-managed-it-services", "Co-managed IT"]], "cunico": [["/aerospace-defense-it-services", "IT for aerospace &amp; defense"]], "optical-zonu": [["/manufacturing-it-services", "IT for manufacturers"]], "fsc-lighting": [["/manufacturing-it-services", "IT for manufacturers"]], "hallmark-lighting": [["/manufacturing-it-services", "IT for manufacturers"]], "global-holdings": [["/healthcare-it-services", "Healthcare IT"]], "snitzer-law": [["/law-firm-it-services-los-angeles", "IT for law firms"]], "waverly-school": [["/education-it-services", "IT for schools"]], "m13": [["/financial-services-it", "IT for financial services"]], "cookes-crating": [["/logistics-it-services", "IT for logistics"]], "global-garden": [["/logistics-it-services", "IT for logistics"]]}
+
+
 def detail_main(c):
     metrics = "".join('<div><strong>%s</strong><span>%s</span></div>' % (E(n), E(l)) for n, l in c["metrics"])
     snap = []
     for k, v in c["snapshot"]:
         snap.append("<dt>%s</dt><dd>%s</dd>" % (E(k), status_html(c) if k == "Relationship" else E(v)))
     k = DATA["clients"][c["slug"]]
-    body = ["<h3>Company profile</h3>", "<p>%s</p>" % E(k["description"]),
-            "<h3>The challenge</h3>", "<p>%s</p>" % E(c["challenge"])]
+    body = ['<h2 class="pl-study-h">Company profile</h2>', "<p>%s</p>" % E(k["description"]),
+            '<h2 class="pl-study-h">The challenge</h2>', "<p>%s</p>" % E(c["challenge"])]
     if c.get("complexity"):
-        body += ["<h3>Complexity</h3>", "<p>%s</p>" % E(c["complexity"])]
-    body += ["<h3>Our approach</h3>", '<ul class="pl-checks">%s</ul>' % "".join("<li>%s</li>" % E(x) for x in c["approach"]),
-             "<h3>Outcomes</h3>", '<ul class="pl-checks">%s</ul>' % "".join(
+        body += ['<h2 class="pl-study-h">Complexity</h2>', "<p>%s</p>" % E(c["complexity"])]
+    body += ['<h2 class="pl-study-h">Our approach</h2>', '<ul class="pl-checks">%s</ul>' % "".join("<li>%s</li>" % E(x) for x in c["approach"]),
+             '<h2 class="pl-study-h">Outcomes</h2>', '<ul class="pl-checks">%s</ul>' % "".join(
                  "<li>%s</li>" % (x if "pl-flag" in x else E(x)) for x in c["outcomes"]),
-             "<h3>Long-term value</h3>", "<p>%s</p>" % E(c["value"])]
+             '<h2 class="pl-study-h">Long-term value</h2>', "<p>%s</p>" % E(c["value"])]
     if c.get("quote"):
         q, who, role = c["quote"]
         body.append('<figure class="pl-quote pl-quote--inline"><blockquote>&ldquo;%s&rdquo;</blockquote>'
@@ -452,7 +456,7 @@ def detail_main(c):
             '    <div class="pl-cmetrics" style="--n:%d">%s</div>\n  </div>\n</section>\n\n'
             '<section class="pl-section" aria-label="Case study detail">\n  <div class="pl-wrap">\n'
             '    <article class="pl-study">\n      <aside class="pl-study-meta">\n        <p class="pl-study-client">%s</p>\n'
-            '        <dl>%s</dl>\n        <p class="pl-study-portfolio"><a class="pl-arrow" href="/case-studies#%s">In the client portfolio</a></p>\n        %s\n      </aside>\n      <div class="pl-study-body">\n        %s\n      </div>\n'
+            '        <dl>%s</dl>\n        <p class="pl-study-portfolio"><a class="pl-arrow" href="/case-studies#%s">In the client portfolio</a></p>%s\n        %s\n      </aside>\n      <div class="pl-study-body">\n        %s\n      </div>\n'
             '    </article>\n  </div>\n</section>\n\n'
             '<section class="pl-section pl-mist" aria-labelledby="related-h">\n  <div class="pl-wrap">\n'
             '    <div class="pl-head"><div><p class="pl-eyebrow">More client success</p><h2 class="pl-h2" id="related-h">Related engagements.</h2></div>'
@@ -464,7 +468,7 @@ def detail_main(c):
             '      <div class="pl-actions"><a href="/contact" class="btn btn-light">Schedule a Technology Consultation</a>'
             '<a href="/services" class="btn btn-outline-white">Explore Our Capabilities</a></div></div>\n  </div>\n</section>\n\n</main>'
             % (E(c["client"]), E(c["sector"]), E(c["status"]), E(c["h1"]), E(c["summary"]), n, metrics,
-               E(c["client"]), "".join(snap), c["slug"], flags_html(c), "\n        ".join(body),
+               E(c["client"]), "".join(snap), c["slug"], "".join('<p class="pl-study-portfolio pl-study-topic"><a class="pl-arrow" href="%s">%s</a></p>' % (h, lab) for h, lab in TOPIC_LINKS.get(c["slug"], [])), flags_html(c), "\n        ".join(body),
                "\n".join(card(r) for r in related)))
 
 

@@ -121,14 +121,16 @@
       "bio_short": "Brian Shad founded Pro Link Systems in 1999. His more than 25 years of work span technology leadership, enterprise infrastructure, cybersecurity, strategic consulting and digital transformation.",
       "bio": [
         "Brian Shad is the founder and CEO of Pro Link Systems, which he established in 1999. He leads the firm’s technology direction and works directly with client leadership teams on strategy, architecture and major initiatives.",
-        "Over more than 25 years in technology leadership, his work has spanned enterprise infrastructure, cybersecurity, strategic consulting and digital transformation. He holds a degree in Computer Science from California State University, Northridge."
+        "Over more than 25 years in technology leadership, his work has spanned enterprise infrastructure, cybersecurity, strategic consulting and digital transformation. He holds a degree in Computer Science from California State University, Northridge.",
+        "He served as virtual CIO (vCIO) for CR&R Environmental Services from December 2023 to April 2025, during Pro Link Systems’ co-managed engagement alongside CR&R’s internal technology team. The firm’s longest client relationships include The Waverly School, a client since 2003, and the Law Offices of Alan B. Snitzer, a client since 2006."
       ],
       "focus": [
         "Technology leadership",
         "Enterprise infrastructure",
         "Cybersecurity",
         "Strategic consulting",
-        "Digital transformation"
+        "Digital transformation",
+        "Virtual CIO (vCIO) leadership"
       ],
       "profile_page": {
         "title": "Brian Shad, Founder & CEO | Pro Link Systems",
@@ -140,8 +142,22 @@
         "height": 687,
         "alt": "Brian Shad in a navy blazer and striped tie, photographed outdoors",
         "caption": "Brian Shad, Founder & CEO",
-        "lastmod": "2026-11-23",
-        "flags": []
+        "lastmod": "2026-11-25",
+        "flags": [],
+        "links": [
+          {
+            "href": "/case-studies/crr",
+            "label": "CR&R client story"
+          },
+          {
+            "href": "/co-managed-it-services",
+            "label": "Co-managed IT"
+          },
+          {
+            "href": "/virtual-cio",
+            "label": "Virtual CIO services"
+          }
+        ]
       },
       "alumni_of": "California State University, Northridge"
     },
