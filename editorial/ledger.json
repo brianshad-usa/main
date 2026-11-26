@@ -4413,6 +4413,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-26",
+      "idea_id": "S082",
+      "theme": "m365_security",
+      "format": "myth",
+      "title": "\"It's in the cloud, so it's backed up\"",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question",
+        "channels": {
+          "linkedin": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "facebook": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "gbp": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "instagram": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          },
+          "x": {
+            "style": "editorial_light",
+            "format": "single_image",
+            "ground": "white",
+            "layout": "centered",
+            "register": "question"
+          }
+        }
+      }
     }
   ]
 }

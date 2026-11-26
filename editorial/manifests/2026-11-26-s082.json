@@ -1,0 +1,165 @@
+{
+  "post": "Picture a Monday morning. An employee's account was phished over the weekend. By the time anyone notices, a shared folder has been emptied and the deletions have synced to every laptop.\n\nSomeone asks the obvious question: isn't all of this in the cloud? Doesn't Microsoft have a copy?\n\nPartly. Microsoft keeps the service running and holds deleted items for a while. Those copies follow your changes, sit inside the same Microsoft 365 environment the attacker is already in, and expire on a schedule.\n\nEven a separate backup tool can fall with it if it signs in using the same Microsoft 365 account.\n\nA real backup is a separate copy, protected by a login the attacker doesn't have, locked so it can't be deleted early, and tested by someone actually restoring from it.\n\nNot sure which one you have? Ask your IT team when they last restored something, and what it was.",
+  "headline": "Which login can delete your Microsoft 365 backup?",
+  "cta_label": "Learn more",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com",
+  "image_file": "2026-11-26-s082-card.png",
+  "image_file_jpg": "2026-11-26-s082-card.jpg",
+  "theme": "m365_security",
+  "idea_id": "S082",
+  "core_idea": "A backup is defined less by where the copy lives than by which login can destroy it. Microsoft 365 replication, retention and sync all sit within reach of a compromised admin account, and so does any separate backup product that signs in through that same identity. Real protection is a point-in-time copy, controlled by a separate identity, locked against early deletion, and proven by an actual restore.",
+  "channels": {
+    "linkedin": "The most useful question about your Microsoft 365 backup is not where the copy lives. It is which login can delete it.\n\nExecutives usually ask something else: does Microsoft back up our data, or do we pay for that separately? The honest answer is that Microsoft protects the service. Keeping your data recoverable is a different job, and much of it still sits with you.\n\nThree things get mistaken for backup.\n\nReplication. Microsoft keeps multiple copies so a hardware failure doesn't take you offline. Those copies follow every change, including a mass deletion or files encrypted by ransomware.\n\nRetention. Recycle bins, version history and retention policies hold deleted items for a set period. They live inside your tenant, and unless deliberately locked, the admin accounts attackers target can change them.\n\nSync. OneDrive on a laptop is a mirror, not a lifeboat.\n\nBuying a separate backup product does not settle it either. If that console signs in through the same Microsoft 365 identity, the attacker who owns your admin login may own your backup too. A different vendor is not a different credential.\n\nSo a copy earns the name backup when it is point-in-time, controlled by an identity separate from the one running your tenant, locked against early deletion, and recently restored from. A job report that says success is a claim. Restore testing is evidence.\n\nFor a CEO or CFO, two questions settle it. If our tenant were compromised tonight, what could we restore by Monday? And could the attacker's login stop us?",
+    "facebook": "Picture a Monday morning. An employee's account was phished over the weekend. By the time anyone notices, a shared folder has been emptied and the deletions have synced to every laptop.\n\nSomeone asks the obvious question: isn't all of this in the cloud? Doesn't Microsoft have a copy?\n\nPartly. Microsoft keeps the service running and holds deleted items for a while. Those copies follow your changes, sit inside the same Microsoft 365 environment the attacker is already in, and expire on a schedule.\n\nEven a separate backup tool can fall with it if it signs in using the same Microsoft 365 account.\n\nA real backup is a separate copy, protected by a login the attacker doesn't have, locked so it can't be deleted early, and tested by someone actually restoring from it.\n\nNot sure which one you have? Ask your IT team when they last restored something, and what it was.",
+    "gbp": "A question we hear from Los Angeles business owners: does Microsoft 365 already back up our email and files? Microsoft keeps the platform available and holds deleted items for a limited time. That is not the same as an independent, point-in-time copy under a separate login that a compromised account cannot reach or delete. Two practical checks: does your backup tool sign in with your Microsoft 365 account, and when was your last restore test? Pro Link Systems has served LA businesses from Woodland Hills since 1999. We recover from tested backups, verified by restore testing rather than assumed from job reports.",
+    "x": [
+      "The real question about your Microsoft 365 backup isn't where it lives. It's which login can delete it. If your backup console signs in with the same admin account an attacker can steal, you don't have a backup. You have a second target."
+    ],
+    "instagram_caption": "Backup is less about where a copy lives than about who can delete it.\n\nReplication keeps Microsoft 365 online but copies your mistakes. Retention recovers files for a while, inside the same tenant an attacker would target. A separate backup product helps only if it doesn't sign in through that same identity.\n\nA backup is point-in-time, under a separate login, locked against early deletion, and proven by an actual restore.\n\n#Microsoft365 #CyberResilience #DataBackup"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "editorial_light",
+    "format": "single_image",
+    "ground": "white",
+    "layout": "centered",
+    "register": "question",
+    "channels": {
+      "linkedin": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "facebook": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "gbp": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "instagram": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      },
+      "x": {
+        "style": "editorial_light",
+        "format": "single_image",
+        "ground": "white",
+        "layout": "centered",
+        "register": "question"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 88,
+      "originality": 93,
+      "hook_strength": 94,
+      "educational_value": 96,
+      "technical_accuracy": 95,
+      "executive_value": 95,
+      "writing_quality": 95,
+      "visual_sophistication": 90,
+      "platform_fit": 95,
+      "shareability": 92,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 94
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: Microsoft protects the availability of the service. Keeping data recoverable is a separate responsibility, largely the customer's.",
+    "ANALYSIS: Replication keeps multiple copies to survive hardware failure but propagates deletions and ransomware encryption.",
+    "ANALYSIS: Recycle bins, version history and retention policies hold deleted items for a limited period, inside the tenant.",
+    "ANALYSIS: Unless deliberately locked, admin accounts can change retention settings. The qualifier reflects that preservation locks exist.",
+    "ANALYSIS: OneDrive sync mirrors changes and is not a backup.",
+    "ANALYSIS: If a third-party backup console authenticates through the same Microsoft 365 identity, compromising that identity can expose the backup. Framed conditionally ('if'), not as a claim about any named product.",
+    "ANALYSIS: A backup locked against early deletion resists an attacker who gains administrative access.",
+    "OPINION: Backup independence is best measured by which credentials can destroy the copy, not by storage location.",
+    "OPINION: A successful job report is a claim; restore testing is evidence.",
+    "ANALYSIS: The Facebook phishing scenario is illustrative and hypothetical, not a client incident.",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "FACT(F013): Pro Link Systems recovers from tested backups, verified by restore testing, not assumed from job reports.",
+    "NO NUMBERS: no industry, threat or cost statistics used; none supplied in brief.",
+    "NO COMPETITORS OR PRODUCTS NAMED: backup vendors referenced generically only."
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "'Microsoft 365 is not a backup' is one of the most widely published MSP themes and sits next to the demoted 'remember to back up your files.' As drafted, almost any MSP could have posted it. The fix is a sharper governing idea: backup independence is measured by which credentials can destroy the copy. That ties the topic to identity as the perimeter, a promoted 2026 theme, instead of storage location."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The LinkedIn, Instagram and GBP versions all open on the same 'does Microsoft back up our data' question, so the channels read as one idea pasted three times. The revision gives LinkedIn, X and Instagram a counterintuitive opener ('which login can delete it'). GBP keeps the plain local question, and Facebook keeps its scenario."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel is all headline-and-body text slides. Nothing in it can become a diagram, so it cannot be recognized as ProLink before the logo appears. The revision adds a structured comparison slide ('Who can delete it?') with three parallel rows. It is built to render as a clean three-row diagram rather than prose."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The retention claim was overstated. Microsoft 365 retention policies can be preservation-locked, which prevents admins from weakening them, so 'configured by the same admin accounts an attacker would target' needed a qualifier. The Facebook line saying retained copies 'sit inside the same account the attacker got into' was also inaccurate: retention lives in the tenant, not the user's account. Both are corrected."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Held outside the tenant' is the wrong test on its own. A copy stored elsewhere but deletable by the same compromised admin identity is not independent. The revised definition is: point-in-time, protected by separate credentials, and restored from recently. That is the criterion a CIO would actually audit."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft never says why an attacker reaches backups at all. The key point was missing: someone holding an admin account does not need to break your backup, only log into it. The revision adds this and frames an undeletable copy as the defense against exfiltration-and-extortion playbooks. It does so without citing any threat statistic, because none was supplied."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "There is no AI angle, and that is correct. The standards forbid manufacturing urgency through AI, and this idea is fundamentally about identity and recoverability. I considered and rejected adding AI-generated phishing to the Facebook scenario: it would add buzz without changing the lesson."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The closing question ('what could we restore by Monday') is good, but it is one question a CFO cannot verify alone. The revision pairs it with a second question an executive can actually ask: would the attacker's login be able to stop us? It also adds a checklist of three verifiable questions to take into the next IT conversation."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post restated the LinkedIn argument in compressed form instead of delivering one sharp observation. It now ends on a quotable turn ('You have a second target'), which is more shareable. The Instagram hook was a yes/no question that invites a scroll-past; it is now a declarative statement that earns the swipe."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP post leaned on an open-ended sales invitation, which made it read as filler. The revision replaces it with one practical check an LA owner can act on today. Credibility comes only from verified facts F012 and F013, and the restore-testing point now carries weight because ProLink's own practice embodies it."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'It's one of the most common questions owners weigh' and 'one of the most expensive to get wrong' are unsupported frequency and cost claims, so both are removed. The Instagram caption duplicated the hook slide verbatim. The takeaway body opened consecutive sentences with 'A', and the revised LinkedIn draft briefly did the same; both are fixed. No banned phrasing, emoji or exclamation marks remain."
+    },
+    {
+      "role": "Cybersecurity Expert / Senior Technology Editor",
+      "finding": "The draft's central remedy, 'separate credentials', is left undefined, and that hides the trap that makes this topic worth publishing. Many third-party backup consoles sign in through the same Microsoft 365 identity, so a different vendor is not a different credential. The draft also never says the copy must be locked against early deletion, which leaves backup immutability, a promoted 2026 topic, on the table. Revision: add the single-sign-on trap and the deletion lock to LinkedIn, X, Instagram, Facebook, GBP and the checklist."
+    },
+    {
+      "role": "Art Director / Creative Director",
+      "finding": "Slide 5, the one slide that should be a diagram, reads as a run-on list. 'Replication: anyone who can change the data' is also imprecise. Revision: rewrite slide 5 as a three-row matrix that answers one question ('Who can destroy it?') with a parallel answer per row. Add a dedicated slide for the separate-vendor trap so the progression earns its eighth slide."
+    },
+    {
+      "role": "Chief Marketing Officer / Brand Director (any-MSP test)",
+      "finding": "Before revision, the package still passed the 'could any MSP publish this' test too easily. Replication versus retention versus sync is well-trodden. The distinctive move is the sign-in trap plus the 'what could we restore by Monday' standard, and both now carry the piece. Two lesser issues: the LinkedIn close ('assumption, not a plan') was a stock phrase and is cut, and the GBP close now ties F013 directly to the restore-evidence argument rather than reading as a bolt-on credential."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
