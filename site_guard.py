@@ -381,6 +381,14 @@ for name, pg in pages.items():
             V(19, name, "Turnstile form on a page that does not load /contact-form.js?v=... (submissions would be lost)")
         if not any("challenges.cloudflare.com/turnstile/" in x for x in srcs):
             V(19, name, "Turnstile form on a page that does not load the Turnstile api.js script")
+        # 2026-11-26 (Phase G security): /api/contact refuses a token whose Turnstile action is not "contact"
+        # (an unlabeled one only gets the [UNVERIFIED] path), so every lead-form widget carries
+        # data-action="contact"; the checkout's widget carries "checkout".
+        want = "checkout" if any(re.search(r"(^|/)checkout\.js", x) for x in srcs) else "contact"
+        for f in pg["soup"].find_all("form"):
+            for w in f.find_all(class_="cf-turnstile"):
+                if w.get("data-action") != want:
+                    V(19, name, f'Turnstile widget without data-action="{want}" (/api/contact refuses other actions)')
 
 # --------------------------------------------------------------------------- #
 # 20: verified claims only (2026-11-09). Brian: "I don't want to advertise any
