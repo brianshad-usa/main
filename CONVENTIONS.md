@@ -811,5 +811,12 @@ that I would like to host on our site similarly". Every app follows this one pat
 - **Redirects added here** (static rules above the dynamic banner; owner approval needed at release): `/insights` and
   `/insights/` -> `/blog/`; three legacy articles -> the pricing guide, the provider-selection guide and `/cloud-services`;
   `/2023/*`, `/2024/*`, `/author/*`, `/category/*` now target `/blog/` directly (the slash-less target added a 308 hop).
+- **Chamber membership** (owner-confirmed 2026-11-25, facts F019): Pro Link Systems is a member of the West Valley ·
+  Warner Center Chamber of Commerce. Say "member" only: never imply the Chamber endorses, ranks or recommends Pro Link,
+  and never use the Chamber seal or logo. Visible mentions (/about history, the Woodland Hills intro) link the member
+  profile `https://woodlandhillscc.net/members/pro-link-systems-inc`; those two pages carry `memberOf` on the
+  `#organization` node. Not in `sameAs` (that list is for profiles that identify Pro Link itself).
+- **Facts mirror:** `editorial/verified_facts.json` v2 adds F018 (cloud and Azure migrations, capability only) and F019,
+  synced by hand from `cmo/verified-facts.json` v9 after Brian's 2026-11-25 confirmations; it ships with this branch.
 - **Reports and data stay private:** the program report, baseline and audits live in the war-room repo
   (`seo/reports/program/`, `seo/baseline/`), never in this public repo.
