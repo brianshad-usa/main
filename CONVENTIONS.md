@@ -790,3 +790,26 @@ that I would like to host on our site similarly". Every app follows this one pat
   (`/case-studies/*`, `/leadership/*`) or it reverts change-sets for "broken" links; strip the new header from
   word counts; rename its breadcrumb label to "Insights". Ship the generator and the migration together, not on
   a Tuesday. Then a PR to `main`, merged only on Brian's explicit approval.
+
+## SEO program 2026-11 (branch `seo-growth-2026-11`, staging only until Brian approves)
+
+- **Staging:** `https://seo-growth-2026-11.plsmain.pages.dev`, guarded by `functions/_middleware.js` (same guard as the
+  redesign: noindex + robots disallow, form/checkout answered by the guard, tracking stripped, no login per Brian's
+  2026-11-21 choice, plus a "Compare with live page" link). Delete the guard before any merge (`golive_check.py` fails
+  while it exists). Re-stamp the sitemap `lastmod` of the changed static pages with the release date.
+- **Client evidence blocks** (`<!-- PL:PROOF -->` … `<!-- /PL:PROOF -->`, CSS `.pl-proof*`, `_shared.css` section 20):
+  only the owner-approved `engagement` wording from `editorial/clients.json`, relationship labels from `clients.py`
+  (Current client / Former client / Past engagement, never invented), links to the client's case study or its portfolio
+  anchor (`/case-studies#<slug>`). Heading id `client-proof-heading` (industry pages already use `proof-heading`).
+- **Service checklists** (`ul.pl-check`, `<!-- PL:CHECKLIST -->`): general practice only, no client claims; the visible
+  question/answer pair is repeated in the page's FAQ JSON-LD word for word.
+- **Case studies:** body section headings are `h2.pl-study-h` (same look as the old h3; fixes the h1->h3 skip) and each
+  case links its industry page and, where the model was co-managed, `/co-managed-it-services` (`TOPIC_LINKS` in
+  `chrome/build_case_pages.py`). A rebuild still drops the SEO engine's Speakable blocks: restore them from HEAD.
+- **Profiles:** `profile_page.links` in the registry renders extra profile links; `insights.py` skips the unmarked
+  `consent.js` from about.html (apply_chrome adds the marked one) and keeps Speakable on the ProfilePage node.
+- **Redirects added here** (static rules above the dynamic banner; owner approval needed at release): `/insights` and
+  `/insights/` -> `/blog/`; three legacy articles -> the pricing guide, the provider-selection guide and `/cloud-services`;
+  `/2023/*`, `/2024/*`, `/author/*`, `/category/*` now target `/blog/` directly (the slash-less target added a 308 hop).
+- **Reports and data stay private:** the program report, baseline and audits live in the war-room repo
+  (`seo/reports/program/`, `seo/baseline/`), never in this public repo.
