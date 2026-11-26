@@ -94,7 +94,9 @@ def rule_regex(src):
             out += "(?P<%s>[^/]+)" % tok[1:]
         else:
             out += re.escape(tok)
-    return re.compile("^" + out + "/?$")
+    # Static rules match the exact path only (observed on production 2026-11-25: /thank-you redirects, /thank-you/ is a
+    # 404), so a static rule must not be modelled as matching an optional trailing slash. Splats/placeholders keep it.
+    return re.compile("^" + out + ("/?$" if ("*" in src or ":" in src) else "$"))
 
 
 class Site:
@@ -318,8 +320,11 @@ try:
         if "*" not in src and ":" not in src:
             inventory.setdefault(src, "redirect source")
     branch_sources = {s for s, _, _ in redirect_rules(read(os.path.join(ROOT, "_redirects")))}
+    # Wildcards retired on purpose (owner, Phase G 2026-11-25): blanket WordPress-directory redirects to the blog hub were
+    # replaced by URL-by-URL rules; legacy URLs without a relevant destination now 404. Release needs owner approval.
+    RETIRED_WILDCARDS = {"/2023/*", "/2024/*", "/author/*", "/category/*"}
     for src, target, code in prod_rules:
-        if ("*" in src or ":" in src) and src not in branch_sources:
+        if ("*" in src or ":" in src) and src not in branch_sources and src not in RETIRED_WILDCARDS:
             problems.append("13 production wildcard redirect %s -> %s is missing on this branch" % (src, target))
     for path, kind in sorted(inventory.items()):
         final, hops = site.resolve(path)

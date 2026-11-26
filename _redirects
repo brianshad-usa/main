@@ -125,12 +125,13 @@
 /helpdesk-it-support-los-angeles     /it-help-desk                        301
 
 # ---- Legacy vertical / lead-gen paths from the old site (old backlinks/GBP) ----
-# No dedicated hospitality page exists, so /hospitality-companies/ -> general MSP page.
+# No dedicated hospitality page exists: /hospitality-companies and /restaurants-bars-and-clubs go to the restaurant and
+# hospitality IT article (Phase G 2026-11-25; the old targets never mention restaurants).
 /it-consultation                     /contact                             301
 /sign-up-now                         /contact                             301
 /office-365-migration-service        /microsoft-365-support-los-angeles   301
 /entertainment-companies             /entertainment-it-services           301
-/hospitality-companies               /managed-it-services                 301
+/hospitality-companies               /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
 /manufacturing-companies             /manufacturing-it-services           301
 /healthcare-institutions             /healthcare-it-services              301
 
@@ -138,7 +139,7 @@
 # asset sweep: these pages died in the restructure while ad-group sitelinks and
 # possibly old backlinks still referenced them. Bare + splat variants both
 # needed (Pages splats do not match the bare path).
-/restaurants-bars-and-clubs          /entertainment-it-services           301
+/restaurants-bars-and-clubs          /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
 /socal-startups                      /technology-it-services              301
 /cloud-and-infrastructure            /cloud-services                      301
 /cloud-management-services           /cloud-services                      301
@@ -155,8 +156,8 @@
 
 /network-security                              /network-security-services           301
 /network-security/                             /network-security-services           301
-/network-monitoring                            /cybersecurity-services              301
-/network-monitoring/                           /cybersecurity-services              301
+/network-monitoring                            /network-support-los-angeles         301
+/network-monitoring/                           /network-support-los-angeles         301
 /cybersecurity                                 /cybersecurity-services              301
 /cybersecurity/                                /cybersecurity-services              301
 /email-messaging                               /microsoft-365-support-los-angeles   301
@@ -181,17 +182,100 @@
 # 2026-11-22 consolidated into the Copilot rollout article (iteration 6)
 /blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
 /blog/2026-08-13-t90-copilot-data-governance-what-your-permissions-mistakes-.html    /blog/2026-11-10-t49-deploying-microsoft-copilot-safely-at-your-los-angeles-    301
-# 2026-11-25 SEO program (needs owner approval before release): /insights returned 404 although search engines still
-# listed it; three legacy articles point to the page that now answers the same question instead of the generic /blog/
-# (their /2023/* and /2024/* splats used to take two hops via /blog).
-/insights                                      /blog/                               301
-/insights/                                     /blog/                               301
-/2023/11/20/different-pricing-models-used-by-it-companies/          /managed-it-services-pricing-los-angeles        301
-/2023/11/20/different-pricing-models-used-by-it-companies           /managed-it-services-pricing-los-angeles        301
-/2024/01/02/mistakes-to-avoid-when-choosing-a-helpdesk-provider/    /how-to-choose-managed-it-provider-los-angeles  301
-/2024/01/02/mistakes-to-avoid-when-choosing-a-helpdesk-provider     /how-to-choose-managed-it-provider-los-angeles  301
-/2024/01/02/costa-mesa-manufacturing-company-modernizes-with-the-cloud/   /cloud-services                           301
-/2024/01/02/costa-mesa-manufacturing-company-modernizes-with-the-cloud    /cloud-services                           301
+# Needs owner approval before release (Phase G map: seo/reports/program/phase-g/redirect-map-2026-11-25.md).
+# 2026-11-25 Legacy WordPress URLs (2023-2026 site) -> the most relevant current page, URL by URL.
+# Replaces the /2023/* /2024/* /author/* /category/* -> /blog splats. Both slash forms: Pages static rules are exact.
+# -- Insights index (staged 2026-11-25; the WordPress 'ProLink Insights' page)
+/insights/                                                              /blog/                                            301
+/insights                                                               /blog/                                            301
+
+# -- WordPress posts at their dated permalinks (replaces the /2023/* and /2024/* splats)
+/2023/11/20/cutting-it-costs-with-automation-and-remote-monitoring/     /managed-it-services                              301
+/2023/11/20/cutting-it-costs-with-automation-and-remote-monitoring      /managed-it-services                              301
+/2023/11/20/different-pricing-models-used-by-it-companies/              /managed-it-services-pricing-los-angeles          301
+/2023/11/20/different-pricing-models-used-by-it-companies               /managed-it-services-pricing-los-angeles          301
+/2023/11/20/five-minutes-to-better-it-security/                         /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/2023/11/20/five-minutes-to-better-it-security                          /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/2023/11/20/how-law-firms-can-secure-sensitive-data-with-cloud-based-cybersecurity-solutions/  /law-firm-it-services-los-angeles                 301
+/2023/11/20/how-law-firms-can-secure-sensitive-data-with-cloud-based-cybersecurity-solutions  /law-firm-it-services-los-angeles                 301
+/2023/11/20/the-role-of-it-managed-services-in-business-growth/         /managed-it-services                              301
+/2023/11/20/the-role-of-it-managed-services-in-business-growth          /managed-it-services                              301
+/2024/01/02/costa-mesa-manufacturing-company-modernizes-with-the-cloud/  /cloud-services                                   301
+/2024/01/02/costa-mesa-manufacturing-company-modernizes-with-the-cloud  /cloud-services                                   301
+/2024/01/02/five-cybersecurity-threats-every-california-business-should-plan-for/  /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/2024/01/02/five-cybersecurity-threats-every-california-business-should-plan-for  /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/2024/01/02/mistakes-to-avoid-when-choosing-a-helpdesk-provider/        /how-to-choose-managed-it-provider-los-angeles    301
+/2024/01/02/mistakes-to-avoid-when-choosing-a-helpdesk-provider         /how-to-choose-managed-it-provider-los-angeles    301
+/2024/01/02/prolink-help-irvine-health-clinic-reduce-help-desk-ticket-resolution-times-by-62-percent/  /blog/2026-07-25-t13-it-support-for-healthcare-clinics-in-los-angeles  301
+/2024/01/02/prolink-help-irvine-health-clinic-reduce-help-desk-ticket-resolution-times-by-62-percent  /blog/2026-07-25-t13-it-support-for-healthcare-clinics-in-los-angeles  301
+/2024/01/02/prolink-stops-ransomware-attack-on-corona-ca-law-firm/      /blog/2026-07-23-t12-ransomware-protection-for-los-angeles-law-firms  301
+/2024/01/02/prolink-stops-ransomware-attack-on-corona-ca-law-firm       /blog/2026-07-23-t12-ransomware-protection-for-los-angeles-law-firms  301
+/2024/01/02/restaurant-group-reduces-it-spend-by-38-percent-with-prolink/  /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/2024/01/02/restaurant-group-reduces-it-spend-by-38-percent-with-prolink  /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+
+# -- The same posts at their 2023 root-level permalinks (404 today)
+/costa-mesa-manufacturing-company-modernizes-with-the-cloud/            /cloud-services                                   301
+/costa-mesa-manufacturing-company-modernizes-with-the-cloud             /cloud-services                                   301
+/cutting-it-costs-with-automation-and-remote-monitoring/                /managed-it-services                              301
+/cutting-it-costs-with-automation-and-remote-monitoring                 /managed-it-services                              301
+/different-pricing-models-used-by-it-companies/                         /managed-it-services-pricing-los-angeles          301
+/different-pricing-models-used-by-it-companies                          /managed-it-services-pricing-los-angeles          301
+/five-cybersecurity-threats-every-california-business-should-plan-for/  /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/five-cybersecurity-threats-every-california-business-should-plan-for   /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/five-minutes-to-better-it-security/                                    /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/five-minutes-to-better-it-security                                     /blog/2026-06-t3-cybersecurity-threats-targeting-southern-california-bus  301
+/health-clinic-ticket-reduction-times/                                  /blog/2026-07-25-t13-it-support-for-healthcare-clinics-in-los-angeles  301
+/health-clinic-ticket-reduction-times                                   /blog/2026-07-25-t13-it-support-for-healthcare-clinics-in-los-angeles  301
+/how-law-firms-can-secure-sensitive-data-with-cloud-based-cybersecurity-solutions/  /law-firm-it-services-los-angeles                 301
+/how-law-firms-can-secure-sensitive-data-with-cloud-based-cybersecurity-solutions  /law-firm-it-services-los-angeles                 301
+/law-firm-ransomware-attack/                                            /blog/2026-07-23-t12-ransomware-protection-for-los-angeles-law-firms  301
+/law-firm-ransomware-attack                                             /blog/2026-07-23-t12-ransomware-protection-for-los-angeles-law-firms  301
+/mistakes-to-avoid-when-choosing-a-helpdesk-provider/                   /how-to-choose-managed-it-provider-los-angeles    301
+/mistakes-to-avoid-when-choosing-a-helpdesk-provider                    /how-to-choose-managed-it-provider-los-angeles    301
+/restaurant-group-reduces-it-spend-by-38-percent-with-prolink/          /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/restaurant-group-reduces-it-spend-by-38-percent-with-prolink           /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/the-role-of-it-managed-services-in-business-growth/                    /managed-it-services                              301
+/the-role-of-it-managed-services-in-business-growth                     /managed-it-services                              301
+
+# -- WordPress listings with a real successor (replaces the /category/* splat for the one category with impressions)
+/blog/page/2/                                                           /blog/                                            301
+/blog/page/2                                                            /blog/                                            301
+/category/industries/                                                   /blog/                                            301
+/category/industries                                                    /blog/                                            301
+
+# -- 2023 agency-built pages and industry drafts (404 today)
+/about-prolink-systems/                                                 /about                                            301
+/about-prolink-systems                                                  /about                                            301
+/contact-prolink-systems/                                               /contact                                          301
+/contact-prolink-systems                                                /contact                                          301
+/food-and-drink/                                                        /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/food-and-drink                                                         /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/manufacturing-copy/                                                    /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/manufacturing-copy                                                     /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
+/startups/                                                              /technology-it-services                           301
+/startups                                                               /technology-it-services                           301
+
+# -- Old URLs whose splat lands on a weaker page than an exact successor (static rules win over the splats)
+/disaster-recovery-and-data-backup/managed-it-services-long-beach       /managed-it-services-long-beach                   301
+/disaster-recovery-and-data-backup/managed-it-services-long-beach/      /managed-it-services-long-beach                   301
+/managed-it-services-2/blog/healthcare-it-services                      /healthcare-it-services                           301
+/managed-it-services-2/blog/healthcare-it-services/                     /healthcare-it-services                           301
+/managed-it-services-2/cloud-services/cloud-backup-and-disaster-recovery/  /backup-disaster-recovery                         301
+/managed-it-services-2/cloud-services/cloud-backup-and-disaster-recovery  /backup-disaster-recovery                         301
+/managed-it-services-2/cloud-services/cloud-office-365/                 /microsoft-365-support-los-angeles                301
+/managed-it-services-2/cloud-services/cloud-office-365                  /microsoft-365-support-los-angeles                301
+/managed-it-services-2/it-help-desk                                     /it-help-desk                                     301
+/managed-it-services-2/it-help-desk/                                    /it-help-desk                                     301
+/managed-it-services-2/managed-it-services-west-hills                   /managed-it-services-west-hills                   301
+/managed-it-services-2/managed-it-services-west-hills/                  /managed-it-services-west-hills                   301
+/managed-it-services-2/waste-management-it-services                     /waste-management-it-services                     301
+/managed-it-services-2/waste-management-it-services/                    /waste-management-it-services                     301
+/privacy-policy/managed-it-services-encino                              /managed-it-services-encino                       301
+/privacy-policy/managed-it-services-encino/                             /managed-it-services-encino                       301
+
+# -- 2014 page with a Bing-recorded inbound link (404 today)
+/network-monitoring-service/                                            /network-support-los-angeles                      301
+/network-monitoring-service                                             /network-support-los-angeles                      301
 
 # ===========================================================================
 # DYNAMIC RULES (splats / placeholders) -- keep them all BELOW every static rule.
@@ -208,10 +292,10 @@
 /sign-up-now/*                       /contact                             301
 /office-365-migration-service/*      /microsoft-365-support-los-angeles   301
 /entertainment-companies/*           /entertainment-it-services           301
-/hospitality-companies/*             /managed-it-services                 301
+/hospitality-companies/*             /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
 /manufacturing-companies/*           /manufacturing-it-services           301
 /healthcare-institutions/*           /healthcare-it-services              301
-/restaurants-bars-and-clubs/*        /entertainment-it-services           301
+/restaurants-bars-and-clubs/*        /blog/2026-06-27-t90-it-and-cybersecurity-for-los-angeles-restaurants-and-ho  301
 /socal-startups/*                    /technology-it-services              301
 /cloud-and-infrastructure/*          /cloud-services                      301
 /cloud-management-services/*         /cloud-services                      301
@@ -220,10 +304,6 @@
 /managed-it-services-2/it-support/*            /it-help-desk                        301
 /managed-it-services-2/*                       /managed-it-services                 301
 /solutions/*                                   /managed-it-services                 301
-/2023/*                                        /blog/                               301
-/2024/*                                        /blog/                               301
-/author/*                                      /blog/                               301
-/category/*                                    /blog/                               301
 /helpdesk*                                     /it-help-desk                        301
 /24*                                           /it-help-desk                        301
 /desktop-support*                              /it-help-desk                        301
