@@ -1,8 +1,8 @@
 {
  "_comment": "Runtime mirror of the owner-confirmed facts in C:\\googleads\\cmo\\verified-facts.json. GitHub Actions cannot see that repo, so the publishable subset is mirrored here. THIS IS THE ONLY SOURCE OF NUMBERS the automated social pipeline may cite about Pro Link Systems. If a claim is not in this file and has no named external primary source in the brief, the post must make its argument without a number. Sync direction is one-way: cmo/verified-facts.json -> here, by hand, after Brian confirms.",
- "version": 1,
- "synced_from": "cmo/verified-facts.json 2026-11-23",
- "last_synced": "2026-11-23",
+ "version": 2,
+ "synced_from": "cmo/verified-facts.json 2026-11-25",
+ "last_synced": "2026-11-25",
  "citable": [
   {
    "id": "F001",
@@ -61,6 +61,16 @@
    "id": "F017",
    "claim": "Pro Link Systems provides same-day on-site support when needed.",
    "publishing_rule": "Always 'when needed' / 'if needed' — never a promise that every request gets a same-day visit."
+  },
+  {
+   "id": "F018",
+   "claim": "Pro Link Systems plans and carries out cloud and Azure migrations for its clients.",
+   "publishing_rule": "Capability only. Never describe a specific client's migration in automated content, and add no figures (downtime, savings, user counts)."
+  },
+  {
+   "id": "F019",
+   "claim": "Pro Link Systems is a member of the West Valley · Warner Center Chamber of Commerce.",
+   "publishing_rule": "Membership only. Never imply the Chamber endorses, certifies, ranks or recommends Pro Link Systems, and never use the Chamber's seal or logo."
   }
  ],
  "blocked_from_automation": [
