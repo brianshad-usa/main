@@ -818,5 +818,20 @@ that I would like to host on our site similarly". Every app follows this one pat
   `#organization` node. Not in `sameAs` (that list is for profiles that identify Pro Link itself).
 - **Facts mirror:** `editorial/verified_facts.json` v2 adds F018 (cloud and Azure migrations, capability only) and F019,
   synced by hand from `cmo/verified-facts.json` v9 after Brian's 2026-11-25 confirmations; it ships with this branch.
+- **Call flow (Phase G, owner-verified 2026-11-25):** calls in business hours (Mon-Fri 9 AM-5 PM Pacific) are answered
+  by our in-house, US-based team; after hours a short phone prompt reaches on-call support; 24/7 response availability is
+  for managed-services clients; 15-minute average ticket first response. Never imply every call reaches an engineer
+  immediately, never "24/7 live", never name the answering service. `site_guard.py` check 20 (CALL_FLOW_PATTERNS) enforces
+  it on site pages (Insights articles excluded; client quotes in `<blockquote>` are the client's words). The same rules
+  are in `gen_location_pages.py`, `social_graphic.py`, `social_variety.py`, `generate_gbp_post.py` and the facts mirror
+  (F001 scoped).
+- **Business entity:** every LocalBusiness/ProfessionalService node uses `"@id": "https://prolinksystems.com/#business"`
+  with `"parentOrganization": {"@id": "https://prolinksystems.com/#organization"}` and the Woodland Hills NAP only (the
+  one physical location; never a node per city). `sameAs` uses the canonical profile URLs
+  (clutch.co/profile/pro-link-systems, cloudtango.net/providers/8076/pro-link-systems).
+- **Legacy redirects:** URL by URL to the most relevant current page, both slash forms (Pages static rules match exactly);
+  never blanket directory redirects to the hub or the homepage. `/2023/*`, `/2024/*`, `/author/*`, `/category/*` were
+  retired on purpose (RETIRED_WILDCARDS in `chrome/golive_check.py`); unmapped legacy URLs 404. Map and evidence:
+  war-room `seo/reports/program/phase-g/redirect-map-2026-11-25.md`.
 - **Reports and data stay private:** the program report, baseline and audits live in the war-room repo
   (`seo/reports/program/`, `seo/baseline/`), never in this public repo.
