@@ -253,9 +253,12 @@ fail-safe and measured; keep them that way:
 - **Turnstile siteverify never sends `remoteip`** (an IP that differs between the
   widget and the POST — iCloud Private Relay, mobile, corporate proxies — must not
   cost a lead). No token / forged token (`invalid-input-response`) → rejected.
-  Stale token (`timeout-or-duplicate`), `internal-error`, or Cloudflare unreachable
-  → the lead still goes to info@ as **`[UNVERIFIED] New Contact Form Submission…`**
-  with NO visitor confirmation (keeps the path useless for relay abuse).
+  **Expired or already-used token (`timeout-or-duplicate`) → rejected (2026-11-26)**: the
+  form resets its widget and the visitor presses Send again. (Until 11-26 it fell back to
+  `[UNVERIFIED]`, which let one solved token be replayed into unlimited notifications; it
+  never fired for a real lead.) `internal-error` or Cloudflare unreachable → the lead still
+  goes to info@ as **`[UNVERIFIED] New Contact Form Submission…`** with NO visitor
+  confirmation (keeps the path useless for relay abuse).
 - **Turnstile hostname + action, rate limits (2026-11-26, Phase G security closeout).** The site
   key also works on `plsmain.pages.dev` and every preview / old-deployment subdomain, so
   `/api/contact` accepts a token **only on the host it was solved on** (prolinksystems.com and
@@ -266,9 +269,13 @@ fail-safe and measured; keep them that way:
   `[UNVERIFIED]` / hour**. Each token is processed once (a repeat gets the same reference and
   sends nothing; a refused token stays refused, 24 h). Visitor confirmations: **max 2 per address
   per day**, none when the name / company / phone / service field holds a link or an address,
-  echoed fields clipped. Counters live in the data center's Cache API plus per-isolate memory,
-  no binding needed, and **fail open**. The Free-plan WAF rate-limiting rule (1 rule: path
-  `/api/contact`, per IP, 10 s) is the optional edge shield, set in the dashboard by Brian.
+  echoed fields clipped. **Counters + token claims:** with a D1 database bound as
+  **`CONTACT_DB`** (Pages > Settings > Bindings > D1; tables created on first use) they are
+  exact and global. Without it they live in the data center's Cache API plus per-isolate
+  memory, which is **per data center and approximate under concurrency** (proven in workerd:
+  one IP over two data centers got 10 of 10 through). Cloudflare's WAF rate limiting is per
+  data center too. Every store **fails open**. The Free-plan WAF rule (1 rule: path
+  `/api/contact`, per IP, 10 s) is the optional edge burst shield, set by Brian.
   **Tests: `node --test tests/contact.test.mjs`** (Turnstile, Graph and the Cache API mocked).
 - **Old deployments keep their old code and credentials.** Every Cloudflare Pages deployment
   stays reachable at `<hash>.plsmain.pages.dev` with the Functions and environment variables it
