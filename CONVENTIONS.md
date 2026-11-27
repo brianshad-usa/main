@@ -250,38 +250,51 @@ fail-safe and measured; keep them that way:
 - **Cache-buster:** pages load `/contact-form.js?v=YYYYMMDD`. Browsers keep the script
   for 24 h + 7 d stale (`_headers`), so **bump `?v=` on all 15 pages whenever
   `contact-form.js` changes** — an unversioned reference fails check 19.
-- **Turnstile siteverify never sends `remoteip`** (an IP that differs between the
-  widget and the POST — iCloud Private Relay, mobile, corporate proxies — must not
-  cost a lead). No token / forged token (`invalid-input-response`) → rejected.
-  **Expired or already-used token (`timeout-or-duplicate`) → rejected (2026-11-26)**: the
-  form resets its widget and the visitor presses Send again. (Until 11-26 it fell back to
-  `[UNVERIFIED]`, which let one solved token be replayed into unlimited notifications; it
-  never fired for a real lead.) `internal-error` or Cloudflare unreachable → the lead still
-  goes to info@ as **`[UNVERIFIED] New Contact Form Submission…`** with NO visitor
-  confirmation (keeps the path useless for relay abuse).
-- **Turnstile hostname + action, rate limits (2026-11-26, Phase G security closeout).** The site
-  key also works on `plsmain.pages.dev` and every preview / old-deployment subdomain, so
-  `/api/contact` accepts a token **only on the host it was solved on** (prolinksystems.com and
-  www count as one). Every lead-form widget carries **`data-action="contact"`** (the checkout's
-  is `checkout`; **enforced by check 19**, emitted by `gen_location_pages.py`); any other action
-  is refused, and an unlabeled token (a page opened before a release) only gets the
-  `[UNVERIFIED]` path. Limits per IP (IPv6 per /64): **5 POSTs / 10 min and 20 / day; 2
-  `[UNVERIFIED]` / hour**. Each token is processed once (a repeat gets the same reference and
-  sends nothing; a refused token stays refused, 24 h). Visitor confirmations: **max 2 per address
-  per day**, none when the name / company / phone / service field holds a link or an address,
-  echoed fields clipped. **Counters + token claims:** with a D1 database bound as
-  **`CONTACT_DB`** (Pages > Settings > Bindings > D1; tables created on first use) they are
-  exact and global. Without it they live in the data center's Cache API plus per-isolate
-  memory, which is **per data center and approximate under concurrency** (proven in workerd:
-  one IP over two data centers got 10 of 10 through). Cloudflare's WAF rate limiting is per
-  data center too. Every store **fails open**. The Free-plan WAF rule (1 rule: path
-  `/api/contact`, per IP, 10 s) is the optional edge burst shield, set by Brian.
-  **Tests: `node --test tests/contact.test.mjs`** (Turnstile, Graph and the Cache API mocked).
+- **Nothing is emailed unless Turnstile fully passes (2026-11-27, Phase G final security
+  release).** Full pass = siteverify `success`, the token was solved **on this host**
+  (prolinksystems.com and www count as one; the site key also works on `plsmain.pages.dev` and
+  every preview / old-deployment subdomain), and its action is **`contact`**. Every lead-form
+  widget carries **`data-action="contact"`** (the checkout's is `checkout`; **enforced by check
+  19**, emitted by `gen_location_pages.py`). Everything else sends nothing and returns a retry
+  message the form shows (and resets its widget): no / forged token → 400 "Verification
+  failed"; expired or used (`timeout-or-duplicate`) → 400 "press Send again"; unlabeled token
+  (a page opened before a release) → 400 "reload the page"; another host or action → 400;
+  `invalid-input-secret` / `missing-input-secret` (e.g. a deployment left with a rotated key),
+  `internal-error`, Cloudflare unreachable or a non-JSON reply → 503 "try again in a minute,
+  or call". **There is no `[UNVERIFIED]` fallback any more** (11-09 to 11-27 it let a replayed
+  token or a Cloudflare error through to info@; it never carried a real lead). siteverify never
+  sends `remoteip` (an IP that differs between widget and POST must not cost a lead). The form
+  is validated **before** the token is spent, and a token longer than 2048 characters is refused.
+- **D1 is required: `CONTACT_DB`** (Pages > Settings > Bindings > D1 database; tables created on
+  first use). Without the binding `/api/contact` answers "Server not configured." Each verified
+  submission is written in **one atomic batch**: its token (one token = at most one lead,
+  worldwide; a repeat gets the same reference and sends nothing), its IP count (**5 per 10 min,
+  20 per day**, IPv6 per /64) and its address's confirmation count (**max 2 per day**). D1 runs
+  every statement on one primary, so the limits are exact across data centers and under
+  concurrency (proven in workerd: 5 of 16 concurrent over two data centers). **Only verified
+  submissions write to D1** (junk can't burn the quota); every POST is first throttled per IP in
+  the data center (**10 per 10 min**, memory + Cache API). Cache-only counting is per data
+  center (one IP over two data centers got 10 of 10 through in workerd), and so is Cloudflare's
+  WAF rate limiting. **D1 outage** (binding present, queries failing or slower than 5 s):
+  `CONTACT_DB_OUTAGE_MODE` = `degrade` (default: the verified lead still reaches info@, per-IP
+  counting falls back to the data center, **no confirmation to the typed address**, the
+  notification says so) or `refuse` (503, nothing sent). `GET /api/contact?health=1` →
+  `{ok, version, store}`, sends nothing (release checks). Visitor confirmations are also skipped
+  when the name / company / phone / service field holds a link or an address (the reply then
+  carries `confirmation: false`); echoed fields are clipped.
+  **Tests: `node --test tests/contact.test.mjs`** (D1 = real SQLite via `node:sqlite`, Node 22.5+;
+  Turnstile, Graph and the Cache API mocked).
 - **Old deployments keep their old code and credentials.** Every Cloudflare Pages deployment
   stays reachable at `<hash>.plsmain.pages.dev` with the Functions and environment variables it
-  was built with, so a new protection only covers new deployments. Pre-2026-09-22 deployments
-  still serve the retired EmailJS / Web3Forms forms (inert since Brian removed both providers on
-  2026-11-26).
+  was built with, so a new protection only covers new deployments. Pages has **no automatic
+  retention**: on 2026-11-27 Cloudflare listed all 911 deployments since the project was created
+  (2026-05-15). Pre-2026-09-22 deployments still serve the retired EmailJS / Web3Forms forms
+  (inert since Brian removed both providers on 2026-11-26). The containment for old `/api/contact`
+  versions is **rotating the Turnstile secret** (every version refuses `invalid-input-secret`,
+  proven against the byte-identical files), then optionally deleting old deployments with the
+  war-room tool `seo/reports/program/phase-g/delete-old-pages-deployments.py` (dry run first).
+  After a rotation, update `TURNSTILE_SECRET_KEY` for **Production** and redeploy within the
+  2-hour overlap; never roll back to a deployment built before the rotation.
 - Every notification carries **"How they found us"** (channel, landing page, first
   referrer, UTMs, gclid/msclkid, approx. location, device) from the session's first
   touch (`sessionStorage.pls_first_touch`, written by both form scripts).
@@ -290,7 +303,8 @@ fail-safe and measured; keep them that way:
   The SEO-intel collector stores `ga4.form_funnel_7d`; the engine raises
   `LEADS-form-failing` when attempts ≥ 3 with 0 leads, or errors ≥ 3, in 7 days.
 - Function logs one JSON line per submission (`evt: "contact"`, outcome, reason/codes,
-  page, ref, channel) → Cloudflare Pages → Functions → real-time logs.
+  store, page, ref, channel; never the IP or the email) → Cloudflare Pages → Functions →
+  real-time logs.
 - Both form scripts **wait up to 8 s for the Turnstile token** before complaining.
 - Any form/handler/Function change: test in a scratch copy, run `site_guard.py` and
   `node --test tests/contact.test.mjs`, then a **human** submit on mobile (cellular) +
