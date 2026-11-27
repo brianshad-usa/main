@@ -6,76 +6,78 @@
  * as info@ to any recipient (the abuse that filled Sent Items with 279
  * unsolicited "inquiry received" messages).
  *
- * Security model:
- *   - Cloudflare Turnstile token is verified server-side on every submission.
- *     No token, or a malformed/forged one => no send. This is what kills the
- *     relay abuse. (We do NOT send `remoteip`: it is optional, and an IP that
- *     differs between the widget and this POST — iCloud Private Relay, mobile
- *     and corporate networks — must never cost us a real lead.)
- *   - Fail-safe for humans (added 2026-11-09, narrowed 2026-11-26): if Cloudflare
- *     itself errored ("internal-error" / siteverify unreachable), the internal
- *     notification still goes to info@ marked [UNVERIFIED] — but NO visitor
- *     confirmation is sent, so this path can never be used to relay mail to
- *     third parties. An expired or already-used token is rejected.
+ * Security model (2026-11-27, Phase G final security release; every rule is
+ * tested in tests/contact.test.mjs):
+ *   - NOTHING is emailed unless Cloudflare Turnstile fully passes: siteverify
+ *     says success, the token was solved on this host (prolinksystems.com and
+ *     www count as one; the site key also works on plsmain.pages.dev and every
+ *     preview / old-deployment subdomain of it), and it came from a lead-form
+ *     widget (data-action="contact", site_guard check 19). Any other outcome —
+ *     no token, a forged / expired / already-used token, another host, another
+ *     widget (the checkout's "checkout"), a page opened before the widgets were
+ *     labeled, a Turnstile secret Cloudflare rejects, Cloudflare erroring or
+ *     unreachable — sends nothing and tells the visitor how to retry. (The
+ *     2026-11-09 [UNVERIFIED] fallback was removed 2026-11-27.) We do NOT send
+ *     `remoteip`: an IP that differs between the widget and this POST (iCloud
+ *     Private Relay, mobile and corporate networks) must never cost a real lead.
+ *   - A D1 database bound as CONTACT_DB is REQUIRED; without the binding the
+ *     endpoint answers "Server not configured." (fail closed). Each verified
+ *     submission is recorded there in ONE atomic batch: its token (one token =
+ *     at most one lead, worldwide), the count for its IP (IPv6 per /64) and the
+ *     count of confirmations to its address. D1 runs every statement on a single
+ *     primary, so these limits are exact across data centers and concurrent
+ *     requests. Only Turnstile-verified submissions write to D1, so junk traffic
+ *     can't exhaust the D1 quota; every POST is first throttled per IP in this
+ *     data center (memory + Cache API, no D1).
+ *   - D1 OUTAGE (binding present, queries failing) — CONTACT_DB_OUTAGE_MODE:
+ *       "degrade" (default): the verified lead still reaches info@, the per-IP
+ *         limit falls back to this data center's counters, and NO confirmation
+ *         goes to the typed address (an outage can't be used to mail third
+ *         parties); the notification says so.
+ *       "refuse": nothing is sent; the visitor is asked to call or retry.
+ *     Siteverify's own once-per-token rule applies in both modes.
+ *   - Visitor confirmations are capped per address, skipped when an echoed field
+ *     holds link-like text, and their echoed fields are clipped.
  *   - A hidden honeypot field ("botcheck") silently drops obvious bots.
- *   - All sending happens here with credentials that live ONLY in Pages env
- *     vars (never in page source). The recipient of the confirmation is the
- *     submitter, but the endpoint is un-spammable without a Turnstile token.
- *   - Every user-supplied value is HTML-escaped before being placed in email
- *     bodies, so form input can't inject markup/links into the messages.
- *   - 2026-11-26 (Phase G security closeout), all tested in tests/contact.test.mjs:
- *       * HOSTNAME: a token is only accepted on the host it was solved on
- *         (prolinksystems.com and www count as one). The site key also works on
- *         plsmain.pages.dev and every preview / old-deployment subdomain of it,
- *         so this stops a token solved there from being spent on production.
- *       * ACTION: the lead-form widgets carry data-action="contact". A token with
- *         any other action (the checkout's "checkout") is refused; an unlabeled
- *         token (a page opened before the widgets were labeled) takes the
- *         [UNVERIFIED] path, so no real lead is lost.
- *       * RATE LIMITS per IP (IPv6 per /64): every POST, and [UNVERIFIED]
- *         notifications. Each token is processed once (a repeat gets the first
- *         reference and sends nothing). Visitor confirmations are capped per
- *         address and skipped when an echoed field holds link-like text.
- *         Counters + token claims: with a D1 database bound as CONTACT_DB they
- *         are exact and global (D1 runs every statement on one primary,
- *         atomically). Without it — or if D1 errors — they use this data
- *         center's cache + an exact per-isolate count: approximate, per data
- *         center. Either way they FAIL OPEN (a store error never blocks a
- *         visitor). The WAF rate-limiting rule is the edge burst shield.
+ *   - Credentials live ONLY in Pages env vars (never in page source). Every
+ *     user-supplied value is HTML-escaped before it goes into an email body.
+ *   - GET /api/contact?health=1 answers {ok, version, store} and sends nothing
+ *     (release checks: is this code live, is the configuration complete, does D1 answer).
  *
  * Mail is sent from info@ via Microsoft Graph (application permissions), the
  * same mailbox/app the review agent already uses — real DKIM/SPF/DMARC, no
  * third-party relay, no per-email quota.
  *
- * Required Pages environment variables (Settings -> Environment variables):
+ * Required Pages configuration (Production):
  *   MS_TENANT_ID          Azure AD tenant id
  *   MS_CLIENT_ID          App registration (client) id  [needs Mail.Send app perm]
  *   MS_CLIENT_SECRET      App client secret              [mark as "Secret"/encrypted]
  *   SEND_FROM             Sending mailbox, e.g. info@prolinksystems.com
  *   TURNSTILE_SECRET_KEY  Cloudflare Turnstile secret    [mark as "Secret"/encrypted]
+ *   CONTACT_DB            D1 database binding (Settings -> Bindings -> D1 database).
+ *                         The two tables are created on first use.
  * Optional:
  *   LEAD_NOTIFY           Where internal lead notifications go (default: SEND_FROM)
+ *   CONTACT_DB_OUTAGE_MODE  "degrade" (default) or "refuse" — see above.
  *   TURNSTILE_ALLOWED_HOSTNAMES  Extra token hostnames accepted on any host, comma-separated.
  *                         Local testing only (Turnstile's dummy keys report "example.com");
  *                         never set it in Production.
- *   CONTACT_DB            D1 database binding (Settings -> Bindings -> D1). Makes the rate
- *                         limits and the once-per-token rule exact and global. The two
- *                         tables are created on first use; nothing else to set up.
  */
 
 const GRAPH = "https://graph.microsoft.com/v1.0";
+const SITEVERIFY = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+const VERSION = "2026-11-27";      // reported by GET /api/contact?health=1 (release checks)
 // Core fields every form must carry AFTER alias normalization. Everything else
 // (last name, phone, company, message) is optional: an email is enough to follow
 // up, and every extra required field costs leads (phone was required until
 // 2026-11-09).
 const REQUIRED = ["first_name", "email"];
-// Siteverify outcomes that mean "Cloudflare hiccupped", not "this is a bot" — these fall back to an
-// [UNVERIFIED] notification. 2026-11-26: an expired or already-used token ("timeout-or-duplicate")
-// is REJECTED (the form resets its widget and the visitor presses Send again); it used to fall back
-// too, which let one solved token be replayed into unlimited notifications. In the 11-09..11-26
-// period the fallback never fired for a real lead (info@ holds no [UNVERIFIED] notification).
-const SOFT_FAIL_CODES = ["internal-error"];
-const EXPIRED = "The robot check expired or was already used. Please press Send again.";
+const ENV_REQUIRED = ["MS_TENANT_ID", "MS_CLIENT_ID", "MS_CLIENT_SECRET", "SEND_FROM", "TURNSTILE_SECRET_KEY"];
+const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+// Siteverify failures that are OUR side or Cloudflare's (a rejected / missing secret, Cloudflare erroring or
+// unreachable), not the visitor's: nothing is sent and the visitor is asked to retry shortly or call (503).
+// 2026-11-27: these used to fall back to an [UNVERIFIED] notification to info@; that path is gone.
+const SERVER_SIDE = ["invalid-input-secret", "missing-input-secret", "internal-error", "siteverify-unreachable", "bad-json"];
 // Attribution fields the form scripts add (contact-form.js / contact.html).
 const ATTRIBUTION = ["source_page", "page_url", "referrer", "landing_page", "first_referrer",
   "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid", "msclkid"];
@@ -84,17 +86,32 @@ const ATTRIBUTION = ["source_page", "page_url", "referrer", "landing_page", "fir
 const PROD_HOSTS = new Set(["prolinksystems.com", "www.prolinksystems.com"]);
 const ACTION = "contact";          // data-action on every lead-form widget (site_guard check 19)
 
-// Rate limits (2026-11-26). A real visitor sends 1–2 POSTs. win = seconds, max = allowed per window.
+// Rate limits. A real visitor sends 1–2 POSTs. win = seconds, max = allowed per window.
 const LIMITS = {
-  post: [{ win: 600, max: 5 }, { win: 86400, max: 20 }],   // every POST from one IP
-  unverified: [{ win: 3600, max: 2 }],                      // [UNVERIFIED] notifications from one IP
-  confirm: [{ win: 86400, max: 2 }],                        // visitor confirmations to one address
+  edge: [{ win: 600, max: 10 }],                             // every POST from one IP, this data center (no D1)
+  sent: [{ win: 600, max: 5 }, { win: 86400, max: 20 }],    // verified submissions from one IP, global (D1)
+  confirm: [{ win: 86400, max: 2 }],                         // visitor confirmations to one address, global (D1)
 };
-const TOKEN_TTL = 86400;           // seconds a processed or refused token is remembered (tokens live 300 s)
+const TOKEN_TTL = 86400;           // seconds a used token's outcome is remembered (tokens live 300 s)
 const PENDING_TTL = 120;           // seconds a token counts as "being processed"
-const REFUSED = "!refused";        // marker: solved on another host / for another widget; never accepted
-const VERIFY_FAILED = "Verification failed — please retry the challenge.";
-const TOO_MANY = "Too many attempts from your network. Please wait a few minutes and try again, or call 1-800-890-6133.";
+const D1_TIMEOUT_MS = 5000;        // a D1 call slower than this counts as an outage (D1's own limit is 30 s)
+
+// What the visitor reads (contact-form.js and contact.html show `message` and reset the robot check).
+// "Server not configured." and "Verification failed" are also what the release probes look for.
+const MSG = {
+  invalid: "Invalid request.",
+  config: "Server not configured.",
+  verify: "Verification failed — please retry the challenge.",
+  expired: "The robot check expired or was already used. Please press Send again.",
+  reload: "This page has been updated. Please reload it, then send your message again.",
+  unavailable: "We couldn't complete the robot check just now. Please try again in a minute, or call 1-800-890-6133.",
+  storeDown: "Our contact form is temporarily unavailable. Please try again in a few minutes, or call 1-800-890-6133.",
+  busy: "This form is already being sent. If no confirmation appears within a minute, please call 1-800-890-6133.",
+  tooMany: "Too many attempts from your network. Please wait a few minutes and try again, or call 1-800-890-6133.",
+  sendFail: "Could not send right now — please call 1-800-890-6133.",
+  missing: "Please enter your name and email address.",
+  email: "Please enter a valid email address.",
+};
 // Text a mail client would turn into a link (or an address). Real names, companies, phones and the service
 // dropdown practically never contain one; spam pushed through the visitor confirmation always does.
 const LINKISH = /https?:\/\/|www\.|@|\b[a-z0-9-]{2,}\.(?:com|net|org|info|biz|io|co|ru|cn|xyz|top|site|online|link|click|live|shop|app|me|us|uk)\b/i;
@@ -145,25 +162,22 @@ function makeRef() {
 }
 
 async function verifyTurnstile(secret, token) {
-  // Returns { ok, soft, codes, hostname, action }: ok = verified; soft = only a
-  // stale-token / Cloudflare-side failure (a human, not a bot). hostname/action
-  // come from a successful siteverify only. No remoteip — see header.
+  // Returns { ok, codes, hostname, action }. hostname/action come from a successful siteverify only.
+  // No remoteip — see header.
   try {
-    const body = new URLSearchParams({ secret, response: token || "" });
-    const r = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    const r = await fetch(SITEVERIFY, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body,
+      body: new URLSearchParams({ secret, response: token }),
     });
     const data = await r.json().catch(() => ({ success: false, "error-codes": ["bad-json"] }));
-    const codes = data["error-codes"] || [];
+    const codes = Array.isArray(data["error-codes"]) ? data["error-codes"].map(String) : [];
     if (data.success === true) {
-      return { ok: true, soft: false, codes, hostname: String(data.hostname || ""), action: String(data.action || "") };
+      return { ok: true, codes, hostname: String(data.hostname || ""), action: String(data.action || "") };
     }
-    return { ok: false, soft: codes.length > 0 && codes.every((c) => SOFT_FAIL_CODES.includes(c)), codes };
+    return { ok: false, codes: codes.length ? codes : ["unknown"] };
   } catch (e) {
-    // Network failure reaching Cloudflare: never the visitor's fault.
-    return { ok: false, soft: true, codes: ["siteverify-unreachable"] };
+    return { ok: false, codes: ["siteverify-unreachable"] };
   }
 }
 
@@ -179,10 +193,10 @@ function hostnameOk(tokenHost, requestHost, env) {
 }
 
 // ---------------------------------------------------------------------------
-// Counters for the rate limits and the once-per-token rule. Each key lives in an
-// exact in-memory map (this isolate) AND in this data center's cache, which every
-// isolate here shares; an abusive client normally stays on one data center. Every
-// cache call is wrapped: on any error the request simply goes ahead (fail open).
+// LOCAL counters (this isolate's memory, exact, plus this data center's cache,
+// shared by its isolates): the per-IP throttle on every POST, and the fallback
+// when D1 is unavailable ("degrade" mode). Every cache call is wrapped; a cache
+// error never blocks a visitor. The GLOBAL limits live in D1 (below).
 // ---------------------------------------------------------------------------
 const mem = new Map();             // key -> { n, exp, v }
 
@@ -242,17 +256,52 @@ function clientId(request) {
   return full.slice(0, 4).map((x) => x.padStart(4, "0")).join(":") + "::/64";
 }
 
+// Counts one event for `id` in every window of `rules`, locally (see above). Returns the first exceeded
+// window as { win, retry } (seconds), or null while within all limits. Never throws.
+async function localCount(origin, kind, id, rules) {
+  const now = nowSec();
+  let over = null;
+  for (const r of rules) {
+    const bucket = Math.floor(now / r.win);
+    const key = `${kind}-${r.win}-${bucket}-${id}`;
+    const exp = (bucket + 1) * r.win;
+    const m = mem.get(key);
+    const local = (m && m.exp > now ? m.n : 0) + 1;      // set before any await: exact inside this isolate
+    mem.set(key, { n: local, exp });
+    const shared = parseInt((await cacheGet(origin, key)) || "0", 10) || 0;
+    const n = Math.max(local, shared + 1);
+    const cur = mem.get(key);
+    if (cur && n > cur.n) cur.n = n;
+    await cachePut(origin, key, n, exp - now);
+    if (n > r.max && !over) over = { win: r.win, retry: exp - now };
+  }
+  prune(now);
+  return over;
+}
+
 // ---------------------------------------------------------------------------
-// Optional GLOBAL store: a D1 database bound as CONTACT_DB. D1 runs every statement
-// on one primary, so an UPSERT ... RETURNING count is exact across data centers and
-// concurrent requests, and a token claim (INSERT ... ON CONFLICT DO NOTHING) succeeds
-// exactly once worldwide. Any D1 error falls back to cache + memory for that call.
+// GLOBAL store: the D1 database bound as CONTACT_DB (required). D1 runs every
+// statement on one primary, and a batch is one transaction, so an UPSERT ...
+// RETURNING count is exact across data centers and concurrent requests, and a
+// token claim succeeds exactly once worldwide.
 // ---------------------------------------------------------------------------
 let schemaReady = null;            // per isolate: creates the two tables once
 
 function d1(env) {
   const d = env && env.CONTACT_DB;
   return d && typeof d.prepare === "function" && typeof d.batch === "function" ? d : null;
+}
+
+function configured(env) {
+  return !!env && ENV_REQUIRED.every((k) => env[k]) && !!d1(env);
+}
+
+// Rejects when `p` takes longer than the D1 time limit (CONTACT_DB_TIMEOUT_MS overrides it; tests only).
+function inTime(p, env) {
+  const ms = Number(env && env.CONTACT_DB_TIMEOUT_MS) || D1_TIMEOUT_MS;
+  let t;
+  return Promise.race([p, new Promise((_, reject) => { t = setTimeout(() => reject(new Error("D1 timeout")), ms); })])
+    .finally(() => clearTimeout(t));
 }
 
 function ready(d) {
@@ -277,89 +326,69 @@ function sweep(env, context) {
   if (context && typeof context.waitUntil === "function") context.waitUntil(p);
 }
 
-// Claims a token for processing. Returns { claimed: true }, or { claimed: false, prior }
-// where prior is the reference already sent, "" while another request holds it, or REFUSED.
-async function claimToken(env, origin, tokenKey) {
+// Claims the token unless a live claim exists (an expired "pending" claim is taken over), atomically.
+const SQL_CLAIM = "INSERT INTO contact_token (h, v, exp) VALUES (?1, 'pending', ?2) " +
+  "ON CONFLICT(h) DO UPDATE SET v = 'pending', exp = excluded.exp WHERE contact_token.exp <= ?3 RETURNING v";
+const SQL_COUNT = "INSERT INTO contact_counter (k, n, exp) VALUES (?1, 1, ?2) ON CONFLICT(k) DO UPDATE SET n = n + 1 RETURNING n";
+
+// One atomic D1 batch for a Turnstile-verified submission: claim its token, count it for its IP and
+// for its address. Returns { claimed, ipOver, addrOver }; throws if D1 is unavailable.
+async function recordVerified(d, tokenKey, ipHash, addrHash) {
+  await ready(d);
   const now = nowSec();
-  const d = d1(env);
-  if (d) {
-    try {
-      await ready(d);
-      const ins = await d.prepare("INSERT INTO contact_token (h, v, exp) VALUES (?1, 'pending', ?2) ON CONFLICT(h) DO NOTHING RETURNING v")
-        .bind(tokenKey, now + PENDING_TTL).first();
-      if (ins) {
-        await cachePut(origin, tokenKey, "pending", PENDING_TTL);
-        return { claimed: true };
-      }
-      const row = await d.prepare("SELECT v, exp FROM contact_token WHERE h = ?1").bind(tokenKey).first();
-      if (row && Number(row.exp) <= now) {             // a stale claim: take it over
-        await d.prepare("UPDATE contact_token SET v = 'pending', exp = ?2 WHERE h = ?1").bind(tokenKey, now + PENDING_TTL).run();
-        return { claimed: true };
-      }
-      return { claimed: false, prior: row && row.v !== "pending" ? String(row.v) : "" };
-    } catch (e) { /* fall back to the data-center cache */ }
-  }
-  const shared = await cacheGet(origin, tokenKey);
-  if (shared) return { claimed: false, prior: shared === "pending" ? "" : shared };
-  await cachePut(origin, tokenKey, "pending", PENDING_TTL);
-  return { claimed: true };
+  const stmts = [d.prepare(SQL_CLAIM).bind(tokenKey, now + PENDING_TTL, now)];
+  const windows = [];
+  const count = (kind, id, rules) => {
+    for (const r of rules) {
+      const bucket = Math.floor(now / r.win);
+      windows.push({ kind, r, retry: (bucket + 1) * r.win - now });
+      stmts.push(d.prepare(SQL_COUNT).bind(`${kind}-${r.win}-${bucket}-${id}`, (bucket + 1) * r.win));
+    }
+  };
+  if (ipHash) count("sent", ipHash, LIMITS.sent);
+  count("confirm", addrHash, LIMITS.confirm);
+  const res = await d.batch(stmts);
+  const rows = (i) => (res && res[i] && Array.isArray(res[i].results) ? res[i].results : []);
+  const out = { claimed: rows(0).length > 0, ipOver: null, addrOver: null };
+  windows.forEach((w, i) => {
+    const row = rows(i + 1)[0];
+    if (!row || Number(row.n) <= w.r.max) return;
+    const over = { win: w.r.win, retry: w.retry };
+    if (w.kind === "sent" && !out.ipOver) out.ipOver = over;
+    if (w.kind === "confirm" && !out.addrOver) out.addrOver = over;
+  });
+  return out;
 }
 
-async function rememberToken(env, origin, tokenKey, value) {
-  const d = d1(env);
+// After the notification: a repeat of this token now gets this reference. Never throws.
+// useD1 = false while D1 is out (degrade mode): don't wait on it again.
+async function setToken(env, origin, tokenKey, value, useD1) {
+  const d = useD1 ? d1(env) : null;
   if (d) {
-    try { await d.prepare("UPDATE contact_token SET v = ?2, exp = ?3 WHERE h = ?1").bind(tokenKey, value, nowSec() + TOKEN_TTL).run(); } catch (e) {}
+    try { await inTime(d.prepare("UPDATE contact_token SET v = ?2, exp = ?3 WHERE h = ?1").bind(tokenKey, value, nowSec() + TOKEN_TTL).run(), env); } catch (e) {}
   }
   await cachePut(origin, tokenKey, value, TOKEN_TTL);
 }
 
-async function releaseToken(env, origin, tokenKey) {
-  const d = d1(env);
+// Nothing was sent for this token: forget the claim. Never throws.
+async function dropToken(env, origin, tokenKey, useD1) {
+  const d = useD1 ? d1(env) : null;
   if (d) {
-    try { await d.prepare("DELETE FROM contact_token WHERE h = ?1").bind(tokenKey).run(); } catch (e) {}
+    try { await inTime(d.prepare("DELETE FROM contact_token WHERE h = ?1").bind(tokenKey).run(), env); } catch (e) {}
   }
   await cacheDelete(origin, tokenKey);
 }
 
-// Counts one event for `id` in every window of `rules`. Returns the first exceeded
-// window as { win, retry } (seconds), or null while within all limits.
-async function overLimit(env, origin, kind, id, rules) {
-  const now = nowSec();
+// What became of a token siteverify reports as already used: its reference, "pending", or "" (unknown).
+async function priorOutcome(env, origin, tokenKey) {
   const d = d1(env);
   if (d) {
     try {
-      await ready(d);
-      const res = await d.batch(rules.map((r) => {
-        const bucket = Math.floor(now / r.win);
-        return d.prepare("INSERT INTO contact_counter (k, n, exp) VALUES (?1, 1, ?2) ON CONFLICT(k) DO UPDATE SET n = n + 1 RETURNING n")
-          .bind(`${kind}-${r.win}-${bucket}-${id}`, (bucket + 1) * r.win);
-      }));
-      let over = null;
-      rules.forEach((r, i) => {
-        const row = res[i] && res[i].results && res[i].results[0];
-        const exp = (Math.floor(now / r.win) + 1) * r.win;
-        if (row && Number(row.n) > r.max && !over) over = { win: r.win, retry: exp - now };
-      });
-      return over;
-    } catch (e) { /* fall back to the data-center cache + memory */ }
+      const row = await inTime(d.prepare("SELECT v, exp FROM contact_token WHERE h = ?1").bind(tokenKey).first(), env);
+      if (row && Number(row.exp) > nowSec()) return String(row.v);
+    } catch (e) {}
   }
-  let over = null;
-  for (const r of rules) {
-    const bucket = Math.floor(now / r.win);
-    const key = `${kind}-${r.win}-${bucket}-${id}`;
-    const exp = (bucket + 1) * r.win;
-    const m = mem.get(key);
-    const local = (m && m.exp > now ? m.n : 0) + 1;      // set before any await: exact inside this isolate
-    mem.set(key, { n: local, exp });
-    const shared = parseInt((await cacheGet(origin, key)) || "0", 10) || 0;
-    const n = Math.max(local, shared + 1);
-    const cur = mem.get(key);
-    if (cur && n > cur.n) cur.n = n;
-    await cachePut(origin, key, n, exp - now);
-    if (n > r.max && !over) over = { win: r.win, retry: exp - now };
-  }
-  prune(now);
-  return over;
+  return (await cacheGet(origin, tokenKey)) || "";
 }
 
 function log(evt) {
@@ -423,20 +452,14 @@ function confirmationHtml(f0, ref) {
   return `<table style="background:#f0f4f9;padding:40px 20px"><tbody><tr><td><table style="max-width:600px;width:100%"><tbody><tr><td style="background:#0b3d6b;border-radius:12px 12px 0 0;padding:36px 48px;text-align:center"><div style="font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.5px">PRO LINK SYSTEMS</div><div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:5px;letter-spacing:1.5px;text-transform:uppercase">Managed IT  ·  Cybersecurity  ·  Cloud</div></td></tr><tr><td style="background:#fff;padding:48px 48px 40px;border:1px solid #dde5f0;border-top:none"><div style="text-align:center;margin-bottom:28px">✓  Inquiry Confirmed</div><h1 style="font-size:24px;font-weight:800;color:#0d1117;margin:0 0 14px;letter-spacing:-0.5px">You're in good hands, ${esc(f.first_name)}.</h1><p style="font-size:15px;color:#4a5568;line-height:1.7;margin:0 0 28px">Thank you for reaching out to Pro Link Systems. We've received your inquiry and a member of our team will contact you within <strong style="color:#0b3d6b">one business day</strong> to schedule your complimentary IT discovery call.</p><div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 24px;margin-bottom:32px;text-align:center"><div style="font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Confirmation Reference</div><div style="font-size:20px;font-weight:700;color:#0b3d6b;font-family:'Courier New',monospace;letter-spacing:3px">${esc(ref)}</div></div><div style="background:#f8fafc;border-left:3px solid #0b3d6b;border-radius:0 8px 8px 0;padding:20px 24px;margin-bottom:32px"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0b3d6b;margin-bottom:14px">Your Inquiry Summary</div><table><tbody><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0;width:90px">Name</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.first_name)} ${esc(f.last_name)}</td></tr><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0">Company</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.company)}</td></tr><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0">Phone</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.phone)}</td></tr><tr><td style="font-size:13px;color:#94a3b8;padding:3px 16px 3px 0">Service</td><td style="font-size:13px;color:#2d3748;font-weight:600">${esc(f.interest || "General inquiry")}</td></tr></tbody></table></div><div style="margin-bottom:36px"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d1117;margin-bottom:16px">What Happens Next</div><table><tbody><tr><td style="padding-bottom:14px"><table><tbody><tr><td style="vertical-align:top;padding-right:12px"><div style="width:26px;height:26px;background:rgba(11,61,107,0.08);border-radius:50%;text-align:center;line-height:26px;font-size:11px;font-weight:800;color:#0b3d6b">1</div></td><td style="font-size:13px;color:#4a5568;line-height:1.6;vertical-align:middle"><strong style="color:#1a202c">We review your inquiry.</strong> Your request is already with our team.</td></tr></tbody></table></td></tr><tr><td style="padding-bottom:14px"><table><tbody><tr><td style="vertical-align:top;padding-right:12px"><div style="width:26px;height:26px;background:rgba(11,61,107,0.08);border-radius:50%;text-align:center;line-height:26px;font-size:11px;font-weight:800;color:#0b3d6b">2</div></td><td style="font-size:13px;color:#4a5568;line-height:1.6;vertical-align:middle"><strong style="color:#1a202c">A specialist reaches out.</strong> Within 1 business day to schedule your free discovery call.</td></tr></tbody></table></td></tr><tr><td><table><tbody><tr><td style="vertical-align:top;padding-right:12px"><div style="width:26px;height:26px;background:rgba(11,61,107,0.08);border-radius:50%;text-align:center;line-height:26px;font-size:11px;font-weight:800;color:#0b3d6b">3</div></td><td style="font-size:13px;color:#4a5568;line-height:1.6;vertical-align:middle"><strong style="color:#1a202c">We assess your needs.</strong> No obligation — just an honest conversation about your IT environment.</td></tr></tbody></table></td></tr></tbody></table></div><div style="text-align:center;margin-bottom:36px"><a href="tel:18008906133" style="display:inline-block;background:#0b3d6b;color:#fff;text-decoration:none;padding:14px 36px;border-radius:8px;font-size:14px;font-weight:700">Need Help Now?  1-800-890-6133</a></div><div style="height:1px;background:#e5eaf2;margin-bottom:24px"></div><p style="font-size:12px;color:#94a3b8;line-height:1.6;margin:0;text-align:center">If you did not submit this form, please disregard this email.<br /><a href="mailto:info@prolinksystems.com" style="color:#0b3d6b;text-decoration:none;font-weight:600">info@prolinksystems.com</a>  ·  <a href="tel:18008906133" style="color:#0b3d6b;text-decoration:none;font-weight:600">1-800-890-6133</a></p></td></tr><tr><td style="background:#0b3d6b;border-radius:0 0 12px 12px;padding:24px 48px;text-align:center"><p style="font-size:11px;color:rgba(255,255,255,0.5);margin:0;line-height:1.7">© 2026 Pro Link Systems, Inc.  ·  21241 Ventura Blvd, Woodland Hills, CA 91364<br />Southern California's trusted managed IT partner since 1999.</p></td></tr></tbody></table></td></tr></tbody></table>`;
 }
 
-function notifyHtml(f, ref, page, attr, unverified, noConfirm) {
+function notifyHtml(f, ref, page, attr, noConfirm) {
   const row = (k, v) => `<tr><td style="padding:4px 16px 4px 0;color:#666">${esc(k)}</td><td style="font-weight:600">${esc(v)}</td></tr>`;
   const a = attr || {};
   const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].filter((k) => a[k]).map((k) => k.slice(4) + "=" + a[k]).join(" · ");
-  const box = (html) => `<div style="background:#fff7e6;border:1px solid #f5c26b;border-radius:6px;padding:10px 12px;margin:0 0 14px;color:#7a4b00">
-${html}</div>`;
-  const why = unverified === "unlabeled-widget"
-    ? "the form page was opened before the latest site update"
-    : `Cloudflare could not confirm the robot check (${esc(unverified)})`;
-  const banner = unverified
-    ? box(`<strong>Unverified:</strong> ${why}. Likely a real visitor &mdash; no confirmation email was sent to them, so reply personally.`)
-    : noConfirm
-      ? box(`<strong>No confirmation email was sent to this visitor</strong> (${esc(noConfirm)}), so reply personally.`)
-      : "";
+  const banner = noConfirm
+    ? `<div style="background:#fff7e6;border:1px solid #f5c26b;border-radius:6px;padding:10px 12px;margin:0 0 14px;color:#7a4b00">
+<strong>No confirmation email was sent to this visitor</strong> (${esc(noConfirm)}), so reply personally.</div>`
+    : "";
   return `<div style="font-family:system-ui,Arial,sans-serif;font-size:14px;color:#111">
 <h2 style="margin:0 0 4px">New website inquiry — ${esc(f.first_name)} ${esc(f.last_name)}</h2>
 <p style="color:#666;margin:0 0 14px">Ref ${esc(ref)}${page ? " · from " + esc(page) : ""}${a.channel ? " · " + esc(a.channel) : ""}</p>
@@ -450,22 +473,25 @@ ${(a.gclid || a.gbraid || a.wbraid) ? `<p style="margin-top:10px;color:#666;font
 }
 
 function tooMany(retry) {
-  return new Response(JSON.stringify({ success: false, message: TOO_MANY }), {
+  return new Response(JSON.stringify({ success: false, message: MSG.tooMany }), {
     status: 429,
     headers: { "Content-Type": "application/json", "Cache-Control": "no-store", "Retry-After": String(Math.max(1, retry || 60)) },
   });
 }
 
-// A token seen before: once its lead was sent, the repeat gets the same reference and nothing is sent again;
-// while the first request is still running, the repeat is told to wait; a refused token stays refused.
-function duplicate(ref, page) {
-  if (ref === REFUSED) {
-    log({ outcome: "rejected", reason: "refused-token-again", page });
-    return json(400, { success: false, message: VERIFY_FAILED });
+// A token Turnstile says was already used: its lead was sent -> the same reference, nothing sent again;
+// still being processed -> wait; anything else (expired, refused, never ours) -> press Send again.
+function duplicateReply(prior, page) {
+  if (/^PLS-/.test(prior)) {
+    log({ outcome: "duplicate", page, ref: prior });
+    return json(200, { success: true, refNumber: prior });
   }
-  log({ outcome: "duplicate", page, ref: ref || "" });
-  if (ref) return json(200, { success: true, refNumber: ref });
-  return json(409, { success: false, message: "This form is already being sent. If no confirmation appears within a minute, please call 1-800-890-6133." });
+  if (prior === "pending") {
+    log({ outcome: "rejected", reason: "in-progress", page });
+    return json(409, { success: false, message: MSG.busy });
+  }
+  log({ outcome: "rejected", reason: "expired-or-used", page });
+  return json(400, { success: false, message: MSG.expired });
 }
 
 export async function onRequestPost(context) {
@@ -473,14 +499,17 @@ export async function onRequestPost(context) {
   const url = new URL(request.url);
   const origin = url.origin;
 
-  // Per-IP limit on every POST, before any other work. No client IP (local dev) = not counted.
+  // Required configuration, the D1 binding included: fail closed.
+  if (!configured(env)) return json(500, { success: false, message: MSG.config });
+
+  // Every POST from one IP is throttled in this data center first (no D1, no siteverify).
+  // No client IP (local dev) = not counted.
   const ipId = clientId(request);
   const ipHash = ipId ? await hashId("ip:" + ipId) : "";
-  sweep(env, context);
   if (ipHash) {
-    const over = await overLimit(env, origin, "post", ipHash, LIMITS.post);
+    const over = await localCount(origin, "edge", ipHash, LIMITS.edge);
     if (over) {
-      log({ outcome: "rejected", reason: "rate-limit:post", window: over.win });
+      log({ outcome: "rejected", reason: "rate-limit:edge", window: over.win });
       return tooMany(over.retry);
     }
   }
@@ -489,98 +518,106 @@ export async function onRequestPost(context) {
   try {
     f = await request.json();
   } catch {
-    return json(400, { success: false, message: "Invalid request." });
+    return json(400, { success: false, message: MSG.invalid });
   }
-  if (!f || typeof f !== "object" || Array.isArray(f)) return json(400, { success: false, message: "Invalid request." });
+  if (!f || typeof f !== "object" || Array.isArray(f)) return json(400, { success: false, message: MSG.invalid });
 
   // Honeypot: silently accept-and-drop obvious bots. Only "botcheck" is a real
   // hidden honeypot; "challenge" is a VISIBLE "Primary IT Challenge" dropdown on
   // the industry pages, so it must NOT be treated as a bot signal.
   if (f.botcheck) return json(200, { success: true, refNumber: makeRef() });
 
-  // Required env — fail closed if misconfigured.
-  for (const k of ["MS_TENANT_ID", "MS_CLIENT_ID", "MS_CLIENT_SECRET", "SEND_FROM", "TURNSTILE_SECRET_KEY"]) {
-    if (!env[k]) return json(500, { success: false, message: "Server not configured." });
-  }
-
-  // Normalize varied field names first so logs and the fail-safe see clean fields.
   normalize(f);
   const page = String(f.source_page || "").slice(0, 80);
 
-  // Turnstile — the gate that makes the endpoint un-spammable.
+  // Turnstile token present and plausible (real tokens are at most 2048 characters).
   const token = f["cf-turnstile-response"] || f.turnstile_token;
-  if (!token) {
-    log({ outcome: "rejected", reason: "no-token", page });
-    return json(400, { success: false, message: "Verification failed — please retry the challenge." });
-  }
-  // Once per token: claim it (this isolate at once, then this data center) before
-  // verifying, so a double submit or a replay can't produce a second email.
-  const tokenStr = String(token).slice(0, 2048);    // Turnstile tokens are at most 2048 characters
-  const memKey = "tok:" + tokenStr;
-  const seen = mem.get(memKey);
-  if (seen && seen.exp > nowSec()) return duplicate(seen.v, page);
-  mem.set(memKey, { n: 1, exp: nowSec() + PENDING_TTL, v: "" });
-  const tokenKey = "tok-" + (await hashId("tok:" + tokenStr));
-  const claim = await claimToken(env, origin, tokenKey);
-  if (!claim.claimed) {
-    mem.set(memKey, { n: 1, exp: nowSec() + (claim.prior ? TOKEN_TTL : PENDING_TTL), v: claim.prior });
-    return duplicate(claim.prior, page);
-  }
-  const remember = async (value) => {
-    mem.set(memKey, { n: 1, exp: nowSec() + TOKEN_TTL, v: value });
-    await rememberToken(env, origin, tokenKey, value);
-  };
-  const release = async () => { mem.delete(memKey); await releaseToken(env, origin, tokenKey); };
-  // A token solved on another host, for another widget, or already used/expired is refused, and stays
-  // refused: replaying it never reaches siteverify again or any other path.
-  const refuse = async (reason, extra, message) => {
-    await remember(REFUSED);
-    log(Object.assign({ outcome: "rejected", reason, page }, extra || {}));
-    return json(400, { success: false, message: message || VERIFY_FAILED });
-  };
-
-  const v = await verifyTurnstile(env.TURNSTILE_SECRET_KEY, tokenStr);
-  let unverified = "";
-  if (v.ok) {
-    // Solved on another host (a preview or an old deployment)? Or another widget (the checkout)?
-    if (!hostnameOk(v.hostname, url.hostname, env)) return refuse("hostname", { host: v.hostname.slice(0, 80) });
-    if (v.action && v.action !== ACTION) return refuse("action", { action: v.action.slice(0, 40) });
-    if (!v.action) unverified = "unlabeled-widget";    // a page opened before the widgets carried the action
-  } else {
-    if (v.codes.includes("timeout-or-duplicate")) return refuse("expired-or-used", { codes: v.codes }, EXPIRED);
-    if (!v.soft) {
-      await release();                                  // a forged token fails siteverify every time anyway
-      log({ outcome: "rejected", reason: "turnstile", codes: v.codes, page });
-      return json(400, { success: false, message: VERIFY_FAILED });
-    }
-    unverified = v.codes.join(",") || "unknown";
+  if (!token || typeof token !== "string" || token.length > 2048) {
+    log({ outcome: "rejected", reason: token ? "bad-token" : "no-token", page });
+    return json(400, { success: false, message: MSG.verify });
   }
 
-  // [UNVERIFIED] notifications are capped per IP, so a Cloudflare outage can't be turned into a flood.
-  if (unverified && ipHash) {
-    const over = await overLimit(env, origin, "unverified", ipHash, LIMITS.unverified);
-    if (over) {
-      await release();
-      log({ outcome: "rejected", reason: "rate-limit:unverified", why: unverified, page });
-      return tooMany(over.retry);
-    }
-  }
-
-  // Validate the relaxed core set.
+  // Check the form BEFORE spending the token, so a typo doesn't cost the visitor a new robot check.
   const missing = REQUIRED.filter((k) => !String(f[k] || "").trim());
   if (missing.length) {
-    await release();
     log({ outcome: "rejected", reason: "missing:" + missing.join("+"), page });
-    return json(400, { success: false, message: "Please enter your name and email address." });
+    return json(400, { success: false, message: MSG.missing });
   }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(f.email))) {
-    await release();
+  if (!EMAIL_RE.test(String(f.email))) {
     log({ outcome: "rejected", reason: "bad-email", page });
-    return json(400, { success: false, message: "Please enter a valid email address." });
+    return json(400, { success: false, message: MSG.email });
   }
-  // Trim overly long inputs (defensive).
   for (const k of ["first_name", "last_name", "email", "phone", "company", "interest", "message"]) {
     if (f[k]) f[k] = String(f[k]).slice(0, 5000);
+  }
+
+  // The same token again in this isolate (double click, retry): answer from memory, no siteverify call.
+  const tokenKey = "tok-" + (await hashId("tok:" + token));
+  const memKey = "t:" + tokenKey;
+  const seen = mem.get(memKey);
+  if (seen && seen.exp > nowSec()) return duplicateReply(seen.v, page);
+
+  // Turnstile: only a full pass goes on. Every other outcome sends nothing.
+  const v = await verifyTurnstile(env.TURNSTILE_SECRET_KEY, token);
+  if (!v.ok) {
+    if (v.codes.some((c) => SERVER_SIDE.includes(c))) {
+      // A secret Cloudflare rejects (e.g. a deployment left with a rotated key), or Cloudflare erroring.
+      log({ outcome: "error", reason: "turnstile-unavailable", codes: v.codes, page });
+      return json(503, { success: false, message: MSG.unavailable });
+    }
+    if (v.codes.includes("timeout-or-duplicate")) return duplicateReply(await priorOutcome(env, origin, tokenKey), page);
+    log({ outcome: "rejected", reason: "turnstile", codes: v.codes, page });
+    return json(400, { success: false, message: MSG.verify });
+  }
+  // Solved on another host (a preview, an old deployment, another site)? On another widget (the checkout)?
+  // On a page opened before the widgets were labeled? None of these is a lead-form pass on this site.
+  if (!hostnameOk(v.hostname, url.hostname, env)) {
+    log({ outcome: "rejected", reason: "hostname", host: v.hostname.slice(0, 80), page });
+    return json(400, { success: false, message: MSG.verify });
+  }
+  if (!v.action) {
+    log({ outcome: "rejected", reason: "unlabeled-widget", page });
+    return json(400, { success: false, message: MSG.reload });
+  }
+  if (v.action !== ACTION) {
+    log({ outcome: "rejected", reason: "action", action: v.action.slice(0, 40), page });
+    return json(400, { success: false, message: MSG.verify });
+  }
+
+  // Verified. Record it in D1 (token, IP count, address count) in one atomic batch.
+  mem.set(memKey, { n: 1, exp: nowSec() + PENDING_TTL, v: "pending" });
+  const addrHash = await hashId("to:" + String(f.email).trim().toLowerCase());
+  let store = "d1";
+  let rec;
+  try {
+    rec = await inTime(recordVerified(d1(env), tokenKey, ipHash, addrHash), env);
+    sweep(env, context);                              // only verified submissions ever write to D1
+  } catch (e) {
+    // D1 unavailable. See CONTACT_DB_OUTAGE_MODE in the header.
+    if (String(env.CONTACT_DB_OUTAGE_MODE || "").trim().toLowerCase() === "refuse") {
+      mem.delete(memKey);
+      log({ outcome: "error", reason: "store-unavailable", mode: "refuse", page });
+      return json(503, { success: false, message: MSG.storeDown });
+    }
+    store = "degraded";
+    const shared = await cacheGet(origin, tokenKey);
+    if (shared) {
+      mem.set(memKey, { n: 1, exp: nowSec() + (shared === "pending" ? PENDING_TTL : TOKEN_TTL), v: shared });
+      return duplicateReply(shared, page);
+    }
+    await cachePut(origin, tokenKey, "pending", PENDING_TTL);
+    rec = { claimed: true, ipOver: ipHash ? await localCount(origin, "sent", ipHash, LIMITS.sent) : null, addrOver: null };
+  }
+  if (!rec.claimed) {
+    // Another request holds this token (siteverify passes a token only once, so this is a race at most).
+    mem.delete(memKey);
+    return duplicateReply(await priorOutcome(env, origin, tokenKey), page);
+  }
+  const release = async () => { mem.delete(memKey); await dropToken(env, origin, tokenKey, store === "d1"); };
+  if (rec.ipOver) {
+    await release();
+    log({ outcome: "rejected", reason: "rate-limit:sent", window: rec.ipOver.win, store, page });
+    return tooMany(rec.ipOver.retry);
   }
 
   const ref = makeRef();
@@ -590,13 +627,12 @@ export async function onRequestPost(context) {
 
   // Visitor confirmation gates, decided now so the notification can say why none was sent.
   let noConfirm = null;
-  if (!unverified) {
-    if (["first_name", "last_name", "company", "phone", "interest"].some((k) => LINKISH.test(String(f[k] || "")))) {
-      noConfirm = { code: "linkish", text: "a link or address in the name, company, phone or service field" };
-    } else {
-      const over = await overLimit(env, origin, "confirm", await hashId("to:" + String(f.email).trim().toLowerCase()), LIMITS.confirm);
-      if (over) noConfirm = { code: "address-cap", text: `this address already had ${LIMITS.confirm[0].max} confirmations today` };
-    }
+  if (store !== "d1") {
+    noConfirm = { code: "store-unavailable", text: "the rate-limit database was unavailable, so no email went to the typed address" };
+  } else if (["first_name", "last_name", "company", "phone", "interest"].some((k) => LINKISH.test(String(f[k] || "")))) {
+    noConfirm = { code: "linkish", text: "a link or address in the name, company, phone or service field" };
+  } else if (rec.addrOver) {
+    noConfirm = { code: "address-cap", text: `this address already had ${LIMITS.confirm[0].max} confirmations today` };
   }
 
   let token2;
@@ -605,15 +641,15 @@ export async function onRequestPost(context) {
   } catch (e) {
     await release();
     log({ outcome: "error", reason: "graph-token", page, ref });
-    return json(502, { success: false, message: "Could not send right now — please call 1-800-890-6133." });
+    return json(502, { success: false, message: MSG.sendFail });
   }
 
   // 1) Internal notification — this is lead capture; it must succeed.
   try {
     await sendMail(token2, from, {
       message: {
-        subject: `${unverified ? "[UNVERIFIED] " : ""}New Contact Form Submission — Pro Link Systems Website [${ref}]`,
-        body: { contentType: "HTML", content: notifyHtml(f, ref, page, attr, unverified, noConfirm && noConfirm.text) },
+        subject: `New Contact Form Submission — Pro Link Systems Website [${ref}]`,
+        body: { contentType: "HTML", content: notifyHtml(f, ref, page, attr, noConfirm && noConfirm.text) },
         toRecipients: [{ emailAddress: { address: notifyTo } }],
         from: { emailAddress: { address: from, name: "Pro Link Systems Website" } },
         replyTo: [{ emailAddress: { address: String(f.email) } }],
@@ -623,23 +659,18 @@ export async function onRequestPost(context) {
   } catch (e) {
     await release();
     log({ outcome: "error", reason: "notify-send", page, ref });
-    return json(502, { success: false, message: "Could not send right now — please call 1-800-890-6133." });
+    return json(502, { success: false, message: MSG.sendFail });
   }
 
   // Lead captured: a repeat of this token now gets this reference and sends nothing.
-  await remember(ref);
+  mem.set(memKey, { n: 1, exp: nowSec() + TOKEN_TTL, v: ref });
+  await setToken(env, origin, tokenKey, ref, store === "d1");
 
-  // Unverified path: the lead is captured for a human to follow up; no outbound
-  // mail goes to the submitted address (keeps this path useless for relay abuse).
-  if (unverified) {
-    log({ outcome: "accepted-unverified", codes: v.codes, why: unverified, page, ref, channel: attr.channel });
-    return json(200, { success: true, refNumber: ref });
-  }
   if (noConfirm) {
-    log({ outcome: "accepted", confirmation: "skipped:" + noConfirm.code, page, ref, channel: attr.channel });
-    return json(200, { success: true, refNumber: ref });
+    log({ outcome: "accepted", confirmation: "skipped:" + noConfirm.code, store, page, ref, channel: attr.channel });
+    return json(200, { success: true, refNumber: ref, confirmation: false });   // lets a page say "we'll reply personally"
   }
-  log({ outcome: "accepted", page, ref, channel: attr.channel });
+  log({ outcome: "accepted", store, page, ref, channel: attr.channel });
 
   // 2) Visitor confirmation — best-effort; the lead is already captured.
   try {
@@ -659,8 +690,23 @@ export async function onRequestPost(context) {
   return json(200, { success: true, refNumber: ref });
 }
 
-// Any non-POST method.
+// GET /api/contact?health=1 — release checks. Sends nothing; says whether this code is live, the configuration
+// is complete (the D1 binding included) and D1 answers.
+async function health(env) {
+  if (!configured(env)) return json(503, { ok: false, version: VERSION, reason: "not-configured" });
+  try {
+    const d = d1(env);
+    await inTime(ready(d).then(() => d.prepare("SELECT 1 AS ok").first()), env);
+    return json(200, { ok: true, version: VERSION, store: "d1" });
+  } catch (e) {
+    return json(503, { ok: false, version: VERSION, reason: "store-unavailable" });
+  }
+}
+
+// Any other method (and the health check).
 export async function onRequest(context) {
-  if (context.request.method === "POST") return onRequestPost(context);
+  const { request, env } = context;
+  if (request.method === "POST") return onRequestPost(context);
+  if (request.method === "GET" && new URL(request.url).searchParams.has("health")) return health(env);
   return json(405, { success: false, message: "Method not allowed." });
 }
