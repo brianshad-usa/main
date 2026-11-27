@@ -2,10 +2,12 @@
  * POST /api/checkout/start  --  Cloudflare Pages Function (all self-service apps)
  * -----------------------------------------------------------------------------
  * Body: the app's order form as JSON, plus { product: "<slug>", "cf-turnstile-response",
- * source: {page, utm_*, gclid} }. Verifies Turnstile (strict), validates the form with the
- * app's intake(), stores the pending order in KV (7 days), and returns an Authorize.net
- * Accept Hosted token: { ok, order_id, token, post_url }. The browser then posts the token
- * to Authorize.net's hosted payment page; card data never touches this site.
+ * source: {page, utm_*, gclid} }. Verifies Turnstile (strict: never a stale or reused token and,
+ * since 2026-11-27, only a token solved on this host by the checkout widget, action "checkout";
+ * see core.js), validates the form with the app's intake(), stores the pending order in KV
+ * (7 days), and returns an Authorize.net Accept Hosted token: { ok, order_id, token, post_url }.
+ * The browser then posts the token to Authorize.net's hosted payment page; card data never
+ * touches this site.
  * Setup and secrets: functions/_lib/checkout/core.js header.
  *
  * Every answer is JSON with a message the order page can show. Missing settings and anything
@@ -52,8 +54,9 @@ export async function onRequestPost({ request, env }) {
   const missing = missingSettings(env, anet);
   if (missing.length) {
     log({ outcome: "unavailable", reason: "not-configured", missing, product: product.id });
-    // Tell Pro Link, but only for a visitor who passed Turnstile: a bare POST can't trigger email.
-    if (env.TURNSTILE_SECRET_KEY && (await verifyTurnstile(env.TURNSTILE_SECRET_KEY, input["cf-turnstile-response"])).ok) {
+    // Tell Pro Link, but only for a visitor who passed Turnstile on this host with the checkout widget:
+    // a bare POST, or a token from a lead form or a preview, can't trigger email.
+    if (env.TURNSTILE_SECRET_KEY && (await verifyTurnstile(env, request, input["cf-turnstile-response"])).ok) {
       await sendAlert(env, "start-not-configured", "Checkout is switched off: settings missing",
         [`Someone tried to order the ${product.name}, but these Cloudflare Pages settings are missing or invalid: ${missing.join("; ")}.`,
           "Customers see \"Online ordering isn't available right now\". Changed settings apply from the next deployment."]);
@@ -61,9 +64,11 @@ export async function onRequestPost({ request, env }) {
     return json(503, { ok: false, message: UNAVAILABLE });
   }
 
-  const ts = await verifyTurnstile(env.TURNSTILE_SECRET_KEY, input["cf-turnstile-response"]);
+  // Strict (core.js): Cloudflare must accept the token, and it must come from the checkout widget on
+  // this host. A token solved on a preview / old deployment or by a lead form is refused here.
+  const ts = await verifyTurnstile(env, request, input["cf-turnstile-response"]);
   if (!ts.ok) {
-    log({ outcome: "rejected", reason: "turnstile", codes: ts.codes, product: product.id });
+    log({ outcome: "rejected", reason: ts.reason, codes: ts.codes, host: ts.hostname, action: ts.action, product: product.id });
     return json(400, { ok: false, field: "turnstile", message: "Please complete the security check again, then continue." });
   }
 

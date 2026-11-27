@@ -24,6 +24,8 @@
  *   MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, SEND_FROM   already set (contact
  *                         form); used here only for failure alerts to Pro Link
  *   CHECKOUT_ALERT_TO     optional; default LEAD_NOTIFY, then SEND_FROM
+ *   TURNSTILE_ALLOWED_HOSTNAMES  optional, shared with the contact form: local
+ *                         testing only, never in Production (see hostnameOk)
  * Per product: the hand-off credential named in its registry entry
  * (GITHUB_ORDERS_TOKEN for the M365 assessment).
  */
@@ -178,24 +180,70 @@ export function validate(schema, value, path, errors) {
 }
 
 // --------------------------------------------------------------------------
-// Cloudflare Turnstile. STRICT here (unlike the lead forms): no token, a forged
-// token, or a stale/reused one all fail -- accepting "timeout-or-duplicate" would
-// let one solved challenge mint unlimited payment pages (card-testing risk). The
-// page simply resets the widget and the visitor submits again.
+// Cloudflare Turnstile. STRICT: no token, a forged token, or a stale/reused one
+// all fail -- accepting "timeout-or-duplicate" would let one solved challenge
+// mint unlimited payment pages (card-testing risk). The page simply resets the
+// widget and the visitor submits again.
+// 2026-11-27 (Phase G security; the rules /api/contact got on 2026-11-26):
+//   HOSTNAME: the site key also works on plsmain.pages.dev and every preview /
+//     old-deployment subdomain of it, so a token is accepted only on the host it
+//     was solved on (prolinksystems.com and www count as one site). A preview
+//     token can't start a production order, and a production token can't start a
+//     sandbox order on a preview.
+//   ACTION: the order pages' widget carries data-action="checkout" (site_guard
+//     check 19) and has since the checkout launched; the lead forms share the
+//     site key with "contact". Any other action, or none (an unlabeled token), is
+//     refused.
 // --------------------------------------------------------------------------
-export async function verifyTurnstile(secret, token) {
-  if (!token) return { ok: false, codes: ["no-token"] };
+export const TURNSTILE_ACTION = "checkout";
+const PROD_HOSTS = new Set(["prolinksystems.com", "www.prolinksystems.com"]);
+
+/** A token may only be spent on the host it was solved on; prolinksystems.com and www are one site
+ *  (same rule as hostnameOk in functions/api/contact.js). TURNSTILE_ALLOWED_HOSTNAMES (optional,
+ *  comma-separated) lists token hostnames accepted on any host: local testing only, never set it in
+ *  Production. Turnstile's dummy keys report "example.com" and no action, so even with that setting
+ *  a dummy token stops at the action check here; the checkout's happy path is covered by
+ *  tests/checkout.test.mjs and a sandbox order on a branch preview. */
+export function hostnameOk(tokenHost, requestHost, env) {
+  const t = String(tokenHost || "").toLowerCase();
+  const r = String(requestHost || "").toLowerCase();
+  if (!t) return false;
+  const extra = String((env && env.TURNSTILE_ALLOWED_HOSTNAMES) || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean);
+  if (extra.includes(t)) return true;
+  if (PROD_HOSTS.has(t) && PROD_HOSTS.has(r)) return true;
+  return t === r;
+}
+
+/**
+ * Verifies the order form's token for THIS request (secret: env.TURNSTILE_SECRET_KEY). Returns
+ * { ok, reason, codes }; reason (also the log reason) is "turnstile" when Cloudflare refused the
+ * token or couldn't be asked (codes say which), "turnstile-hostname" or "turnstile-action" when
+ * Cloudflare accepted it but it was solved elsewhere or for another widget (then hostname or action
+ * is returned too, clipped, for the log).
+ */
+export async function verifyTurnstile(env, request, token) {
+  if (!token) return { ok: false, reason: "turnstile", codes: ["no-token"] };
+  let data;
   try {
     const r = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ secret, response: String(token) }),   // no remoteip (see contact.js)
+      body: new URLSearchParams({ secret: String(env.TURNSTILE_SECRET_KEY || ""), response: String(token) }),   // no remoteip (see contact.js)
     });
-    const data = await r.json().catch(() => ({ success: false, "error-codes": ["bad-json"] }));
-    return { ok: data.success === true, codes: data["error-codes"] || [] };
+    data = await r.json().catch(() => ({ success: false, "error-codes": ["bad-json"] }));
   } catch (e) {
-    return { ok: false, codes: ["siteverify-unreachable"] };
+    return { ok: false, reason: "turnstile", codes: ["siteverify-unreachable"] };
   }
+  if (!data || typeof data !== "object") data = { success: false, "error-codes": ["bad-json"] };
+  const codes = Array.isArray(data["error-codes"]) ? data["error-codes"] : [];
+  if (data.success !== true) return { ok: false, reason: "turnstile", codes };   // incl. timeout-or-duplicate
+  const hostname = String(data.hostname || "");
+  const action = String(data.action || "");
+  if (!hostnameOk(hostname, new URL(request.url).hostname, env)) {
+    return { ok: false, reason: "turnstile-hostname", codes, hostname: hostname.slice(0, 80) };
+  }
+  if (action !== TURNSTILE_ACTION) return { ok: false, reason: "turnstile-action", codes, action: action.slice(0, 40) };
+  return { ok: true, reason: "", codes };
 }
 
 // --------------------------------------------------------------------------

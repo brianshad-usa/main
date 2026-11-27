@@ -37,6 +37,9 @@ function resetWorld() {
   calls = [];
   world = {
     turnstileOk: true,
+    sv: null,                          // siteverify reply to use instead of the default (host/action tests)
+    svRaw: null,                       // raw siteverify body (non-JSON / null replies)
+    siteverifyThrows: false,
     anetTokenOk: true,
     tx: null,                          // transaction returned by getTransactionDetails
     detailsCodes: null,                // e.g. ["E00040"] to simulate an error
@@ -51,7 +54,13 @@ globalThis.fetch = async (url, init = {}) => {
   calls.push({ url, method: init.method || "GET", body, headers: init.headers || {} });
   const res = (status, obj, raw) => new Response(raw != null ? raw : JSON.stringify(obj), { status });
   if (url.startsWith("https://challenges.cloudflare.com/")) {
-    return res(200, world.turnstileOk ? { success: true } : { success: false, "error-codes": ["invalid-input-response"] });
+    if (world.siteverifyThrows) throw new Error("network");
+    if (world.svRaw != null) return res(200, null, world.svRaw);
+    // Like the real siteverify, a success names the hostname the widget ran on and its action
+    // (both checked by start since 2026-11-27); the order page's widget is data-action="checkout".
+    return res(200, world.sv || (world.turnstileOk
+      ? { success: true, "error-codes": [], hostname: "prolinksystems.com", action: "checkout" }
+      : { success: false, "error-codes": ["invalid-input-response"] }));
   }
   if (url.includes("authorize.net/xml/v1/request.api")) {
     const req = JSON.parse(body);
@@ -90,7 +99,7 @@ const formInput = (over = {}) => Object.assign({
   source: { page: "/m365-security-assessment?utm_source=google", utm_source: "google", utm_medium: "cpc", gclid: "abc" },
 }, over);
 
-const startReq = (input, ip = "203.0.113.7") => new Request("https://prolinksystems.com/api/checkout/start", {
+const startReq = (input, ip = "203.0.113.7", host = "prolinksystems.com") => new Request(`https://${host}/api/checkout/start`, {
   method: "POST", headers: { "Content-Type": "application/json", "CF-Connecting-IP": ip }, body: JSON.stringify(input),
 });
 
@@ -107,10 +116,24 @@ const evt = (transId, eventType = "net.authorize.payment.authcapture.created") =
 const mails = () => calls.filter((c) => c.url.includes("/sendMail")).map((c) => JSON.parse(c.body).message);
 const issuePosts = () => calls.filter((c) => c.method === "POST" && c.url.endsWith("/issues"));
 
-async function placeOrder(env, input) {
-  const r = await start.onRequestPost({ request: startReq(input || formInput()), env });
+async function placeOrder(env, input, host) {
+  const r = await start.onRequestPost({ request: startReq(input || formInput(), undefined, host), env });
   return { status: r.status, body: await r.json() };
 }
+
+// placeOrder with the Functions' one-line JSON logs captured: { status, body, logs, rejected }.
+async function placeOrderLogged(env, input, host) {
+  const lines = [];
+  const realLog = console.log;
+  console.log = (...a) => { lines.push(a.join(" ")); };
+  let out;
+  try { out = await placeOrder(env, input, host); } finally { console.log = realLog; }
+  const logs = lines.filter((l) => l.startsWith("{")).map((l) => JSON.parse(l));
+  return Object.assign(out, { logs, rejected: logs.find((l) => l.outcome === "rejected") });
+}
+const anetHits = () => calls.filter((c) => c.url.includes("authorize.net"));
+const siteverifyHits = () => calls.filter((c) => c.url.includes("/siteverify"));
+const storedOrders = (env) => [...env.ORDERS.m.keys()].filter((k) => k.startsWith("order:"));
 
 // ---------------------------------------------------------------- unit tests
 test("spec example order validates; unknown / malformed fields fail", () => {
@@ -261,6 +284,180 @@ test("start: Authorize.net refusal -> 502 and ONE alert per 6 hours", async () =
   assert.equal(b.status, 502);
   assert.equal(calls.filter((c) => c.url.startsWith("https://graph.microsoft.com/")).length, 1, "deduped");
   assert.equal([...env.ORDERS.m.keys()].filter((k) => k.startsWith("order:")).length, 0, "no pending order stored");
+});
+
+// ---------------------------------------------------------------- start: Turnstile hostname + action (2026-11-27)
+// The site key also works on plsmain.pages.dev (every preview and old deployment) and is shared with the
+// lead forms ("contact"), so start only takes a token solved on its own host by the checkout widget.
+test("hostnameOk: same host only; prolinksystems.com and www are one site; look-alikes and blanks fail", () => {
+  const ok = core.hostnameOk;
+  assert.equal(ok("prolinksystems.com", "prolinksystems.com", {}), true);
+  assert.equal(ok("www.prolinksystems.com", "prolinksystems.com", {}), true);
+  assert.equal(ok("prolinksystems.com", "www.prolinksystems.com", {}), true);
+  assert.equal(ok("ProLinkSystems.com", "prolinksystems.com", {}), true, "case-insensitive");
+  assert.equal(ok("seo-growth-2026-11.plsmain.pages.dev", "seo-growth-2026-11.plsmain.pages.dev", {}), true);
+  assert.equal(ok("2b85327c.plsmain.pages.dev", "seo-growth-2026-11.plsmain.pages.dev", {}), false, "another preview");
+  assert.equal(ok("plsmain.pages.dev", "prolinksystems.com", {}), false);
+  assert.equal(ok("prolinksystems.com.evil.example", "prolinksystems.com", {}), false);
+  assert.equal(ok("evilprolinksystems.com", "prolinksystems.com", {}), false);
+  assert.equal(ok("", "prolinksystems.com", {}), false);
+  assert.equal(ok("", "", {}), false, "no hostname never matches");
+  assert.equal(ok("example.com", "localhost", { TURNSTILE_ALLOWED_HOSTNAMES: " Example.com , other.test" }), true);
+  assert.equal(ok("example.com", "localhost", {}), false);
+  assert.equal(ok("example.com", "localhost", undefined), false);
+});
+
+test("start: a token solved on www.prolinksystems.com works on prolinksystems.com and the reverse; siteverify gets no remoteip", async () => {
+  for (const [tokenHost, host] of [["www.prolinksystems.com", "prolinksystems.com"], ["prolinksystems.com", "www.prolinksystems.com"]]) {
+    resetWorld();
+    world.sv = { success: true, "error-codes": [], hostname: tokenHost, action: "checkout" };
+    const { status: s, body } = await placeOrder(makeEnv(), formInput(), host);
+    assert.equal(s, 200, `${tokenHost} -> ${host}: ${JSON.stringify(body)}`);
+    assert.equal(body.token, "TOKEN123");
+    const sent = new URLSearchParams(siteverifyHits()[0].body);
+    assert.equal(sent.get("secret"), "ts");
+    assert.equal(sent.get("response"), "tok");
+    assert.equal(sent.has("remoteip"), false);
+  }
+});
+
+test("start: a branch preview accepts a token solved on that same preview (sandbox test orders keep working)", async () => {
+  resetWorld();
+  const host = "security-2a-checkout.plsmain.pages.dev";
+  world.sv = { success: true, "error-codes": [], hostname: host, action: "checkout" };
+  const env = makeEnv();
+  const { status: s, body } = await placeOrder(env, formInput(), host);
+  assert.equal(s, 200, JSON.stringify(body));
+  assert.equal(body.return_url, `https://${host}/m365-security-assessment/thank-you?order=${body.order_id}`);
+  assert.equal(storedOrders(env).length, 1);
+});
+
+test("start: a token solved on a preview / old deployment is refused on production, before Authorize.net or KV", async () => {
+  for (const tokenHost of ["2b85327c.plsmain.pages.dev", "seo-growth-2026-11.plsmain.pages.dev", "plsmain.pages.dev"]) {
+    resetWorld();
+    world.sv = { success: true, "error-codes": [], hostname: tokenHost, action: "checkout" };
+    const env = makeEnv();
+    const r = await placeOrderLogged(env);
+    assert.equal(r.status, 400, tokenHost);
+    assert.equal(r.body.field, "turnstile");
+    assert.match(r.body.message, /security check/);
+    assert.equal(anetHits().length, 0);
+    assert.equal(storedOrders(env).length, 0);
+    assert.equal(r.rejected.reason, "turnstile-hostname");
+    assert.equal(r.rejected.host, tokenHost);
+    const all = JSON.stringify(r.logs);
+    assert.ok(!all.includes("203.0.113.7") && !all.toLowerCase().includes("dana@"), "no IP or email in the logs");
+  }
+});
+
+test("start: a production token is refused on a preview; another site's token or one without a hostname is refused", async () => {
+  for (const [tokenHost, host] of [
+    ["prolinksystems.com", "security-2a-checkout.plsmain.pages.dev"],   // would start a sandbox order on the preview
+    ["evil.example", "prolinksystems.com"],
+    ["prolinksystems.com.evil.example", "prolinksystems.com"],
+    [undefined, "prolinksystems.com"],
+  ]) {
+    resetWorld();
+    world.sv = { success: true, "error-codes": [], action: "checkout" };
+    if (tokenHost) world.sv.hostname = tokenHost;
+    const env = makeEnv();
+    const r = await placeOrderLogged(env, formInput(), host);
+    assert.equal(r.status, 400, `${tokenHost} -> ${host}`);
+    assert.equal(r.rejected.reason, "turnstile-hostname");
+    assert.equal(anetHits().length, 0);
+    assert.equal(storedOrders(env).length, 0);
+  }
+});
+
+test("start: a lead-form token (action 'contact') is refused, and so is an unlabeled or mislabeled one", async () => {
+  for (const action of ["contact", "", undefined, "Checkout", "checkout-test"]) {
+    resetWorld();
+    world.sv = { success: true, "error-codes": [], hostname: "prolinksystems.com" };
+    if (action !== undefined) world.sv.action = action;
+    const env = makeEnv();
+    const r = await placeOrderLogged(env);
+    assert.equal(r.status, 400, JSON.stringify(action));
+    assert.equal(r.body.field, "turnstile");
+    assert.equal(anetHits().length, 0);
+    assert.equal(storedOrders(env).length, 0);
+    assert.equal(r.rejected.reason, "turnstile-action");
+    assert.equal(r.rejected.action, action || "");
+  }
+});
+
+test("start: an expired or already-used token (timeout-or-duplicate) is still rejected, before Authorize.net or KV", async () => {
+  resetWorld();
+  world.sv = { success: false, "error-codes": ["timeout-or-duplicate"] };
+  const env = makeEnv();
+  const r = await placeOrderLogged(env);
+  assert.equal(r.status, 400);
+  assert.equal(r.body.field, "turnstile");
+  assert.equal(anetHits().length, 0);
+  assert.equal(storedOrders(env).length, 0);
+  assert.equal(r.rejected.reason, "turnstile");
+  assert.deepEqual(r.rejected.codes, ["timeout-or-duplicate"]);
+});
+
+test("start: stays strict where the lead form falls back: internal-error, siteverify unreachable, non-JSON or null reply, no token", async () => {
+  for (const [label, setup, codes] of [
+    ["internal-error", () => { world.sv = { success: false, "error-codes": ["internal-error"] }; }, ["internal-error"]],
+    ["unreachable", () => { world.siteverifyThrows = true; }, ["siteverify-unreachable"]],
+    ["non-JSON", () => { world.svRaw = "<html>502 Bad Gateway</html>"; }, ["bad-json"]],
+    ["null", () => { world.svRaw = "null"; }, ["bad-json"]],
+  ]) {
+    resetWorld();
+    setup();
+    const env = makeEnv();
+    const r = await placeOrderLogged(env);
+    assert.equal(r.status, 400, label);
+    assert.equal(r.body.field, "turnstile", label);
+    assert.equal(anetHits().length, 0, label);
+    assert.equal(storedOrders(env).length, 0, label);
+    assert.equal(r.rejected.reason, "turnstile", label);
+    assert.deepEqual(r.rejected.codes, codes, label);
+  }
+  resetWorld();
+  const none = await placeOrderLogged(makeEnv(), formInput({ "cf-turnstile-response": "" }));
+  assert.equal(none.status, 400);
+  assert.deepEqual(none.rejected.codes, ["no-token"]);
+  assert.equal(siteverifyHits().length, 0, "no token: Cloudflare isn't asked");
+  assert.equal(anetHits().length, 0);
+});
+
+test("start: TURNSTILE_ALLOWED_HOSTNAMES (local testing) accepts the listed token hostname but still requires the checkout action", async () => {
+  const local = makeEnv({ TURNSTILE_ALLOWED_HOSTNAMES: "example.com" });
+  resetWorld();
+  world.sv = { success: true, "error-codes": [], hostname: "example.com", action: "checkout" };
+  assert.equal((await placeOrder(local, formInput(), "localhost:8788")).status, 200);
+  // What Cloudflare's always-pass dummy secret really returns (checked 2026-11-27): example.com and no action.
+  resetWorld();
+  world.sv = { success: true, "error-codes": [], hostname: "example.com", metadata: { result_with_testing_key: true } };
+  const dummy = await placeOrderLogged(local, formInput(), "localhost:8788");
+  assert.equal(dummy.status, 400);
+  assert.equal(dummy.rejected.reason, "turnstile-action");
+  assert.equal(anetHits().length, 0);
+  resetWorld();
+  world.sv = { success: true, "error-codes": [], hostname: "example.com", action: "checkout" };
+  const unlisted = await placeOrderLogged(makeEnv(), formInput(), "localhost:8788");
+  assert.equal(unlisted.status, 400, "setting absent -> refused");
+  assert.equal(unlisted.rejected.reason, "turnstile-hostname");
+});
+
+test("start: the 'settings missing' alert needs a checkout token solved on this host (lead-form or preview tokens send nothing)", async () => {
+  for (const [sv, alerts] of [
+    [{ success: true, "error-codes": [], hostname: "prolinksystems.com", action: "contact" }, 0],
+    [{ success: true, "error-codes": [], hostname: "2b85327c.plsmain.pages.dev", action: "checkout" }, 0],
+    [{ success: false, "error-codes": ["timeout-or-duplicate"] }, 0],
+    [{ success: true, "error-codes": [], hostname: "prolinksystems.com", action: "checkout" }, 1],
+  ]) {
+    resetWorld();
+    world.sv = sv;
+    const r = await placeOrder(makeEnv({ ANET_ENV: "" }));
+    assert.equal(r.status, 503, JSON.stringify(sv));
+    assert.equal(mails().length, alerts, JSON.stringify(sv));
+    if (alerts) assert.match(mails()[0].subject, /settings missing/);
+    assert.equal(anetHits().length, 0);
+  }
 });
 
 // ---------------------------------------------------------------- webhook

@@ -352,6 +352,22 @@ else:
 # --------------------------------------------------------------------------- #
 FORM_REQUIRED_OK = {"first_name", "name", "email"}
 SKIP_TYPES = {"hidden", "submit", "checkbox", "button"}
+
+
+def turnstile_actions(name, soup):
+    # Phase G security: /api/contact refuses a token whose Turnstile action is not "contact" (2026-11-26)
+    # and, since 2026-11-27, an unlabeled one too (400 "reload the page"), so every lead-form widget carries
+    # data-action="contact". The checkout's widget carries "checkout", which /api/checkout/start requires
+    # since 2026-11-27 (any other action, or none, is refused there, so every order would fail).
+    srcs = [sc["src"] for sc in soup.find_all("script", src=True)]
+    want = "checkout" if any(re.search(r"(^|/)checkout\.js", x) for x in srcs) else "contact"
+    api = "/api/checkout/start" if want == "checkout" else "/api/contact"
+    for f in soup.find_all("form"):
+        for w in f.find_all(class_="cf-turnstile"):
+            if w.get("data-action") != want:
+                V(19, name, f'Turnstile widget without data-action="{want}" ({api} refuses other actions)')
+
+
 for name, pg in pages.items():
     for form in pg["soup"].find_all("form"):
         if not form.find(class_="cf-turnstile"):
@@ -381,14 +397,17 @@ for name, pg in pages.items():
             V(19, name, "Turnstile form on a page that does not load /contact-form.js?v=... (submissions would be lost)")
         if not any("challenges.cloudflare.com/turnstile/" in x for x in srcs):
             V(19, name, "Turnstile form on a page that does not load the Turnstile api.js script")
-        # 2026-11-26 (Phase G security): /api/contact refuses a token whose Turnstile action is not "contact"
-        # (an unlabeled one only gets the [UNVERIFIED] path), so every lead-form widget carries
-        # data-action="contact"; the checkout's widget carries "checkout".
-        want = "checkout" if any(re.search(r"(^|/)checkout\.js", x) for x in srcs) else "contact"
-        for f in pg["soup"].find_all("form"):
-            for w in f.find_all(class_="cf-turnstile"):
-                if w.get("data-action") != want:
-                    V(19, name, f'Turnstile widget without data-action="{want}" (/api/contact refuses other actions)')
+        turnstile_actions(name, pg["soup"])
+
+# The self-service order pages live in app subfolders (<slug>/order.html), outside the page set above
+# (root + blog/), so the action rule also runs on every other subfolder page with a Turnstile widget
+# (2026-11-27; the other check-19 rules are for the lead forms only).
+for sub_path in sorted(glob.glob(os.path.join(ROOT, "*", "**", "*.html"), recursive=True)):
+    if rel(sub_path) in pages:
+        continue
+    sub_src = read(sub_path)
+    if "cf-turnstile" in sub_src:
+        turnstile_actions(rel(sub_path), BeautifulSoup(sub_src, "html.parser"))
 
 # --------------------------------------------------------------------------- #
 # 20: verified claims only (2026-11-09). Brian: "I don't want to advertise any

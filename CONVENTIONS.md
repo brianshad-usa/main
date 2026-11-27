@@ -265,6 +265,8 @@ fail-safe and measured; keep them that way:
   token or a Cloudflare error through to info@; it never carried a real lead). siteverify never
   sends `remoteip` (an IP that differs between widget and POST must not cost a lead). The form
   is validated **before** the token is spent, and a token longer than 2048 characters is refused.
+  `/api/checkout/start` applies the same host rule and accepts only action `checkout`
+  (2026-11-27; see "Self-service apps").
 - **D1 is required: `CONTACT_DB`** (Pages > Settings > Bindings > D1 database; tables created on
   first use). Without the binding `/api/contact` answers "Server not configured." Each verified
   submission is written in **one atomic batch**: its token (one token = at most one lead,
@@ -573,8 +575,10 @@ that I would like to host on our site similarly". Every app follows this one pat
   "free assessment" wording.
 - **Shared front end.** `/assets/apps/apps.css` + `/assets/apps/checkout.js` (versioned `?v=`, bump
   on change). The order form is `<form data-checkout-product="<slug>" data-value data-currency>` with
-  Turnstile; the thank-you page is `[data-checkout-thankyou]` with `[data-state]` panels. The script
-  records first touch exactly like `contact-form.js` (`sessionStorage.pls_first_touch`).
+  a Turnstile widget carrying **`data-action="checkout"`** (`start` refuses any other action; check
+  19, which also reads the app subfolders); the thank-you page is `[data-checkout-thankyou]` with
+  `[data-state]` panels. The script records first touch exactly like `contact-form.js`
+  (`sessionStorage.pls_first_touch`).
 - **Payment is embedded (2026-11-20, Brian: keep customers on our branded page).** After `start`,
   checkout.js hides the form and shows a "Payment" step below it: Authorize.net's hosted form in an
   iframe (token posted into it), the order summary stays beside it. Authorize.net only lets us set
@@ -622,7 +626,14 @@ that I would like to host on our site similarly". Every app follows this one pat
   is Upper Limit 1,000.00 + "process as normal and report" (an email per order). Sandbox test
   card 4111 1111 1111 1111; billing ZIP 46282 forces a decline; retrying the same card/amount/order
   within ~2 minutes = "duplicate transaction".
-- **Rules that keep money and data safe:** Turnstile is strict on `start` (no stale-token pass);
+- **Rules that keep money and data safe:** Turnstile is strict on `start`: no stale or reused token
+  (`timeout-or-duplicate`), no Cloudflare-error fallback, and (2026-11-27, `core.verifyTurnstile`)
+  only a token solved **on the same host** (prolinksystems.com and www count as one; a preview token
+  only works on that preview) **by the checkout widget** (action `checkout`; a lead-form token, or an
+  unlabeled one, is refused; site_guard check 19 keeps the label on every order page). Log reasons
+  `turnstile` / `turnstile-hostname` / `turnstile-action`.
+  Cloudflare's dummy Turnstile keys report `example.com` and no action, so they can never start an
+  order; test with the mocked suite or a sandbox order on a preview;
   the price comes only from the product module; the webhook checks the HMAC, then re-reads the
   transaction (captured, exact amount, invoice = a pending order) before any hand-off. By the
   transaction's current status (`core.paymentState`): declined -> a plain "Card declined" email
@@ -665,11 +676,13 @@ that I would like to host on our site similarly". Every app follows this one pat
   (2) `<slug>.html` + `<slug>/order.html` + `<slug>/thank-you.html` from the M365 pages; (3) a hub
   card + `ItemList` entry on `self-service.html`, and for the SECOND app undo "One app = no hub"
   above; (4) sitemap, `llms.txt`, `_redirects`; (5) extend
-  `tests/checkout.test.mjs` (run `node --test tests/checkout.test.mjs`; 28 checks for app #1:
-  validation, signatures, idempotency, payment states, privacy guard, alerts), `site_guard.py`, then
-  an Authorize.net SANDBOX order end to end before production (Cloudflare Pages project `plsmain`:
-  a pushed branch previews at `https://<branch>.plsmain.pages.dev` with the Preview variables; the
-  sandbox webhook points there; the Turnstile widget allows `plsmain.pages.dev`).
+  `tests/checkout.test.mjs` (run `node --test tests/checkout.test.mjs`; 38 checks for app #1:
+  validation, Turnstile host + action, signatures, idempotency, payment states, privacy guard,
+  alerts), `site_guard.py`, then an Authorize.net SANDBOX order end to end before production
+  (Cloudflare Pages project `plsmain`: a pushed branch previews at
+  `https://<branch>.plsmain.pages.dev` with the Preview variables; the sandbox webhook points
+  there; the Turnstile widget allows `plsmain.pages.dev`, and a token solved on a preview only
+  works on that same preview).
 
 ## Redesign 2026 (branch `redesign-2026`, staging only until Brian approves go-live)
 
