@@ -1,0 +1,161 @@
+{
+  "post": "Your office manager logs in on Monday. The software the team uses every day now has an AI assistant built in. Nobody ordered it. A weekend update added it, already switched on.\n\nBefore anyone types client details into it, know this: an assistant can usually see whatever the person using it can see. The shared folder everyone forgot about is now one question away.\n\nFour simple questions help. What can it see? Where does what people type end up, and does the vendor keep it? Who can turn it off? And who in the business gets to decide?\n\nTurning it off doesn't make the need go away, either. If the feature is useful, people may switch to a personal AI app, where you can't see anything at all.\n\nAny question you can't answer belongs on your to-do list.",
+  "headline": "Before a new AI feature stays on",
+  "cta_label": "Talk through your AI settings",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/contact",
+  "image_file": "2026-11-27-s027-card.png",
+  "image_file_jpg": "2026-11-27-s027-card.jpg",
+  "theme": "ai_governance",
+  "idea_id": "S027",
+  "core_idea": "An AI assistant that arrives switched on by default is a permissions audit nobody scheduled. It can usually see whatever its user can see, so forgotten oversharing becomes one question away. Four plain questions turn that inherited default into a deliberate decision: what it can read and do, where the data goes under your plan, who controls it, and who owns the yes. Switching it off is not neutral either, because the need moves to personal AI accounts nobody can see.",
+  "channels": {
+    "linkedin": "The most consequential AI decision your company makes this quarter may be one nobody made.\n\nSoftware you already pay for keeps gaining capabilities, and more of them arrive switched on. No purchase order, no review, no moment where anyone asked whether it fits.\n\nHere is the part executives underestimate. An embedded assistant is a permissions audit you never scheduled, and the results go to whoever asks. It typically reaches whatever the user can reach, so every folder shared too widely years ago becomes an answer.\n\nFour questions turn the default into a decision.\n\nWhat can it read, and what can it do? Features that draft or send on a user's behalf raise the stakes beyond reading.\n\nWhere does the data go? Retention, model training, and third-party processing terms often differ by license tier. Confirm the ones that apply to your plan, not the marketing page.\n\nWho controls it? Find the admin setting, its scope, whether it reverses cleanly, and whether usage is logged.\n\nWho owns the yes? Rarely IT alone. Whoever is accountable for the data should decide, write down why, and reopen the decision when the vendor changes the feature.\n\nSwitching it off is not neutral. The need moves to personal AI accounts nobody can see.\n\nOur view: the companies that benefit most will be the ones that fixed access first and then enabled the feature on purpose.",
+    "facebook": "Your office manager logs in on Monday. The software the team uses every day now has an AI assistant built in. Nobody ordered it. A weekend update added it, already switched on.\n\nBefore anyone types client details into it, know this: an assistant can usually see whatever the person using it can see. The shared folder everyone forgot about is now one question away.\n\nFour simple questions help. What can it see? Where does what people type end up, and does the vendor keep it? Who can turn it off? And who in the business gets to decide?\n\nTurning it off doesn't make the need go away, either. If the feature is useful, people may switch to a personal AI app, where you can't see anything at all.\n\nAny question you can't answer belongs on your to-do list.",
+    "gbp": "An AI assistant added by a software update can usually see whatever the person using it can see. Folders shared too widely years ago were harmless while nobody found them. Now they are one question away. Before your team relies on one, check what files and email it can reach, whether the vendor keeps or trains on what people type under your plan, who can switch it off, and who in your business approves it. Tightening file permissions is usually the first fix. Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills.",
+    "x": [
+      "An AI feature switched on by default is a permissions audit you never scheduled. It sees what the user sees and answers whoever asks.\n\nFix access first, then decide on purpose. Turning it off just moves the need to personal accounts."
+    ],
+    "instagram_caption": "AI used to arrive with a purchase order. Now it often arrives with an update, already switched on inside software your team trusts.\n\nAn embedded assistant can usually see whatever its user can see. That makes it a permissions audit nobody scheduled, with results delivered to whoever asks. Four plain questions turn a vendor's default into your decision, and one caution applies: switching it off is not neutral.\n\nSave this for the next time a familiar tool grows a new button.\n\n#AIGovernance #ShadowAI #ITLeadership"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "checklist",
+    "format": "single_image",
+    "ground": "cream",
+    "layout": "checklist",
+    "register": "checklist",
+    "channels": {
+      "linkedin": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "facebook": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "gbp": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "instagram": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      },
+      "x": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 94,
+    "scores": {
+      "topic_relevance": 97,
+      "timeliness": 95,
+      "originality": 93,
+      "hook_strength": 95,
+      "educational_value": 96,
+      "technical_accuracy": 95,
+      "executive_value": 96,
+      "writing_quality": 95,
+      "visual_sophistication": 92,
+      "platform_fit": 95,
+      "shareability": 94,
+      "saveability": 96,
+      "brand_authority": 94,
+      "trust": 97,
+      "strategic_value": 95
+    }
+  },
+  "claims_audit": [
+    "ANALYSIS: more software vendors now ship new AI features switched on by default",
+    "ANALYSIS: embedded AI assistants typically reach whatever data the user can already access, so long-forgotten overshared files become easy to surface",
+    "ANALYSIS: framing such an assistant as an unscheduled permissions audit is an interpretive lens, not a product claim",
+    "ANALYSIS: some embedded AI features can draft, send, or act on a user's behalf, which raises exposure beyond reading",
+    "ANALYSIS: vendor terms on prompt retention, model training, and third-party processing often differ by license tier and should be confirmed for the plan in use",
+    "ANALYSIS: admin controls for AI features may apply tenant-wide, per group, or per user, and usage may or may not be logged",
+    "ANALYSIS: disabling a useful AI feature can push demand toward personal, unmanaged AI accounts",
+    "OPINION: approval rarely belongs to IT alone; the person accountable for the data should own, record, and revisit the decision",
+    "OPINION: businesses that fix access first and enable AI on purpose will benefit most",
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The GBP post carries two calls to action ('glad to walk through these settings' and 'Give us a call'), which breaks the one-CTA rule and turns local advice into a sales pitch. The draft also has no idea that is distinctly ours, so it fails the 'could any MSP publish this' test. Revision: one restrained CTA, carried by the button only, and a sharper central insight across all channels."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "Every channel says the same four questions in the same order with the same framing. Nothing gives the idea a turn. Revision: add one counterintuitive point, that switching the feature off is not neutral because the need moves to personal AI accounts. This connects default-on AI to shadow AI instead of setting them against each other, and gives every channel a stronger close."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel has no visual system. All footers are empty, the four question slides have no shared marker, and the hook kicker 'New this update' reads like a release-notes label, not editorial design. Revision: numbered 1/4 to 4/4 footers create a recognisable rhythm. A distinct 'The catch' insight slide breaks the pattern before the takeaway. The hook kicker becomes 'After the update'."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "The LinkedIn line 'The risk is not employees bringing in shadow AI. It is sanctioned software...' is a disguised version of the banned 'it's not X, it's Y' construction. It is also a false dichotomy, because both risks are real. Revision: shadow AI is treated as the visible risk and default-on features as the quieter gap beside it."
+    },
+    {
+      "role": "CIO",
+      "finding": "'Who controls it' stops at the toggle. An IT leader would also ask whether usage is logged, and without logs nobody can review what the feature was asked or did. Revision: logging is added to question three on LinkedIn, Instagram, and the checklist."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "Question one covers only what the assistant can read. Many embedded AI features can also draft, send, or take actions on a user's behalf, which is a larger exposure than reading. 'Where does the data go' also ignores third parties in the vendor's processing chain. Revision: 'What can it read, and what can it do?' and an explicit check on third parties that process requests."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft treats the decision as on or off. It misses that disabling a useful feature pushes demand toward unmanaged personal tools. This is the most strategically useful insight available on this topic, and its absence makes the piece read as cautionary, not advisory. Revision: the 'switching it off is not neutral' point appears in every channel, labelled as analysis."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "'Someone with authority should decide' does not tell an executive who that person is. Most will assume IT and move on. Revision: the opinion is stated directly. Approval rarely belongs to IT alone; it belongs with whoever is accountable for the data."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "#Cybersecurity and #SmallBusiness are generic, high-noise tags that target the wrong reader. The X post also ends on a restatement of its own opening, not on a new thought worth reposting. Revision: the hashtags become #AIGovernance #ShadowAI #ITLeadership. The X post closes on the counterintuitive 'switching it off is not neutral' line."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "The GBP CTA type is CALL but also carries a URL, which is inconsistent: CALL buttons dial the listing's phone number and ignore the URL. The GBP copy also leans on a bare founding-year credential without tying it to useful advice. Revision: LEARN_MORE pointing to the contact page. F012 is kept verbatim but placed after a substantive tip about fixing access first."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "'Picture this.' on Facebook is a stock opener that could preface any topic. 'Vendors are switching AI features on by default' on X states a sweeping generalisation as fact. 'Deliberately' is repeated across channels until it loses force. Revision: the Facebook post opens straight into the scenario, the X claim is moderated to 'More software now ships', and the repetition is varied."
+    },
+    {
+      "role": "Senior Technology Editor / Cybersecurity Expert",
+      "finding": "The 'where does the data go' guidance was too vague to act on. 'Get it in writing' assumes the terms are not already written. The useful point is that retention, training, and third-party processing terms often differ by license tier, so a feature can behave differently on a business plan than on a consumer or entry plan. Revised to 'confirm the terms that apply to your plan.' Logging and scope language was kept and tightened."
+    },
+    {
+      "role": "Brand Director / Chief Marketing Officer",
+      "finding": "This is the any-MSP test failure from round one, and it is still the gating issue. The four-question checklist is sound but generic. A competent competitor could publish it nearly verbatim. The ownable idea was buried: an embedded assistant is a permissions audit nobody scheduled, and its results go to whoever asks. That reframe now leads LinkedIn and X, anchors the Instagram insight slide, and replaces filler in GBP. The GBP post also read as a generic checklist with a bolted-on founding fact, and is rewritten around the access point."
+    },
+    {
+      "role": "Social Growth Strategist / Copy Editor",
+      "finding": "Several channel problems remained. X was a compressed checklist, not one sharp observation. The Instagram hook was a generic accountability question. Facebook closed with an overpromise ('use the feature with confidence') that the four questions cannot guarantee. The CTA label 'Review your AI settings' implied a self-service tool but linked to a contact page. Also fixed: a duplicated 'in our view / our view' in LinkedIn and a rhetorical-question aside in Facebook."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}

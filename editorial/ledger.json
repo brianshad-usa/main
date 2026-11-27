@@ -4471,6 +4471,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-27",
+      "idea_id": "S027",
+      "theme": "ai_governance",
+      "format": "thread",
+      "title": "Questions to ask before enabling an AI feature you didn't request",
+      "excellence": 94,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "checklist",
+        "format": "single_image",
+        "ground": "cream",
+        "layout": "checklist",
+        "register": "checklist",
+        "channels": {
+          "linkedin": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "facebook": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "gbp": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "instagram": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          },
+          "x": {
+            "style": "checklist",
+            "format": "single_image",
+            "ground": "cream",
+            "layout": "checklist",
+            "register": "checklist"
+          }
+        }
+      }
     }
   ]
 }
