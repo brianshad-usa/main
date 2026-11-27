@@ -214,11 +214,26 @@ test("no token / forged token -> 400 and nothing sent", async () => {
   assert.equal(graphCalls().length, 0);
 });
 
-test("stale token (timeout-or-duplicate) or Cloudflare unreachable -> [UNVERIFIED] notification only", async () => {
+test("an expired or already-used token (timeout-or-duplicate) is rejected, and a replay never reaches Cloudflare again", async () => {
   world.sv = { success: false, "error-codes": ["timeout-or-duplicate"] };
+  const f = fields();
+  const r = await post(f);
+  assert.equal(r.status, 400);
+  assert.match(r.json.message, /expired or was already used/);
+  assert.equal(graphCalls().length, 0);
+  assert.equal(lastLog().reason, "expired-or-used");
+  const again = await post(f, { handler: isolateB.onRequestPost });
+  assert.equal(again.status, 400);
+  assert.equal(calls.filter((c) => c.url.includes("siteverify")).length, 1);
+  assert.equal(graphCalls().length, 0);
+});
+
+test("Cloudflare-side failure (internal-error, or siteverify unreachable) -> [UNVERIFIED] notification only", async () => {
+  world.sv = { success: false, "error-codes": ["internal-error"] };
   assert.equal((await post(fields())).status, 200);
   assert.equal(sends().length, 1);
   assert.match(sends()[0].subject, /^\[UNVERIFIED\] /);
+  assert.match(sends()[0].body.content, /Cloudflare could not confirm the robot check/);
   resetWorld();
   world.siteverifyThrows = true;
   assert.equal((await post(fields())).status, 200);
@@ -308,15 +323,17 @@ test("while the first request for a token is still running, a repeat on another 
   assert.equal(sends().length, 2);
 });
 
-test("Graph down -> 502 and the token is released (a retry is not mistaken for a duplicate)", async () => {
+test("Graph down -> 502 and the token is released: a retry is checked by Cloudflare again, not answered as a duplicate", async () => {
   world.sendStatus = 503;
   const f = fields();
   assert.equal((await post(f)).status, 502);
   world.sendStatus = 202;
   world.sv = { success: false, "error-codes": ["timeout-or-duplicate"] };   // what Cloudflare says on a reused token
+  const attempted = sends().length;                // the failed notification attempt
   const r = await post(f);
-  assert.equal(r.status, 200);
-  assert.match(sends().slice(-1)[0].subject, /^\[UNVERIFIED\] /);
+  assert.equal(r.status, 400);                     // the form resets its widget; the visitor sends again
+  assert.equal(calls.filter((c) => c.url.includes("siteverify")).length, 2);
+  assert.equal(sends().length, attempted);         // nothing new sent
 });
 
 // ---------------------------------------------------------------- rate limits
@@ -352,7 +369,7 @@ test("per-IP limit counts IPv6 clients by their /64", async () => {
 test("[UNVERIFIED] notifications are capped at 2 per IP per hour", async () => {
   alignTo(3600);
   const ip = newIp();
-  world.sv = { success: false, "error-codes": ["timeout-or-duplicate"] };
+  world.sv = { success: false, "error-codes": ["internal-error"] };
   assert.equal((await post(fields(), { ip })).status, 200);
   assert.equal((await post(fields(), { ip })).status, 200);
   const third = await post(fields(), { ip });
@@ -417,6 +434,19 @@ test("Cache API unavailable or failing: submissions still go through (in-memory 
     globalThis.caches = saved;
   }
   assert.equal(sends().length, 4);
+});
+
+test("a D1 binding that errors (CONTACT_DB) falls back to the cache + memory counters; submissions still go through", async () => {
+  const broken = { prepare() { throw new Error("D1 down"); }, batch: async () => { throw new Error("D1 down"); } };
+  const env = Object.assign({}, ENV, { CONTACT_DB: broken });
+  const ip = newIp();
+  const f = fields();
+  const a = await post(f, { ip, env });
+  assert.equal(a.status, 200);
+  assert.equal(sends().length, 2);
+  const b = await post(f, { ip, env });             // the once-per-token rule still holds
+  assert.equal(b.json.refNumber, a.json.refNumber);
+  assert.equal(sends().length, 2);
 });
 
 test("logs never contain the client IP or the visitor's email address", async () => {
