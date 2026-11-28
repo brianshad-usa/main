@@ -4529,6 +4529,64 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-11-28",
+      "idea_id": "S130",
+      "theme": "continuity",
+      "format": "explainer",
+      "title": "Backup, replication, and failover are three different purchases",
+      "excellence": 92,
+      "channels": [
+        "LinkedIn",
+        "Facebook",
+        "Instagram",
+        "GBP"
+      ],
+      "variety": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes",
+        "channels": {
+          "linkedin": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "facebook": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "gbp": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "instagram": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          },
+          "x": {
+            "style": "photo",
+            "format": "single_image",
+            "ground": "photo",
+            "layout": "photo",
+            "register": "behind_scenes"
+          }
+        }
+      }
     }
   ]
 }

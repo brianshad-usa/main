@@ -1,0 +1,166 @@
+{
+  "post": "Picture a Monday. At 9:00, someone deletes the shared folder holding every active project. An hour later, the office server fails.\n\nReplication, a live copy kept in sync elsewhere, covers the dead server. But it already copied the deletion, so the folder is gone there too.\n\nBackup, last night's saved copy, brings the folder back. Restoring can take hours.\n\nFailover, switching everyone to a standby system, keeps people working while the rest is repaired.\n\nThree tools, three different problems. Plenty of businesses pay for one and assume they have all three.\n\nTwo questions sort it out: how much recent work could you lose, and how long could you be offline? Then ask when a backup was last restored end to end. Pro Link tests restores on the backups it manages, because a success message proves the job ran, not that the data comes back.",
+  "headline": "Three purchases hiding inside \"we have backups\"",
+  "cta_label": "About Pro Link Systems",
+  "cta_type": "LEARN_MORE",
+  "cta_url": "https://prolinksystems.com/about",
+  "image_file": "2026-11-28-s130-card.png",
+  "image_file_jpg": "2026-11-28-s130-card.jpg",
+  "theme": "continuity",
+  "idea_id": "S130",
+  "core_idea": "Backup, replication, and failover are three different purchases that answer three different questions: can we get it back, is there a current copy, and how fast can we keep working. Executives should buy against two explicit numbers (tolerable data loss and tolerable downtime) and demand restore evidence. In 2026, two caveats matter: backups must be out of reach of stolen admin credentials (immutable or separately credentialed), and none of the three helps once data has been stolen.",
+  "channels": {
+    "linkedin": "The riskiest sentence in a continuity discussion is \"We have backups.\" It can describe three different purchases that fail in different ways.\n\nBackup is a point-in-time copy kept separately. It answers: can we get back what was deleted, corrupted, or encrypted? Restores take time, so it protects data more than uptime.\n\nReplication keeps a second copy in continuous sync. A dead server or site still leaves a current copy elsewhere. It also copies mistakes faithfully: a deletion, a ransomware run, or a bad bulk change by a script or AI agent with write access reaches the replica almost immediately, unless point-in-time history is kept.\n\nFailover moves operations to that second system so people keep working. Without a rehearsed switch and return, it is a diagram.\n\nOwning one and believing you own all three is a gap nobody wants to discover mid-outage.\n\nFor an executive, the mix comes down to two numbers: how much recent work can we lose, and how long can we be down? IT calls them RPO and RTO. Buy to those, not to a product sheet.\n\nTwo 2026 caveats. A backup that the admin credentials an attacker steals can delete is not truly separate; ask whether yours is immutable. And none of the three helps once data has been stolen. Recovery answers encryption, not extortion.\n\nWorth asking this quarter: when was a full restore last tested, and how long did it take? Pro Link verifies the backups it manages that way, by restoring them rather than trusting a job report.",
+    "facebook": "Picture a Monday. At 9:00, someone deletes the shared folder holding every active project. An hour later, the office server fails.\n\nReplication, a live copy kept in sync elsewhere, covers the dead server. But it already copied the deletion, so the folder is gone there too.\n\nBackup, last night's saved copy, brings the folder back. Restoring can take hours.\n\nFailover, switching everyone to a standby system, keeps people working while the rest is repaired.\n\nThree tools, three different problems. Plenty of businesses pay for one and assume they have all three.\n\nTwo questions sort it out: how much recent work could you lose, and how long could you be offline? Then ask when a backup was last restored end to end. Pro Link tests restores on the backups it manages, because a success message proves the job ran, not that the data comes back.",
+    "gbp": "For Los Angeles business owners: backup, replication, and failover are three different purchases. Backup restores deleted, corrupted, or encrypted data, but restoring takes time. Replication keeps a live copy elsewhere, and it copies accidental deletions and ransomware right along with everything else. Failover keeps staff working on a standby system. Decide how much work you could lose and how long you could be down, then buy to those answers. Pro Link Systems, in Woodland Hills since 1999, verifies the backups it manages with test restores, and publishes its incident-response playbook free, with no form required.",
+    "x": [
+      "\"We have backups\" can mean three different purchases. Backup gets back what was lost. Replication keeps a current copy, mistakes included. Failover keeps you working. None of them helps once data is stolen. Know which one you paid for."
+    ],
+    "instagram_caption": "Backup, replication, and failover sound interchangeable. They answer three different questions. Backup: can we get back what was lost? Replication: is there a current copy elsewhere, mistakes included? Failover: how fast can we keep working? Set two numbers before buying anything: how much recent work you could lose, and how long you could be offline. Then ask when a full restore was last tested, and whether your backups are immutable. None of the three helps once data has been stolen. #BusinessContinuity #Ransomware #CyberResilience"
+  },
+  "carousel": {
+    "png": [],
+    "jpg": []
+  },
+  "variety": {
+    "style": "photo",
+    "format": "single_image",
+    "ground": "photo",
+    "layout": "photo",
+    "register": "behind_scenes",
+    "channels": {
+      "linkedin": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "facebook": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "gbp": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "instagram": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      },
+      "x": {
+        "style": "photo",
+        "format": "single_image",
+        "ground": "photo",
+        "layout": "photo",
+        "register": "behind_scenes"
+      }
+    }
+  },
+  "excellence": {
+    "overall": 92,
+    "scores": {
+      "topic_relevance": 95,
+      "timeliness": 90,
+      "originality": 89,
+      "hook_strength": 90,
+      "educational_value": 96,
+      "technical_accuracy": 96,
+      "executive_value": 95,
+      "writing_quality": 94,
+      "visual_sophistication": 86,
+      "platform_fit": 94,
+      "shareability": 89,
+      "saveability": 95,
+      "brand_authority": 93,
+      "trust": 97,
+      "strategic_value": 93
+    }
+  },
+  "claims_audit": [
+    "FACT(F012): Pro Link Systems has served Los Angeles businesses since 1999, from Woodland Hills",
+    "FACT(F013): backups Pro Link manages are verified by restore testing, not assumed from job reports",
+    "FACT(F014): Pro Link publishes its incident-response playbook publicly, free and ungated",
+    "ANALYSIS: backup is a point-in-time copy kept separately that restores deleted, corrupted, or encrypted data; restores take time, so it protects data more than uptime",
+    "ANALYSIS: replication keeps a continuously synced copy and propagates deletions, ransomware encryption, and bulk changes by scripts or AI agents with write access, unless it retains point-in-time history",
+    "ANALYSIS: failover moves operations to a standby system and depends on a rehearsed switch and return",
+    "ANALYSIS: the three solve different failures and are priced differently",
+    "ANALYSIS: RPO and RTO correspond to tolerable data loss and tolerable downtime and should set the mix",
+    "ANALYSIS: a backup deletable with the admin credentials an attacker steals is not meaningfully separate; immutability is the question to ask (no claim that Pro Link provides immutable storage)",
+    "ANALYSIS: restoring data does not address data that has been stolen; recovery answers encryption, not extortion",
+    "ANALYSIS: failure-mode matrix (deleted folder, dead server, ransomware, stolen data) is general guidance, not a claim about any product",
+    "OPINION: 'We have backups' is the riskiest sentence in a continuity discussion",
+    "OPINION: an unrehearsed failover is a diagram, not a capability",
+    "ANALYSIS: the Monday deleted-folder and server-failure scenario is a hypothetical illustration, not a client story",
+    "No statistics, no third-party figures, no client references, no compliance claims"
+  ],
+  "board_findings": [
+    {
+      "role": "Chief Marketing Officer",
+      "finding": "The draft is about Pro Link, not about the reader. Phrases like 'our team', 'A note from us', 'How we work', 'Meet our team' and 'How our team thinks' turn an educational idea into a capabilities brochure. Under the standards, authority comes from the insight itself. Revised so the executive's decision is the subject, with Pro Link appearing once per asset as proof (F013), not as the protagonist."
+    },
+    {
+      "role": "Creative Director",
+      "finding": "The concept is sound but stops at the taxonomy most continuity explainers already cover. Nothing in the draft makes it feel like 2026. Added three turns that carry the piece: replication propagating a bulk change made by an automation or AI agent, backups reachable with the same stolen admin credentials, and the point that recovery answers encryption, not extortion."
+    },
+    {
+      "role": "Art Director",
+      "finding": "The carousel is six near-identical text slides with no visual system and no slide that shows the idea. Restructured to seven slides with a parallel three-question spine (Backup / Replication / Failover). That spine suits a consistent three-column grid motif that highlights one column per slide. Added a timeline slide (09:00 deletion, 10:00 server failure) that should be rendered as a minimal timeline diagram. Removed the self-referential 'A note from us' kicker."
+    },
+    {
+      "role": "Senior Technology Editor",
+      "finding": "'Let ransomware encrypt it, and the replica follows' is overstated as written. Replication with journaling or point-in-time snapshots can roll back, which makes it partly a backup. Added that caveat. Also introduced RPO and RTO by name, once and translated, because readers will hear those terms from their IT teams and the draft left them unequipped."
+    },
+    {
+      "role": "CIO",
+      "finding": "Failover was described as a capability with no mention of failback or rehearsal, which is where real failovers break. Revised to state that an unrehearsed switch and return is 'a diagram.' Added a concrete executive ask: when was a full restore last tested, and how long did it take. That converts the post from awareness into an action a CIO can take this quarter."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The draft treats ransomware purely as an encryption-and-restore problem. Modern ransomware typically pairs encryption with data theft, and an attacker holding admin credentials can delete backups that are 'separate' only physically. Added credential separation and the exfiltration limit as analysis, with no statistics attached."
+    },
+    {
+      "role": "AI Strategist",
+      "finding": "The draft has no AI dimension, and forcing one would violate the 'no manufactured AI urgency' rule. One legitimate link exists: automations and AI agents with write access can make bulk changes at machine speed, and replication propagates them just as fast. It appears as a single analytical clause in LinkedIn and nowhere else, which is proportionate."
+    },
+    {
+      "role": "Executive Audience Representative",
+      "finding": "The LinkedIn opener ('One of the most common conversations our team has...') makes me read a vendor anecdote before I get anything. It also gestures at client conversations, which brushes against the no-implied-client rule. Replaced it with an opinion hook about the sentence itself, so the reader is the subject from the first line."
+    },
+    {
+      "role": "Social Growth Strategist",
+      "finding": "The X post spends a third of its 280 characters on 'Our team starts every continuity conversation,' which no one will repost. Rewritten as a compressed, quotable observation that ends on the exfiltration turn. #ITSupport is a generic hashtag with no saveable intent, so it was swapped for #Ransomware and #CyberResilience, which match the content."
+    },
+    {
+      "role": "Brand Director",
+      "finding": "In the draft, any MSP could have published every asset by swapping the founding year. The revision is more distinctive: the 2026 caveats, the precise restore-test question, F013 framed as method, and F014 (public, ungated playbook) on GBP. The underlying three-way taxonomy is still widely taught, though, so the MSP test is only partially passed. That is reflected in the scores."
+    },
+    {
+      "role": "Copy Editor",
+      "finding": "The draft had several problems. LinkedIn ran to roughly 1,650 characters, above the 1,600 ceiling. 'A hope, not a plan' is repeated across four assets and reads as a stock line. The CTA 'Meet our team' is unrelated to the content. All fixed. The revised LinkedIn was checked for consecutive same-word sentence openings, and a parallel 'It answers... It protects' pair was rewritten. The Facebook scenario's 'At 9:00... At 10:00' collision was also fixed."
+    },
+    {
+      "role": "Copy Editor / Senior Technology Editor",
+      "finding": "The LinkedIn post ran slightly over the 1,600-character ceiling. The X post also said none of the three 'recovers data that was stolen', which is muddled: after exfiltration the business still has its data, and the harm is exposure. Revised: LinkedIn trimmed to roughly 1,480 characters, and X, Instagram, and LinkedIn now say none of the three helps once data has been stolen."
+    },
+    {
+      "role": "Cybersecurity Expert",
+      "finding": "The credentials caveat stopped short of the control executives should ask about: whether backups are immutable, meaning the stolen admin credentials cannot delete or alter them. That is the 2026 subject, and it is what separates this post from a generic 'have backups' post. Revised: immutability is named as the question to ask, with no claim that Pro Link provides it, because that capability is not in verified facts."
+    },
+    {
+      "role": "Art Director / Social Growth Strategist",
+      "finding": "The carousel was all definitions, with no single slide worth saving. It also answered 'could any MSP publish this?' too weakly. Revised: the Monday narrative slide (kept in full on Facebook) is replaced with a failure-mode matrix. One question runs against four failures (deleted folder, dead server, ransomware, stolen data). That gives a strong data-visualization moment and a reason to save. Remaining risk: the matrix only earns its score if design renders it as a true grid, not as body text."
+    }
+  ],
+  "offline_test": false,
+  "test_mode": false
+}
